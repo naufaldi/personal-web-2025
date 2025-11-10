@@ -3,49 +3,8 @@
 @theme {
   /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
-
-  /* Font sizes */
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-  --text-4xl: 2.5rem;
-  --text-5xl: 3.5rem;
-
-  /* Dark Mode Colors (Primary) */
-  --color-background: 0 0% 0%;
-  --color-foreground: 0 0% 100%;
-  --color-surface: 0 0% 10.4%;
-  --color-surface-foreground: 0 0% 100%;
-  --color-primary: 217.2 91.2% 59.8%;
-  --color-primary-foreground: 0 0% 100%;
-  --color-secondary: 0 0% 10.4%;
-  --color-secondary-foreground: 0 0% 100%;
-  --color-border: 0 0% 20%;
-  --color-input: 0 0% 20%;
-  --color-text-secondary: 0 0% 63.9%;
-  --color-text-muted: 0 0% 45.1%;
-  --color-accent: 217.2 91.2% 59.8%;
-  --color-accent-foreground: 0 0% 100%;
-
-  /* Spacing Scale */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 48px;
-  --spacing-3xl: 64px;
-
-  /* Breakpoints */
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
+  --font-mono: "Source Code Pro", "Courier New", monospace;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 @supports (color: oklch(0 0 0)) {
@@ -54,32 +13,6 @@
     --color-foreground: oklch(1 0 0);
     --color-surface: oklch(0.104 0 0);
     --color-primary: oklch(0.598 0.254 217.2);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  @theme {
-    /* Light Mode Colors */
-    --color-background: 0 0% 100%;
-    --color-foreground: 0 0% 0%;
-    --color-surface: 0 0% 96.1%;
-    --color-surface-foreground: 0 0% 0%;
-    --color-primary: 217.2 91.2% 59.8%;
-    --color-primary-foreground: 0 0% 100%;
-    --color-secondary: 0 0% 96.1%;
-    --color-secondary-foreground: 0 0% 0%;
-    --color-border: 0 0% 90.2%;
-    --color-input: 0 0% 90.2%;
-    --color-text-secondary: 0 0% 40%;
-    --color-text-muted: 0 0% 60%;
-  }
-
-  @supports (color: oklch(0 0 0)) {
-    @theme {
-      --color-background: oklch(1 0 0);
-      --color-foreground: oklch(0 0 0);
-      --color-surface: oklch(0.961 0 0);
-    }
   }
 }
 
@@ -94,10 +27,73 @@ html {
 }
 
 body {
-  background-color: hsl(var(--color-background));
-  color: hsl(var(--color-foreground));
-  font-family: var(--font-sans);
+  @apply bg-slate-900 text-slate-200 antialiased selection:bg-slate-700 selection:text-white;
+  color: hsl(var(--color-slate-200));
+  font-family: var(--font-body);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: hsl(var(--color-slate-700));
+  color: white;
+}
+
+::-moz-selection {
+  background-color: hsl(var(--color-slate-700));
+  color: white;
+}
+
+/* Background pattern */
+.bg-pattern {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
+    linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%),
+    linear-gradient(transparent 0, transparent calc(100% - 1px), rgba(100, 116, 139, 0.12) calc(100% - 1px)),
+    linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(100, 116, 139, 0.12) calc(100% - 1px));
+  background-size:
+    100% 100%,
+    100% 100%,
+    24px 24px,
+    24px 24px;
+  background-position:
+    center,
+    center,
+    0 0,
+    0 0;
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 800ms ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 900ms ease-out both;
 }
 
 /* Respect user motion preferences */
@@ -105,5 +101,12 @@ body {
   * {
     animation: none !important;
     transition: none !important;
+  }
+  
+  .animate-fade-in-up,
+  .animate-fade-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

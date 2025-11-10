@@ -8,7 +8,7 @@ Inspired by [theodorusclarence.com](https://theodorusclarence.com/) - Modern, mi
 
 **Style:** Modern, Minimal, Bold, Professional  
 **Approach:** Content-first, clean hierarchy, generous whitespace  
-**Theme:** Dark mode (primary), Light mode support (secondary)
+**Theme:** Dark mode ONLY (no light mode support)
 
 **Design Principles:**
 - ✅ Content is the hero
@@ -41,6 +41,18 @@ Inspired by [theodorusclarence.com](https://theodorusclarence.com/) - Modern, mi
 | **Gray** | `#737373` | `rgb(115, 115, 115)` | Secondary text, muted content |
 | **Gray (Light)** | `#d4d4d8` | `rgb(212, 212, 216)` | Subtle borders, light dividers |
 
+### Slate Color Palette
+
+| Name | HSL | Usage |
+|------|-----|-------|
+| **Slate 900** | `222.2 47.4% 11.2%` | Primary background, cards |
+| **Slate 800** | `217.2 32.6% 17.5%` | Borders, dividers |
+| **Slate 700** | `217.2 32.6% 25%` | Muted elements, dots |
+| **Slate 400** | `215.4 16.3% 46.9%` | Secondary text, labels |
+| **Slate 300** | `215.4 16.3% 56.9%` | Interactive text, buttons |
+| **Slate 200** | `215.4 16.3% 70%` | Light text on dark |
+| **Slate 100** | `210 40% 96.1%` | Primary button background |
+
 ### Dark Mode (Default)
 
 ```
@@ -52,28 +64,23 @@ Border: #333333 (Dark Gray)
 Accent: #3b82f6 (Blue)
 ```
 
-### Light Mode (Alternative)
-
-```
-Background: #ffffff (White)
-Surface: #f5f5f5 (Light Gray)
-Text Primary: #000000 (Black)
-Text Secondary: #666666 (Gray)
-Border: #e5e5e5 (Light Gray)
-Accent: #2563eb (Blue)
-```
-
 ---
 
 ## 3. Typography
 
 ### Font Stack
 
+**Headings:** Source Code Pro (monospace)
 ```css
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+font-family: "Source Code Pro", "Courier New", monospace;
 ```
 
-**System Fonts:** Native OS fonts for performance, no web font loading needed
+**Body:** Manrope (sans-serif)
+```css
+font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+```
+
+**System Fonts:** Fallback to native OS fonts for performance
 
 ### Font Sizes & Weights
 
@@ -132,9 +139,9 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sa
 
 ### Navigation / Header
 
-**Style:** Minimal, fixed or sticky top  
+**Style:** Minimal, fixed or sticky top to keep core actions discoverable  
 **Background:** Black with white text  
-**Height:** 64px (mobile), 72px (desktop)
+**Height:** 64px (mobile), 72px (desktop) with `px-6` horizontal padding to honor the spacing scale
 
 ```
 ├── Logo/Branding (left)
@@ -144,38 +151,58 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sa
 │   ├── Projects
 │   ├── Speaking
 │   └── Book
-└── Social Links / Theme Toggle (right)
+└── Social Links / Theme Toggle (right-aligned)
 ```
 
-**Hover State:** Blue accent color, underline or background change
+- Limit surface-level choices to these five primary links; fold secondary items into a `NavigationMenu` or drawer to respect Hick's Law.
+- Position quick actions (“Contact”, “Add New”) at the far right for Jakob’s Law familiarity.
+- Keep link targets finger-friendly by using `py-3 px-4 text-sm font-medium` and `gap-3` spacing around grouped icons.
+
+**Hover/Focus State:** Blue accent color, underline or background change with `focus-visible:ring-2 focus-visible:ring-primary` to reinforce affordance.
 
 ---
 
 ### Hero Section
 
-**Layout:** Full width, centered content  
-**Padding:** 80px-120px vertical  
-**Background:** Black with subtle gradient or pattern (optional)
+**Layout:** Full width, centered content with `max-w-7xl` container  
+**Padding:** 64px-96px vertical (`py-16 lg:py-24`)  
+**Background:** Black with subtle gradient pattern overlay
 
 **Content:**
-- Large H1 heading (56px)
-- Subtitle or description (18px, gray)
-- CTA buttons (if applicable)
+- Status badge with icon, text, and availability link
+- Large H1 heading (32px mobile, 40px desktop) using Source Code Pro font
+- Description paragraph (16px mobile, 18px desktop) using Manrope font
+- Two CTA buttons (primary "View projects", secondary "Get in touch")
+- Code preview card on right side (desktop) with:
+  - Title bar with three dots and filename
+  - Syntax-highlighted code block
+  - Ambient background image with blur and gradient mask
+  - Stats strip below showing Experience, Stack, and Lead time
+
+**Code Preview Card Pattern:**
+- Background: Slate 900/70 with backdrop blur
+- Border: Slate 800/70
+- Shadow: Multi-layer shadow for depth
+- Title bar: Three dots (Slate 700) and filename (Slate 400)
+- Code block: Syntax highlighting with Sky, Emerald, Amber, Rose colors
+- Stats cards: Grid of 3 cards with icons, labels, and values
+- Hover states: Border color transitions on stats cards
 
 **CTA Buttons:**
-- Primary: Blue background, white text, bold
-- Secondary: Border only, white text
+- Primary: Slate 100 background, Slate 900 text (white button style)
+- Secondary: Slate 900/60 background, Slate 800/70 border, Slate 300 text
+- Highlight the primary CTA with supporting microcopy to leverage the Goal-Gradient and Zeigarnik effects.
 
 ---
 
 ### Project/Speaking Cards
 
-**Layout:** Grid (1-2 columns mobile, 3 columns desktop)  
+**Layout:** Grid (1-2 columns mobile, 3 columns desktop) with `gap-6 md:gap-8` to group content  
 **Background:** Dark Slate (#1a1a1a)  
 **Border:** Subtle border (1px, Dark Gray)  
-**Padding:** 24px  
-**Border Radius:** 8px  
-**Hover State:** Shadow lift, slight scale, border color change
+**Padding:** 24px (`p-6`)  
+**Border Radius:** 8px (`rounded-lg`)  
+**Hover State:** Shadow lift, slight scale, border color change (`hover:shadow-lg/10 hover:border-primary/60`)
 
 **Content:**
 - Thumbnail image (16:9 ratio) - optional
@@ -183,35 +210,38 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sa
 - Description (Body small, gray)
 - Tags/Meta (Caption, gray)
 - Links (Blue accent)
+- Keep iconography consistent (`size-4 text-muted-foreground`) and align text baselines to satisfy the Law of Similarity.
+- Apply `space-y-4` inside the card to cluster related elements and maintain clear proximity cues.
 
 ---
 
 ### Experience/Mentorship Cards
 
-**Layout:** Vertical list or timeline  
+**Layout:** Vertical list or timeline with `space-y-5`  
 **Background:** Dark Slate (#1a1a1a)  
-**Padding:** 24px  
+**Padding:** 24px (`p-6`)  
 **Border Left:** 4px blue accent (for current/featured)  
-**Spacing:** 16px between cards
+**Spacing:** 16px between cards (`gap-4`)
 
 **Content:**
 - Company/Organization (Bold, white)
 - Position/Role (Blue accent or highlight)
 - Date Range (Gray, small)
 - Description (Body text)
+- Surface ongoing roles with a “Current” badge to keep progress visible and leverage the Zeigarnik Effect.
 
 ---
 
 ### Book Card
 
-**Layout:** Grid (2-3 columns mobile, 4+ columns desktop)  
+**Layout:** Grid (2-3 columns mobile, 4+ columns desktop) with `gap-4 sm:gap-6`  
 **Content:**
 - Book Cover Image (fixed aspect ratio 3:4)
 - Title (H6, bold)
 - Category Badge (Reading/Wishlist) - Blue or gray
 - Links (if applicable)
 
-**Hover State:** Shadow lift, slight zoom
+**Hover State:** Shadow lift, slight zoom; keep interactive areas `min-h-[60px]` to satisfy Fitts's Law.
 
 ---
 
@@ -219,13 +249,14 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sa
 
 **Background:** Black or very dark (#0a0a0a)  
 **Border Top:** 1px border (#333333)  
-**Padding:** 48px-64px vertical
+**Padding:** 48px-64px vertical (`py-12 md:py-16`) with `space-y-6`
 
 **Content:**
 - Copyright text (left)
 - Quick links (center)
 - Social links (right)
 - Newsletter signup (optional)
+- Group related links into columns and cap each list at 5-7 items to align with Miller’s Law.
 
 ---
 
@@ -250,6 +281,9 @@ xl: 1280px
 2xl: 1536px
 ```
 
+- Use `max-w-3xl` to `max-w-6xl` containers depending on section density so content stays scannable and chunked.
+- When layouts exceed seven parallel elements (cards, list items), introduce pagination, carousels, or collapsible groups to respect Hick’s and Miller’s Laws.
+
 ---
 
 ## 7. Page Designs
@@ -262,14 +296,17 @@ xl: 1280px
    - Large greeting/intro
    - Brief bio
    - CTA: "Explore My Work"
+   - Highlight the primary CTA with supporting copy to reinforce the Goal-Gradient Effect.
 3. Mentorship Section
    - Heading: "Mentoring Experience"
    - Grid of mentorship cards (2-3 per row)
    - Each card: Company, Role, Date, Description
+   - Group cards into `grid md:grid-cols-2` chunks so readers can parse experience quickly.
 4. Work Experience Section
    - Heading: "Work Experience"
    - Timeline or cards
    - Most recent first
+   - Surface “Current” roles with badges and keep no more than six entries visible; tuck archives behind “View all” to respect Miller’s Law.
 5. Social Links / CTA
 6. Footer
 
@@ -285,6 +322,7 @@ xl: 1280px
 3. Skills section (if applicable)
 4. Contact information
 5. Social links
+- Chunk long biographies into subsections with `space-y-6` and use accordions for optional deep dives.
 
 ---
 
@@ -294,9 +332,10 @@ xl: 1280px
 **Columns:** 2-3 columns (responsive)
 
 **Features:**
-- Search/Filter by tags (optional)
+- Primary filters limited to category and tech; move advanced filters into an accordion to satisfy Hick’s Law.
+- Search input with inline clear button; debounce to keep perceived performance under the Doherty threshold.
 - Featured projects highlighted
-- Pagination or infinite scroll (if many projects)
+- Pagination or “Load more” after 6-9 cards to prevent cognitive overload.
 
 ---
 
@@ -313,6 +352,7 @@ xl: 1280px
 6. Links: GitHub, Live Demo, Website
 7. Related projects (if applicable)
 8. Back to projects CTA
+- Use consistent content blocks (`space-y-8`) and anchor links for longer articles to keep information chunked.
 
 ---
 
@@ -321,9 +361,10 @@ xl: 1280px
 **Layout:** Grid or list view of speaking engagement cards
 
 **Features:**
-- Filter by type: Conference, Workshop, Webinar, Mentoring
+- Filter by type: Conference, Workshop, Webinar, Mentoring using segmented controls (`space-x-2 min-w-[44px]` buttons).
 - Chronological order (recent first)
 - Each card shows: Title, Community/Event, Date, Topic
+- Surface upcoming events first and provide progress tags (“Upcoming”, “Completed”) to align with the Zeigarnik Effect.
 
 ---
 
@@ -353,6 +394,8 @@ xl: 1280px
 3. "Wishlist" section
    - Grid of book cards
 4. Optional: Search/Filter by category or genre
+- Group books into manageable categories and offer collapsible sections for extensive collections.
+- Provide consistent badge styling (`variant="outline"`) across categories for the Law of Similarity.
 
 ---
 
@@ -362,12 +405,14 @@ xl: 1280px
 
 **Appearance:**
 - Color: Blue accent (#3b82f6)
-- Text decoration: Underline (optional)
+- Text decoration: Underline (optional) with `underline-offset-4`
 - Font weight: Medium (500)
+- Minimum touch target: `inline-flex` with `py-2 px-2` to maintain accessible hit areas
 
 **Hover State:**
 - Color: Darker blue (#2563eb)
 - Underline: Always visible on hover
+- Provide `focus-visible:ring-2 focus-visible:ring-primary` for keyboard users.
 
 **Visited State:**
 - Color: Blue accent (same as unvisited)
@@ -376,24 +421,36 @@ xl: 1280px
 
 ### Buttons
 
-**Primary Button:**
-- Background: Blue (#3b82f6)
-- Text: White, semi-bold (600)
-- Padding: 12px 24px
-- Border radius: 6px
-- Hover: Darker blue (#2563eb), shadow
+**Primary Button (Hero/CTA):**
+- Background: Slate 100 (#f1f5f9) - white/light background
+- Text: Slate 900 (dark text), semi-bold (600)
+- Size: `h-10 min-w-[44px] px-4 py-2` to satisfy Fitts's Law
+- Border radius: 6px (rounded-md)
+- Hover: White background, focus ring with slate-100/40
+- Usage: Primary CTAs like "View projects", "Download CV"
 
 **Secondary Button:**
-- Background: Transparent
-- Border: 1px white
+- Background: Slate 900/60 (semi-transparent dark)
+- Border: 1px Slate 800/70
+- Text: Slate 300, semi-bold (600)
+- Size: `h-10 min-w-[44px] px-4 py-2`
+- Border radius: 6px (rounded-md)
+- Hover: Slate 100 text, Slate 700/70 border, Slate 900/90 background
+- Focus ring: Indigo 400/30
+- Usage: Secondary actions like "Contact", "Get in touch"
+
+**Default Button (Legacy):**
+- Background: Blue (#3b82f6)
 - Text: White, semi-bold (600)
-- Padding: 12px 24px
-- Border radius: 6px
-- Hover: Blue border and text, slight background
+- Size: `h-10 min-w-[44px] px-5`
+- Border radius: 6px (rounded-md)
+- Hover: Darker blue (#2563eb), shadow
+- Include subtle progress labels ("Saving…") inline when actions support the Zeigarnik Effect.
 
 **Disabled State:**
 - Opacity: 50%
 - Cursor: Not-allowed
+- Keep disabled buttons tabbable only when necessary; otherwise apply `aria-disabled` and remove `pointer-events`.
 
 ---
 
@@ -404,13 +461,17 @@ xl: 1280px
 - Border: 1px gray (#333333)
 - Padding: 12px 16px
 - Text color: White
+- Border radius: 6px (rounded-md)
 - Focus: Blue border, no shadow
+- Apply `space-y-6` within forms to group related fields per the Law of Proximity.
+- For multi-step forms, surface progress indicators (`Progress`, “Step X of Y”) and optimistic feedback (“Draft saved”) to leverage Goal-Gradient and Zeigarnik effects.
 
 **Labels:**
 - Font size: 14px
 - Font weight: 600
 - Color: White
 - Margin bottom: 8px
+- Keep each fieldset under seven items; move advanced options into accordions to satisfy Hick’s and Miller’s Laws.
 
 ---
 
@@ -471,16 +532,17 @@ Desktop: 1024px+ (xl, 2xl)
 
 ---
 
-## 12. Dark/Light Mode
+## 12. Dark Mode Only
 
-**Default:** Dark Mode (always available)  
-**Light Mode:** Toggle available (optional enhancement)
+**Theme:** Dark Mode ONLY  
+**No Light Mode:** This project does not support light mode  
+**No Theme Toggle:** No theme switching functionality needed
 
 **Implementation:**
-- CSS custom properties for theme colors
-- `prefers-color-scheme` media query as fallback
-- Local storage to persist user preference
-- No forced light mode, respects system preference
+- CSS custom properties for dark theme colors only
+- No `prefers-color-scheme` media queries
+- No theme toggle components
+- Consistent dark mode experience across all devices
 
 ```css
 :root {
@@ -490,17 +552,6 @@ Desktop: 1024px+ (xl, 2xl)
   --text-secondary: #a3a3a3;
   --border: #333333;
   --accent: #3b82f6;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f5f5f5;
-    --text-primary: #000000;
-    --text-secondary: #666666;
-    --border: #e5e5e5;
-    --accent: #2563eb;
-  }
 }
 ```
 
@@ -589,6 +640,12 @@ export default {
       xl: '32px',
       '2xl': '48px',
       '3xl': '64px',
+    },
+    borderRadius: {
+      sm: '0.25rem',
+      md: '0.375rem',
+      lg: '0.5rem',
+      xl: '0.75rem',
     },
   },
 }
@@ -1005,5 +1062,49 @@ src/
 └── index.css
 ```
 
-Ready to start building! 🚀
+---
 
+## 19. UX Heuristics & Interaction Patterns
+
+### Aesthetic-Usability Effect
+- Maintain generous spacing using the 4px scale (`gap-6`, `px-6`, `py-10`) so layouts feel polished while staying readable.
+- Reinforce the typography hierarchy defined in Section 3 with consistent heading weights and supporting copy (`text-muted-foreground`) for scannability.
+- Pair key interactions with subtle depth cues (`shadow-lg/5`, `border-border/60`) to improve perceived affordance without adding clutter.
+
+### Hick's Law
+- Keep surface-level choices minimal: limit navigation to core routes and collapse secondary filters into popovers, accordions, or tabs.
+- For project and speaking filters, group related controls and hide advanced options behind `Accordion` or `Collapsible` components to avoid overwhelming the user.
+
+### Jakob’s Law
+- Reuse familiar portfolio conventions: top navigation, hero CTA on the left, card-based lists, and persistent contact actions in the footer.
+- When presenting list management tools (e.g., CMS-like admin or editable tables), mirror WordPress patterns by placing “Add New” on the top-right and status toggles inline with row titles.
+
+### Fitts’s Law
+- Size primary buttons at least `h-10 px-4` and ensure touch targets have `min-w-[44px]` when icon-only to stay finger-friendly.
+- Provide comfortable spacing (`space-x-3`) around grouped actions like card CTAs so the intended target is easy to hit.
+
+### Law of Proximity
+- Use the spacing scale (`space-y-6`, `gap-8`) to cluster related content inside cards and sections, separating unrelated blocks with `md:py-16`.
+- Employ `Card`, `Panel`, or bordered containers to visually bundle controls such as filter sets or form fields.
+
+### Zeigarnik Effect
+- Surface current progress for multi-step tasks with steppers (`Breadcrumb`, `Progress`) and display state banners (“Saving…”, “Draft saved”) during content edits.
+- On long forms, keep incomplete sections visible with subtle reminders (`text-muted-foreground`) so users can resume quickly.
+
+### Goal-Gradient Effect
+- Highlight the next action in any flow using the primary button style and supportive microcopy (“Next: Submit Request”) directly beneath progress indicators.
+- For multi-step journeys, show progress percentages or step counts near the CTA to encourage completion momentum.
+
+### Law of Similarity
+- Standardize component styling—buttons, badges, toggle switches—via shared variants (`variant="outline"`, `variant="secondary"`) to reinforce rhythm.
+- Align icon sizes (`size-5`, `size-4`) and typography (`text-sm`, `text-xs`) across cards, tables, and lists so related items read as a cohesive set.
+
+### Miller’s Law
+- Chunk information into digestible groups of five to seven items per section, using tabs or accordions to tuck away auxiliary content.
+- Break dense project details into titled sub-sections with `space-y-4` spacing to prevent cognitive overload.
+
+### Doherty Threshold
+- Target sub-400ms feedback: render optimistic UI states, display loading skeletons (`animate-pulse`, `bg-muted/50`), or spinner fallbacks during data fetches.
+- Defer heavy imagery with `loading="lazy"` and keep transitions (`duration-200`) snappy to sustain perceived responsiveness.
+
+Ready to start building! 🚀

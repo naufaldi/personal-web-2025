@@ -5,22 +5,26 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-60 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow hover:shadow-lg",
-        secondary: "border border-foreground bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary",
-        outline: "border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        default:
+          "bg-slate-100 text-slate-900 hover:bg-white focus-visible:ring-2 focus-visible:ring-[rgba(241,245,249,0.4)] transition-colors",
+        primary:
+          "bg-slate-100 text-slate-900 hover:bg-white focus-visible:ring-2 focus-visible:ring-[rgba(241,245,249,0.4)] transition-colors",
+        secondary:
+          "border border-[rgba(30,41,59,0.7)] bg-[rgba(15,23,42,0.6)] text-slate-300 hover:text-slate-100 hover:bg-[rgba(15,23,42,0.9)] hover:border-[rgba(51,65,85,0.7)] focus-visible:ring-2 focus-visible:ring-[rgba(129,140,248,0.3)] transition-colors",
+        outline:
+          "border border-[rgba(148,163,184,0.4)] text-slate-200 hover:text-white hover:border-[rgba(148,163,184,0.6)] focus-visible:ring-2 focus-visible:ring-[rgba(129,140,248,0.25)] bg-transparent transition-colors",
+        ghost: "text-slate-300 hover:text-slate-100",
+        link: "text-slate-300 underline-offset-4 hover:underline",
       },
       size: {
-        default: "h-10 px-6 py-2",
-        sm: "h-9 rounded px-3 text-sm",
-        lg: "h-11 rounded px-8 text-base",
-        icon: "h-10 w-10",
+        default: "px-3.5 py-1.5 text-sm",
+        sm: "px-3 py-1.5 text-xs",
+        lg: "px-5 py-2 text-base",
+        icon: "h-10 w-10 [&_svg]:size-5",
       },
     },
     defaultVariants: {
