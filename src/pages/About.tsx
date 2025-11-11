@@ -2,6 +2,7 @@ import { User } from 'lucide-react'
 import AboutMeSection from '@/components/about/AboutMeSection'
 import WhatImUpToSection from '@/components/about/WhatImUpToSection'
 import ExperiencesSection from '@/components/about/ExperiencesSection'
+import JourneyPhotoMarquee from '@/components/about/JourneyPhotoMarquee'
 
 export default function About() {
   return (
@@ -41,6 +42,7 @@ export default function About() {
 
         <AboutMeSection />
         <WhatImUpToSection />
+        <JourneyPhotoMarquee />
         <ExperiencesSection />
       </div>
     </div>

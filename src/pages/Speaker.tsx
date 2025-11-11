@@ -1,6 +1,7 @@
 import SpeakerMentorHero from '@/components/speaker/SpeakerMentorHero'
 import ImpactStats from '@/components/speaker/ImpactStats'
 import OrganizationMarquee from '@/components/speaker/OrganizationMarquee'
+import VoluntaryWorkSection from '@/components/speaker/VoluntaryWorkSection'
 import MentoringSection from '@/components/speaker/MentoringSection'
 import SpeakingSection from '@/components/speaker/SpeakingSection'
 import { Separator } from '@/components/ui/separator'
@@ -16,6 +17,10 @@ export default function Speaker() {
         <Separator className="my-8 bg-slate-800/70" />
 
         <OrganizationMarquee />
+
+        <Separator className="my-8 bg-slate-800/70" />
+
+        <VoluntaryWorkSection />
 
         <Separator className="my-8 bg-slate-800/70" />
 

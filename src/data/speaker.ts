@@ -8,7 +8,7 @@ export interface SpeakerMentorStats {
 export interface OrganizationLogo {
   name: string
   logoUrl: string
-  type: 'mentoring' | 'speaker'
+  type: 'mentoring' | 'speaker' | 'voluntary'
   websiteUrl?: string
 }
 
@@ -21,16 +21,16 @@ export const speakerMentorStats: SpeakerMentorStats = {
 
 export const organizationLogos: OrganizationLogo[] = [
   {
-    name: 'Bearmentor',
+    name: 'ADPList',
     logoUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=120&h=60&fit=crop&auto=format',
     type: 'mentoring',
-    websiteUrl: 'https://bearmentor.com',
+    websiteUrl: 'https://adplist.org',
   },
   {
-    name: 'iSwift Bootcamp',
+    name: 'Dibimbing',
     logoUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=120&h=60&fit=crop&auto=format',
     type: 'mentoring',
-    websiteUrl: 'https://iswiftbootcamp.com',
+    websiteUrl: 'https://dibimbing.id',
   },
   {
     name: 'RevoU',
@@ -39,34 +39,39 @@ export const organizationLogos: OrganizationLogo[] = [
     websiteUrl: 'https://revou.co',
   },
   {
-    name: 'Nest Academy',
-    logoUrl: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=120&h=60&fit=crop&auto=format',
-    type: 'mentoring',
-    websiteUrl: 'https://nestacademy.com',
-  },
-  {
     name: 'Ekskul',
     logoUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=120&h=60&fit=crop&auto=format',
     type: 'mentoring',
-    websiteUrl: 'https://ekskul.com',
+    websiteUrl: 'https://ekskul.id',
   },
   {
-    name: 'React Conf',
+    name: 'Hacktiv8',
     logoUrl: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=120&h=60&fit=crop&auto=format',
     type: 'speaker',
-    websiteUrl: 'https://reactconf.com',
+    websiteUrl: 'https://hacktiv8.com',
   },
   {
-    name: 'Frontend Masters',
+    name: 'iSwift Bootcamp',
     logoUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=120&h=60&fit=crop&auto=format',
     type: 'speaker',
-    websiteUrl: 'https://frontendmasters.com',
+    websiteUrl: 'https://iswift.id',
   },
   {
-    name: 'Web Dev Summit',
+    name: 'Coding.ID',
     logoUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=120&h=60&fit=crop&auto=format',
     type: 'speaker',
-    websiteUrl: 'https://webdevsummit.com',
+    websiteUrl: 'https://coding.id',
+  },
+  {
+    name: 'LOGOS',
+    logoUrl: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=120&h=60&fit=crop&auto=format',
+    type: 'voluntary',
+  },
+  {
+    name: 'IxDA',
+    logoUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=120&h=60&fit=crop&auto=format',
+    type: 'voluntary',
+    websiteUrl: 'https://ixda.org',
   },
 ]
 

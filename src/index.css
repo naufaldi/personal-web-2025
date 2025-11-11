@@ -367,8 +367,21 @@ Option 5: Noise Texture Pattern (Subtle)
   width: max-content;
 }
 
+.marquee-container:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+.marquee-container:hover .animate-marquee > * {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
     animation: none;
+  }
+  
+  .marquee-container:hover .animate-marquee {
+    animation-play-state: unset;
   }
 }

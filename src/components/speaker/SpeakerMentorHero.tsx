@@ -29,7 +29,7 @@ export default function SpeakerMentorHero() {
           fontWeight: 500,
         }}
       >
-        Empowering developers through knowledge sharing and mentorship
+        Empowering developers through knowledge sharing, mentorship, and community engagement
       </p>
     </div>
   )

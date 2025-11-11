@@ -34,7 +34,7 @@ const ImpactStatCard = ({
       <div className="text-slate-500">{icon}</div>
     </div>
     <div className="text-xl md:text-2xl font-semibold text-slate-100">
-      {typeof value === 'number' ? value.toLocaleString() : value}
+      {typeof value === 'number' ? `${value.toLocaleString()}+` : value}
     </div>
   </div>
 )

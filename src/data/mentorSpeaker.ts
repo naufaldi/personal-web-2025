@@ -10,7 +10,7 @@ export interface MentorSpeakerItem {
   eventName: string
   brief: string
   date: string
-  type: 'mentoring' | 'speaker'
+  type: 'mentoring' | 'speaker' | 'voluntary'
   image?: string
   links?: MentorSpeakerLinks
 }
@@ -54,6 +54,16 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     type: 'speaker',
     links: {
       website: 'https://coding.id',
+    },
+  },
+  {
+    id: '11',
+    eventName: 'Twitter Spaces',
+    brief: 'Hosting Twitter Spaces to engage with a global audience through real-time dialogue, sharing knowledge and insights about frontend development, career growth, and the tech industry.',
+    date: 'Ongoing',
+    type: 'speaker',
+    links: {
+      x: 'https://twitter.com/f2aldi',
     },
   },
   {
@@ -103,9 +113,9 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
   {
     id: '9',
     eventName: 'LOGOS Festival Website',
-    brief: 'Led the frontend team in the development of the Logos Festival Website, ensuring timely delivery and high-quality standards. Implemented analytics solutions like Splitbee to analyze user behavior and optimize funneling strategies.',
+    brief: 'Led the frontend team in the development of the Logos Festival Website, ensuring timely delivery and high-quality standards. Implemented analytics solutions like Splitbee to analyze user behavior and optimize funneling strategies. Played a pivotal role in selecting the frontend tech stack and managing project workflows using GitHub.',
     date: 'May 2021 - December 2022',
-    type: 'mentoring',
+    type: 'voluntary',
     links: {
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
     },
@@ -113,12 +123,22 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
   {
     id: '10',
     eventName: 'IxDA Interaction Association',
-    brief: 'Engaged in ongoing learning about UX Research to enhance understanding of user behaviors and needs, contributing to more effective frontend strategies. Collaborated with researchers to leverage frontend technologies in gathering meaningful user data.',
+    brief: 'Engaged in ongoing learning about UX Research to enhance understanding of user behaviors and needs, contributing to more effective frontend strategies. Collaborated with researchers to leverage frontend technologies in gathering meaningful user data, informing product decisions.',
     date: 'August 2019 - Present',
-    type: 'mentoring',
+    type: 'voluntary',
     links: {
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
       website: 'https://ixda.org',
+    },
+  },
+  {
+    id: '12',
+    eventName: 'Stasion (Startup Singo Edan)',
+    brief: 'Contributing to community initiatives through voluntary work with Stasion, supporting startup ecosystem development and community engagement.',
+    date: 'Ongoing',
+    type: 'voluntary',
+    links: {
+      linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
     },
   },
 ]
@@ -129,6 +149,10 @@ export const getMentoringEngagements = (): MentorSpeakerItem[] => {
 
 export const getSpeakerEngagements = (): MentorSpeakerItem[] => {
   return mentorSpeakerEngagements.filter((item) => item.type === 'speaker')
+}
+
+export const getVoluntaryWork = (): MentorSpeakerItem[] => {
+  return mentorSpeakerEngagements.filter((item) => item.type === 'voluntary')
 }
 
 export const getAllOrganizations = (): string[] => {
