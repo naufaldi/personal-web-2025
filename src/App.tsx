@@ -6,11 +6,11 @@ import Experience from '@/pages/Experience'
 import Speaker from '@/pages/Speaker'
 import Manhwa from '@/pages/Manhwa'
 import Projects from '@/pages/Projects'
+import Books from '@/pages/Books'
 const ProjectDetail = () => <div>Project Detail</div>
 const Shorts = () => <div>Shorts</div>
 const Speaking = () => <div>Speaking</div>
 const SpeakingDetail = () => <div>Speaking Detail</div>
-const Book = () => <div>Book</div>
 const NotFound = () => <div>404 Not Found</div>
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
           <Route path="/speaking" element={<Speaking />} />
           <Route path="/speaking/:slug" element={<SpeakingDetail />} />
           <Route path="/shorts" element={<Shorts />} />
-          <Route path="/book" element={<Book />} />
+          <Route path="/book" element={<Books />} />
           <Route path="/manhwa" element={<Manhwa />} />
           <Route path="*" element={<NotFound />} />
         </Route>
