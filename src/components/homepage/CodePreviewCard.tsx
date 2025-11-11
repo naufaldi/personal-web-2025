@@ -13,75 +13,76 @@ type CodeToken = {
 const codeLines: CodeToken[][] = [
   [
     { text: 'import ', className: 'text-sky-400' },
-    { text: '{ useState } ', className: 'text-slate-100' },
+    { text: '{ useQuery } ', className: 'text-slate-100' },
     { text: 'from ', className: 'text-sky-400' },
-    { text: "'react'", className: 'text-emerald-400' },
+    { text: "'@tanstack/react-query'", className: 'text-emerald-400' },
   ],
   [],
   [
-    { text: 'type ', className: 'text-sky-400' },
-    { text: 'ButtonProps ', className: 'text-slate-100' },
-    { text: '= { ', className: 'text-slate-400' },
-    { text: 'label', className: 'text-slate-100' },
-    { text: ': ', className: 'text-slate-400' },
-    { text: 'string ', className: 'text-sky-400' },
+    { text: 'interface ', className: 'text-sky-400' },
+    { text: 'User ', className: 'text-slate-100' },
+    { text: '{ id: ', className: 'text-slate-400' },
+    { text: 'number', className: 'text-sky-400' },
+    { text: ', name: ', className: 'text-slate-400' },
+    { text: 'string', className: 'text-sky-400' },
+    { text: ' }', className: 'text-slate-400' },
+  ],
+  [],
+  [
+    { text: 'const ', className: 'text-sky-400' },
+    { text: 'fetchUser ', className: 'text-slate-100' },
+    { text: '= ', className: 'text-slate-400' },
+    { text: 'async ', className: 'text-sky-400' },
+    { text: '(id: ', className: 'text-slate-400' },
+    { text: 'number', className: 'text-sky-400' },
+    { text: '): ', className: 'text-slate-400' },
+    { text: 'Promise<User> ', className: 'text-sky-400' },
+    { text: '=> {', className: 'text-slate-400' },
+  ],
+  [
+    { text: '  const res ', className: 'text-sky-400' },
+    { text: '= ', className: 'text-slate-400' },
+    { text: 'await ', className: 'text-sky-400' },
+    { text: 'fetch', className: 'text-slate-100' },
+    { text: '(`/api/users/${id}`)', className: 'text-emerald-400' },
+  ],
+  [
+    { text: '  return ', className: 'text-sky-400' },
+    { text: 'res.json', className: 'text-slate-100' },
+    { text: '()', className: 'text-slate-400' },
+  ],
+  [
     { text: '}', className: 'text-slate-400' },
   ],
   [],
   [
     { text: 'export ', className: 'text-sky-400' },
     { text: 'function ', className: 'text-sky-400' },
-    { text: 'Button', className: 'text-slate-100' },
-    { text: '({ ', className: 'text-slate-400' },
-    { text: 'label', className: 'text-slate-100' },
-    { text: ' }: ', className: 'text-slate-400' },
-    { text: 'ButtonProps', className: 'text-slate-100' },
-    { text: ') {', className: 'text-slate-400' },
+    { text: 'UserProfile', className: 'text-slate-100' },
+    { text: '() {', className: 'text-slate-400' },
   ],
   [
     { text: '  const ', className: 'text-sky-400' },
-    { text: '[hover, setHover] ', className: 'text-slate-100' },
-    { text: '= useState', className: 'text-slate-100' },
-    { text: '(false)', className: 'text-rose-400' },
+    { text: '{ data } ', className: 'text-slate-100' },
+    { text: '= useQuery', className: 'text-slate-100' },
+    { text: '({', className: 'text-slate-400' },
   ],
   [
-    { text: '  return (', className: 'text-sky-400' },
+    { text: '    queryKey: ', className: 'text-slate-400' },
+    { text: "['user', id]", className: 'text-emerald-400' },
   ],
   [
-    { text: '    <button', className: 'text-amber-300' },
+    { text: '    queryFn: ', className: 'text-slate-400' },
+    { text: '() => fetchUser', className: 'text-slate-100' },
+    { text: '(id)', className: 'text-slate-400' },
   ],
   [
-    { text: '      className={', className: 'text-slate-400' },
+    { text: '  })', className: 'text-slate-400' },
   ],
+  [],
   [
-    { text: '        hover', className: 'text-slate-100' },
-  ],
-  [
-    { text: "          ? 'bg-emerald-500/10 ring-1 ring-emerald-500/40'", className: 'text-emerald-400' },
-  ],
-  [
-    { text: "          : 'bg-slate-800/60 ring-1 ring-slate-700/60'", className: 'text-emerald-400' },
-  ],
-  [
-    { text: '      }', className: 'text-slate-400' },
-  ],
-  [
-    { text: '      onMouseEnter={() => setHover(true)}', className: 'text-slate-400' },
-  ],
-  [
-    { text: '      onMouseLeave={() => setHover(false)}', className: 'text-slate-400' },
-  ],
-  [
-    { text: '    >', className: 'text-amber-300' },
-  ],
-  [
-    { text: '      {label}', className: 'text-slate-100' },
-  ],
-  [
-    { text: '    </button>', className: 'text-amber-300' },
-  ],
-  [
-    { text: '  )', className: 'text-sky-400' },
+    { text: '  return ', className: 'text-sky-400' },
+    { text: '<div>{data?.name}</div>', className: 'text-slate-100' },
   ],
   [
     { text: '}', className: 'text-slate-100' },
@@ -116,7 +117,7 @@ export default function CodePreviewCard({ className }: CodePreviewCardProps) {
               className="text-[11px] text-slate-400 tracking-tight"
               style={{ fontFamily: 'var(--font-body)', fontWeight: 500 }}
             >
-              Button.tsx
+              UserProfile.tsx
             </div>
           </div>
 

@@ -1,4 +1,4 @@
-import { Briefcase, Code2, Calendar } from 'lucide-react'
+import { Briefcase, Code2, Users } from 'lucide-react'
 import { siteConfig } from '@/data/site'
 import { cn } from '@/lib'
 
@@ -39,9 +39,9 @@ export default function StatsCards() {
         icon={<Code2 className="h-3.5 w-3.5" />}
       />
       <StatCard
-        label="Lead time"
-        value={siteConfig.stats.leadTime}
-        icon={<Calendar className="h-3.5 w-3.5" />}
+        label="Mentees"
+        value={siteConfig.stats.mentees}
+        icon={<Users className="h-3.5 w-3.5" />}
       />
     </div>
   )

@@ -26,7 +26,7 @@ export default function MentorSpeakerSection() {
               animationDelay: '120ms',
             }}
           >
-            {mentorSpeakerEngagements.map((item, index) => (
+            {mentorSpeakerEngagements.slice(0, 4).map((item, index) => (
               <MentorSpeakerItem key={item.id} item={item} index={index} />
             ))}
           </div>
@@ -35,7 +35,7 @@ export default function MentorSpeakerSection() {
             className="flex justify-center pt-4"
             style={{
               animation: 'fade-in 900ms ease-out both',
-              animationDelay: `${120 + mentorSpeakerEngagements.length * 100}ms`,
+              animationDelay: `${120 + 4 * 100}ms`,
             }}
           >
             <Link

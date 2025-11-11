@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import { Twitter, Linkedin, Mail, Github } from 'lucide-react'
+import { Twitter, Linkedin, Mail, Github, Instagram } from 'lucide-react'
 import { siteConfig } from '@/data/site'
 import { cn } from '@/lib'
 
@@ -23,6 +23,8 @@ const resourceLinks = [
   { name: 'GitHub', href: siteConfig.socialLinks.github || '#', external: true },
   { name: 'LinkedIn', href: siteConfig.socialLinks.linkedin || '#', external: true },
   { name: 'Twitter/X', href: siteConfig.socialLinks.twitter || '#', external: true },
+  { name: 'Instagram', href: siteConfig.socialLinks.instagram || '#', external: true },
+  { name: 'ADPList', href: siteConfig.socialLinks.adplist || '#', external: true },
 ]
 
 const socialIcons = [
@@ -49,6 +51,12 @@ const socialIcons = [
     icon: Github,
     href: siteConfig.socialLinks.github || '#',
     ariaLabel: 'Visit GitHub profile',
+  },
+  {
+    name: 'Instagram',
+    icon: Instagram,
+    href: siteConfig.socialLinks.instagram || '#',
+    ariaLabel: 'Follow on Instagram',
   },
 ]
 
@@ -142,7 +150,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="border-t border-slate-800 pt-8">
+        <div className="border-t border-slate-800 mt-12 pt-8">
           <p className="text-sm text-slate-500 text-center">
             Copyright © 2025 {siteConfig.name}. All rights reserved.
           </p>

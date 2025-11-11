@@ -30,7 +30,9 @@ export default function HeroSection() {
                 aria-hidden="true"
               />
               <a
-                href="#availability"
+                href="https://www.linkedin.com/in/naufaldirafif/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="underline decoration-slate-600 underline-offset-2 hover:text-slate-100 hover:decoration-slate-400 transition-colors"
                 style={{
                   fontFamily: 'var(--font-body)',
@@ -74,7 +76,9 @@ export default function HeroSection() {
                 View projects
               </a>
               <a
-                href="#contact"
+                href="https://www.linkedin.com/in/naufaldirafif/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-md border border-slate-800/70 bg-slate-900/60 px-4 py-2 text-sm text-slate-300 hover:text-slate-100 hover:border-slate-700/70 hover:bg-slate-900/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400/30 transition-colors"
                 style={{
                   fontFamily: 'var(--font-body)',

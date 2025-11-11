@@ -38,9 +38,9 @@ export default function ExperienceSection() {
             </p>
           </div>
 
-          {/* Experience Timeline */}
+          {/* Experience Grid */}
           <div
-            className="space-y-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4"
             style={{
               animation: 'fade-in 900ms ease-out both',
               animationDelay: '120ms',
@@ -51,7 +51,6 @@ export default function ExperienceSection() {
                 key={experience.id}
                 experience={experience}
                 index={index}
-                isLast={index === latestExperiences.length - 1}
               />
             ))}
           </div>

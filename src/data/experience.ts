@@ -18,95 +18,113 @@ export interface WorkExperience {
 export const workExperiences: WorkExperience[] = [
   {
     id: '1',
-    companyName: 'eFishery',
-    role: 'Mid Frontend Engineer',
-    startDate: '2022',
+    companyName: 'PT Sukanda Djaya',
+    role: 'Senior Frontend Developer',
+    startDate: 'March 2025',
     endDate: 'Present',
     employmentType: 'full-time',
-    description: 'Developed web-based solutions for data visualization and analysis',
+    description: 'PT Sukanda Djaya is one of Indonesia\'s largest food and beverage distribution companies under the Diamond Food Group, serving diverse channels such as food service, retail, and QSR (Quick Service Restaurant).',
     achievements: [
-      'Built scalable dashboard reducing load time by 40%',
-      'Led frontend architecture migration to React 18',
-      'Collaborated with AI/ML teams on data visualization',
+      'Designed a modular component architecture in React, reducing future development time and eliminating duplicate code across the project',
+      'Decreased production error rates by over 25% through improved error handling, log tracking, and enhanced testing workflows',
+      'Built and improved pages for SOL\'s e-commerce website (sukandaonelink.com), handling large product catalogs and high traffic volumes',
     ],
-    keyAchievementsMarkdown: `- Built scalable dashboard reducing load time by **40%**
-- Led frontend architecture migration to React 18
-- Collaborated with AI/ML teams on data visualization`,
+    keyAchievementsMarkdown: `- Designed a modular component architecture in React, reducing future development time and eliminating duplicate code across the project
+- Decreased production error rates by **over 25%** through improved error handling, log tracking, and enhanced testing workflows
+- Built and improved pages for SOL's e-commerce website (sukandaonelink.com), handling large product catalogs and high traffic volumes`,
     techStack: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
-    website: 'https://efishery.com',
+    website: 'https://sukandaonelink.com',
   },
   {
     id: '2',
-    companyName: 'Tech Startup',
-    role: 'Frontend Engineer',
-    startDate: '2021',
-    endDate: '2022',
+    companyName: 'eFishery',
+    role: 'Product Engineer - Mid Frontend Developer',
+    startDate: 'Maret 2022',
+    endDate: 'February 2025',
     employmentType: 'full-time',
-    description: 'Built and maintained product UIs for SaaS platform',
+    description: 'eFishery is an Indonesian unicorn startup revolutionizing the aquaculture industry through technology. It offers a comprehensive ecosystem encompassing P2P lending, IoT devices for precise aquafarming, and a marketplace to empower farmers.',
     achievements: [
-      'Developed reusable component library used across 10+ features',
-      'Improved page load performance by 30% through code splitting',
-      'Mentored junior developers on React best practices',
+      'Reduced Service Level Agreements by 30% by migrating from Google Sheets to a custom NextJS solution, significantly improving operational efficiency',
+      'Improved dashboard performance by increasing Google Lighthouse score from 70-80 to 80-90 through optimization techniques and modern web standards',
+      'Migrated from Budibase to a fully customized NextJS solution, delivering advanced features and dynamic UIs that enhanced user experience',
     ],
-    keyAchievementsMarkdown: `- Developed reusable component library used across **10+** features
-- Improved page load performance by **30%** through code splitting
-- Mentored junior developers on React best practices`,
-    techStack: ['React', 'TypeScript', 'Redux', 'Material-UI'],
-    website: 'https://example.com',
+    keyAchievementsMarkdown: `- Reduced Service Level Agreements by **30%** by migrating from Google Sheets to a custom NextJS solution, significantly improving operational efficiency
+- Improved dashboard performance by increasing Google Lighthouse score from **70-80 to 80-90** through optimization techniques and modern web standards
+- Migrated from Budibase to a fully customized NextJS solution, delivering advanced features and dynamic UIs that enhanced user experience`,
+    techStack: ['React', 'TypeScript', 'Next.js', 'React Native', 'GraphQL', 'React Query', 'Leaflet'],
+    website: 'https://efishery.com',
   },
   {
     id: '3',
-    companyName: 'Freelance Client',
-    role: 'Frontend Developer',
-    startDate: '2020',
-    endDate: '2021',
-    employmentType: 'freelance',
-    description: 'Delivered custom landing pages and web applications',
+    companyName: 'Bahasa.ai',
+    role: 'Software Engineer - Frontend Developer',
+    startDate: 'Sept 2021',
+    endDate: 'Jan 2022',
+    employmentType: 'full-time',
+    description: 'Bahasa.ai is a leading Southeast Asia-based enterprise AI service provider, focusing on developing state-of-the-art generative AI solutions for a variety of use cases',
     achievements: [
-      'Created 15+ high-converting landing pages',
-      'Achieved 95+ Lighthouse performance scores',
-      'Built responsive designs for various industries',
+      'Led the migration from JavaScript to TypeScript, enhancing type safety, security, and developer experience across the team',
+      'Developed internal tools using NextJS, Chakra UI, and Recoil, enabling rapid prototyping and client demonstrations',
+      'Conducted technical discovery sessions, translating business needs into actionable project plans and bridging technical execution with strategic goals',
     ],
-    keyAchievementsMarkdown: `- Created **15+** high-converting landing pages
-- Achieved **95+** Lighthouse performance scores
-- Built responsive designs for various industries`,
-    techStack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+    keyAchievementsMarkdown: `- Led the migration from JavaScript to TypeScript, enhancing type safety, security, and developer experience across the team
+- Developed internal tools using NextJS, Chakra UI, and Recoil, enabling rapid prototyping and client demonstrations
+- Conducted technical discovery sessions, translating business needs into actionable project plans and bridging technical execution with strategic goals`,
+    techStack: ['React', 'TypeScript', 'Next.js', 'Chakra UI', 'Recoil'],
   },
   {
     id: '4',
-    companyName: 'Digital Agency',
-    role: 'Junior Frontend Developer',
-    startDate: '2019',
-    endDate: '2020',
-    employmentType: 'full-time',
-    description: 'Developed client websites and web applications',
+    companyName: 'Dipa Inhouse',
+    role: 'Frontend Engineer',
+    startDate: 'April 2021',
+    endDate: 'August 2021',
+    employmentType: 'contract',
+    description: 'Dipa Inhouse is a design studio with a focus on creating compelling landing pages and animations. They dedicate themselves to developing digital products that not only meet business objectives but also resonate with users.',
     achievements: [
-      'Built 20+ client websites from scratch',
-      'Collaborated with designers to implement pixel-perfect UIs',
-      'Optimized websites for SEO and performance',
+      'Developed a comprehensive UI Kit, accelerating prototyping and fostering efficient development workflows across projects',
+      'Achieved pixel-perfect implementation of landing pages, meticulously aligning with design specifications to showcase products effectively',
+      'Implemented engaging animations and integrated marketing tools (Loxo and EmailJS), significantly improving user engagement and conversion rates',
     ],
-    keyAchievementsMarkdown: `- Built **20+** client websites from scratch
-- Collaborated with designers to implement pixel-perfect UIs
-- Optimized websites for SEO and performance`,
-    techStack: ['React', 'JavaScript', 'CSS', 'WordPress'],
+    keyAchievementsMarkdown: `- Developed a comprehensive UI Kit, accelerating prototyping and fostering efficient development workflows across projects
+- Achieved pixel-perfect implementation of landing pages, meticulously aligning with design specifications to showcase products effectively
+- Implemented engaging animations and integrated marketing tools (Loxo and EmailJS), significantly improving user engagement and conversion rates`,
+    techStack: ['React', 'JavaScript', 'HTML', 'CSS', 'EmailJS'],
   },
   {
     id: '5',
-    companyName: 'Startup Inc',
+    companyName: 'Esteh Creative',
     role: 'Frontend Developer',
-    startDate: '2018',
-    endDate: '2019',
+    startDate: 'Oct 2019',
+    endDate: 'March 2021',
     employmentType: 'contract',
-    description: 'Developed MVP for early-stage startup',
+    description: 'Estech Creative operates as a dynamic software house, offering comprehensive engineering and design teams tasked with developing applications tailored to client business needs. They specialize in aiding businesses in their digital transformation journeys, leveraging technology and design to bring innovative solutions to life.',
     achievements: [
-      'Built MVP frontend in 3 months',
-      'Implemented real-time features using WebSockets',
-      'Created responsive mobile-first designs',
+      'Converted Figma designs to pixel-perfect HTML/CSS code, facilitating rapid integration into Laravel framework',
+      'Developed a dynamic Blog/Company Profile using ReactJS with backend API integration, enabling quick launch of feature-rich web applications',
+      'Mentored interns on frontend development practices, elevating their skills and contributing to team capacity growth',
     ],
-    keyAchievementsMarkdown: `- Built MVP frontend in **3 months**
-- Implemented real-time features using WebSockets
-- Created responsive mobile-first designs`,
-    techStack: ['React', 'JavaScript', 'CSS', 'Socket.io'],
+    keyAchievementsMarkdown: `- Converted Figma designs to pixel-perfect HTML/CSS code, facilitating rapid integration into Laravel framework
+- Developed a dynamic Blog/Company Profile using ReactJS with backend API integration, enabling quick launch of feature-rich web applications
+- Mentored interns on frontend development practices, elevating their skills and contributing to team capacity growth`,
+    techStack: ['React', 'JavaScript', 'HTML', 'CSS', 'Laravel'],
+  },
+  {
+    id: '6',
+    companyName: 'Deliv Indonesia',
+    role: 'Frontend Developer',
+    startDate: 'Oct 2018',
+    endDate: 'Sept 2019',
+    employmentType: 'contract',
+    description: 'Deliv is an innovative PPOB startup designed to assist merchants in easily purchasing pulsa, token listrik, and other essential tools. This platform is particularly beneficial for users in rural areas, providing them with a convenient way to make purchases.',
+    achievements: [
+      'Developed a company landing page using component frameworks, delivering high-quality outcomes and accelerating prototyping processes',
+      'Built a transaction management dashboard using HTML/CSS, optimized for Laravel integration and efficient transaction oversight',
+      'Mentored interns on frontend development practices, effectively managing and enriching their learning experience',
+    ],
+    keyAchievementsMarkdown: `- Developed a company landing page using component frameworks, delivering high-quality outcomes and accelerating prototyping processes
+- Built a transaction management dashboard using HTML/CSS, optimized for Laravel integration and efficient transaction oversight
+- Mentored interns on frontend development practices, effectively managing and enriching their learning experience`,
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Laravel'],
   },
 ]
 

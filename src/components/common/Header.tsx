@@ -54,7 +54,7 @@ export default function Header() {
                 fontWeight: 500,
               }}
             >
-              <Link to="#contact">Contact</Link>
+              <a href="https://www.linkedin.com/in/naufaldirafif/" target="_blank" rel="noopener noreferrer">Contact</a>
             </Button>
             <Button
               asChild
@@ -65,10 +65,10 @@ export default function Header() {
                 fontWeight: 600,
               }}
             >
-              <Link to="#resume">
+              <a href="https://www.linkedin.com/in/naufaldirafif/" target="_blank" rel="noopener noreferrer">
                 Download CV
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

@@ -166,7 +166,7 @@ font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-seri
 
 **Layout:** Full width, centered content with `max-w-7xl` container  
 **Padding:** 64px-96px vertical (`py-16 lg:py-24`)  
-**Background:** Black with subtle gradient pattern overlay
+**Background:** Black with subtle grid line pattern overlay (`.bg-pattern` - see Background Patterns section)
 
 **Content:**
 - Status badge with icon, text, and availability link
@@ -192,6 +192,64 @@ font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-seri
 - Primary: Slate 100 background, Slate 900 text (white button style)
 - Secondary: Slate 900/60 background, Slate 800/70 border, Slate 300 text
 - Highlight the primary CTA with supporting microcopy to leverage the Goal-Gradient and Zeigarnik effects.
+
+---
+
+### Background Patterns
+
+Each page features a unique, subtle SVG background pattern to add visual texture without distracting from content. All patterns follow the Aesthetic-Usability Effect principle—subtle enough to enhance perceived quality without overwhelming the user.
+
+**Design Principles:**
+- Opacity: 0.08-0.12 (subtle, non-distracting)
+- Color: Slate 500 (#64758b) for consistency
+- Stroke width: 0.5px for delicate appearance
+- Position: Absolute, full viewport coverage with `pointer-events: none`
+- Base layers: All patterns include radial gradient and linear gradient overlays for depth
+
+**Pattern Assignments:**
+
+| Page | Pattern Class | Pattern Type | Description |
+|------|--------------|--------------|-------------|
+| **Home** | `.bg-pattern` | Grid Lines | Subtle horizontal and vertical grid lines (24px spacing, opacity 0.10) |
+| **About** | `.bg-pattern-about` | Circuit Board | Technical circuit board pattern with grid overlay (40px spacing, opacity 0.12). Grid lines fade out after 40% from top. |
+| **Books** | `.bg-pattern-books` | Dot Grid | Small circular dots arranged in a grid (24px spacing, r=1px, opacity 0.12) |
+| **Blogs** | `.bg-pattern-blogs` | Writing Lines | Horizontal writing lines pattern (80px spacing, opacity 0.10) |
+| **Shorts** | `.bg-pattern-shorts` | Noise Texture | Fractal noise texture using SVG filters (100px spacing, opacity 0.08) |
+| **Speaker** | `.bg-pattern-speaker` | Diagonal Lines | Diagonal stripe pattern at 45-degree angle (30px spacing, opacity 0.12) |
+| **Experience** | `.bg-pattern-experience` | Timeline/Flow | Connected nodes and flow lines representing timeline (60px spacing, opacity 0.12) |
+| **Manhwa** | `.bg-pattern-manhwa` | Hexagon Grid | Hexagonal grid pattern (60px spacing, opacity 0.15) |
+| **Projects** | Custom SVG | Grid Lines | Custom inline SVG with vertical and horizontal grid lines (not using pattern class) |
+
+**Implementation:**
+```css
+/* Example: Subtle pattern with base layers */
+.bg-pattern-[name] {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image: 
+    url("data:image/svg+xml,..."), /* SVG pattern */
+    radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
+    linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
+  background-size: [pattern-size], 100% 100%, 100% 100%;
+  background-position: center;
+}
+```
+
+**Usage in Pages:**
+```tsx
+<div className="min-h-screen flex flex-col relative">
+  <div className="bg-pattern-[name]" aria-hidden="true" />
+  <div className="mx-auto max-w-7xl px-6 w-full py-12 md:py-16 relative z-10">
+    {/* Page content */}
+  </div>
+</div>
+```
+
+**Accessibility:**
+- All pattern divs include `aria-hidden="true"` to prevent screen reader announcement
+- Patterns use `pointer-events: none` to ensure they don't interfere with interactions
+- Content containers use `relative z-10` to ensure content appears above patterns
 
 ---
 
@@ -314,7 +372,8 @@ xl: 1280px
 
 ### About Page
 
-**Layout:** Single column, centered, max-width 800px
+**Layout:** Single column, centered, max-width 800px  
+**Background Pattern:** Circuit Board pattern (`.bg-pattern-about`)
 
 **Sections:**
 1. Page heading
@@ -329,13 +388,14 @@ xl: 1280px
 ### Projects Page
 
 **Layout:** Grid of project cards  
-**Columns:** 2-3 columns (responsive)
+**Columns:** 2-3 columns (responsive)  
+**Background Pattern:** Custom inline SVG grid pattern (not using pattern class)
 
 **Features:**
-- Primary filters limited to category and tech; move advanced filters into an accordion to satisfy Hick’s Law.
+- Primary filters limited to category and tech; move advanced filters into an accordion to satisfy Hick's Law.
 - Search input with inline clear button; debounce to keep perceived performance under the Doherty threshold.
 - Featured projects highlighted
-- Pagination or “Load more” after 6-9 cards to prevent cognitive overload.
+- Pagination or "Load more" after 6-9 cards to prevent cognitive overload.
 
 ---
 
@@ -358,13 +418,14 @@ xl: 1280px
 
 ### Speaking Page
 
-**Layout:** Grid or list view of speaking engagement cards
+**Layout:** Grid or list view of speaking engagement cards  
+**Background Pattern:** Diagonal Lines pattern (`.bg-pattern-speaker`)
 
 **Features:**
 - Filter by type: Conference, Workshop, Webinar, Mentoring using segmented controls (`space-x-2 min-w-[44px]` buttons).
 - Chronological order (recent first)
 - Each card shows: Title, Community/Event, Date, Topic
-- Surface upcoming events first and provide progress tags (“Upcoming”, “Completed”) to align with the Zeigarnik Effect.
+- Surface upcoming events first and provide progress tags ("Upcoming", "Completed") to align with the Zeigarnik Effect.
 
 ---
 
@@ -385,7 +446,8 @@ xl: 1280px
 
 ### Book Page
 
-**Layout:** Grid of book cards, organized by category
+**Layout:** Grid of book cards, organized by category  
+**Background Pattern:** Dot Grid pattern (`.bg-pattern-books`)
 
 **Sections:**
 1. Page heading
@@ -396,6 +458,68 @@ xl: 1280px
 4. Optional: Search/Filter by category or genre
 - Group books into manageable categories and offer collapsible sections for extensive collections.
 - Provide consistent badge styling (`variant="outline"`) across categories for the Law of Similarity.
+
+---
+
+### Blogs Page
+
+**Layout:** Grid or list view of blog post cards  
+**Background Pattern:** Writing Lines pattern (`.bg-pattern-blogs`)
+
+**Features:**
+- Category filters: All, My journey, Idea, Technical writer, Opinions
+- Filter buttons with active state styling
+- Blog cards showing title, excerpt, date, and category
+- Empty state message when no blogs match filters
+- Chronological order (recent first)
+
+---
+
+### Shorts Page
+
+**Layout:** Grid of short content cards with sidebar filter  
+**Background Pattern:** Noise Texture pattern (`.bg-pattern-shorts`)
+
+**Features:**
+- Two-column layout: main content (left) and sticky filter sidebar (right)
+- Tag-based filtering with toggle buttons
+- Search input for title, tags, and content
+- Clear filters button
+- Empty state message when no shorts match filters
+- Grid layout: 1 column (mobile), 2 columns (desktop)
+
+---
+
+### Experience Page
+
+**Layout:** Single column, centered content  
+**Background Pattern:** Timeline/Flow pattern (`.bg-pattern-experience`)
+
+**Sections:**
+1. Page heading
+2. Work experience timeline or cards
+3. Education (if applicable)
+4. Skills and technologies
+- Most recent experience first
+- Surface "Current" roles with badges
+
+---
+
+### Manhwa Page
+
+**Layout:** Grid of manhwa cards, organized by category  
+**Background Pattern:** Hexagon Grid pattern (`.bg-pattern-manhwa`)
+
+**Sections:**
+1. Page heading
+2. "Currently Reading" section
+   - Grid of manhwa cards
+3. "Recommended" section
+   - Grid of manhwa cards
+4. "Wishlist" section
+   - Grid of manhwa cards
+- Similar structure to Books page but for manhwa content
+- Consistent card styling with Books page
 
 ---
 
