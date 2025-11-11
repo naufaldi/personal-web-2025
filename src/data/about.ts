@@ -61,43 +61,68 @@ export const currentActivities: CurrentActivity[] = [
 export const journeyPhotos: JourneyPhoto[] = [
   {
     id: '1',
-    imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop',
-    alt: 'Team collaboration and mentorship',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762850360/portfolio-2025/influence/meetup-mas-prim.jpg',
+    alt: 'Meetup event at MAS Prim',
   },
   {
     id: '2',
-    imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop',
-    alt: 'Workshop and speaking engagement',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762850359/portfolio-2025/influence/date.jpg',
+    alt: 'Speaking engagement event',
   },
   {
     id: '3',
-    imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
-    alt: 'Coding and development journey',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762850358/portfolio-2025/influence/last-efishery.jpg',
+    alt: 'eFishery speaking engagement',
   },
   {
     id: '4',
-    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop',
-    alt: 'Professional growth and learning',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762850313/portfolio-2025/influence/meetup-last.jpg',
+    alt: 'Tech meetup event',
   },
   {
     id: '5',
-    imageUrl: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=300&fit=crop',
-    alt: 'Building products and solutions',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762850313/portfolio-2025/influence/workspace.jpg',
+    alt: 'Workspace and development environment',
   },
   {
     id: '6',
-    imageUrl: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=400&h=300&fit=crop',
-    alt: 'Mentorship and knowledge sharing',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762850312/portfolio-2025/influence/idsw.jpg',
+    alt: 'IDSW event participation',
   },
   {
     id: '7',
-    imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop',
-    alt: 'Community engagement',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762850312/portfolio-2025/influence/quora_indo.jpg',
+    alt: 'Quora Indonesia community event',
   },
   {
     id: '8',
-    imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop',
-    alt: 'Career milestones',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762850312/portfolio-2025/influence/techbro-wfc.jpg',
+    alt: 'TechBro WFC event',
+  },
+  {
+    id: '10',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762849076/portfolio-2025/influence/image-5.jpg',
+    alt: 'Community engagement and networking',
+  },
+  {
+    id: '11',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762849075/portfolio-2025/influence/image-2.jpg',
+    alt: 'Workshop and learning session',
+  },
+  {
+    id: '12',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762849074/portfolio-2025/influence/image-1.jpg',
+    alt: 'Tech community event',
+  },
+  {
+    id: '13',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762849074/portfolio-2025/influence/image-4.jpg',
+    alt: 'Speaking and mentorship engagement',
+  },
+  {
+    id: '14',
+    imageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762849073/portfolio-2025/influence/image-3.jpg',
+    alt: 'Professional development and growth',
   },
 ]
 

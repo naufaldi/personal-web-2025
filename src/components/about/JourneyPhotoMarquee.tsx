@@ -1,5 +1,6 @@
 import { journeyPhotos } from '@/data/about'
 import FadeInUp from '@/components/common/FadeInUp'
+import CloudinaryImg from '@/components/ui/cloudinary-img'
 
 export default function JourneyPhotoMarquee() {
   const duplicatedPhotos = [...journeyPhotos, ...journeyPhotos]
@@ -15,12 +16,13 @@ export default function JourneyPhotoMarquee() {
                   key={`${photo.id}-${index}`}
                   className="flex-shrink-0 h-48 w-64 md:h-56 md:w-72 rounded-lg overflow-hidden grayscale transition-all duration-300 opacity-90"
                 >
-                  <img
-                    src={photo.imageUrl}
+                  <CloudinaryImg
+                    publicId={photo.imageUrl}
+                    width={288}
+                    height={224}
                     alt={photo.alt}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                    decoding="async"
+                    noStyle
+                    preview={false}
                   />
                 </div>
               ))}
