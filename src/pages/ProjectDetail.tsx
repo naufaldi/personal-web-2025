@@ -15,22 +15,12 @@ export default function ProjectDetail() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-slate-950">
         <div className="text-center">
-          <h1
-            className="text-2xl text-slate-100 mb-4"
-            style={{
-              fontFamily: 'var(--font-mono)',
-              fontWeight: 700,
-            }}
-          >
+          <h1 className="text-2xl text-slate-100 mb-4 font-mono font-bold">
             Project not found
           </h1>
           <Link
             to="/projects"
-            className="text-slate-400 hover:text-slate-200 transition-colors"
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontWeight: 500,
-            }}
+            className="text-slate-400 hover:text-slate-200 transition-colors font-body font-medium"
           >
             Back to Projects
           </Link>
@@ -46,11 +36,7 @@ export default function ProjectDetail() {
       <div className="mx-auto max-w-7xl px-6 w-full py-12 md:py-16 relative z-10">
         <Link
           to="/projects"
-          className="inline-flex items-center gap-2 mb-8 text-slate-400 hover:text-slate-200 transition-colors"
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontWeight: 500,
-          }}
+          className="inline-flex items-center gap-2 mb-8 text-slate-400 hover:text-slate-200 transition-colors font-body font-medium"
         >
           <ArrowLeft className="h-4 w-4" />
           Back to Projects
@@ -79,34 +65,17 @@ export default function ProjectDetail() {
                 )}
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <h1
-                      className="text-3xl md:text-4xl text-slate-100 mb-2"
-                      style={{
-                        fontFamily: 'var(--font-mono)',
-                        fontWeight: 700,
-                      }}
-                    >
+                    <h1 className="text-3xl md:text-4xl text-slate-100 mb-2 font-mono font-bold">
                       {project.title}
                     </h1>
-                    <p
-                      className="text-base md:text-lg text-slate-300 mb-4"
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontWeight: 400,
-                        lineHeight: '1.75',
-                      }}
-                    >
+                    <p className="text-base md:text-lg mb-4 font-blog font-normal leading-[1.75] text-[rgb(163,163,163)]">
                       {project.description}
                     </p>
                   </div>
                   {project.type === 'blog' && (
                     <Badge
                       variant="outline"
-                      className="border-slate-700/70 text-slate-300 bg-slate-900/40"
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontWeight: 500,
-                      }}
+                      className="border-slate-700/70 text-slate-300 bg-slate-900/40 font-body font-medium"
                     >
                       Technical Blog
                     </Badge>
@@ -123,13 +92,7 @@ export default function ProjectDetail() {
                         title={tech}
                       >
                         {Icon && <Icon className="h-3.5 w-3.5 text-slate-400" />}
-                        <span
-                          className="text-xs text-slate-400"
-                          style={{
-                            fontFamily: 'var(--font-mono)',
-                            fontWeight: 500,
-                          }}
-                        >
+                        <span className="text-xs text-slate-400 font-mono font-medium">
                           {tech}
                         </span>
                       </div>
@@ -143,11 +106,7 @@ export default function ProjectDetail() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-md border border-slate-800/70 bg-slate-900/60 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-slate-700/70 hover:bg-slate-900/90 hover:text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40"
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontWeight: 500,
-                      }}
+                      className="inline-flex items-center gap-1.5 rounded-md border border-slate-800/70 bg-slate-900/60 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-slate-700/70 hover:bg-slate-900/90 hover:text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 font-body font-medium"
                       aria-label={`Visit ${project.title} live website`}
                     >
                       <ExternalLink className="h-4 w-4" />
@@ -159,11 +118,7 @@ export default function ProjectDetail() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-md border border-slate-800/70 bg-slate-900/60 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-slate-700/70 hover:bg-slate-900/90 hover:text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40"
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontWeight: 500,
-                      }}
+                      className="inline-flex items-center gap-1.5 rounded-md border border-slate-800/70 bg-slate-900/60 px-4 py-2 text-sm text-slate-300 transition-colors hover:border-slate-700/70 hover:bg-slate-900/90 hover:text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 font-body font-medium"
                       aria-label={`View ${project.title} on GitHub`}
                     >
                       <Github className="h-4 w-4" />

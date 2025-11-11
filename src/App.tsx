@@ -7,6 +7,8 @@ import Speaker from '@/pages/Speaker'
 import Manhwa from '@/pages/Manhwa'
 import Projects from '@/pages/Projects'
 import ProjectDetail from '@/pages/ProjectDetail'
+import Blogs from '@/pages/Blogs'
+import BlogDetail from '@/pages/BlogDetail'
 import Books from '@/pages/Books'
 import Shorts from '@/pages/Shorts'
 import ShortDetail from '@/pages/ShortDetail'
@@ -22,6 +24,8 @@ const router = createBrowserRouter([
       { path: '/about', element: <About /> },
       { path: '/projects', element: <Projects /> },
       { path: '/projects/:slug', element: <ProjectDetail /> },
+      { path: '/blogs', element: <Blogs /> },
+      { path: '/blogs/:slug', element: <BlogDetail /> },
       { path: '/experience', element: <Experience /> },
       { path: '/speaker', element: <Speaker /> },
       { path: '/speaking', element: <Speaking /> },

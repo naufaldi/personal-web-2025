@@ -2,3 +2,5 @@
 /QUICKSTART.md
 /SETUP_COMPLETE.md
 node_modules
+.env.local
+.env

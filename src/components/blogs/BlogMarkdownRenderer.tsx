@@ -7,7 +7,7 @@ import { css } from '@codemirror/lang-css'
 import { json } from '@codemirror/lang-json'
 import { slugify } from '@/lib/toc'
 
-interface ProjectMarkdownRendererProps {
+interface BlogMarkdownRendererProps {
   content: string
 }
 
@@ -28,7 +28,7 @@ const getLanguageExtension = (lang: string | undefined) => {
   return languageMap[lang.toLowerCase()]
 }
 
-export default function ProjectMarkdownRenderer({ content }: ProjectMarkdownRendererProps) {
+export default function BlogMarkdownRenderer({ content }: BlogMarkdownRendererProps) {
   return (
     <div className="prose prose-invert max-w-none">
       <ReactMarkdown
@@ -40,7 +40,7 @@ export default function ProjectMarkdownRenderer({ content }: ProjectMarkdownRend
             return (
               <h2
                 id={id}
-                className="text-2xl md:text-3xl text-slate-200 mb-4 mt-6 scroll-mt-24 font-mono font-bold"
+                className="text-2xl md:text-3xl mb-4 mt-6 scroll-mt-24 text-slate-200 font-mono font-bold"
               >
                 {children}
               </h2>
@@ -52,14 +52,14 @@ export default function ProjectMarkdownRenderer({ content }: ProjectMarkdownRend
             return (
               <h3
                 id={id}
-                className="text-xl md:text-2xl text-slate-200 mb-3 mt-5 scroll-mt-24 font-mono font-semibold"
+                className="text-xl md:text-2xl mb-3 mt-5 scroll-mt-24 text-slate-200 font-mono font-semibold"
               >
                 {children}
               </h3>
             )
           },
           p: ({ children }) => (
-            <p className="text-sm md:text-base leading-[1.75] mb-4 font-blog font-normal text-[rgb(163,163,163)]">
+            <p className="text-base leading-[1.75] mb-4 font-blog font-normal text-[rgb(163,163,163)]">
               {children}
             </p>
           ),
@@ -82,7 +82,7 @@ export default function ProjectMarkdownRenderer({ content }: ProjectMarkdownRend
             const isInline = !className
             if (isInline) {
               return (
-                <code className="px-1.5 py-0.5 rounded bg-slate-800/70 text-slate-200 text-sm font-mono font-normal">
+                <code className="px-1.5 py-0.5 rounded bg-slate-800/70 text-sm text-slate-200 font-mono font-normal">
                   {children}
                 </code>
               )
@@ -157,3 +157,4 @@ export default function ProjectMarkdownRenderer({ content }: ProjectMarkdownRend
     </div>
   )
 }
+

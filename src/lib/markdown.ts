@@ -19,6 +19,20 @@ export interface PortfolioFrontmatter {
   type?: 'project' | 'blog'
 }
 
+export interface BlogFrontmatter {
+  title: string
+  slug: string
+  description: string
+  category: 'My journey' | 'Idea' | 'Technical writer' | 'Opinions'
+  author: {
+    name: string
+    avatar: string
+  }
+  date: string
+  image?: string
+  readTime?: number
+}
+
 export interface ParsedMarkdown<T = Frontmatter> {
   frontmatter: T
   content: string

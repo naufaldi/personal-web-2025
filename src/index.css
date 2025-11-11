@@ -5,6 +5,7 @@
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
   --font-mono: "Source Code Pro", "Courier New", monospace;
   --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-blog: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @supports (color: oklch(0 0 0)) {
@@ -161,6 +162,19 @@ body {
     radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
     linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
   background-size: 100px 100px, 100% 100%, 100% 100%;
+  background-position: center;
+}
+
+/* Background pattern for Blogs page - Writing Lines Pattern */
+.bg-pattern-blogs {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20h80M0 40h80M0 60h80' fill='none' stroke='%2364758b' stroke-width='0.5' opacity='0.12'/%3E%3C/svg%3E"),
+    radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
+    linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
+  background-size: 80px 80px, 100% 100%, 100% 100%;
   background-position: center;
 }
 

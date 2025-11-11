@@ -17,7 +17,7 @@ interface NavItem {
 
 const navigationItems: NavItem[] = [
   { name: 'Home', href: '/' },
-  { name: 'Blog', href: 'https://blog.faldi.xyz/', external: true },
+  { name: 'Blog', href: '/blogs' },
   { name: 'Projects', href: '/projects' },
   { name: 'About', href: '/about' },
   { name: 'Speaker', href: '/speaker' },
