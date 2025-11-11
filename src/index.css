@@ -45,6 +45,25 @@ body {
   color: white;
 }
 
+/* Custom scrollbar for TOC sidebar */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: rgb(15 23 42 / 0.5);
+  border-radius: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: rgb(51 65 85);
+  border-radius: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: rgb(71 85 105);
+}
+
 /* Background pattern */
 .bg-pattern {
   pointer-events: none;

@@ -1,0 +1,224 @@
+import ReactMarkdown from 'react-markdown'
+import CodeMirror from '@uiw/react-codemirror'
+import { oneDark } from '@codemirror/theme-one-dark'
+import { javascript } from '@codemirror/lang-javascript'
+import { html } from '@codemirror/lang-html'
+import { css } from '@codemirror/lang-css'
+import { json } from '@codemirror/lang-json'
+import { slugify } from '@/lib/toc'
+
+interface ProjectMarkdownRendererProps {
+  content: string
+}
+
+const getLanguageExtension = (lang: string | undefined) => {
+  if (!lang) return null
+  
+  const languageMap: Record<string, any> = {
+    javascript: javascript({ jsx: true, typescript: true }),
+    js: javascript({ jsx: true }),
+    jsx: javascript({ jsx: true }),
+    ts: javascript({ jsx: true, typescript: true }),
+    typescript: javascript({ jsx: true, typescript: true }),
+    html: html(),
+    css: css(),
+    json: json(),
+  }
+  
+  return languageMap[lang.toLowerCase()]
+}
+
+export default function ProjectMarkdownRenderer({ content }: ProjectMarkdownRendererProps) {
+  return (
+    <div className="prose prose-invert max-w-none">
+      <ReactMarkdown
+        components={{
+          h1: () => null,
+          h2: ({ children }) => {
+            const text = String(children)
+            const id = slugify(text)
+            return (
+              <h2
+                id={id}
+                className="text-2xl md:text-3xl text-slate-100 mb-4 mt-6 scroll-mt-24"
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontWeight: 700,
+                }}
+              >
+                {children}
+              </h2>
+            )
+          },
+          h3: ({ children }) => {
+            const text = String(children)
+            const id = slugify(text)
+            return (
+              <h3
+                id={id}
+                className="text-xl md:text-2xl text-slate-100 mb-3 mt-5 scroll-mt-24"
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontWeight: 600,
+                }}
+              >
+                {children}
+              </h3>
+            )
+          },
+          p: ({ children }) => (
+            <p
+              className="text-sm md:text-base text-slate-200 leading-relaxed mb-4"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontWeight: 400,
+                lineHeight: '1.75',
+              }}
+            >
+              {children}
+            </p>
+          ),
+          ul: ({ children }) => (
+            <ul
+              className="list-disc list-outside ml-6 space-y-2 mb-4 text-slate-200"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontWeight: 400,
+                lineHeight: '1.75',
+              }}
+            >
+              {children}
+            </ul>
+          ),
+          ol: ({ children }) => (
+            <ol
+              className="list-decimal list-outside ml-6 space-y-2 mb-4 text-slate-200"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontWeight: 400,
+                lineHeight: '1.75',
+              }}
+            >
+              {children}
+            </ol>
+          ),
+          li: ({ children }) => (
+            <li
+              className="pl-2 text-slate-200"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontWeight: 400,
+                lineHeight: '1.75',
+              }}
+            >
+              {children}
+            </li>
+          ),
+          code: ({ children, className }) => {
+            const isInline = !className
+            if (isInline) {
+              return (
+                <code
+                  className="px-1.5 py-0.5 rounded bg-slate-800/70 text-slate-200 text-sm"
+                  style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontWeight: 400,
+                  }}
+                >
+                  {children}
+                </code>
+              )
+            }
+            
+            const language = className?.replace('language-', '')
+            const codeString = String(children).replace(/\n$/, '')
+            const extension = getLanguageExtension(language)
+            
+            return (
+              <div className="mb-4 rounded-lg overflow-hidden border border-slate-800/70">
+                <CodeMirror
+                  value={codeString}
+                  theme={oneDark}
+                  extensions={extension ? [extension] : []}
+                  editable={false}
+                  basicSetup={{
+                    lineNumbers: true,
+                    highlightActiveLine: false,
+                    highlightSelectionMatches: false,
+                  }}
+                  style={{
+                    fontSize: '14px',
+                  }}
+                />
+              </div>
+            )
+          },
+          pre: ({ children }) => {
+            return <>{children}</>
+          },
+          strong: ({ children }) => (
+            <strong
+              className="font-semibold text-slate-100"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontWeight: 600,
+              }}
+            >
+              {children}
+            </strong>
+          ),
+          a: ({ children, href }) => (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 underline hover:text-blue-300 transition-colors"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontWeight: 500,
+              }}
+            >
+              {children}
+            </a>
+          ),
+          blockquote: ({ children }) => (
+            <blockquote
+              className="border-l-4 border-slate-600 pl-4 italic text-slate-300 mb-4 bg-slate-900/40 py-2 rounded-r"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontWeight: 400,
+                lineHeight: '1.75',
+              }}
+            >
+              {children}
+            </blockquote>
+          ),
+          img: ({ src, alt }) => (
+            <div className="my-6 rounded-lg overflow-hidden border border-slate-800/70 bg-slate-900/60">
+              <img
+                src={src}
+                alt={alt || ''}
+                className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
+              />
+              {alt && (
+                <p
+                  className="text-xs text-slate-400 px-4 py-2 bg-slate-900/80 border-t border-slate-800/70"
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontWeight: 400,
+                  }}
+                >
+                  {alt}
+                </p>
+              )}
+            </div>
+          ),
+        }}
+      >
+        {content}
+      </ReactMarkdown>
+    </div>
+  )
+}

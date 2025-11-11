@@ -7,13 +7,25 @@ export interface Frontmatter {
   date: string
 }
 
-export interface ParsedMarkdown {
-  frontmatter: Frontmatter
+export interface PortfolioFrontmatter {
+  title: string
+  slug: string
+  description: string
+  image: string
+  liveUrl?: string
+  githubUrl?: string
+  techStack: string[]
+  date: string
+  type?: 'project' | 'blog'
+}
+
+export interface ParsedMarkdown<T = Frontmatter> {
+  frontmatter: T
   content: string
 }
 
-export const parseMarkdown = (markdown: string): ParsedMarkdown => {
-  const { attributes, body } = fm<Frontmatter>(markdown)
+export const parseMarkdown = <T = Frontmatter>(markdown: string): ParsedMarkdown<T> => {
+  const { attributes, body } = fm<T>(markdown)
   return {
     frontmatter: attributes,
     content: body.trim(),
