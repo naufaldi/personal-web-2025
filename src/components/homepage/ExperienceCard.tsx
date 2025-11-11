@@ -3,6 +3,7 @@ import type { WorkExperience } from '@/data/experience'
 import { cn } from '@/lib'
 import { getTechIcon } from '@/lib/techIcons'
 import { Accordion, AccordionContent, AccordionTrigger } from '@/components/ui/accordion'
+import FadeInUp from '@/components/common/FadeInUp'
 
 interface ExperienceCardProps {
   experience: WorkExperience
@@ -16,20 +17,16 @@ const employmentTypeLabels: Record<WorkExperience['employmentType'], string> = {
 }
 
 export default function ExperienceCard({ experience, index }: ExperienceCardProps) {
-  const animationDelay = `${120 + index * 100}ms`
   const isCurrent = experience.endDate === 'Present'
 
   return (
-    <article
-      className={cn(
-        'rounded-lg border bg-slate-900/60 p-3 transition-all duration-200 hover:border-slate-700/70 hover:bg-slate-900/90 hover:shadow-lg hover:shadow-slate-900/50',
-        isCurrent && 'border-slate-700/50 ring-1 ring-slate-700/20',
-      )}
-      style={{
-        animation: 'fade-in 900ms ease-out both',
-        animationDelay,
-      }}
-    >
+    <FadeInUp delay={0.12 + index * 0.1}>
+      <article
+        className={cn(
+          'rounded-lg border bg-slate-900/60 p-3 transition-all duration-200 hover:border-slate-700/70 hover:bg-slate-900/90 hover:shadow-lg hover:shadow-slate-900/50',
+          isCurrent && 'border-slate-700/50 ring-1 ring-slate-700/20',
+        )}
+      >
       <div className="space-y-2">
         {/* Header: Company | Year Badges */}
         <div className="flex items-start justify-between gap-2">
@@ -152,5 +149,6 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
         )}
       </div>
     </article>
+    </FadeInUp>
   )
 }

@@ -4,6 +4,7 @@ import { Card, CardHeader } from '@/components/ui/card'
 import { getTechIcon } from '@/lib/techIcons'
 import type { PortfolioItem } from '@/data/portfolio'
 import { cn } from '@/lib'
+import FadeInUp from '@/components/common/FadeInUp'
 
 interface PortfolioCardProps {
   item: PortfolioItem
@@ -11,18 +12,13 @@ interface PortfolioCardProps {
 }
 
 export default function PortfolioCard({ item, index }: PortfolioCardProps) {
-  const animationDelay = `${120 + index * 100}ms`
-
   return (
-    <Card
-      className={cn(
-        'group border-slate-800/70 bg-slate-900/60 transition-all duration-200 hover:border-slate-700/70 hover:bg-slate-900/90 overflow-hidden flex flex-col',
-      )}
-      style={{
-        animation: 'fade-in 900ms ease-out both',
-        animationDelay,
-      }}
-    >
+    <FadeInUp delay={0.12 + index * 0.1}>
+      <Card
+        className={cn(
+          'group border-slate-800/70 bg-slate-900/60 transition-all duration-200 hover:border-slate-700/70 hover:bg-slate-900/90 overflow-hidden flex flex-col',
+        )}
+      >
       <div className="flex flex-col md:flex-row">
         <div className="flex-1 p-4 md:p-5 space-y-2 flex flex-col justify-center">
           <CardHeader className="space-y-1.5 p-0">
@@ -129,6 +125,7 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
         </div>
       </div>
     </Card>
+    </FadeInUp>
   )
 }
 

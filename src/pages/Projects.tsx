@@ -1,6 +1,7 @@
 import { Folder } from 'lucide-react'
 import { portfolioItems } from '@/data/portfolio'
 import PortfolioCard from '@/components/homepage/PortfolioCard'
+import FadeInUp from '@/components/common/FadeInUp'
 
 const ProjectBackground = () => (
   <svg
@@ -455,42 +456,40 @@ export default function Projects() {
     <div className="min-h-screen flex flex-col relative bg-slate-950">
       <ProjectBackground />
       <div className="mx-auto max-w-7xl px-6 w-full relative z-10 py-12 md:py-16">
-        <div
-          className="flex flex-col items-center gap-4 mb-12"
-          style={{
-            animation: 'fade-in 900ms ease-out both',
-            animationDelay: '60ms',
-          }}
-        >
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 bg-slate-900/60">
-            <Folder className="h-6 w-6 text-slate-300" />
+        <FadeInUp delay={0.06}>
+          <div className="flex flex-col items-center gap-4 mb-12">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 bg-slate-900/60">
+              <Folder className="h-6 w-6 text-slate-300" />
+            </div>
+            <h1
+              className="text-4xl md:text-5xl text-center"
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontWeight: 700,
+              }}
+            >
+              <span className="text-slate-100">Curated </span>
+              <span className="text-slate-300">Projects</span>
+            </h1>
+            <p
+              className="text-sm md:text-base text-slate-500 text-center"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontWeight: 500,
+              }}
+            >
+              Showcase of my projects that I'm proud of.
+            </p>
           </div>
-          <h1
-            className="text-4xl md:text-5xl text-center"
-            style={{
-              fontFamily: 'var(--font-mono)',
-              fontWeight: 700,
-            }}
-          >
-            <span className="text-slate-100">Curated </span>
-            <span className="text-slate-300">Projects</span>
-          </h1>
-          <p
-            className="text-sm md:text-base text-slate-500 text-center"
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontWeight: 500,
-            }}
-          >
-            Showcase of my projects that I'm proud of.
-          </p>
-        </div>
+        </FadeInUp>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          {portfolioItems.map((item, index) => (
-            <PortfolioCard key={item.id} item={item} index={index} />
-          ))}
-        </div>
+        <FadeInUp delay={0.12}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {portfolioItems.map((item, index) => (
+              <PortfolioCard key={item.id} item={item} index={index} />
+            ))}
+          </div>
+        </FadeInUp>
       </div>
     </div>
   )

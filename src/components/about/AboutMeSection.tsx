@@ -2,32 +2,24 @@ import { User } from 'lucide-react'
 import ProfilePicture from './ProfilePicture'
 import TechStack from './TechStack'
 import { aboutBio, techStack } from '@/data/about'
+import FadeInUp from '@/components/common/FadeInUp'
 
 export default function AboutMeSection() {
   return (
     <section className="py-12 md:py-16">
       <div className="mx-auto max-w-7xl px-6 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
-          <div
-            className="flex justify-center md:justify-start"
-            style={{
-              animation: 'fade-in 900ms ease-out both',
-              animationDelay: '60ms',
-            }}
-          >
-            <ProfilePicture
-              imageUrl={aboutBio.profileImageUrl}
-              signature={aboutBio.signature}
-            />
-          </div>
+          <FadeInUp delay={0.06}>
+            <div className="flex justify-center md:justify-start">
+              <ProfilePicture
+                imageUrl={aboutBio.profileImageUrl}
+                signature={aboutBio.signature}
+              />
+            </div>
+          </FadeInUp>
 
-          <div
-            className="space-y-6"
-            style={{
-              animation: 'fade-in 900ms ease-out both',
-              animationDelay: '120ms',
-            }}
-          >
+          <FadeInUp delay={0.12}>
+            <div className="space-y-6">
             <div className="space-y-2">
               <h2
                 className="text-3xl md:text-4xl text-slate-100"
@@ -77,6 +69,7 @@ export default function AboutMeSection() {
               <TechStack items={techStack} />
             </div>
           </div>
+          </FadeInUp>
         </div>
       </div>
     </section>

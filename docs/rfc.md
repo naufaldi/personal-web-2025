@@ -287,9 +287,10 @@ App
 | **Language** | TypeScript | Type safety |
 | **Routing** | React Router v7 | Client-side routing |
 | **Styling** | Tailwind CSS | Utility-first CSS |
+| **Animations** | Framer Motion | Viewport-triggered animations |
 | **Markdown** | react-markdown + remark | Content rendering |
 | **Code Highlighting** | Prism.js | Syntax highlighting |
-| **Package Manager** | npm / pnpm | Dependency management |
+| **Package Manager** | Bun | Dependency management |
 
 ---
 
@@ -334,7 +335,52 @@ App
 
 ---
 
-## 11. Next Steps
+## 11. Animation System
+
+**Framework:** Framer Motion
+
+**Animation Pattern:** Fade-in-up with viewport detection
+
+All sections and components use a consistent animation pattern:
+
+- **Component:** `FadeInUp` wrapper component (`src/components/common/FadeInUp.tsx`)
+- **Animation:** Fade-in-up (opacity 0→1, translateY 20px→0)
+- **Duration:** 800ms
+- **Easing:** ease-out
+- **Delay:** 120ms (default, customizable per element)
+- **Trigger:** Viewport entry (once only - `once: true`)
+- **Viewport Margin:** -50px (triggers slightly before element enters viewport)
+
+**Usage:**
+```tsx
+import FadeInUp from '@/components/common/FadeInUp'
+
+<FadeInUp>
+  <section>Content</section>
+</FadeInUp>
+
+// With custom delay
+<FadeInUp delay={0.2}>
+  <div>Delayed content</div>
+</FadeInUp>
+```
+
+**Implementation Guidelines:**
+- Apply to all page sections and major components
+- Use cascading delays for child elements (e.g., 120ms, 240ms, 360ms)
+- Animations trigger only on first viewport entry
+- Maintain consistent timing across the site
+- Replace CSS animations with FadeInUp component
+
+**Applied To:**
+- All page sections (Hero, Experience, Projects, etc.)
+- Individual components (Cards, Lists, etc.)
+- Page headers and content blocks
+- Child elements for staggered animations
+
+---
+
+## 12. Next Steps
 
 1. ✅ **Architecture Review** (Updated)
 2. **Design Discussion** - UI/UX, color scheme, typography

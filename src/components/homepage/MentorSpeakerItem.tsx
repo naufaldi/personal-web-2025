@@ -1,6 +1,7 @@
 import { Twitter, Linkedin, ExternalLink, Youtube } from 'lucide-react'
 import type { MentorSpeakerItem } from '@/data/mentorSpeaker'
 import { cn } from '@/lib'
+import FadeInUp from '@/components/common/FadeInUp'
 
 interface MentorSpeakerItemProps {
   item: MentorSpeakerItem
@@ -8,18 +9,13 @@ interface MentorSpeakerItemProps {
 }
 
 export default function MentorSpeakerItem({ item, index }: MentorSpeakerItemProps) {
-  const animationDelay = `${120 + index * 100}ms`
-
   return (
-    <article
-      className={cn(
-        'group flex flex-col md:flex-row gap-6 py-6 border-b border-slate-800/70 transition-colors hover:bg-slate-900/30',
-      )}
-      style={{
-        animation: 'fade-in 900ms ease-out both',
-        animationDelay,
-      }}
-    >
+    <FadeInUp delay={0.12 + index * 0.1}>
+      <article
+        className={cn(
+          'group flex flex-col md:flex-row gap-6 py-6 border-b border-slate-800/70 transition-colors hover:bg-slate-900/30',
+        )}
+      >
       {item.image && (
         <div className="flex-shrink-0 w-full md:w-64 h-40 md:h-32 rounded-lg overflow-hidden shadow-sm">
           <img
@@ -110,6 +106,7 @@ export default function MentorSpeakerItem({ item, index }: MentorSpeakerItemProp
         )}
       </div>
     </article>
+    </FadeInUp>
   )
 }
 

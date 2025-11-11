@@ -2,19 +2,15 @@ import { Sparkles, Code2, ArrowRight } from 'lucide-react'
 import { siteConfig } from '@/data/site'
 import CodePreviewCard from './CodePreviewCard'
 import StatsCards from './StatsCards'
+import FadeInUp from '@/components/common/FadeInUp'
 
 export default function HeroSection() {
   return (
     <section className="relative flex-1">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center py-16 lg:py-24">
-          <div
-            className="space-y-7"
-            style={{
-              animation: 'fade-in-up 800ms ease-out both',
-              animationDelay: '120ms',
-            }}
-          >
+          <FadeInUp delay={0.12}>
+            <div className="space-y-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-800/70 bg-slate-900/60 px-2.5 py-1 text-[11px] text-slate-300">
               <Sparkles className="h-3.5 w-3.5 text-slate-300/90" />
               <span
@@ -90,17 +86,14 @@ export default function HeroSection() {
               </a>
             </div>
           </div>
+          </FadeInUp>
 
-          <div
-            className="relative"
-            style={{
-              animation: 'fade-in 900ms ease-out both',
-              animationDelay: '220ms',
-            }}
-          >
-            <CodePreviewCard />
-            <StatsCards />
-          </div>
+          <FadeInUp delay={0.22}>
+            <div className="relative">
+              <CodePreviewCard />
+              <StatsCards />
+            </div>
+          </FadeInUp>
         </div>
       </div>
     </section>
