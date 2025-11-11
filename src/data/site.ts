@@ -41,7 +41,7 @@ export const siteConfig: SiteConfig = {
   stats: {
     experience: '7 yrs',
     stack: 'TypeScript',
-    mentees: '200+',
+    mentees: '1000+',
   },
   selectedProjects: [
     {

@@ -7,9 +7,9 @@ export default function AboutMeSection() {
   return (
     <section className="py-12 md:py-16">
       <div className="mx-auto max-w-7xl px-6 w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
           <FadeInUp delay={0.06}>
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center">
               <ProfilePicture
                 imageUrl={aboutBio.profileImageUrl}
                 signature={aboutBio.signature}

@@ -31,7 +31,7 @@ bioParagraphs: [
     'My purpose extends beyond coding. I find deep satisfaction in helping others grow, having mentored over 200 individuals and connected with a community of 14,000+ on Twitter. I enjoy hosting workshops and sessions, especially for the "aha" moments that lead to breakthroughs.',
     'Balance is key. I\'m expanding my skills by learning backend development and, most importantly, learning to be a better partner. I believe great engineers are whole people, bringing curiosity and heart to everything they do.',
   ],
-  profileImageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+  profileImageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762848965/portfolio-2025/avatar.jpg',
   signature: 'Naufaldi',
 }
 

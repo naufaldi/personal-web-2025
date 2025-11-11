@@ -1,4 +1,5 @@
 import { organizationLogos } from '@/data/speaker'
+import CloudinaryImg from '@/components/ui/cloudinary-img'
 
 export default function OrganizationMarquee() {
   const duplicatedLogos = [...organizationLogos, ...organizationLogos]
@@ -28,11 +29,14 @@ export default function OrganizationMarquee() {
                 className="flex-shrink-0 flex items-center justify-center h-16 w-32 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
                 aria-label={`Visit ${logo.name}`}
               >
-                <img
-                  src={logo.logoUrl}
+                <CloudinaryImg
+                  publicId={logo.logoUrl}
+                  width={128}
+                  height={64}
                   alt={logo.name}
-                  className="max-h-full max-w-full object-contain"
-                  loading="lazy"
+                  preview={false}
+                  noStyle
+                  imgClassName="object-contain"
                 />
               </a>
             ))}

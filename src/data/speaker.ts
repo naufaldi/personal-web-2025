@@ -13,10 +13,10 @@ export interface OrganizationLogo {
 }
 
 export const speakerMentorStats: SpeakerMentorStats = {
-  menteesTaught: 200,
+  menteesTaught: 1000,
   mentoringSessions: 150,
   speakingEngagements: 25,
-  speakerTime: '50+ hours',
+  speakerTime: '100+ hours',
 }
 
 export const organizationLogos: OrganizationLogo[] = [

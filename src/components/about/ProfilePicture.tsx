@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { cn } from '@/lib'
+import CloudinaryImg from '@/components/ui/cloudinary-img'
 
 interface ProfilePictureProps {
   imageUrl: string
@@ -28,19 +29,21 @@ export default function ProfilePicture({
       </div>
 
       <div
-        className="relative rotate-2 bg-white p-3 shadow-2xl"
+        className="relative rotate-2 bg-white p-4 shadow-2xl"
         style={{
           animation: 'fade-in 900ms ease-out both',
           animationDelay: '120ms',
         }}
       >
-        <div className="border-4 border-slate-900 bg-white p-2">
-          <img
-            src={imageUrl}
+        <div className="border-4 border-slate-900 bg-white p-3">
+          <CloudinaryImg
+            publicId={imageUrl}
+            width={600}
+            height={800}
             alt="Profile"
-            className="aspect-[3/4] w-full max-w-[280px] object-cover"
-            loading="lazy"
-            decoding="async"
+            preview={false}
+            noStyle
+            className="w-full md:w-[300px]"
           />
         </div>
         <div
