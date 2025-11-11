@@ -15,6 +15,8 @@ const buttonVariants = cva(
           "bg-slate-100 text-slate-900 hover:bg-white focus-visible:ring-2 focus-visible:ring-[rgba(241,245,249,0.4)] transition-colors",
         secondary:
           "border border-[rgba(30,41,59,0.7)] bg-[rgba(15,23,42,0.6)] text-slate-300 hover:text-slate-100 hover:bg-[rgba(15,23,42,0.9)] hover:border-[rgba(51,65,85,0.7)] focus-visible:ring-2 focus-visible:ring-[rgba(129,140,248,0.3)] transition-colors",
+        "secondary-elevated":
+          "border border-slate-700/70 bg-slate-800/90 text-slate-200 hover:text-white hover:bg-slate-800 hover:border-slate-600/70 hover:shadow-md hover:shadow-slate-900/30 focus-visible:ring-2 focus-visible:ring-blue-400/50 transition-all",
         outline:
           "border border-[rgba(148,163,184,0.4)] text-slate-200 hover:text-white hover:border-[rgba(148,163,184,0.6)] focus-visible:ring-2 focus-visible:ring-[rgba(129,140,248,0.25)] bg-transparent transition-colors",
         ghost: "text-slate-300 hover:text-slate-100",

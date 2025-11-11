@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router'
 import Layout from '@/components/common/Layout'
 import Home from '@/pages/Home'
+import About from '@/pages/About'
 import Experience from '@/pages/Experience'
 import Speaker from '@/pages/Speaker'
 import Manhwa from '@/pages/Manhwa'
-
-const About = () => <div>About</div>
-const Projects = () => <div>Projects</div>
+import Projects from '@/pages/Projects'
 const ProjectDetail = () => <div>Project Detail</div>
 const Shorts = () => <div>Shorts</div>
 const Speaking = () => <div>Speaking</div>

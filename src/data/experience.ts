@@ -9,6 +9,7 @@ export interface WorkExperience {
   employmentType: EmploymentType
   description: string
   achievements: string[]
+  keyAchievementsMarkdown?: string
   techStack: string[]
   logoUrl?: string
   website?: string
@@ -28,6 +29,9 @@ export const workExperiences: WorkExperience[] = [
       'Led frontend architecture migration to React 18',
       'Collaborated with AI/ML teams on data visualization',
     ],
+    keyAchievementsMarkdown: `- Built scalable dashboard reducing load time by **40%**
+- Led frontend architecture migration to React 18
+- Collaborated with AI/ML teams on data visualization`,
     techStack: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
     website: 'https://efishery.com',
   },
@@ -44,6 +48,9 @@ export const workExperiences: WorkExperience[] = [
       'Improved page load performance by 30% through code splitting',
       'Mentored junior developers on React best practices',
     ],
+    keyAchievementsMarkdown: `- Developed reusable component library used across **10+** features
+- Improved page load performance by **30%** through code splitting
+- Mentored junior developers on React best practices`,
     techStack: ['React', 'TypeScript', 'Redux', 'Material-UI'],
     website: 'https://example.com',
   },
@@ -60,6 +67,9 @@ export const workExperiences: WorkExperience[] = [
       'Achieved 95+ Lighthouse performance scores',
       'Built responsive designs for various industries',
     ],
+    keyAchievementsMarkdown: `- Created **15+** high-converting landing pages
+- Achieved **95+** Lighthouse performance scores
+- Built responsive designs for various industries`,
     techStack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
   },
   {
@@ -75,6 +85,9 @@ export const workExperiences: WorkExperience[] = [
       'Collaborated with designers to implement pixel-perfect UIs',
       'Optimized websites for SEO and performance',
     ],
+    keyAchievementsMarkdown: `- Built **20+** client websites from scratch
+- Collaborated with designers to implement pixel-perfect UIs
+- Optimized websites for SEO and performance`,
     techStack: ['React', 'JavaScript', 'CSS', 'WordPress'],
   },
   {
@@ -90,6 +103,9 @@ export const workExperiences: WorkExperience[] = [
       'Implemented real-time features using WebSockets',
       'Created responsive mobile-first designs',
     ],
+    keyAchievementsMarkdown: `- Built MVP frontend in **3 months**
+- Implemented real-time features using WebSockets
+- Created responsive mobile-first designs`,
     techStack: ['React', 'JavaScript', 'CSS', 'Socket.io'],
   },
 ]
