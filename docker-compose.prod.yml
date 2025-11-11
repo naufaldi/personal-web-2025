@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    image: ghcr.io/naufaldi/personal-web-v5:prod
+    labels:
+      - "caddy=faldi.xyz"
+      - "caddy.reverse_proxy={{upstreams 3000}}"
+      - "com.centurylinklabs.watchtower.enable=true"
+    environment:
+      - NODE_ENV=production
+    restart: always
+    networks:
+      - edge
+      - personal-web-private
+
+networks:
+  edge:
+    external: true
+  personal-web-private:
+    driver: bridge
+

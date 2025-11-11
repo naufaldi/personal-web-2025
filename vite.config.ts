@@ -13,6 +13,17 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    outDir: 'dist/client',
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
+    },
+  },
+  ssr: {
+    noExternal: ['react', 'react-dom', 'react-router'],
+  },
   optimizeDeps: {
     include: [
       'front-matter',

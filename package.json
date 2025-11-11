@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "bun run build:client && bun run build:server",
+    "build:client": "tsc && vite build",
+    "build:server": "vite build --ssr src/server.ts --outDir dist/server",
+    "start": "bun run dist/server/server.js",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -23,6 +26,7 @@
     "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tabs": "^1.1.13",
+    "@react-router/node": "^7.6.2",
     "@supabase/supabase-js": "^2.81.0",
     "@uiw/react-codemirror": "^4.25.3",
     "class-variance-authority": "^0.7.1",
