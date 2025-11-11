@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BookOpen } from 'lucide-react'
-import { blogItems, getBlogsByCategory, type BlogCategory } from '@/data/blogs'
+import { getBlogsByCategory, type BlogCategory } from '@/data/blogs'
 import BlogCard from '@/components/blogs/BlogCard'
 import { cn } from '@/lib'
 

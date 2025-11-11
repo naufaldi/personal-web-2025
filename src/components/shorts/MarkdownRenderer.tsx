@@ -32,7 +32,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
     <div className="prose prose-invert max-w-none">
       <ReactMarkdown
         components={{
-          h1: ({ children }) => null,
+          h1: () => null,
           h2: ({ children }) => (
             <h2
               className="text-2xl md:text-3xl text-slate-100 mb-4 mt-6"
@@ -99,7 +99,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
               {children}
             </li>
           ),
-          code: ({ children, className, ...props }) => {
+          code: ({ children, className }) => {
             const isInline = !className
             if (isInline) {
               return (

@@ -1,4 +1,3 @@
-import { User } from 'lucide-react'
 import ProfilePicture from './ProfilePicture'
 import TechStack from './TechStack'
 import { aboutBio, techStack } from '@/data/about'

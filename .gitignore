@@ -4,3 +4,5 @@
 node_modules
 .env.local
 .env
+docs/cv.md
+docs/bio-web.md
