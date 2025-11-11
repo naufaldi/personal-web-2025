@@ -13,4 +13,14 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  optimizeDeps: {
+    include: [
+      'front-matter',
+      '@uiw/react-codemirror',
+      '@codemirror/lang-javascript',
+      '@codemirror/lang-html',
+      '@codemirror/lang-css',
+      '@codemirror/lang-json',
+    ],
+  },
 })
