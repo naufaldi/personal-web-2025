@@ -6,3 +6,4 @@ node_modules
 .env
 docs/cv.md
 docs/bio-web.md
+dist/
