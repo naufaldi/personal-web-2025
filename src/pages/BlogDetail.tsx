@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react'
 import { getBlogBySlug } from '@/data/blogs'
 import { extractTOC } from '@/lib/toc'
 import { incrementBlogViews } from '@/lib/blogStorage'
-import BlogMarkdownRenderer from '@/components/blogs/BlogMarkdownRenderer'
+import MarkdownRenderer from '@/components/common/MarkdownRenderer'
 import TableOfContents from '@/components/projects/TableOfContents'
 import BlogMetadata from '@/components/blogs/BlogMetadata'
 import BlogActions from '@/components/blogs/BlogActions'
@@ -137,7 +137,7 @@ export default function BlogDetail() {
               </header>
 
               <div className="prose prose-invert max-w-none">
-                <BlogMarkdownRenderer content={blog.content} />
+                <MarkdownRenderer content={blog.content} />
               </div>
             </article>
           </div>

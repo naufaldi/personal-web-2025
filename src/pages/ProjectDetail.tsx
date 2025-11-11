@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router'
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react'
 import { getProjectBySlug } from '@/data/portfolio'
 import { extractTOC } from '@/lib/toc'
-import ProjectMarkdownRenderer from '@/components/projects/ProjectMarkdownRenderer'
+import MarkdownRenderer from '@/components/common/MarkdownRenderer'
 import TableOfContents from '@/components/projects/TableOfContents'
 import { getTechIcon } from '@/lib/techIcons'
 import { Badge } from '@/components/ui/badge'
@@ -129,7 +129,7 @@ export default function ProjectDetail() {
               </header>
 
               <div className="prose prose-invert max-w-none">
-                <ProjectMarkdownRenderer content={project.content} />
+                <MarkdownRenderer content={project.content} />
               </div>
             </article>
           </div>

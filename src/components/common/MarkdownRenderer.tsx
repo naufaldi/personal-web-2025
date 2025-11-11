@@ -7,7 +7,7 @@ import { css } from '@codemirror/lang-css'
 import { json } from '@codemirror/lang-json'
 import { slugify } from '@/lib/toc'
 
-interface ProjectMarkdownRendererProps {
+interface MarkdownRendererProps {
   content: string
 }
 
@@ -28,7 +28,7 @@ const getLanguageExtension = (lang: string | undefined) => {
   return languageMap[lang.toLowerCase()]
 }
 
-export default function ProjectMarkdownRenderer({ content }: ProjectMarkdownRendererProps) {
+export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
   return (
     <div className="prose prose-invert max-w-none">
       <ReactMarkdown
@@ -157,3 +157,4 @@ export default function ProjectMarkdownRenderer({ content }: ProjectMarkdownRend
     </div>
   )
 }
+
