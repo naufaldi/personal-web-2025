@@ -1,9 +1,30 @@
+import SpeakerMentorHero from '@/components/speaker/SpeakerMentorHero'
+import ImpactStats from '@/components/speaker/ImpactStats'
+import OrganizationMarquee from '@/components/speaker/OrganizationMarquee'
+import MentoringSection from '@/components/speaker/MentoringSection'
+import SpeakingSection from '@/components/speaker/SpeakingSection'
+import { Separator } from '@/components/ui/separator'
+
 export default function Speaker() {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-16">
-      <h1 className="text-4xl font-bold mb-8">Speaker & Mentor</h1>
-      <p>Speaker and mentor history coming soon.</p>
+    <div className="min-h-screen flex flex-col relative">
+      <div className="bg-pattern-speaker" aria-hidden="true" />
+      <div className="mx-auto max-w-7xl px-6 w-full py-12 md:py-16 relative z-10">
+        <SpeakerMentorHero />
+        <ImpactStats />
+
+        <Separator className="my-8 bg-slate-800/70" />
+
+        <OrganizationMarquee />
+
+        <Separator className="my-8 bg-slate-800/70" />
+
+        <MentoringSection />
+
+        <Separator className="my-8 bg-slate-800/70" />
+
+        <SpeakingSection />
+      </div>
     </div>
   )
 }
-

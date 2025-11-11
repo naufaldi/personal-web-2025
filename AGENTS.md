@@ -86,7 +86,7 @@ const className = cn(
 
 - **Page components**: Implement in `src/pages/*.tsx` and register in `src/App.tsx`
 - **Layout/Shared**: Common sections (Header, Footer, Layout) in `src/components/common/*`
-- **Sections**: Reusable page sections (HeroSection, ProjectCard, etc.) in `src/components/sections/*`
+- **Page based Components**: Reusable page component (Component for each page) in `src/components/[page-name]/*`
 
 #### Forbidden Practices
 

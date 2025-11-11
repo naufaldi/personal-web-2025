@@ -12,7 +12,7 @@ export default function Header() {
     .toUpperCase()
 
   return (
-    <header className="relative">
+    <header className="relative z-50">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex h-16 items-center justify-between border-b border-slate-800/70">
           <Link

@@ -34,7 +34,7 @@ export default function Navigation() {
   const currentPath = location.pathname
 
   return (
-    <NavigationMenu>
+    <NavigationMenu delayDuration={200}>
       <NavigationMenuList className="space-x-0 gap-2">
         {navigationItems.map((item) => {
           const isActive = !item.external && currentPath === item.href
@@ -93,7 +93,7 @@ export default function Navigation() {
           >
             Other
           </NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-slate-900 border border-slate-800/70">
+          <NavigationMenuContent className="bg-slate-900/95 backdrop-blur-sm border border-slate-800/70 rounded-lg shadow-lg">
             <ul className="grid w-[200px] gap-1 p-2">
               {moreItems.map((item) => {
                 const isActive = currentPath === item.href
@@ -104,8 +104,13 @@ export default function Navigation() {
                       className={cn(
                         'block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors',
                         'hover:bg-slate-800/60 hover:text-slate-100 focus:bg-slate-800/60 focus:text-slate-100',
-                        isActive && 'bg-slate-800/80 text-slate-100'
+                        isActive && 'bg-slate-800/80 text-slate-100',
+                        !isActive && 'text-slate-300'
                       )}
+                      style={{
+                        fontFamily: 'var(--font-body)',
+                        fontWeight: 500,
+                      }}
                     >
                       <div className="font-medium leading-none">
                         {item.name}
