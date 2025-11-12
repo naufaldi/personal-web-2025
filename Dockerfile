@@ -16,7 +16,6 @@ ENV NODE_ENV=production
 
 # Copy necessary files from builder
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/public ./public
 COPY --from=builder /app/src/content ./src/content
 COPY --from=builder /app/package.json ./
 COPY --from=builder /app/node_modules ./node_modules

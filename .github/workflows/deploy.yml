@@ -62,6 +62,7 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
+          no-cache: true
           tags: |
             ghcr.io/naufaldi/personal-web-v5:${{ needs.commit-hash.outputs.commit_hash }}
             ghcr.io/naufaldi/personal-web-v5:prod
