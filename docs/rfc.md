@@ -380,7 +380,47 @@ import FadeInUp from '@/components/common/FadeInUp'
 
 ---
 
-## 12. Next Steps
+## 12. Theme System
+
+**Implementation:** Light/Dark mode theme switching with user preference persistence
+
+**Default Theme:** Dark mode (default)
+
+**Theme Options:**
+- `light` - Light theme with white backgrounds and dark text
+- `dark` - Dark theme with dark backgrounds and light text (default)
+- `system` - Follows user's OS preference
+
+**Theme Toggle Location:** Header component (`src/components/common/Header.tsx`)
+- Toggle button placed in header action cluster
+- Uses shadcn theme-toggle-button component with animated transitions
+- Persists user preference in localStorage
+
+**Theme Provider:**
+- Custom `ThemeProvider` component (`src/components/common/ThemeProvider.tsx`)
+- Follows shadcn Vite dark-mode guidance (https://ui.shadcn.com/docs/dark-mode/vite)
+- Syncs `document.documentElement` class list (`light` or `dark`) on theme changes
+- Exposes `useTheme` hook for components to access theme state
+
+**Design Tokens:**
+- CSS variables defined in `src/index.css` using `@theme` directive
+- Light mode tokens defined in `:root`
+- Dark mode tokens defined in `.dark` class selector
+- Shared semantic tokens: `background`, `foreground`, `surface`, `primary`
+- All components use semantic tokens instead of hardcoded colors
+
+**Rollout Strategy:**
+1. **Phase 1:** Home page (`/`) - Complete theme support
+2. **Phase 2:** Other pages (Projects, Blogs, About, etc.) - Sequential rollout
+
+**Implementation Notes:**
+- All color classes should use semantic tokens (e.g., `bg-background`, `text-foreground`) instead of hardcoded slate colors
+- Pattern overlays and gradients use conditional classes with `dark:` prefix for theme-specific styling
+- Theme toggle uses View Transitions API for smooth animations (with fallback for unsupported browsers)
+
+---
+
+## 13. Next Steps
 
 1. ✅ **Architecture Review** (Updated)
 2. **Design Discussion** - UI/UX, color scheme, typography

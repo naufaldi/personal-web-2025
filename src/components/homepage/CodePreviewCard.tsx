@@ -303,15 +303,15 @@ export default function CodePreviewCard({
       )}
 
       <div className="relative">
-        <div className="rounded-xl border border-slate-800/70 bg-slate-900/70 backdrop-blur-sm shadow-[0_0_0_1px_rgba(2,6,23,0.4),0_10px_30px_-10px_rgba(0,0,0,0.6)]">
-          <div className="flex items-center justify-between px-2 sm:px-3.5 py-2 border-b border-slate-800/70">
+        <div className="rounded-xl border border-slate-800/70 light:border-slate-300 bg-slate-900/70 light:bg-slate-950 backdrop-blur-sm shadow-[0_0_0_1px_rgba(2,6,23,0.4),0_10px_30px_-10px_rgba(0,0,0,0.6)] light:shadow-[0_0_0_1px_rgba(15,23,42,0.8),0_10px_30px_-10px_rgba(0,0,0,0.3)]">
+          <div className="flex items-center justify-between px-2 sm:px-3.5 py-2 border-b border-slate-800/70 light:border-slate-800">
             <div className="flex items-center gap-1.5 sm:gap-2">
-              <span className="h-2 sm:h-2.5 w-2 sm:w-2.5 rounded-full bg-slate-700" />
-              <span className="h-2 sm:h-2.5 w-2 sm:w-2.5 rounded-full bg-slate-700" />
-              <span className="h-2 sm:h-2.5 w-2 sm:w-2.5 rounded-full bg-slate-700" />
+              <span className="h-2 sm:h-2.5 w-2 sm:w-2.5 rounded-full bg-slate-700 light:bg-slate-600" />
+              <span className="h-2 sm:h-2.5 w-2 sm:w-2.5 rounded-full bg-slate-700 light:bg-slate-600" />
+              <span className="h-2 sm:h-2.5 w-2 sm:w-2.5 rounded-full bg-slate-700 light:bg-slate-600" />
             </div>
             <div
-              className="text-[10px] sm:text-[11px] text-slate-400 tracking-tight"
+              className="text-[10px] sm:text-[11px] text-slate-400 light:text-slate-400 tracking-tight"
               style={{
                 fontFamily:
                   "var(--font-body)",
@@ -324,7 +324,7 @@ export default function CodePreviewCard({
 
           <div className="p-2.5 sm:p-4 md:p-6">
             <pre
-              className="text-[11px] sm:text-[12.5px] md:text-sm leading-relaxed text-slate-300 overflow-x-auto"
+              className="text-[11px] sm:text-[12.5px] md:text-sm leading-relaxed text-slate-300 light:text-slate-200 overflow-x-auto"
               style={{
                 fontFamily:
                   "var(--font-mono)",

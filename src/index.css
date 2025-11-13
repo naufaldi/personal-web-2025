@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant light (&:is(.light, .light *));
+
 @theme {
   /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
@@ -10,11 +12,30 @@
 
 @supports (color: oklch(0 0 0)) {
   @theme {
-    --color-background: oklch(0 0 0);
-    --color-foreground: oklch(1 0 0);
-    --color-surface: oklch(0.104 0 0);
     --color-primary: oklch(0.598 0.254 217.2);
   }
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --surface: 0 0% 98%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --border: 214.3 31.8% 91.4%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+}
+
+.dark {
+  --background: 222.2 47.4% 11.2%;
+  --foreground: 210 40% 98%;
+  --surface: 222.2 47.4% 11.2%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --border: 217.2 32.6% 17.5%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
 }
 
 /* Base styles */
@@ -28,22 +49,35 @@ html {
 }
 
 body {
-  @apply bg-slate-900 text-slate-200 antialiased selection:bg-slate-700 selection:text-white;
-  color: hsl(var(--color-slate-200));
+  @apply bg-slate-900 text-slate-200 antialiased;
   font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.light body {
+  @apply bg-white text-slate-900;
+}
+
 ::selection {
-  background-color: hsl(var(--color-slate-700));
+  background-color: rgb(51 65 85);
   color: white;
 }
 
+.light ::selection {
+  background-color: rgb(226 232 240);
+  color: rgb(15 23 42);
+}
+
 ::-moz-selection {
-  background-color: hsl(var(--color-slate-700));
+  background-color: rgb(51 65 85);
   color: white;
+}
+
+.light ::-moz-selection {
+  background-color: rgb(226 232 240);
+  color: rgb(15 23 42);
 }
 
 /* Custom scrollbar for TOC sidebar */
@@ -56,13 +90,25 @@ body {
   border-radius: 4px;
 }
 
+.light .overflow-y-auto::-webkit-scrollbar-track {
+  background: rgb(241 245 249 / 0.5);
+}
+
 .overflow-y-auto::-webkit-scrollbar-thumb {
   background: rgb(51 65 85);
   border-radius: 4px;
 }
 
+.light .overflow-y-auto::-webkit-scrollbar-thumb {
+  background: rgb(148 163 184);
+}
+
 .overflow-y-auto::-webkit-scrollbar-thumb:hover {
   background: rgb(71 85 105);
+}
+
+.light .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: rgb(100 116 139);
 }
 
 /* Background pattern */
@@ -85,6 +131,14 @@ body {
     center,
     0 0,
     0 0;
+}
+
+.light .bg-pattern {
+  background-image:
+    radial-gradient(1000px 500px at 80% -20%, rgba(71, 85, 105, 0.04), transparent 60%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0.6) 100%),
+    linear-gradient(transparent 0, transparent calc(100% - 1px), rgba(71, 85, 105, 0.05) calc(100% - 1px)),
+    linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(71, 85, 105, 0.05) calc(100% - 1px));
 }
 
 /* Background pattern for About page - Subtle Circuit Board pattern */

@@ -45,9 +45,9 @@ export default function ExperienceCard({
     >
       <article
         className={cn(
-          "flex h-full flex-col rounded-lg border bg-slate-900/60 p-2.5 sm:p-3 transition-all duration-200 hover:border-slate-700/70 hover:bg-slate-900/90 hover:shadow-lg hover:shadow-slate-900/50",
+          "flex h-full flex-col rounded-lg border border-slate-800/70 light:border-slate-200 bg-slate-900/60 light:bg-white p-2.5 sm:p-3 transition-all duration-200 hover:border-slate-700/70 light:hover:border-slate-300 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-lg hover:shadow-slate-900/50 light:hover:shadow-slate-200",
           isCurrent &&
-            "border-slate-700/50 ring-1 ring-slate-700/20",
+            "border-slate-700/50 light:border-slate-300 ring-1 ring-slate-700/20 light:ring-slate-300/20",
         )}
       >
         <div className="flex flex-1 flex-col space-y-1.5 sm:space-y-2">
@@ -55,7 +55,7 @@ export default function ExperienceCard({
           <div className="flex items-start justify-between gap-2">
             <div className="flex-1 min-w-0">
               <h3
-                className="text-sm text-slate-100 truncate"
+                className="text-sm text-slate-100 light:text-slate-900 truncate"
                 style={{
                   fontFamily:
                     "var(--font-mono)",
@@ -67,7 +67,7 @@ export default function ExperienceCard({
                 }
               </h3>
               <p
-                className="text-xs text-slate-400 mt-0.5"
+                className="text-xs text-slate-400 light:text-slate-600 mt-0.5"
                 style={{
                   fontFamily:
                     "var(--font-mono)",
@@ -82,7 +82,7 @@ export default function ExperienceCard({
             <div className="flex flex-wrap items-center gap-1.5 flex-shrink-0">
               {isCurrent && (
                 <span
-                  className="inline-flex items-center rounded-full border border-slate-600 bg-slate-800/80 px-2 py-0.5 text-xs text-slate-200"
+                  className="inline-flex items-center rounded-full border border-slate-600 light:border-blue-500 bg-slate-800/80 light:bg-blue-50 px-2 py-0.5 text-xs text-slate-200 light:text-blue-700"
                   style={{
                     fontFamily:
                       "var(--font-mono)",
@@ -93,7 +93,7 @@ export default function ExperienceCard({
                 </span>
               )}
               <span
-                className="inline-flex items-center rounded-full border border-slate-800/70 bg-slate-900/80 px-2 py-0.5 text-xs text-slate-400"
+                className="inline-flex items-center rounded-full border border-slate-800/70 light:border-slate-300 bg-slate-900/80 light:bg-slate-50 px-2 py-0.5 text-xs text-slate-400 light:text-slate-600"
                 style={{
                   fontFamily:
                     "var(--font-mono)",
@@ -111,8 +111,8 @@ export default function ExperienceCard({
           </div>
 
           {/* Year */}
-          <div className="flex items-center gap-1.5 text-xs text-slate-500">
-            <Calendar className="h-3 w-3 flex-shrink-0" />
+          <div className="flex items-center gap-1.5 text-xs text-slate-500 light:text-slate-600">
+            <Calendar className="h-3 w-3 flex-shrink-0 text-slate-500 light:text-slate-600" />
             <span
               style={{
                 fontFamily:
@@ -149,7 +149,7 @@ export default function ExperienceCard({
                   fontWeight: 600,
                 }}
               >
-                <span className="text-xs text-slate-500 uppercase tracking-wider">
+                <span className="text-xs text-slate-500 light:text-slate-600 uppercase tracking-wider">
                   Key
                   Achievements
                 </span>
@@ -165,14 +165,14 @@ export default function ExperienceCard({
                         key={
                           idx
                         }
-                        className="flex items-start gap-2 text-xs text-slate-300"
+                        className="flex items-start gap-2 text-xs text-slate-300 light:text-slate-700"
                         style={{
                           fontFamily:
                             "var(--font-body)",
                           fontWeight: 500,
                         }}
                       >
-                        <span className="text-slate-600 mt-0.5 flex-shrink-0">
+                        <span className="text-slate-600 light:text-slate-400 mt-0.5 flex-shrink-0">
                           ▸
                         </span>
                         <span>
@@ -207,16 +207,16 @@ export default function ExperienceCard({
                       key={
                         tech
                       }
-                      className="flex items-center gap-1 rounded-md border border-slate-800/70 bg-slate-900/80 px-2 py-0.5 transition-colors hover:border-slate-700/70"
+                      className="flex items-center gap-1 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/80 light:bg-slate-50 px-2 py-0.5 transition-colors hover:border-slate-700/70 light:hover:border-slate-400"
                       title={
                         tech
                       }
                     >
                       {Icon && (
-                        <Icon className="h-3 w-3 text-slate-400" />
+                        <Icon className="h-3 w-3 text-slate-400 light:text-slate-600" />
                       )}
                       <span
-                        className="text-xs text-slate-400"
+                        className="text-xs text-slate-400 light:text-slate-600"
                         style={{
                           fontFamily:
                             "var(--font-mono)",

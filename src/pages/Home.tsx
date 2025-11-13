@@ -15,10 +15,10 @@ export default function Home() {
       <HeroSection />
       <FadeInUp>
         <div className="mx-auto max-w-7xl px-6 w-full">
-          <div className="border-t border-slate-800/70" />
+          <div className="border-t border-slate-800/70 light:border-slate-200" />
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-6">
             <p
-              className="text-xs text-slate-500"
+              className="text-xs text-slate-500 light:text-slate-600"
               style={{
                 fontFamily:
                   "var(--font-body)",
@@ -34,7 +34,7 @@ export default function Home() {
             </p>
             <a
               href="#projects"
-              className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-slate-200 transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 text-xs text-slate-400 light:text-slate-600 hover:text-slate-200 light:hover:text-slate-900 transition-colors whitespace-nowrap"
               style={{
                 fontFamily:
                   "var(--font-body)",

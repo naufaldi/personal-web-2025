@@ -62,8 +62,8 @@ const socialIcons = [
 
 const renderLink = (link: { name: string; href: string; external: boolean }) => {
   const linkClassName = cn(
-    'text-sm text-blue-300 hover:text-blue-200 transition-colors duration-200',
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black',
+    'text-sm text-slate-300 light:text-slate-700 hover:text-slate-100 light:hover:text-slate-900 transition-colors duration-200',
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black light:focus-visible:ring-offset-white',
     'underline-offset-4 hover:underline'
   )
 
@@ -90,12 +90,12 @@ const renderLink = (link: { name: string; href: string; external: boolean }) => 
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 px-6 md:px-0 py-12 md:py-16">
+    <footer className="bg-black light:bg-white border-t border-slate-800 light:border-slate-300">
+      <div className="max-w-7xl mx-auto px-6 md:px-0 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           <div className="lg:col-span-1 space-y-4">
-            <h2 className="text-xl font-bold text-white">{siteConfig.name}</h2>
-            <p className="text-sm text-slate-400 leading-relaxed">
+            <h2 className="text-xl font-bold text-white light:text-slate-900">{siteConfig.name}</h2>
+            <p className="text-sm text-slate-400 light:text-slate-600 leading-relaxed">
               {siteConfig.tagline}
             </p>
             <div className="flex items-center gap-4">
@@ -109,9 +109,9 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className={cn(
                       'inline-flex items-center justify-center w-10 h-10 rounded-md',
-                      'text-slate-300 hover:text-slate-200 transition-colors duration-200',
+                      'text-slate-300 light:text-slate-700 hover:text-slate-200 light:hover:text-slate-900 transition-colors duration-200',
                       'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400',
-                      'focus-visible:ring-offset-2 focus-visible:ring-offset-black'
+                      'focus-visible:ring-offset-2 focus-visible:ring-offset-black light:focus-visible:ring-offset-white'
                     )}
                     aria-label={social.ariaLabel}
                   >
@@ -123,7 +123,7 @@ export default function Footer() {
           </div>
 
           <nav className="space-y-4" aria-label="General navigation">
-            <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider">
+            <h3 className="text-sm font-semibold text-slate-400 light:text-slate-600 uppercase tracking-wider">
               General
             </h3>
             <ul className="flex flex-col space-y-3">
@@ -150,8 +150,8 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="border-t border-slate-800 mt-12 pt-8">
-          <p className="text-sm text-slate-500 text-center">
+        <div className="border-t border-slate-800 light:border-slate-300 mt-12 pt-8">
+          <p className="text-sm text-slate-500 light:text-slate-600 text-center">
             Copyright © 2025 {siteConfig.name}. All rights reserved.
           </p>
         </div>

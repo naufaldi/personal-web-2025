@@ -152,8 +152,8 @@ export default function Navigation() {
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                     "disabled:pointer-events-none disabled:opacity-50",
                     isActive
-                      ? "bg-slate-800/80 text-slate-100 border border-slate-700/60"
-                      : "bg-slate-900/60 text-slate-300 hover:bg-slate-800/60 hover:text-blue-400",
+                      ? "bg-slate-800/80 light:bg-slate-900 text-slate-100 light:text-white border border-slate-700/60 light:border-slate-800"
+                      : "bg-slate-900/60 light:bg-slate-100 text-slate-300 light:text-slate-700 hover:bg-slate-800/60 light:hover:bg-slate-200 hover:text-blue-400 light:hover:text-slate-900",
                   );
 
                 return (
@@ -206,14 +206,14 @@ export default function Navigation() {
             <NavigationMenuItem className="flex items-center">
               <Separator
                 orientation="vertical"
-                className="h-5 sm:h-6 mx-1 sm:mx-2 bg-slate-700/60"
+                className="h-5 sm:h-6 mx-1 sm:mx-2 bg-slate-700/60 light:bg-slate-300"
               />
               <NavigationMenuTrigger
                 className={cn(
-                  "rounded-full bg-slate-900/60 text-slate-300 hover:bg-slate-800/60 hover:text-blue-400",
+                  "rounded-full bg-slate-900/60 light:bg-slate-100 text-slate-300 light:text-slate-700 hover:bg-slate-800/60 light:hover:bg-slate-200 hover:text-blue-400 light:hover:text-slate-900",
                   "h-9 sm:h-10 px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium transition-colors duration-200",
                   "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-                  "data-[state=open]:bg-slate-800/80 data-[state=open]:text-slate-100",
+                  "data-[state=open]:bg-slate-800/80 light:data-[state=open]:bg-slate-900 data-[state=open]:text-slate-100 light:data-[state=open]:text-white",
                 )}
                 style={{
                   fontFamily:
@@ -222,7 +222,7 @@ export default function Navigation() {
               >
                 Other
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-slate-900/95 backdrop-blur-sm border border-slate-800/70 rounded-lg shadow-lg">
+              <NavigationMenuContent className="bg-slate-900/95 light:bg-white backdrop-blur-sm border border-slate-800/70 light:border-slate-300 rounded-lg shadow-lg">
                 <ul className="grid w-[160px] sm:w-[200px] gap-1 p-2">
                   {moreItems.map(
                     (
@@ -243,11 +243,11 @@ export default function Navigation() {
                             }
                             className={cn(
                               "block select-none rounded-md px-3 py-2 text-xs sm:text-sm leading-none no-underline outline-none transition-colors",
-                              "hover:bg-slate-800/60 hover:text-slate-100 focus:bg-slate-800/60 focus:text-slate-100",
+                              "hover:bg-slate-800/60 light:hover:bg-slate-100 hover:text-slate-100 light:hover:text-slate-900 focus:bg-slate-800/60 light:focus:bg-slate-100 focus:text-slate-100 light:focus:text-slate-900",
                               isActive &&
-                                "bg-slate-800/80 text-slate-100",
+                                "bg-slate-800/80 light:bg-slate-900 text-slate-100 light:text-white",
                               !isActive &&
-                                "text-slate-300",
+                                "text-slate-300 light:text-slate-700",
                             )}
                             style={{
                               fontFamily:
