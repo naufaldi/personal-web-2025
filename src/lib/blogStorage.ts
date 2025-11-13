@@ -19,9 +19,9 @@ export const getBlogViews = async (slug: string): Promise<number> => {
       .from('blog_views')
       .select('views')
       .eq('slug', slug)
-      .single()
+      .maybeSingle()
 
-    if (error && error.code !== 'PGRST116') {
+    if (error) {
       console.error('Error fetching blog views:', error)
       return 0
     }
@@ -41,14 +41,20 @@ export const incrementBlogViews = async (slug: string): Promise<number> => {
       .from('blog_views')
       .select('views')
       .eq('slug', slug)
-      .single()
+      .maybeSingle()
 
-    if (error && error.code === 'PGRST116') {
+    if (error) {
+      console.error('Error fetching blog views:', error)
+      return 0
+    }
+
+    if (!data) {
+      // No existing record, create new one
       const { data: newData, error: insertError } = await supabase
         .from('blog_views')
         .insert({ slug, views: 1 })
         .select('views')
-        .single()
+        .maybeSingle()
 
       if (insertError) {
         console.error('Error inserting blog views:', insertError)
@@ -58,23 +64,18 @@ export const incrementBlogViews = async (slug: string): Promise<number> => {
       return newData?.views || 1
     }
 
-    if (error) {
-      console.error('Error fetching blog views:', error)
-      return 0
-    }
-
-    const newViews = (data?.views || 0) + 1
+    const newViews = (data.views || 0) + 1
 
     const { data: updateData, error: updateError } = await supabase
       .from('blog_views')
       .update({ views: newViews, updated_at: new Date().toISOString() })
       .eq('slug', slug)
       .select('views')
-      .single()
+      .maybeSingle()
 
     if (updateError) {
       console.error('Error updating blog views:', updateError)
-      return data?.views || 0
+      return data.views || 0
     }
 
     return updateData?.views || newViews
@@ -115,9 +116,9 @@ export const isBlogLiked = async (slug: string): Promise<boolean> => {
       .select('id')
       .eq('slug', slug)
       .eq('user_id', userId)
-      .single()
+      .maybeSingle()
 
-    if (error && error.code !== 'PGRST116') {
+    if (error) {
       console.error('Error checking blog like:', error)
       return false
     }
