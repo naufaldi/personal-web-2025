@@ -57,7 +57,7 @@ export default function BlogDetail() {
 
   return (
     <div className="min-h-screen flex flex-col relative" style={{ backgroundColor: 'rgb(10, 10, 10)' }}>
-      <div className="mx-auto max-w-7xl px-6 w-full py-12 md:py-16 relative z-10">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full px-6 md:px-0 py-12 md:py-16 relative z-10">
         <Link
           to="/blogs"
           className="inline-flex items-center gap-2 mb-8 transition-colors hover:opacity-80"

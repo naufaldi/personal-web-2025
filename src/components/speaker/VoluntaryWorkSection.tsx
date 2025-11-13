@@ -9,8 +9,8 @@ export default function VoluntaryWorkSection() {
   }
 
   return (
-    <section className="py-12 md:py-16">
-      <div className="mx-auto max-w-7xl px-6 w-full">
+    <section className="px-6 md:px-0 py-12 md:py-16">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <div className="space-y-8">
           <div className="flex items-center justify-between">
             <h2

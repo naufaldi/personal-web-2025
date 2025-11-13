@@ -240,7 +240,7 @@ Each page features a unique, subtle SVG background pattern to add visual texture
 ```tsx
 <div className="min-h-screen flex flex-col relative">
   <div className="bg-pattern-[name]" aria-hidden="true" />
-  <div className="mx-auto max-w-7xl px-6 w-full py-12 md:py-16 relative z-10">
+  <div className="mx-auto max-w-7xl sm:px-6 w-full px-6 md:px-0 py-12 md:py-16 relative z-10">
     {/* Page content */}
   </div>
 </div>
@@ -307,7 +307,7 @@ Each page features a unique, subtle SVG background pattern to add visual texture
 
 **Background:** Black or very dark (#0a0a0a)  
 **Border Top:** 1px border (#333333)  
-**Padding:** 48px-64px vertical (`py-12 md:py-16`) with `space-y-6`
+**Padding:** 48px-64px vertical (`px-6 md:px-0 py-12 md:py-16`) with `space-y-6`
 
 **Content:**
 - Copyright text (left)

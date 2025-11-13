@@ -13,9 +13,9 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="bg-slate-950 py-8 sm:py-12 md:py-16"
+      className="bg-slate-950 py-8 px-6 md:px-0 py-12 md:py-16"
     >
-      <div className="mx-auto max-w-7xl px-6 w-full">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <div className="space-y-6 sm:space-y-8">
           <FadeInUp
             delay={
@@ -59,7 +59,7 @@ export default function ExperienceSection() {
               0.12
             }
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 auto-rows-[1fr]">
               {latestExperiences.map(
                 (
                   experience,

@@ -455,7 +455,7 @@ export default function Projects() {
       <ProjectBackground />
       <div className="mx-auto max-w-7xl px-6 w-full relative z-10 py-20 md:py-16">
         <FadeInUp delay={0.06}>
-          <div className="flex flex-col items-center gap-4 mb-12">
+          <div className="px-6 md:px-0 flex flex-col items-center gap-4 mb-12">
             <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 bg-slate-900/60">
               <Folder className="h-6 w-6 text-slate-300" />
             </div>

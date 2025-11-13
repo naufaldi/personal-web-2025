@@ -4,7 +4,7 @@ import { cn } from '@/lib'
 
 export default function ConnectCTA() {
   return (
-    <section className="relative bg-slate-900 border-t border-slate-800/70 py-12 md:py-16">
+    <section className="relative bg-slate-900 border-t border-slate-800/70 px-6 md:px-0 py-12 md:py-16">
       <div
         className="absolute inset-0 opacity-30"
         style={{

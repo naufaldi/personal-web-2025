@@ -2,8 +2,8 @@ import { siteConfig } from '@/data/site'
 
 export default function SelectedWorkSection() {
   return (
-    <section id="features" className="bg-slate-950 py-12 md:py-16">
-      <div className="mx-auto max-w-7xl px-6 w-full">
+    <section id="features" className="bg-slate-950 px-6 md:px-0 py-12 md:py-16">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <h2
           className="text-[24px] md:text-[28px] text-slate-100 tracking-tight"
           style={{

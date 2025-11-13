@@ -15,7 +15,7 @@ export default function Blogs() {
       <div className="bg-pattern-blogs" />
       <div className="mx-auto max-w-7xl px-6 w-full relative z-10 py-20 md:py-16">
         <div
-          className="flex flex-col items-center gap-4 mb-12"
+          className="px-6 md:px-0 flex flex-col items-center gap-4 mb-12"
           style={{
             animation: 'fade-in 900ms ease-out both',
             animationDelay: '60ms',

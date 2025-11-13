@@ -4,8 +4,8 @@ import FadeInUp from '@/components/common/FadeInUp'
 
 export default function WhatImUpToSection() {
   return (
-    <section className="py-12 md:py-16">
-      <div className="mx-auto max-w-7xl px-6 w-full">
+    <section className="px-6 md:px-0 py-12 md:py-16">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <FadeInUp delay={0.18}>
           <div className="rounded-lg border border-slate-800/70 bg-slate-900/60 p-6 md:p-8">
             <div className="mb-6 flex items-center gap-3">

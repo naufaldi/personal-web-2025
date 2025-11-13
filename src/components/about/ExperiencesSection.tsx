@@ -5,9 +5,9 @@ import FadeInUp from '@/components/common/FadeInUp'
 
 export default function ExperiencesSection() {
   return (
-    <section className="py-12 md:py-16 relative">
+    <section className="px-6 md:px-0 py-12 md:py-16 relative">
       <div className="bg-orbs-experiences" aria-hidden="true" />
-      <div className="mx-auto max-w-7xl px-6 w-full relative z-10">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full relative z-10">
         <div className="space-y-12">
           <FadeInUp delay={0.06}>
             <div className="flex flex-col items-center gap-3">

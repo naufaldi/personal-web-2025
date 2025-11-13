@@ -6,8 +6,8 @@ import FadeInUp from '@/components/common/FadeInUp'
 
 export default function MentorSpeakerSection() {
   return (
-    <section id="mentor-speaker" className="bg-slate-950 py-12 md:py-16">
-      <div className="mx-auto max-w-7xl px-6 w-full">
+    <section id="mentor-speaker" className="bg-slate-950 px-6 md:px-0 py-12 md:py-16">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <div className="space-y-8">
           <FadeInUp delay={0.06}>
             <h2

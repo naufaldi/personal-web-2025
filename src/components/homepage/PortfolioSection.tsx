@@ -8,9 +8,9 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="bg-slate-950 py-8 sm:py-12 md:py-16"
+      className="bg-slate-950 py-8 px-6 md:px-0 py-12 md:py-16"
     >
-      <div className="mx-auto max-w-7xl px-6 w-full">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <div className="space-y-6 sm:space-y-8">
           <FadeInUp
             delay={

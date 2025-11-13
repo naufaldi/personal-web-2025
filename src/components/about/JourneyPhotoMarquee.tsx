@@ -6,8 +6,8 @@ export default function JourneyPhotoMarquee() {
   const duplicatedPhotos = [...journeyPhotos, ...journeyPhotos]
 
   return (
-    <section className="py-12 md:py-16 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 w-full">
+    <section className="px-6 md:px-0 py-12 md:py-16 overflow-hidden">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <FadeInUp delay={0.12}>
           <div className="relative overflow-hidden marquee-container">
             <div className="flex gap-6 animate-marquee whitespace-nowrap">

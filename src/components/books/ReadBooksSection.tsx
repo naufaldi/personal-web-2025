@@ -7,8 +7,8 @@ export default function ReadBooksSection() {
   }
 
   return (
-    <section className="py-12 md:py-16">
-      <div className="mx-auto max-w-7xl px-6 w-full">
+    <section className="px-6 md:px-0 py-12 md:py-16">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <div className="space-y-8">
           <h2
             className="text-[24px] md:text-[28px] text-slate-100 tracking-tight"

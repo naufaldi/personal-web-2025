@@ -3,7 +3,7 @@ import { FileText } from 'lucide-react'
 export default function ShortsHero() {
   return (
     <div
-      className="flex flex-col items-center gap-4 mb-12"
+      className="px-6 md:px-0 flex flex-col items-center gap-4 mb-12"
       style={{
         animation: 'fade-in 900ms ease-out both',
         animationDelay: '60ms',

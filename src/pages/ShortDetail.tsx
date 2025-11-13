@@ -40,7 +40,7 @@ export default function ShortDetail() {
   return (
     <div className="min-h-screen flex flex-col relative">
       <div className="bg-pattern-shorts" aria-hidden="true" />
-      <div className="mx-auto max-w-4xl px-6 w-full py-12 md:py-16 relative z-10">
+      <div className="mx-auto max-w-4xl px-6 w-full px-6 md:px-0 py-12 md:py-16 relative z-10">
         <button
           onClick={() => navigate('/shorts')}
           className="inline-flex items-center gap-2 mb-8 text-slate-400 hover:text-slate-200 transition-colors"

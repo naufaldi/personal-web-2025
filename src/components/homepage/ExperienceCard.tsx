@@ -41,15 +41,16 @@ export default function ExperienceCard({
         index *
           0.1
       }
+      className="h-full"
     >
       <article
         className={cn(
-          "rounded-lg border bg-slate-900/60 p-2.5 sm:p-3 transition-all duration-200 hover:border-slate-700/70 hover:bg-slate-900/90 hover:shadow-lg hover:shadow-slate-900/50",
+          "flex h-full flex-col rounded-lg border bg-slate-900/60 p-2.5 sm:p-3 transition-all duration-200 hover:border-slate-700/70 hover:bg-slate-900/90 hover:shadow-lg hover:shadow-slate-900/50",
           isCurrent &&
             "border-slate-700/50 ring-1 ring-slate-700/20",
         )}
       >
-        <div className="space-y-1.5 sm:space-y-2">
+        <div className="flex flex-1 flex-col space-y-1.5 sm:space-y-2">
           {/* Header: Company | Year Badges */}
           <div className="flex items-start justify-between gap-2">
             <div className="flex-1 min-w-0">

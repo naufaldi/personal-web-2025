@@ -10,7 +10,7 @@ export default function Speaker() {
   return (
     <div className="min-h-screen flex flex-col relative">
       <div className="bg-pattern-speaker" aria-hidden="true" />
-      <div className="mx-auto max-w-7xl px-6 w-full py-12 md:py-16 relative z-10">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full py-20 md:py-16 relative z-10">
         <SpeakerMentorHero />
         <ImpactStats />
 

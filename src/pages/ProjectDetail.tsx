@@ -33,7 +33,7 @@ export default function ProjectDetail() {
 
   return (
     <div className="min-h-screen flex flex-col relative bg-slate-950">
-      <div className="mx-auto max-w-7xl px-6 w-full py-12 md:py-16 relative z-10">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full px-6 md:px-0 py-12 md:py-16 relative z-10">
         <Link
           to="/projects"
           className="inline-flex items-center gap-2 mb-8 text-slate-400 hover:text-slate-200 transition-colors font-body font-medium"

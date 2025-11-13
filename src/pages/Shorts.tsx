@@ -45,7 +45,7 @@ export default function Shorts() {
   return (
     <div className="min-h-screen flex flex-col relative">
       <div className="bg-pattern-shorts" aria-hidden="true" />
-      <div className="mx-auto max-w-7xl px-6 w-full py-12 md:py-16 relative z-10">
+      <div className="mx-auto max-w-7xl sm:px-6 w-full px-6 md:px-0 py-12 md:py-16 relative z-10">
         <ShortsHero />
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-12">

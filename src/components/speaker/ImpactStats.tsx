@@ -41,7 +41,7 @@ const ImpactStatCard = ({
 
 export default function ImpactStats() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 px-6 sm:px-0">
       <ImpactStatCard
         label="Mentees Taught"
         value={speakerMentorStats.menteesTaught}
