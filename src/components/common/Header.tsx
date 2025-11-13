@@ -1,19 +1,8 @@
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
-import {
-  lazy,
-  Suspense,
-} from "react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site";
-
-const Navigation =
-  lazy(
-    () =>
-      import(
-        "./Navigation"
-      ),
-  );
+import Navigation from "./Navigation";
 
 export default function Header() {
   const initials =
@@ -68,13 +57,7 @@ export default function Header() {
           </Link>
 
           <div className="flex-1 flex justify-center">
-            <Suspense
-              fallback={
-                null
-              }
-            >
-              <Navigation />
-            </Suspense>
+            <Navigation />
           </div>
 
           <div className="flex items-center gap-2">

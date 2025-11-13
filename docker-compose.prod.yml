@@ -8,7 +8,8 @@ services:
       - "caddy.reverse_proxy={{upstreams 3000}}"
       - "com.centurylinklabs.watchtower.enable=true"
     environment:
-      - NODE_ENV=production
+      - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
+      - VITE_SUPABASE_ANON_KEY=${VITE_SUPABASE_ANON_KEY}
     restart: always
     networks:
       - edge
@@ -19,4 +20,3 @@ networks:
     external: true
   personal-web-private:
     driver: bridge
-

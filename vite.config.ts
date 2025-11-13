@@ -23,7 +23,7 @@ export default defineConfig(
     build:
       {
         outDir:
-          "dist/client",
+          "dist",
         rollupOptions:
           {
             input:
@@ -37,21 +37,6 @@ export default defineConfig(
         target:
           "esnext",
       },
-    ssr: {
-      noExternal:
-        [
-          "react",
-          "react-dom",
-          "react-router",
-        ],
-      resolve:
-        {
-          externalConditions:
-            [
-              "node",
-            ],
-        },
-    },
     optimizeDeps:
       {
         include:
