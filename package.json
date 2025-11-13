@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "bun run build:client && bun run build:server",
     "build:client": "tsc && vite build",
-    "build:server": "vite build --ssr src/server.ts --outDir dist/server",
+    "build:server": "vite build --ssr src/server.ts --outDir dist/server && vite build --ssr src/entry.app.tsx --outDir dist/server/app",
     "start": "bun run dist/server/server.js",
     "preview": "vite preview"
   },
