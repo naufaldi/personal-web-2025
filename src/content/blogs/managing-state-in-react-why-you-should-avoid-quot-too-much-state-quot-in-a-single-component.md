@@ -2,14 +2,15 @@
 title: "Managing State in React: Why You Should Avoid &quot;Too Much State&quot; in a Single Component"
 slug: managing-state-in-react-why-you-should-avoid-quot-too-much-state-quot-in-a-single-component
 description: "In React projects, it’s common to see components with a long list of state variables, sometimes more than ten in one file. State helps us keep track of changing"
-category: "Technical writer"
+category: "Opinions"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2025-06-17
+date: Tue Jun 17 2025 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "http://blog.faldi.xyz/content/images/2025/06/ChatGPT-Image-Jun-17-2025-React-State-Management.png"
 canonical: "http://blog.faldi.xyz/untitled-2/"
 ---
+
 
 In React projects, it’s common to see components with a long list of state variables, sometimes more than ten in one file. State helps us keep track of changing data in our apps. Often, we manage all this state in one place, especially when a component is in charge of things like search, filters, and pagination for its children.
 

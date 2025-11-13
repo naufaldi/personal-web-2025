@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/membuat-gradient-underline/"
 ---
 
+
 ## Masalah
 
 Beberapa hari kemarin, saya mendapatkan tugas untuk membuat sebuah warna gradient dari project. Project tersebut ternyata memerlukan underline namun warnanya haruslah gradient. Bukan _single color._ Sebenarnya, saya sendiri baru pertama kali ini juga mendapatkan pengalaman dalam membuat underline pada text untuk menjadikannya gradient.

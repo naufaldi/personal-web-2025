@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1612831661153-4914a5ff7851?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/menggunakan-twin-macro-dan-emotion-di-nextjs/"
 ---
 
+
 twin.macro adalah salah satu library yang dibuat oleh [Ben Rogerson](https://github.com/ben-rogerson?ref=blog.faldi.xyz), menggunakan Tailwind dan mencampurkannya dengan CSS-in-JS menjadikan twin.macro sebagai salah satu alternatif untuk bisa menuliskan Tailwind dengan lebih mudah dan lebih bervariatif.
 
 ## Apa itu twin.macro?

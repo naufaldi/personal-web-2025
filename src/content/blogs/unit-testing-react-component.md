@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/unit-testing-react-component/"
 ---
 
+
 Mengutip salah satu research, bahwasannya dengan melakukan unit testing, kita akan bisa [mengurangi bug setidaknya 40% -80%.](https://www.researchgate.net/publication/3249271_Guest_Editors'_Introduction_TDD--The_Art_of_Fearless_Programming?ref=blog.faldi.xyz) Kent C. Dodds sendiri pernah bilang dalam Tweetnya bahwa :
 
 > The more your tests resemble the way your software is used, the more confidence they can give you.

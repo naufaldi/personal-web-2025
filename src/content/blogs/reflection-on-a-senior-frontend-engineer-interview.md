@@ -2,14 +2,15 @@
 title: "Reflection on a Senior Frontend Engineer Interview"
 slug: reflection-on-a-senior-frontend-engineer-interview
 description: "> Of course, everything failed, even because the recruiter froze hiring or the salary didn't match, or there were problems with the technical interview."
-category: "Technical writer"
+category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2024-04-02
+date: Tue Apr 02 2024 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1707343848723-bd87dea7b118?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wxfDF8YWxsfDF8fHx8fHwyfHwxNzEyMDE2MDUyfA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/reflection-interview-senior-frontend-engineer/"
 ---
+
 
 > Of course, everything failed, even because the recruiter froze hiring or the salary didn't match, or there were problems with the technical interview.
 

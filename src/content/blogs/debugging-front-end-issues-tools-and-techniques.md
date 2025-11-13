@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/debugging-front-end-issues-tools-and-techniques/"
 ---
 
+
 Debugging skills are essential for front-end developers as we create products for various browsers, using different languages, and especially with different screen sizes. Therefore, as front-end engineers, we must continuously develop and improve our debugging skills.
 
 There are several tools and techniques that can be used to debug front-end issues. ome of the most common include:

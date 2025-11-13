@@ -2,14 +2,15 @@
 title: "Tips Memaksimalkan Magang"
 slug: tips-memaksimalkan-magang
 description: "> sebagai fe lvl beginner, dapet magang gaterlalu ketat dedlen tugas2nya karena ngerti disuru buat belajar. pas ngerjain task dibantu chatgpt ngerasa kurang kea"
-category: "Technical writer"
+category: "Opinions"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2023-04-21
+date: Fri Apr 21 2023 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1579578304186-f0626704bbd4?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGludGVybnxlbnwwfHx8fDE2ODIwOTIzOTY&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/tips-memaksimalkan-magang/"
 ---
+
 
 #NGL Muncul sebuah pertanyaan sebagai berikut
 

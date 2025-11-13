@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1617042375876-a13e36732a04?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/cara-menonaktifkan-scroll-horizontal-pada-visual-studio-code/"
 ---
 
+
 Secara default, VS Code memiliki fitur untuk membuat kode editor kita bisa discroll secara horizontal. Hal ini akan kerasa ketika kita menggunakan HTML atau menggunakan class Tailwind yang bisa membuat kode menjadi cukup panjang.  Ini cukup membuat frustasi, apalagi bila kita ingin melihat keseluruhan kode kita. Misalnya seperti ini :
 
 ![Image](https://blog.faldi.xyz/content/images/2022/03/Recording-2022-03-31-at-13.23.53.gif)

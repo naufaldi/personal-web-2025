@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1602525653218-cac7c9e38807?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/seputar-custom-scrollbar/"
 ---
 
+
 ## Problem
 
 Desainer merekomendasikan untuk melakukan custom scrollbar pada salah satu desain di page. Custom scrollbar merubah tidak hanya warna scroll pada browser melainkan juga meliputi ukuran scrollbar.

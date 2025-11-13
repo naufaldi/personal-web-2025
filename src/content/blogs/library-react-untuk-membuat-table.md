@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1593642532454-e138e28a63f4?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/rekomendasi-library-react-untuk-membuat-table/"
 ---
 
+
 Beberapa waktu lalu, saya mendapatkan tugas untuk bisa memvisualisasi data dari Backend dengan berbagai ragam jenis data. Nah, salah satu cara dengan menampilkan list data adalah dengan menggunakan Table, otomatis saya mencoba mencari kira-kira penggunaan Table di ReactJS itu apa saja. Akhirnya, menemukan 2 React Table yang sesuai dengan kebutuhanku.
 
 Kebutuhanku itu diantaranya

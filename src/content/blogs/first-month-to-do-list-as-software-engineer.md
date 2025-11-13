@@ -2,14 +2,15 @@
 title: "First Month To Do List as Software Engineer"
 slug: first-month-to-do-list-as-software-engineer
 description: "Menarik, kalau melihat problem yang dialami teman-teman di Codingfess, yaitu banyak yang merasakan saat transisi masuk perusahaan banyak sekali yang merasa meng"
-category: "Technical writer"
+category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2022-07-26
+date: Tue Jul 26 2022 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHRhc2t8ZW58MHx8fHwxNjU4ODE4MDMx&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/first-month-to-do-list-as-software-engineer/"
 ---
+
 
 Menarik, kalau melihat problem yang dialami teman-teman di Codingfess, yaitu banyak yang merasakan saat transisi masuk perusahaan banyak sekali yang merasa menganggur. Padahal awal probation itu cukup krusial, apalagi ada kaitannya dengan nanti masa akhir penilaian saat probation.
 

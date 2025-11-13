@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1537731121640-bc1c4aba9b80?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/if-youre-not-paying-for-the-product-then-youre-the-product/"
 ---
 
+
 _”There are only two industries that call their customers ‘users’: illegal drugs and software.”_
 
 _”If you’re not paying for the product, then you’re the product.”_

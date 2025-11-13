@@ -2,14 +2,15 @@
 title: "Cara Menghitung Nilai Project Freelance untuk Pemula"
 slug: cara-menghitung-nilai-project-freelance-untuk-pemula
 description: "Kemarin sudah ada rencana untuk share gimana cara menentukan harga Freelance untuk Software Engineer. Berikut ini cara menghitung freelance frontend engineer be"
-category: "Technical writer"
+category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2023-08-16
+date: Wed Aug 16 2023 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1691520673295-9626f624869b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDIwfHx8fHx8Mnx8MTY5MjE2NzQ5MHw&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/cara-menghitung-nilai-project-freelance-untuk-pemula/"
 ---
+
 
 Kemarin sudah ada rencana untuk share gimana cara menentukan harga Freelance untuk Software Engineer. Berikut ini cara menghitung freelance frontend engineer berdasarkan pengalaman,
 

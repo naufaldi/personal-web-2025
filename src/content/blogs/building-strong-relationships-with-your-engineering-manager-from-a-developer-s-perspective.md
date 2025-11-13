@@ -11,6 +11,7 @@ image: "http://blog.faldi.xyz/content/images/2025/06/Professional-Office-Meeting
 canonical: "http://blog.faldi.xyz/relationship-with-engineer-manager/"
 ---
 
+
 There’s still too little discussion about how to effectively work with your Engineering Manager,how to communicate clearly, manage expectations, and stay aligned. Most articles approach this from the manager’s point of view. But what if you’re a mid-level or junior developer? What can **you** do?
 
 **Why does it matter?** Because in every company(big or small)your performance review, feedback, promotion chances, and even salary adjustments depend on how well your manager understands your work and sees your impact. Your manager is often the person who speaks for you when you're not in the room.

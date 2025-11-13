@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1506729623306-b5a934d88b53?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/list-kumpulan-tailwind-ui-kit-dan-tailwind-ui-block/"
 ---
 
+
 Ada kalanya, tanpa dengan kita membutuhkan referensi komponen komponen yang digunakan. Ada kalanya pula, dengan desain pun kita memerlukan referensi untuk membuat starter komponen agar sesuai dengan desain.
 
 Saya sering melakukan ini, untuk mengetahui struktur HTML dan bagaimana orang lain bisa membuat komponen tersebut, apakah sama dengan yang telah saya buat.

@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/cara-import-svg-sebagai-react-component-di-nextjs/"
 ---
 
+
 ### Problem
 
 NextJS secara default tidak mendukung untuk bisa melakukan import pada SVG sebagai sebuah React Component. Sehingga, kita akan kesulitan bila melakukan perubahan atau _customize_ pada SVG yang kita miliki

@@ -11,6 +11,7 @@ image: "http://blog.faldi.xyz/content/images/2021/03/twin-nextjs.png"
 canonical: "http://blog.faldi.xyz/memulai-nextjs-tailwind-macro-emotion/"
 ---
 
+
 Ada beberapa kemudahan ketika kita menggunakan twin.macro dan Emotion pada proyek NextJS kita, seperti yang telah saya tuliskan pada [_twin.macro Sebagai Alternatif menggunakan TailwindCSS dan CSS-in-JS_](https://blog.faldi.xyz/menggunakan-twin-macro-dan-emotion-di-nextjs/) . Nah, kesempatan kali ini saya coba menjelaskan bagaimana cara install twin.macro di NextJS dengan Emotion.
 
 Walaupun di dokumentasi twin.macro, bagian github NextJS sudah ada tata caranya. Namun, saya akan menuliskan versi bahasa Indonesia dan yang lebih mudah dimengerti.

@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/menulis-untuk-sejarah/"
 ---
 
+
 Sejak zaman SMA, saya sangat menyukai menulis. Bahkan saat itu saya memiliki 3 blog untuk bisa mengekspresikan emosi, kata-kata, cerita bagaimana progressku sebagai manusia. Aku sendiri masih mengingat kata kata itu
 
 "Kalau hidup sekedar hidup, kucing juga hidup."

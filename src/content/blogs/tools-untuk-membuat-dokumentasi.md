@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1562564055-71e051d33c19?crop&#x3D;entr
 canonical: "http://blog.faldi.xyz/tools-membuat-dokumentasi/"
 ---
 
+
 Dokumentasi sering kali terlupakan saat proses pengembangan perangkat lunak, padahal dokumentasi berperan penting dalam penjelasan sebuah project, bagaimana cara kita bekerja dengan apps tersebut, proses pemasangan perangkat lunak tersebut hingga memudahkan kita dalam mengurangi "pain" pada saat onboarding tim baru.
 
 Dokumentasi pun, ada beragam jenisnya. Ada yang hanya digunakan untuk memberitahu informasi mengenai

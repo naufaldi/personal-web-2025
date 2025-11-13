@@ -2,14 +2,15 @@
 title: "Open Journal: My Journey After Getting Laid Off #1"
 slug: open-journal-my-journey-after-getting-laid-off-1
 description: "This is my first time creating an open journal about my journey. I've been thinking about it for a while, especially after seeing my senior, Mas Didik, share hi"
-category: "Technical writer"
+category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2025-02-20
+date: Thu Feb 20 2025 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1739909198159-a834175bd911?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDJ8fHx8fHx8fDE3NDAwNDA2Njh8&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/open-journal-my-journey-after-getting-laid-off/"
 ---
+
 
 This is my first time creating an open journal about my journey. I've been thinking about it for a while, especially after seeing my senior, Mas Didik, share his own experience. It made me wonder: why not do it myself? This is my first time being laid off and unemployed, and I want to focus on my thoughts, skills, and how I’m navigating through this challenging time. So, here it goes.
 

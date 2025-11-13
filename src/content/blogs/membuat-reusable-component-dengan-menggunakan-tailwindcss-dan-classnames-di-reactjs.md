@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/membuat-reusable-component-dengan-menggunakan-tailwind-dan-classnames/"
 ---
 
+
 ## Pranala
 
 Sering kali, ketika kita mengerjakan sebuah website maka kita akan mendapati banyak sekali komponen komponen yang sering sekali untuk digunakan. Misalnya komponen `button`, `container` atau `card`. Kalau pengalamanku, komponen tersebut tidak memiliki logic yang rumit atau malah tidak ada sama sekali.

@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1537884944318-390069bb8665?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/membandingkan-tailwindcss-dengan-framework-lain/"
 ---
 
+
 ## Pranala
 
 TailwindCSS merupakan sebuah Framework CSS yang dibuat oleh [Adam Wathan](https://twitter.com/adamwathan?ref=blog.faldi.xyz). Tidak main-main, pertumbuhan [TailwindCSS](tailwindcss.com/) cukup spektakuler.

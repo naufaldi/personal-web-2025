@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1593642533144-3d62aa4783ec?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/cara-import-svg-di-nextjs/"
 ---
 
+
 ## Permasalahan
 
 Sebenarnya, untuk import SVG,JPG, Webp dan extension image lain, secara default sudah didukung di NextJS. Misalnya saja

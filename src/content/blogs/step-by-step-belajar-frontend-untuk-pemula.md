@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1535957998253-26ae1ef29506?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/step-by-step-belajar-frontend-untuk-pemula/"
 ---
 
+
 Sering kali di Twitter atau saat ngopi bareng temen, banyak banget yang menanyakan terkait Roadmap apa saja yang harus dipelajari oleh seorang Frontend, Bahkan sebenarnya mereka sudah mengerti apa yang akan dipelajari, namun tidak memiliki cukup banyak informasi  / sumber belajar maka dari itulah aku mencoba mengkurasi beberapa sumber belajar yang bisa dijadikan salah satu referensi untuk belajar Frontend.
 
 # #Roadmap

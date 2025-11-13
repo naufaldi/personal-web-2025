@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1494778696781-8f23fd5553c4?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/competitive-programming-for-software-engineer/"
 ---
 
+
 Sebuah Tweet cukup menarik muncul diberanda Twitter, salah satu akun menfess terkenal terkait pemrograman @codingfess mendapatkan sebuah Tweet isinya kurang lebih seperti ini :
 
 > siapa yang udah kerja tapi tetap ga bisa HACKERRANK, ANGKAT TANGANNN🙌🏻🙌🏻🙌🏻  

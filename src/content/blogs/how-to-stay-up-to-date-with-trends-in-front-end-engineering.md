@@ -2,14 +2,15 @@
 title: "How to Stay Up-to-Date with Trends in Front-End Engineering"
 slug: how-to-stay-up-to-date-with-trends-in-front-end-engineering
 description: "As a front-end engineer, it's important to stay up-to-date with the latest trends and technologies in the field. Not only will this help you to create more mode"
-category: "Technical writer"
+category: "Idea"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2023-02-10
+date: Fri Feb 10 2023 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1661956600684-97d3a4320e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wxfDF8YWxsfDF8fHx8fHwyfHwxNjc2MDExNjk2&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/how-to-stay-up-to-date-with-trends-in-front-end-engineering/"
 ---
+
 
 As a front-end engineer, it's important to stay up-to-date with the latest trends and technologies in the field. Not only will this help you to create more modern and user-friendly websites, but it will also make you more valuable to potential employers. In this article, we'll explore some ways to stay up-to-date with the latest trends in front-end engineering.
 

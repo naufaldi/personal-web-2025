@@ -11,6 +11,7 @@ image: "http://blog.faldi.xyz/content/images/2025/06/Blog-Writing-Strategy.png"
 canonical: "http://blog.faldi.xyz/share-the-truth-dont-normalize-the-problem/"
 ---
 
+
 This screenshot appeared on my feed and speaks directly to jobseekers.  
 Here’s the post:
 

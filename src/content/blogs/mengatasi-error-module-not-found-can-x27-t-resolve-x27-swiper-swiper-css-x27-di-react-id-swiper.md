@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1541742410245-c2653591f8d3?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/mengatasi-error-css-react-id-swiper/"
 ---
 
+
 React ID Swiper adalah salah satu library yang saya gunakan untuk membuat slideshow. Library ini saat saya membacanya sangat mudah dokumentasinya. Tautan library ini bisa teman-teman lihat pada situs berikut :
 
 React ID Swiper : [https://react-id-swiper.ashernguyen.site](https://react-id-swiper.ashernguyen.site/?ref=blog.faldi.xyz)

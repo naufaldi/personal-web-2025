@@ -2,14 +2,15 @@
 title: "RFC (Request for Comment) , Apa dan Mengapa?"
 slug: rfc-request-for-comment-apa-dan-mengapa
 description: "RFC atau kepanjangannya adalah [Request For Comment](https://en.wikipedia.org/wiki/Request_for_Comments?ref=blog.faldi.xyz) adalah sebuah “Design Dokumen” yang"
-category: "Technical writer"
+category: "Idea"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2022-08-07
+date: Sun Aug 07 2022 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fGRvY3VtZW50fGVufDB8fHx8MTY1OTcyMzU3Mw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/rfc-apa-dan-mengapa/"
 ---
+
 
 ## **Pengertian RFC**
 

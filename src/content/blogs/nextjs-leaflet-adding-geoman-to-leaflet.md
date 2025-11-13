@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1727324735318-c25d437052f7?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/nextjs-leaflet-add-geoman/"
 ---
 
+
 Geoman is a powerful library that enables the creation and editing of geospatial data on maps. It integrates seamlessly with Leaflet, making it an excellent choice for anyone working with interactive web maps.
 
 One of the best features of Geoman is its easy integration with Leaflet.js and React-Leaflet. This tool provides a range of useful features, including:

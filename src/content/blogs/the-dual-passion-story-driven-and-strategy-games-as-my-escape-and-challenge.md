@@ -2,14 +2,15 @@
 title: "The Dual Passion: Story-Driven and Strategy Games as My Escape and Challenge"
 slug: the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge
 description: "![Image](https://blog.faldi.xyz/content/images/2024/09/image.png)"
-category: "Technical writer"
+category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2024-09-26
+date: Thu Sep 26 2024 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGdhbWV8ZW58MHx8fHwxNzI3MzgwOTU4fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge/"
 ---
+
 
 ![Image](https://blog.faldi.xyz/content/images/2024/09/image.png)
 

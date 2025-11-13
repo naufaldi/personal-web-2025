@@ -1,15 +1,17 @@
 ---
-title: "Murahnya Biaya Desain dan Aplikasi"
+title: "placeholder"
 slug: murahnya-biaya-desain-dan-aplikasi
-description: "_\"Desain doang pamflet, sehari jadi bisakan?\"_"
+description: "placeholder"
 category: "Technical writer"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2020-09-27
-image: "https://images.unsplash.com/photo-1498075702571-ecb018f3752d?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ"
-canonical: "http://blog.faldi.xyz/murahnya-biaya-desain-dan-kode/"
+image: ""
+canonical: ""
 ---
+
+
 
 _"Desain doang pamflet, sehari jadi bisakan?"_
 

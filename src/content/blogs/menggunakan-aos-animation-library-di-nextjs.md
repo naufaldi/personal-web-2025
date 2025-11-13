@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1621570276710-2ab2255ab105?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/menggunakan-wowjs-dan-anime/"
 ---
 
+
 ## Problem
 
 Sebelumnya, saya menggunakan Framer Motion untuk membuat animation di Web Apps NextJS. Namun, belakangan ini menyadari adakalanya Framer Motion terlalu Overkill. Memang, overkill atau over engineering itu bagus untuk kita belajar. Namun, saya juga perlu explorasi yang lain. Kira-kira menyesuaikan kebutuhan untuk  project yang akan dibangun. Misalnya saja beberapa situs yang saya buat menggunakan Framer Motion untuk sekedar animasi on scroll page yaitu

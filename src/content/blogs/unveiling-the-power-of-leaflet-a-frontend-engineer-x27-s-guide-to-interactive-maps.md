@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1682687220208-22d7a2543e88?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/introduction-to-leaflet/"
 ---
 
+
 Are you a frontend engineer looking to add interactive maps to your web applications with ease and flexibility? Look no further than Leaflet, a dynamic JavaScript library that's transforming the way we integrate maps into web interfaces.
 
 ![Image](https://blog.faldi.xyz/content/images/2023/11/image-6.png)

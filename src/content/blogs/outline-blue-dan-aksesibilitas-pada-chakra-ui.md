@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1593642532744-d377ab507dc8?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/outline-blue-dan-accesbility-pada-chakra-ui/"
 ---
 
+
 Pernah tidak, teman-teman saat pergi berkunjung ke setiap website yang menggunakan Chakra UI terdapat sebuah kesamaan? Seperti ini misalnya
 
 ![Image](https://blog.faldi.xyz/content/images/2021/06/image.png)

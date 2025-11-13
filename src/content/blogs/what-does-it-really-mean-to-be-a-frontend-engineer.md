@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1581093806997-124204d9fa9d?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/what-does-it-really-mean-to-be-a-frontend-engineer/"
 ---
 
+
 “Frontend engineer” can mean many things, depending on where you work.
 
 At some companies, you lead product discussions with designers, writers, and backend teams to shape what gets built.  

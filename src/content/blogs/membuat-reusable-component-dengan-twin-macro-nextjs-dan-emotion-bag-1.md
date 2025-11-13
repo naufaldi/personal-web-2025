@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/membuat-reusable-component-dengan-twin-macro-tailwindcss-di-nextjs/"
 ---
 
+
 Salah satu alasan, kenapa saya menggunakan [twin.macro](https://github.com/ben-rogerson/twin.macro?ref=blog.faldi.xyz) dan [Emotion](https://emotion.sh/docs/introduction?ref=blog.faldi.xyz) daripada menggunakan [TailwindCSS](https://tailwindcss.com/?ref=blog.faldi.xyz) dengan cara biasa adalah karena bagi saya, dengan menggunakan twin.macro dan Emotion disaat bersamaan akan membuat kode yang kita miliki menjadi mudah untuk didaur ulang atau istilahnya Reusable Component.
 
 Penggunaan Reusable Component bagi saya cukup penting, mengingat didalam sebuah design ada beberapa styleguide yang dijadikan patokan seperti Typography, Color, Grid dan Component Figma sehingga kita mampu untuk implementasikan apa yang ada di desain ke dalam sebuah kode kita.

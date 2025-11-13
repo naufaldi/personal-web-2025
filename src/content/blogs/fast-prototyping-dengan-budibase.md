@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/fast-prototyping-dengan-budibase/"
 ---
 
+
 ## **Mengenal Budibase, Sebuah Platform Low-Code**
 
 Budibase merupakan sebuah platform low code yang memiliki Goal untuk membuat sebuah internal tools yang bisa digunakan hanya dengan drag and drop dan sedikit penulisan code.

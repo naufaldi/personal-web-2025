@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1472437774355-71ab6752b434?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/handle-responsive-website-in-nextjs-ssr/"
 ---
 
+
 ## Permasalahan
 
 Saat menggunakan library `react-responsive` dan menggabungkannya dengan NextJS serta Twin's /  `twin.macro` saya mendapatkan permasalahan. Saat menggunakan `react-responsive`, salah dalam melakukan render styled-component. Misalnya komponen A dengan style A pada dekstop version, tetapi yang dirender adalah komponen A dengan style B pada dekstop version.

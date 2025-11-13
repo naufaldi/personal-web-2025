@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/ai-context-engineering-how-to-level-up-prompting-context-and-output-with-modern-tools/"
 ---
 
+
 Most developers blame the AI when they get bad answers. The truth? 90% of “dumb” output is your fault—because you haven’t engineered the prompt, context, or output.
 
 ## **1\. Prompting Fundamentals: Input → Context → Output**

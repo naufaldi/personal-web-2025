@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?crop&#x3D;entr
 canonical: "http://blog.faldi.xyz/firefox-relay-for-email-anonymous/"
 ---
 
+
 > Firefox Relay⁩ email masks protect your true email address from public view, automatically forwarding messages to your true inbox. Now you can receive only the messages you want in your inbox. Sign up with your ⁨Firefox account⁩ to get started.
 
 in past few month in Indonesia, there is a lot of data breach. So, to try minimize more data breach, we can use firefox relay to masks our email in some of provider. Especially when we just need email for download ebook or other marketing stuff.

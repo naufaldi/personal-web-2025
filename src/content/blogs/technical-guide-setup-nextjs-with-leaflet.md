@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1703875497895-0de198243647?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/technical-guide-setup-nextjs-with-leaflet/"
 ---
 
+
 ## **Setup NextJS**
 
 you can create next js with `create-next-js-app`

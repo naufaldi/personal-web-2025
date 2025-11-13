@@ -2,14 +2,15 @@
 title: "Laid Off. Burned Out. Then Hired as a Senior Engineer."
 slug: laid-off-burned-out-then-hired-as-a-senior-engineer
 description: "Maybe I should start with a timeline — something to align my story with what was happening in the company."
-category: "Technical writer"
+category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2025-05-06
+date: Tue May 06 2025 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1566443280617-35db331c54fb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxuZXR3b3JrfGVufDB8fHx8MTc0NjUwMjUwMHww&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/laid-off-burned-out-hired-senior-engineer/"
 ---
+
 
 ## How Do I Begin?
 

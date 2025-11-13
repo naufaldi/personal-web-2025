@@ -2,14 +2,15 @@
 title: "Pelajaran yang Saya Dapatkan Saat Memberikan Mentorship Frontend"
 slug: pelajaran-yang-saya-dapatkan-saat-memberikan-mentorship-frontend
 description: "![Image](https://blog.faldi.xyz/content/images/2020/10/Screen-Shot-2020-10-15-at-19.12.13.png)"
-category: "Technical writer"
+category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2020-10-15
+date: Thu Oct 15 2020 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "http://blog.faldi.xyz/content/images/2020/10/Screen-Shot-2020-10-16-at-04.56.07.png"
 canonical: "http://blog.faldi.xyz/pelajaran-yang-saya-dapatkan-saat-melakukan-mentorship/"
 ---
+
 
 ![Image](https://blog.faldi.xyz/content/images/2020/10/Screen-Shot-2020-10-15-at-19.12.13.png)
 

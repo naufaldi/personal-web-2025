@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1496070242169-b672c576566b?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/breaking-out-of-the-shell-front-end-engineer-guide/"
 ---
 
+
 **From Coding to Conversations: Insights from a Chatty Engineer**
 
 As a front-end engineer with five years of experience, I've learned an important lesson: the world is much more expansive than our immediate surroundings. This realization hit me like the proverbial frog under a coconut shell, who believes its small world is all there is. This metaphor has profoundly influenced my approach to navigating the complex dynamics of the workplace and the trajectory of my career.

@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1450609283058-0ec52fa7eac4?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/cara-install-react-id-swiper-untuk-membuat-komponen-slideshow/"
 ---
 
+
 ### #Pranala
 
 Sebelumnya, saya menggunakan library React Slick untuk membuat komponen slideshow pada beberapa proyek sebelumnya. Namun, saya merasa sedikit ada masalah ketika mencoba mencoba untuk memanipulasi beberapa element HTML dan merubah styling pada pustaka tersebut sehingga mencoba alternatif lain. Akhirnya, saya menemukan yang namanya React ID Swiper.

@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/menggunakan-deb-ppa-daripada-snapd/"
 ---
 
+
 Beberapa waktu lalu saat saya menggunakan ubuntu, saya mencoba untuk melakukan install semua aplikasi Ubuntu dengan menggunakan snap.
 
 Snap merupakan sebuah _software package_ dan bisa dibilang sebuah ekosistem yang dikembangkan oleh Canoical untuk sistem operasi yang berjalan di Linux Kernal.

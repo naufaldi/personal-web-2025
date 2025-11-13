@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1599687267812-35c05ff70ee9?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/tantangan-sebagai-frontend-dev/"
 ---
 
+
 Setiap pekerjaan memiliki tantangan atau kesulitan yang ditemui. Tidak terkecuali seorang Frontend Developer atau Pengembang Antarmuka. Yah, istilah pengembang antarmuka mungkin bagi sebagian orang masih asing. Namun, pengembang antarmuka ini merupakan terjemahan bahasa Indonesia dari Frontend Dev.
 
 Walaupun pengalamanku masih minim di industri, namun banyak hal yang saya rasakan selama pengalaman bekerja di industri. Kesulitan yang saya hadapi, tantangan yang saya rasakan. Meskipun, bagi sebagian hal ini bukanlah kesulitan, namun bagi saya sendiri ya cukup mengganggu dan sebuah masalah yang harus dicarikan solusinya.

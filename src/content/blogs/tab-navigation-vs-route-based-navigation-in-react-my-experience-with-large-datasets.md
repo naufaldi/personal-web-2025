@@ -2,14 +2,15 @@
 title: "Tab Navigation vs Route-Based Navigation in React: My Experience with Large Datasets"
 slug: tab-navigation-vs-route-based-navigation-in-react-my-experience-with-large-datasets
 description: "Today I want to share my journey with a common React challenge: choosing between tab navigation and route-based navigation for dashboards with large datasets."
-category: "Technical writer"
+category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2025-03-12
+date: Wed Mar 12 2025 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1741557571786-e922da981949?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDJ8fHx8fHx8fDE3NDE3NjgzODZ8&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/tab-navigation-vs-route-based-navigation-in-react-my-experience-with-large-datasets/"
 ---
+
 
 Today I want to share my journey with a common React challenge: choosing between tab navigation and route-based navigation for dashboards with large datasets.
 

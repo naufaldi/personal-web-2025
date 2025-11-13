@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1593642702749-b7d2a804fbcf?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/membuat-redirect-onclick-routes/"
 ---
 
+
 ## Permasalahan
 
 Pernah tidak, memiliki sebuah element yang telah dibuat sedemikian rupa, ternyata saat revisi memiliki fungsi untuk berpindah halaman? atau memiliki sebuah event?

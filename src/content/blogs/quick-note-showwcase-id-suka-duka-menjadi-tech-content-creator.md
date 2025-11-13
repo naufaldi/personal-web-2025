@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1513477967668-2aaf11838bd6?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/rangkuman-showwcase-id-suka-duka-menjadi-tech-content-creator/"
 ---
 
+
 ## Narasumber:
 
 *   [Sandhika Galih](https://twitter.com/sandhikagalih?ref=blog.faldi.xyz)

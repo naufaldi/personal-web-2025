@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1519670107408-15dc1b3ecb1c?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/pentingnya-bahasa-inggris-untuk-pemrogram/"
 ---
 
+
 Pernah merasa tidak, saat membaca tutorial di stackoverflow meresa kebingungan dengan penjelasan / tulisan tersebut?
 
 Pernah tidak, saat mendengarkan video konferensi internasional di youtube, tidak paham dengan apa yang dikatakn oleh pemateri ?

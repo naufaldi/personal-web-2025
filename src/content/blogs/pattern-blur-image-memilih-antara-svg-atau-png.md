@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1631050165122-626a1377fbce?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/pattern-blur-memilih-antara-svg-atau-png/"
 ---
 
+
 Sebulan terakhir ini, saya mendapatkan salah satu pekerjaan untuk implementasi sebuah situs dengan desain yang memiliki banyak pattern blur. Pattern blur yang saya maksud itu kurang lebih seperti ini :
 
 ![Image](https://blog.faldi.xyz/content/images/2021/06/Screen-Shot-2021-06-29-at-10.53.30.png)

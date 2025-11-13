@@ -11,6 +11,7 @@ image: "http://blog.faldi.xyz/content/images/2025/05/Data-Flow-Illustration-Sora
 canonical: "http://blog.faldi.xyz/from-fetcher-function-to-custom-hook-a-practical-guide-with-react-quer/"
 ---
 
+
 ![Image](https://blog.faldi.xyz/content/images/2025/05/image-2.png)
 
 ## **1\. Introduction**

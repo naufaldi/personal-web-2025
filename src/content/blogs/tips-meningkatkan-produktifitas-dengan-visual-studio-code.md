@@ -2,14 +2,15 @@
 title: "Tips Meningkatkan Produktifitas dengan Visual Studio Code"
 slug: tips-meningkatkan-produktifitas-dengan-visual-studio-code
 description: "Siapa sih yang tidak menggunakan VS Code? Bahkan menurut survey terbaru dari stackoverflow tahun 2021 VS Code menjadi text editor yang paling banyak digunakan."
-category: "Technical writer"
+category: "Opinions"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2021-11-14
+date: Sun Nov 14 2021 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1593642532744-d377ab507dc8?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wxfDF8YWxsfDIxfHx8fHx8Mnx8MTYyNDM1NTE3Mg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/tips-meningkatkan-produktifitas-dengan-visual-studio-code/"
 ---
+
 
 Siapa sih yang tidak menggunakan VS Code? Bahkan menurut survey terbaru dari stackoverflow tahun 2021 VS Code menjadi text editor yang paling banyak digunakan.
 

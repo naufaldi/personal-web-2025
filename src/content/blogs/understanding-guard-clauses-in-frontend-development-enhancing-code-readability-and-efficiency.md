@@ -2,14 +2,15 @@
 title: "Understanding Guard Clauses in Frontend Development: Enhancing Code Readability and Efficiency"
 slug: understanding-guard-clauses-in-frontend-development-enhancing-code-readability-and-efficiency
 description: "A programming pattern that I've recently come to understand better is the **\"Guard Clause.\"** This approach is instrumental in checking for conditions that don'"
-category: "Technical writer"
+category: "Idea"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2023-11-15
+date: Wed Nov 15 2023 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1617813884752-54618acb4b94?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDN8fGd1YXJkfGVufDB8fHx8MTcwMDA4MjgwMXww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/guard-clause-programming-pattern/"
 ---
+
 
 A programming pattern that I've recently come to understand better is the **"Guard Clause."** This approach is instrumental in checking for conditions that don't align with our requirements. The primary goal of a Guard Clause is to prevent errors or handle unexpected inputs, thereby enhancing the readability and efficiency of the code.
 

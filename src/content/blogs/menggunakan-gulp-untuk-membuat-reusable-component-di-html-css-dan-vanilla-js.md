@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/menggunakan-gulp-untuk-membuat-reusable-component-di-html-css-dan-vanilla-js/"
 ---
 
+
 ## Pengenalan
 
 Gulp merupakan salah satu tools untuk proses _task management_ seperti automasi, _testing_, _build_, _deploy_ dll. Gulp dibuat dengan NodeJS yang bisa digunakan untuk mengeksekusi beberapa tugas dalam pengembangan website seperti :

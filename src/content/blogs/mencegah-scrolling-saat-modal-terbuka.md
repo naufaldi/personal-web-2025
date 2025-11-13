@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/prevent-scrolling-when-modal-open/"
 ---
 
+
 ## **Permasalahan :**
 
 Permasalahan yang saya alami adalah ketika membuat sebuah fitur pada landingpage, lalu kita membuat sebuah komponen baru untuk menampilkan `Modal` pada Landingpage. Misalnya modal untuk `Login`. Nah, permasalahan yang muncul adalah Landingpage tersebut benar menampilkan `Modal Login`, dengan `overlay` aktif dan Modal bisa terlihat. Kurang lebih seperti ini :

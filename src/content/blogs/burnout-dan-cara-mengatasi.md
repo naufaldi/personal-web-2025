@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1495427513693-3f40da04b3fd?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/burn-out-dan-cara-recovery/"
 ---
 
+
 > Burnout merupakan istilah yang digunakan untuk menggambarkan kondisi stres berat yang dipicu oleh pekerjaan. Burnout tidak boleh dibiarkan berlarut-larut dan perlu diatasi dengan tepat karena dapat memengaruhi kesehatan fisik dan mental.– Alodokter
 
 Setidaknya, beberapa bulan yang lalu adalah Burnout yang paling berasa. Selama 2-3 Hari saya tidak ngapa-ngapain. Alias inginnya hanya tidur, scroll hp atau bisa dikatakan, kegiatan kegiatan yang tidak memerlukan otak., tidak ingin untuk berkegiatan apapun. Termasuk main game, chat, ngobrol sama orang yang bagiku, itu merupakan kegiatan sehari hari. Untungnya saja, dengan istirahat cukup, minum dan makan yang manis-manis.

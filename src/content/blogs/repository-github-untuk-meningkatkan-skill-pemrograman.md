@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1593642533144-3d62aa4783ec?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/repository-github-untuk-meningkatkan-skill-pemrograman/"
 ---
 
+
 Meningkatkan skill pemrograman tidak hanya selalu berkutat pada proses pengerjaan proyek secara langsung. Melainkan juga dengan melakukan kegiatan lainnya seperti membaca, memecahkan masalah, menulis, mengajar dan hal lainnya.
 
 Kebetulan, saya menemukan sebuah utas menarik di Twitter mengenai beberapa  repositories di Github yang bisa dijadikan sumber belajar dan mendapatkan insight mengenai programming skill.

@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1688374705239-c17dd6b68435?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/getting-started-with-zustand/"
 ---
 
+
 ## Introduction to Zustand
 
 State management is an essential aspect of modern web development, especially when working with complex user interfaces. Zustand is a lightweight, flexible state management library that provides a simple yet powerful solution for managing state in React applications. It offers a minimal API, inspired by React Hooks, making it an excellent choice for developers familiar with the Hooks paradigm.

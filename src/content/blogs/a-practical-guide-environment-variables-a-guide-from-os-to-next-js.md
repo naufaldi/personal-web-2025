@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1749741355867-8d40976f2bfb?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/a-practical-guide-environment-variables-a-guide-from-os-to-next-js/"
 ---
 
+
 I still remember the frustration. I was deploying a Next.js app in a Docker container for the first time. I dutifully set my `NEXT_PUBLIC_API_URL` variable using the `docker run -e` command, thinking I had followed best practices. But when the app loaded, the API calls failed. Popping open the browser console, I saw the value was `undefined`. How could that be? I had injected the variable directly into the container's environment!
 
 That experience was my introduction to a crucial concept: in modern frameworks, not all environment variables are created equal. The variable I injected at _runtime_ was invisible to the Next.js _build process_ that had run much earlier. This guide is born from that confusion. We'll walk through the different levels where envs "live"—from the OS to the container, and from build-time to runtime—so we can finally understand why a variable might be present in our terminal but `undefined` in our code.

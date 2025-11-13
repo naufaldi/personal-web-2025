@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1600195077909-46e573870d99?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/meningkatkan-readability-pada-kode/"
 ---
 
+
 Ketika berkolaborasi dengan pemrogram yang lain, kita harus bisa memahami kode yang orang lain tulis, memahami bagaimana cara kerja kode tersebut. Sehingga ada kalanya teman atau kolega kita saat membaca kode kita akan merasa seperti
 
 > "Ini dapat props darimana ya?"

@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?crop&#x3D;entr
 canonical: "http://blog.faldi.xyz/geojson-leafleat-add-geojson/"
 ---
 
+
 After posting about how to add leafleat in NextJS, in this tutorial we will learn how to adding coordinate with GEOJSON. GEOJSON is format for geospatial data structure.
 
 > GeoJSON is a geospatial data interchange format based on JavaScript Object Notation (JSON).  It defines several types of JSON objects and the manner in which they are combined to represent data about geographic features, their properties, and their spatial extents. GeoJSON uses a geographic coordinate reference system, World Geodetic System 1984, and units of decimal degrees.– RFC 7946

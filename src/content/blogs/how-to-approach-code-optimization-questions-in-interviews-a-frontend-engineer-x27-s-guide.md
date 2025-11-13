@@ -2,14 +2,15 @@
 title: "How to Approach Code Optimization Questions in Interviews: A Frontend Engineer&#x27;s Guide"
 slug: how-to-approach-code-optimization-questions-in-interviews-a-frontend-engineer-x27-s-guide
 description: "Recently, during an interview, I was asked a question that caught me off guard: \"How would you improve this code?\" I had experience optimizing code in projects—"
-category: "Technical writer"
+category: "Opinions"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2024-10-07
+date: Mon Oct 07 2024 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1719937051157-d3d81cc28e86?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wxfDF8YWxsfDF8fHx8fHx8fDE3MjgyNzczOTZ8&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/guide-to-code-optimization-questions-for-frontend-engineers/"
 ---
+
 
 Recently, during an interview, I was asked a question that caught me off guard: "How would you improve this code?" I had experience optimizing code in projects—creating reusable components, improving load times, and enhancing data fetching—but I found myself unable to formulate a clear response in that moment.
 

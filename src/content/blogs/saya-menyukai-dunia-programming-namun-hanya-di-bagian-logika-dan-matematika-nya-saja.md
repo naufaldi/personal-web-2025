@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1604778368096-1ef9ada56c0a?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/dunia-programming-tidak-hanya-berkutat-seputar-logika-dan-matematika/"
 ---
 
+
 Kemarin lusa, saya mendapatkan permintaan jawaban menarik di Quora Indonesia.
 
 ![Image](https://blog.faldi.xyz/content/images/2020/11/Screen-Shot-2020-11-01-at-13.31.40.png)

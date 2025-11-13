@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/cara-setup-tailwind-css-react-create-app-cra/"
 ---
 
+
 Pada kesempatan kali ini, saya mencoba untuk membuat tutorial bagaimana setup / melakukan pengaturan agar bisa Tailwind CSS bisa berjalan dengan Create React App.
 
 ### Setup Create React App

@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1687186735445-df877226fae9?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/memilih-state-management/"
 ---
 
+
 > code; buat para react developer nih, kalian lebih sering gunain redux daripada react context kah?
 > 
 > — CODINGFESS (@codingfess) [August 1, 2022](https://twitter.com/codingfess/status/1553922071314731008?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)

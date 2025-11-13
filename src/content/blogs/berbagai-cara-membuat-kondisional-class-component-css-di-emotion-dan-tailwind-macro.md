@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1608142172765-6949c94646ca?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/membuat-props-class-component-di-emotion-dan-tailwind-macro/"
 ---
 
+
 ## Pembuka
 
 twin.macro atau yang bisa kita sebut sebagai Twin's  telah saya gunakan cukup lama. Seiringnya waktu pun, saya menemukan beberapa hal yang cukup menjadi _challenge_ bagi saya sendiri. Salah satunya adalah permasalahan kondisional class / kondisional style pada component di NextJS.

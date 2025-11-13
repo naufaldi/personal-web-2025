@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/lesson-learned-dari-test-accesibility-pada-website/"
 ---
 
+
 ## Pranala
 
 Accesibility  konsep yang merujuk pada pengembangan dan desain web untuk memastikan kemudahan akses digital atau online bagi semua orang, baik yang mampu maupun memiliki disabilitas.

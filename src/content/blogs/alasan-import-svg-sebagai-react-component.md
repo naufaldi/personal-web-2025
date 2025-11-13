@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/alasan-import-svg-sebagai-react-component/"
 ---
 
+
 ### Permasalahan Pertama
 
 Pernah tidak mencoba untuk merubah warna SVG ? Entah kebutuhannya saat pengguna melakukan hover pada element SVG tersebut atau untuk menyesuaikan SVG dengan tema dari situs kita ?

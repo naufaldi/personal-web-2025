@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1687295051794-03a70e3f8a14?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/menambahkan-open-graph-pada-web-app-nextjs/"
 ---
 
+
 ## Open Graph Protocol
 
 The Open Graph Protocol is a technology created by Facebook that allows web pages to become rich objects in social media. For example, when we share a page on Twitter or Facebook, there will be a preview

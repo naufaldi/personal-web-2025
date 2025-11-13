@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop&#x3D;entr
 canonical: "http://blog.faldi.xyz/getting-started-with-graphql/"
 ---
 
+
 As web and mobile apps evolve, software developers continuously devise innovative methods to enhance communication between application clients and servers. A significant shift in recent years has been the introduction of GraphQL, an open-source query language and runtime designed to optimize API manipulation. Created by Facebook in 2012 and publicly released in 2015, GraphQL addresses the limitations of conventional REST architecture by establishing a novel system that prioritizes declarative, client-centric, and efficient operations.
 
 # What is GraphQL?

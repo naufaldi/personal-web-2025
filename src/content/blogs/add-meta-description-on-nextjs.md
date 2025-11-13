@@ -1,15 +1,17 @@
 ---
-title: "Add Meta Description on NextJS"
+title: "placeholder"
 slug: add-meta-description-on-nextjs
-description: "Meta description adalah salah satu hal yang cukup vital dalam dunia website, apalagi Landingpage. `<meta name=\"description\">` merupakan salah satu element yang"
+description: "placeholder"
 category: "Technical writer"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2021-06-18
-image: "https://images.unsplash.com/photo-1621570274959-83e254246c07?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wxfDF8YWxsfDE2fHx8fHx8Mnx8MTYyMzk4NTU2NA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/add-meta-description-on-nextjs/"
+date: 2020-09-27
+image: ""
+canonical: ""
 ---
+
+
 
 Meta description adalah salah satu hal yang cukup vital dalam dunia website, apalagi Landingpage. `<meta name="description">` merupakan salah satu element yang memberikan ringkasan mengenai isi konten dari website kita yang membuat search engines memasukkannya di hasil pencarian. Kualitas meta deskripsi yang bagus dan unik akan membuat halaman kita menjadi lebih relevan dan meningkatkan trafik pencarian terhadap situs kita.
 

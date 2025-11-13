@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1593642531955-b62e17bdaa9c?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/cara-bertanya-permasalahan-dalam-pemrogram-yang-baik/"
 ---
 
+
 ## Permasalahan
 
 Sering kali, kite menemukan orang menyanyakan sebuah masalah atas galat di kode program atau output program yang sedang dibangun seperti ini

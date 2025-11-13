@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1656625497563-ab79f48802ba?crop&#x3D;e
 canonical: "http://blog.faldi.xyz/nvm-untuk-manajemen-node-version/"
 ---
 
+
 # Problem
 
 Saat kita bekerja diperusahaan yang cukup besar, besar dalam artian memiliki banyak Web Apps yang dimaintenance, memiliki banyak legacy kode / Web Apps yang perlu dilakukan pembaruan. Maka sering kali kita menemukan bahwa Web Apps tersebut tidak bisa dijalankan pada NodeJS versi tertentu. Misalnya package manager pnpm.

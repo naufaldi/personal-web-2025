@@ -2,14 +2,15 @@
 title: "Exploring the Latest Trends in Front-End Design"
 slug: exploring-the-latest-trends-in-front-end-design
 description: "In recent years, front-end design has undergone a rapid evolution, with new technologies and techniques emerging at a rapid pace. In this article, we'll take a"
-category: "Technical writer"
+category: "Idea"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2023-04-18
+date: Tue Apr 18 2023 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1681671408340-118a341a6297?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8YWxsfDR8fHx8fHwyfHwxNjgxNzk3Njc0&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/exploring-the-latest-trends-in-front-end-design/"
 ---
+
 
 In recent years, front-end design has undergone a rapid evolution, with new technologies and techniques emerging at a rapid pace. In this article, we'll take a look at some of the latest trends in front-end design, and explore how they can be used to create modern, user-friendly websites.
 

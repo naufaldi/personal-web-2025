@@ -11,6 +11,7 @@ image: "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib&#x3D;
 canonical: "http://blog.faldi.xyz/harus-mahir-menuliskan-kode/"
 ---
 
+
 ### Disclaimer :
 
 Saya tidak memiliki data real mengenai lulusan IT yang bekerja sebagai developer dan yang tidak bekerja sebagai developer.

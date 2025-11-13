@@ -2,14 +2,15 @@
 title: "Open Journal : A Day of Reflection and Action"
 slug: open-journal-a-day-of-reflection-and-action
 description: "![Warung Bakmi Jwa Mas Yono](https://blog.faldi.xyz/content/images/2025/02/IMG_3608.jpeg)"
-category: "Technical writer"
+category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
-date: 2025-02-21
+date: Fri Feb 21 2025 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1726137569914-ae2ad1c634f6?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wxfDF8YWxsfDF8fHx8fHx8fDE3NDAxMjE0ODR8&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
 canonical: "http://blog.faldi.xyz/open-journal-a-day-of-reflection-and-action/"
 ---
+
 
 ### Recap Yesterday
 
