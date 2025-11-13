@@ -9,7 +9,7 @@ export default function About() {
   return (
     <div className="min-h-screen flex flex-col relative">
       <div className="bg-pattern-about" aria-hidden="true" />
-      <div className="mx-auto max-w-7xl px-6 w-full py-12 md:py-16 relative z-10">
+      <div className="mx-auto max-w-7xl px-6 w-full py-20 md:py-16 relative z-10">
         <FadeInUp delay={0.06}>
           <div className="flex flex-col items-center gap-4 mb-12">
             <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 bg-slate-900/60">

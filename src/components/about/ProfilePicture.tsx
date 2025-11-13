@@ -29,7 +29,7 @@ export default function ProfilePicture({
       </div>
 
       <div
-        className="relative rotate-2 bg-white p-4 shadow-2xl"
+        className="relative rotate-2 bg-white p-4 shadow-2xl w-[300px] md:w-auto"
         style={{
           animation: 'fade-in 900ms ease-out both',
           animationDelay: '120ms',

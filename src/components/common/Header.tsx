@@ -22,7 +22,7 @@ export default function Header() {
       .toUpperCase();
 
   return (
-    <header className="relative z-50">
+    <header className="fixed sm:relative z-50 w-full bg-slate-900">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex h-16 items-center justify-between border-b border-slate-800/70">
           <Link
@@ -56,11 +56,11 @@ export default function Header() {
             </span>
           </Link>
 
-          <div className="flex-1 flex justify-center">
+          <div className="flex-1 flex justify-end sm:justify-center">
             <Navigation />
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-2">
             <Button
               asChild
               variant="secondary"

@@ -5,12 +5,10 @@ import FadeInUp from '@/components/common/FadeInUp'
 
 const ProjectBackground = () => (
   <svg
-    width="1153"
-    height="800"
     viewBox="0 0 1153 800"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="absolute overflow-hidden top-10 inset-x-0 md:w-full z-[-1] md:max-w-[68rem] mx-auto opacity-70"
+    className="absolute overflow-hidden top-6 inset-x-0 md:top-10 lg:w-full z-[-1] md:max-w-[68rem] lg:max-w-7xl mx-auto opacity-30 md:opacity-50 lg:opacity-70"
     aria-hidden="true"
   >
     <path
@@ -455,7 +453,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen flex flex-col relative bg-slate-950">
       <ProjectBackground />
-      <div className="mx-auto max-w-7xl px-6 w-full relative z-10 py-12 md:py-16">
+      <div className="mx-auto max-w-7xl px-6 w-full relative z-10 py-20 md:py-16">
         <FadeInUp delay={0.06}>
           <div className="flex flex-col items-center gap-4 mb-12">
             <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 bg-slate-900/60">

@@ -13,7 +13,7 @@ export default function Blogs() {
   return (
     <div className="min-h-screen flex flex-col relative" style={{ backgroundColor: 'rgb(10, 10, 10)' }}>
       <div className="bg-pattern-blogs" />
-      <div className="mx-auto max-w-7xl px-6 w-full relative z-10 py-12 md:py-16">
+      <div className="mx-auto max-w-7xl px-6 w-full relative z-10 py-20 md:py-16">
         <div
           className="flex flex-col items-center gap-4 mb-12"
           style={{
