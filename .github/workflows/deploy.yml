@@ -63,7 +63,8 @@ jobs:
           platforms: linux/amd64
           push: true
           no-cache: true
-          tags: |
+          tags:
+            |
             ghcr.io/naufaldi/personal-web-v5:${{ needs.commit-hash.outputs.commit_hash }}
             ghcr.io/naufaldi/personal-web-v5:prod
 
@@ -73,66 +74,59 @@ jobs:
       - build-and-push-image
       - commit-hash
     steps:
-    - name: Setup SSH key
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
-        chmod 600 ~/.ssh/deploy_key
-        ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts 2>/dev/null || true
-    
-    - name: Deploy to VPS
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.VPS_HOST }}
-        username: ${{ secrets.VPS_USERNAME }}
-        key_path: $HOME/.ssh/deploy_key
-        port: 22
-        script: |
-          echo "Starting deployment..."
-          
-          # Create project directory
-          mkdir -p ~/personal-web-v5
-          cd ~/personal-web-v5
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script:
+            |
+            echo "Starting deployment..."
 
-          # Login to GitHub Container Registry
-          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-          
-          # Pull the latest image
-          docker pull ghcr.io/naufaldi/personal-web-v5:prod
-          
-          # Create docker-compose.prod.yml
-          cat > docker-compose.prod.yml << 'EOL'
-          version: '3.8'
+            # Create project directory
+            mkdir -p ~/personal-web-v5
+            cd ~/personal-web-v5
 
-          services:
-            app:
-              image: ghcr.io/naufaldi/personal-web-v5:prod
-              labels:
-                - "caddy=faldi.xyz"
-                - "caddy.reverse_proxy={{upstreams 3000}}"
-                - "com.centurylinklabs.watchtower.enable=true"
-              environment:
-                - NODE_ENV=production
-              restart: always
-              networks:
-                - edge
-                - personal-web-private
+            # Login to GitHub Container Registry
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-          networks:
-            edge:
-              external: true
-            personal-web-private:
-              driver: bridge
-          EOL
-          
-          # Deploy using docker-compose.prod.yml
-          docker compose -f docker-compose.prod.yml down || true
-          docker compose -f docker-compose.prod.yml up -d
-          
-          # Show running containers
-          echo "Checking running containers..."
-          docker ps | grep personal-web-v5
-          
-          # Clean up old images
-          docker image prune -f
+            # Pull the latest image
+            docker pull ghcr.io/naufaldi/personal-web-v5:prod
 
+            # Create docker-compose.prod.yml
+            cat > docker-compose.prod.yml << 'EOL'
+            version: '3.8'
+
+            services:
+              app:
+                image: ghcr.io/naufaldi/personal-web-v5:prod
+                labels:
+                  - "caddy=faldi.xyz"
+                  - "caddy.reverse_proxy={{upstreams 3000}}"
+                  - "com.centurylinklabs.watchtower.enable=true"
+                environment:
+                  - NODE_ENV=production
+                restart: always
+                networks:
+                  - edge
+                  - personal-web-private
+
+            networks:
+              edge:
+                external: true
+              personal-web-private:
+                driver: bridge
+            EOL
+
+            # Deploy using docker-compose.prod.yml
+            docker compose -f docker-compose.prod.yml down || true
+            docker compose -f docker-compose.prod.yml up -d
+
+            # Show running containers
+            echo "Checking running containers..."
+            docker ps | grep personal-web-v5 || true
+
+            # Clean up old images
+            docker image prune -f
