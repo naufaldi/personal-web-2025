@@ -63,6 +63,10 @@ jobs:
           platforms: linux/amd64
           push: true
           no-cache: true
+          build-args:
+            |
+            VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}
+            VITE_SUPABASE_ANON_KEY=${{ secrets.VITE_SUPABASE_ANON_KEY }}
           tags:
             |
             ghcr.io/naufaldi/personal-web-v5:${{ needs.commit-hash.outputs.commit_hash }}
@@ -108,6 +112,8 @@ jobs:
                   - "com.centurylinklabs.watchtower.enable=true"
                 environment:
                   - NODE_ENV=production
+                  - VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}
+                  - VITE_SUPABASE_ANON_KEY=${{ secrets.VITE_SUPABASE_ANON_KEY }}
                 restart: always
                 networks:
                   - edge

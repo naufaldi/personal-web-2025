@@ -1,15 +1,36 @@
-import { Link } from 'react-router'
-import { ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { siteConfig } from '@/data/site'
-import Navigation from './Navigation'
+import { Link } from "react-router";
+import { ArrowRight } from "lucide-react";
+import {
+  lazy,
+  Suspense,
+} from "react";
+import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/data/site";
+
+const Navigation =
+  lazy(
+    () =>
+      import(
+        "./Navigation"
+      ),
+  );
 
 export default function Header() {
-  const initials = siteConfig.name
-    .split(' ')
-    .map((n) => n[0])
-    .join('')
-    .toUpperCase()
+  const initials =
+    siteConfig.name
+      .split(
+        " ",
+      )
+      .map(
+        (
+          n,
+        ) =>
+          n[0],
+      )
+      .join(
+        "",
+      )
+      .toUpperCase();
 
   return (
     <header className="relative z-50">
@@ -24,49 +45,72 @@ export default function Header() {
               <span
                 className="text-slate-100 text-[11px] tracking-tight font-medium"
                 style={{
-                  fontFamily: 'var(--font-mono)',
+                  fontFamily:
+                    "var(--font-mono)",
                 }}
               >
-                {initials}
+                {
+                  initials
+                }
               </span>
             </div>
             <span
               className="text-slate-300 text-sm tracking-tight font-medium group-hover:text-slate-100 transition-colors"
               style={{
-                fontFamily: 'var(--font-body)',
+                fontFamily:
+                  "var(--font-body)",
               }}
             >
-              {siteConfig.name}
+              {
+                siteConfig.name
+              }
             </span>
           </Link>
 
           <div className="flex-1 flex justify-center">
-            <Navigation />
+            <Suspense
+              fallback={
+                null
+              }
+            >
+              <Navigation />
+            </Suspense>
           </div>
 
           <div className="flex items-center gap-2">
             <Button
               asChild
               variant="secondary"
-              
               style={{
-                fontFamily: 'var(--font-body)',
+                fontFamily:
+                  "var(--font-body)",
                 fontWeight: 500,
               }}
             >
-              <a href="https://www.linkedin.com/in/naufaldirafif/" target="_blank" rel="noopener noreferrer">Contact</a>
+              <a
+                href="https://www.linkedin.com/in/naufaldirafif/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contact
+              </a>
             </Button>
             <Button
               asChild
               variant="primary"
-              
               style={{
-                fontFamily: 'var(--font-body)',
+                fontFamily:
+                  "var(--font-body)",
                 fontWeight: 600,
               }}
             >
-              <a href="https://www.linkedin.com/in/naufaldirafif/" target="_blank" rel="noopener noreferrer">
-                Download CV
+              <a
+                href="https://www.linkedin.com/in/naufaldirafif/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download
+                CV
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
@@ -74,5 +118,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
