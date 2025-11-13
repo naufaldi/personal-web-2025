@@ -138,7 +138,7 @@ export const ThemeToggleButton = ({
             animation: none;
           }
           ::view-transition-new(root) {
-            animation: ${theme === 'light' ? 'wipe-in-dark' : 'wipe-in-light'} 0.4s ease-out;
+            animation: ${theme === 'light' ? 'wipe-in-dark' : 'wipe-in-light'} 1.4s cubic-bezier(0.4, 0, 0.2, 1);
           }
           @keyframes wipe-in-dark {
             from {

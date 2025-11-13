@@ -46,6 +46,7 @@
 
 html {
   scroll-behavior: smooth;
+  view-transition-name: root;
 }
 
 body {
@@ -434,8 +435,68 @@ Option 5: Noise Texture Pattern (Subtle)
   .animate-marquee {
     animation: none;
   }
-  
+
   .marquee-container:hover .animate-marquee {
     animation-play-state: unset;
+  }
+}
+
+/* Theme transition animations - always available for View Transitions API */
+@keyframes circle-expand {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(150%);
+  }
+}
+
+@keyframes circle-blur-expand {
+  from {
+    clip-path: circle(0%);
+    filter: blur(4px);
+  }
+  to {
+    clip-path: circle(150%);
+    filter: blur(0);
+  }
+}
+
+@keyframes wipe-in-dark {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes wipe-in-light {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes gif-reveal {
+  0% {
+    mask-size: 0%;
+  }
+  20% {
+    mask-size: 35%;
+  }
+  60% {
+    mask-size: 35%;
+  }
+  100% {
+    mask-size: 300%;
   }
 }

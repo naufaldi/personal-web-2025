@@ -15,4 +15,3 @@ interface ImportMeta {
     }
   ): Record<string, T>
 }
-

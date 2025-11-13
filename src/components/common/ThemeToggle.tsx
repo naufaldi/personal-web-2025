@@ -31,7 +31,7 @@ export const ThemeToggle = () => {
     <ThemeToggleButton
       theme={currentTheme}
       onClick={handleThemeToggle}
-      variant="circle"
+      variant="polygon"
       start="center"
     />
   );

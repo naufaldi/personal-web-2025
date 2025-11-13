@@ -20,17 +20,11 @@ export default function Home() {
             <p
               className="text-xs text-slate-500 light:text-slate-600"
               style={{
-                fontFamily:
-                  "var(--font-body)",
+                fontFamily: "var(--font-body)",
                 fontWeight: 500,
               }}
             >
-              Building
-              with
-              clarity,
-              performance,
-              and
-              craft.
+              Building with clarity, performance, and craft.
             </p>
             <a
               href="#projects"
@@ -41,8 +35,7 @@ export default function Home() {
                 fontWeight: 500,
               }}
             >
-              Browse
-              work
+              Browsework
               <ChevronRight className="h-3.5 w-3.5" />
             </a>
           </div>
