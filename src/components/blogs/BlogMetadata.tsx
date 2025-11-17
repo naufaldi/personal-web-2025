@@ -1,102 +1,185 @@
-import { useEffect, useState } from 'react'
-import { Calendar, Clock, Eye, Heart } from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
-import { getBlogViews, getBlogLikes } from '@/lib/blogStorage'
-import type { BlogItem } from '@/data/blogs'
+import {
+  useEffect,
+  useState,
+} from "react";
+import {
+  Calendar,
+  Clock,
+  Eye,
+  Heart,
+} from "lucide-react";
+import {
+  Avatar,
+  AvatarImage,
+  AvatarFallback,
+} from "@/components/ui/avatar";
+import {
+  getBlogViews,
+  getBlogLikes,
+} from "@/lib/blogStorage";
+import type { BlogItem } from "@/data/blogs";
 
 interface BlogMetadataProps {
-  blog: BlogItem
-  views?: number
-  likes?: number
+  blog: BlogItem;
+  views?: number;
+  likes?: number;
 }
 
-export default function BlogMetadata({ blog, views: initialViews, likes: initialLikes }: BlogMetadataProps) {
-  const [views, setViews] = useState(initialViews ?? 0)
-  const [likes, setLikes] = useState(initialLikes ?? 0)
+export default function BlogMetadata({
+  blog,
+  views:
+    initialViews,
+  likes:
+    initialLikes,
+}: BlogMetadataProps) {
+  const [
+    views,
+    setViews,
+  ] =
+    useState(
+      initialViews ??
+        0,
+    );
+  const [
+    likes,
+    setLikes,
+  ] =
+    useState(
+      initialLikes ??
+        0,
+    );
 
   useEffect(() => {
-    getBlogViews(blog.slug).then(setViews)
-    getBlogLikes(blog.slug).then(setLikes)
-  }, [blog.slug])
+    getBlogViews(
+      blog.slug,
+    ).then(
+      setViews,
+    );
+    getBlogLikes(
+      blog.slug,
+    ).then(
+      setLikes,
+    );
+  }, [
+    blog.slug,
+  ]);
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    })
-  }
+  const formatDate =
+    (
+      dateString: string,
+    ) => {
+      return new Date(
+        dateString,
+      ).toLocaleDateString(
+        "en-US",
+        {
+          year: "numeric",
+          month:
+            "long",
+          day: "numeric",
+        },
+      );
+    };
 
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-3">
-        <Avatar className="h-10 w-10 border border-slate-800/70">
-          <AvatarImage src={blog.author.avatar} alt={blog.author.name} />
-          <AvatarFallback className="bg-slate-800 text-slate-300">
-            {blog.author.name.charAt(0).toUpperCase()}
+        <Avatar className="h-10 w-10 border border-slate-800/70 light:border-slate-300/70">
+          <AvatarImage
+            src={
+              blog
+                .author
+                .avatar
+            }
+            alt={
+              blog
+                .author
+                .name
+            }
+          />
+          <AvatarFallback className="bg-slate-800 light:bg-slate-200 text-slate-300 light:text-slate-700">
+            {blog.author.name
+              .charAt(
+                0,
+              )
+              .toUpperCase()}
           </AvatarFallback>
         </Avatar>
         <div className="flex-1">
           <p
-            className="text-sm"
+            className="text-sm text-slate-400 light:text-slate-600"
             style={{
-              fontFamily: 'var(--font-body)',
+              fontFamily:
+                "var(--font-body)",
               fontWeight: 600,
-              color: 'rgb(163, 163, 163)',
             }}
           >
-            {blog.author.name}
+            {
+              blog
+                .author
+                .name
+            }
           </p>
-          <div className="flex items-center gap-2 text-xs" style={{ color: 'rgb(163, 163, 163)' }}>
-            <Calendar className="h-3 w-3" style={{ color: 'rgb(163, 163, 163)' }} />
+          <div className="flex items-center gap-2 text-xs text-slate-400 light:text-slate-600">
+            <Calendar className="h-3 w-3" />
             <span
               style={{
-                fontFamily: 'var(--font-body)',
+                fontFamily:
+                  "var(--font-body)",
                 fontWeight: 400,
               }}
             >
-              {formatDate(blog.date)}
+              {formatDate(
+                blog.date,
+              )}
             </span>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center gap-4 text-xs" style={{ color: 'rgb(163, 163, 163)' }}>
+      <div className="flex flex-wrap items-center gap-4 text-xs text-slate-400 light:text-slate-600">
         <div className="flex items-center gap-1.5">
-          <Clock className="h-3.5 w-3.5" style={{ color: 'rgb(163, 163, 163)' }} />
+          <Clock className="h-3.5 w-3.5" />
           <span
             style={{
-              fontFamily: 'var(--font-body)',
+              fontFamily:
+                "var(--font-body)",
               fontWeight: 400,
             }}
           >
-            {blog.readTime || 5} min read
+            {blog.readTime ||
+              5}{" "}
+            min
+            read
           </span>
         </div>
         <div className="flex items-center gap-1.5">
-          <Eye className="h-3.5 w-3.5" style={{ color: 'rgb(163, 163, 163)' }} />
+          <Eye className="h-3.5 w-3.5" />
           <span
             style={{
-              fontFamily: 'var(--font-body)',
+              fontFamily:
+                "var(--font-body)",
               fontWeight: 400,
             }}
           >
-            {views.toLocaleString()} views
+            {views.toLocaleString()}{" "}
+            views
           </span>
         </div>
         <div className="flex items-center gap-1.5">
-          <Heart className="h-3.5 w-3.5" style={{ color: 'rgb(163, 163, 163)' }} />
+          <Heart className="h-3.5 w-3.5" />
           <span
             style={{
-              fontFamily: 'var(--font-body)',
+              fontFamily:
+                "var(--font-body)",
               fontWeight: 400,
             }}
           >
-            {likes.toLocaleString()} likes
+            {likes.toLocaleString()}{" "}
+            likes
           </span>
         </div>
       </div>
     </div>
-  )
+  );
 }
-
