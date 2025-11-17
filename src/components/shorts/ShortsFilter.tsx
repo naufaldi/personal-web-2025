@@ -38,22 +38,22 @@ export default function ShortsFilter({
     <div className="space-y-6">
       <div>
         <h3
-          className="text-lg text-slate-100 mb-4"
-          style={{
-            fontFamily: 'var(--font-mono)',
-            fontWeight: 600,
-          }}
-        >
+          className="text-lg text-slate-100 light:text-slate-900 mb-4"
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontWeight: 600,
+            }}
+          >
           Search
         </h3>
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400 light:text-slate-500" />
           <Input
             type="text"
             placeholder="Search shorts..."
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            className="pl-10 pr-10 bg-slate-900/60 border-slate-800/70 text-slate-200 placeholder:text-slate-500 focus-visible:ring-slate-700/70"
+            className="pl-10 pr-10 bg-slate-900/60 light:bg-white border-slate-800/70 light:border-slate-200 text-slate-200 light:text-slate-900 placeholder:text-slate-500 light:placeholder:text-slate-400 focus-visible:ring-slate-700/70 light:focus-visible:ring-slate-900/30"
             style={{
               fontFamily: 'var(--font-body)',
             }}
@@ -61,7 +61,7 @@ export default function ShortsFilter({
           {searchQuery && (
             <button
               onClick={() => onSearchChange('')}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-200 transition-colors"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 light:text-slate-500 hover:text-slate-200 light:hover:text-slate-700 transition-colors"
               aria-label="Clear search"
             >
               <X className="h-4 w-4" />
@@ -73,7 +73,7 @@ export default function ShortsFilter({
       <div>
         <div className="flex items-center justify-between mb-4">
           <h3
-            className="text-lg text-slate-100"
+            className="text-lg text-slate-100 light:text-slate-900"
             style={{
               fontFamily: 'var(--font-mono)',
               fontWeight: 600,
@@ -86,7 +86,7 @@ export default function ShortsFilter({
               variant="outline"
               size="sm"
               onClick={onClearFilters}
-              className="h-7 px-2 text-xs border-slate-700/70 text-slate-300 bg-slate-900/40 hover:border-slate-600 hover:bg-slate-800/50"
+              className="h-7 px-2 text-xs border-slate-700/70 light:border-slate-200 text-slate-300 light:text-slate-600 bg-slate-900/40 light:bg-white hover:border-slate-600 light:hover:border-slate-300 hover:bg-slate-800/50 light:hover:bg-slate-50"
               style={{
                 fontFamily: 'var(--font-body)',
                 fontWeight: 500,
@@ -106,8 +106,8 @@ export default function ShortsFilter({
                 className={cn(
                   'cursor-pointer transition-all duration-200',
                   isSelected
-                    ? 'border-slate-600 bg-slate-800/70 text-slate-100'
-                    : 'border-slate-700/70 text-slate-300 bg-slate-900/40 hover:border-slate-600 hover:bg-slate-800/50',
+                    ? 'border-slate-600 light:border-slate-900 bg-slate-800/70 light:bg-slate-100 text-slate-100 light:text-slate-900'
+                    : 'border-slate-700/70 light:border-slate-200 text-slate-300 light:text-slate-600 bg-slate-900/40 light:bg-white hover:border-slate-600 light:hover:border-slate-300 hover:bg-slate-800/50 light:hover:bg-slate-50',
                 )}
                 style={{
                   fontFamily: 'var(--font-body)',
@@ -129,4 +129,3 @@ export default function ShortsFilter({
     </div>
   )
 }
-

@@ -39,11 +39,11 @@ export default function TechStack({ items, className }: TechStackProps) {
               animationDelay: `${120 + items.indexOf(item) * 50}ms`,
             }}
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 bg-slate-900/60 transition-colors hover:border-slate-600/80 hover:bg-slate-800/80">
-              <Icon className="h-6 w-6 text-slate-300" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 light:border-slate-200/70 bg-slate-900/60 light:bg-white/80 transition-colors hover:border-slate-600/80 light:hover:border-slate-300 hover:bg-slate-800/80 light:hover:bg-slate-50">
+              <Icon className="h-6 w-6 text-slate-300 light:text-slate-700" />
             </div>
             <span
-              className="text-xs text-slate-400"
+              className="text-xs text-slate-400 light:text-slate-600"
               style={{
                 fontFamily: 'var(--font-mono)',
                 fontWeight: 500,
@@ -57,4 +57,3 @@ export default function TechStack({ items, className }: TechStackProps) {
     </div>
   )
 }
-

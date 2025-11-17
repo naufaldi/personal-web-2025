@@ -21,7 +21,7 @@ export default function AboutMeSection() {
             <div className="space-y-6">
             <div className="space-y-2">
               <h2
-                className="text-3xl md:text-4xl text-slate-100"
+                className="text-3xl md:text-4xl text-slate-100 light:text-slate-900"
                 style={{
                   fontFamily: 'var(--font-mono)',
                   fontWeight: 700,
@@ -30,7 +30,7 @@ export default function AboutMeSection() {
                 {aboutBio.name}
               </h2>
               <p
-                className="text-base md:text-lg text-slate-400"
+                className="text-base md:text-lg text-slate-400 light:text-slate-600"
                 style={{
                   fontFamily: 'var(--font-body)',
                   fontWeight: 500,
@@ -44,7 +44,7 @@ export default function AboutMeSection() {
               {aboutBio.bioParagraphs.map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-sm md:text-base text-slate-300 leading-relaxed"
+                  className="text-sm md:text-base text-slate-300 light:text-slate-700 leading-relaxed"
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontWeight: 400,
@@ -57,7 +57,7 @@ export default function AboutMeSection() {
 
             <div className="pt-4">
               <p
-                className="mb-4 text-sm text-slate-400"
+                className="mb-4 text-sm text-slate-400 light:text-slate-600"
                 style={{
                   fontFamily: 'var(--font-body)',
                   fontWeight: 500,
@@ -74,4 +74,3 @@ export default function AboutMeSection() {
     </section>
   )
 }
-

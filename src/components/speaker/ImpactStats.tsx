@@ -19,7 +19,7 @@ const ImpactStatCard = ({
 }: ImpactStatCardProps) => (
   <div
     className={cn(
-      'rounded-lg border border-slate-800/70 bg-slate-900/60 px-4 py-4 text-sm hover:text-slate-200 hover:border-slate-700/70 transition-colors',
+      'rounded-xl border border-slate-800/70 light:border-slate-200/80 bg-slate-900/60 light:bg-white/80 px-4 py-4 text-sm shadow-sm light:shadow transition-colors hover:text-slate-200 light:hover:text-slate-900 hover:border-slate-700/70 light:hover:border-slate-300 hover:bg-slate-900/80 light:hover:bg-white',
       className
     )}
     style={{
@@ -30,10 +30,10 @@ const ImpactStatCard = ({
     }}
   >
     <div className="flex items-center justify-between mb-2">
-      <span className="text-slate-400">{label}</span>
-      <div className="text-slate-500">{icon}</div>
+      <span className="text-slate-400 light:text-slate-500">{label}</span>
+      <div className="text-slate-500 light:text-slate-400">{icon}</div>
     </div>
-    <div className="text-xl md:text-2xl font-semibold text-slate-100">
+    <div className="text-xl md:text-2xl font-semibold text-slate-100 light:text-slate-900">
       {typeof value === 'number' ? `${value.toLocaleString()}+` : value}
     </div>
   </div>
@@ -71,4 +71,3 @@ export default function ImpactStats() {
     </div>
   )
 }
-

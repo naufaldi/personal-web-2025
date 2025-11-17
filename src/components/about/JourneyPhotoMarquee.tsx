@@ -14,7 +14,7 @@ export default function JourneyPhotoMarquee() {
               {duplicatedPhotos.map((photo, index) => (
                 <div
                   key={`${photo.id}-${index}`}
-                  className="flex-shrink-0 h-48 w-64 md:h-56 md:w-72 rounded-lg overflow-hidden grayscale transition-all duration-300 opacity-90"
+                  className="flex-shrink-0 h-48 w-64 md:h-56 md:w-72 rounded-lg overflow-hidden grayscale light:grayscale-0 transition-all duration-300 opacity-90 border border-slate-800/40 light:border-slate-200/70 bg-slate-900/20 light:bg-white/70"
                 >
                   <CloudinaryImg
                     publicId={photo.imageUrl}
@@ -33,4 +33,3 @@ export default function JourneyPhotoMarquee() {
     </section>
   )
 }
-

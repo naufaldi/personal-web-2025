@@ -4,38 +4,114 @@
 
 @theme {
   /* Typography */
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
-  --font-mono: "Source Code Pro", "Courier New", monospace;
-  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-blog: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+  --font-mono:
+    "Source Code Pro",
+    "Courier New",
+    monospace;
+  --font-body:
+    "Manrope",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  --font-blog:
+    "Inter",
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 
-@supports (color: oklch(0 0 0)) {
+/* Custom font utility classes */
+.font-mono {
+  font-family: var(
+    --font-mono
+  );
+}
+
+.font-body {
+  font-family: var(
+    --font-body
+  );
+}
+
+@supports (
+  color:
+    oklch(
+      0 0
+        0
+    )
+) {
   @theme {
-    --color-primary: oklch(0.598 0.254 217.2);
+    --color-primary: oklch(
+      0.598
+        0.254
+        217.2
+    );
   }
 }
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --surface: 0 0% 98%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --border: 214.3 31.8% 91.4%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --background: 0
+    0%
+    100%;
+  --foreground: 222.2
+    84%
+    4.9%;
+  --surface: 0
+    0%
+    98%;
+  --muted: 210
+    40%
+    96.1%;
+  --muted-foreground: 215.4
+    16.3%
+    46.9%;
+  --border: 214.3
+    31.8%
+    91.4%;
+  --accent: 210
+    40%
+    96.1%;
+  --accent-foreground: 222.2
+    47.4%
+    11.2%;
 }
 
 .dark {
-  --background: 222.2 47.4% 11.2%;
-  --foreground: 210 40% 98%;
-  --surface: 222.2 47.4% 11.2%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --border: 217.2 32.6% 17.5%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+  --background: 222.2
+    47.4%
+    11.2%;
+  --foreground: 210
+    40%
+    98%;
+  --surface: 222.2
+    47.4%
+    11.2%;
+  --muted: 217.2
+    32.6%
+    17.5%;
+  --muted-foreground: 215
+    20.2%
+    65.1%;
+  --border: 217.2
+    32.6%
+    17.5%;
+  --accent: 217.2
+    32.6%
+    17.5%;
+  --accent-foreground: 210
+    40%
+    98%;
 }
 
 /* Base styles */
@@ -51,34 +127,59 @@ html {
 
 body {
   @apply bg-slate-900 text-slate-200 antialiased;
-  font-family: var(--font-body);
+  font-family: var(
+    --font-body
+  );
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.light body {
+.light
+  body {
   @apply bg-white text-slate-900;
 }
 
 ::selection {
-  background-color: rgb(51 65 85);
+  background-color: rgb(
+    51 65
+      85
+  );
   color: white;
 }
 
-.light ::selection {
-  background-color: rgb(226 232 240);
-  color: rgb(15 23 42);
+.light
+  ::selection {
+  background-color: rgb(
+    226
+      232
+      240
+  );
+  color: rgb(
+    15 23
+      42
+  );
 }
 
 ::-moz-selection {
-  background-color: rgb(51 65 85);
+  background-color: rgb(
+    51 65
+      85
+  );
   color: white;
 }
 
-.light ::-moz-selection {
-  background-color: rgb(226 232 240);
-  color: rgb(15 23 42);
+.light
+  ::-moz-selection {
+  background-color: rgb(
+    226
+      232
+      240
+  );
+  color: rgb(
+    15 23
+      42
+  );
 }
 
 /* Custom scrollbar for TOC sidebar */
@@ -87,29 +188,55 @@ body {
 }
 
 .overflow-y-auto::-webkit-scrollbar-track {
-  background: rgb(15 23 42 / 0.5);
+  background: rgb(
+    15 23
+      42 /
+      0.5
+  );
   border-radius: 4px;
 }
 
-.light .overflow-y-auto::-webkit-scrollbar-track {
-  background: rgb(241 245 249 / 0.5);
+.light
+  .overflow-y-auto::-webkit-scrollbar-track {
+  background: rgb(
+    241
+      245
+      249 /
+      0.5
+  );
 }
 
 .overflow-y-auto::-webkit-scrollbar-thumb {
-  background: rgb(51 65 85);
+  background: rgb(
+    51 65
+      85
+  );
   border-radius: 4px;
 }
 
-.light .overflow-y-auto::-webkit-scrollbar-thumb {
-  background: rgb(148 163 184);
+.light
+  .overflow-y-auto::-webkit-scrollbar-thumb {
+  background: rgb(
+    148
+      163
+      184
+  );
 }
 
 .overflow-y-auto::-webkit-scrollbar-thumb:hover {
-  background: rgb(71 85 105);
+  background: rgb(
+    71 85
+      105
+  );
 }
 
-.light .overflow-y-auto::-webkit-scrollbar-thumb:hover {
-  background: rgb(100 116 139);
+.light
+  .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: rgb(
+    100
+      116
+      139
+  );
 }
 
 /* Background pattern */
@@ -118,15 +245,93 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
-    linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%),
-    linear-gradient(transparent 0, transparent calc(100% - 1px), rgba(100, 116, 139, 0.10) calc(100% - 1px)),
-    linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(100, 116, 139, 0.10) calc(100% - 1px));
+    radial-gradient(
+      1000px
+        500px
+        at
+        80% -20%,
+      rgba(
+        148,
+        163,
+        184,
+        0.08
+      ),
+      transparent
+        60%
+    ),
+    linear-gradient(
+      to
+        bottom,
+      rgba(
+          2,
+          6,
+          23,
+          0
+        )
+        0%,
+      rgba(
+          2,
+          6,
+          23,
+          0.2
+        )
+        60%,
+      rgba(
+          2,
+          6,
+          23,
+          0.6
+        )
+        100%
+    ),
+    linear-gradient(
+      transparent
+        0,
+      transparent
+        calc(
+          100% -
+            1px
+        ),
+      rgba(
+          100,
+          116,
+          139,
+          0.1
+        )
+        calc(
+          100% -
+            1px
+        )
+    ),
+    linear-gradient(
+      90deg,
+      transparent
+        0,
+      transparent
+        calc(
+          100% -
+            1px
+        ),
+      rgba(
+          100,
+          116,
+          139,
+          0.1
+        )
+        calc(
+          100% -
+            1px
+        )
+    );
   background-size:
-    100% 100%,
-    100% 100%,
-    24px 24px,
-    24px 24px;
+    100%
+      100%,
+    100%
+      100%,
+    24px
+      24px,
+    24px
+      24px;
   background-position:
     center,
     center,
@@ -134,64 +339,157 @@ body {
     0 0;
 }
 
-.light .bg-pattern {
+.light
+  .bg-pattern {
   background-image:
-    radial-gradient(1000px 500px at 80% -20%, rgba(71, 85, 105, 0.04), transparent 60%),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0.6) 100%),
-    linear-gradient(transparent 0, transparent calc(100% - 1px), rgba(71, 85, 105, 0.05) calc(100% - 1px)),
-    linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(71, 85, 105, 0.05) calc(100% - 1px));
+    radial-gradient(
+      1000px
+        500px
+        at
+        80% -20%,
+      rgba(
+        71,
+        85,
+        105,
+        0.04
+      ),
+      transparent
+        60%
+    ),
+    linear-gradient(
+      to
+        bottom,
+      rgba(
+          255,
+          255,
+          255,
+          0
+        )
+        0%,
+      rgba(
+          255,
+          255,
+          255,
+          0.3
+        )
+        60%,
+      rgba(
+          255,
+          255,
+          255,
+          0.6
+        )
+        100%
+    ),
+    linear-gradient(
+      transparent
+        0,
+      transparent
+        calc(
+          100% -
+            1px
+        ),
+      rgba(
+          71,
+          85,
+          105,
+          0.05
+        )
+        calc(
+          100% -
+            1px
+        )
+    ),
+    linear-gradient(
+      90deg,
+      transparent
+        0,
+      transparent
+        calc(
+          100% -
+            1px
+        ),
+      rgba(
+          71,
+          85,
+          105,
+          0.05
+        )
+        calc(
+          100% -
+            1px
+        )
+    );
 }
 
-/* Background pattern for About page - Subtle Circuit Board pattern */
+.light
+  .bg-pattern-blogs {
+  opacity: 1;
+}
+
+/* Background pattern for About page - Narrative grid */
 .bg-pattern-about {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background-image: 
-    url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20h40M20 0v40M10 10h20v20h-20z' fill='none' stroke='%2364758b' stroke-width='0.5' opacity='0.12'/%3E%3C/svg%3E"),
-    radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
-    linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
-  background-size: 40px 40px, 100% 100%, 100% 100%;
-  background-position: center;
-}
-
-.bg-pattern-about::before {
-  content: '';
-  position: absolute;
-  inset: 0;
+  background-color: #050d1d;
   background-image:
-    linear-gradient(transparent 0, transparent calc(100% - 1px), rgba(100, 116, 139, 0.10) calc(100% - 1px)),
-    linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(100, 116, 139, 0.10) calc(100% - 1px));
-  background-size: 24px 24px;
-  background-position: 0 0;
-  mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 40%);
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 40%);
+    radial-gradient(rgba(2, 6, 23, 0.4), transparent 65%),
+    url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYwIiBoZWlnaHQ9IjI2MCIgdmlld0JveD0iMCAwIDI2MCAyNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjI2MCIgaGVpZ2h0PSIyNjAiIGZpbGw9Im5vbmUiLz4KICA8ZyBzdHJva2U9IiMyNDMxNGQiIHN0cm9rZS13aWR0aD0iMC44IiBzdHJva2UtbGluZWNhcD0icm91bmQiPgogICAgPHBhdGggZD0iTTAgNDBoMjYwIi8+CiAgICA8cGF0aCBkPSJNMCAxMjBoMjYwIi8+CiAgICA8cGF0aCBkPSJNMCAyMDBoMjYwIi8+CiAgICA8cGF0aCBkPSJNNDAgMHYyNjAiLz4KICAgIDxwYXRoIGQ9Ik0xMjAgMHYyNjAiLz4KICAgIDxwYXRoIGQ9Ik0yMDAgMHYyNjAiLz4KICA8L2c+CiAgPGcgc3Ryb2tlPSIjNWU3NWEzIiBzdHJva2Utd2lkdGg9IjEuMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIj4KICAgIDxwYXRoIGQ9Ik0yMCAxMDBsNjAtMzAgNjAgNTAgNzAtNDAiLz4KICAgIDxwYXRoIGQ9Ik00MCAyMjBsODAtNDAgNDAgMzAgNjAtMjAiLz4KICA8L2c+CiAgPGcgZmlsbD0iIzdhOTBjMCI+CiAgICA8Y2lyY2xlIGN4PSI4MCIgY3k9IjcwIiByPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSIxNDAiIGN5PSIxMjAiIHI9IjMiLz4KICAgIDxjaXJjbGUgY3g9IjIxMCIgY3k9IjgwIiByPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjIwMCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iMTUwIiBjeT0iMjEwIiByPSIzIi8+CiAgPC9nPgo8L3N2Zz4=");
+  background-size: 260px 260px;
+  opacity: 0.5;
 }
 
-/* Background pattern for Speaker page - Subtle Diagonal Lines Pattern */
+.light .bg-pattern-about {
+  background-color: #f8fafc;
+  background-image:
+    url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYwIiBoZWlnaHQ9IjI2MCIgdmlld0JveD0iMCAwIDI2MCAyNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjI2MCIgaGVpZ2h0PSIyNjAiIGZpbGw9Im5vbmUiLz4KICA8ZyBzdHJva2U9IiNjZmQ2ZTQiIHN0cm9rZS13aWR0aD0iMC43IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuMyI+CiAgICA8cGF0aCBkPSJNMCA0MGgyNjAiLz4KICAgIDxwYXRoIGQ9Ik0wIDEyMGgyNjAiLz4KICAgIDxwYXRoIGQ9Ik0wIDIwMGgyNjAiLz4KICAgIDxwYXRoIGQ9Ik00MCAwdjI2MCIvPgogICAgPHBhdGggZD0iTTEyMCAwdjI2MCIvPgogICAgPHBhdGggZD0iTTIwMCAwdjI2MCIvPgogIDwvZz4KICA8ZyBzdHJva2U9IiM5YWE1YzYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjIiPgogICAgPHBhdGggZD0iTTIwIDEwMGw2MC0zMCA2MCA1MCA3MC00MCIvPgogICAgPHBhdGggZD0iTTQwIDIyMGw4MC00MCA0MCAzMCA2MC0yMCIvPgogIDwvZz4KICA8ZyBmaWxsPSIjOWFhNWM2IiBvcGFjaXR5PSIwLjI1Ij4KICAgIDxjaXJjbGUgY3g9IjgwIiBjeT0iNzAiIHI9IjMiLz4KICAgIDxjaXJjbGUgY3g9IjE0MCIgY3k9IjEyMCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iMjEwIiBjeT0iODAiIHI9IjMiLz4KICAgIDxjaXJjbGUgY3g9IjYwIiBjeT0iMjAwIiByPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIyMTAiIHI9IjMiLz4KICA8L2c+Cjwvc3ZnPg==");
+  opacity: 0.5;
+}
+
+/* Background pattern for Speaker page - Soundwave blueprint */
 .bg-pattern-speaker {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background-image: 
-    url("data:image/svg+xml,%3Csvg width='30' height='30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30L30 0' fill='none' stroke='%2364758b' stroke-width='0.5' opacity='0.12'/%3E%3C/svg%3E"),
-    radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
-    linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
-  background-size: 30px 30px, 100% 100%, 100% 100%;
-  background-position: center;
+  background-color: #020617;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDI0MCAyNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjI0MCIgaGVpZ2h0PSIyNDAiIGZpbGw9Im5vbmUiIC8+CiAgPGcgc3Ryb2tlPSIjMTAxYTMyIiBzdHJva2Utd2lkdGg9IjAuOCIgb3BhY2l0eT0iMC40NSI+CiAgICA8cGF0aCBkPSJNLTYwIDYwIEw2MCAtNjAiIC8+CiAgICA8cGF0aCBkPSJNLTIwIDEwMCBMMTAwIC0yMCIgLz4KICAgIDxwYXRoIGQ9Ik0yMCAxNDAgTDE0MCAyMCIgLz4KICAgIDxwYXRoIGQ9Ik02MCAxODAgTDE4MCA2MCIgLz4KICAgIDxwYXRoIGQ9Ik0xMDAgMjIwIEwyMjAgMTAwIiAvPgogICAgPHBhdGggZD0iTTE0MCAyNjAgTDI2MCAxNDAiIC8+CiAgPC9nPgogIDxnIHN0cm9rZT0iIzFmMmM0YSIgc3Ryb2tlLXdpZHRoPSIwLjkiIG9wYWNpdHk9IjAuMzUiPgogICAgPHBhdGggZD0iTTAgODAgTDgwIDAiIC8+CiAgICA8cGF0aCBkPSJNNDAgMTIwIEwxMjAgNDAiIC8+CiAgICA8cGF0aCBkPSJNODAgMTYwIEwxNjAgODAiIC8+CiAgICA8cGF0aCBkPSJNMTIwIDIwMCBMMjAwIDEyMCIgLz4KICAgIDxwYXRoIGQ9Ik0xNjAgMjQwIEwyNDAgMTYwIiAvPgogIDwvZz4KICA8ZyBzdHJva2U9IiMyZDY2ZjYiIHN0cm9rZS13aWR0aD0iMS40IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuMzUiPgogICAgPHBhdGggZD0iTTIwIDEyMCBDMzUgOTAgNTUgOTAgNzAgMTIwIFMxMDUgMTUwIDEyMCAxMjAgMTU1IDkwIDE3MCAxMjAgMjA1IDE1MCAyMjAgMTIwIiAvPgogICAgPHBhdGggZD0iTTAgNDAgQzE1IDIwIDMwIDIwIDQ1IDQwIFM3NSA2MCA5MCA0MCAxMjAgMjAgMTM1IDQwIDE2NSA2MCAxODAgNDAgMjEwIDIwIDIyNSA0MCIgLz4KICA8L2c+CiAgPGcgZmlsbD0iIzFkM2E4YSIgb3BhY2l0eT0iMC4zNSI+CiAgICA8cmVjdCB4PSIzMCIgeT0iMTcwIiB3aWR0aD0iNiIgaGVpZ2h0PSIzMCIgcng9IjMiIC8+CiAgICA8cmVjdCB4PSI0MiIgeT0iMTUwIiB3aWR0aD0iNiIgaGVpZ2h0PSI1MCIgcng9IjMiIC8+CiAgICA8cmVjdCB4PSI1NCIgeT0iMTkwIiB3aWR0aD0iNiIgaGVpZ2h0PSIyNiIgcng9IjMiIC8+CiAgICA8cmVjdCB4PSI2NiIgeT0iMTYwIiB3aWR0aD0iNiIgaGVpZ2h0PSI0NSIgcng9IjMiIC8+CiAgICA8cmVjdCB4PSI3OCIgeT0iMTc1IiB3aWR0aD0iNiIgaGVpZ2h0PSIzMiIgcng9IjMiIC8+CiAgPC9nPgogIDxnIGZpbGw9IiMzZjdjZjQiIG9wYWNpdHk9IjAuNCI+CiAgICA8Y2lyY2xlIGN4PSIxOTAiIGN5PSI1MCIgcj0iMyIgLz4KICAgIDxjaXJjbGUgY3g9IjIxMCIgY3k9IjcwIiByPSIyLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSIzMCIgcj0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iMTMwIiBjeT0iMjEwIiByPSIyIiAvPgogICAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjAwIiByPSIyIiAvPgogIDwvZz4KPC9zdmc+Cg==");
+  background-size: 240px 240px;
+  opacity: 0.75;
 }
 
-/* Background pattern for Books page - Subtle Dot Grid Pattern */
+.light .bg-pattern-speaker {
+  background-color: #f7fafc;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDI0MCAyNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjI0MCIgaGVpZ2h0PSIyNDAiIGZpbGw9Im5vbmUiIC8+CiAgPGcgc3Ryb2tlPSIjY2RkNWY5IiBzdHJva2Utd2lkdGg9IjAuOCIgb3BhY2l0eT0iMC42NSI+CiAgICA8cGF0aCBkPSJNLTYwIDYwIEw2MCAtNjAiIC8+CiAgICA8cGF0aCBkPSJNLTIwIDEwMCBMMTAwIC0yMCIgLz4KICAgIDxwYXRoIGQ9Ik0yMCAxNDAgTDE0MCAyMCIgLz4KICAgIDxwYXRoIGQ9Ik02MCAxODAgTDE4MCA2MCIgLz4KICAgIDxwYXRoIGQ9Ik0xMDAgMjIwIEwyMjAgMTAwIiAvPgogICAgPHBhdGggZD0iTTE0MCAyNjAgTDI2MCAxNDAiIC8+CiAgPC9nPgogIDxnIHN0cm9rZT0iI2E1YjRmYyIgc3Ryb2tlLXdpZHRoPSIwLjkiIG9wYWNpdHk9IjAuNDUiPgogICAgPHBhdGggZD0iTTAgODAgTDgwIDAiIC8+CiAgICA8cGF0aCBkPSJNNDAgMTIwIEwxMjAgNDAiIC8+CiAgICA8cGF0aCBkPSJNODAgMTYwIEwxNjAgODAiIC8+CiAgICA8cGF0aCBkPSJNMTIwIDIwMCBMMjAwIDEyMCIgLz4KICAgIDxwYXRoIGQ9Ik0xNjAgMjQwIEwyNDAgMTYwIiAvPgogIDwvZz4KICA8ZyBzdHJva2U9IiM3YzhkZGYiIHN0cm9rZS13aWR0aD0iMS40IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuNTUiPgogICAgPHBhdGggZD0iTTIwIDEyMCBDMzUgOTAgNTUgOTAgNzAgMTIwIFMxMDUgMTUwIDEyMCAxMjAgMTU1IDkwIDE3MCAxMjAgMjA1IDE1MCAyMjAgMTIwIiAvPgogICAgPHBhdGggZD0iTTAgNDAgQzE1IDIwIDMwIDIwIDQ1IDQwIFM3NSA2MCA5MCA0MCAxMjAgMjAgMTM1IDQwIDE2NSA2MCAxODAgNDAgMjEwIDIwIDIyNSA0MCIgLz4KICA8L2c+CiAgPGcgZmlsbD0iIzlkYjRmYiIgb3BhY2l0eT0iMC40NSI+CiAgICA8cmVjdCB4PSIzMCIgeT0iMTcwIiB3aWR0aD0iNiIgaGVpZ2h0PSIzMCIgcng9IjMiIC8+CiAgICA8cmVjdCB4PSI0MiIgeT0iMTUwIiB3aWR0aD0iNiIgaGVpZ2h0PSI1MCIgcng9IjMiIC8+CiAgICA8cmVjdCB4PSI1NCIgeT0iMTkwIiB3aWR0aD0iNiIgaGVpZ2h0PSIyNiIgcng9IjMiIC8+CiAgICA8cmVjdCB4PSI2NiIgeT0iMTYwIiB3aWR0aD0iNiIgaGVpZ2h0PSI0NSIgcng9IjMiIC8+CiAgICA8cmVjdCB4PSI3OCIgeT0iMTc1IiB3aWR0aD0iNiIgaGVpZ2h0PSIzMiIgcng9IjMiIC8+CiAgPC9nPgogIDxnIGZpbGw9IiNiMWM1ZmYiIG9wYWNpdHk9IjAuNTUiPgogICAgPGNpcmNsZSBjeD0iMTkwIiBjeT0iNTAiIHI9IjMiIC8+CiAgICA8Y2lyY2xlIGN4PSIyMTAiIGN5PSI3MCIgcj0iMi41IiAvPgogICAgPGNpcmNsZSBjeD0iMTYwIiBjeT0iMzAiIHI9IjIuNSIgLz4KICAgIDxjaXJjbGUgY3g9IjEzMCIgY3k9IjIxMCIgcj0iMiIgLz4KICAgIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjIwMCIgcj0iMiIgLz4KICA8L2c+Cjwvc3ZnPgo=");
+  background-size: 240px 240px;
+  opacity: 0.45;
+}
+
+/* Background pattern for Books page - Subtle dot grid with shelves */
 .bg-pattern-books {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background-image: 
-    url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='%2364758b' opacity='0.12'/%3E%3C/svg%3E"),
-    radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
-    linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
-  background-size: 24px 24px, 100% 100%, 100% 100%;
+  background-color: #020617;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='26' height='26' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='26' height='26' fill='none'/%3E%3Ccircle cx='2' cy='2' r='1' fill='%232b3b6d' opacity='0.35'/%3E%3Crect x='6' y='15' width='10' height='1' rx='0.5' fill='%233f4d7c' opacity='0.25'/%3E%3C/svg%3E"),
+    radial-gradient(900px 500px at 85% -10%, rgba(59, 130, 246, 0.08), transparent 65%),
+    linear-gradient(180deg, rgba(2, 6, 23, 0.15) 0%, rgba(2, 6, 23, 0.45) 65%, rgba(2, 6, 23, 0.8) 100%);
+  background-size:
+    26px 26px,
+    100% 100%,
+    100% 100%;
   background-position: center;
+  opacity: 0.85;
+}
+
+.light .bg-pattern-books {
+  background-color: #f8fafc;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='26' height='26' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='26' height='26' fill='none'/%3E%3Ccircle cx='2' cy='2' r='1' fill='%23c7d2ff' opacity='0.45'/%3E%3Crect x='6' y='15' width='10' height='1' rx='0.5' fill='%239baafc' opacity='0.4'/%3E%3C/svg%3E"),
+    radial-gradient(900px 500px at 85% -10%, rgba(95, 113, 255, 0.12), transparent 65%),
+    linear-gradient(180deg, rgba(248, 250, 252, 0) 0%, rgba(248, 250, 252, 0.8) 75%, rgba(248, 250, 252, 1) 100%);
+  opacity: 0.65;
 }
 
 /* Background pattern for Manhwa page - Hexagon Grid Pattern */
@@ -199,38 +497,202 @@ body {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background-image: 
-    url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60l-25.98-15V15z' fill='none' stroke='%2364758b' stroke-width='0.5' opacity='0.15'/%3E%3C/svg%3E"),
-    radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
-    linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
-  background-size: 60px 60px, 100% 100%, 100% 100%;
+  background-color: #020617;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60l-25.98-15V15z' fill='none' stroke='%23324362' stroke-width='0.6' opacity='0.35'/%3E%3C/svg%3E"),
+    radial-gradient(900px 500px at 75% -10%, rgba(14, 165, 233, 0.12), transparent 60%),
+    linear-gradient(180deg, rgba(2, 6, 23, 0.15) 0%, rgba(2, 6, 23, 0.55) 65%, rgba(2, 6, 23, 0.9) 100%);
+  background-size:
+    60px 60px,
+    100% 100%,
+    100% 100%;
   background-position: center;
 }
 
-/* Background pattern for Shorts page - Subtle Noise Texture Pattern */
+.light .bg-pattern-manhwa {
+  background-color: #f8fafc;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60l-25.98-15V15z' fill='none' stroke='%23ccd7ff' stroke-width='0.6' opacity='0.45'/%3E%3C/svg%3E"),
+    radial-gradient(900px 500px at 75% -10%, rgba(99, 102, 241, 0.12), transparent 60%),
+    linear-gradient(180deg, rgba(248, 250, 252, 0) 0%, rgba(248, 250, 252, 0.8) 75%, rgba(248, 250, 252, 1) 100%);
+  background-position: center;
+}
+
+/* Background pattern for Shorts page - Script grid */
 .bg-pattern-shorts {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background-image: 
-    url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E"),
-    radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
-    linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
-  background-size: 100px 100px, 100% 100%, 100% 100%;
+  background-color: #020617;
+  background-image:
+    url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMjAiIGZpbGw9Im5vbmUiIC8+CiAgPGcgc3Ryb2tlPSIjMjIzMDQxIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC4yIj4KICAgIDxwYXRoIGQ9Ik0xMCAyMGgyOCIgLz4KICAgIDxwYXRoIGQ9Ik0yMCA2MGg1MCIgLz4KICAgIDxwYXRoIGQ9Ik0xNSA5NWg2NSIgLz4KICA8L2c+CiAgPGcgc3Ryb2tlPSIjMWYyYjQwIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC4wOCI+CiAgICA8cGF0aCBkPSJNODAgMjVoMjUiIC8+CiAgICA8cGF0aCBkPSJNNjAgNzVoMzUiIC8+CiAgPC9nPgogIDxnIGZpbGw9IiMyYTNhNTIiIG9wYWNpdHk9IjAuMTgiPgogICAgPHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjQiIGhlaWdodD0iNCIgcng9IjEiIC8+CiAgICA8cmVjdCB4PSIzOCIgeT0iMzgiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHJ4PSIxIiAvPgogICAgPHJlY3QgeD0iNzAiIHk9IjEyIiB3aWR0aD0iNCIgaGVpZ2h0PSI0IiByeD0iMSIgLz4KICAgIDxyZWN0IHg9Ijk1IiB5PSI1NSIgd2lkdGg9IjQiIGhlaWdodD0iNCIgcng9IjEiIC8+CiAgPC9nPgo8L3N2Zz4="),
+    radial-gradient(800px 450px at 75% -5%, rgba(79, 70, 229, 0.12), transparent 75%);
+  background-size:
+    120px 120px,
+    100% 100%;
   background-position: center;
 }
 
-/* Background pattern for Blogs page - Subtle Writing Lines Pattern */
-.bg-pattern-blogs {
+.light .bg-pattern-shorts {
+  background-color: #f8fafc;
+  background-image:
+    url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMjAiIGZpbGw9Im5vbmUiIC8+CiAgPGcgc3Ryb2tlPSIjYjdjM2RmIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC4yMiI+CiAgICA8cGF0aCBkPSJNMTAgMjBoMjgiIC8+CiAgICA8cGF0aCBkPSJNMjAgNjBoNTAiIC8+CiAgICA8cGF0aCBkPSJNMTUgOTVoNjUiIC8+CiAgPC9nPgogIDxnIHN0cm9rZT0iI2EzYjRkZiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuMTIiPgogICAgPHBhdGggZD0iTTgwIDI1aDI1IiAvPgogICAgPHBhdGggZD0iTTYwIDc1aDM1IiAvPgogIDwvZz4KICA8ZyBmaWxsPSIjYzhkMmYzIiBvcGFjaXR5PSIwLjI1Ij4KICAgIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHJ4PSIxIiAvPgogICAgPHJlY3QgeD0iMzgiIHk9IjM4IiB3aWR0aD0iNCIgaGVpZ2h0PSI0IiByeD0iMSIgLz4KICAgIDxyZWN0IHg9IjcwIiB5PSIxMiIgd2lkdGg9IjQiIGhlaWdodD0iNCIgcng9IjEiIC8+CiAgICA8cmVjdCB4PSI5NSIgeT0iNTUiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHJ4PSIxIiAvPgogIDwvZz4KPC9zdmc+"),
+    radial-gradient(800px 450px at 75% -5%, rgba(99, 102, 241, 0.12), transparent 75%);
+  background-size:
+    120px 120px,
+    100% 100%;
+  background-position: center;
+}
+
+/* Background pattern for Blogs page - GPU-friendly single layer */
+.blog-pattern {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.blog-pattern::before,
+.blog-pattern::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  will-change: opacity, transform;
+  transform: translateZ(0);
+  transition: opacity 200ms ease;
+}
+
+.blog-pattern::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg%20width%3D%27240%27%20height%3D%27240%27%20viewBox%3D%270%200%20240%20240%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Crect%20width%3D%27240%27%20height%3D%27240%27%20fill%3D%27none%27/%3E%3Cpath%20d%3D%27M0%20120h240M120%200v240%27%20stroke%3D%27%2364748b%27%20stroke-opacity%3D%270.25%27%20stroke-width%3D%270.7%27/%3E%3Cpath%20d%3D%27M0%2060h240M0%20180h240M60%200v240M180%200v240%27%20stroke%3D%27%2364748b%27%20stroke-opacity%3D%270.12%27%20stroke-width%3D%270.5%27/%3E%3C/svg%3E"),
+    radial-gradient(
+      1200px
+        700px
+        at
+        15%
+        0%,
+      rgba(
+        56,
+        189,
+        248,
+        0.12
+      ),
+      transparent
+        70%
+    );
+  background-size:
+    240px
+      240px,
+    100%
+      100%;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.blog-pattern::after {
+  background-image:
+    radial-gradient(
+      900px
+        600px
+        at
+        85%
+        20%,
+      rgba(
+        139,
+        92,
+        246,
+        0.14
+      ),
+      transparent
+        75%
+    );
+  opacity: 0.4;
+}
+
+.light .blog-pattern::before {
+  background-image:
+    url("data:image/svg+xml,%3Csvg%20width%3D%27240%27%20height%3D%27240%27%20viewBox%3D%270%200%20240%20240%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Crect%20width%3D%27240%27%20height%3D%27240%27%20fill%3D%27none%27/%3E%3Cpath%20d%3D%27M0%20120h240M120%200v240%27%20stroke%3D%27%2394a3b8%27%20stroke-opacity%3D%270.35%27%20stroke-width%3D%270.7%27/%3E%3Cpath%20d%3D%27M0%2060h240M0%20180h240M60%200v240M180%200v240%27%20stroke%3D%27%2394a3b8%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%270.5%27/%3E%3C/svg%3E"),
+    radial-gradient(
+      1200px
+        700px
+        at
+        15%
+        0%,
+      rgba(
+        14,
+        165,
+        233,
+        0.1
+      ),
+      transparent
+        70%
+    );
+  opacity: 0.95;
+}
+
+.light .blog-pattern::after {
+  background-image:
+    radial-gradient(
+      900px
+        600px
+        at
+        85%
+        20%,
+      rgba(
+        139,
+        92,
+        246,
+        0.12
+      ),
+      transparent
+        75%
+    );
+  opacity: 0.35;
+}
+
+/* Background pattern for Projects page - connected blueprint cards */
+.bg-pattern-projects {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background-image: 
-    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20h80M0 40h80M0 60h80' fill='none' stroke='%2364758b' stroke-width='0.5' opacity='0.10'/%3E%3C/svg%3E"),
-    radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
-    linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
-  background-size: 80px 80px, 100% 100%, 100% 100%;
+  z-index: 0;
+  background-image:
+    url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDI0MCAyNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjI0MCIgaGVpZ2h0PSIyNDAiIGZpbGw9Im5vbmUiLz4KICA8ZyBzdHJva2U9IiMxZDI1MzgiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjM4Ij4KICAgIDxyZWN0IHg9IjE2IiB5PSIxOCIgd2lkdGg9Ijc4IiBoZWlnaHQ9IjQ0IiByeD0iMTAiLz4KICAgIDxyZWN0IHg9IjEzMCIgeT0iMzIiIHdpZHRoPSI3OCIgaGVpZ2h0PSI0NCIgcng9IjEwIi8+CiAgICA8cmVjdCB4PSI2MCIgeT0iMTI2IiB3aWR0aD0iNzgiIGhlaWdodD0iNDQiIHJ4PSIxMCIvPgogICAgPHJlY3QgeD0iMTUwIiB5PSIxNTQiIHdpZHRoPSI1OCIgaGVpZ2h0PSIzNiIgcng9IjgiLz4KICA8L2c+CiAgPGcgc3Ryb2tlPSIjMWQyNTM4IiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC4yNSI+CiAgICA8cGF0aCBkPSJNNTUgNDBoMjMiLz4KICAgIDxwYXRoIGQ9Ik05NCA0MEwxMzAgNTQiLz4KICAgIDxwYXRoIGQ9Ik0xNjkgNzZWMTQwIi8+CiAgICA8cGF0aCBkPSJNOTkgMTcwSDE1MCIvPgogICAgPHBhdGggZD0iTTg4IDcwdjU0Ii8+CiAgICA8cGF0aCBkPSJNNDAgMTUwaDMyIi8+CiAgPC9nPgogIDxnIGZpbGw9IiMxZDI1MzgiIG9wYWNpdHk9IjAuMzUiPgogICAgPGNpcmNsZSBjeD0iNTUiIGN5PSI0MCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iMTY5IiBjeT0iNzYiIHI9IjMiLz4KICAgIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE3MCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iODgiIGN5PSIxMjQiIHI9IjMiLz4KICA8L2c+Cjwvc3ZnPg=="),
+    radial-gradient(
+      1200px 700px at 80% 0%,
+      rgba(30, 41, 59, 0.4),
+      transparent 75%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 6, 23, 0.96) 0%,
+      rgba(2, 6, 23, 0.85) 65%,
+      rgba(15, 23, 42, 0.8) 100%
+    );
+  background-size:
+    240px 240px,
+    100% 100%,
+    100% 100%;
   background-position: center;
+  opacity: 0.85;
+}
+
+.light .bg-pattern-projects {
+  background-image:
+    url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDI0MCAyNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjI0MCIgaGVpZ2h0PSIyNDAiIGZpbGw9Im5vbmUiLz4KICA8ZyBzdHJva2U9IiM5NGEzYjgiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjM4Ij4KICAgIDxyZWN0IHg9IjE2IiB5PSIxOCIgd2lkdGg9Ijc4IiBoZWlnaHQ9IjQ0IiByeD0iMTAiLz4KICAgIDxyZWN0IHg9IjEzMCIgeT0iMzIiIHdpZHRoPSI3OCIgaGVpZ2h0PSI0NCIgcng9IjEwIi8+CiAgICA8cmVjdCB4PSI2MCIgeT0iMTI2IiB3aWR0aD0iNzgiIGhlaWdodD0iNDQiIHJ4PSIxMCIvPgogICAgPHJlY3QgeD0iMTUwIiB5PSIxNTQiIHdpZHRoPSI1OCIgaGVpZ2h0PSIzNiIgcng9IjgiLz4KICA8L2c+CiAgPGcgc3Ryb2tlPSIjOTRhM2I4IiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC4yNSI+CiAgICA8cGF0aCBkPSJNNTUgNDBoMjMiLz4KICAgIDxwYXRoIGQ9Ik05NCA0MEwxMzAgNTQiLz4KICAgIDxwYXRoIGQ9Ik0xNjkgNzZWMTQwIi8+CiAgICA8cGF0aCBkPSJNOTkgMTcwSDE1MCIvPgogICAgPHBhdGggZD0iTTg4IDcwdjU0Ii8+CiAgICA8cGF0aCBkPSJNNDAgMTUwaDMyIi8+CiAgPC9nPgogIDxnIGZpbGw9IiM5NGEzYjgiIG9wYWNpdHk9IjAuMzUiPgogICAgPGNpcmNsZSBjeD0iNTUiIGN5PSI0MCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iMTY5IiBjeT0iNzYiIHI9IjMiLz4KICAgIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjE3MCIgcj0iMyIvPgogICAgPGNpcmNsZSBjeD0iODgiIGN5PSIxMjQiIHI9IjMiLz4KICA8L2c+Cjwvc3ZnPg=="),
+    radial-gradient(
+      1200px 700px at 80% 0%,
+      rgba(148, 163, 184, 0.35),
+      transparent 75%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(248, 250, 252, 0.96) 0%,
+      rgba(241, 245, 249, 0.92) 65%,
+      rgba(226, 232, 240, 0.9) 100%
+    );
+  opacity: 0.75;
 }
 
 /* Background pattern for Experience page - Subtle Timeline/Flow Pattern */
@@ -238,19 +700,62 @@ body {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 30h40M30 10v40' fill='none' stroke='%2364758b' stroke-width='0.5' opacity='0.12'/%3E%3Ccircle cx='10' cy='30' r='1.5' fill='%2364758b' opacity='0.12'/%3E%3Ccircle cx='30' cy='10' r='1.5' fill='%2364758b' opacity='0.12'/%3E%3Ccircle cx='30' cy='50' r='1.5' fill='%2364758b' opacity='0.12'/%3E%3Ccircle cx='50' cy='30' r='1.5' fill='%2364758b' opacity='0.12'/%3E%3C/svg%3E"),
-    radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
-    linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
-  background-size: 60px 60px, 100% 100%, 100% 100%;
+    radial-gradient(
+      1000px
+        500px
+        at
+        80% -20%,
+      rgba(
+        148,
+        163,
+        184,
+        0.08
+      ),
+      transparent
+        60%
+    ),
+    linear-gradient(
+      to
+        bottom,
+      rgba(
+          2,
+          6,
+          23,
+          0
+        )
+        0%,
+      rgba(
+          2,
+          6,
+          23,
+          0.2
+        )
+        60%,
+      rgba(
+          2,
+          6,
+          23,
+          0.6
+        )
+        100%
+    );
+  background-size:
+    60px
+      60px,
+    100%
+      100%,
+    100%
+      100%;
   background-position: center;
 }
 
 /* SVG Pattern Recommendations - Uncomment and use one of these patterns */
-/* 
+/*
 Option 1: Subtle Dot Grid Pattern
 .bg-pattern-about {
-  background-image: 
+  background-image:
     url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='%2364758b' opacity='0.15'/%3E%3C/svg%3E"),
     radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
     linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
@@ -259,7 +764,7 @@ Option 1: Subtle Dot Grid Pattern
 
 Option 2: Hexagon Grid Pattern
 .bg-pattern-about {
-  background-image: 
+  background-image:
     url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60l-25.98-15V15z' fill='none' stroke='%2364758b' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E"),
     radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
     linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
@@ -268,7 +773,7 @@ Option 2: Hexagon Grid Pattern
 
 Option 3: Circuit Board Pattern
 .bg-pattern-about {
-  background-image: 
+  background-image:
     url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20h40M20 0v40M10 10h20v20h-20z' fill='none' stroke='%2364758b' stroke-width='0.5' opacity='0.08'/%3E%3C/svg%3E"),
     radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
     linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
@@ -277,7 +782,7 @@ Option 3: Circuit Board Pattern
 
 Option 4: Diagonal Lines Pattern
 .bg-pattern-about {
-  background-image: 
+  background-image:
     url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20L20 0' stroke='%2364758b' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E"),
     radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
     linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
@@ -286,7 +791,7 @@ Option 4: Diagonal Lines Pattern
 
 Option 5: Noise Texture Pattern (Subtle)
 .bg-pattern-about {
-  background-image: 
+  background-image:
     url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"),
     radial-gradient(1000px 500px at 80% -20%, rgba(148, 163, 184, 0.08), transparent 60%),
     linear-gradient(to bottom, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.2) 60%, rgba(2, 6, 23, 0.6) 100%);
@@ -298,11 +803,15 @@ Option 5: Noise Texture Pattern (Subtle)
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(
+      8px
+    );
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(
+      0
+    );
   }
 }
 
@@ -321,14 +830,18 @@ Option 5: Noise Texture Pattern (Subtle)
     opacity: 0;
   }
   to {
-    height: var(--radix-collapsible-content-height);
+    height: var(
+      --radix-collapsible-content-height
+    );
     opacity: 1;
   }
 }
 
 @keyframes collapsible-up {
   from {
-    height: var(--radix-collapsible-content-height);
+    height: var(
+      --radix-collapsible-content-height
+    );
     opacity: 1;
   }
   to {
@@ -338,43 +851,91 @@ Option 5: Noise Texture Pattern (Subtle)
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 800ms ease-out both;
+  animation: fade-in-up
+    800ms
+    ease-out
+    both;
 }
 
 .animate-fade-in {
-  animation: fade-in 900ms ease-out both;
+  animation: fade-in
+    900ms
+    ease-out
+    both;
 }
 
 .animate-collapsible-down {
-  animation: collapsible-down 200ms ease-out;
+  animation: collapsible-down
+    200ms
+    ease-out;
 }
 
 .animate-collapsible-up {
-  animation: collapsible-up 200ms ease-out;
+  animation: collapsible-up
+    200ms
+    ease-out;
 }
 
 /* Animated gradient orbs for Experiences section */
 @keyframes float-orb-1 {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
+  0%,
+  100% {
+    transform: translate(
+        0,
+        0
+      )
+      scale(
+        1
+      );
   }
   33% {
-    transform: translate(30px, -30px) scale(1.1);
+    transform: translate(
+        30px,
+        -30px
+      )
+      scale(
+        1.1
+      );
   }
   66% {
-    transform: translate(-20px, 20px) scale(0.9);
+    transform: translate(
+        -20px,
+        20px
+      )
+      scale(
+        0.9
+      );
   }
 }
 
 @keyframes float-orb-2 {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
+  0%,
+  100% {
+    transform: translate(
+        0,
+        0
+      )
+      scale(
+        1
+      );
   }
   33% {
-    transform: translate(-25px, 25px) scale(0.95);
+    transform: translate(
+        -25px,
+        25px
+      )
+      scale(
+        0.95
+      );
   }
   66% {
-    transform: translate(35px, -35px) scale(1.05);
+    transform: translate(
+        35px,
+        -35px
+      )
+      scale(
+        1.05
+      );
   }
 }
 
@@ -383,21 +944,70 @@ Option 5: Noise Texture Pattern (Subtle)
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(800px 800px at 20% 30%, rgba(59, 130, 246, 0.05), transparent 50%),
-    radial-gradient(600px 600px at 80% 70%, rgba(139, 92, 246, 0.05), transparent 50%);
-  background-size: 100% 100%;
-  animation: float-orb-1 20s ease-in-out infinite;
+    radial-gradient(
+      800px
+        800px
+        at
+        20%
+        30%,
+      rgba(
+        59,
+        130,
+        246,
+        0.05
+      ),
+      transparent
+        50%
+    ),
+    radial-gradient(
+      600px
+        600px
+        at
+        80%
+        70%,
+      rgba(
+        139,
+        92,
+        246,
+        0.05
+      ),
+      transparent
+        50%
+    );
+  background-size: 100%
+    100%;
+  animation: float-orb-1
+    20s
+    ease-in-out
+    infinite;
   z-index: 0;
 }
 
 .bg-orbs-experiences::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(700px 700px at 70% 20%, rgba(34, 197, 94, 0.04), transparent 50%);
-  background-size: 100% 100%;
-  animation: float-orb-2 25s ease-in-out infinite;
+  background-image: radial-gradient(
+    700px
+      700px
+      at
+      70%
+      20%,
+    rgba(
+      34,
+      197,
+      94,
+      0.04
+    ),
+    transparent
+      50%
+  );
+  background-size: 100%
+    100%;
+  animation: float-orb-2
+    25s
+    ease-in-out
+    infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -409,25 +1019,37 @@ Option 5: Noise Texture Pattern (Subtle)
 
 @keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translateX(
+      0
+    );
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(
+      -50%
+    );
   }
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee
+    30s
+    linear
+    infinite;
   display: flex;
   width: max-content;
 }
 
-.marquee-container:hover .animate-marquee {
+.marquee-container:hover
+  .animate-marquee {
   animation-play-state: paused;
 }
 
-.marquee-container:hover .animate-marquee > * {
-  filter: grayscale(0);
+.marquee-container:hover
+  .animate-marquee
+  > * {
+  filter: grayscale(
+    0
+  );
   opacity: 1;
 }
 
@@ -436,7 +1058,8 @@ Option 5: Noise Texture Pattern (Subtle)
     animation: none;
   }
 
-  .marquee-container:hover .animate-marquee {
+  .marquee-container:hover
+    .animate-marquee {
     animation-play-state: unset;
   }
 }
@@ -444,39 +1067,83 @@ Option 5: Noise Texture Pattern (Subtle)
 /* Theme transition animations - always available for View Transitions API */
 @keyframes circle-expand {
   from {
-    clip-path: circle(0%);
+    clip-path: circle(
+      0%
+    );
   }
   to {
-    clip-path: circle(150%);
+    clip-path: circle(
+      150%
+    );
   }
 }
 
 @keyframes circle-blur-expand {
   from {
-    clip-path: circle(0%);
-    filter: blur(4px);
+    clip-path: circle(
+      0%
+    );
+    filter: blur(
+      4px
+    );
   }
   to {
-    clip-path: circle(150%);
-    filter: blur(0);
+    clip-path: circle(
+      150%
+    );
+    filter: blur(
+      0
+    );
   }
 }
 
 @keyframes wipe-in-dark {
   0% {
-    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    clip-path: polygon(
+      0 0,
+      0 0,
+      0
+        100%,
+      0
+        100%
+    );
   }
   100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(
+      0 0,
+      100%
+        0,
+      100%
+        100%,
+      0
+        100%
+    );
   }
 }
 
 @keyframes wipe-in-light {
   0% {
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    clip-path: polygon(
+      100%
+        0,
+      100%
+        0,
+      100%
+        100%,
+      100%
+        100%
+    );
   }
   100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(
+      0 0,
+      100%
+        0,
+      100%
+        100%,
+      0
+        100%
+    );
   }
 }
 

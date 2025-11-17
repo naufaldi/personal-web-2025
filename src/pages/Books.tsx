@@ -11,7 +11,7 @@ export default function Books() {
   const hasWishlist = wishlistBooks.length > 0
 
   return (
-    <div className="min-h-screen flex flex-col relative">
+    <div className="min-h-screen flex flex-col relative bg-slate-950 light:bg-slate-50">
       <div className="bg-pattern-books" aria-hidden="true" />
       <div className="mx-auto max-w-7xl sm:px-6 w-full px-6 md:px-0 py-12 md:py-16 relative z-10">
         <BooksHero />
@@ -19,13 +19,13 @@ export default function Books() {
         {hasReadBooks && <ReadBooksSection />}
 
         {hasReadBooks && hasCurrentlyReading && (
-          <Separator className="my-8 bg-slate-800/70" />
+          <Separator className="my-8 bg-slate-800/70 light:bg-slate-200/70" />
         )}
 
         {hasCurrentlyReading && <CurrentlyReadingSection />}
 
         {(hasReadBooks || hasCurrentlyReading) && hasWishlist && (
-          <Separator className="my-8 bg-slate-800/70" />
+          <Separator className="my-8 bg-slate-800/70 light:bg-slate-200/70" />
         )}
 
         {hasWishlist && <WishlistSection />}
@@ -33,4 +33,3 @@ export default function Books() {
     </div>
   )
 }
-

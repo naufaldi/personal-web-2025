@@ -11,7 +11,7 @@ export default function WishlistManhwaSection() {
       <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <div className="space-y-8">
           <h2
-            className="text-[24px] md:text-[28px] text-slate-100 tracking-tight"
+            className="text-[24px] md:text-[28px] text-slate-100 light:text-slate-900 tracking-tight"
             style={{
               fontFamily: 'var(--font-mono)',
               fontWeight: 500,
@@ -37,4 +37,3 @@ export default function WishlistManhwaSection() {
     </section>
   )
 }
-

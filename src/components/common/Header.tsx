@@ -32,25 +32,13 @@ export default function Header() {
             aria-label="Home"
           >
             <div className="inline-flex items-center justify-center h-7 w-7 rounded-md border border-slate-800/80 light:border-slate-300 bg-slate-900/80 light:bg-slate-100 ring-1 ring-inset ring-slate-800/40 light:ring-slate-300/40">
-              <span
-                className="text-slate-100 light:text-slate-950 text-[11px] tracking-tight font-medium"
-                style={{
-                  fontFamily:
-                    "var(--font-mono)",
-                }}
-              >
+              <span className="text-slate-100 light:text-slate-950 text-[11px] tracking-tight font-medium font-mono">
                 {
                   initials
                 }
               </span>
             </div>
-            <span
-              className="text-slate-300 light:text-slate-800 text-sm tracking-tight font-medium group-hover:text-slate-100 light:group-hover:text-slate-950 transition-colors"
-              style={{
-                fontFamily:
-                  "var(--font-body)",
-              }}
-            >
+            <span className="text-slate-300 light:text-slate-800 text-sm tracking-tight font-medium group-hover:text-slate-100 light:group-hover:text-slate-950 transition-colors font-body">
               {
                 siteConfig.name
               }
@@ -65,11 +53,7 @@ export default function Header() {
             <Button
               asChild
               variant="secondary"
-              style={{
-                fontFamily:
-                  "var(--font-body)",
-                fontWeight: 500,
-              }}
+              className="font-body font-medium"
             >
               <a
                 href="https://www.linkedin.com/in/naufaldirafif/"
@@ -82,11 +66,7 @@ export default function Header() {
             <Button
               asChild
               variant="primary"
-              style={{
-                fontFamily:
-                  "var(--font-body)",
-                fontWeight: 600,
-              }}
+              className="font-body font-semibold"
             >
               <a
                 href="https://www.linkedin.com/in/naufaldirafif/"

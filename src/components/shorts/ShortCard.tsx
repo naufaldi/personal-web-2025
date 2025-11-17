@@ -27,7 +27,7 @@ export default function ShortCard({ short, index }: ShortCardProps) {
   return (
     <Card
       className={cn(
-        'group border-slate-800/70 bg-slate-900/60 transition-all duration-200 hover:border-slate-700/70 hover:bg-slate-900/90 cursor-pointer',
+        'group border-slate-800/70 light:border-slate-200/80 bg-slate-900/60 light:bg-white/90 transition-all duration-200 hover:border-slate-700/70 light:hover:border-slate-300 hover:bg-slate-900/90 light:hover:bg-white shadow-sm light:shadow cursor-pointer',
       )}
       style={{
         animation: 'fade-in 900ms ease-out both',
@@ -41,7 +41,7 @@ export default function ShortCard({ short, index }: ShortCardProps) {
     >
       <CardHeader className="space-y-3">
         <h3
-          className="text-lg md:text-xl text-slate-100"
+          className="text-lg md:text-xl text-slate-100 light:text-slate-900"
           style={{
             fontFamily: 'var(--font-mono)',
             fontWeight: 600,
@@ -55,7 +55,7 @@ export default function ShortCard({ short, index }: ShortCardProps) {
               <Badge
                 key={tag}
                 variant="outline"
-                className="border-slate-700/70 text-slate-300 bg-slate-900/40"
+                className="border-slate-700/70 light:border-slate-200 text-slate-300 light:text-slate-600 bg-slate-900/40 light:bg-slate-50"
                 style={{
                   fontFamily: 'var(--font-body)',
                   fontWeight: 500,
@@ -70,4 +70,3 @@ export default function ShortCard({ short, index }: ShortCardProps) {
     </Card>
   )
 }
-

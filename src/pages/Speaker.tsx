@@ -8,25 +8,25 @@ import { Separator } from '@/components/ui/separator'
 
 export default function Speaker() {
   return (
-    <div className="min-h-screen flex flex-col relative">
+    <div className="min-h-screen flex flex-col relative bg-slate-950 light:bg-slate-50">
       <div className="bg-pattern-speaker" aria-hidden="true" />
       <div className="mx-auto max-w-7xl sm:px-6 w-full py-20 md:py-16 relative z-10">
         <SpeakerMentorHero />
         <ImpactStats />
 
-        <Separator className="my-8 bg-slate-800/70" />
+        <Separator className="my-8 bg-slate-800/70 light:bg-slate-200/80" />
 
         <OrganizationMarquee />
 
-        <Separator className="my-8 bg-slate-800/70" />
+        <Separator className="my-8 bg-slate-800/70 light:bg-slate-200/80" />
 
         <VoluntaryWorkSection />
 
-        <Separator className="my-8 bg-slate-800/70" />
+        <Separator className="my-8 bg-slate-800/70 light:bg-slate-200/80" />
 
         <MentoringSection />
 
-        <Separator className="my-8 bg-slate-800/70" />
+        <Separator className="my-8 bg-slate-800/70 light:bg-slate-200/80" />
 
         <SpeakingSection />
       </div>

@@ -9,8 +9,8 @@ export default function ShortsHero() {
         animationDelay: '60ms',
       }}
     >
-      <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 bg-slate-900/60">
-        <FileText className="h-6 w-6 text-slate-300" />
+      <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 light:border-slate-200/70 bg-slate-900/60 light:bg-white/85">
+        <FileText className="h-6 w-6 text-slate-300 light:text-slate-600" />
       </div>
       <h1
         className="text-4xl md:text-5xl text-center"
@@ -19,10 +19,10 @@ export default function ShortsHero() {
           fontWeight: 700,
         }}
       >
-        <span className="text-slate-100">Shorts</span>
+        <span className="text-slate-100 light:text-slate-900">Shorts</span>
       </h1>
       <p
-        className="text-sm md:text-base text-slate-500 text-center"
+        className="text-sm md:text-base text-slate-500 light:text-slate-600 text-center"
         style={{
           fontFamily: 'var(--font-body)',
           fontWeight: 500,
@@ -33,4 +33,3 @@ export default function ShortsHero() {
     </div>
   )
 }
-

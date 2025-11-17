@@ -8,7 +8,7 @@ export default function OrganizationMarquee() {
     <section className="px-6 md:px-0 py-12 md:py-16 overflow-hidden">
       <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <h2
-          className="text-[24px] md:text-[28px] text-slate-100 tracking-tight mb-8"
+          className="text-[24px] md:text-[28px] text-slate-100 light:text-slate-900 tracking-tight mb-8"
           style={{
             fontFamily: 'var(--font-mono)',
             fontWeight: 500,
@@ -46,4 +46,3 @@ export default function OrganizationMarquee() {
     </section>
   )
 }
-
