@@ -66,7 +66,7 @@ export default function ShortDetail() {
   return (
     <div className="min-h-screen flex flex-col relative bg-slate-950 light:bg-slate-50">
       <div
-        className="shorts-pattern"
+        className="bg-pattern-shorts"
         aria-hidden="true"
       />
       <div className="mx-auto max-w-4xl px-6 w-full px-6 md:px-0 py-12 md:py-16 relative z-10">
