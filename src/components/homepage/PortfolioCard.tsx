@@ -19,11 +19,11 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
           "group border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white transition-all duration-200 hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 overflow-hidden flex flex-col h-full"
         )}
       >
-        <div className="flex flex-col sm:flex-row min-h-56 sm:min-h-40">
+        <div className="flex flex-col sm:flex-row flex-1">
           <div className="flex-1 p-3 sm:p-4 md:p-5 space-y-2 flex flex-col">
             <CardHeader className="space-y-1.5 p-0 flex flex-col">
               <h3
-                className="text-sm sm:text-base md:text-lg text-slate-100 light:text-slate-900"
+                className="text-sm sm:text-base md:text-lg text-slate-100 light:text-slate-900 line-clamp-2"
                 style={{
                   fontFamily: "var(--font-mono)",
                   fontWeight: 500,
@@ -42,7 +42,7 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
               </p>
             </CardHeader>
           </div>
-          <div className="relative w-full sm:w-48 md:w-56 lg:w-64 flex-shrink-0 h-40 sm:h-40">
+          <div className="relative w-full sm:w-48 md:w-56 lg:w-64 flex-shrink-0 h-40">
             <img
               src={item.image}
               alt={item.title}
@@ -53,8 +53,8 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
           </div>
         </div>
         <div className="border-t border-slate-800/70 light:border-slate-300 p-3 sm:p-4 md:p-4 space-y-2 sm:space-y-3 flex flex-col flex-1">
-          <div className="flex flex-wrap items-center gap-2 flex-1">
-            {item.techStack.map((tech) => {
+          <div className="flex flex-wrap items-center gap-2">
+            {item.techStack.slice(0, 5).map((tech) => {
               const Icon = getTechIcon(tech);
               if (!Icon) return null;
               return (
@@ -76,6 +76,16 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
                 </div>
               );
             })}
+            {item.techStack.length > 5 && (
+              <div
+                className="flex items-center gap-1 sm:gap-1.5 rounded border border-slate-800/70 light:border-slate-300 bg-slate-900/80 light:bg-slate-50 px-2 py-1 text-xs font-semibold"
+                title={item.techStack.slice(5).join(", ")}
+              >
+                <span className="text-slate-400 light:text-slate-600">
+                  +{item.techStack.length - 5}
+                </span>
+              </div>
+            )}
           </div>
           <div className="flex flex-wrap items-center gap-2 mt-auto">
             <Link
