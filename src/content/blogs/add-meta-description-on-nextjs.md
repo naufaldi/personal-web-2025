@@ -11,8 +11,6 @@ image: ""
 canonical: ""
 ---
 
-
-
 Meta description adalah salah satu hal yang cukup vital dalam dunia website, apalagi Landingpage. `<meta name="description">` merupakan salah satu element yang memberikan ringkasan mengenai isi konten dari website kita yang membuat search engines memasukkannya di hasil pencarian. Kualitas meta deskripsi yang bagus dan unik akan membuat halaman kita menjadi lebih relevan dan meningkatkan trafik pencarian terhadap situs kita.
 
 Ketika kita mencoba untuk melakukan test pada website kita di Web Dev Measure, salah satu hal yang dikritisi adalah ada tidaknya meta deskripsi.
@@ -52,8 +50,8 @@ export default IndexPage
 
 Selain menambahkan meta description pada built-in component di `<Head>` sebaiknya kita juga menambahkan
 
-*   Favicon
-*   Open Graph untuk sosial media seperti Twitter, Facebook dan sosial media lain
+- Favicon
+- Open Graph untuk sosial media seperti Twitter, Facebook dan sosial media lain
 
 Hal ini tentu saja dapat meningkatkan SEO pada Web App kita.
 
@@ -82,29 +80,3 @@ Add a meta description to a Next.js website using the built-in Head component.
 ![Image](https://assets.coderrocketfuel.com/next-js-article-thumbnail.png)
 
 ](https://coderrocketfuel.com/article/how-to-add-a-meta-description-tag-to-a-next-js-website?ref=blog.faldi.xyz)
-
-Bagikan[](https://twitter.com/share?text=Add Meta Description on NextJS&url=http://blog.faldi.xyz/add-meta-description-on-nextjs/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/add-meta-description-on-nextjs/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/add-meta-description-on-nextjs//&title=Add Meta Description on NextJS "LinkedIn")[](/cdn-cgi/l/email-protection#c2fdb1b7a0a8a7a1b6ff83a6a6e28fa7b6a3e286a7b1a1b0abb2b6abadace2adace28ca7bab68891e4a3afb2f9a0ada6bbffaab6b6b2f8ededa0aeada5eca4a3aea6abecbabbb8eda3a6a6efafa7b6a3efa6a7b1a1b0abb2b6abadacefadacefaca7bab6a8b1ed "Email")
-
-Topik [NextJS](/tag/nextjs/) [Tutorial](/tag/tutorial/)
-
-[
-
-## Snippet Membuat Gradient Underline
-
-Masalah Beberapa hari kemarin, saya mendapatkan tugas untuk membuat sebuah warna gradient…
-
-22 Jun 2021
-
-
-
-](/membuat-gradient-underline/)[
-
-## Outline Blue dan Aksesibilitas pada Chakra UI
-
-Chakra UI memberikan focus:box-shadow yang ternyata adalah property box-shadow bukan border atau outline pada setiap element.…
-
-07 Jun 2021
-
-
-
-](/outline-blue-dan-accesbility-pada-chakra-ui/)
