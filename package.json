@@ -33,6 +33,7 @@
     "framer-motion": "^12.23.24",
     "front-matter": "^4.0.2",
     "lucide-react": "^0.546.0",
+    "mermaid": "^11.12.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-image-lightbox": "^5.1.4",

@@ -6,6 +6,7 @@ import { html } from "@codemirror/lang-html";
 import { css } from "@codemirror/lang-css";
 import { json } from "@codemirror/lang-json";
 import { slugify } from "@/lib/toc";
+import Mermaid from "@/components/mdx/Mermaid";
 
 interface MarkdownRendererProps {
   content: string;
@@ -103,6 +104,16 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
 
             const language = className?.replace("language-", "");
             const codeString = String(children).replace(/\n$/, "");
+
+            // Handle Mermaid diagrams
+            if (language === "mermaid") {
+              return (
+                <div className="mb-6 rounded-lg overflow-hidden border border-slate-800/70 light:border-slate-300/70 bg-slate-950/40 light:bg-white/40 p-4">
+                  <Mermaid chart={codeString} />
+                </div>
+              );
+            }
+
             const extension = getLanguageExtension(language);
 
             return (
