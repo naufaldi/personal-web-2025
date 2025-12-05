@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { BookOpen } from "lucide-react";
-import ReactMarkdown from "react-markdown";
 import { getBlogsByCategory, type BlogCategory } from "@/data/blogs";
 import BlogCard from "@/components/blogs/BlogCard";
 import { cn } from "@/lib";
@@ -13,7 +12,6 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import Mermaid from "@/components/mdx/Mermaid";
 
 const categories: (BlogCategory | "All")[] = [
   "All",

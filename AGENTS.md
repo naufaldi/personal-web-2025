@@ -10,6 +10,7 @@
 - **Package Manager**: Bun (fast JavaScript runtime and package manager)
 
 Key files for reference:
+
 - `package.json:1`: Scripts and dependencies (uses Bun)
 - `vite.config.ts:1`: Vite + React Router + Tailwind CSS v4 + TS paths
 - `tsconfig.json:1`: TypeScript strict config with `@/*` path alias to `src/*`
@@ -26,6 +27,7 @@ Key files for reference:
 - `bun x <cmd>`: Run CLI tools (equivalent to npx)
 
 Notes:
+
 - Use `bun` exclusively for all commands and installs (bun.lock present)
 - Never mix npm, yarn, or pnpm
 - Bun is 3-4x faster than npm and drops directly into projects
@@ -60,6 +62,13 @@ Target stack: React 18, React Router 7, Vite 5, Tailwind CSS v4, Radix UI, shadc
 - **Type Safety**: No `any`. Leverage strict TypeScript and proper prop typing
 - **Accessibility**: Semantic HTML, ARIA labels, keyboard navigation, WCAG AA contrast ratios
 
+### React Guidelines
+
+- **JSX Structure**: Keep JSX clean and readable; avoid deep nesting
+- **Component Composition**: Prefer composition over complex abstractions
+- **Code Colocation**: Keep related code together; avoid premature file splitting
+- **useEffect**: Use sparingly; prefer useState and event handlers for local state
+
 ### Component Architecture & Organization
 
 #### Shared UI Components (`src/components/ui/*`)
@@ -73,13 +82,11 @@ Target stack: React 18, React Router 7, Vite 5, Tailwind CSS v4, Radix UI, shadc
   - `navigation-menu.tsx` - Navigation with submenus
 
 Use `cn` for class composition:
-```tsx
-import { cn } from '@/lib'
 
-const className = cn(
-  'base-class',
-  condition && 'conditional-class'
-)
+```tsx
+import { cn } from "@/lib";
+
+const className = cn("base-class", condition && "conditional-class");
 ```
 
 #### Feature & Page Components
@@ -102,6 +109,10 @@ const className = cn(
 - **Dark/Light modes** via `prefers-color-scheme` media queries
 - Use semantic class groupings and keep classes readable; use CVA for complex variants
 - Avoid inline styles except for dynamic computed values Tailwind can't express
+- **Built-in Values**: Prefer Tailwind's built-in sizes, spacing, and colors
+- **Dynamic Values**: Use CSS variables or Tailwind config for truly dynamic values
+- **Formatting**: Keep class lists readable; use Prettier for formatting
+- **shadcn/ui**: Use for consistent component patterns and styling
 
 ### Performance & State Management
 
@@ -136,9 +147,14 @@ const className = cn(
 ### TypeScript & Code Quality
 
 - **Strict mode**: Enabled (see `tsconfig.json`)
-- **No `any`**: Type all component props and function returns
 - **Imports**: Use `@/*` paths exclusively (configured in `tsconfig.json`)
 - **Formatting**: Keep code Prettier-friendly; maintain consistent naming
+- **Abstraction**: Don't abstract for the sake of it; prefer duplication over the wrong abstraction
+- **Naming**: Use descriptive, intent-revealing names; avoid abbreviations
+- **Helper functions**: Extract complex logic, but avoid premature abstractions
+- **Tooling**: Leverage `bun run` for scripts; maintain clean bun.lock
+- **Emojis**: Avoid emojis in code and documentation
+- **Error Handling**: Type `catch` blocks as `unknown` or more specific error types, never `any`
 
 ### Asset & Image Handling
 
@@ -156,24 +172,27 @@ const className = cn(
 - **Preview**: `bun run preview` tests production build locally
 
 Code organization example:
+
 ```tsx
 // 1) External imports
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 // 2) Internal imports
-import { projects } from '@/data/projects'
+import { projects } from "@/data/projects";
 
 // 3) Component
 export default function ProjectsPage() {
-  const [filter, setFilter] = useState('')
-  
+  const [filter, setFilter] = useState("");
+
   return (
     <div>
-      <Button onClick={() => setFilter('')}>Clear</Button>
-      {projects.map(p => <div key={p.id}>{p.title}</div>)}
+      <Button onClick={() => setFilter("")}>Clear</Button>
+      {projects.map((p) => (
+        <div key={p.id}>{p.title}</div>
+      ))}
     </div>
-  )
+  );
 }
 ```
 
@@ -234,6 +253,7 @@ You are an advanced coding assistant working on this personal website project. F
 - Be precise and align with AGENTS.md, design.md, rfc.md, and latest requirements
 - Match effort to task complexity
 - Default to clarity and conciseness
+- Enforce TypeScript strict typing: Never use `any` type; use proper type imports from libraries or define explicit interfaces
 
 ### Instruction Formatting
 

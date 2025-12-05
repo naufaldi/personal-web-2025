@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import mermaid from "mermaid";
+import type { MermaidConfig } from "mermaid";
 
 interface MermaidProps {
   chart: string;
-  config?: mermaid.Config;
+  config?: MermaidConfig;
 }
 
 export default function Mermaid({ chart, config }: MermaidProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [id] = useState(
-    () =>
-      `mermaid-${Math.random().toString(36).substring(2, 9)}`
+    () => `mermaid-${Math.random().toString(36).substring(2, 9)}`
   );
 
   useEffect(() => {
