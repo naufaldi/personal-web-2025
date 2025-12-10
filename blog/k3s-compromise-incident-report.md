@@ -329,6 +329,109 @@ htop
 
 ---
 
+## Part 3.5: Evidence - k3s Was External Malware
+
+### Proving k3s Was Not From Our Code
+
+After discovering the k3s compromise, a critical question emerged: **"Was k3s installed as part of our application architecture, or was it external malware?"**
+
+To answer this definitively, I audited all our Docker configurations:
+
+### Our Actual Architecture (Docker-Only)
+
+**Project 1: image-extract**
+
+```yaml
+# docker-compose.prod.yml
+version: "3.8"
+services:
+  app:
+    image: ghcr.io/naufaldi/image-extract:prod
+    labels:
+      caddy: image.faldi.xyz
+      caddy.reverse_proxy: "{{upstreams 3000}}"
+      com.centurylinklabs.watchtower.enable: "true"
+    networks:
+      - edge
+      - image-extract-private
+
+networks:
+  edge:
+    external: true
+  image-extract-private:
+    driver: bridge
+```
+
+**Project 2: viralkan-app**
+
+```yaml
+# docker-compose.prod.yml
+version: "3.7"
+services:
+  api:
+    image: ghcr.io/${GITHUB_REPOSITORY}/viralkan-api:${IMAGE_TAG}
+    labels:
+      caddy: viral-api.faldi.xyz
+      caddy.reverse_proxy: "{{upstreams 3000}}"
+  web:
+    image: ghcr.io/${GITHUB_REPOSITORY}/viralkan-web:${IMAGE_TAG}
+    labels:
+      caddy: viral.faldi.xyz
+      caddy.reverse_proxy: "{{upstreams 3000}}"
+
+networks:
+  edge:
+    external: true
+  viralkan-private:
+    driver: bridge
+```
+
+**Project 3: edge-proxy**
+
+```yaml
+# docker-compose.yml
+services:
+  caddy:
+    image: lucaslorentz/caddy-docker-proxy:2.8-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    networks: [edge]
+
+  socket-proxy:
+    image: tecnativa/docker-socket-proxy
+    networks: [edge]
+
+  watchtower:
+    image: containrrr/watchtower
+    networks: [edge]
+
+networks:
+  edge:
+    external: true
+```
+
+### Key Observations
+
+1. **Zero Kubernetes References**: None of our docker-compose files mention k3s, Kubernetes, or any container orchestration
+2. **Docker-Only Architecture**: We use Docker Compose with Caddy reverse proxy
+3. **Edge Proxy Pattern**: All traffic routed through Caddy on ports 80/443
+4. **No k3s Services**: No k3s-related containers, services, or binaries in any project
+
+### Confirmed: k3s Was External Malware
+
+**Evidence**:
+
+- ❌ No k3s in any docker-compose file
+- ❌ No k3s in any Dockerfile
+- ❌ No k3s in any deployment scripts
+- ❌ No k3s in CI/CD workflows
+- ❌ Architecture is Docker-only, not Kubernetes
+
+**Conclusion**: k3s was installed via the CVE-2025-66478 exploit as external malware, not as part of our application infrastructure.
+
+---
+
 ## Part 4: Addressing the Root Cause
 
 ### Next.js Vulnerability Remediation
