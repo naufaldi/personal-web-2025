@@ -201,3 +201,261 @@ In crates/foo/planner.rs, define:
 If you follow the guidance above, a single, stateless agent -- or a human novice -- can read your ExecPlan from top to bottom and produce a working, observable result. That is the bar: SELF-CONTAINED, SELF-SUFFICIENT, NOVICE-GUIDING, OUTCOME-FOCUSED.
 
 When you revise a plan, you must ensure your changes are comprehensively reflected across all sections, including the living document sections, and you must write a note at the bottom of the plan describing the change and the reason why. ExecPlans must describe not just the what but the why for almost everything.
+
+---
+
+# K3S COMPROMISE INCIDENT DOCUMENTATION - 2025-12-08
+
+**CRITICAL SECURITY INCIDENT - K3S FOUND ON DOCKER-ONLY VPS**
+
+## Incident Overview
+
+**Date Discovered**: December 8, 2025  
+**Affected System**: Production VPS (Docker-based web applications)  
+**Attack Vector**: CVE-2025-66478 (Next.js RCE vulnerability)  
+**Compromise Type**: k3s server installation as persistence/C&C mechanism with cryptomining activity  
+**Status**: CRITICAL - Immediate removal executed
+
+## Root Cause Analysis
+
+The attack was initiated through **CVE-2025-66478**, a critical (CVSS 10.0) Remote Code Execution vulnerability in Next.js React Server Components disclosed on December 3, 2025. This vulnerability allows attackers to execute arbitrary code on servers running vulnerable Next.js versions (15.x and 16.x).
+
+### Attack Progression
+
+1. **Initial Compromise**: Exploitation of Next.js RCE vulnerability (CVE-2025-66478)
+2. **Persistence Installation**: Installation of k3s server as autostart service
+3. **Malicious Deployment**: Deployment of cryptomining or other malicious workloads via k3s
+4. **Resource Hijacking**: k3s processes consuming 400%+ CPU across multiple cores
+5. **Survival Mechanism**: Configured to automatically start on system reboot
+
+## Discovery Indicators
+
+### Primary Symptoms (Observed in htop screenshots)
+
+1. **Unexpected k3s Processes**:
+   - Multiple `/usr/local/bin/k3s server` processes running as root
+   - Process PID 2004989 consuming **422.4% CPU** (>4 full cores)
+   - Other instances consuming 92.5%, 91.8%, 88.0%, 65.1%, 62.5% CPU
+   - Processes running for extremely long durations (6270h, 174h, 306h)
+
+2. **System Resource Exhaustion**:
+   - CPU cores at 81.1%, 76.6%, **100.0%**, and 91.4%
+   - Load average: 2.76 3.21 3.45 (system overloaded)
+   - 88 tasks, 398 threads; 5 running tasks (all k3s-related)
+
+3. **Persistence After Reboot**:
+   - k3s processes returned within 1 minute 31 seconds of VPS reboot
+   - Processes PID 832 (98.4% CPU) and PID 883 (97.6% CPU)
+   - Confirmed autostart via systemd service
+
+4. **Architecture Mismatch**:
+   - System deployed using **Docker only** (no Kubernetes intended)
+   - k3s not part of application architecture
+   - Docker socket proxy exposed on port 2375 (additional security risk)
+
+## Complete Remediation Procedure
+
+### Step 1: Immediate Process Termination
+
+```bash
+# Kill all k3s processes immediately
+sudo killall -9 k3s
+sudo pkill -f k3s
+
+# Verify processes are stopped
+ps aux | grep k3s
+# Expected: No output (no k3s processes)
+```
+
+### Step 2: Service Removal
+
+```bash
+# Stop and disable the k3s service
+sudo systemctl stop k3s
+sudo systemctl disable k3s
+
+# Remove service files
+sudo rm -rf /etc/systemd/system/k3s.service
+sudo rm -rf /etc/systemd/system/multi-user.target.wants/k3s.service
+sudo systemctl daemon-reload
+
+# Verify service removal
+systemctl list-unit-files | grep k3s
+# Expected: No output
+```
+
+### Step 3: Complete k3s Uninstallation
+
+```bash
+# Official k3s uninstaller
+sudo /usr/local/bin/k3s-uninstall.sh
+
+# Manual cleanup (if uninstaller fails)
+sudo rm -rf /usr/local/bin/k3s
+sudo rm -rf /etc/rancher/k3s/
+sudo rm -rf /var/lib/rancher/k3s/
+sudo rm -rf /var/lib/kubelet/
+sudo rm -rf /etc/kubernetes/
+
+# Verify binaries removed
+which k3s
+# Expected: "not found"
+
+ls -la /usr/local/bin/k3s
+# Expected: No such file or directory
+```
+
+### Step 4: Docker Environment Cleanup
+
+```bash
+# Stop all containers temporarily
+docker stop $(docker ps -aq)
+
+# Remove k3s-related containers
+docker rm -f $(docker ps -aq --filter "name=k3s")
+
+# Clean up unused Docker resources
+docker system prune -af --volumes
+
+# Restart legitimate containers
+docker-compose up -d
+# Or individually:
+docker start personal-web-v5-app-1
+docker start viralkan-app_web_1
+docker start viralkan-app_api_1
+docker start pangan-postgres
+docker start guestbook-guestbook-1
+docker start guestbook-db-1
+docker start image-extract-app-1
+docker start edge-proxy-caddy-1
+```
+
+### Step 5: Remove Persistence Mechanisms
+
+```bash
+# Check and clean cron jobs
+sudo crontab -l | grep -v k3s | sudo crontab -
+sudo crontab -u root -l | grep -v k3s | sudo crontab -u root -
+
+# Search for k3s references in startup scripts
+sudo grep -r "k3s" /etc/init.d/ 2>/dev/null
+sudo grep -r "k3s" /usr/local/bin/ 2>/dev/null
+sudo grep -r "k3s" /root/.bashrc 2>/dev/null
+sudo grep -r "k3s" /home/*/.bashrc 2>/dev/null
+sudo grep -r "k3s" /etc/systemd/system/ 2>/dev/null
+```
+
+### Step 6: Address Additional Security Risks
+
+```bash
+# Block Docker socket proxy port 2375 (critical security risk)
+sudo iptables -A INPUT -p tcp --dport 2375 -j DROP
+sudo iptables -A OUTPUT -p tcp --dport 2375 -j DROP
+
+# Alternatively, remove the container entirely
+docker stop edge-proxy-socket-proxy-1
+docker rm edge-proxy-socket-proxy-1
+```
+
+## Verification Checklist
+
+After remediation, verify complete k3s removal:
+
+```bash
+# These should all return empty/nothing
+ps aux | grep k3s
+systemctl list-unit-files | grep k3s
+which k3s
+ls -la /usr/local/bin/k3s
+ls -la /etc/rancher/k3s/
+
+# Monitor CPU usage
+htop
+# Expected: Normal CPU usage without k3s spikes
+```
+
+## Post-Incident Actions
+
+### 1. Next.js Vulnerability Remediation
+
+Check all Next.js applications and update to patched versions:
+
+```bash
+# Check Next.js version in containers
+docker exec personal-web-v5-app-1 cat package.json | grep '"next"'
+docker exec viralkan-app_web_1 cat package.json | grep '"next"'
+
+# Update to patched versions:
+# Next.js 15.x → 15.0.5, 15.1.9, 15.2.6, 15.3.6, 15.4.8, or 15.5.7
+# Next.js 16.x → 16.0.7 or later
+
+# Or use automated tool
+npx fix-react2shell-next
+```
+
+### 2. Security Hardening Measures
+
+- **Remove Docker Socket Exposure**: Never expose Docker daemon directly
+- **Network Segmentation**: Implement proper firewall rules
+- **Container Security**: Use minimal base images, implement least-privilege
+- **Regular Updates**: Keep all dependencies patched
+- **Security Monitoring**: Deploy IDS/IPS, set up alerts for unusual processes
+
+### 3. Monitoring and Prevention
+
+```bash
+# Monitor for k3s reappearance
+watch -n 1 'ps aux | grep k3s'
+
+# Set up CPU usage alerts
+# Configure monitoring for:
+# - Unexpected process launches
+# - High CPU/memory usage
+# - New network connections
+# - Docker socket access
+```
+
+## Key Lessons Learned
+
+1. **Attack Vector**: CVE-2025-66478 (Next.js RCE) actively exploited within days of disclosure
+2. **Persistence**: k3s installed as systemd service, survives reboots
+3. **Detection**: Unusually high CPU usage (k3s processes) is primary indicator
+4. **Architecture Mismatch**: Unexpected system components (k3s in Docker-only environment) are critical red flags
+5. **Complete Removal Required**: Must remove service files, binaries, cron jobs, and all persistence mechanisms
+
+## Prevention Strategy
+
+### Immediate Actions
+
+- Update all Next.js applications to patched versions
+- Remove unnecessary Docker socket exposure
+- Implement network firewall rules
+- Deploy process monitoring alerts
+
+### Long-term Security Posture
+
+- Regular security audits
+- Automated dependency scanning
+- Container image vulnerability scanning
+- Intrusion detection systems (IDS)
+- Regular log analysis and review
+- Incident response plan testing
+
+## Related Vulnerabilities and References
+
+- **CVE-2025-66478**: https://nextjs.org/blog/CVE-2025-66478
+- **CVE-2025-55182** (React RSC): https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components
+- **k3s C&C Attack**: https://blog.christophetd.fr/using-k3s-for-command-and-control-on-compromised-linux-hosts/
+- **Kubernetes Cryptomining**: https://unit42.paloaltonetworks.com/cve-2025-55182-react-and-cve-2025-66478-next/
+
+## Final Status
+
+**INCIDENT RESOLVED**: Complete k3s removal verified. All compromised processes terminated. System secured.
+
+**Next Steps**: Update Next.js applications, implement security monitoring, conduct full security audit.
+
+---
+
+**Document Version**: 1.0  
+**Last Updated**: December 8, 2025  
+**Maintained By**: Security Team
