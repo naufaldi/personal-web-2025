@@ -1,69 +1,9 @@
 import ReactMarkdown from "react-markdown";
-import CodeMirror from "@uiw/react-codemirror";
-import { oneDark } from "@codemirror/theme-one-dark";
-import { javascript } from "@codemirror/lang-javascript";
-import { html } from "@codemirror/lang-html";
-import { css } from "@codemirror/lang-css";
-import { json } from "@codemirror/lang-json";
+import CodeBlock from "@/components/mdx/CodeBlock";
 
 interface MarkdownRendererProps {
   content: string;
 }
-
-const getLanguageExtension =
-  (
-    lang:
-      | string
-      | undefined,
-  ) => {
-    if (
-      !lang
-    )
-      return null;
-
-    const languageMap: Record<
-      string,
-      any
-    > = {
-      javascript:
-        javascript(
-          {
-            jsx: true,
-            typescript: true,
-          },
-        ),
-      js: javascript(
-        {
-          jsx: true,
-        },
-      ),
-      jsx: javascript(
-        {
-          jsx: true,
-        },
-      ),
-      ts: javascript(
-        {
-          jsx: true,
-          typescript: true,
-        },
-      ),
-      typescript:
-        javascript(
-          {
-            jsx: true,
-            typescript: true,
-          },
-        ),
-      html: html(),
-      css: css(),
-      json: json(),
-    };
-
-    return languageMap[
-      lang.toLowerCase()
-    ];
-  };
 
 export default function MarkdownRenderer({
   content,
@@ -207,42 +147,8 @@ export default function MarkdownRenderer({
                 /\n$/,
                 "",
               );
-            const extension =
-              getLanguageExtension(
-                language,
-              );
 
-            return (
-              <div className="mb-4 rounded-lg overflow-hidden border border-slate-800/70 light:border-slate-200/70">
-                <CodeMirror
-                  value={
-                    codeString
-                  }
-                  theme={
-                    oneDark
-                  }
-                  extensions={
-                    extension
-                      ? [
-                          extension,
-                        ]
-                      : []
-                  }
-                  editable={
-                    false
-                  }
-                  basicSetup={{
-                    lineNumbers: true,
-                    highlightActiveLine: false,
-                    highlightSelectionMatches: false,
-                  }}
-                  style={{
-                    fontSize:
-                      "14px",
-                  }}
-                />
-              </div>
-            );
+            return <CodeBlock code={codeString} language={language} />;
           },
           pre: ({
             children,
