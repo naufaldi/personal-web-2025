@@ -1,12 +1,30 @@
-# Personal Website v5
+# faldi.xyz — Personal Portfolio
 
-A modern personal portfolio website built with Vite, React, TypeScript, Tailwind CSS v4, and shadcn/ui.
+[![Live Site](https://img.shields.io/badge/live-faldi.xyz-blue)](https://faldi.xyz)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![React](https://img.shields.io/badge/React-18-61dafb)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8)](https://tailwindcss.com)
 
-## 🚀 Quick Start
+Personal portfolio website of **Naufaldi Rafif Satriya** — Product Engineer & Mentor with 7+ years of experience building web applications.
+
+## Features
+
+- **MDX Blog** — Write blog posts in MDX with syntax highlighting, GitHub-flavored markdown, and frontmatter support
+- **Project Showcase** — Portfolio with detailed project pages rendered from markdown
+- **Dark / Light Mode** — System-aware theme with CSS custom properties
+- **Responsive Design** — Mobile-first layout built with Tailwind CSS v4
+- **Speaking & Mentoring** — Dedicated pages for speaking engagements and mentorship history
+- **Book Collection** — Reading list and wishlist tracker
+- **Animated UI** — Smooth transitions powered by Framer Motion
+- **shadcn/ui Components** — Consistent, accessible UI primitives
+
+## Quick Start
 
 ### Prerequisites
+
 - Node.js 18+
-- Bun (https://bun.sh)
+- [Bun](https://bun.sh)
 
 ### Installation
 
@@ -14,123 +32,84 @@ A modern personal portfolio website built with Vite, React, TypeScript, Tailwind
 bun install
 ```
 
-### Development Server
+### Development
 
 ```bash
 bun run dev
 ```
 
-The app will be available at `http://localhost:5173`
+Open [http://localhost:5173](http://localhost:5173)
 
-### Production Build
+### Build
 
 ```bash
 bun run build
 ```
 
-### Preview Production Build
+## Tech Stack
 
-```bash
-bun run preview
-```
+| Layer | Technology |
+|-------|-----------|
+| Build | Vite 5 |
+| Frontend | React 18, TypeScript 5 |
+| Routing | React Router 7 |
+| Styling | Tailwind CSS v4, shadcn/ui |
+| Content | MDX, react-markdown, remark |
+| Animation | Framer Motion |
+| Backend | Supabase |
+| Icons | Lucide React |
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 src/
 ├── components/
-│   ├── common/          # Layout, Header, Footer, Navigation
-│   ├── sections/        # Hero, ProjectCard, SpeakingCard, etc.
-│   └── ui/              # shadcn/ui components (button, card, etc.)
-├── pages/               # Page components (Home, About, Projects, etc.)
-├── data/                # TypeScript data files (projects, experience, speaking, books)
+│   ├── common/        # Layout, Header, Footer, Navigation
+│   ├── sections/      # Hero, ProjectCard, SpeakingCard, etc.
+│   └── ui/            # shadcn/ui components
+├── pages/             # Route page components
+├── data/              # TypeScript data files
 ├── content/
-│   ├── projects/        # Markdown files for project details
-│   └── speaking/        # Markdown files for speaking engagements
-├── hooks/               # Custom React hooks
-├── lib/                 # Utility functions (cn utility)
-├── styles/              # Additional CSS/styles
-├── App.tsx              # Main App component with routing
-├── main.tsx             # React DOM entry point
-└── index.css            # Tailwind CSS v4 configuration
+│   ├── projects/      # Markdown project details
+│   ├── blogs/         # MDX blog posts
+│   └── shorts/        # Short-form content
+├── hooks/             # Custom React hooks
+├── lib/               # Utility functions
+└── styles/            # Additional CSS
 ```
 
-## 🛠️ Technology Stack
+## Routes
 
-| Layer | Technology | Version |
-|-------|-----------|---------|
-| **Build Tool** | Vite | ^5.0.0 |
-| **Frontend** | React | ^18.3.1 |
-| **Language** | TypeScript | ^5.3.3 |
-| **Routing** | React Router | ^7.6.2 |
-| **Styling** | Tailwind CSS v4 | ^4.0.0 |
-| **UI Components** | shadcn/ui | ^0.9.0 |
-| **Content** | react-markdown, remark | ^8.0.7, ^14.0.2 |
-| **Icons** | lucide-react | - |
+| Route | Description |
+|-------|-------------|
+| `/` | Home — landing page with bio and featured work |
+| `/about` | Extended biography and skills |
+| `/projects` | Project portfolio |
+| `/projects/:slug` | Project detail page |
+| `/blogs` | Blog listing |
+| `/blogs/:slug` | Blog post |
+| `/experience` | Work history |
+| `/speaker` | Speaking engagements and mentoring |
+| `/shorts` | Short-form content |
+| `/book` | Book collection |
+| `/manhwa` | Manhwa collection |
 
-## 🎨 Design System
+## Environment Variables
 
-### Colors (Dark Mode Primary)
-- **Background**: `#000000` (black)
-- **Surface**: `#1a1a1a` (dark slate)
-- **Text Primary**: `#ffffff` (white)
-- **Text Secondary**: `#a3a3a3` (gray)
-- **Accent**: `#3b82f6` (blue)
-- **Border**: `#333333` (dark gray)
+Create a `.env` file based on the required variables:
 
-### Light Mode Support
-Full light mode support with CSS custom properties and `prefers-color-scheme` media queries.
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_KEY=your_supabase_anon_key
+```
 
-### Typography
-- **Font Stack**: System fonts (-apple-system, BlinkMacSystemFont, Segoe UI, etc.)
-- **Font Sizes**: xs (0.75rem) to 5xl (3.5rem)
-- **Spacing**: xs (4px) to 3xl (64px)
+## Deployment
 
-See `src/index.css` for complete design token configuration.
+The site is deployed via **GitHub Actions** with two targets:
 
-## 📄 Pages & Routes
+- **Netlify** — Static hosting with `netlify.toml` config
+- **Docker + VPS** — Containerized deployment to `faldi.xyz` using Caddy reverse proxy and Watchtower for auto-updates
 
-| Route | Page | Purpose |
-|-------|------|---------|
-| `/` | Home | Landing page with bio and featured work |
-| `/about` | About | Extended biography and skills |
-| `/projects` | Projects | Portfolio of all projects |
-| `/projects/:slug` | Project Detail | Full project details from markdown |
-| `/speaking` | Speaking | Speaking engagements and mentoring |
-| `/speaking/:slug` | Speaking Detail | Full engagement details from markdown |
-| `/book` | Book | Book collection (reading/wishlist) |
-| `*` | 404 | Not found page |
+## License
 
-## 🧩 Component Architecture
-
-### Installed shadcn/ui Components
-- **Button**: Reusable button component with variants
-- **Card**: Container component for content
-- **Navigation Menu**: Navigation menu with submenus
-
-### Custom Components (to be built)
-- **Layout**: Main layout wrapper with header/footer
-- **Header/Navigation**: Site navigation
-- **HeroSection**: Landing page hero
-- **ProjectCard**: Individual project preview
-- **SpeakingCard**: Speaking engagement preview
-- **ExperienceCard**: Work/mentorship experience
-
-## 🔧 Configuration Files
-
-### `vite.config.ts`
-- Vite configuration with React and Tailwind CSS v4 plugins
-- Path alias configuration (`@` → `src/`)
-
-### `tsconfig.json`
-- Strict TypeScript configuration
-- Path alias resolution
-- ES2020 target with DOM libraries
-
-### `src/index.css`
-- Tailwind CSS v4 import
-- `@theme` block with design system tokens
-- CSS custom properties for dark/light modes
-- Base styles and animations
-
-### `
+[MIT](./LICENSE) — Naufaldi Rafif Satriya

@@ -1,8 +1,29 @@
 {
   "name": "personal-web-v5",
-  "private": true,
   "version": "0.1.0",
+  "description": "Personal portfolio website of Naufaldi Rafif Satriya — Product Engineer & Mentor",
   "type": "module",
+  "homepage": "https://faldi.xyz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naufaldi/personal-web-v5.git"
+  },
+  "author": {
+    "name": "Naufaldi Rafif Satriya",
+    "email": "naufaldi.rafif@gmail.com",
+    "url": "https://faldi.xyz"
+  },
+  "license": "MIT",
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "react",
+    "vite",
+    "typescript",
+    "tailwindcss",
+    "mdx",
+    "shadcn-ui"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
