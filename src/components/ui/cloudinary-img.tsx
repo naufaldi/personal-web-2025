@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import Lightbox from 'react-image-lightbox'
-import 'react-image-lightbox/style.css'
+import { useState, useEffect, useCallback } from 'react'
 import { buildCloudinaryUrl, buildBlurUrl, isCloudinaryUrl } from '@/lib/cloudinary'
 import { cn } from '@/lib/utils'
 
@@ -125,10 +123,48 @@ export default function CloudinaryImg({
           />
         </div>
       </figure>
-      {isOpen && (
-        <Lightbox mainSrc={url} onCloseRequest={() => setIsOpen(false)} />
-      )}
+      {isOpen && <ImageLightbox src={url} alt={alt} onClose={() => setIsOpen(false)} />}
     </>
   )
 }
 
+function ImageLightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    },
+    [onClose],
+  )
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [handleKeyDown])
+
+  return (
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90"
+      onClick={onClose}
+      role="dialog"
+      aria-label={`Image preview: ${alt}`}
+    >
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-10 text-white text-3xl leading-none cursor-pointer hover:opacity-70"
+        aria-label="Close lightbox"
+      >
+        &times;
+      </button>
+      <img
+        src={src}
+        alt={alt}
+        className="max-h-[90vh] max-w-[90vw] object-contain"
+        onClick={(e) => e.stopPropagation()}
+      />
+    </div>
+  )
+}
