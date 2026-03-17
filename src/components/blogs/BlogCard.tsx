@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ArrowRight, Calendar, Clock, Eye, Heart } from 'lucide-react'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
@@ -14,9 +14,17 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({ blog, index }: BlogCardProps) {
+  const navigate = useNavigate()
   const [views, setViews] = useState(0)
   const [likes, setLikes] = useState(0)
-  const animationDelay = `${120 + index * 100}ms`
+  const [imgError, setImgError] = useState(false)
+  const animationDelay = `${60 + index * 50}ms`
+
+  const handleCardClick = (e: React.MouseEvent) => {
+    // Don't navigate if user clicked the title link itself or is selecting text
+    if ((e.target as HTMLElement).closest('a')) return
+    navigate(`/blogs/${blog.slug}`)
+  }
 
   useEffect(() => {
     getBlogViews(blog.slug).then(setViews)
@@ -33,24 +41,39 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
 
   return (
     <Card
+      role="article"
+      aria-label={blog.title}
+      onClick={handleCardClick}
       className={cn(
-        'group border-slate-800/70 light:border-slate-200/70 bg-slate-900/60 light:bg-white/60 transition-all duration-200 hover:border-slate-700/70 light:hover:border-slate-300/70 hover:bg-slate-900/90 light:hover:bg-white/90 overflow-hidden',
+        'group cursor-pointer border-slate-800/70 light:border-slate-200/70 bg-slate-900/60 light:bg-white/60 transition-all duration-200 hover:border-slate-700/70 light:hover:border-slate-300/70 hover:bg-slate-900/90 light:hover:bg-white/90 overflow-hidden',
       )}
       style={{
-        animation: 'fade-in 900ms ease-out both',
+        animation: 'fade-in 400ms ease-out both',
         animationDelay,
       }}
     >
       <div className="flex flex-col md:flex-row gap-4 p-4 md:p-6">
         {blog.image && (
-          <div className="relative w-full md:w-48 lg:w-64 flex-shrink-0 h-48 md:h-40 rounded-lg overflow-hidden border border-slate-800/70 light:border-slate-200/70 bg-slate-900/60 light:bg-white/60">
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              loading="lazy"
-              decoding="async"
-            />
+          <div className="relative w-full md:w-48 lg:w-64 flex-shrink-0 h-48 md:h-40 rounded-lg overflow-hidden border border-slate-800/70 light:border-slate-200/70 bg-slate-800/40 light:bg-slate-100/60">
+            {imgError ? (
+              <div className="flex h-full w-full items-center justify-center bg-slate-800/60 light:bg-slate-200/60 px-4">
+                <span
+                  className="text-center text-xs text-slate-400 light:text-slate-500 line-clamp-3"
+                  style={{ fontFamily: 'var(--font-body)', fontWeight: 500 }}
+                >
+                  {blog.title}
+                </span>
+              </div>
+            ) : (
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+                onError={() => setImgError(true)}
+              />
+            )}
           </div>
         )}
         <div className="flex-1 space-y-3">
@@ -69,16 +92,21 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
                 </Badge>
               </div>
               <h3
-                className="text-lg md:text-xl text-slate-300 light:text-slate-800"
+                className="text-lg md:text-xl"
                 style={{
                   fontFamily: 'var(--font-mono)',
                   fontWeight: 600,
                 }}
               >
-                {blog.title}
+                <Link
+                  to={`/blogs/${blog.slug}`}
+                  className="text-slate-300 light:text-slate-800 hover:text-slate-100 light:hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40 rounded-sm"
+                >
+                  {blog.title}
+                </Link>
               </h3>
               <p
-                className="text-sm line-clamp-2 text-slate-400 light:text-slate-600"
+                className="text-sm line-clamp-2 text-slate-300 light:text-slate-600"
                 style={{
                   fontFamily: 'var(--font-body)',
                   fontWeight: 400,
@@ -96,9 +124,9 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
                 {blog.author.name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
-            <div className="flex-1 flex flex-wrap items-center gap-3 text-xs text-slate-400 light:text-slate-600">
+            <div className="flex-1 flex flex-wrap items-center gap-3 text-xs text-slate-300 light:text-slate-600">
               <span
-                className="text-slate-300 light:text-slate-800"
+                className="text-slate-200 light:text-slate-800"
                 style={{
                   fontFamily: 'var(--font-body)',
                   fontWeight: 500,
@@ -106,8 +134,8 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
               >
                 {blog.author.name}
               </span>
-              <div className="flex items-center gap-1">
-                <Calendar className="h-3 w-3 text-slate-400 light:text-slate-600" />
+              <div className="flex items-center gap-1" aria-label={`Published ${formatDate(blog.date)}`}>
+                <Calendar className="h-3 w-3" aria-hidden="true" />
                 <span
                   style={{
                     fontFamily: 'var(--font-body)',
@@ -117,8 +145,8 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
                   {formatDate(blog.date)}
                 </span>
               </div>
-              <div className="flex items-center gap-1">
-                <Clock className="h-3 w-3 text-slate-400 light:text-slate-600" />
+              <div className="flex items-center gap-1" aria-label={`${blog.readTime || 5} minute read`}>
+                <Clock className="h-3 w-3" aria-hidden="true" />
                 <span
                   style={{
                     fontFamily: 'var(--font-body)',
@@ -128,26 +156,26 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
                   {blog.readTime || 5} min read
                 </span>
               </div>
-              <div className="flex items-center gap-1">
-                <Eye className="h-3 w-3 text-slate-400 light:text-slate-600" />
+              <div className="flex items-center gap-1" aria-label={`${views.toLocaleString()} views`}>
+                <Eye className="h-3 w-3" aria-hidden="true" />
                 <span
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontWeight: 400,
                   }}
                 >
-                  {views.toLocaleString()}
+                  {views.toLocaleString()} <span className="sr-only">views</span>
                 </span>
               </div>
-              <div className="flex items-center gap-1">
-                <Heart className="h-3 w-3 text-slate-400 light:text-slate-600" />
+              <div className="flex items-center gap-1" aria-label={`${likes.toLocaleString()} likes`}>
+                <Heart className="h-3 w-3" aria-hidden="true" />
                 <span
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontWeight: 400,
                   }}
                 >
-                  {likes.toLocaleString()}
+                  {likes.toLocaleString()} <span className="sr-only">likes</span>
                 </span>
               </div>
             </div>
@@ -156,15 +184,16 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
           <div className="pt-2">
             <Link
               to={`/blogs/${blog.slug}`}
-              className="inline-flex items-center gap-1.5 rounded-md border border-slate-800/70 light:border-slate-200/70 bg-slate-900/60 light:bg-white/60 px-4 py-2 text-sm transition-all duration-200 hover:border-slate-700/70 light:hover:border-slate-300/70 hover:bg-slate-900/90 light:hover:bg-white/90 hover:shadow-md hover:shadow-slate-900/50 light:hover:shadow-slate-100/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40 text-slate-300 light:text-slate-800"
+              tabIndex={-1}
+              aria-hidden="true"
+              className="inline-flex items-center gap-1 text-sm text-slate-400 light:text-slate-500 transition-colors group-hover:text-slate-200 light:group-hover:text-slate-800"
               style={{
                 fontFamily: 'var(--font-body)',
-                fontWeight: 600,
+                fontWeight: 500,
               }}
-              aria-label={`Read ${blog.title}`}
             >
               Read more
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 text-slate-300 light:text-slate-800" />
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>

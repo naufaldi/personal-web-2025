@@ -486,13 +486,13 @@ export default function Projects() {
           </div>
         </FadeInUp>
 
-        <FadeInUp delay={0.12}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 auto-rows-fr">
-            {portfolioItems.map((item, index) => (
-              <PortfolioCard key={item.id} item={item} index={index} />
-            ))}
-          </div>
-        </FadeInUp>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 auto-rows-fr" role="list" aria-label="Project list">
+          {portfolioItems.map((item, index) => (
+            <div key={item.id} role="listitem">
+              <PortfolioCard item={item} index={index} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1478,6 +1478,16 @@ Option 5: Noise Texture Pattern (Subtle)
     ease-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Animated gradient orbs for Experiences section */
 @keyframes float-orb-1 {
   0%,

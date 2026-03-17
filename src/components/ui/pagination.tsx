@@ -83,27 +83,31 @@ PaginationItem.displayName =
 type PaginationLinkProps =
   {
     isActive?: boolean;
+    disabled?: boolean;
   } & Pick<
     ButtonProps,
     "size"
   > &
-    React.ComponentProps<"a">;
+    React.ComponentProps<"button">;
 
 const PaginationLink =
   ({
     className,
     isActive,
+    disabled,
     size = "icon",
     ...props
   }: PaginationLinkProps) => (
-    <a
+    <button
+      type="button"
       aria-current={
         isActive
           ? "page"
           : undefined
       }
+      disabled={disabled}
       className={cn(
-        "group relative inline-flex items-center justify-center rounded-full border backdrop-blur-xl transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-100/60 focus-visible:ring-offset-slate-900 light:focus-visible:ring-slate-900/40 light:focus-visible:ring-offset-white shadow-[0_15px_45px_rgba(2,6,23,0.35)] light:shadow-[0_12px_35px_rgba(15,23,42,0.08)] text-sm font-medium",
+        "group relative inline-flex items-center justify-center rounded-full border backdrop-blur-xl transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-100/60 focus-visible:ring-offset-slate-900 light:focus-visible:ring-slate-900/40 light:focus-visible:ring-offset-white shadow-[0_15px_45px_rgba(2,6,23,0.35)] light:shadow-[0_12px_35px_rgba(15,23,42,0.08)] text-sm font-medium",
         size ===
           "icon"
           ? "h-10 w-10"
@@ -111,6 +115,8 @@ const PaginationLink =
         "border-slate-800/70 bg-slate-900/65 text-slate-200/90 hover:text-white hover:border-slate-700/60 hover:bg-slate-900/90 light:border-slate-200/60 light:bg-white/80 light:text-slate-700 light:hover:text-slate-900 light:hover:border-slate-300/70",
         isActive &&
           "text-slate-900 light:text-white bg-gradient-to-br from-slate-100 via-slate-200 to-white light:from-slate-900 light:via-slate-800 light:to-slate-700 border-transparent shadow-[0_25px_50px_rgba(2,6,23,0.55)] light:shadow-[0_18px_40px_rgba(15,23,42,0.25)]",
+        disabled &&
+          "opacity-50 cursor-not-allowed",
         className,
       )}
       {...props}

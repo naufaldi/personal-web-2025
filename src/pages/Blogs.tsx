@@ -66,11 +66,11 @@ export default function Blogs() {
         <div
           className="px-6 md:px-0 flex flex-col items-center gap-4 mb-12"
           style={{
-            animation: "fade-in 900ms ease-out both",
+            animation: "fade-in 400ms ease-out both",
             animationDelay: "60ms",
           }}
         >
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 light:border-slate-300/60 bg-slate-900/60 light:bg-slate-100/60">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 light:border-slate-300/60 bg-slate-900/60 light:bg-slate-100/60" aria-hidden="true">
             <BookOpen className="h-6 w-6 text-slate-300 light:text-slate-700" />
           </div>
           <h1
@@ -94,13 +94,20 @@ export default function Blogs() {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
+        <div
+          className="flex flex-wrap items-center justify-center gap-2 mb-8"
+          role="tablist"
+          aria-label="Filter blog posts by category"
+        >
           {categories.map((category) => (
             <button
               key={category}
+              role="tab"
+              aria-selected={selectedCategory === category}
+              aria-controls="blog-feed"
               onClick={() => setSelectedCategory(category)}
               className={cn(
-                "px-4 py-2 rounded-md border text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40",
+                "px-4 py-2 rounded-md border text-sm cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40",
                 selectedCategory === category
                   ? "border-slate-700/70 light:border-slate-200/70 bg-slate-900/90 light:bg-white/90 text-slate-200 light:text-slate-800"
                   : "border-slate-800/70 light:border-slate-300/70 bg-slate-900/60 light:bg-slate-100/60 hover:border-slate-700/70 light:hover:border-slate-200/70 hover:bg-slate-900/80 light:hover:bg-slate-100/80 text-slate-400 light:text-slate-600"
@@ -109,14 +116,19 @@ export default function Blogs() {
                 fontFamily: "var(--font-body)",
                 fontWeight: selectedCategory === category ? 600 : 500,
               }}
-              aria-label={`Filter by ${category}`}
             >
               {category}
             </button>
           ))}
         </div>
 
-        <div className="space-y-4">
+        <div className="sr-only" aria-live="polite" role="status">
+          {filteredBlogs.length === 0
+            ? "No blog posts found"
+            : `${filteredBlogs.length} blog post${filteredBlogs.length === 1 ? "" : "s"} found`}
+        </div>
+
+        <div id="blog-feed" role="feed" aria-label="Blog posts" className="space-y-6">
           {paginatedBlogs.length === 0 ? (
             <div className="text-center py-12">
               <p
@@ -150,11 +162,8 @@ export default function Blogs() {
                   <PaginationItem>
                     <PaginationPrevious
                       onClick={() => handlePageChange(currentPage - 1)}
-                      className={cn(
-                        "px-5",
-                        currentPage === 1 && "pointer-events-none opacity-50"
-                      )}
-                      aria-disabled={currentPage === 1}
+                      disabled={currentPage === 1}
+                      className="px-5"
                     />
                   </PaginationItem>
 
@@ -196,12 +205,8 @@ export default function Blogs() {
                   <PaginationItem>
                     <PaginationNext
                       onClick={() => handlePageChange(currentPage + 1)}
-                      className={cn(
-                        "px-5",
-                        currentPage === totalPages &&
-                          "pointer-events-none opacity-50"
-                      )}
-                      aria-disabled={currentPage === totalPages}
+                      disabled={currentPage === totalPages}
+                      className="px-5"
                     />
                   </PaginationItem>
                 </PaginationContent>
