@@ -110,12 +110,12 @@ export default function BlogActions({
           isLiking
         }
         className={cn(
-          "inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40",
+          "inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm cursor-pointer transition-all duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40",
           liked
-            ? "border-red-500/70 bg-red-500/20 text-red-400 light:text-red-600 hover:bg-red-500/30 light:hover:bg-red-500/20"
-            : "border-slate-800/70 light:border-slate-300/70 bg-slate-900/60 light:bg-slate-100/60 text-slate-400 light:text-slate-600 hover:border-slate-700/70 light:hover:border-slate-300 hover:bg-slate-900/90 light:hover:bg-slate-100/80",
+            ? "border-red-500/70 bg-red-500/20 text-red-400 light:text-red-600 hover:bg-red-500/30 light:hover:bg-red-500/20 hover:shadow-[0_0_12px_rgba(239,68,68,0.15)]"
+            : "border-slate-800/70 light:border-slate-300/70 bg-slate-900/60 light:bg-slate-100/60 text-slate-400 light:text-slate-600 hover:border-slate-600 light:hover:border-slate-400 hover:bg-slate-800/80 light:hover:bg-slate-200/80 hover:text-slate-200 light:hover:text-slate-800",
           isLiking &&
-            "opacity-50 cursor-not-allowed",
+            "opacity-50 !cursor-not-allowed",
         )}
         style={{
           fontFamily:
@@ -144,10 +144,10 @@ export default function BlogActions({
           handleSave
         }
         className={cn(
-          "inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40",
+          "inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm cursor-pointer transition-all duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40",
           saved
-            ? "border-blue-500/70 bg-blue-500/20 text-blue-400 light:text-blue-600 hover:bg-blue-500/30 light:hover:bg-blue-500/20"
-            : "border-slate-800/70 light:border-slate-300/70 bg-slate-900/60 light:bg-slate-100/60 text-slate-400 light:text-slate-600 hover:border-slate-700/70 light:hover:border-slate-300 hover:bg-slate-900/90 light:hover:bg-slate-100/80",
+            ? "border-blue-500/70 bg-blue-500/20 text-blue-400 light:text-blue-600 hover:bg-blue-500/30 light:hover:bg-blue-500/20 hover:shadow-[0_0_12px_rgba(59,130,246,0.15)]"
+            : "border-slate-800/70 light:border-slate-300/70 bg-slate-900/60 light:bg-slate-100/60 text-slate-400 light:text-slate-600 hover:border-slate-600 light:hover:border-slate-400 hover:bg-slate-800/80 light:hover:bg-slate-200/80 hover:text-slate-200 light:hover:text-slate-800",
         )}
         style={{
           fontFamily:
