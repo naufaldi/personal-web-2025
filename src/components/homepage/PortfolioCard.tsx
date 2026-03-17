@@ -1,10 +1,10 @@
+import { useState } from "react";
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router";
 import { Card, CardHeader } from "@/components/ui/card";
 import { getTechIcon } from "@/lib/techIcons";
 import type { PortfolioItem } from "@/data/portfolio";
 import { cn } from "@/lib";
-import FadeInUp from "@/components/common/FadeInUp";
 
 interface PortfolioCardProps {
   item: PortfolioItem;
@@ -12,12 +12,20 @@ interface PortfolioCardProps {
 }
 
 export default function PortfolioCard({ item, index }: PortfolioCardProps) {
+  const [imgError, setImgError] = useState(false);
+  const animationDelay = `${80 + index * 70}ms`;
+
   return (
-    <FadeInUp delay={0.12 + index * 0.1}>
       <Card
+        role="article"
+        aria-label={item.title}
         className={cn(
-          "group border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white transition-all duration-200 hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 overflow-hidden flex flex-col h-full"
+          "group border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white transition-all duration-200 hover:border-slate-600/80 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-lg hover:shadow-slate-900/20 light:hover:shadow-slate-300/30 overflow-hidden flex flex-col h-full"
         )}
+        style={{
+          animation: "fade-in-up 500ms ease-out both",
+          animationDelay,
+        }}
       >
         <div className="flex flex-col sm:flex-row flex-1">
           <div className="flex-1 p-3 sm:p-4 md:p-5 space-y-2 flex flex-col">
@@ -42,18 +50,30 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
               </p>
             </CardHeader>
           </div>
-          <div className="relative w-full sm:w-48 md:w-56 lg:w-64 flex-shrink-0 h-40">
-            <img
-              src={item.image}
-              alt={item.title}
-              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              loading="lazy"
-              decoding="async"
-            />
+          <div className="relative w-full sm:w-48 md:w-56 lg:w-64 flex-shrink-0 h-40 overflow-hidden bg-slate-800/40 light:bg-slate-100/60">
+            {imgError ? (
+              <div className="flex h-full w-full items-center justify-center bg-slate-800/60 light:bg-slate-200/60 px-4">
+                <span
+                  className="text-center text-xs text-slate-400 light:text-slate-500 line-clamp-3"
+                  style={{ fontFamily: "var(--font-body)", fontWeight: 500 }}
+                >
+                  {item.title}
+                </span>
+              </div>
+            ) : (
+              <img
+                src={item.image}
+                alt={item.title}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                onError={() => setImgError(true)}
+              />
+            )}
           </div>
         </div>
         <div className="border-t border-slate-800/70 light:border-slate-300 p-3 sm:p-4 md:p-4 space-y-2 sm:space-y-3 flex flex-col flex-1">
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2" aria-label="Technologies used" role="list">
             {item.techStack.slice(0, 5).map((tech) => {
               const Icon = getTechIcon(tech);
               if (!Icon) return null;
@@ -62,8 +82,9 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
                   key={tech}
                   className="flex items-center gap-1 sm:gap-1.5 rounded border border-slate-800/70 light:border-slate-300 bg-slate-900/80 light:bg-slate-50 px-2 py-1 text-xs"
                   title={tech}
+                  role="listitem"
                 >
-                  <Icon className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-slate-400 light:text-slate-600" />
+                  <Icon className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-slate-400 light:text-slate-600" aria-hidden="true" />
                   <span
                     className="hidden sm:inline text-slate-400 light:text-slate-600"
                     style={{
@@ -135,6 +156,5 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
           </div>
         </div>
       </Card>
-    </FadeInUp>
   );
 }
