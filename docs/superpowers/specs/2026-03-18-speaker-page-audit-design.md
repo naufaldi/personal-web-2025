@@ -39,11 +39,12 @@ These patterns were established in commits ff150a5 and 0722ea3 and will be appli
 ### `useCountUp` Hook (`src/hooks/useCountUp.ts`)
 
 Custom hook for animated number count-up:
+- **Signature**: `useCountUp(target: number, options?: { duration?: number; suffix?: string })` — only accepts numeric targets
 - Uses `useInView` from framer-motion to detect when element scrolls into viewport
 - Animates from 0 to target over ~1.5s using `requestAnimationFrame`
-- Returns `{ ref, count }` — attach `ref` to the container, render `count`
+- Returns `{ ref, count }` — attach `ref` to the container, render `count` (formatted string with suffix if provided)
 - Respects `useReducedMotion()`: returns final value immediately if reduced motion preferred
-- Handles non-numeric values gracefully (pass-through)
+- String values (e.g., `"100+ hours"`) are NOT passed through this hook — render them directly without animation
 
 ## Section 2: SpeakerMentorHero
 
@@ -55,6 +56,7 @@ Custom hook for animated number count-up:
 
 ### Enhancements
 - Staggered entrance: icon, heading, subtitle each get own `FadeInUp` with delays `0.1`, `0.18`, `0.26`
+- Add `aria-hidden="true"` on the decorative `Mic` icon
 
 ## Section 3: ImpactStats
 
@@ -65,9 +67,9 @@ Custom hook for animated number count-up:
 - Add section `aria-label="Impact statistics"`
 
 ### Enhancements
-- **Count-up animation**: Numeric values use `useCountUp` hook — animate from 0 to target on scroll-in
-- **Hover effect**: `hover:scale-[1.02] hover:shadow-lg` with `motion-safe:transition-transform duration-200`
-- **Active feedback**: `active:scale-[0.98]`
+- **Count-up animation**: Numeric values use `useCountUp` hook — animate from 0 to target on scroll-in. String values (e.g., `speakerTime = "100+ hours"`) render directly without animation.
+- Add `aria-hidden="true"` on all decorative Lucide icons (`Users`, `GraduationCap`, `Mic`, `Clock`)
+- Remove hover/active scale effects — these cards are non-interactive display elements and hover feedback would mislead users into thinking they are clickable (Jakob's Law). Keep existing subtle `hover:text-slate-200` color transition only.
 
 ## Section 4: OrganizationMarquee
 
@@ -76,9 +78,11 @@ Custom hook for animated number count-up:
 - Inline animation on heading becomes `FadeInUp` wrapper
 - Add `id="org-marquee-heading"` + `aria-labelledby="org-marquee-heading"` on section
 - Add `focus-visible:ring-2` styles on logo links
+- Append "(opens in new tab)" to `aria-label` on all `target="_blank"` links: e.g., `aria-label="Visit ADPList (opens in new tab)"`
+- Handle logos without `websiteUrl`: render as non-interactive `<span>` instead of `<a>` when `websiteUrl` is undefined
 
 ### Enhancements
-- Pause marquee on hover (CSS `animation-play-state: paused` via Tailwind `hover:[animation-play-state:paused]`)
+- Pause marquee on hover AND on focus-within: `hover:[animation-play-state:paused] focus-within:[animation-play-state:paused]` so keyboard users can navigate links without them scrolling away
 - Smoother grayscale transition: `duration-500`
 - Motion-safe guard: wrap marquee in `motion-safe:animate-marquee`; show static grid layout when `prefers-reduced-motion` is active
 
@@ -95,8 +99,10 @@ All three sections share identical structure and receive the same treatment.
   - `id="speaking-heading"` / `aria-labelledby="speaking-heading"`
 - Fix count badge contrast: `text-slate-500` becomes `text-slate-400`
 
+**Note:** `MentorSpeakerItem` already has `FadeInUp` wrapping with `delay={0.12 + index * 0.1}` and `focus-visible:ring-2` styles from the homepage audit. No changes needed to its internal animation or focus styles.
+
 ### Enhancements
-- **Stagger animations on items**: Each `MentorSpeakerItem` wrapped in `FadeInUp` with `delay={0.1 + index * 0.08}`
+- **Stagger animations**: Keep existing `MentorSpeakerItem` stagger delays as-is (`0.12 + index * 0.1`)
 - **Hover on card container**: `hover:border-slate-700/90 light:hover:border-slate-300`
 - **Scroll-triggered section reveal**: Outer section wrapped in `FadeInUp`
 
@@ -128,7 +134,10 @@ All three sections share identical structure and receive the same treatment.
 - [ ] All sections have `aria-labelledby`
 - [ ] All interactive elements have `focus-visible` ring
 - [ ] Count-up animation triggers on scroll into view
-- [ ] Marquee pauses on hover
+- [ ] Marquee pauses on hover and on keyboard focus-within
 - [ ] Marquee shows static grid when reduced motion preferred
+- [ ] All `target="_blank"` links have "(opens in new tab)" in aria-label
+- [ ] Decorative icons have `aria-hidden="true"`
+- [ ] Logos without `websiteUrl` render as non-interactive elements
 - [ ] Stagger delays work correctly on list items
 - [ ] Responsive layout intact across mobile/tablet/desktop
