@@ -5,7 +5,7 @@ import FadeInUp from '@/components/common/FadeInUp'
 
 export default function ExperiencesSection() {
   return (
-    <section className="px-6 md:px-0 py-12 md:py-16 relative">
+    <section className="px-6 md:px-0 py-12 md:py-16 relative" aria-labelledby="experiences-heading">
       <div className="bg-orbs-experiences" aria-hidden="true" />
       <div className="mx-auto max-w-7xl sm:px-6 w-full relative z-10">
         <div className="space-y-12">
@@ -15,11 +15,8 @@ export default function ExperiencesSection() {
                 <Briefcase className="h-6 w-6 text-slate-300 light:text-slate-700" />
               </div>
               <h2
-                className="text-3xl md:text-4xl text-slate-100 light:text-slate-900 text-center"
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontWeight: 700,
-                }}
+                id="experiences-heading"
+                className="text-3xl md:text-4xl text-slate-100 light:text-slate-900 text-center font-mono font-bold"
               >
                 Experiences
               </h2>
@@ -35,14 +32,10 @@ export default function ExperiencesSection() {
 
               return (
                 <FadeInUp key={experience.id} delay={0.12 + index * 0.1}>
-                  <div className="grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-6 md:gap-12">
+                  <div className="grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-6 md:gap-12 rounded-xl p-4 -m-4 hover:bg-slate-900/30 light:hover:bg-slate-100/50 transition-all duration-200">
                   <div className="md:pt-1">
                     <p
-                      className="text-sm text-slate-400 light:text-slate-600 uppercase"
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontWeight: 500,
-                      }}
+                      className="text-sm text-slate-400 light:text-slate-600 uppercase font-body font-medium"
                     >
                       {experience.startDate} — {endDate}
                     </p>
@@ -51,24 +44,16 @@ export default function ExperiencesSection() {
                   <div className="space-y-3">
                     <div className="space-y-1">
                       <h3
-                        className="text-xl md:text-2xl text-slate-100 light:text-slate-900"
-                        style={{
-                          fontFamily: 'var(--font-mono)',
-                          fontWeight: 700,
-                        }}
+                        className="text-xl md:text-2xl text-slate-100 light:text-slate-900 font-mono font-bold"
                       >
                         {experience.role}
                       </h3>
                       <div className="flex items-center gap-2">
                         {experience.logoUrl && (
-                          <div className="h-4 w-4 rounded bg-slate-700 light:bg-slate-300" />
+                          <div className="h-4 w-4 rounded bg-slate-700 light:bg-slate-300" aria-hidden="true" />
                         )}
                         <p
-                          className="text-base text-slate-300 light:text-slate-700"
-                          style={{
-                            fontFamily: 'var(--font-body)',
-                            fontWeight: 500,
-                          }}
+                          className="text-base text-slate-300 light:text-slate-700 font-body font-medium"
                         >
                           {experience.companyName}
                         </p>

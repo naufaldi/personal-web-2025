@@ -17,6 +17,7 @@ export default function ProfilePicture({
     <div className={cn('relative', className)}>
       <div
         className="absolute -left-6 top-4 opacity-20"
+        aria-hidden="true"
         style={{
           animation: 'fade-in 900ms ease-out both',
           animationDelay: '60ms',
@@ -29,7 +30,7 @@ export default function ProfilePicture({
       </div>
 
       <div
-        className="relative rotate-2 bg-white p-4 shadow-2xl w-[300px] md:w-auto light:shadow-slate-200/70"
+        className="relative rotate-2 bg-white p-4 shadow-2xl w-[300px] md:w-auto light:shadow-slate-200/70 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] hover:-rotate-1 transition-all duration-300"
         style={{
           animation: 'fade-in 900ms ease-out both',
           animationDelay: '120ms',
@@ -40,18 +41,14 @@ export default function ProfilePicture({
             publicId={imageUrl}
             width={600}
             height={800}
-            alt="Profile"
+            alt="Profile photo of Naufaldi Rafif Satriya"
             preview={false}
             noStyle
             className="w-full md:w-[300px]"
           />
         </div>
         <div
-          className="mt-3 text-center text-sm italic text-slate-900 light:text-slate-700"
-          style={{
-            fontFamily: 'cursive',
-            fontWeight: 400,
-          }}
+          className="mt-3 text-center text-sm italic text-slate-900 light:text-slate-700 font-[cursive] font-normal"
         >
           {signature}
         </div>
