@@ -1353,6 +1353,22 @@ body {
   background-position: center;
 }
 
+.light .bg-pattern-experience {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 30h40M30 10v40' fill='none' stroke='%2394a3b8' stroke-width='0.5' opacity='0.15'/%3E%3Ccircle cx='10' cy='30' r='1.5' fill='%2394a3b8' opacity='0.15'/%3E%3Ccircle cx='30' cy='10' r='1.5' fill='%2394a3b8' opacity='0.15'/%3E%3Ccircle cx='30' cy='50' r='1.5' fill='%2394a3b8' opacity='0.15'/%3E%3Ccircle cx='50' cy='30' r='1.5' fill='%2394a3b8' opacity='0.15'/%3E%3C/svg%3E"),
+    radial-gradient(
+      1000px 500px at 80% -20%,
+      rgba(148, 163, 184, 0.06),
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(248, 250, 252, 0) 0%,
+      rgba(248, 250, 252, 0.3) 60%,
+      rgba(248, 250, 252, 0.6) 100%
+    );
+}
+
 /* SVG Pattern Recommendations - Uncomment and use one of these patterns */
 /*
 Option 1: Subtle Dot Grid Pattern
@@ -1402,6 +1418,15 @@ Option 5: Noise Texture Pattern (Subtle)
 */
 
 /* Animations */
+@keyframes scale-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 @keyframes fade-in-up {
   from {
     opacity: 0;
