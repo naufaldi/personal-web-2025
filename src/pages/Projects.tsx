@@ -461,11 +461,7 @@ export default function Projects() {
               <Folder className="h-6 w-6 text-slate-300 light:text-slate-700" />
             </div>
             <h1
-              className="text-4xl md:text-5xl text-center"
-              style={{
-                fontFamily: "var(--font-mono)",
-                fontWeight: 700,
-              }}
+              className="text-4xl md:text-5xl text-center font-mono font-bold"
             >
               <span className="text-slate-100 light:text-slate-900">
                 Curated{" "}
@@ -475,11 +471,7 @@ export default function Projects() {
               </span>
             </h1>
             <p
-              className="text-sm md:text-base text-slate-500 light:text-slate-600 text-center"
-              style={{
-                fontFamily: "var(--font-body)",
-                fontWeight: 500,
-              }}
+              className="text-sm md:text-base text-slate-400 light:text-slate-600 text-center font-body font-medium"
             >
               Showcase of my projects that I'm proud of.
             </p>
@@ -488,9 +480,11 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 auto-rows-fr" role="list" aria-label="Project list">
           {portfolioItems.map((item, index) => (
-            <div key={item.id} role="listitem">
-              <PortfolioCard item={item} index={index} />
-            </div>
+            <FadeInUp key={item.id} delay={0.1 + index * 0.08}>
+              <div role="listitem" className="h-full">
+                <PortfolioCard item={item} index={index} />
+              </div>
+            </FadeInUp>
           ))}
         </div>
       </div>
