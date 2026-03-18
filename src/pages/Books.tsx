@@ -4,6 +4,7 @@ import CurrentlyReadingSection from '@/components/books/CurrentlyReadingSection'
 import WishlistSection from '@/components/books/WishlistSection'
 import { Separator } from '@/components/ui/separator'
 import { readBooks, currentlyReadingBooks, wishlistBooks } from '@/data/books'
+import FadeInUp from '@/components/common/FadeInUp'
 
 export default function Books() {
   const hasReadBooks = readBooks.length > 0
@@ -19,13 +20,17 @@ export default function Books() {
         {hasReadBooks && <ReadBooksSection />}
 
         {hasReadBooks && hasCurrentlyReading && (
-          <Separator className="my-8 bg-slate-800/70 light:bg-slate-200/70" />
+          <FadeInUp>
+            <Separator className="my-8 bg-slate-800/70 light:bg-slate-200/70" />
+          </FadeInUp>
         )}
 
         {hasCurrentlyReading && <CurrentlyReadingSection />}
 
         {(hasReadBooks || hasCurrentlyReading) && hasWishlist && (
-          <Separator className="my-8 bg-slate-800/70 light:bg-slate-200/70" />
+          <FadeInUp>
+            <Separator className="my-8 bg-slate-800/70 light:bg-slate-200/70" />
+          </FadeInUp>
         )}
 
         {hasWishlist && <WishlistSection />}
