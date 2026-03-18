@@ -311,12 +311,7 @@ export default function CodePreviewCard({
               <span className="h-2 sm:h-2.5 w-2 sm:w-2.5 rounded-full bg-slate-700 light:bg-slate-600" />
             </div>
             <div
-              className="text-[10px] sm:text-[11px] text-slate-400 light:text-slate-400 tracking-tight"
-              style={{
-                fontFamily:
-                  "var(--font-body)",
-                fontWeight: 500,
-              }}
+              className="text-[10px] sm:text-[11px] text-slate-400 light:text-slate-400 tracking-tight font-body font-medium"
             >
               UserProfile.tsx
             </div>
@@ -324,14 +319,7 @@ export default function CodePreviewCard({
 
           <div className="p-2.5 sm:p-4 md:p-6">
             <pre
-              className="text-[11px] sm:text-[12.5px] md:text-sm leading-relaxed text-slate-300 light:text-slate-200 overflow-x-auto"
-              style={{
-                fontFamily:
-                  "var(--font-mono)",
-                fontWeight: 500,
-                whiteSpace:
-                  "pre-wrap",
-              }}
+              className="text-[11px] sm:text-[12.5px] md:text-sm leading-relaxed text-slate-300 light:text-slate-200 overflow-x-auto font-mono font-medium whitespace-pre-wrap"
             >
               <code>
                 {codeLines.map(

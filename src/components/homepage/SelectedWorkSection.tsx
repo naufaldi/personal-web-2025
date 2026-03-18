@@ -5,10 +5,8 @@ export default function SelectedWorkSection() {
     <section id="features" className="bg-slate-950 px-6 md:px-0 py-12 md:py-16">
       <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <h2
-          className="text-[24px] md:text-[28px] text-slate-100 tracking-tight"
+          className="text-[24px] md:text-[28px] text-slate-100 tracking-tight font-mono font-medium"
           style={{
-            fontFamily: 'var(--font-mono)',
-            fontWeight: 500,
             animation: 'fade-in-up 800ms ease-out both',
             animationDelay: '60ms',
           }}
@@ -28,20 +26,12 @@ export default function SelectedWorkSection() {
               className="group rounded-lg border border-slate-800/70 bg-slate-900/60 p-4 hover:border-slate-700/70 transition-colors"
             >
               <h3
-                className="text-slate-100 text-[18px]"
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontWeight: 500,
-                }}
+                className="text-slate-100 text-[18px] font-mono font-medium"
               >
                 {project.title}
               </h3>
               <p
-                className="mt-1.5 text-sm text-slate-400"
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontWeight: 500,
-                }}
+                className="mt-1.5 text-sm text-slate-400 font-mono font-medium"
               >
                 {project.description}
               </p>

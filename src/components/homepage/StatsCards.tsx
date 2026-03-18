@@ -22,14 +22,9 @@ const StatCard =
   }: StatCardProps) => (
     <div
       className={cn(
-        "rounded-lg border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-slate-50 px-2 sm:px-3 py-2 text-xs text-slate-400 light:text-slate-700 hover:text-slate-200 light:hover:text-slate-900 hover:border-slate-700/70 light:hover:border-slate-400 transition-colors",
+        "rounded-lg border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-slate-50 px-2 sm:px-3 py-2 text-xs text-slate-400 light:text-slate-700 font-body font-medium",
         className,
       )}
-      style={{
-        fontFamily:
-          "var(--font-body)",
-        fontWeight: 500,
-      }}
     >
       <div className="flex items-center justify-between gap-2">
         <span className="text-xs sm:text-xs">
