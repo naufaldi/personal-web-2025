@@ -21,17 +21,17 @@ export default function PortfolioCard({ item }: PortfolioCardProps) {
         role="article"
         aria-label={item.title}
         className={cn(
-          "group border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white transition-all duration-200 hover:border-slate-600/80 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-lg hover:shadow-slate-900/20 light:hover:shadow-slate-300/30 overflow-hidden flex flex-col h-full"
+          "group border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white motion-safe:transition-all motion-safe:duration-200 hover:border-slate-600/80 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-lg hover:shadow-slate-900/20 light:hover:shadow-slate-300/30 overflow-hidden flex flex-col h-full"
         )}
       >
         <div className="flex flex-col sm:flex-row flex-1">
           <div className="flex-1 p-3 sm:p-4 md:p-5 space-y-2 flex flex-col">
             <CardHeader className="space-y-1.5 p-0 flex flex-col">
-              <h3
+              <h2
                 className="text-sm sm:text-base md:text-lg text-slate-100 light:text-slate-900 line-clamp-2 font-mono font-medium"
               >
                 {item.title}
-              </h3>
+              </h2>
               <p
                 className="text-xs sm:text-sm text-slate-400 light:text-slate-600 line-clamp-4 font-body font-medium"
               >
@@ -55,7 +55,7 @@ export default function PortfolioCard({ item }: PortfolioCardProps) {
               <img
                 src={item.image}
                 alt={item.title}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="h-full w-full object-cover motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
                 onLoad={() => setImgLoading(false)}
