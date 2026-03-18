@@ -109,6 +109,8 @@ const className = cn("base-class", condition && "conditional-class");
 - **Dark/Light modes** via `prefers-color-scheme` media queries
 - Use semantic class groupings and keep classes readable; use CVA for complex variants
 - Avoid inline styles except for dynamic computed values Tailwind can't express
+- **Font classes**: Use `font-mono`, `font-body`, `font-blog`, `font-sans` for font-family. Use `font-medium` (500), `font-semibold` (600), `font-bold` (700) for weight. Never use `style={{ fontFamily: ... }}` inline.
+- **cn() for combining**: Always use `cn()` from `@/lib` when combining dynamic or conditional classes. Never concatenate className strings manually.
 - **Built-in Values**: Prefer Tailwind's built-in sizes, spacing, and colors
 - **Dynamic Values**: Use CSS variables or Tailwind config for truly dynamic values
 - **Formatting**: Keep class lists readable; use Prettier for formatting

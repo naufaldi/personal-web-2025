@@ -53,36 +53,21 @@ export default function MentorSpeakerItem({
         <div className="flex-1 flex flex-col justify-between gap-3 sm:gap-4">
           <div className="space-y-1.5 sm:space-y-2">
             <h3
-              className="text-lg sm:text-xl md:text-2xl text-slate-100 light:text-slate-900"
-              style={{
-                fontFamily:
-                  "var(--font-mono)",
-                fontWeight: 500,
-              }}
+              className="text-lg sm:text-xl md:text-2xl text-slate-100 light:text-slate-900 font-mono font-medium"
             >
               {
                 item.eventName
               }
             </h3>
             <p
-              className="text-xs sm:text-sm md:text-base text-slate-400 light:text-slate-600"
-              style={{
-                fontFamily:
-                  "var(--font-body)",
-                fontWeight: 500,
-              }}
+              className="text-xs sm:text-sm md:text-base text-slate-400 light:text-slate-600 font-body font-medium"
             >
               {
                 item.brief
               }
             </p>
             <p
-              className="text-xs text-slate-400 light:text-slate-600"
-              style={{
-                fontFamily:
-                  "var(--font-body)",
-                fontWeight: 500,
-              }}
+              className="text-xs text-slate-400 light:text-slate-600 font-body font-medium"
             >
               {
                 item.date
