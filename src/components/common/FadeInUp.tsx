@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 
@@ -17,10 +17,11 @@ const FadeInUp = ({
   duration = 0.8,
   animateOpacity = false,
 }: FadeInUpProps) => {
-  const initialState = {
-    y: 20,
-    opacity: animateOpacity ? 0 : 1,
-  }
+  const prefersReducedMotion = useReducedMotion()
+
+  const initialState = prefersReducedMotion
+    ? { y: 0, opacity: 1 }
+    : { y: 20, opacity: animateOpacity ? 0 : 1 }
 
   const animateState = {
     y: 0,
@@ -33,8 +34,8 @@ const FadeInUp = ({
       whileInView={animateState}
       viewport={{ once: true, margin: '-50px' }}
       transition={{
-        duration,
-        delay,
+        duration: prefersReducedMotion ? 0 : duration,
+        delay: prefersReducedMotion ? 0 : delay,
         ease: 'easeOut',
       }}
       className={cn(className)}

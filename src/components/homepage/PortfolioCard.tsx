@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router";
 import { Card, CardHeader } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import { getTechIcon } from "@/lib/techIcons";
 import type { PortfolioItem } from "@/data/portfolio";
 import { cn } from "@/lib";
@@ -11,9 +12,9 @@ interface PortfolioCardProps {
   index: number;
 }
 
-export default function PortfolioCard({ item, index }: PortfolioCardProps) {
+export default function PortfolioCard({ item }: PortfolioCardProps) {
   const [imgError, setImgError] = useState(false);
-  const animationDelay = `${80 + index * 70}ms`;
+  const [imgLoading, setImgLoading] = useState(true);
 
   return (
       <Card
@@ -22,10 +23,6 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
         className={cn(
           "group border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white transition-all duration-200 hover:border-slate-600/80 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-lg hover:shadow-slate-900/20 light:hover:shadow-slate-300/30 overflow-hidden flex flex-col h-full"
         )}
-        style={{
-          animation: "fade-in-up 500ms ease-out both",
-          animationDelay,
-        }}
       >
         <div className="flex flex-col sm:flex-row flex-1">
           <div className="flex-1 p-3 sm:p-4 md:p-5 space-y-2 flex flex-col">
@@ -51,6 +48,9 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
             </CardHeader>
           </div>
           <div className="relative w-full sm:w-48 md:w-56 lg:w-64 flex-shrink-0 h-40 overflow-hidden bg-slate-800/40 light:bg-slate-100/60">
+            {imgLoading && !imgError && (
+              <Skeleton className="absolute inset-0 h-full w-full rounded-none bg-slate-800/60" />
+            )}
             {imgError ? (
               <div className="flex h-full w-full items-center justify-center bg-slate-800/60 light:bg-slate-200/60 px-4">
                 <span
@@ -67,6 +67,7 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
                 className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
+                onLoad={() => setImgLoading(false)}
                 onError={() => setImgError(true)}
               />
             )}
@@ -86,7 +87,7 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
                 >
                   <Icon className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-slate-400 light:text-slate-600" aria-hidden="true" />
                   <span
-                    className="hidden sm:inline text-slate-400 light:text-slate-600"
+                    className="sr-only sm:not-sr-only sm:inline text-slate-400 light:text-slate-600"
                     style={{
                       fontFamily: "var(--font-mono)",
                       fontWeight: 500,

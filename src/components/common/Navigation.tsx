@@ -21,7 +21,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 interface NavItem {
   name: string;
@@ -127,6 +127,8 @@ export default function Navigation() {
     useState(
       false,
     );
+  const prefersReducedMotion = useReducedMotion();
+  const dur = (d: number) => prefersReducedMotion ? 0 : d;
 
   return (
     <>
@@ -286,9 +288,9 @@ export default function Navigation() {
             <motion.button
               className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40"
               aria-label="Toggle navigation menu"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
+              whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+              whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}
+              transition={{ duration: dur(0.2) }}
             >
               <Menu className="h-6 w-6" />
             </motion.button>
@@ -304,9 +306,9 @@ export default function Navigation() {
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: dur(0.3) }}
                 />
-                
+
                 {/* Animated Sheet Content */}
                 <SheetContent 
                   side="right" 
@@ -318,11 +320,11 @@ export default function Navigation() {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    transition={{ 
-                      duration: 0.4,
+                    transition={{
+                      duration: dur(0.4),
                       ease: "easeOut",
                       when: "beforeChildren",
-                      staggerChildren: 0.1,
+                      staggerChildren: dur(0.1),
                     }}
                   >
                     <nav className="flex-1 flex flex-col space-y-4 mt-16 px-6">
@@ -340,8 +342,8 @@ export default function Navigation() {
                                 item.name
                               }
                               variants={sheetItemVariants}
-                              transition={{ 
-                                duration: 0.4,
+                              transition={{
+                                duration: dur(0.4),
                                 ease: "easeOut"
                               }}
                             >
@@ -377,7 +379,7 @@ export default function Navigation() {
                       <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.5, duration: 0.3 }}
+                        transition={{ delay: dur(0.5), duration: dur(0.3) }}
                       >
                         <Separator className="bg-slate-700/60" />
                       </motion.div>
@@ -386,7 +388,7 @@ export default function Navigation() {
                         className="text-xs font-semibold text-slate-500 uppercase tracking-wider px-3 pt-2"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.6, duration: 0.3 }}
+                        transition={{ delay: dur(0.6), duration: dur(0.3) }}
                       >
                         More
                       </motion.div>
@@ -404,8 +406,8 @@ export default function Navigation() {
                                 item.name
                               }
                               variants={sheetItemVariants}
-                              transition={{ 
-                                duration: 0.4,
+                              transition={{
+                                duration: dur(0.4),
                                 ease: "easeOut"
                               }}
                             >
@@ -443,7 +445,7 @@ export default function Navigation() {
                       className="border-t border-slate-800/70 p-6 space-y-3"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.8, duration: 0.4 }}
+                      transition={{ delay: dur(0.8), duration: dur(0.4) }}
                     >
                       <motion.a
                         href="https://www.linkedin.com/in/naufaldirafif/"
@@ -455,9 +457,9 @@ export default function Navigation() {
                             "var(--font-body)",
                           fontWeight: 600,
                         }}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        transition={{ duration: 0.2 }}
+                        whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
+                        whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
+                        transition={{ duration: dur(0.2) }}
                       >
                         Contact
                         <ArrowRight className="h-4 w-4" />
@@ -470,9 +472,9 @@ export default function Navigation() {
                             "var(--font-body)",
                           fontWeight: 600,
                         }}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        transition={{ duration: 0.2 }}
+                        whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
+                        whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
+                        transition={{ duration: dur(0.2) }}
                       >
                         Download
                         CV

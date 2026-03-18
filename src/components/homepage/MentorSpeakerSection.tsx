@@ -6,11 +6,12 @@ import FadeInUp from '@/components/common/FadeInUp'
 
 export default function MentorSpeakerSection() {
   return (
-    <section id="mentor-speaker" className="relative bg-slate-950 light:bg-slate-50 px-6 md:px-0 py-12 md:py-16">
+    <section id="mentor-speaker" aria-labelledby="mentor-speaker-heading" className="relative bg-slate-950 light:bg-slate-50 px-6 md:px-0 py-12 md:py-16">
       <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <div className="space-y-8">
           <FadeInUp delay={0.06}>
             <h2
+              id="mentor-speaker-heading"
               className="text-[24px] md:text-[28px] text-slate-100 light:text-slate-900 tracking-tight"
               style={{
                 fontFamily: 'var(--font-mono)',
@@ -28,11 +29,11 @@ export default function MentorSpeakerSection() {
             </div>
           </FadeInUp>
 
-          <FadeInUp delay={0.52}>
+          <FadeInUp delay={0.12 + mentorSpeakerEngagements.slice(0, 4).length * 0.1}>
             <div className="flex justify-center pt-4">
             <Link
               to="/speaker"
-              className="inline-flex items-center gap-2 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white px-6 py-3 text-sm text-slate-300 light:text-slate-700 transition-all duration-200 hover:text-slate-100 light:hover:text-slate-950 hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-md hover:shadow-slate-900/50 light:hover:shadow-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40"
+              className="group inline-flex items-center gap-2 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white px-6 py-3 text-sm text-slate-300 light:text-slate-700 transition-all duration-200 hover:text-slate-100 light:hover:text-slate-950 hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-md hover:shadow-slate-900/50 light:hover:shadow-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40"
               style={{
                 fontFamily: 'var(--font-body)',
                 fontWeight: 600,

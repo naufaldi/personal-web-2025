@@ -10,7 +10,7 @@ import FadeInUp from "@/components/common/FadeInUp";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex-1">
+    <section className="relative flex-1" aria-label="Introduction">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center pb-12 pt-8 sm:pt-16 lg:pt-24">
           <FadeInUp
@@ -82,7 +82,7 @@ export default function HeroSection() {
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <a
                   href="#projects"
-                  className="inline-flex items-center justify-center gap-2 rounded-md bg-slate-100 light:bg-slate-950 text-slate-900 light:text-white px-4 py-2 text-sm hover:bg-white light:hover:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-950/40 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-md bg-slate-100 light:bg-slate-950 text-slate-900 light:text-white px-4 py-2.5 text-sm hover:bg-white light:hover:bg-slate-900 hover:shadow-lg hover:shadow-slate-900/20 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-950/40 transition-colors"
                   style={{
                     fontFamily:
                       "var(--font-body)",
@@ -97,7 +97,7 @@ export default function HeroSection() {
                   href="https://www.linkedin.com/in/naufaldirafif/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-md border border-slate-800/70 light:border-slate-400 bg-slate-900/60 light:bg-white px-4 py-2 text-sm text-slate-300 light:text-slate-800 hover:text-slate-100 light:hover:text-slate-950 hover:border-slate-700/70 light:hover:border-slate-600 hover:bg-slate-900/90 light:hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400/30 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-md border border-slate-800/70 light:border-slate-400 bg-slate-900/60 light:bg-white px-4 py-2.5 text-sm text-slate-300 light:text-slate-800 hover:text-slate-100 light:hover:text-slate-950 hover:border-slate-700/70 light:hover:border-slate-600 hover:bg-slate-900/90 light:hover:bg-slate-50 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400/30 transition-colors"
                   style={{
                     fontFamily:
                       "var(--font-body)",
