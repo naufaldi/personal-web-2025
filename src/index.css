@@ -1674,6 +1674,10 @@ Option 5: Noise Texture Pattern (Subtle)
     .animate-marquee {
     animation-play-state: unset;
   }
+
+  .marquee-container {
+    overflow-x: auto;
+  }
 }
 
 /* Theme transition animations - always available for View Transitions API */

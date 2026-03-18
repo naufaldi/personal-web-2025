@@ -6,7 +6,7 @@ export default function JourneyPhotoMarquee() {
   const duplicatedPhotos = [...journeyPhotos, ...journeyPhotos]
 
   return (
-    <section className="px-6 md:px-0 py-12 md:py-16 overflow-hidden">
+    <section className="px-6 md:px-0 py-12 md:py-16 overflow-hidden" aria-label="Journey photo gallery" role="region">
       <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <FadeInUp delay={0.12}>
           <div className="relative overflow-hidden marquee-container">
@@ -14,7 +14,7 @@ export default function JourneyPhotoMarquee() {
               {duplicatedPhotos.map((photo, index) => (
                 <div
                   key={`${photo.id}-${index}`}
-                  className="flex-shrink-0 h-48 w-64 md:h-56 md:w-72 rounded-lg overflow-hidden grayscale light:grayscale-0 transition-all duration-300 opacity-90 border border-slate-800/40 light:border-slate-200/70 bg-slate-900/20 light:bg-white/70"
+                  className="flex-shrink-0 h-48 w-64 md:h-56 md:w-72 rounded-lg overflow-hidden grayscale light:grayscale-0 transition-all duration-300 opacity-90 border border-slate-800/40 light:border-slate-200/70 bg-slate-900/20 light:bg-white/70 hover:grayscale-0 hover:opacity-100 hover:scale-105"
                 >
                   <CloudinaryImg
                     publicId={photo.imageUrl}

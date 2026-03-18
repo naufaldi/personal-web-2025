@@ -5,7 +5,7 @@ import FadeInUp from '@/components/common/FadeInUp'
 
 export default function AboutMeSection() {
   return (
-    <section className="px-6 md:px-0 py-12 md:py-16">
+    <section className="px-6 md:px-0 py-12 md:py-16" aria-labelledby="about-me-heading">
       <div className="mx-auto max-w-7xl sm:px-6 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start md:items-center">
           <FadeInUp delay={0.06}>
@@ -21,20 +21,13 @@ export default function AboutMeSection() {
             <div className="space-y-6">
             <div className="space-y-2">
               <h2
-                className="text-3xl md:text-4xl text-slate-100 light:text-slate-900"
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontWeight: 700,
-                }}
+                id="about-me-heading"
+                className="text-3xl md:text-4xl text-slate-100 light:text-slate-900 font-mono font-bold"
               >
                 {aboutBio.name}
               </h2>
               <p
-                className="text-base md:text-lg text-slate-400 light:text-slate-600"
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontWeight: 500,
-                }}
+                className="text-base md:text-lg text-slate-400 light:text-slate-600 font-body font-medium"
               >
                 {aboutBio.title}
               </p>
@@ -44,11 +37,7 @@ export default function AboutMeSection() {
               {aboutBio.bioParagraphs.map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-sm md:text-base text-slate-300 light:text-slate-700 leading-relaxed"
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontWeight: 400,
-                  }}
+                  className="text-sm md:text-base text-slate-300 light:text-slate-700 leading-relaxed font-body font-normal"
                 >
                   {paragraph}
                 </p>
@@ -57,11 +46,7 @@ export default function AboutMeSection() {
 
             <div className="pt-4">
               <p
-                className="mb-4 text-sm text-slate-400 light:text-slate-600"
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontWeight: 500,
-                }}
+                className="mb-4 text-sm text-slate-400 light:text-slate-600 font-body font-medium"
               >
                 I am also a full-stack engineer, here are my current favorite tech stack:
               </p>
