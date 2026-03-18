@@ -51,7 +51,7 @@ export default function ExperienceSection() {
               0.12
             }
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 auto-rows-[1fr]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 items-start">
               {latestExperiences.map(
                 (
                   experience,
