@@ -15,7 +15,7 @@ export interface OrganizationLogo {
 export const speakerMentorStats: SpeakerMentorStats = {
   menteesTaught: 1000,
   mentoringSessions: 150,
-  speakingEngagements: 25,
+  speakingEngagements: 27,
   speakerTime: '100+ hours',
 }
 
@@ -31,6 +31,19 @@ export const organizationLogos: OrganizationLogo[] = [
     logoUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762849014/portfolio-2025/logo/nest.jpg',
     type: 'mentoring',
     websiteUrl: 'https://nestacademy.id',
+  },
+  {
+    name: 'MOFON',
+    logoUrl: 'https://avatars.githubusercontent.com/naufaldi?s=128',
+    type: 'mentoring',
+    websiteUrl: 'https://mofon.vercel.app',
+  },
+  {
+    name: 'Esteh Creative',
+    logoUrl:
+      'https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://esteh.id&size=128',
+    type: 'mentoring',
+    websiteUrl: 'https://www.esteh.id',
   },
   {
     name: 'Dibimbing',
@@ -54,7 +67,7 @@ export const organizationLogos: OrganizationLogo[] = [
     name: 'Fast Campus',
     logoUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762851008/portfolio-2025/logo/fast-campus.jpg',
     type: 'mentoring',
-    websiteUrl: 'https://fastcampus.com/',
+    websiteUrl: 'https://fastcampus.com/en/products/dev_online_fe',
   },
   {
     name: 'Ekskul',

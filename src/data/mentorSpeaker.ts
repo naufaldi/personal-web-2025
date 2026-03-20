@@ -17,6 +17,23 @@ export interface MentorSpeakerItem {
 
 export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
   {
+    id: '13',
+    eventName: 'Agentic AI for Builders: From Prompt to Autonomous Coding Loop',
+    brief: 'Meetup on how autonomous coding agents run through structured cycles: Plan, Act, Verify, and Iterate. Covered decomposing tasks, multi-step execution, evaluating intermediate outputs, and self-correction toward a defined goal—treating AI as a workflow, not a single-shot generator.',
+    date: '19 February 2026',
+    type: 'speaker',
+  },
+  {
+    id: '14',
+    eventName: '101 Vibe Engineering with MiniMax M2.1',
+    brief: 'Session introducing vibe engineering practices with MiniMax M2.1.',
+    date: 'January 2026',
+    type: 'speaker',
+    links: {
+      website: 'https://luma.com/7bbx8bo9',
+    },
+  },
+  {
     id: '1',
     eventName: 'Basic Javascript with Weather Apps',
     brief: 'Build simple website using HTML/CSS/JS for swifting career to Frontend.',
@@ -63,7 +80,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     date: 'Ongoing',
     type: 'speaker',
     links: {
-      x: 'https://twitter.com/f2aldi',
+      x: 'https://x.com/f2aldi',
     },
   },
   {
@@ -141,7 +158,60 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
     },
   },
+  {
+    id: '15',
+    eventName: 'MOFON (Mentorship Frontend)',
+    brief: 'Frontend Developer Mentor: HTML, CSS, and JavaScript fundamentals, personalized feedback, curriculum design, and collaboration with other mentors to improve the learning experience for students at all levels.',
+    date: 'December 2020 – November 2024',
+    type: 'mentoring',
+    links: {
+      website: 'https://mofon.vercel.app',
+      linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
+    },
+  },
+  {
+    id: '16',
+    eventName: 'Esteh Creative',
+    brief: 'Mentor Frontend Developer: fundamentals of web development, recorded tutorials, and hands-on guidance alongside teaching core HTML, CSS, and JavaScript practices.',
+    date: 'March 2021 – December 2023',
+    type: 'mentoring',
+    links: {
+      website: 'https://www.esteh.id',
+      linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
+    },
+  },
+  {
+    id: '17',
+    eventName: 'Nest Academy',
+    brief: 'Frontend Engineer Mentor: built and delivered a structured HTML, CSS, and JavaScript curriculum, guided learners through projects with best practices, and provided ongoing technical support.',
+    date: 'August 2022 – September 2022',
+    type: 'mentoring',
+    links: {
+      website: 'https://nestacademy.id',
+      linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
+    },
+  },
+  {
+    id: '18',
+    eventName: 'Fast Campus — All-in-One Frontend Web Development',
+    brief: 'Course instructor for the All-in-One Frontend Web Development package (From Zero To Hero), alongside Jessica Cecilia B., F. Dhani Achmad, and Rizky Ramadhan.',
+    date: 'Ongoing',
+    type: 'mentoring',
+    links: {
+      website: 'https://fastcampus.com/en/products/dev_online_fe',
+      linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
+    },
+  },
 ]
+
+const HOME_MENTOR_SPEAKER_FEATURED_IDS = ['13', '14', '5', '6'] as const
+
+export const getHomeMentorSpeakerPreview = (): MentorSpeakerItem[] => {
+  const byId = new Map(mentorSpeakerEngagements.map((item) => [item.id, item]))
+  return HOME_MENTOR_SPEAKER_FEATURED_IDS.map((id) => byId.get(id)).filter(
+    (item): item is MentorSpeakerItem => item !== undefined,
+  )
+}
 
 export const getMentoringEngagements = (): MentorSpeakerItem[] => {
   return mentorSpeakerEngagements.filter((item) => item.type === 'mentoring')

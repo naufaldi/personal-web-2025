@@ -1,10 +1,12 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router'
-import { mentorSpeakerEngagements } from '@/data/mentorSpeaker'
+import { getHomeMentorSpeakerPreview } from '@/data/mentorSpeaker'
 import MentorSpeakerItem from './MentorSpeakerItem'
 import FadeInUp from '@/components/common/FadeInUp'
 
 export default function MentorSpeakerSection() {
+  const previewItems = getHomeMentorSpeakerPreview()
+
   return (
     <section id="mentor-speaker" aria-labelledby="mentor-speaker-heading" className="relative bg-slate-950 light:bg-slate-50 px-6 md:px-0 py-12 md:py-16">
       <div className="mx-auto max-w-7xl sm:px-6 w-full">
@@ -19,13 +21,13 @@ export default function MentorSpeakerSection() {
           </FadeInUp>
           <FadeInUp delay={0.12}>
             <div className="flex flex-col">
-              {mentorSpeakerEngagements.slice(0, 4).map((item, index) => (
+              {previewItems.map((item, index) => (
                 <MentorSpeakerItem key={item.id} item={item} index={index} />
               ))}
             </div>
           </FadeInUp>
 
-          <FadeInUp delay={0.12 + mentorSpeakerEngagements.slice(0, 4).length * 0.1}>
+          <FadeInUp delay={0.12 + previewItems.length * 0.1}>
             <div className="flex justify-center pt-4">
             <Link
               to="/speaker"
