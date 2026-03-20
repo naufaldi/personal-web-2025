@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { getProjectBySlug } from "@/data/portfolio";
@@ -6,6 +7,7 @@ import MarkdownRenderer from "@/components/common/MarkdownRenderer";
 import TableOfContents from "@/components/projects/TableOfContents";
 import { getTechIcon } from "@/lib/techIcons";
 import { Badge } from "@/components/ui/badge";
+import { Skeleton } from "@/components/ui/skeleton";
 import FadeInUp from "@/components/common/FadeInUp";
 
 export default function ProjectDetail() {
@@ -13,6 +15,8 @@ export default function ProjectDetail() {
     slug: string;
   }>();
   const project = slug ? getProjectBySlug(slug) : undefined;
+  const [imgError, setImgError] = useState(false);
+  const [imgLoading, setImgLoading] = useState(true);
 
   if (!project || !project.content) {
     return (
@@ -36,7 +40,7 @@ export default function ProjectDetail() {
 
   return (
     <div className="project-detail-pattern min-h-screen flex flex-col relative bg-slate-950 light:bg-slate-50">
-      <div className="mx-auto max-w-7xl sm:px-6 w-full px-6 md:px-0 py-12 md:py-16 relative z-10">
+      <div className="mx-auto max-w-6xl sm:px-6 w-full px-6 md:px-0 py-12 md:py-16 relative z-10">
         <Link
           to="/projects"
           className="inline-flex items-center gap-2 mb-8 px-2 py-1 -ml-2 rounded-md text-slate-400 light:text-slate-600 hover:text-slate-200 light:hover:text-slate-800 hover:bg-slate-900/40 light:hover:bg-slate-100/60 motion-safe:transition-colors motion-safe:duration-200 font-body font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40"
@@ -53,17 +57,30 @@ export default function ProjectDetail() {
               aria-labelledby="project-detail-heading"
             >
               <header className="space-y-4">
-                {project.image && (
-                  <div className="group relative w-full h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden border border-slate-800/70 light:border-slate-200/70 bg-slate-900/60 light:bg-white/60">
+                {/* Hero image with fallback */}
+                <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden border border-slate-800/70 light:border-slate-200/70 bg-slate-900/60 light:bg-white/60">
+                  {imgLoading && !imgError && project.image && (
+                    <Skeleton className="absolute inset-0 h-full w-full rounded-none bg-slate-800/60" />
+                  )}
+                  {!project.image || imgError ? (
+                    <div className="flex h-full w-full items-center justify-center bg-slate-800/60 light:bg-slate-200/60 px-4">
+                      <span className="text-center text-sm text-slate-400 light:text-slate-500 font-body font-medium">
+                        {project.title}
+                      </span>
+                    </div>
+                  ) : (
                     <img
                       src={project.image}
                       alt={`Screenshot of ${project.title}`}
                       className="w-full h-full object-cover motion-safe:transition-transform motion-safe:duration-300 group-hover:scale-[1.03]"
                       loading="eager"
                       decoding="async"
+                      onLoad={() => setImgLoading(false)}
+                      onError={() => setImgError(true)}
                     />
-                  </div>
-                )}
+                  )}
+                </div>
+
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <h1 id="project-detail-heading" className="text-3xl md:text-4xl text-slate-100 light:text-slate-900 mb-2 font-mono font-bold">
@@ -141,7 +158,8 @@ export default function ProjectDetail() {
                 </div>
               </header>
 
-              <div className="prose prose-invert max-w-none">
+              {/* Content */}
+              <div className="max-w-prose mx-auto">
                 <MarkdownRenderer content={project.content} />
               </div>
             </article>

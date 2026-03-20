@@ -41,11 +41,11 @@ export default function ExperienceCard({
         index *
           0.1
       }
-      className="h-full"
+      className=""
     >
       <article
         className={cn(
-          "flex h-full flex-col rounded-lg border border-slate-800/70 light:border-slate-200 bg-slate-900/60 light:bg-white p-2.5 sm:p-3 motion-safe:transition-all motion-safe:duration-200 hover:border-slate-700/70 light:hover:border-slate-300 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-lg hover:shadow-slate-900/50 light:hover:shadow-slate-200",
+          "flex flex-col rounded-lg border border-slate-800/70 light:border-slate-200 bg-slate-900/60 light:bg-white p-2.5 sm:p-3 motion-safe:transition-all motion-safe:duration-200 hover:border-slate-700/70 light:hover:border-slate-300 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-lg hover:shadow-slate-900/50 light:hover:shadow-slate-200",
           isCurrent &&
             "border-slate-700/50 light:border-slate-300 ring-1 ring-slate-700/20 light:ring-slate-300/20",
         )}
