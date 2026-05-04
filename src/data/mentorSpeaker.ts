@@ -76,7 +76,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
   {
     id: '11',
     eventName: 'Twitter Spaces',
-    brief: 'Hosting Twitter Spaces to engage with a global audience through real-time dialogue, sharing knowledge and insights about frontend development, career growth, and the tech industry.',
+    brief: 'Hosting Twitter Spaces to engage with a global audience through real-time dialogue, sharing knowledge and insights about software engineering, career growth, and the tech industry.',
     date: 'Ongoing',
     type: 'speaker',
     links: {
@@ -86,7 +86,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
   {
     id: '5',
     eventName: 'ADPList Mentorship',
-    brief: 'Engaged as a mentor on ADPList, providing personalized 1:1 mentorship to emerging Frontend Engineers, focusing on career growth and technical skills enhancement. Recognized for outstanding impact, achieving Top 1% Mentor status consecutively in February, March, and April 2023.',
+    brief: 'Engaged as a mentor on ADPList, providing personalized 1:1 mentorship to emerging engineers, focusing on career growth and technical skills enhancement. Recognized for outstanding impact, achieving Top 1% Mentor status consecutively in February, March, and April 2023.',
     date: 'February 2023 - Present',
     type: 'mentoring',
     links: {
@@ -97,7 +97,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
   {
     id: '6',
     eventName: 'Dibimbing Bootcamp',
-    brief: 'Mentored over 50 individuals in the \'Dibimbing\' bootcamp, focusing on Frontend Engineering with an emphasis on Web Development and the React Ecosystem, fostering a new generation of skilled developers.',
+    brief: 'Mentored over 50 individuals in the \'Dibimbing\' bootcamp, focusing on web development, React, and practical product-building skills for a new generation of developers.',
     date: 'June 2023 - January 2024',
     type: 'mentoring',
     links: {
@@ -119,7 +119,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
   {
     id: '8',
     eventName: 'Ekskul Frontend Development',
-    brief: 'Taught and mentored over 30 mentees, providing comprehensive guidance in frontend development. Developed a detailed curriculum focusing on HTML, CSS, and JavaScript, aiming to build strong foundational skills.',
+    brief: 'Taught and mentored over 30 mentees, providing comprehensive guidance in web development. Developed a detailed curriculum focusing on HTML, CSS, and JavaScript, aiming to build strong foundational skills.',
     date: 'December 2021 - January 2022',
     type: 'mentoring',
     links: {
@@ -183,7 +183,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
   {
     id: '17',
     eventName: 'Nest Academy',
-    brief: 'Frontend Engineer Mentor: built and delivered a structured HTML, CSS, and JavaScript curriculum, guided learners through projects with best practices, and provided ongoing technical support.',
+    brief: 'Software engineering mentor: built and delivered a structured HTML, CSS, and JavaScript curriculum, guided learners through projects with best practices, and provided ongoing technical support.',
     date: 'August 2022 – September 2022',
     type: 'mentoring',
     links: {
@@ -242,4 +242,3 @@ export const getAllOrganizations = (): string[] => {
   })
   return Array.from(organizations)
 }
-

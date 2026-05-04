@@ -1,73 +1,124 @@
-import { Twitter, Linkedin } from 'lucide-react'
+import { ArrowUpRight, Linkedin, Mail, Twitter } from 'lucide-react'
 import { siteConfig } from '@/data/site'
-import { cn } from '@/lib'
+import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
+import { Button } from '@/components/ui/button'
 
 export default function ConnectCTA() {
+  const contactSignals = [
+    {
+      label: 'STATUS',
+      value: 'Open channel',
+      detail: 'Software engineering work, speaking, and mentorship',
+    },
+    {
+      label: 'LOCATION',
+      value: 'Bekasi',
+      detail: 'Indonesia based, remote friendly',
+    },
+    {
+      label: 'PRIMARY_ROUTE',
+      value: 'LinkedIn',
+      detail: 'Best path for work conversations',
+    },
+  ]
+
   return (
-    <section className="relative bg-slate-900 light:bg-slate-50 border-t border-slate-800/70 light:border-slate-300 px-6 md:px-0 py-12 md:py-16">
-      <div
-        className="absolute inset-0 opacity-30 light:opacity-20"
-        style={{
-          backgroundImage:
-            'radial-gradient(ellipse at top right, rgba(148, 163, 184, 0.15), transparent 50%)',
-        }}
-        aria-hidden="true"
-      />
-      <div className="relative max-w-7xl mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white light:text-slate-900 mb-4">
-              Connect with me
-            </h2>
-            <p className="text-sm md:text-base text-slate-400 light:text-slate-600 leading-relaxed">
-              Don't miss out 👋. Get updates on my latest work and insights.
-            </p>
+    <section
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="border-y border-[var(--border-line)] bg-[var(--paper)] py-12 md:py-16"
+    >
+      <div className="site-container">
+        <div className="section-rule grid gap-8 pt-5 md:grid-cols-[minmax(0,1fr)_minmax(320px,560px)] md:items-end">
+          <div className="space-y-4">
+            <div className="text-drawing-label">05 // CONTACT_SURFACE</div>
+            <div className="space-y-2">
+              <h2
+                id="contact-heading"
+                className="font-mono text-3xl font-medium leading-none text-[var(--graphite)] md:text-5xl"
+              >
+                Connect with me
+              </h2>
+              <p className="text-body-readable">
+                Get updates on my latest software work, writing, and practical engineering notes.
+              </p>
+            </div>
           </div>
 
-          <div className="flex flex-col gap-3">
+          <div className="grid gap-3">
             {siteConfig.socialLinks.twitter && (
-              <a
-                href={siteConfig.socialLinks.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(
-                  'inline-flex items-center justify-between w-full px-6 py-3',
-                  'bg-slate-100 light:bg-slate-950 text-slate-900 light:text-white',
-                  'hover:bg-white light:hover:bg-slate-900 hover:shadow-md hover:shadow-slate-900/20 light:hover:shadow-slate-200',
-                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400',
-                  'focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 light:focus-visible:ring-offset-white',
-                  'transition-all duration-200 rounded-md',
-                  'text-sm font-semibold'
-                )}
-              >
-                <span>Follow on X</span>
-                <Twitter className="w-5 h-5" aria-hidden="true" />
-              </a>
+              <Button asChild variant="primary" className="justify-between">
+                <a href={siteConfig.socialLinks.twitter} target="_blank" rel="noopener noreferrer">
+                  Follow on X
+                  <Twitter className="h-5 w-5" aria-hidden="true" />
+                </a>
+              </Button>
             )}
             {siteConfig.socialLinks.linkedin && (
-              <a
-                href={siteConfig.socialLinks.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(
-                  'inline-flex items-center justify-between w-full px-6 py-3',
-                  'border border-slate-700/70 light:border-slate-300 bg-slate-800/90 light:bg-white text-slate-200 light:text-slate-800',
-                  'hover:text-white light:hover:text-slate-950 hover:bg-slate-800 light:hover:bg-slate-50 hover:border-slate-600/70 light:hover:border-slate-400',
-                  'hover:shadow-md hover:shadow-slate-900/30 light:hover:shadow-slate-200',
-                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/50',
-                  'focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 light:focus-visible:ring-offset-white',
-                  'transition-all duration-200 rounded-md',
-                  'text-sm font-medium'
-                )}
-              >
-                <span>Contact on LinkedIn</span>
-                <Linkedin className="w-5 h-5" aria-hidden="true" />
-              </a>
+              <Button asChild variant="secondary" className="justify-between">
+                <a href={siteConfig.socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+                  Contact on LinkedIn
+                  <Linkedin className="h-5 w-5" aria-hidden="true" />
+                </a>
+              </Button>
+            )}
+            {siteConfig.socialLinks.email && (
+              <Button asChild variant="technical" className="justify-between">
+                <a href={siteConfig.socialLinks.email}>
+                  Send email
+                  <Mail className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </Button>
             )}
           </div>
+        </div>
+
+        <div className="mt-8 grid gap-px border-y border-[var(--border-line)] bg-[var(--border-line)] md:grid-cols-3">
+          {contactSignals.map((signal, index) => (
+            <div key={signal.label} className="bg-[var(--paper)] px-4 py-3 md:px-5 md:py-4">
+              <div className="text-drawing-label">
+                {String(index + 1).padStart(2, '0')} // {signal.label}
+              </div>
+              <div className="mt-4 flex items-start justify-between gap-4">
+                <div>
+                    <p className="font-mono text-lg font-medium leading-none text-[var(--graphite)] md:text-xl">
+                    {signal.value}
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-[var(--graphite-muted)]">
+                    {signal.detail}
+                  </p>
+                </div>
+                {signal.label === 'STATUS' && (
+                  <TechnicalLabel variant="status" className="mt-1">
+                    Live
+                  </TechnicalLabel>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 border-t border-[var(--border-line)]">
+          <a
+            href="/projects"
+            className="group/row relative grid min-h-16 items-center border-b border-[var(--border-line)] py-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
+          >
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-2 left-3 right-3 bg-[var(--surface-subtle)]/70 opacity-0 transition-opacity duration-200 group-hover/row:opacity-100 md:left-4 md:right-4"
+            />
+            <span className="relative flex items-center justify-between gap-4">
+              <span>
+                <span className="text-drawing-label">04 // NEXT_ROUTE</span>
+                <span className="mt-2 block font-mono text-lg font-medium text-[var(--graphite)]">
+                  Browse selected work
+                </span>
+              </span>
+              <ArrowUpRight className="h-4 w-4 text-[var(--graphite)]" aria-hidden="true" />
+            </span>
+          </a>
         </div>
       </div>
     </section>
   )
 }
-

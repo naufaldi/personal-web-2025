@@ -33,8 +33,8 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: 'Naufaldi Rafif S.',
-  tagline: 'Product Engineer & Mentor',
-  bio: 'Building frontend solutions with 7 years of experience. Mentored 200+ developers and transitioning towards fullstack while sharing knowledge through speaking and mentorship.',
+  tagline: 'Software Engineer & Mentor',
+  bio: 'Software engineer focused on product systems, with deep frontend experience and growing backend ownership.',
   statusBadge: 'Open to new projects',
   availability: 'Q4 • 2025 availability',
   heroImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop',
@@ -69,4 +69,3 @@ export const siteConfig: SiteConfig = {
     adplist: 'https://adplist.org/mentors/naufaldi-rafif-s',
   },
 }
-
