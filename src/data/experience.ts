@@ -110,12 +110,12 @@ export const workExperiences: WorkExperience[] = [
       'Converted Figma designs to pixel-perfect HTML/CSS code, facilitating rapid integration into Laravel framework',
       'Developed a dynamic Blog/Company Profile using ReactJS with backend API integration, enabling quick launch of feature-rich applications',
       'Built responsive websites optimized for various browsers, focusing on accessibility features like color contrast and ARIA labels',
-      'Mentored interns on frontend development practices, elevating their skills and contributing to team capacity growth',
+      'Mentored interns on web development practices, elevating their skills and contributing to team capacity growth',
     ],
     keyAchievementsMarkdown: `- Converted Figma designs to pixel-perfect HTML/CSS code, facilitating rapid integration into Laravel framework
 - Developed a dynamic Blog/Company Profile using ReactJS with backend API integration, enabling quick launch of feature-rich applications
 - Built responsive websites optimized for various browsers, focusing on accessibility features like color contrast and ARIA labels
-- Mentored interns on frontend development practices, elevating their skills and contributing to team capacity growth`,
+- Mentored interns on web development practices, elevating their skills and contributing to team capacity growth`,
     techStack: ['React', 'JavaScript', 'HTML', 'CSS', 'Laravel'],
   },
   {
@@ -130,12 +130,12 @@ export const workExperiences: WorkExperience[] = [
       'Developed a company landing page using component frameworks, delivering high-quality outcomes and accelerating prototyping',
       'Built a transaction management dashboard using HTML/CSS, optimized for Laravel integration and efficient transaction oversight',
       'Engineered internal tools for simplifying operational tasks, improving process efficiency',
-      'Mentored interns on frontend development practices, effectively managing and enriching their learning experience',
+      'Mentored interns on web development practices, effectively managing and enriching their learning experience',
     ],
     keyAchievementsMarkdown: `- Developed a company landing page using component frameworks, delivering high-quality outcomes and accelerating prototyping
 - Built a transaction management dashboard using HTML/CSS, optimized for Laravel integration and efficient transaction oversight
 - Engineered internal tools for simplifying operational tasks, improving process efficiency
-- Mentored interns on frontend development practices, effectively managing and enriching their learning experience`,
+- Mentored interns on web development practices, effectively managing and enriching their learning experience`,
     techStack: ['HTML', 'CSS', 'JavaScript', 'Laravel'],
   },
 ]
@@ -143,4 +143,3 @@ export const workExperiences: WorkExperience[] = [
 export const getLatestExperiences = (limit: number = 4): WorkExperience[] => {
   return workExperiences.slice(0, limit)
 }
-
