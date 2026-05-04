@@ -17,7 +17,6 @@ const websiteLinks = [
   { name: 'Book', href: '/book', external: false },
   { name: 'Manhwa', href: '/manhwa', external: false },
   { name: 'Short', href: '/shorts', external: false },
-  { name: 'Experience', href: '/experience', external: false },
   { name: 'Speaking', href: '/speaking', external: false },
 ]
 

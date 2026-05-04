@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import Layout from '@/components/common/Layout'
 import Home from '@/pages/Home'
 import About from '@/pages/About'
-import Experience from '@/pages/Experience'
 import Speaker from '@/pages/Speaker'
 import Manhwa from '@/pages/Manhwa'
 import Projects from '@/pages/Projects'
@@ -26,7 +25,6 @@ export default function App() {
           <Route path="projects/:slug" element={<ProjectDetail />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="blogs/:slug" element={<BlogDetail />} />
-          <Route path="experience" element={<Experience />} />
           <Route path="speaker" element={<Speaker />} />
 
           <Route path="shorts" element={<Shorts />} />

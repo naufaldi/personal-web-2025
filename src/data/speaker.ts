@@ -21,6 +21,26 @@ export const speakerMentorStats: SpeakerMentorStats = {
 
 export const organizationLogos: OrganizationLogo[] = [
   {
+    name: 'Codex',
+    logoUrl:
+      'https://cdn.jsdelivr.net/gh/lobehub/lobe-icons@master/packages/static-png/light/codex-color.png',
+    type: 'voluntary',
+    websiteUrl: 'https://openai.com/codex',
+  },
+  {
+    name: 'Cursor',
+    logoUrl:
+      'https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cursor.com&size=128',
+    type: 'voluntary',
+    websiteUrl: 'https://cursor.com',
+  },
+  {
+    name: 'MiniMax',
+    logoUrl: 'https://dl.svgcdn.com/png/simple-icons/minimax-800.png',
+    type: 'voluntary',
+    websiteUrl: 'https://www.minimax.io',
+  },
+  {
     name: 'ADPList',
     logoUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762849006/portfolio-2025/logo/adplist.png',
     type: 'mentoring',
@@ -111,4 +131,3 @@ export const organizationLogos: OrganizationLogo[] = [
     websiteUrl: 'https://stasion.org/',
   },
 ]
-

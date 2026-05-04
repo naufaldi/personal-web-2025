@@ -1,23 +1,15 @@
-import {
-  Search,
-  X,
-} from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib";
+import { Search, X } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
+import { cn } from '@/lib'
 
 interface ShortsFilterProps {
-  tags: string[];
-  selectedTags: string[];
-  searchQuery: string;
-  onTagToggle: (
-    tag: string,
-  ) => void;
-  onSearchChange: (
-    query: string,
-  ) => void;
-  onClearFilters: () => void;
+  tags: string[]
+  selectedTags: string[]
+  searchQuery: string
+  onTagToggle: (tag: string) => void
+  onSearchChange: (query: string) => void
+  onClearFilters: () => void
 }
 
 export default function ShortsFilter({
@@ -28,180 +20,80 @@ export default function ShortsFilter({
   onSearchChange,
   onClearFilters,
 }: ShortsFilterProps) {
-  const handleTagClick =
-    (
-      tag: string,
-    ) => {
-      onTagToggle(
-        tag,
-      );
-    };
-
-  const handleTagKeyDown =
-    (
-      e: React.KeyboardEvent,
-      tag: string,
-    ) => {
-      if (
-        e.key ===
-          "Enter" ||
-        e.key ===
-          " "
-      ) {
-        e.preventDefault();
-        onTagToggle(
-          tag,
-        );
-      }
-    };
-
-  const hasActiveFilters =
-    selectedTags.length >
-      0 ||
-    searchQuery.length >
-      0;
+  const hasActiveFilters = selectedTags.length > 0 || searchQuery.length > 0
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h3
-          className="text-lg text-slate-100 light:text-slate-900 mb-4"
-          style={{
-            fontFamily:
-              "var(--font-mono)",
-            fontWeight: 600,
-          }}
-        >
-          Search
-        </h3>
+    <div className="border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)]">
+      <div className="border-b border-[var(--border-line)] p-5">
+        <div className="mb-4 flex items-center justify-between">
+          <div>
+            <TechnicalLabel>FILTERS</TechnicalLabel>
+            <h3 className="mt-3 font-mono text-lg font-medium text-[var(--graphite)]">
+              Search
+            </h3>
+          </div>
+          {hasActiveFilters && (
+            <Button variant="technical" size="sm" onClick={onClearFilters}>
+              Show all
+            </Button>
+          )}
+        </div>
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400 light:text-slate-500" />
-          <Input
+          <Search
+            className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--graphite-muted)]"
+            aria-hidden="true"
+          />
+          <input
             type="text"
             placeholder="Search shorts..."
-            value={
-              searchQuery
-            }
-            onChange={(
-              e,
-            ) =>
-              onSearchChange(
-                e
-                  .target
-                  .value,
-              )
-            }
-            className="pl-10 pr-10 bg-slate-900/60 light:bg-white/60 border-slate-800/70 light:border-slate-200/70 text-slate-200 light:text-slate-900 placeholder:text-slate-500 light:placeholder:text-slate-400 focus-visible:ring-slate-700/70 light:focus-visible:ring-slate-900/30"
-            style={{
-              fontFamily:
-                "var(--font-body)",
-            }}
+            value={searchQuery}
+            onChange={(event) => onSearchChange(event.target.value)}
+            className="h-11 w-full border border-[var(--border-line)] bg-[var(--paper)] px-10 text-sm text-[var(--graphite)] transition-colors placeholder:text-[var(--graphite-faint)] focus:border-[var(--border-strong)] focus:outline-none focus:ring-2 focus:ring-[var(--border-strong)]/20"
           />
           {searchQuery && (
             <button
-              onClick={() =>
-                onSearchChange(
-                  "",
-                )
-              }
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 light:text-slate-500 hover:text-slate-200 light:hover:text-slate-700 transition-colors"
+              type="button"
+              onClick={() => onSearchChange('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
               aria-label="Clear search"
             >
-              <X className="h-4 w-4" />
+              <X className="h-4 w-4" aria-hidden="true" />
             </button>
           )}
         </div>
       </div>
 
-      <div>
-        <div className="flex items-center justify-between mb-4">
-          <h3
-            className="text-lg text-slate-100 light:text-slate-900"
-            style={{
-              fontFamily:
-                "var(--font-mono)",
-              fontWeight: 600,
-            }}
-          >
-            Choose
-            topics
+      <div className="p-5">
+        <div className="mb-4">
+          <TechnicalLabel>TOPIC_INDEX</TechnicalLabel>
+          <h3 className="mt-3 font-mono text-lg font-medium text-[var(--graphite)]">
+            Choose topics
           </h3>
-          {hasActiveFilters && (
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={
-                onClearFilters
-              }
-              className="h-7 px-2 text-xs border-slate-700/70 light:border-slate-200/70 text-slate-300 light:text-slate-600 bg-slate-900/40 light:bg-white/60 hover:border-slate-600 light:hover:border-slate-300 hover:bg-slate-800/50 light:hover:bg-white"
-              style={{
-                fontFamily:
-                  "var(--font-body)",
-                fontWeight: 500,
-              }}
-            >
-              Show
-              All
-            </Button>
-          )}
         </div>
         <div className="flex flex-wrap gap-2">
-          {tags.map(
-            (
-              tag,
-            ) => {
-              const isSelected =
-                selectedTags.includes(
-                  tag,
-                );
-              return (
-                <Badge
-                  key={
-                    tag
-                  }
-                  variant="outline"
-                  className={cn(
-                    "cursor-pointer transition-all duration-200",
-                    isSelected
-                      ? "border-slate-600 light:border-slate-900 bg-slate-800/70 light:bg-slate-100 text-slate-100 light:text-slate-900"
-                      : "border-slate-800/70 light:border-slate-200/70 text-slate-300 light:text-slate-700 bg-slate-900/40 light:bg-white/60 hover:border-slate-600 light:hover:border-slate-300 hover:bg-slate-800/50 light:hover:bg-white",
-                  )}
-                  style={{
-                    fontFamily:
-                      "var(--font-body)",
-                    fontWeight: 500,
-                  }}
-                  onClick={() =>
-                    handleTagClick(
-                      tag,
-                    )
-                  }
-                  onKeyDown={(
-                    e,
-                  ) =>
-                    handleTagKeyDown(
-                      e,
-                      tag,
-                    )
-                  }
-                  tabIndex={
-                    0
-                  }
-                  role="button"
-                  aria-label={`${isSelected ? "Deselect" : "Select"} ${tag} tag`}
-                  aria-pressed={
-                    isSelected
-                  }
-                >
-                  {
-                    tag
-                  }
-                </Badge>
-              );
-            },
-          )}
+          {tags.map((tag) => {
+            const isSelected = selectedTags.includes(tag)
+
+            return (
+              <button
+                key={tag}
+                type="button"
+                className={cn(
+                  'border border-dashed px-2 py-1 font-mono text-[11px] uppercase tracking-[0.14em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]',
+                  isSelected
+                    ? 'border-[var(--graphite)] bg-[var(--graphite)] text-[var(--paper)]'
+                    : 'border-[var(--border-dashed)] bg-[var(--paper)] text-[var(--graphite-muted)] hover:border-[var(--border-strong)] hover:text-[var(--graphite)]',
+                )}
+                onClick={() => onTagToggle(tag)}
+                aria-label={`${isSelected ? 'Deselect' : 'Select'} ${tag} tag`}
+                aria-pressed={isSelected}
+              >
+                {tag}
+              </button>
+            )
+          })}
         </div>
       </div>
     </div>
-  );
+  )
 }

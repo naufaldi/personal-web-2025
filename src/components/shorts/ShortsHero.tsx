@@ -1,35 +1,31 @@
-import { FileText } from 'lucide-react'
+import BlueprintIndexHero from '@/components/design-system/BlueprintIndexHero'
+import { allShorts, getAllTags } from '@/data/shorts'
 
 export default function ShortsHero() {
+  const latestShort = allShorts[0]
+
   return (
-    <div
-      className="px-6 md:px-0 flex flex-col items-center gap-4 mb-12"
-      style={{
-        animation: 'fade-in 900ms ease-out both',
-        animationDelay: '60ms',
-      }}
-    >
-      <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 light:border-slate-200/70 bg-slate-900/60 light:bg-white/85">
-        <FileText className="h-6 w-6 text-slate-300 light:text-slate-600" />
-      </div>
-      <h1
-        className="text-4xl md:text-5xl text-center"
-        style={{
-          fontFamily: 'var(--font-mono)',
-          fontWeight: 700,
-        }}
-      >
-        <span className="text-slate-100 light:text-slate-900">Shorts</span>
-      </h1>
-      <p
-        className="text-sm md:text-base text-slate-500 light:text-slate-600 text-center"
-        style={{
-          fontFamily: 'var(--font-body)',
-          fontWeight: 500,
-        }}
-      >
-        Quick tips, code snippets, and rules
-      </p>
-    </div>
+    <BlueprintIndexHero
+      eyebrow="SHORT_INDEX"
+      title={
+        <>
+          Shorts /
+          <br />
+          Notes
+        </>
+      }
+      titleId="shorts-hero-heading"
+      description="Quick tips, code snippets, and rules for scanning first, applying second. Small notes pulled into a quick reference index."
+      stats={[
+        { label: 'MD files', value: allShorts.length },
+        { label: 'Topics', value: getAllTags().length },
+      ]}
+      latestLabel="Latest short"
+      latestValue={latestShort?.date ?? 'READY'}
+      statusLabel="SNIPPETS_READY"
+      metadata={['route: /shorts', 'source: md_to_card']}
+      actionHref="#shorts-index-heading"
+      actionLabel="View index"
+    />
   )
 }

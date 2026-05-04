@@ -34,7 +34,6 @@ const secondaryItems: NavItem[] = [
   { name: 'Book', href: '/book' },
   { name: 'Manhwa', href: '/manhwa' },
   { name: 'Short', href: '/shorts' },
-  { name: 'Experience', href: '/experience' },
 ]
 
 const linkClassName = (isActive: boolean) =>

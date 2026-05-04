@@ -1,157 +1,86 @@
-import {
-  useParams,
-  useNavigate,
-} from "react-router";
-import { ArrowLeft } from "lucide-react";
-import { getShortBySlug } from "@/data/shorts";
-import MarkdownRenderer from "@/components/shorts/MarkdownRenderer";
-import { Badge } from "@/components/ui/badge";
+import { Link, useNavigate, useParams } from 'react-router'
+import { ArrowLeft } from 'lucide-react'
+import MarkdownRenderer from '@/components/shorts/MarkdownRenderer'
+import { Button } from '@/components/ui/button'
+import DrawingFrame from '@/components/design-system/DrawingFrame'
+import MetadataRow from '@/components/design-system/MetadataRow'
+import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
+import { getShortBySlug } from '@/data/shorts'
 
 export default function ShortDetail() {
-  const {
-    slug,
-  } =
-    useParams<{
-      slug: string;
-    }>();
-  const navigate =
-    useNavigate();
-  const short =
-    slug
-      ? getShortBySlug(
-          slug,
-        )
-      : undefined;
+  const { slug } = useParams<{ slug: string }>()
+  const navigate = useNavigate()
+  const short = slug ? getShortBySlug(slug) : undefined
 
-  if (
-    !short
-  ) {
+  if (!short) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-950 light:bg-slate-50">
-        <div className="text-center">
-          <h1
-            className="text-2xl text-slate-100 light:text-slate-900 mb-4"
-            style={{
-              fontFamily:
-                "var(--font-mono)",
-              fontWeight: 700,
-            }}
-          >
-            Short
-            not
-            found
+      <div className="grid min-h-screen place-items-center bg-[var(--paper)] px-6 text-[var(--graphite)]">
+        <div className="border border-[var(--border-line)] bg-[var(--paper)] p-8 text-center shadow-[var(--shadow-paper-xs)]">
+          <TechnicalLabel>404 // SHORT_NOT_FOUND</TechnicalLabel>
+          <h1 className="mt-4 font-mono text-2xl font-semibold text-[var(--graphite)]">
+            Short not found
           </h1>
-          <button
-            onClick={() =>
-              navigate(
-                "/shorts",
-              )
-            }
-            className="text-slate-400 light:text-slate-600 hover:text-slate-200 light:hover:text-slate-900 transition-colors"
-            style={{
-              fontFamily:
-                "var(--font-body)",
-              fontWeight: 500,
-            }}
-          >
-            Back
-            to
-            Shorts
-          </button>
+          <Button asChild variant="technical" className="mt-6">
+            <Link to="/shorts">Back to shorts</Link>
+          </Button>
         </div>
       </div>
-    );
+    )
   }
 
   return (
-    <div className="min-h-screen flex flex-col relative bg-slate-950 light:bg-slate-50">
-      <div
-        className="bg-pattern-shorts"
-        aria-hidden="true"
-      />
-      <div className="mx-auto max-w-4xl px-6 w-full px-6 md:px-0 py-12 md:py-16 relative z-10">
-        <button
-          onClick={() =>
-            navigate(
-              "/shorts",
-            )
-          }
-          className="inline-flex items-center gap-2 mb-8 text-slate-400 light:text-slate-600 hover:text-slate-200 light:hover:text-slate-900 transition-colors"
-          style={{
-            fontFamily:
-              "var(--font-body)",
-            fontWeight: 500,
-          }}
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Back
-          to
-          Shorts
-        </button>
+    <div className="relative flex min-h-screen flex-col bg-[var(--paper)] text-[var(--graphite)]">
+      <DrawingFrame className="py-10 md:py-14">
+        <div className="mx-auto max-w-5xl">
+          <Button
+            type="button"
+            variant="technical"
+            onClick={() => navigate('/shorts')}
+            className="mb-8"
+          >
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+            Back to shorts
+          </Button>
 
-        <article
-          className="space-y-6"
-          style={{
-            animation:
-              "fade-in 900ms ease-out both",
-            animationDelay:
-              "60ms",
-          }}
-        >
-          <header className="space-y-4">
-            <h1
-              className="text-3xl md:text-4xl text-slate-100 light:text-slate-900"
-              style={{
-                fontFamily:
-                  "var(--font-mono)",
-                fontWeight: 700,
-              }}
-            >
-              {
-                short.title
-              }
-            </h1>
+          <article className="border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)]">
+            <header className="grid gap-px bg-[var(--border-line)] md:grid-cols-[minmax(0,1fr)_280px]">
+              <div className="bg-[var(--paper)] p-5 md:p-8">
+                <div className="text-drawing-label">01 // SHORT_DETAIL</div>
+                <h1 className="mt-8 max-w-3xl font-mono text-4xl font-semibold leading-tight text-[var(--graphite)] md:text-6xl">
+                  {short.title}
+                </h1>
 
-            {short
-              .tags
-              .length >
-              0 && (
-              <div className="flex flex-wrap items-center gap-2">
-                {short.tags.map(
-                  (
-                    tag,
-                  ) => (
-                    <Badge
-                      key={
-                        tag
-                      }
-                      variant="outline"
-                      className="border-slate-800/70 light:border-slate-200/70 text-slate-300 light:text-slate-700 bg-slate-900/40 light:bg-white/60"
-                      style={{
-                        fontFamily:
-                          "var(--font-body)",
-                        fontWeight: 500,
-                      }}
-                    >
-                      {
-                        tag
-                      }
-                    </Badge>
-                  ),
+                {short.tags.length > 0 && (
+                  <div className="mt-8 flex flex-wrap items-center gap-2">
+                    {short.tags.map((tag) => (
+                      <TechnicalLabel key={tag} variant="outline">
+                        {tag}
+                      </TechnicalLabel>
+                    ))}
+                  </div>
                 )}
               </div>
-            )}
-          </header>
 
-          <div className="prose prose-invert light:prose-light max-w-none">
-            <MarkdownRenderer
-              content={
-                short.content
-              }
-            />
-          </div>
-        </article>
-      </div>
+              <aside className="bg-[var(--paper)] p-5 md:p-8" aria-label="Short metadata">
+                <TechnicalLabel variant="status">DETAIL_READY</TechnicalLabel>
+                <div className="mt-8">
+                  <MetadataRow
+                    items={[
+                      `route: /shorts/${short.slug}`,
+                      `date: ${short.date}`,
+                      `tags: ${short.tags.length}`,
+                    ]}
+                  />
+                </div>
+              </aside>
+            </header>
+
+            <div className="prose prose-invert light:prose-light max-w-none p-5 md:p-8">
+              <MarkdownRenderer content={short.content} />
+            </div>
+          </article>
+        </div>
+      </DrawingFrame>
     </div>
-  );
+  )
 }

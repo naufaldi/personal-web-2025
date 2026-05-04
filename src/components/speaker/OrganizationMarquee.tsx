@@ -1,28 +1,35 @@
 import { organizationLogos } from '@/data/speaker'
 import CloudinaryImg from '@/components/ui/cloudinary-img'
 import FadeInUp from '@/components/common/FadeInUp'
+import SectionHeader from '@/components/design-system/SectionHeader'
+import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 
 export default function OrganizationMarquee() {
   const duplicatedLogos = [...organizationLogos, ...organizationLogos]
 
   return (
     <section
-      className="px-6 md:px-0 py-12 md:py-16 overflow-hidden"
+      className="overflow-hidden py-12 md:py-16"
       aria-labelledby="org-marquee-heading"
     >
-      <div className="mx-auto max-w-7xl sm:px-6 w-full">
+      <div className="site-container">
         <FadeInUp delay={0.1}>
-          <h2
-            id="org-marquee-heading"
-            className="text-[24px] md:text-[28px] text-slate-100 light:text-slate-900 tracking-tight mb-8 font-mono font-medium"
-          >
-            Organizations I've Worked With
-          </h2>
+          <SectionHeader
+            number="04"
+            label="ORG_SIGNAL"
+            title="Organizations"
+            titleId="org-marquee-heading"
+            description="Communities, bootcamps, and learning spaces connected to the mentoring and speaking work."
+            action={
+              <TechnicalLabel variant="status">
+                {organizationLogos.length} LOGOS
+              </TechnicalLabel>
+            }
+          />
         </FadeInUp>
 
-        {/* Animated marquee — visible when motion is allowed */}
-        <div className="relative overflow-hidden motion-safe:block motion-reduce:hidden">
-          <div className="flex gap-8 animate-marquee whitespace-nowrap hover:[animation-play-state:paused] focus-within:[animation-play-state:paused]">
+        <div className="relative mt-8 overflow-hidden border-y border-[var(--border-line)] py-5 motion-safe:block motion-reduce:hidden">
+          <div className="flex gap-px animate-marquee whitespace-nowrap hover:[animation-play-state:paused] focus-within:[animation-play-state:paused]">
             {duplicatedLogos.map((logo, index) => {
               const content = (
                 <CloudinaryImg
@@ -40,7 +47,7 @@ export default function OrganizationMarquee() {
                 return (
                   <span
                     key={`${logo.name}-${index}`}
-                    className="flex-shrink-0 flex items-center justify-center h-16 w-32 grayscale opacity-70"
+                    className="flex h-20 w-40 flex-shrink-0 items-center justify-center border-x border-[var(--border-line)] bg-[var(--paper)] grayscale opacity-60"
                   >
                     {content}
                   </span>
@@ -53,7 +60,7 @@ export default function OrganizationMarquee() {
                   href={logo.websiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 flex items-center justify-center h-16 w-32 grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40 rounded-md"
+                  className="flex h-20 w-40 flex-shrink-0 items-center justify-center border-x border-[var(--border-line)] bg-[var(--paper)] grayscale opacity-60 transition-all duration-300 hover:bg-[var(--surface-subtle)] hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
                   aria-label={`Visit ${logo.name} (opens in new tab)`}
                 >
                   {content}
@@ -63,8 +70,7 @@ export default function OrganizationMarquee() {
           </div>
         </div>
 
-        {/* Static grid — visible when reduced motion is preferred */}
-        <div className="motion-safe:hidden motion-reduce:grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+        <div className="mt-8 grid-cols-2 gap-px border-y border-[var(--border-line)] bg-[var(--border-line)] motion-safe:hidden motion-reduce:grid sm:grid-cols-4 md:grid-cols-6">
           {organizationLogos.map((logo) => {
             const content = (
               <CloudinaryImg
@@ -82,7 +88,7 @@ export default function OrganizationMarquee() {
               return (
                 <span
                   key={logo.name}
-                  className="flex items-center justify-center h-16 grayscale opacity-70"
+                  className="flex h-20 items-center justify-center bg-[var(--paper)] grayscale opacity-60"
                 >
                   {content}
                 </span>
@@ -95,7 +101,7 @@ export default function OrganizationMarquee() {
                 href={logo.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40 rounded-md"
+                className="flex h-20 items-center justify-center bg-[var(--paper)] grayscale opacity-60 transition-all duration-300 hover:bg-[var(--surface-subtle)] hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
                 aria-label={`Visit ${logo.name} (opens in new tab)`}
               >
                 {content}

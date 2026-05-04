@@ -1,112 +1,60 @@
-import { useNavigate } from "react-router";
-import {
-  Card,
-  CardHeader,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import type { Short } from "@/data/shorts";
-import { cn } from "@/lib";
+import { ArrowUpRight } from 'lucide-react'
+import { Link } from 'react-router'
+import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
+import type { Short } from '@/data/shorts'
+import { cn } from '@/lib'
 
 interface ShortCardProps {
-  short: Short;
-  index: number;
+  short: Short
+  index: number
 }
 
-export default function ShortCard({
-  short,
-  index,
-}: ShortCardProps) {
-  const navigate =
-    useNavigate();
-  const animationDelay = `${120 + index * 100}ms`;
+const getExcerpt = (content: string) =>
+  content
+    .replace(/[#>*_`-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 140)
 
-  const handleClick =
-    () => {
-      navigate(
-        `/shorts/${short.slug}`,
-      );
-    };
-
-  const handleKeyDown =
-    (
-      e: React.KeyboardEvent,
-    ) => {
-      if (
-        e.key ===
-          "Enter" ||
-        e.key ===
-          " "
-      ) {
-        e.preventDefault();
-        handleClick();
-      }
-    };
-
+export default function ShortCard({ short, index }: ShortCardProps) {
   return (
-    <Card
+    <article
       className={cn(
-        "group border-slate-800/70 light:border-slate-200/70 bg-slate-900/60 light:bg-white/60 transition-all duration-200 hover:border-slate-700/70 light:hover:border-slate-300 hover:bg-slate-900/90 light:hover:bg-white shadow-sm light:shadow cursor-pointer",
+        'group flex min-h-[260px] flex-col border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)] transition-colors duration-200 hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)]',
       )}
-      style={{
-        animation:
-          "fade-in 900ms ease-out both",
-        animationDelay,
-      }}
-      onClick={
-        handleClick
-      }
-      onKeyDown={
-        handleKeyDown
-      }
-      tabIndex={
-        0
-      }
-      role="button"
-      aria-label={`View ${short.title}`}
     >
-      <CardHeader className="space-y-3">
-        <h3
-          className="text-lg md:text-xl text-slate-100 light:text-slate-900"
-          style={{
-            fontFamily:
-              "var(--font-mono)",
-            fontWeight: 600,
-          }}
-        >
-          {
-            short.title
-          }
-        </h3>
-        {short
-          .tags
-          .length >
-          0 && (
-          <div className="flex flex-wrap items-center gap-2">
-            {short.tags.map(
-              (
-                tag,
-              ) => (
-                <Badge
-                  key={
-                    tag
-                  }
-                  variant="outline"
-                  className="border-slate-800/70 light:border-slate-200/70 text-slate-300 light:text-slate-700 bg-slate-900/40 light:bg-white/60"
-                  style={{
-                    fontFamily:
-                      "var(--font-body)",
-                    fontWeight: 500,
-                  }}
-                >
-                  {
-                    tag
-                  }
-                </Badge>
-              ),
-            )}
+      <Link
+        to={`/shorts/${short.slug}`}
+        className="flex h-full flex-1 flex-col p-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--paper)] md:p-6"
+        aria-label={`View ${short.title}`}
+      >
+        <div className="mb-8 flex items-center justify-between">
+          <TechnicalLabel>{String(index + 1).padStart(2, '0')}</TechnicalLabel>
+          <ArrowUpRight
+            className="h-4 w-4 text-[var(--graphite-muted)] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--graphite)]"
+            aria-hidden="true"
+          />
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="font-mono text-xl font-medium leading-tight text-[var(--graphite)] md:text-2xl">
+            {short.title}
+          </h3>
+          <p className="line-clamp-3 text-sm leading-6 text-[var(--graphite-muted)]">
+            {getExcerpt(short.content)}
+          </p>
+        </div>
+
+        {short.tags.length > 0 && (
+          <div className="mt-auto flex flex-wrap items-center gap-2 pt-8">
+            {short.tags.slice(0, 3).map((tag) => (
+              <TechnicalLabel key={tag} variant="outline">
+                {tag}
+              </TechnicalLabel>
+            ))}
           </div>
         )}
-      </CardHeader>
-    </Card>
-  );
+      </Link>
+    </article>
+  )
 }

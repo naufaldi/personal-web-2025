@@ -17,7 +17,7 @@ export const readBooks: Book[] = [
     id: '1',
     title: 'Clean Code',
     author: 'Robert C. Martin',
-    cover: 'https://picsum.photos/300/450?random=1',
+    cover: 'https://covers.openlibrary.org/b/id/8065615-L.jpg',
     category: 'read',
     recommended: true,
     links: {
@@ -29,7 +29,7 @@ export const readBooks: Book[] = [
     id: '2',
     title: 'The Pragmatic Programmer',
     author: 'Andrew Hunt & David Thomas',
-    cover: 'https://picsum.photos/300/450?random=2',
+    cover: 'https://covers.openlibrary.org/b/id/10143650-L.jpg',
     category: 'read',
     recommended: true,
     links: {
@@ -41,7 +41,7 @@ export const readBooks: Book[] = [
     id: '3',
     title: 'Designing Data-Intensive Applications',
     author: 'Martin Kleppmann',
-    cover: 'https://picsum.photos/300/450?random=3',
+    cover: 'https://covers.openlibrary.org/b/id/8434671-L.jpg',
     category: 'read',
     links: {
       amazon: 'https://amazon.com/ddia',
@@ -55,7 +55,7 @@ export const currentlyReadingBooks: Book[] = [
     id: '4',
     title: 'System Design Interview',
     author: 'Alex Xu',
-    cover: 'https://picsum.photos/300/450?random=4',
+    cover: 'https://covers.openlibrary.org/b/id/11916707-L.jpg',
     category: 'currently-reading',
     links: {
       amazon: 'https://amazon.com/system-design-interview',
@@ -69,7 +69,7 @@ export const wishlistBooks: Book[] = [
     id: '5',
     title: 'Refactoring',
     author: 'Martin Fowler',
-    cover: 'https://picsum.photos/300/450?random=5',
+    cover: 'https://covers.openlibrary.org/b/id/7087623-L.jpg',
     category: 'wishlist',
     links: {
       amazon: 'https://amazon.com/refactoring',
@@ -80,7 +80,7 @@ export const wishlistBooks: Book[] = [
     id: '6',
     title: 'You Don\'t Know JS',
     author: 'Kyle Simpson',
-    cover: 'https://picsum.photos/300/450?random=6',
+    cover: 'https://covers.openlibrary.org/b/id/8117575-L.jpg',
     category: 'wishlist',
     links: {
       amazon: 'https://amazon.com/ydkjs',
@@ -88,4 +88,3 @@ export const wishlistBooks: Book[] = [
     },
   },
 ]
-

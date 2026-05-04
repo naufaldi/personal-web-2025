@@ -138,10 +138,43 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     },
   },
   {
+    id: '21',
+    eventName: 'Codex Developer Ambassador',
+    brief: 'Developer ambassador work for Codex, focused on helping developers understand coding-agent workflows, verification habits, and practical AI-assisted software delivery.',
+    date: 'April 2026 - Present',
+    type: 'voluntary',
+    links: {
+      website: 'https://openai.com/codex',
+      linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
+    },
+  },
+  {
+    id: '20',
+    eventName: 'Cursor Developer Ambassador',
+    brief: 'Developer ambassador work for Cursor, sharing agentic coding practices, editor workflows, and practical ways engineers can use AI-assisted development in real projects.',
+    date: 'January 2026 - Present',
+    type: 'voluntary',
+    links: {
+      website: 'https://cursor.com',
+      linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
+    },
+  },
+  {
+    id: '19',
+    eventName: 'MiniMax Developer Ambassador',
+    brief: 'Developer ambassador work for MiniMax, helping builders understand AI development workflows, product capabilities, and practical adoption through community sharing.',
+    date: 'December 2025 - Present',
+    type: 'voluntary',
+    links: {
+      website: 'https://www.minimax.io',
+      linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
+    },
+  },
+  {
     id: '10',
     eventName: 'IxDA Interaction Association',
     brief: 'Engaged in ongoing learning about UX Research to enhance understanding of user behaviors and needs, contributing to more effective frontend strategies. Collaborated with researchers to leverage frontend technologies in gathering meaningful user data, informing product decisions.',
-    date: 'August 2019 - Present',
+    date: 'August 2019 - December 2023',
     type: 'voluntary',
     links: {
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
@@ -152,7 +185,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     id: '12',
     eventName: 'Stasion (Startup Singo Edan)',
     brief: 'Contributing to community initiatives through voluntary work with Stasion, supporting startup ecosystem development and community engagement.',
-    date: 'Ongoing',
+    date: 'Ended 2020',
     type: 'voluntary',
     links: {
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
