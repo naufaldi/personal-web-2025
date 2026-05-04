@@ -21,14 +21,10 @@
     "Segoe UI",
     sans-serif;
   --font-blog:
-    "Inter",
+    "Manrope",
     ui-sans-serif,
     system-ui,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+    sans-serif;
 }
 
 /* Custom font utility classes */
@@ -61,6 +57,24 @@
 }
 
 :root {
+  --paper: #ffffff;
+  --paper-soft: #fafaf9;
+  --graphite: #0f1010;
+  --graphite-muted: #3a3a3c;
+  --line: #e3e5e8;
+  --line-soft: #f0f1f3;
+  --status-green: #22c55e;
+  --surface-base: var(--paper);
+  --surface-subtle: var(--paper-soft);
+  --surface-raised: #ffffff;
+  --border-line: var(--line);
+  --border-dashed: #d8dce0;
+  --border-strong: #b8c0c8;
+  --radius-none: 0;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --shadow-paper-xs: 0 1px 2px rgba(15, 16, 16, 0.04);
+  --shadow-paper-sm: 0 8px 24px -18px rgba(15, 16, 16, 0.2);
   --background: 0
     0%
     100%;
@@ -88,6 +102,21 @@
 }
 
 .dark {
+  --paper: #090a0c;
+  --paper-soft: #101216;
+  --graphite: #f5f5f2;
+  --graphite-muted: #b7bbc1;
+  --line: #242830;
+  --line-soft: #171a20;
+  --status-green: #4ade80;
+  --surface-base: var(--paper);
+  --surface-subtle: var(--paper-soft);
+  --surface-raised: #11141a;
+  --border-line: var(--line);
+  --border-dashed: #343a44;
+  --border-strong: #4b5563;
+  --shadow-paper-xs: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-paper-sm: 0 10px 28px -20px rgba(0, 0, 0, 0.8);
   --background: 222.2
     47.4%
     11.2%;
@@ -126,7 +155,12 @@ html {
 }
 
 body {
-  @apply bg-slate-900 text-slate-200 antialiased;
+  background: var(
+    --paper
+  );
+  color: var(
+    --graphite
+  );
   font-family: var(
     --font-body
   );
@@ -137,7 +171,12 @@ body {
 
 .light
   body {
-  @apply bg-white text-slate-900;
+  background: var(
+    --paper
+  );
+  color: var(
+    --graphite
+  );
 }
 
 ::selection {
@@ -180,6 +219,220 @@ body {
     15 23
       42
   );
+}
+
+.font-display {
+  font-family:
+    "Arial Narrow",
+    "Roboto Condensed",
+    "Helvetica Neue",
+    var(
+      --font-sans
+    );
+}
+
+.text-display-hero {
+  font-family:
+    "Arial Narrow",
+    "Roboto Condensed",
+    "Helvetica Neue",
+    var(
+      --font-sans
+    );
+  font-size: clamp(
+    4.25rem,
+    13.2vw,
+    11.25rem
+  );
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+
+.text-section-title {
+  font-family: var(
+    --font-mono
+  );
+  font-size: clamp(
+    2rem,
+    5vw,
+    4.75rem
+  );
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.text-body-readable {
+  color: var(
+    --graphite-muted
+  );
+  font-family: var(
+    --font-body
+  );
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 65ch;
+}
+
+.text-meta,
+.mono-label,
+.text-drawing-label {
+  font-family: var(
+    --font-mono
+  );
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.text-meta {
+  color: var(
+    --graphite-muted
+  );
+  font-size: 0.75rem;
+}
+
+.text-drawing-label {
+  color: color-mix(
+    in srgb,
+    var(
+      --graphite-muted
+    )
+      72%,
+    transparent
+  );
+  font-size: 0.6875rem;
+}
+
+.drawing-sheet {
+  position: relative;
+  background-color: var(
+    --paper
+  );
+  background-image:
+    linear-gradient(
+      color-mix(
+          in srgb,
+          var(
+            --line-soft
+          )
+            38%,
+          transparent
+        )
+        1px,
+      transparent
+        1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(
+          in srgb,
+          var(
+            --line-soft
+          )
+            38%,
+          transparent
+        )
+        1px,
+      transparent
+        1px
+    );
+  background-size: 40px
+    40px;
+}
+
+.drawing-grid {
+  background-image:
+    linear-gradient(
+      var(
+          --line-soft
+        )
+        1px,
+      transparent
+        1px
+    ),
+    linear-gradient(
+      90deg,
+      var(
+          --line-soft
+        )
+        1px,
+      transparent
+        1px
+    );
+  background-size: 32px
+    32px;
+}
+
+.drawing-rail {
+  border-left: 1px
+    dashed
+    var(
+      --border-dashed
+    );
+  border-right: 1px
+    dashed
+    var(
+      --border-dashed
+    );
+}
+
+.viewport-frame {
+  border: 1px
+    dashed
+    var(
+      --border-dashed
+    );
+}
+
+.coordinate-label {
+  color: color-mix(
+    in srgb,
+    var(
+      --graphite-muted
+    )
+      48%,
+    transparent
+  );
+  font-family: var(
+    --font-mono
+  );
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+}
+
+.section-rule {
+  border-top: 1px
+    solid
+    var(
+      --border-line
+    );
+}
+
+.technical-divider {
+  border-color: var(
+    --border-line
+  );
+}
+
+.site-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .site-container {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-container {
+    padding-inline: 3rem;
+  }
 }
 
 /* Custom scrollbar for TOC sidebar */

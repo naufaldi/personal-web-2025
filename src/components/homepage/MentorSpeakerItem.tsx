@@ -1,153 +1,60 @@
-import { useState } from "react";
-import {
-  Twitter,
-  Linkedin,
-  ExternalLink,
-  Youtube,
-} from "lucide-react";
-import type { MentorSpeakerItem } from "@/data/mentorSpeaker";
-import { cn } from "@/lib";
-import FadeInUp from "@/components/common/FadeInUp";
-import { Skeleton } from "@/components/ui/skeleton";
+import { ArrowUpRight } from 'lucide-react'
+import type { MentorSpeakerItem as MentorSpeakerItemType } from '@/data/mentorSpeaker'
+import DividerRow from '@/components/design-system/DividerRow'
+import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
+import { Button } from '@/components/ui/button'
 
 interface MentorSpeakerItemProps {
-  item: MentorSpeakerItem;
-  index: number;
+  item: MentorSpeakerItemType
+  index: number
 }
 
-export default function MentorSpeakerItem({
-  item,
-  index,
-}: MentorSpeakerItemProps) {
-  const [imgLoading, setImgLoading] = useState(true);
+export default function MentorSpeakerItem({ item, index }: MentorSpeakerItemProps) {
+  const primaryLink =
+    item.links?.website || item.links?.linkedin || item.links?.youtube || item.links?.x
+  const rowNumber = String(index + 1).padStart(2, '0')
+  const headingId = `mentor-speaker-${item.id}-heading`
+  const typeLabel = item.type === 'mentoring' ? 'Mentoring' : item.type
 
   return (
-    <FadeInUp
-      delay={
-        0.12 +
-        index *
-          0.1
-      }
-    >
-      <article
-        className={cn(
-          "group flex flex-col sm:flex-row gap-4 sm:gap-6 py-4 sm:py-6 border-b border-slate-800/70 light:border-slate-300 transition-colors hover:bg-slate-900/30 light:hover:bg-slate-100",
-        )}
-      >
-        {item.image && (
-          <div className="relative flex-shrink-0 w-full sm:w-56 md:w-64 h-32 sm:h-32 rounded-lg overflow-hidden shadow-sm">
-            {imgLoading && (
-              <Skeleton className="absolute inset-0 h-full w-full rounded-none bg-slate-800/60" />
-            )}
-            <img
-              src={
-                item.image
-              }
-              alt={`${item.eventName} banner`}
-              className="w-full h-full object-cover"
-              loading="lazy"
-              onLoad={() => setImgLoading(false)}
-            />
-          </div>
-        )}
-        <div className="flex-1 flex flex-col justify-between gap-3 sm:gap-4">
-          <div className="space-y-1.5 sm:space-y-2">
+    <DividerRow aria-labelledby={headingId} className="relative overflow-hidden py-7 md:py-8">
+      <div
+        aria-hidden="true"
+        className="absolute left-[112px] top-8 hidden h-2.5 w-2.5 -translate-x-1/2 rounded-full border border-[var(--border-dashed)] bg-[var(--paper)] transition-colors group-hover/row:border-[var(--graphite-muted)] md:block lg:left-36"
+      />
+
+      <div className="relative grid gap-5 md:grid-cols-[112px_minmax(0,1fr)_minmax(180px,280px)] md:items-start lg:grid-cols-[144px_minmax(0,1fr)_minmax(220px,320px)]">
+        <div className="text-drawing-label">{rowNumber} // {item.type}</div>
+
+        <div className="max-w-3xl space-y-4">
+          <div className="space-y-2">
+            <TechnicalLabel variant="mono">{typeLabel}</TechnicalLabel>
             <h3
-              className="text-lg sm:text-xl md:text-2xl text-slate-100 light:text-slate-900 font-mono font-medium"
+              id={headingId}
+              className="font-mono text-2xl font-medium leading-tight text-[var(--graphite)] md:text-3xl"
             >
-              {
-                item.eventName
-              }
+            {item.eventName}
             </h3>
-            <p
-              className="text-xs sm:text-sm md:text-base text-slate-400 light:text-slate-600 font-body font-medium"
-            >
-              {
-                item.brief
-              }
-            </p>
-            <p
-              className="text-xs text-slate-400 light:text-slate-600 font-body font-medium"
-            >
-              {
-                item.date
-              }
-            </p>
           </div>
-          {item.links && (
-            <div className="flex items-center gap-2 flex-wrap">
-              {item
-                .links
-                .x && (
-                <a
-                  href={
-                    item
-                      .links
-                      .x
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white text-slate-400 light:text-slate-600 transition-colors hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:text-slate-100 light:hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40"
-                  aria-label={`View ${item.eventName} on X`}
-                >
-                  <Twitter className="h-4 w-4" />
+          <p className="max-w-3xl text-sm leading-7 text-[var(--graphite-muted)] md:text-base">
+            {item.brief}
+          </p>
+        </div>
+
+        <div className="space-y-4 md:text-right">
+          <TechnicalLabel variant="outline">{item.date}</TechnicalLabel>
+          {primaryLink && (
+            <div className="md:flex md:justify-end">
+              <Button asChild variant="technical" size="sm">
+                <a href={primaryLink} target="_blank" rel="noopener noreferrer">
+                  Open
+                  <ArrowUpRight className="h-3.5 w-3.5" />
                 </a>
-              )}
-              {item
-                .links
-                .linkedin && (
-                <a
-                  href={
-                    item
-                      .links
-                      .linkedin
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white text-slate-400 light:text-slate-600 transition-colors hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:text-slate-100 light:hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40"
-                  aria-label={`View ${item.eventName} on LinkedIn`}
-                >
-                  <Linkedin className="h-4 w-4" />
-                </a>
-              )}
-              {item
-                .links
-                .youtube && (
-                <a
-                  href={
-                    item
-                      .links
-                      .youtube
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white text-slate-400 light:text-slate-600 transition-colors hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:text-slate-100 light:hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40"
-                  aria-label={`Watch ${item.eventName} on YouTube`}
-                >
-                  <Youtube className="h-4 w-4" />
-                </a>
-              )}
-              {item
-                .links
-                .website && (
-                <a
-                  href={
-                    item
-                      .links
-                      .website
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white text-slate-400 light:text-slate-600 transition-colors hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:text-slate-100 light:hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40"
-                  aria-label={`Visit ${item.eventName} website`}
-                >
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-              )}
+              </Button>
             </div>
           )}
         </div>
-      </article>
-    </FadeInUp>
-  );
+      </div>
+    </DividerRow>
+  )
 }

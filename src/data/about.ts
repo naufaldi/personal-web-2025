@@ -25,11 +25,11 @@ export interface JourneyPhoto {
 
 export const aboutBio: AboutBio = {
   name: 'Naufaldi Rafif Satriya',
-  title: 'Product Engineer & Mentor',
-bioParagraphs: [
-    'I\'m a product engineer and mentor from Bekasi, Indonesia. I\'ve focused on building meaningful products from designs. I believe that code is a craft and mentorship is how we build a legacy.',
+  title: 'Software Engineer & Mentor',
+  bioParagraphs: [
+    'I\'m a software engineer and mentor from Bekasi, Indonesia. Frontend is my strongest foundation, and I\'m intentionally expanding into backend systems, architecture, and end-to-end product delivery.',
     'My purpose extends beyond coding. I find deep satisfaction in helping others grow, having mentored over 200 individuals and connected with a community of 14,000+ on Twitter. I enjoy hosting workshops and sessions, especially for the "aha" moments that lead to breakthroughs.',
-    'Balance is key. I\'m expanding my skills by learning backend development and, most importantly, learning to be a better partner. I believe great engineers are whole people, bringing curiosity and heart to everything they do.',
+    'Balance is key. I\'m growing from interface execution into broader software engineering, while learning to be a better partner. I believe great engineers are whole people, bringing curiosity and heart to everything they do.',
   ],
   profileImageUrl: 'https://res.cloudinary.com/cynux/image/upload/v1762848965/portfolio-2025/avatar.jpg',
   signature: 'Naufaldi',
@@ -134,4 +134,3 @@ export const techStack: TechStackItem[] = [
   { name: 'Node.js', iconName: 'Server' },
   { name: 'PostgreSQL', iconName: 'Database' },
 ]
-

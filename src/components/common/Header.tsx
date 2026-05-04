@@ -13,33 +13,32 @@ export default function Header() {
     .toUpperCase();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-slate-900/95 light:bg-white/95 backdrop-blur-sm border-b border-slate-800/70 light:border-slate-300">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex h-16 items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-[var(--border-line)] bg-[var(--paper)]/94 backdrop-blur-sm">
+      <div className="site-container">
+        <div className="flex h-[72px] items-center justify-between gap-5">
           <Link
             to="/"
             className="inline-flex items-center gap-2 group"
             aria-label="Home"
           >
-            <div className="inline-flex items-center justify-center h-7 w-7 rounded-md border border-slate-800/80 light:border-slate-300 bg-slate-900/80 light:bg-slate-100 ring-1 ring-inset ring-slate-800/40 light:ring-slate-300/40">
-              <span className="text-slate-100 light:text-slate-950 text-[11px] tracking-tight font-medium font-mono">
+            <div className="inline-flex h-8 w-8 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--border-line)] bg-[var(--surface-raised)]">
+              <span className="font-mono text-[11px] font-medium tracking-tight text-[var(--graphite)]">
                 {initials}
               </span>
             </div>
-            <span className="text-slate-300 light:text-slate-800 text-sm tracking-tight font-medium group-hover:text-slate-100 light:group-hover:text-slate-950 transition-colors font-body">
+            <span className="hidden text-sm font-medium tracking-tight text-[var(--graphite)] transition-colors group-hover:text-[var(--graphite-muted)] sm:inline">
               {siteConfig.name}
             </span>
           </Link>
 
-          <div className="flex-1 flex justify-end sm:justify-center">
+          <div className="flex flex-1 justify-end md:justify-center">
             <Navigation />
           </div>
 
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden items-center gap-2 md:flex">
             <Button
               asChild
               variant="secondary"
-              className="font-body font-medium"
             >
               <a
                 href="https://www.linkedin.com/in/naufaldirafif/"
@@ -52,7 +51,6 @@ export default function Header() {
             <Button
               asChild
               variant="primary"
-              className="font-body font-semibold"
             >
               <a
                 href="https://www.linkedin.com/in/naufaldirafif/"

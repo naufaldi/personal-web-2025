@@ -7,26 +7,22 @@ import FadeInUp from "@/components/common/FadeInUp";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col relative">
-      <div
-        className="bg-pattern"
-        aria-hidden="true"
-      />
+    <div className="relative flex min-h-screen flex-col bg-[var(--paper)] text-[var(--graphite)]">
       <HeroSection />
       <FadeInUp>
-        <div className="mx-auto max-w-7xl px-6 w-full">
-          <div className="border-t border-slate-800/70 light:border-slate-200" />
+        <div className="site-container">
+          <div className="section-rule" />
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-6">
             <p
-              className="text-xs text-slate-400 light:text-slate-600 font-body font-medium"
+              className="text-meta"
             >
               Building with clarity, performance, and craft.
             </p>
             <a
               href="#projects"
-              className="inline-flex items-center gap-1.5 text-xs text-slate-400 light:text-slate-600 hover:text-slate-200 light:hover:text-slate-900 transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40 rounded-sm font-body font-medium"
+              className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
             >
-              Browsework
+              Browse work
               <ChevronRight className="h-3.5 w-3.5" />
             </a>
           </div>

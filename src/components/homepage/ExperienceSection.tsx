@@ -1,99 +1,97 @@
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router";
-import { getLatestExperiences } from "@/data/experience";
-import ExperienceCard from "./ExperienceCard";
-import FadeInUp from "@/components/common/FadeInUp";
+import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router'
+import { getLatestExperiences, workExperiences } from '@/data/experience'
+import { siteConfig } from '@/data/site'
+import ExperienceRow from '@/components/design-system/ExperienceRow'
+import SectionHeader from '@/components/design-system/SectionHeader'
+import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
+import FadeInUp from '@/components/common/FadeInUp'
+import { Button } from '@/components/ui/button'
 
 export default function ExperienceSection() {
-  const latestExperiences =
-    getLatestExperiences(
-      4,
-    );
+  const latestExperiences = getLatestExperiences(4)
+  const currentRole = latestExperiences.find((experience) => experience.endDate === 'Present')
+  const experienceSignals = [
+    {
+      label: 'TIMELINE_SPAN',
+      value: siteConfig.stats.experience,
+      detail: 'Professional experience',
+    },
+    {
+      label: 'CURRENT_NODE',
+      value: currentRole?.companyName ?? 'Available',
+      detail: currentRole?.role ?? 'Open to work',
+    },
+    {
+      label: 'ROLE_INDEX',
+      value: `${workExperiences.length} roles`,
+      detail: 'Product delivery, system ownership, and engineering breadth',
+    },
+  ]
 
   return (
-    <section
-      id="experience"
-      aria-labelledby="experience-heading"
-      className="bg-slate-950 light:bg-slate-50 px-6 md:px-0 py-12 md:py-16"
-    >
-      <div className="mx-auto max-w-7xl sm:px-6 w-full">
-        <div className="space-y-6 sm:space-y-8">
-          <FadeInUp
-            delay={
-              0.06
+    <section id="experience" aria-labelledby="experience-heading" className="py-16 md:py-24">
+      <div className="site-container">
+        <FadeInUp delay={0.06}>
+          <SectionHeader
+            number="02"
+            label="EXPERIENCE_ROW"
+            title="Experience"
+            titleId="experience-heading"
+            description="Evolving into a broader software engineer through product delivery, system ownership, and team collaboration."
+            action={
+              <Button asChild variant="technical">
+                <Link to="/experience">
+                  View all experience
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
             }
-          >
-            <div className="space-y-2">
-              <h2
-                id="experience-heading"
-                className="text-[24px] md:text-[28px] text-slate-100 light:text-slate-900 tracking-tight font-mono font-medium"
-              >
-                Experience
-              </h2>
-              <p
-                className="text-sm text-slate-400 light:text-slate-600 max-w-2xl font-body font-medium"
-              >
-                Building
-                products
-                and
-                leading
-                teams
-                across
-                startups
-                and
-                companies
-              </p>
-            </div>
-          </FadeInUp>
+          />
+        </FadeInUp>
 
-          <FadeInUp
-            delay={
-              0.12
-            }
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 items-start">
-              {latestExperiences.map(
-                (
-                  experience,
-                  index,
-                ) => (
-                  <ExperienceCard
-                    key={
-                      experience.id
-                    }
-                    experience={
-                      experience
-                    }
-                    index={
-                      index
-                    }
-                  />
-                ),
-              )}
-            </div>
-          </FadeInUp>
-
-          <FadeInUp
-            delay={
-              0.12 +
-              latestExperiences.length *
-                0.1
-            }
-          >
-            <div className="flex justify-center pt-4">
-              <Link
-                to="/experience"
-                className="group inline-flex items-center gap-2 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white px-6 py-3 text-sm text-slate-300 light:text-slate-700 transition-all duration-200 hover:text-slate-100 light:hover:text-slate-900 hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-md hover:shadow-slate-900/50 light:hover:shadow-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40 font-body font-semibold"
+        <FadeInUp delay={0.12}>
+          <div className="mt-8 grid gap-px border-y border-[var(--border-line)] bg-[var(--border-line)] md:grid-cols-3">
+            {experienceSignals.map((signal, index) => (
+              <div
+                key={signal.label}
+                className="bg-[var(--paper)] px-4 py-4 md:px-5"
               >
-                View
-                all
-                experience
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </Link>
-            </div>
-          </FadeInUp>
-        </div>
+                <div className="text-drawing-label">
+                  {String(index + 1).padStart(2, '0')} // {signal.label}
+                </div>
+                <div className="mt-4 flex items-start justify-between gap-4">
+                  <div>
+                    <p className="font-mono text-xl font-medium leading-none text-[var(--graphite)] md:text-2xl">
+                      {signal.value}
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-[var(--graphite-muted)]">
+                      {signal.detail}
+                    </p>
+                  </div>
+                  {signal.label === 'CURRENT_NODE' && (
+                    <TechnicalLabel variant="status" className="mt-1">
+                      Live
+                    </TechnicalLabel>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </FadeInUp>
+
+        <FadeInUp delay={0.18}>
+          <div className="relative mt-8 border-t border-[var(--border-line)]">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute left-[112px] top-0 hidden h-full border-l border-dashed border-[var(--border-dashed)] md:block lg:left-36"
+            />
+            {latestExperiences.map((experience, index) => (
+              <ExperienceRow key={experience.id} experience={experience} index={index} />
+            ))}
+          </div>
+        </FadeInUp>
       </div>
     </section>
-  );
+  )
 }
