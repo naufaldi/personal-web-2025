@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react";
-import { BookOpen } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { FileText } from "lucide-react";
 import { getBlogsByCategory, type BlogCategory } from "@/data/blogs";
 import BlogCard from "@/components/blogs/BlogCard";
 import { cn } from "@/lib";
@@ -20,18 +20,37 @@ const categories: (BlogCategory | "All")[] = [
   "Technical writer",
   "Opinions",
 ];
+
 const ITEMS_PER_PAGE = 10;
+
+const formatLatestDate = (dateString?: string) => {
+  if (!dateString) {
+    return "N/A";
+  }
+
+  return new Date(dateString)
+    .toLocaleDateString("en-US", {
+      month: "short",
+      day: "2-digit",
+      year: "numeric",
+    })
+    .toUpperCase();
+};
+
+const formatCategoryLabel = (category: BlogCategory | "All") =>
+  category === "All" ? "ALL_POSTS" : category.toUpperCase().replace(/\s+/g, "_");
 
 export default function Blogs() {
   const [selectedCategory, setSelectedCategory] = useState<
     BlogCategory | "All"
   >("All");
   const [currentPage, setCurrentPage] = useState(1);
+  const allBlogs = getBlogsByCategory("All");
   const filteredBlogs = getBlogsByCategory(selectedCategory);
   const totalPages = Math.ceil(filteredBlogs.length / ITEMS_PER_PAGE);
+  const latestBlog = allBlogs[0];
   const heroRef = useRef<HTMLDivElement>(null);
 
-  // Reset to page 1 when category changes
   useEffect(() => {
     setCurrentPage(1);
   }, [selectedCategory]);
@@ -58,69 +77,124 @@ export default function Blogs() {
   };
 
   return (
-    <div className="blog-pattern min-h-screen flex flex-col relative bg-slate-900 light:bg-slate-50">
+    <div className="blog-pattern min-h-screen flex flex-col relative bg-slate-950 light:bg-[#fafafa]">
       <div
         ref={heroRef}
-        className="mx-auto max-w-7xl px-6 w-full relative z-10 py-20 md:py-16"
+        className="mx-auto max-w-7xl px-4 sm:px-6 w-full relative z-10 py-10 md:py-14"
       >
-        <div
-          className="px-6 md:px-0 flex flex-col items-center gap-4 mb-12"
+        <header
+          className="border-y border-slate-800/70 light:border-[#e3e5e8]"
           style={{
-            animation: "fade-in 400ms ease-out both",
-            animationDelay: "60ms",
+            animation: "fade-in 420ms ease-out both",
+            animationDelay: "40ms",
           }}
         >
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700/60 light:border-slate-300/60 bg-slate-900/60 light:bg-slate-100/60" aria-hidden="true">
-            <BookOpen className="h-6 w-6 text-slate-300 light:text-slate-700" />
-          </div>
-          <h1
-            className="text-4xl md:text-5xl text-center"
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontWeight: 700,
-            }}
-          >
-            <span className="text-slate-100 light:text-slate-900">My </span>
-            <span className="text-slate-300 light:text-slate-700">Blog</span>
-          </h1>
-          <p
-            className="text-sm md:text-base text-center text-slate-500 light:text-slate-600"
-            style={{
-              fontFamily: "var(--font-body)",
-              fontWeight: 500,
-            }}
-          >
-            Thoughts, ideas, and experiences I want to share.
-          </p>
-        </div>
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px]">
+            <div className="relative px-0 py-10 md:py-14 lg:pr-14">
+              <div className="mb-8 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.28em] text-slate-500 light:text-[#8c929b]">
+                <span>01 // BLOG_INDEX</span>
+                <span className="hidden h-px w-16 bg-slate-700/70 light:bg-[#d7dbe0] sm:block" />
+              </div>
 
-        <div
-          className="flex flex-wrap items-center justify-center gap-2 mb-8"
-          role="tablist"
-          aria-label="Filter blog posts by category"
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              role="tab"
-              aria-selected={selectedCategory === category}
-              aria-controls="blog-feed"
-              onClick={() => setSelectedCategory(category)}
-              className={cn(
-                "px-4 py-2 rounded-md border text-sm cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40",
-                selectedCategory === category
-                  ? "border-slate-700/70 light:border-slate-200/70 bg-slate-900/90 light:bg-white/90 text-slate-200 light:text-slate-800"
-                  : "border-slate-800/70 light:border-slate-300/70 bg-slate-900/60 light:bg-slate-100/60 hover:border-slate-700/70 light:hover:border-slate-200/70 hover:bg-slate-900/80 light:hover:bg-slate-100/80 text-slate-400 light:text-slate-600"
-              )}
-              style={{
-                fontFamily: "var(--font-body)",
-                fontWeight: selectedCategory === category ? 600 : 500,
-              }}
+              <h1 className="max-w-4xl font-mono text-[48px] leading-[0.98] tracking-tight text-slate-100 light:text-[#111214] sm:text-[72px] md:text-[96px]">
+                Writing /
+                <br />
+                Notes
+              </h1>
+
+              <p className="mt-7 max-w-2xl font-body text-base font-medium leading-8 text-slate-400 light:text-[#5b5f66] md:text-lg">
+                Field notes, technical breakdowns, and personal essays from the
+                workbench. Built for scanning first, reading second.
+              </p>
+            </div>
+
+            <aside className="border-t border-slate-800/70 px-0 py-8 light:border-[#e3e5e8] lg:border-l lg:border-t-0 lg:px-8 lg:py-12">
+              <div className="mb-9 flex items-center justify-between gap-4 font-mono text-[11px] uppercase tracking-[0.24em] text-slate-500 light:text-[#8c929b]">
+                <span>02 // INDEX_META</span>
+                <span>BUILD:2026</span>
+              </div>
+
+              <dl className="grid grid-cols-2 gap-px overflow-hidden border border-slate-800/70 bg-slate-800/70 light:border-[#e3e5e8] light:bg-[#e3e5e8]">
+                <div className="bg-slate-950 px-4 py-5 light:bg-white">
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 light:text-[#8c929b]">
+                    Posts
+                  </dt>
+                  <dd className="mt-2 font-mono text-3xl text-slate-100 light:text-[#111214]">
+                    {allBlogs.length}
+                  </dd>
+                </div>
+                <div className="bg-slate-950 px-4 py-5 light:bg-white">
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 light:text-[#8c929b]">
+                    Routes
+                  </dt>
+                  <dd className="mt-2 font-mono text-3xl text-slate-100 light:text-[#111214]">
+                    {categories.length - 1}
+                  </dd>
+                </div>
+                <div className="col-span-2 bg-slate-950 px-4 py-5 light:bg-white">
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500 light:text-[#8c929b]">
+                    Latest dispatch
+                  </dt>
+                  <dd className="mt-2 font-mono text-sm uppercase tracking-[0.16em] text-slate-200 light:text-[#111214]">
+                    {formatLatestDate(latestBlog?.date)}
+                  </dd>
+                </div>
+              </dl>
+
+              <div className="mt-7 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[#22c55e]">
+                <span className="h-2 w-2 rounded-full bg-[#22c55e]" />
+                <span>ARCHIVE_LIVE</span>
+              </div>
+            </aside>
+          </div>
+        </header>
+
+        <section className="border-b border-slate-800/70 light:border-[#e3e5e8]">
+          <div className="grid grid-cols-1 gap-6 py-6 lg:grid-cols-[170px_minmax(0,1fr)] lg:items-center">
+            <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-500 light:text-[#8c929b]">
+              03 // ROUTES
+            </div>
+
+            <div
+              className="grid grid-cols-2 border border-slate-800/70 light:border-[#e3e5e8] sm:flex"
+              role="tablist"
+              aria-label="Filter blog posts by category"
             >
-              {category}
-            </button>
-          ))}
-        </div>
+              {categories.map((category) => {
+                const isActive = selectedCategory === category;
+
+                return (
+                  <button
+                    key={category}
+                    role="tab"
+                    aria-selected={isActive}
+                    aria-controls="blog-feed"
+                    onClick={() => setSelectedCategory(category)}
+                    className={cn(
+                      "group relative min-h-12 border-b border-r border-slate-800/70 px-4 py-3 text-left font-mono text-[11px] uppercase tracking-[0.18em] transition-colors duration-200 last:border-r-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:border-[#e3e5e8] light:focus-visible:ring-slate-900/30 sm:border-b-0",
+                      isActive
+                        ? "bg-slate-100 text-slate-950 light:bg-[#111214] light:text-white"
+                        : "bg-slate-950/40 text-slate-400 hover:bg-slate-900/80 hover:text-slate-100 light:bg-white/70 light:text-[#5b5f66] light:hover:bg-[#f3f4f4] light:hover:text-[#111214]"
+                    )}
+                  >
+                    <span className="flex items-center gap-2">
+                      <span
+                        className={cn(
+                          "h-1.5 w-1.5 rounded-full transition-colors",
+                          isActive
+                            ? "bg-[#22c55e]"
+                            : "bg-slate-700 light:bg-[#d7dbe0]"
+                        )}
+                        aria-hidden="true"
+                      />
+                      {formatCategoryLabel(category)}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
         <div className="sr-only" aria-live="polite" role="status">
           {filteredBlogs.length === 0
@@ -128,42 +202,57 @@ export default function Blogs() {
             : `${filteredBlogs.length} blog post${filteredBlogs.length === 1 ? "" : "s"} found`}
         </div>
 
-        <div id="blog-feed" role="feed" aria-label="Blog posts" className="space-y-6">
+        <section
+          id="blog-feed"
+          role="feed"
+          aria-label="Blog posts"
+          className="border-b border-slate-800/70 light:border-[#e3e5e8]"
+        >
           {paginatedBlogs.length === 0 ? (
-            <div className="text-center py-12">
-              <p
-                className="text-slate-400 light:text-slate-600"
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontWeight: 400,
-                }}
-              >
-                No blogs found in this category.
-              </p>
+            <div className="grid grid-cols-1 gap-6 py-16 lg:grid-cols-[170px_minmax(0,1fr)]">
+              <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-500 light:text-[#8c929b]">
+                00 // EMPTY
+              </div>
+              <div className="border border-dashed border-slate-700 px-6 py-12 light:border-[#d7dbe0]">
+                <FileText
+                  className="mb-5 h-8 w-8 text-slate-500 light:text-[#8c929b]"
+                  aria-hidden="true"
+                />
+                <h2 className="font-mono text-2xl text-slate-100 light:text-[#111214]">
+                  No entries on this route
+                </h2>
+                <p className="mt-3 max-w-xl font-body text-sm font-medium leading-7 text-slate-400 light:text-[#5b5f66]">
+                  Try another category rail to inspect the rest of the writing
+                  archive.
+                </p>
+              </div>
             </div>
           ) : (
             paginatedBlogs.map((blog, index) => (
               <BlogCard key={blog.id} blog={blog} index={startIndex + index} />
             ))
           )}
-        </div>
+        </section>
 
         {totalPages > 1 && (
-          <div className="mt-14 flex flex-col items-center gap-4">
-            <div
-              className="inline-flex items-center gap-2 rounded-full border border-slate-800/60 light:border-slate-200/80 bg-slate-900/60 light:bg-white/70 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-slate-400 light:text-slate-600 shadow-[0_10px_30px_rgba(2,6,23,0.45)] light:shadow-[0_12px_25px_rgba(15,23,42,0.1)]"
-              aria-live="polite"
-            >
-              Page {currentPage} of {totalPages}
+          <section className="grid grid-cols-1 gap-6 py-7 lg:grid-cols-[170px_minmax(0,1fr)] lg:items-center">
+            <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-500 light:text-[#8c929b]">
+              04 // PAGE_CTRL
             </div>
-            <div className="w-full max-w-2xl rounded-2xl border border-slate-800/70 light:border-slate-200/80 bg-slate-950/65 light:bg-white/80 px-4 py-5 shadow-[0_35px_60px_rgba(2,6,23,0.65)] light:shadow-[0_25px_45px_rgba(15,23,42,0.15)] backdrop-blur-2xl">
-              <Pagination className="w-full">
-                <PaginationContent className="flex-wrap justify-center gap-2">
+
+            <div className="flex flex-col gap-4 border border-slate-800/70 bg-slate-950/50 p-3 light:border-[#e3e5e8] light:bg-white/70 md:flex-row md:items-center md:justify-between">
+              <div className="px-2 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-400 light:text-[#5b5f66]">
+                Page {String(currentPage).padStart(2, "0")} /{" "}
+                {String(totalPages).padStart(2, "0")}
+              </div>
+
+              <Pagination className="mx-0 w-full justify-start md:w-auto md:justify-end">
+                <PaginationContent className="flex-wrap justify-start gap-1 md:justify-end">
                   <PaginationItem>
                     <PaginationPrevious
                       onClick={() => handlePageChange(currentPage - 1)}
                       disabled={currentPage === 1}
-                      className="px-5"
+                      className="h-10 rounded-none border-slate-800/70 bg-transparent px-4 font-mono text-[11px] uppercase tracking-[0.18em] shadow-none light:border-[#e3e5e8]"
                     />
                   </PaginationItem>
 
@@ -184,6 +273,7 @@ export default function Blogs() {
                             onClick={() => handlePageChange(page)}
                             isActive={page === currentPage}
                             aria-label={`Go to page ${page}`}
+                            className="h-10 w-10 rounded-none border-slate-800/70 bg-transparent font-mono text-[11px] shadow-none light:border-[#e3e5e8]"
                           >
                             {page}
                           </PaginationLink>
@@ -195,7 +285,7 @@ export default function Blogs() {
                     ) {
                       return (
                         <PaginationItem key={page}>
-                          <PaginationEllipsis />
+                          <PaginationEllipsis className="h-10 w-10 text-slate-500 light:text-[#8c929b]" />
                         </PaginationItem>
                       );
                     }
@@ -206,13 +296,13 @@ export default function Blogs() {
                     <PaginationNext
                       onClick={() => handlePageChange(currentPage + 1)}
                       disabled={currentPage === totalPages}
-                      className="px-5"
+                      className="h-10 rounded-none border-slate-800/70 bg-transparent px-4 font-mono text-[11px] uppercase tracking-[0.18em] shadow-none light:border-[#e3e5e8]"
                     />
                   </PaginationItem>
                 </PaginationContent>
               </Pagination>
             </div>
-          </div>
+          </section>
         )}
       </div>
     </div>
