@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react'
+import { ImageIcon } from 'lucide-react'
 import { cn } from '@/lib'
 import CloudinaryImg from '@/components/ui/cloudinary-img'
 
@@ -14,29 +14,25 @@ export default function ProfilePicture({
   className,
 }: ProfilePictureProps) {
   return (
-    <div className={cn('relative', className)}>
-      <div
-        className="absolute -left-6 top-4 opacity-20"
-        aria-hidden="true"
-        style={{
-          animation: 'fade-in 900ms ease-out both',
-          animationDelay: '60ms',
-        }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="h-0.5 w-6 border-t border-dashed border-slate-600 light:border-slate-300" />
-          <ArrowRight className="h-3 w-3 text-slate-600 light:text-slate-400" />
-        </div>
+    <div className={cn('relative border border-[var(--border-line)] bg-[var(--paper)]', className)}>
+      <div className="flex items-center justify-between border-b border-[var(--border-line)] bg-[var(--surface-subtle)] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--graphite-muted)]">
+        <span className="inline-flex items-center gap-2">
+          <ImageIcon className="h-3.5 w-3.5" aria-hidden="true" />
+          asset.profile
+        </span>
+        <span>render:image</span>
       </div>
-
-      <div
-        className="relative rotate-2 bg-white p-4 shadow-2xl w-[300px] md:w-auto light:shadow-slate-200/70 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] hover:-rotate-1 transition-all duration-300"
-        style={{
-          animation: 'fade-in 900ms ease-out both',
-          animationDelay: '120ms',
-        }}
-      >
-        <div className="border-4 border-slate-900 light:border-slate-200 bg-white p-3">
+      <div className="relative p-4">
+        <div
+          className="pointer-events-none absolute inset-4"
+          aria-hidden="true"
+        >
+          <div className="absolute left-0 right-0 top-6 border-t border-dashed border-[var(--border-dashed)]" />
+          <div className="absolute bottom-6 left-0 right-0 border-t border-dashed border-[var(--border-dashed)]" />
+          <div className="absolute left-6 top-0 bottom-0 border-l border-dashed border-[var(--border-dashed)]" />
+          <div className="absolute right-6 top-0 bottom-0 border-l border-dashed border-[var(--border-dashed)]" />
+        </div>
+        <div className="relative bg-[var(--paper)] p-3">
           <CloudinaryImg
             publicId={imageUrl}
             width={600}
@@ -44,13 +40,23 @@ export default function ProfilePicture({
             alt="Profile photo of Naufaldi Rafif Satriya"
             preview={false}
             noStyle
-            className="w-full md:w-[300px]"
+            className="aspect-[3/4] w-full border border-[var(--border-line)]"
+            imgClassName="object-cover grayscale"
           />
         </div>
-        <div
-          className="mt-3 text-center text-sm italic text-slate-900 light:text-slate-700 font-[cursive] font-normal"
-        >
-          {signature}
+      </div>
+      <div className="grid grid-cols-2 gap-px border-t border-[var(--border-line)] bg-[var(--border-line)]">
+        <div className="bg-[var(--paper)] px-4 py-3">
+          <div className="text-drawing-label">Source</div>
+          <div className="mt-1 truncate font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite)]">
+            cloudinary
+          </div>
+        </div>
+        <div className="bg-[var(--paper)] px-4 py-3">
+          <div className="text-drawing-label">Signature</div>
+          <div className="mt-1 truncate font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite)]">
+            {signature}
+          </div>
         </div>
       </div>
     </div>
