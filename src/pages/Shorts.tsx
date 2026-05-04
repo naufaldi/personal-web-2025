@@ -2,6 +2,9 @@ import { useState, useMemo } from 'react'
 import ShortsHero from '@/components/shorts/ShortsHero'
 import ShortCard from '@/components/shorts/ShortCard'
 import ShortsFilter from '@/components/shorts/ShortsFilter'
+import FadeInUp from '@/components/common/FadeInUp'
+import SectionHeader from '@/components/design-system/SectionHeader'
+import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 import { allShorts, getAllTags } from '@/data/shorts'
 
 export default function Shorts() {
@@ -43,46 +46,62 @@ export default function Shorts() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col relative bg-slate-950 light:bg-slate-50">
-      <div className="bg-pattern-shorts" aria-hidden="true" />
-      <div className="mx-auto max-w-7xl sm:px-6 w-full px-6 md:px-0 py-12 md:py-16 relative z-10">
-        <ShortsHero />
+    <div className="relative flex min-h-screen flex-col bg-[var(--paper)] text-[var(--graphite)]">
+      <ShortsHero />
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-12">
-          <div>
-            {filteredShorts.length === 0 ? (
-              <div className="text-center py-12">
-                <p
-                  className="text-slate-400"
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontWeight: 500,
-                  }}
-                >
-                  No shorts found matching your filters.
-                </p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {filteredShorts.map((short, index) => (
-                  <ShortCard key={short.slug} short={short} index={index} />
-                ))}
-              </div>
-            )}
-          </div>
-
-          <aside className="lg:sticky lg:top-24 h-fit">
-            <ShortsFilter
-              tags={allTags}
-              selectedTags={selectedTags}
-              searchQuery={searchQuery}
-              onTagToggle={handleTagToggle}
-              onSearchChange={setSearchQuery}
-              onClearFilters={handleClearFilters}
+      <section aria-labelledby="shorts-index-heading" className="drawing-sheet py-12 md:py-16">
+        <div className="site-container">
+          <FadeInUp delay={0.1}>
+            <SectionHeader
+              number="03"
+              label="SNIPPET_INDEX"
+              title="Shorts"
+              titleId="shorts-index-heading"
+              description="Small notes, code fragments, and rules pulled into a quick reference index."
+              action={
+                <TechnicalLabel variant="outline">
+                  {filteredShorts.length} of {allShorts.length}
+                </TechnicalLabel>
+              }
             />
-          </aside>
+          </FadeInUp>
+
+          <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10">
+            <div>
+              {filteredShorts.length === 0 ? (
+                <div className="border border-[var(--border-line)] bg-[var(--paper)] p-8">
+                  <TechnicalLabel>NO_MATCH</TechnicalLabel>
+                  <p className="mt-4 text-body-readable">
+                    No shorts found matching your filters.
+                  </p>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 gap-0 border-y border-[var(--border-line)] md:grid-cols-2">
+                  {filteredShorts.map((short, index) => (
+                    <FadeInUp key={short.slug} delay={0.08 + index * 0.04}>
+                      <ShortCard short={short} index={index} />
+                    </FadeInUp>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <aside className="lg:sticky lg:top-24 h-fit">
+              <div className="mb-4 hidden lg:block">
+                <TechnicalLabel variant="status">PIPELINE_READY</TechnicalLabel>
+              </div>
+              <ShortsFilter
+                tags={allTags}
+                selectedTags={selectedTags}
+                searchQuery={searchQuery}
+                onTagToggle={handleTagToggle}
+                onSearchChange={setSearchQuery}
+                onClearFilters={handleClearFilters}
+              />
+            </aside>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   )
 }
