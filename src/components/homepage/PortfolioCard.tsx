@@ -12,125 +12,175 @@ interface PortfolioCardProps {
   index: number;
 }
 
-export default function PortfolioCard({ item }: PortfolioCardProps) {
+const getOutputState = (item: PortfolioItem) => {
+  if (item.liveUrl) {
+    return "LIVE_OUTPUT";
+  }
+
+  if (item.githubUrl) {
+    return "REPO_TRACE";
+  }
+
+  return "CASE_FILE";
+};
+
+export default function PortfolioCard({ item, index }: PortfolioCardProps) {
   const [imgError, setImgError] = useState(false);
   const [imgLoading, setImgLoading] = useState(true);
+  const outputState = getOutputState(item);
+  const primaryStack = item.techStack[0] ?? "Project";
+  const secondaryStack = item.techStack[1] ?? "Build";
+  const itemNumber = String(index + 1).padStart(2, "0");
 
   return (
-      <Card
-        role="article"
-        aria-label={item.title}
-        className={cn(
-          "group border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white motion-safe:transition-all motion-safe:duration-200 hover:border-slate-600/80 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-lg hover:shadow-slate-900/20 light:hover:shadow-slate-300/30 overflow-hidden flex flex-col h-full"
-        )}
-      >
-        <div className="flex flex-col sm:flex-row flex-1">
-          <div className="flex-1 p-3 sm:p-4 md:p-5 space-y-2 flex flex-col">
-            <CardHeader className="space-y-1.5 p-0 flex flex-col">
-              <h2
-                className="text-sm sm:text-base md:text-lg text-slate-100 light:text-slate-900 line-clamp-2 font-mono font-medium"
-              >
+    <Card
+      role="article"
+      aria-label={item.title}
+      className={cn(
+        "group flex h-full flex-col overflow-hidden rounded-none border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)] motion-safe:transition-colors motion-safe:duration-200 hover:border-[var(--border-strong)]"
+      )}
+    >
+      <div className="grid flex-1 grid-cols-1 sm:grid-cols-[minmax(0,1fr)_240px]">
+        <div className="flex min-w-0 flex-col p-4 sm:p-5">
+          <div className="mb-5 flex items-center justify-between gap-4">
+            <span className="text-drawing-label">project_{itemNumber}</span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--status-green)]">
+              {outputState}
+            </span>
+          </div>
+
+          <CardHeader className="space-y-3 p-0">
+            <h2 className="line-clamp-2 font-mono text-lg font-medium leading-snug text-[var(--graphite)]">
+              {item.title}
+            </h2>
+            <p className="line-clamp-4 font-body text-sm font-medium leading-7 text-[var(--graphite-muted)]">
+              {item.description}
+            </p>
+          </CardHeader>
+
+          <dl className="mt-5 grid grid-cols-2 gap-px border border-[var(--border-line)] bg-[var(--border-line)]">
+            <div className="bg-[var(--paper)] px-3 py-3">
+              <dt className="text-drawing-label">Stack</dt>
+              <dd className="mt-1 truncate font-mono text-xs text-[var(--graphite)]">
+                {primaryStack}
+              </dd>
+            </div>
+            <div className="bg-[var(--paper)] px-3 py-3">
+              <dt className="text-drawing-label">System</dt>
+              <dd className="mt-1 truncate font-mono text-xs text-[var(--graphite)]">
+                {secondaryStack}
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div className="relative min-h-44 border-t border-[var(--border-line)] bg-[var(--surface-subtle)] sm:min-h-full sm:border-l sm:border-t-0">
+          <div
+            className="pointer-events-none absolute inset-0 z-10 border border-transparent"
+            aria-hidden="true"
+          >
+            <div className="absolute left-4 right-4 top-4 border-t border-dashed border-[var(--border-dashed)]" />
+            <div className="absolute bottom-4 left-4 right-4 border-t border-dashed border-[var(--border-dashed)]" />
+            <div className="absolute bottom-5 right-5 bg-[var(--paper)] px-2 py-1 font-mono text-[9px] uppercase tracking-[0.16em] text-[var(--graphite-muted)]">
+              output:{itemNumber}
+            </div>
+          </div>
+          {imgLoading && !imgError && (
+            <Skeleton className="absolute inset-0 h-full w-full rounded-none bg-[var(--surface-subtle)]" />
+          )}
+          {imgError ? (
+            <div className="flex h-full min-h-44 w-full items-center justify-center bg-[var(--surface-subtle)] px-4">
+              <span className="line-clamp-3 text-center font-mono text-xs uppercase tracking-[0.14em] text-[var(--graphite-muted)]">
                 {item.title}
-              </h2>
-              <p
-                className="text-xs sm:text-sm text-slate-400 light:text-slate-600 line-clamp-4 font-body font-medium"
-              >
-                {item.description}
-              </p>
-            </CardHeader>
-          </div>
-          <div className="relative w-full sm:w-48 md:w-56 lg:w-64 flex-shrink-0 h-40 overflow-hidden bg-slate-800/40 light:bg-slate-100/60">
-            {imgLoading && !imgError && (
-              <Skeleton className="absolute inset-0 h-full w-full rounded-none bg-slate-800/60" />
-            )}
-            {imgError ? (
-              <div className="flex h-full w-full items-center justify-center bg-slate-800/60 light:bg-slate-200/60 px-4">
-                <span
-                  className="text-center text-xs text-slate-400 light:text-slate-500 line-clamp-3 font-body font-medium"
-                >
-                  {item.title}
-                </span>
-              </div>
-            ) : (
-              <img
-                src={item.image}
-                alt={item.title}
-                className="h-full w-full object-cover motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-105"
-                loading="lazy"
-                decoding="async"
-                onLoad={() => setImgLoading(false)}
-                onError={() => setImgError(true)}
-              />
-            )}
-          </div>
+              </span>
+            </div>
+          ) : (
+            <img
+              src={item.image}
+              alt={item.title}
+              className="h-full min-h-44 w-full object-cover saturate-[0.9] motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.03]"
+              loading="lazy"
+              decoding="async"
+              onLoad={() => setImgLoading(false)}
+              onError={() => setImgError(true)}
+            />
+          )}
         </div>
-        <div className="border-t border-slate-800/70 light:border-slate-300 p-3 sm:p-4 md:p-4 space-y-2 sm:space-y-3 flex flex-col flex-1">
-          <div className="flex flex-wrap items-center gap-2" aria-label="Technologies used" role="list">
-            {item.techStack.slice(0, 5).map((tech) => {
-              const Icon = getTechIcon(tech);
-              if (!Icon) return null;
-              return (
-                <div
-                  key={tech}
-                  className="flex items-center gap-1 sm:gap-1.5 rounded border border-slate-800/70 light:border-slate-300 bg-slate-900/80 light:bg-slate-50 px-2 py-1 text-xs"
-                  title={tech}
-                  role="listitem"
-                >
-                  <Icon className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-slate-400 light:text-slate-600" aria-hidden="true" />
-                  <span
-                    className="sr-only sm:not-sr-only sm:inline text-slate-400 light:text-slate-600 font-mono font-medium"
-                  >
-                    {tech}
-                  </span>
-                </div>
-              );
-            })}
-            {item.techStack.length > 5 && (
+      </div>
+
+      <div className="flex flex-col gap-4 border-t border-[var(--border-line)] p-4">
+        <div
+          className="flex flex-wrap items-center gap-2"
+          aria-label="Technologies used"
+          role="list"
+        >
+          {item.techStack.slice(0, 5).map((tech) => {
+            const Icon = getTechIcon(tech);
+            if (!Icon) return null;
+            return (
               <div
-                className="flex items-center gap-1 sm:gap-1.5 rounded border border-slate-800/70 light:border-slate-300 bg-slate-900/80 light:bg-slate-50 px-2 py-1 text-xs font-semibold"
-                title={item.techStack.slice(5).join(", ")}
+                key={tech}
+                className="flex items-center gap-1.5 rounded-none border border-[var(--border-line)] bg-[var(--paper)] px-2 py-1 text-xs"
+                title={tech}
+                role="listitem"
               >
-                <span className="text-slate-400 light:text-slate-600">
-                  +{item.techStack.length - 5}
+                <Icon
+                  className="h-3.5 w-3.5 text-[var(--graphite-muted)]"
+                  aria-hidden="true"
+                />
+                <span className="font-mono font-medium text-[var(--graphite-muted)]">
+                  {tech}
                 </span>
               </div>
-            )}
-          </div>
-          <div className="flex flex-wrap items-center gap-2 mt-auto">
-            <Link
-              to={`/projects/${item.slug}`}
-              className="inline-flex items-center gap-1 sm:gap-1.5 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white px-3 sm:px-4 py-2 text-xs sm:text-sm text-slate-300 light:text-slate-700 transition-all duration-200 hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:text-slate-100 light:hover:text-slate-950 hover:shadow-md hover:shadow-slate-900/50 light:hover:shadow-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40 font-body font-semibold"
-              aria-label={`View ${item.title} project details`}
+            );
+          })}
+          {item.techStack.length > 5 && (
+            <div
+              className="flex items-center gap-1.5 rounded-none border border-[var(--border-line)] bg-[var(--paper)] px-2 py-1 text-xs font-semibold"
+              title={item.techStack.slice(5).join(", ")}
             >
-              Brief
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-            {item.liveUrl && (
-              <a
-                href={item.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white px-3 py-2 text-xs text-slate-300 light:text-slate-700 transition-colors hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:text-slate-100 light:hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40 font-body font-medium"
-                aria-label={`Visit ${item.title} live website`}
-              >
-                <ExternalLink className="h-3.5 w-3.5" />
-                Live Web
-              </a>
-            )}
-            {item.githubUrl && (
-              <a
-                href={item.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/60 light:bg-white px-3 py-2 text-xs text-slate-300 light:text-slate-700 transition-colors hover:border-slate-700/70 light:hover:border-slate-400 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:text-slate-100 light:hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:focus-visible:ring-slate-900/40 font-body font-medium"
-                aria-label={`View ${item.title} on GitHub`}
-              >
-                <Github className="h-3.5 w-3.5" />
-                Github
-              </a>
-            )}
-          </div>
+              <span className="font-mono text-[var(--graphite-muted)]">
+                +{item.techStack.length - 5}
+              </span>
+            </div>
+          )}
         </div>
-      </Card>
+
+        <div className="mt-auto flex flex-wrap items-center gap-2">
+          <Link
+            to={`/projects/${item.slug}`}
+            className="inline-flex items-center gap-1.5 rounded-none border border-[var(--graphite)] bg-[var(--graphite)] px-3 py-2 font-body text-sm font-semibold text-[var(--paper)] transition-colors duration-200 hover:bg-[var(--graphite-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] active:translate-y-px"
+            aria-label={`View ${item.title} project details`}
+          >
+            Brief
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </Link>
+          {item.liveUrl && (
+            <a
+              href={item.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-none border border-[var(--border-line)] bg-[var(--paper)] px-3 py-2 font-body text-xs font-medium text-[var(--graphite)] transition-colors duration-200 hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] active:translate-y-px"
+              aria-label={`Visit ${item.title} live website`}
+            >
+              <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+              Live Web
+            </a>
+          )}
+          {item.githubUrl && (
+            <a
+              href={item.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-none border border-[var(--border-line)] bg-[var(--paper)] px-3 py-2 font-body text-xs font-medium text-[var(--graphite)] transition-colors duration-200 hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] active:translate-y-px"
+              aria-label={`View ${item.title} on GitHub`}
+            >
+              <Github className="h-3.5 w-3.5" aria-hidden="true" />
+              Github
+            </a>
+          )}
+        </div>
+      </div>
+    </Card>
   );
 }

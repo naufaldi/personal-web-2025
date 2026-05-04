@@ -101,22 +101,22 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
 
   return (
     <aside
-      className="hidden lg:block w-56 flex-shrink-0"
+      className="w-full"
       aria-label="Table of contents"
     >
       <div
-        className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto"
+        className="max-h-[calc(100vh-8rem)] overflow-y-auto border border-[var(--border-line)] bg-[var(--paper)] p-4 shadow-[var(--shadow-paper-xs)]"
         style={{
           scrollbarWidth: "thin",
-          scrollbarColor: "rgb(148 163 184 / 0.3) transparent",
+          scrollbarColor: "var(--border-strong) transparent",
         }}
       >
-        <p className="text-[11px] font-semibold uppercase tracking-widest text-slate-400 light:text-slate-500 mb-3 font-sans">
-          On this page
+        <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.22em] text-[var(--graphite-muted)]">
+          03 // ON_THIS_PAGE
         </p>
 
         <nav aria-label="Table of contents">
-          <ul className="list-none m-0 p-0 border-l border-slate-800 light:border-slate-200">
+          <ul className="m-0 list-none border-l border-dashed border-[var(--border-dashed)] p-0">
             {groupedItems.map((group) => {
               const isExpanded = expandedSections.has(group.h2.id);
               const hasH3s = group.h3s.length > 0;
@@ -130,7 +130,7 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
                     {/* Active indicator — overlays the border-l */}
                     {isSectionActive && (
                       <div
-                        className="absolute -left-px top-0 bottom-0 w-[2px] bg-blue-400 light:bg-blue-600"
+                        className="absolute -left-px top-0 bottom-0 w-[2px] bg-[var(--status-green)]"
                         aria-hidden="true"
                       />
                     )}
@@ -138,7 +138,7 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
                     {hasH3s ? (
                       <button
                         onClick={() => toggleSection(group.h2.id)}
-                        className="flex-shrink-0 flex items-center justify-center w-6 h-6 mt-0.5 ml-2 text-slate-500 light:text-slate-400 hover:text-slate-300 light:hover:text-slate-700 transition-colors rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                        className="ml-2 mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
                         aria-label={
                           isExpanded
                             ? `Collapse ${group.h2.text}`
@@ -160,11 +160,11 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
                       onClick={() => handleClick(group.h2.id)}
                       aria-current={isActive ? "true" : undefined}
                       className={cn(
-                        "flex-1 text-left py-1.5 pr-1 font-sans text-[13px] leading-[1.4] transition-colors duration-150 rounded-sm",
-                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400",
+                        "flex-1 py-1.5 pr-1 text-left font-body text-[13px] font-medium leading-[1.45] transition-colors duration-150",
+                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]",
                         isActive
-                          ? "text-blue-400 light:text-blue-600 font-medium"
-                          : "text-slate-400 light:text-slate-500 hover:text-slate-200 light:hover:text-slate-900"
+                          ? "text-[var(--status-green)]"
+                          : "text-[var(--graphite-muted)] hover:text-[var(--graphite)]"
                       )}
                     >
                       {group.h2.text}
@@ -188,11 +188,11 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
                               onClick={() => handleClick(h3.id)}
                               aria-current={isH3Active ? "true" : undefined}
                               className={cn(
-                                "block w-full text-left py-1 pl-10 pr-1 font-sans text-[11px] leading-[1.4] transition-colors duration-150 rounded-sm",
-                                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400",
+                                "block w-full py-1 pl-10 pr-1 text-left font-mono text-[10px] uppercase leading-[1.5] tracking-[0.12em] transition-colors duration-150",
+                                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]",
                                 isH3Active
-                                  ? "text-blue-400 light:text-blue-600 font-medium"
-                                  : "text-slate-500 light:text-slate-400 hover:text-slate-300 light:hover:text-slate-800"
+                                  ? "text-[var(--status-green)]"
+                                  : "text-[var(--graphite-muted)] hover:text-[var(--graphite)]"
                               )}
                             >
                               {h3.text}
