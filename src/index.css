@@ -994,7 +994,7 @@ body {
   background-position: center;
 }
 
-/* Background pattern for Blogs page - GPU-friendly single layer */
+/* Background pattern for Blogs page - technical drawing surface */
 .blog-pattern {
   position: relative;
   isolation: isolate;
@@ -1021,90 +1021,302 @@ body {
 
 .blog-pattern::before {
   background-image:
-    url("data:image/svg+xml,%3Csvg%20width%3D%27240%27%20height%3D%27240%27%20viewBox%3D%270%200%20240%20240%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Crect%20width%3D%27240%27%20height%3D%27240%27%20fill%3D%27none%27/%3E%3Cpath%20d%3D%27M0%20120h240M120%200v240%27%20stroke%3D%27%2364748b%27%20stroke-opacity%3D%270.25%27%20stroke-width%3D%270.7%27/%3E%3Cpath%20d%3D%27M0%2060h240M0%20180h240M60%200v240M180%200v240%27%20stroke%3D%27%2364748b%27%20stroke-opacity%3D%270.12%27%20stroke-width%3D%270.5%27/%3E%3C/svg%3E"),
-    radial-gradient(
-      1200px
-        700px
-        at
-        15%
-        0%,
+    linear-gradient(
       rgba(
-        56,
-        189,
-        248,
-        0.12
-      ),
+          148,
+          163,
+          184,
+          0.13
+        )
+        1px,
       transparent
-        70%
+        1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(
+          148,
+          163,
+          184,
+          0.13
+        )
+        1px,
+      transparent
+        1px
+    ),
+    linear-gradient(
+      rgba(
+          148,
+          163,
+          184,
+          0.07
+        )
+        1px,
+      transparent
+        1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(
+          148,
+          163,
+          184,
+          0.07
+        )
+        1px,
+      transparent
+        1px
     );
   background-size:
     240px
       240px,
-    100%
-      100%;
-  background-position: center;
-  opacity: 0.9;
+    240px
+      240px,
+    48px
+      48px,
+    48px
+      48px;
+  background-position:
+    center
+      top,
+    center
+      top,
+    center
+      top,
+    center
+      top;
+  opacity: 0.55;
 }
 
 .blog-pattern::after {
-  background-image: radial-gradient(
-    900px
-      600px
-      at
-      85%
-      20%,
-    rgba(
-      139,
-      92,
-      246,
-      0.14
+  background-image:
+    linear-gradient(
+      to
+        right,
+      transparent
+        calc(
+          50% -
+            640px
+        ),
+      rgba(
+          148,
+          163,
+          184,
+          0.2
+        )
+        calc(
+          50% -
+            640px
+        ),
+      rgba(
+          148,
+          163,
+          184,
+          0.2
+        )
+        calc(
+          50% -
+            639px
+        ),
+      transparent
+        calc(
+          50% -
+            639px
+        ),
+      transparent
+        calc(
+          50% +
+            639px
+        ),
+      rgba(
+          148,
+          163,
+          184,
+          0.2
+        )
+        calc(
+          50% +
+            639px
+        ),
+      rgba(
+          148,
+          163,
+          184,
+          0.2
+        )
+        calc(
+          50% +
+            640px
+        ),
+      transparent
+        calc(
+          50% +
+            640px
+        )
     ),
-    transparent
-      75%
-  );
-  opacity: 0.4;
+    linear-gradient(
+      to
+        bottom,
+      rgba(
+          2,
+          6,
+          23,
+          0.16
+        ),
+      transparent
+        28%,
+      transparent
+        72%,
+      rgba(
+          2,
+          6,
+          23,
+          0.2
+        )
+    );
+  opacity: 0.9;
 }
 
 .light
   .blog-pattern::before {
   background-image:
-    url("data:image/svg+xml,%3Csvg%20width%3D%27240%27%20height%3D%27240%27%20viewBox%3D%270%200%20240%20240%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Crect%20width%3D%27240%27%20height%3D%27240%27%20fill%3D%27none%27/%3E%3Cpath%20d%3D%27M0%20120h240M120%200v240%27%20stroke%3D%27%2394a3b8%27%20stroke-opacity%3D%270.35%27%20stroke-width%3D%270.7%27/%3E%3Cpath%20d%3D%27M0%2060h240M0%20180h240M60%200v240M180%200v240%27%20stroke%3D%27%2394a3b8%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%270.5%27/%3E%3C/svg%3E"),
-    radial-gradient(
-      1200px
-        700px
-        at
-        15%
-        0%,
+    linear-gradient(
       rgba(
-        14,
-        165,
-        233,
-        0.1
-      ),
+          203,
+          210,
+          219,
+          0.7
+        )
+        1px,
       transparent
-        70%
+        1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(
+          203,
+          210,
+          219,
+          0.7
+        )
+        1px,
+      transparent
+        1px
+    ),
+    linear-gradient(
+      rgba(
+          226,
+          230,
+          235,
+          0.72
+        )
+        1px,
+      transparent
+        1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(
+          226,
+          230,
+          235,
+          0.72
+        )
+        1px,
+      transparent
+        1px
     );
-  opacity: 0.95;
+  opacity: 0.72;
 }
 
 .light
   .blog-pattern::after {
-  background-image: radial-gradient(
-    900px
-      600px
-      at
-      85%
-      20%,
-    rgba(
-      139,
-      92,
-      246,
-      0.12
+  background-image:
+    linear-gradient(
+      to
+        right,
+      transparent
+        calc(
+          50% -
+            640px
+        ),
+      rgba(
+          203,
+          210,
+          219,
+          0.8
+        )
+        calc(
+          50% -
+            640px
+        ),
+      rgba(
+          203,
+          210,
+          219,
+          0.8
+        )
+        calc(
+          50% -
+            639px
+        ),
+      transparent
+        calc(
+          50% -
+            639px
+        ),
+      transparent
+        calc(
+          50% +
+            639px
+        ),
+      rgba(
+          203,
+          210,
+          219,
+          0.8
+        )
+        calc(
+          50% +
+            639px
+        ),
+      rgba(
+          203,
+          210,
+          219,
+          0.8
+        )
+        calc(
+          50% +
+            640px
+        ),
+      transparent
+        calc(
+          50% +
+            640px
+        )
     ),
-    transparent
-      75%
-  );
-  opacity: 0.35;
+    linear-gradient(
+      to
+        bottom,
+      rgba(
+          250,
+          250,
+          250,
+          0.72
+        ),
+      transparent
+        30%,
+      transparent
+        70%,
+      rgba(
+          250,
+          250,
+          250,
+          0.78
+        )
+    );
+  opacity: 1;
 }
 
 /* Background pattern for BlogDetail page - Even subtler for focused reading */
