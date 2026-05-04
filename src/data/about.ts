@@ -9,7 +9,6 @@ export interface AboutBio {
 export interface CurrentActivity {
   id: string
   text: string
-  emoji?: string
 }
 
 export interface TechStackItem {
@@ -39,22 +38,18 @@ export const currentActivities: CurrentActivity[] = [
   {
     id: '1',
     text: 'Planting seeds of influence, one tweet and post at a time',
-    emoji: '🌱',
   },
   {
     id: '2',
     text: 'Crafting impact that ripples through the company',
-    emoji: '💫',
   },
   {
     id: '3',
     text: 'Diving deep into backend realms, expanding my horizons',
-    emoji: '🚀',
   },
   {
     id: '4',
     text: 'Learning the art of partnership, one day at a time',
-    emoji: '💕',
   },
 ]
 
