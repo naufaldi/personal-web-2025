@@ -70,12 +70,22 @@
   --line: #e3e5e8;
   --line-soft: #f0f1f3;
   --status-green: #22c55e;
+  --graphite-faint: #858b94;
   --surface-base: var(--paper);
   --surface-subtle: var(--paper-soft);
   --surface-raised: #ffffff;
   --border-line: var(--line);
   --border-dashed: #d8dce0;
   --border-strong: #b8c0c8;
+  --hero-panel: rgba(255, 255, 255, 0.76);
+  --hero-title-surface: #ffffff;
+  --hero-overlay:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.78),
+      rgba(255, 255, 255, 0.28) 34%,
+      rgba(255, 255, 255, 0.86) 100%
+    );
   --radius-none: 0;
   --radius-xs: 2px;
   --radius-sm: 4px;
@@ -115,12 +125,22 @@
   --line: #242830;
   --line-soft: #171a20;
   --status-green: #4ade80;
+  --graphite-faint: #737a86;
   --surface-base: var(--paper);
   --surface-subtle: var(--paper-soft);
   --surface-raised: #11141a;
   --border-line: var(--line);
   --border-dashed: #343a44;
   --border-strong: #4b5563;
+  --hero-panel: rgba(16, 18, 22, 0.78);
+  --hero-title-surface: #090a0c;
+  --hero-overlay:
+    linear-gradient(
+      180deg,
+      rgba(245, 245, 242, 0.11),
+      rgba(9, 10, 12, 0.12) 34%,
+      rgba(9, 10, 12, 0.72) 100%
+    );
   --shadow-paper-xs: 0 1px 2px rgba(0, 0, 0, 0.35);
   --shadow-paper-sm: 0 10px 28px -20px rgba(0, 0, 0, 0.8);
   --background: 222.2
@@ -518,6 +538,28 @@ body {
   text-transform: uppercase;
 }
 
+.text-hero-name {
+  font-family:
+    "Arial Narrow",
+    "Roboto Condensed",
+    "Helvetica Neue",
+    var(
+      --font-sans
+    );
+  font-size: clamp(
+    2.9rem,
+    5.95vw,
+    6.55rem
+  );
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 0.88;
+  overflow-wrap: normal;
+  text-wrap: balance;
+  text-transform: uppercase;
+  word-break: normal;
+}
+
 .text-section-title {
   font-family: var(
     --font-mono
@@ -608,6 +650,12 @@ body {
     );
   background-size: 40px
     40px;
+}
+
+.drawing-frame-overlay {
+  background: var(
+    --hero-overlay
+  );
 }
 
 .drawing-grid {

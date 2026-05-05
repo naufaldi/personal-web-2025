@@ -65,7 +65,7 @@ export default function BlueprintIndexHero({
         aria-labelledby={titleId}
       >
         <FadeInUp delay={0.1}>
-          <div className="relative mx-auto w-full max-w-[1180px] border border-[var(--border-line)] bg-[var(--paper)]/70 p-5 shadow-[var(--shadow-paper-xs)] md:p-8">
+          <div className="relative mx-auto w-full max-w-[1180px] border border-[var(--border-line)] bg-[var(--hero-panel)] p-5 shadow-[var(--shadow-paper-xs)] backdrop-blur-[2px] md:p-8">
             <div
               className="absolute left-0 top-0 h-px w-32 bg-[var(--status-green)]"
               aria-hidden="true"
@@ -78,10 +78,10 @@ export default function BlueprintIndexHero({
                   <TechnicalLabel variant="status">{statusLabel}</TechnicalLabel>
                 </div>
 
-                <div className="border border-[var(--border-line)] bg-[var(--paper)] px-4 py-5 md:px-6 md:py-7">
+                <div className="border border-[var(--border-line)] bg-[var(--hero-title-surface)] px-4 py-5 md:px-6 md:py-7">
                   <h1
                     id={titleId}
-                    className="font-display text-[clamp(3.1rem,6.8vw,7.15rem)] font-black uppercase leading-[0.86] tracking-normal text-[var(--graphite)]"
+                    className="text-hero-name text-[var(--graphite)]"
                   >
                     {title}
                   </h1>

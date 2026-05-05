@@ -8,15 +8,15 @@ Inspired by [theodorusclarence.com](https://theodorusclarence.com/) - Modern, mi
 
 **Style:** Modern, Minimal, Bold, Professional  
 **Approach:** Content-first, clean hierarchy, generous whitespace  
-**Theme:** Dark mode ONLY (no light mode support)
+**Theme:** Light and dark mode with a persistent theme toggle
 
 **Design Principles:**
-- ✅ Content is the hero
-- ✅ Minimal visual clutter
-- ✅ Strong typography hierarchy
-- ✅ Consistent spacing and rhythm
-- ✅ Bold accents for call-to-action
-- ✅ Professional yet approachable
+- Content is the hero
+- Minimal visual clutter
+- Strong typography hierarchy
+- Consistent spacing and rhythm
+- Bold accents for call-to-action
+- Professional yet approachable
 
 ---
 
@@ -53,15 +53,28 @@ Inspired by [theodorusclarence.com](https://theodorusclarence.com/) - Modern, mi
 | **Slate 200** | `215.4 16.3% 70%` | Light text on dark |
 | **Slate 100** | `210 40% 96.1%` | Primary button background |
 
-### Dark Mode (Default)
+### Dark Mode
 
 ```
-Background: #000000 (Black)
-Surface: #1a1a1a (Dark Slate)
-Text Primary: #ffffff (White)
-Text Secondary: #a3a3a3 (Gray)
-Border: #333333 (Dark Gray)
-Accent: #3b82f6 (Blue)
+Background: #090a0c (Off Black)
+Surface: #101216 (Charcoal)
+Raised Surface: #11141a
+Text Primary: #f5f5f2
+Text Secondary: #b7bbc1
+Border: #242830
+Accent: #4ade80
+```
+
+### Light Mode
+
+```
+Background: #ffffff (Paper)
+Surface: #fafaf9
+Raised Surface: #ffffff
+Text Primary: #0f1010
+Text Secondary: #3a3a3c
+Border: #e3e5e8
+Accent: #22c55e
 ```
 
 ---
@@ -140,7 +153,7 @@ font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-seri
 ### Navigation / Header
 
 **Style:** Minimal, fixed or sticky top to keep core actions discoverable  
-**Background:** Black with white text  
+**Background:** Token-driven paper/charcoal surface with readable text in both themes  
 **Height:** 64px (mobile), 72px (desktop) with `px-6` horizontal padding to honor the spacing scale
 
 ```
@@ -166,7 +179,7 @@ font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-seri
 
 **Layout:** Full width, centered content with `max-w-7xl` container  
 **Padding:** 64px-96px vertical (`py-16 lg:py-24`)  
-**Background:** Black with subtle grid line pattern overlay (`.bg-pattern` - see Background Patterns section)
+**Background:** Blueprint drawing surface using theme tokens. Light mode uses a paper-white grid with a soft vertical wash; dark mode uses a charcoal grid with a subtle dark wash, avoiding pure black and heavy fog.
 
 **Content:**
 - Status badge with icon, text, and availability link
@@ -656,26 +669,31 @@ Desktop: 1024px+ (xl, 2xl)
 
 ---
 
-## 12. Dark Mode Only
+## 12. Theme Modes
 
-**Theme:** Dark Mode ONLY  
-**No Light Mode:** This project does not support light mode  
-**No Theme Toggle:** No theme switching functionality needed
+**Theme:** Light and dark mode are both supported.  
+**Default:** The app may start in light mode, while users can switch via the theme toggle.  
+**Persistence:** Theme choice is stored locally through the shared ThemeProvider.
 
 **Implementation:**
-- CSS custom properties for dark theme colors only
-- No `prefers-color-scheme` media queries
-- No theme toggle components
-- Consistent dark mode experience across all devices
+- CSS custom properties define shared semantic tokens such as `--paper`, `--graphite`, `--border-line`, and `--hero-overlay`
+- The `light` and `dark` root classes control token values
+- The hero blueprint frame uses the same layout in both themes, with token-driven gradients and surfaces
+- Downstream sections should use calmer surfaces and dividers, not repeat the full hero frame everywhere
 
 ```css
 :root {
-  --bg-primary: #000000;
-  --bg-secondary: #1a1a1a;
-  --text-primary: #ffffff;
-  --text-secondary: #a3a3a3;
-  --border: #333333;
-  --accent: #3b82f6;
+  --paper: #ffffff;
+  --graphite: #0f1010;
+  --border-line: #e3e5e8;
+  --hero-overlay: linear-gradient(...);
+}
+
+.dark {
+  --paper: #090a0c;
+  --graphite: #f5f5f2;
+  --border-line: #242830;
+  --hero-overlay: linear-gradient(...);
 }
 ```
 
