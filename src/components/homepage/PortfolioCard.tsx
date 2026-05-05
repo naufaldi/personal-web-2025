@@ -37,7 +37,7 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
       role="article"
       aria-label={item.title}
       className={cn(
-        "group flex h-full flex-col overflow-hidden rounded-none border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)] motion-safe:transition-colors motion-safe:duration-200 hover:border-[var(--border-strong)]"
+        "motion-card group flex h-full flex-col overflow-hidden rounded-none border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)] motion-safe:transition-colors motion-safe:duration-200 hover:border-[var(--border-strong)]"
       )}
     >
       <div className="grid flex-1 grid-cols-1 sm:grid-cols-[minmax(0,1fr)_240px]">
@@ -149,7 +149,7 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
         <div className="mt-auto flex flex-wrap items-center gap-2">
           <Link
             to={`/projects/${item.slug}`}
-            className="inline-flex items-center gap-1.5 rounded-none border border-[var(--graphite)] bg-[var(--graphite)] px-3 py-2 font-body text-sm font-semibold text-[var(--paper)] transition-colors duration-200 hover:bg-[var(--graphite-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] active:translate-y-px"
+            className="motion-button inline-flex items-center gap-1.5 rounded-none border border-[var(--graphite)] bg-[var(--graphite)] px-3 py-2 font-body text-sm font-semibold text-[var(--paper)] transition-colors duration-200 hover:bg-[var(--graphite-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] active:translate-y-px"
             aria-label={`View ${item.title} project details`}
           >
             Brief
@@ -160,7 +160,7 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
               href={item.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-none border border-[var(--border-line)] bg-[var(--paper)] px-3 py-2 font-body text-xs font-medium text-[var(--graphite)] transition-colors duration-200 hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] active:translate-y-px"
+              className="motion-button inline-flex items-center gap-1.5 rounded-none border border-[var(--border-line)] bg-[var(--paper)] px-3 py-2 font-body text-xs font-medium text-[var(--graphite)] transition-colors duration-200 hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] active:translate-y-px"
               aria-label={`Visit ${item.title} live website`}
             >
               <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
@@ -172,7 +172,7 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
               href={item.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-none border border-[var(--border-line)] bg-[var(--paper)] px-3 py-2 font-body text-xs font-medium text-[var(--graphite)] transition-colors duration-200 hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] active:translate-y-px"
+              className="motion-button inline-flex items-center gap-1.5 rounded-none border border-[var(--border-line)] bg-[var(--paper)] px-3 py-2 font-body text-xs font-medium text-[var(--graphite)] transition-colors duration-200 hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] active:translate-y-px"
               aria-label={`View ${item.title} on GitHub`}
             >
               <Github className="h-3.5 w-3.5" aria-hidden="true" />

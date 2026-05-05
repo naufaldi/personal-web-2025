@@ -6,6 +6,7 @@ import { html } from "@codemirror/lang-html";
 import { css } from "@codemirror/lang-css";
 import { json } from "@codemirror/lang-json";
 import { Copy, Check } from "lucide-react";
+import { cn } from "@/lib";
 
 // Custom themes matching site's slate palette
 // Dark: slate-800/900 range instead of pure black
@@ -82,11 +83,12 @@ export default function CodeBlock({ code, language }: { code: string; language?:
         </span>
         <button
           onClick={handleCopy}
-          className={`flex items-center gap-1.5 text-xs cursor-pointer rounded px-2 py-1 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 active:scale-95 ${
+          className={cn(
+            "motion-button flex cursor-pointer items-center gap-1.5 rounded px-2 py-1 text-xs transition-all duration-200 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400",
             copied
               ? "bg-emerald-500/20 text-emerald-400 light:bg-emerald-100 light:text-emerald-600"
-              : "text-slate-400 light:text-slate-500 hover:bg-slate-700/50 hover:text-slate-200 light:hover:bg-slate-200 light:hover:text-slate-700"
-          }`}
+              : "text-slate-400 hover:bg-slate-700/50 hover:text-slate-200 light:text-slate-500 light:hover:bg-slate-200 light:hover:text-slate-700",
+          )}
           aria-label={copied ? "Copied to clipboard" : "Copy code to clipboard"}
         >
           {copied ? (

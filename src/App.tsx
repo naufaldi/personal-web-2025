@@ -31,8 +31,8 @@ export default function App() {
           <Route path="shorts/:slug" element={<ShortDetail />} />
           <Route path="book" element={<Books />} />
           <Route path="manhwa" element={<Manhwa />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )

@@ -128,7 +128,7 @@ export default function Blogs() {
                     aria-controls="blog-feed"
                     onClick={() => setSelectedCategory(category)}
                     className={cn(
-                      "group relative min-h-12 border-b border-r border-slate-800/70 px-4 py-3 text-left font-mono text-[11px] uppercase tracking-[0.18em] transition-colors duration-200 last:border-r-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:border-[#e3e5e8] light:focus-visible:ring-slate-900/30 sm:border-b-0",
+                      "motion-button group relative min-h-12 border-b border-r border-slate-800/70 px-4 py-3 text-left font-mono text-[11px] uppercase tracking-[0.18em] transition-colors duration-200 last:border-r-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:border-[#e3e5e8] light:focus-visible:ring-slate-900/30 sm:border-b-0",
                       isActive
                         ? "bg-slate-100 text-slate-950 light:bg-[#111214] light:text-white"
                         : "bg-slate-950/40 text-slate-400 hover:bg-slate-900/80 hover:text-slate-100 light:bg-white/70 light:text-[#5b5f66] light:hover:bg-[#f3f4f4] light:hover:text-[#111214]"

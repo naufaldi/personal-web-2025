@@ -76,7 +76,7 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
       role="article"
       aria-label={blog.title}
       onClick={handleCardClick}
-      className="group grid cursor-pointer grid-cols-1 border-t border-slate-800/70 light:border-[#e3e5e8] lg:grid-cols-[170px_minmax(0,1fr)]"
+      className="motion-card group grid cursor-pointer grid-cols-1 border-t border-slate-800/70 light:border-[#e3e5e8] lg:grid-cols-[170px_minmax(0,1fr)]"
       style={{
         animation: "fade-in 420ms ease-out both",
         animationDelay,
@@ -119,7 +119,7 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
             <h2 className="max-w-4xl font-mono text-2xl leading-tight tracking-tight text-slate-100 light:text-[#111214] md:text-3xl">
               <Link
                 to={`/blogs/${blog.slug}`}
-                className="rounded-sm transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:hover:text-[#111214] light:focus-visible:ring-slate-900/30"
+                className="motion-link rounded-sm transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:hover:text-[#111214] light:focus-visible:ring-slate-900/30"
               >
                 {blog.title}
               </Link>
@@ -159,7 +159,7 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
               to={`/blogs/${blog.slug}`}
               tabIndex={-1}
               aria-hidden="true"
-              className="inline-flex w-fit items-center gap-2 border border-slate-800/70 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-300 transition-colors group-hover:border-slate-700 group-hover:text-slate-100 light:border-[#e3e5e8] light:text-[#5b5f66] light:group-hover:border-[#bfc5cc] light:group-hover:text-[#111214]"
+              className="motion-button inline-flex w-fit items-center gap-2 border border-slate-800/70 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-300 transition-colors group-hover:border-slate-700 group-hover:text-slate-100 light:border-[#e3e5e8] light:text-[#5b5f66] light:group-hover:border-[#bfc5cc] light:group-hover:text-[#111214]"
             >
               Read
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />

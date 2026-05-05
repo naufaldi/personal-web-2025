@@ -54,7 +54,7 @@ export default function ShortsFilter({
             <button
               type="button"
               onClick={() => onSearchChange('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
+              className="motion-icon-action absolute right-3 top-1/2 -translate-y-1/2 text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
               aria-label="Clear search"
             >
               <X className="h-4 w-4" aria-hidden="true" />
@@ -79,7 +79,7 @@ export default function ShortsFilter({
                 key={tag}
                 type="button"
                 className={cn(
-                  'border border-dashed px-2 py-1 font-mono text-[11px] uppercase tracking-[0.14em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]',
+                  'motion-button border border-dashed px-2 py-1 font-mono text-[11px] uppercase tracking-[0.14em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]',
                   isSelected
                     ? 'border-[var(--graphite)] bg-[var(--graphite)] text-[var(--paper)]'
                     : 'border-[var(--border-dashed)] bg-[var(--paper)] text-[var(--graphite-muted)] hover:border-[var(--border-strong)] hover:text-[var(--graphite)]',

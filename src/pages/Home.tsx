@@ -20,7 +20,7 @@ export default function Home() {
             </p>
             <a
               href="#projects"
-              className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
+              className="motion-link inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
             >
               Browse work
               <ChevronRight className="h-3.5 w-3.5" />

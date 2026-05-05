@@ -123,7 +123,7 @@ export default function BlueprintIndexHero({
                   {actionHref && (
                     <a
                       href={actionHref}
-                      className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite)] transition-colors hover:text-[var(--status-green)]"
+                      className="motion-link inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite)] transition-colors hover:text-[var(--status-green)]"
                     >
                       {actionLabel}
                       <ArrowRight className="h-4 w-4" aria-hidden="true" />

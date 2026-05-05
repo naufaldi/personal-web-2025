@@ -64,13 +64,13 @@ export const mdxComponents = {
   h2: (props: ComponentPropsWithoutRef<"h2">) => (
     <h2
       {...props}
-      className="text-2xl md:text-3xl text-slate-200 light:text-slate-900 mb-4 mt-6 scroll-mt-24 font-mono font-bold"
+      className="mb-4 mt-8 scroll-mt-24 font-blog text-2xl font-bold leading-tight text-slate-200 light:text-slate-900 md:text-[28px]"
     />
   ),
   h3: (props: ComponentPropsWithoutRef<"h3">) => (
     <h3
       {...props}
-      className="text-xl md:text-2xl text-slate-200 light:text-slate-900 mb-3 mt-5 scroll-mt-24 font-mono font-semibold"
+      className="mb-3 mt-6 scroll-mt-24 font-blog text-xl font-semibold leading-snug text-slate-200 light:text-slate-900 md:text-2xl"
     />
   ),
   p: (props: ComponentPropsWithoutRef<"p">) => (
@@ -108,7 +108,7 @@ export const mdxComponents = {
       {...props}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-blue-400 light:text-blue-600 underline hover:text-blue-300 light:hover:text-blue-700 transition-colors font-blog font-medium"
+      className="motion-link text-blue-400 light:text-blue-600 hover:text-blue-300 light:hover:text-blue-700 transition-colors font-blog font-medium"
     />
   ),
   blockquote: ({ children, ...props }: ComponentPropsWithoutRef<"blockquote">) => {
