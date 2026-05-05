@@ -154,7 +154,7 @@ function ImageLightbox({ src, alt, onClose }: { src: string; alt: string; onClos
     >
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 z-10 text-white text-3xl leading-none cursor-pointer hover:opacity-70"
+        className="motion-icon-action absolute top-4 right-4 z-10 text-white text-3xl leading-none cursor-pointer hover:opacity-70"
         aria-label="Close lightbox"
       >
         &times;

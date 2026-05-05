@@ -33,7 +33,7 @@ export default function WhatImUpToSection() {
           <ul className="divide-y divide-[var(--border-line)]" aria-label="Current activity list">
             {currentActivities.map((activity, index) => (
               <FadeInUp key={activity.id} delay={0.24 + index * 0.05}>
-                <li className="grid gap-4 px-4 py-5 transition-colors hover:bg-[var(--surface-subtle)] sm:grid-cols-[88px_minmax(0,1fr)_140px] sm:items-center">
+                <li className="motion-card grid gap-4 px-4 py-5 transition-colors hover:bg-[var(--surface-subtle)] sm:grid-cols-[88px_minmax(0,1fr)_140px] sm:items-center">
                   <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--graphite-muted)]">
                     node_{String(index + 1).padStart(2, '0')}
                   </span>

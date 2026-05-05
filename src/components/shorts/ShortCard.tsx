@@ -20,7 +20,7 @@ export default function ShortCard({ short, index }: ShortCardProps) {
   return (
     <article
       className={cn(
-        'group flex min-h-[260px] flex-col border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)] transition-colors duration-200 hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)]',
+        'motion-card group flex min-h-[260px] flex-col border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)] transition-colors duration-200 hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)]',
       )}
     >
       <Link

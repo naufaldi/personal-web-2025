@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react'
-import { ArrowRight } from 'lucide-react'
 import FadeInUp from '@/components/common/FadeInUp'
 import DrawingFrame from '@/components/design-system/DrawingFrame'
 import MetadataRow from '@/components/design-system/MetadataRow'
+import RouteRail from '@/components/design-system/RouteRail'
 import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 
 interface CommandRoute {
@@ -91,36 +91,7 @@ export default function BlueprintCommandHero({
                 aria-label={`${eyebrow} routes`}
               >
                 <TechnicalLabel variant="mono">02 // ROUTES</TechnicalLabel>
-                <div className="mt-8 divide-y divide-[var(--border-line)] border-y border-[var(--border-line)]">
-                  {routes.map((route, index) => (
-                    <a
-                      key={route.label}
-                      href={route.href}
-                      className={
-                        index === 0
-                          ? 'group flex items-center justify-between gap-4 border-l-2 border-l-[var(--status-green)] bg-[var(--graphite)] px-4 py-4 text-sm font-medium text-[var(--paper)] transition-colors hover:bg-[var(--graphite-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]'
-                          : 'group flex items-center justify-between gap-4 border-l-2 border-l-transparent bg-[var(--paper)] px-4 py-4 text-sm text-[var(--graphite)] transition-colors hover:border-l-[var(--status-green)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]'
-                      }
-                    >
-                      <span className="grid gap-3">
-                        <span
-                          className={
-                            index === 0
-                              ? 'font-mono text-[11px] tracking-[0.14em] text-[var(--status-green)]'
-                              : 'text-drawing-label'
-                          }
-                        >
-                          {route.index}
-                        </span>
-                        <span className="inline-flex items-center gap-2">
-                          {route.icon}
-                          {route.label}
-                        </span>
-                      </span>
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </a>
-                  ))}
-                </div>
+                <RouteRail items={routes} ariaLabel={`${eyebrow} route links`} />
               </aside>
             </div>
 

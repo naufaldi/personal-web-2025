@@ -23,7 +23,7 @@ export default function SelectedWorkSection() {
           {siteConfig.selectedProjects.map((project) => (
             <div
               key={project.title}
-              className="group rounded-lg border border-slate-800/70 bg-slate-900/60 p-4 hover:border-slate-700/70 transition-colors"
+              className="motion-card group rounded-lg border border-slate-800/70 bg-slate-900/60 p-4 hover:border-slate-700/70 transition-colors"
             >
               <h3
                 className="text-slate-100 text-[18px] font-mono font-medium"
@@ -42,4 +42,3 @@ export default function SelectedWorkSection() {
     </section>
   )
 }
-

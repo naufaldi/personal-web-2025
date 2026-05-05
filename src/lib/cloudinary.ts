@@ -31,15 +31,12 @@ export const buildCloudinaryUrl = (
   publicIdOrUrl: string,
   transformations?: CloudinaryTransformations,
 ): string => {
-  let publicId = publicIdOrUrl
+  const publicId = isCloudinaryUrl(publicIdOrUrl)
+    ? extractPublicId(publicIdOrUrl)
+    : publicIdOrUrl
 
-  if (isCloudinaryUrl(publicIdOrUrl)) {
-    const extracted = extractPublicId(publicIdOrUrl)
-    if (extracted) {
-      publicId = extracted
-    } else {
-      return publicIdOrUrl
-    }
+  if (!publicId) {
+    return publicIdOrUrl
   }
 
   const rawTransformation = transformations?.aspect
@@ -74,4 +71,3 @@ export const buildBlurUrl = (
     quality: 1,
   })
 }
-

@@ -1,7 +1,8 @@
-import { ArrowRight, Code2 } from "lucide-react";
+import { Code2 } from "lucide-react";
 import FadeInUp from "@/components/common/FadeInUp";
 import DrawingFrame from "@/components/design-system/DrawingFrame";
 import MetadataRow from "@/components/design-system/MetadataRow";
+import RouteRail from "@/components/design-system/RouteRail";
 import { TechnicalLabel } from "@/components/design-system/TechnicalLabel";
 import { siteConfig } from "@/data/site";
 
@@ -101,42 +102,7 @@ export default function HeroSection() {
                 aria-label="Hero routes"
               >
                 <TechnicalLabel variant="mono">02 // ROUTES</TechnicalLabel>
-                <div className="mt-8 divide-y divide-[var(--border-line)] border-y border-[var(--border-line)]">
-                  {heroRoutes.map((route, index) => {
-                    const isExternal = route.href.startsWith("http");
-
-                    return (
-                      <a
-                        key={route.label}
-                        href={route.href}
-                        target={isExternal ? "_blank" : undefined}
-                        rel={isExternal ? "noopener noreferrer" : undefined}
-                        className={
-                          index === 0
-                            ? "group flex items-center justify-between gap-4 border-l-2 border-l-[var(--status-green)] bg-[var(--graphite)] px-4 py-4 text-sm font-medium text-[var(--paper)] transition-colors hover:bg-[var(--graphite-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
-                            : "group flex items-center justify-between gap-4 border-l-2 border-l-transparent bg-[var(--paper)] px-4 py-4 text-sm text-[var(--graphite)] transition-colors hover:border-l-[var(--status-green)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
-                        }
-                      >
-                        <span className="grid gap-3">
-                          <span
-                            className={
-                              index === 0
-                                ? "font-mono text-[11px] tracking-[0.14em] text-[var(--status-green)]"
-                                : "text-drawing-label"
-                            }
-                          >
-                            {route.index}
-                          </span>
-                          <span className="inline-flex items-center gap-2">
-                            {route.icon}
-                            {route.label}
-                          </span>
-                        </span>
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                      </a>
-                    );
-                  })}
-                </div>
+                <RouteRail items={heroRoutes} ariaLabel="Hero route links" />
               </aside>
             </div>
 
