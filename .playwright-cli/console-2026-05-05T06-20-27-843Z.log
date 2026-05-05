@@ -1,0 +1,9 @@
+[     103ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-4D4CFRWF.js?v=a40629fa:21550
+[     142ms] [WARNING] Supabase credentials not found. Blog views and likes will not work. @ http://localhost:5173/src/lib/supabase.ts:5
+[  795041ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-4D4CFRWF.js?v=a40629fa:21550
+[  795076ms] [WARNING] Supabase credentials not found. Blog views and likes will not work. @ http://localhost:5173/src/lib/supabase.ts:5
+[  795597ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://res.cloudinary.com/cynux/image/upload/v1762849053/portfolio-2025/portfolio/viralkan.png:0
+[  795597ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://res.cloudinary.com/cynux/image/upload/v1762849053/portfolio-2025/portfolio/pangan.png:0
+[  825226ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://via.placeholder.com/800x600?text=Reading+List:0
+[ 1809184ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/chunk-4D4CFRWF.js?v=a40629fa:21550
+[ 1809255ms] [WARNING] Supabase credentials not found. Blog views and likes will not work. @ http://localhost:5173/src/lib/supabase.ts:5

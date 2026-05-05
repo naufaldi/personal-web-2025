@@ -13,30 +13,28 @@ export const slugify = (text: string): string => {
     .replace(/^-+|-+$/g, '')
 }
 
-export const extractTOC = (markdown: string): TOCItem[] => {
-  const toc: TOCItem[] = []
-  const lines = markdown.split('\n')
-  
-  for (const line of lines) {
-    const h2Match = line.match(/^##\s+(.+)$/)
-    const h3Match = line.match(/^###\s+(.+)$/)
-    
-    if (h2Match) {
-      const text = h2Match[1].trim()
-      toc.push({
-        id: slugify(text),
-        text,
-        level: 2,
-      })
-    } else if (h3Match) {
-      const text = h3Match[1].trim()
-      toc.push({
-        id: slugify(text),
-        text,
-        level: 3,
-      })
-    }
+const createTOCItem = (text: string, level: TOCItem['level']): TOCItem => ({
+  id: slugify(text),
+  text,
+  level,
+})
+
+const parseHeadingLine = (line: string): TOCItem | null => {
+  const h3Match = line.match(/^###\s+(.+)$/)
+  if (h3Match) {
+    return createTOCItem(h3Match[1].trim(), 3)
   }
-  
-  return toc
+
+  const h2Match = line.match(/^##\s+(.+)$/)
+  if (h2Match) {
+    return createTOCItem(h2Match[1].trim(), 2)
+  }
+
+  return null
 }
+
+export const extractTOC = (markdown: string): TOCItem[] =>
+  markdown
+    .split('\n')
+    .map(parseHeadingLine)
+    .filter((item): item is TOCItem => item !== null)

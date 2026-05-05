@@ -46,7 +46,7 @@ export default function ProjectDetail() {
           </h1>
           <Link
             to="/projects"
-            className="inline-flex items-center gap-2 border border-[var(--border-line)] px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--graphite)] transition-colors hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
+            className="motion-button inline-flex items-center gap-2 border border-[var(--border-line)] px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--graphite)] transition-colors hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
           >
             <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
             Back to Projects
@@ -64,7 +64,7 @@ export default function ProjectDetail() {
         <div className="mb-6 border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)]">
           <Link
             to="/projects"
-            className="group flex items-center justify-between gap-4 px-4 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--graphite-muted)] transition-colors hover:bg-[var(--surface-subtle)] hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] sm:px-5"
+            className="motion-link group flex items-center justify-between gap-4 px-4 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--graphite-muted)] transition-colors hover:bg-[var(--surface-subtle)] hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] sm:px-5"
           >
             <span className="inline-flex items-center gap-2">
               <ArrowLeft
@@ -207,7 +207,7 @@ export default function ProjectDetail() {
                         return (
                           <div
                             key={tech}
-                            className="flex items-center gap-1.5 border border-[var(--border-line)] bg-[var(--paper)] px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--graphite-muted)] transition-colors hover:border-[var(--border-strong)]"
+                            className="motion-card flex items-center gap-1.5 border border-[var(--border-line)] bg-[var(--paper)] px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--graphite-muted)] transition-colors hover:border-[var(--border-strong)]"
                             aria-label={tech}
                           >
                             {Icon && (
@@ -228,7 +228,7 @@ export default function ProjectDetail() {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 border border-[var(--border-line)] bg-[var(--graphite)] px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--paper)] transition-colors hover:bg-[var(--graphite-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
+                          className="motion-button inline-flex items-center gap-2 border border-[var(--border-line)] bg-[var(--graphite)] px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--paper)] transition-colors hover:bg-[var(--graphite-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
                           aria-label={`Visit ${project.title} live website`}
                         >
                           <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
@@ -240,7 +240,7 @@ export default function ProjectDetail() {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 border border-[var(--border-line)] bg-[var(--paper)] px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--graphite)] transition-colors hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
+                          className="motion-button inline-flex items-center gap-2 border border-[var(--border-line)] bg-[var(--paper)] px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--graphite)] transition-colors hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
                           aria-label={`View ${project.title} on GitHub`}
                         >
                           <Github className="h-3.5 w-3.5" aria-hidden="true" />

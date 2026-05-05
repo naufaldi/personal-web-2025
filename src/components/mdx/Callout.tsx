@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Info, AlertTriangle, Quote, Sparkles } from "lucide-react";
+import { cn } from "@/lib";
 
 export type CalloutType = "note" | "warning" | "quote" | "ai";
 
@@ -61,9 +62,13 @@ export default function Callout({ type = "note", children }: CalloutProps) {
     <div
       role={config.role}
       aria-label={config.label}
-      className={`border-l-4 ${config.border} ${config.bg} rounded-r-lg p-4 mb-4 not-italic`}
+      className={cn(
+        "mb-4 rounded-r-lg border-l-4 p-4 not-italic",
+        config.border,
+        config.bg,
+      )}
     >
-      <div className={`flex items-center gap-2 mb-2 ${config.iconColor}`}>
+      <div className={cn("mb-2 flex items-center gap-2", config.iconColor)}>
         <Icon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
         <span className="text-sm font-semibold font-blog">{config.label}</span>
       </div>

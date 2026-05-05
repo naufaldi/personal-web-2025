@@ -36,7 +36,7 @@ const FadeInUp = ({
       transition={{
         duration: prefersReducedMotion ? 0 : duration,
         delay: prefersReducedMotion ? 0 : delay,
-        ease: 'easeOut',
+        ease: [0.22, 1, 0.36, 1],
       }}
       className={cn(className)}
     >
@@ -46,4 +46,3 @@ const FadeInUp = ({
 }
 
 export default FadeInUp
-

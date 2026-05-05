@@ -212,6 +212,13 @@ export default function ProjectsPage() {
 - Accessibility: Consider `@axe-core/react` in development
 - Run: Provide `bun test` when test runner is added
 
+### Browser Verification Priority
+
+- For browser-based verification, use the local `agent-browser` CLI first when it is available.
+- If `agent-browser` is unavailable, missing required runtime support, or fails to control the target page, use the Codex `Browser Use` plugin (`@Browser`) as the next fallback.
+- Use generic desktop/Chrome control only after both `agent-browser` and `Browser Use` are unavailable or unsuitable, and state the fallback reason in the closeout.
+- For local app checks, prefer opening the running localhost URL in the browser tool, taking a fresh snapshot/screenshot, and verifying route navigation or clicks from the browser state rather than relying only on `curl`.
+
 ## Commit & Pull Request Guidelines
 
 - **Style**: Conventional commits (feat, fix, chore, refactor, test, docs)

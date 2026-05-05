@@ -13,6 +13,7 @@ export function useCountUp(target: number, options: UseCountUpOptions = {}) {
   const prefersReducedMotion = useReducedMotion()
   const [count, setCount] = useState(0)
   const hasAnimated = useRef(false)
+  const rafId = useRef<number | null>(null)
 
   useEffect(() => {
     if (!isInView || hasAnimated.current) return
@@ -24,7 +25,6 @@ export function useCountUp(target: number, options: UseCountUpOptions = {}) {
     }
 
     const durationMs = duration * 1000
-    let rafId: number
     const startTime = performance.now()
 
     function animate(currentTime: number) {
@@ -35,12 +35,16 @@ export function useCountUp(target: number, options: UseCountUpOptions = {}) {
       setCount(Math.round(eased * target))
 
       if (progress < 1) {
-        rafId = requestAnimationFrame(animate)
+        rafId.current = requestAnimationFrame(animate)
       }
     }
 
-    rafId = requestAnimationFrame(animate)
-    return () => cancelAnimationFrame(rafId)
+    rafId.current = requestAnimationFrame(animate)
+    return () => {
+      if (rafId.current) {
+        cancelAnimationFrame(rafId.current)
+      }
+    }
   }, [isInView, target, duration, prefersReducedMotion])
 
   const display = `${count.toLocaleString()}+${suffix ? ` ${suffix}` : ''}`

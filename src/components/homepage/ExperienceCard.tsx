@@ -45,7 +45,7 @@ export default function ExperienceCard({
     >
       <article
         className={cn(
-          "flex flex-col rounded-lg border border-slate-800/70 light:border-slate-200 bg-slate-900/60 light:bg-white p-2.5 sm:p-3 motion-safe:transition-all motion-safe:duration-200 hover:border-slate-700/70 light:hover:border-slate-300 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-lg hover:shadow-slate-900/50 light:hover:shadow-slate-200",
+          "motion-card flex flex-col rounded-lg border border-slate-800/70 light:border-slate-200 bg-slate-900/60 light:bg-white p-2.5 sm:p-3 motion-safe:transition-all motion-safe:duration-200 hover:border-slate-700/70 light:hover:border-slate-300 hover:bg-slate-900/90 light:hover:bg-slate-50 hover:shadow-lg hover:shadow-slate-900/50 light:hover:shadow-slate-200",
           isCurrent &&
             "border-slate-700/50 light:border-slate-300 ring-1 ring-slate-700/20 light:ring-slate-300/20",
         )}
@@ -174,7 +174,7 @@ export default function ExperienceCard({
                       key={
                         tech
                       }
-                      className="flex items-center gap-1 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/80 light:bg-slate-50 px-2 py-0.5 motion-safe:transition-colors motion-safe:duration-200 hover:border-slate-700/70 light:hover:border-slate-400"
+                      className="motion-card flex items-center gap-1 rounded-md border border-slate-800/70 light:border-slate-300 bg-slate-900/80 light:bg-slate-50 px-2 py-0.5 motion-safe:transition-colors motion-safe:duration-200 hover:border-slate-700/70 light:hover:border-slate-400"
                       title={
                         tech
                       }

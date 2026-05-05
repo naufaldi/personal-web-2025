@@ -57,6 +57,12 @@
 }
 
 :root {
+  --motion-duration-fast: 140ms;
+  --motion-duration-base: 220ms;
+  --motion-duration-slow: 360ms;
+  --motion-ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --motion-ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --paper: #ffffff;
   --paper-soft: #fafaf9;
   --graphite: #0f1010;
@@ -167,6 +173,268 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.motion-link,
+.motion-button,
+.motion-card,
+.motion-icon-action {
+  position: relative;
+  isolation: isolate;
+}
+
+.motion-link {
+  overflow: hidden;
+  transition:
+    color var(--motion-duration-base) var(--motion-ease-out-quart),
+    background-color var(--motion-duration-base) var(--motion-ease-out-quart);
+}
+
+.motion-link::before {
+  content: "";
+  position: absolute;
+  inset: -0.25rem -0.35rem;
+  z-index: 0;
+  pointer-events: none;
+  background: color-mix(in srgb, var(--graphite) 5%, transparent);
+  opacity: 0;
+  transform: scaleX(0.82);
+  transform-origin: left;
+  transition:
+    opacity var(--motion-duration-base) var(--motion-ease-out-quart),
+    transform var(--motion-duration-base) var(--motion-ease-out-quart);
+}
+
+.motion-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.12em;
+  height: 1px;
+  background: currentColor;
+  pointer-events: none;
+  opacity: 0.72;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:
+    transform var(--motion-duration-base) var(--motion-ease-out-expo),
+    opacity var(--motion-duration-base) var(--motion-ease-out-quart);
+}
+
+.motion-link:hover::before,
+.motion-link:focus-visible::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.motion-link:hover::after,
+.motion-link:focus-visible::after,
+.motion-link-active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.motion-button {
+  overflow: hidden;
+  translate: 0 0;
+  scale: 1;
+  transition:
+    translate var(--motion-duration-fast) var(--motion-ease-out-quint),
+    scale var(--motion-duration-fast) var(--motion-ease-out-quint),
+    border-color var(--motion-duration-base) var(--motion-ease-out-quart),
+    background-color var(--motion-duration-base) var(--motion-ease-out-quart),
+    color var(--motion-duration-base) var(--motion-ease-out-quart),
+    box-shadow var(--motion-duration-base) var(--motion-ease-out-quart);
+}
+
+.motion-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 0%,
+      color-mix(in srgb, var(--paper) 16%, transparent) 42%,
+      color-mix(in srgb, var(--graphite) 8%, transparent) 58%,
+      transparent 100%
+    );
+  opacity: 0;
+  transform: translateX(-26%);
+  transition:
+    opacity var(--motion-duration-base) var(--motion-ease-out-quart),
+    transform var(--motion-duration-slow) var(--motion-ease-out-expo);
+}
+
+.motion-button::after {
+  content: "";
+  position: absolute;
+  left: 0.65rem;
+  right: 0.65rem;
+  bottom: 0.28rem;
+  height: 1px;
+  background: currentColor;
+  pointer-events: none;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:
+    opacity var(--motion-duration-base) var(--motion-ease-out-quart),
+    transform var(--motion-duration-base) var(--motion-ease-out-expo);
+}
+
+.motion-button:hover {
+  translate: 0 -1px;
+}
+
+.motion-button:hover::before,
+.motion-button:focus-visible::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.motion-button:hover::after,
+.motion-button:focus-visible::after {
+  opacity: 0.55;
+  transform: scaleX(1);
+}
+
+.motion-button:active {
+  translate: 0 1px;
+  scale: 0.985;
+  transition-duration: 90ms;
+}
+
+.motion-card {
+  overflow: hidden;
+  translate: 0 0;
+  transition:
+    translate var(--motion-duration-base) var(--motion-ease-out-quint),
+    border-color var(--motion-duration-base) var(--motion-ease-out-quart),
+    background-color var(--motion-duration-base) var(--motion-ease-out-quart),
+    box-shadow var(--motion-duration-base) var(--motion-ease-out-quart);
+}
+
+.motion-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--graphite) 4%, transparent),
+      transparent 42%
+    );
+  opacity: 0;
+  transition: opacity var(--motion-duration-base) var(--motion-ease-out-quart);
+}
+
+.motion-card::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 2px;
+  background: var(--status-green);
+  pointer-events: none;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:
+    opacity var(--motion-duration-base) var(--motion-ease-out-quart),
+    transform var(--motion-duration-slow) var(--motion-ease-out-expo);
+}
+
+.motion-card:hover,
+.motion-card:focus-within {
+  translate: 0 -2px;
+}
+
+.motion-card:hover::before,
+.motion-card:focus-within::before {
+  opacity: 1;
+}
+
+.motion-card:hover::after,
+.motion-card:focus-within::after {
+  opacity: 0.8;
+  transform: scaleX(1);
+}
+
+.motion-icon-action {
+  overflow: hidden;
+  translate: 0 0;
+  scale: 1;
+  transition:
+    translate var(--motion-duration-fast) var(--motion-ease-out-quint),
+    scale var(--motion-duration-fast) var(--motion-ease-out-quint),
+    border-color var(--motion-duration-base) var(--motion-ease-out-quart),
+    background-color var(--motion-duration-base) var(--motion-ease-out-quart),
+    color var(--motion-duration-base) var(--motion-ease-out-quart),
+    opacity var(--motion-duration-base) var(--motion-ease-out-quart);
+}
+
+.motion-icon-action::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: color-mix(in srgb, var(--graphite) 7%, transparent);
+  opacity: 0;
+  transform: scale(0.84);
+  transition:
+    opacity var(--motion-duration-base) var(--motion-ease-out-quart),
+    transform var(--motion-duration-base) var(--motion-ease-out-expo);
+}
+
+.motion-icon-action:hover,
+.motion-icon-action:focus-visible {
+  translate: 0 -1px;
+  scale: 1.03;
+}
+
+.motion-icon-action:hover::before,
+.motion-icon-action:focus-visible::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.motion-icon-action:active {
+  translate: 0 1px;
+  scale: 0.96;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .motion-button,
+  .motion-card,
+  .motion-icon-action,
+  .motion-button:hover,
+  .motion-card:hover,
+  .motion-card:focus-within,
+  .motion-icon-action:hover,
+  .motion-icon-action:focus-visible {
+    scale: 1 !important;
+    translate: 0 0 !important;
+  }
 }
 
 .light
