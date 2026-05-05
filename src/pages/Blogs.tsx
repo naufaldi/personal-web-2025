@@ -106,14 +106,14 @@ export default function Blogs() {
 
       <div className="site-container relative z-10">
 
-        <section className="border-b border-slate-800/70 light:border-[#e3e5e8]">
+        <section className="border-b border-[var(--border-line)]">
           <div className="grid grid-cols-1 gap-6 py-6 lg:grid-cols-[170px_minmax(0,1fr)] lg:items-center">
-            <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-500 light:text-[#8c929b]">
+            <div className="text-drawing-label">
               03 // ROUTES
             </div>
 
             <div
-              className="grid grid-cols-2 border border-slate-800/70 light:border-[#e3e5e8] sm:flex"
+              className="grid grid-cols-2 border border-[var(--border-line)] sm:flex"
               role="tablist"
               aria-label="Filter blog posts by category"
             >
@@ -128,10 +128,10 @@ export default function Blogs() {
                     aria-controls="blog-feed"
                     onClick={() => setSelectedCategory(category)}
                     className={cn(
-                      "motion-button group relative min-h-12 border-b border-r border-slate-800/70 px-4 py-3 text-left font-mono text-[11px] uppercase tracking-[0.18em] transition-colors duration-200 last:border-r-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:border-[#e3e5e8] light:focus-visible:ring-slate-900/30 sm:border-b-0",
+                      "motion-button group relative min-h-12 border-b border-r border-[var(--border-line)] px-4 py-3 text-left font-mono text-[11px] uppercase tracking-[0.18em] transition-colors duration-200 last:border-r-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] sm:border-b-0",
                       isActive
-                        ? "bg-slate-100 text-slate-950 light:bg-[#111214] light:text-white"
-                        : "bg-slate-950/40 text-slate-400 hover:bg-slate-900/80 hover:text-slate-100 light:bg-white/70 light:text-[#5b5f66] light:hover:bg-[#f3f4f4] light:hover:text-[#111214]"
+                        ? "bg-[var(--graphite)] text-[var(--paper)]"
+                        : "bg-[var(--paper)] text-[var(--graphite-muted)] hover:bg-[var(--surface-subtle)] hover:text-[var(--graphite)]"
                     )}
                   >
                     <span className="flex items-center gap-2">
@@ -140,7 +140,7 @@ export default function Blogs() {
                           "h-1.5 w-1.5 rounded-full transition-colors",
                           isActive
                             ? "bg-[#22c55e]"
-                            : "bg-slate-700 light:bg-[#d7dbe0]"
+                            : "bg-[var(--border-strong)]"
                         )}
                         aria-hidden="true"
                       />
@@ -163,22 +163,22 @@ export default function Blogs() {
           id="blog-feed"
           role="feed"
           aria-label="Blog posts"
-          className="border-b border-slate-800/70 light:border-[#e3e5e8]"
+          className="border-b border-[var(--border-line)]"
         >
           {paginatedBlogs.length === 0 ? (
             <div className="grid grid-cols-1 gap-6 py-16 lg:grid-cols-[170px_minmax(0,1fr)]">
-              <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-500 light:text-[#8c929b]">
+              <div className="text-drawing-label">
                 00 // EMPTY
               </div>
-              <div className="border border-dashed border-slate-700 px-6 py-12 light:border-[#d7dbe0]">
+              <div className="border border-dashed border-[var(--border-dashed)] px-6 py-12">
                 <FileText
-                  className="mb-5 h-8 w-8 text-slate-500 light:text-[#8c929b]"
+                  className="mb-5 h-8 w-8 text-[var(--graphite-muted)]"
                   aria-hidden="true"
                 />
-                <h2 className="font-mono text-2xl text-slate-100 light:text-[#111214]">
+                <h2 className="font-mono text-2xl text-[var(--graphite)]">
                   No entries on this route
                 </h2>
-                <p className="mt-3 max-w-xl font-body text-sm font-medium leading-7 text-slate-400 light:text-[#5b5f66]">
+                <p className="mt-3 max-w-xl font-body text-sm font-medium leading-7 text-[var(--graphite-muted)]">
                   Try another category rail to inspect the rest of the writing
                   archive.
                 </p>
@@ -193,12 +193,12 @@ export default function Blogs() {
 
         {totalPages > 1 && (
           <section className="grid grid-cols-1 gap-6 py-7 lg:grid-cols-[170px_minmax(0,1fr)] lg:items-center">
-            <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-500 light:text-[#8c929b]">
+            <div className="text-drawing-label">
               04 // PAGE_CTRL
             </div>
 
-            <div className="flex flex-col gap-4 border border-slate-800/70 bg-slate-950/50 p-3 light:border-[#e3e5e8] light:bg-white/70 md:flex-row md:items-center md:justify-between">
-              <div className="px-2 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-400 light:text-[#5b5f66]">
+            <div className="flex flex-col gap-4 border border-[var(--border-line)] bg-[var(--hero-panel)] p-3 md:flex-row md:items-center md:justify-between">
+              <div className="px-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[var(--graphite-muted)]">
                 Page {String(currentPage).padStart(2, "0")} /{" "}
                 {String(totalPages).padStart(2, "0")}
               </div>
@@ -209,7 +209,7 @@ export default function Blogs() {
                     <PaginationPrevious
                       onClick={() => handlePageChange(currentPage - 1)}
                       disabled={currentPage === 1}
-                      className="h-10 rounded-none border-slate-800/70 bg-transparent px-4 font-mono text-[11px] uppercase tracking-[0.18em] shadow-none light:border-[#e3e5e8]"
+                      className="h-10 rounded-none border-[var(--border-line)] bg-transparent px-4 font-mono text-[11px] uppercase tracking-[0.18em] shadow-none"
                     />
                   </PaginationItem>
 
@@ -230,7 +230,7 @@ export default function Blogs() {
                             onClick={() => handlePageChange(page)}
                             isActive={page === currentPage}
                             aria-label={`Go to page ${page}`}
-                            className="h-10 w-10 rounded-none border-slate-800/70 bg-transparent font-mono text-[11px] shadow-none light:border-[#e3e5e8]"
+                            className="h-10 w-10 rounded-none border-[var(--border-line)] bg-transparent font-mono text-[11px] shadow-none"
                           >
                             {page}
                           </PaginationLink>
@@ -242,7 +242,7 @@ export default function Blogs() {
                     ) {
                       return (
                         <PaginationItem key={page}>
-                          <PaginationEllipsis className="h-10 w-10 text-slate-500 light:text-[#8c929b]" />
+                          <PaginationEllipsis className="h-10 w-10 text-[var(--graphite-muted)]" />
                         </PaginationItem>
                       );
                     }
@@ -253,7 +253,7 @@ export default function Blogs() {
                     <PaginationNext
                       onClick={() => handlePageChange(currentPage + 1)}
                       disabled={currentPage === totalPages}
-                      className="h-10 rounded-none border-slate-800/70 bg-transparent px-4 font-mono text-[11px] uppercase tracking-[0.18em] shadow-none light:border-[#e3e5e8]"
+                      className="h-10 rounded-none border-[var(--border-line)] bg-transparent px-4 font-mono text-[11px] uppercase tracking-[0.18em] shadow-none"
                     />
                   </PaginationItem>
                 </PaginationContent>
