@@ -25,7 +25,6 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
   const [views, setViews] = useState(0);
   const [likes, setLikes] = useState(0);
   const [imgError, setImgError] = useState(false);
-  const animationDelay = `${80 + (index % 10) * 40}ms`;
   const hasImage = Boolean(blog.image);
   const imageOnRight = index % 2 === 0;
 
@@ -77,10 +76,6 @@ export default function BlogCard({ blog, index }: BlogCardProps) {
       aria-label={blog.title}
       onClick={handleCardClick}
       className="motion-card group grid cursor-pointer grid-cols-1 border-t border-[var(--border-line)] lg:grid-cols-[170px_minmax(0,1fr)]"
-      style={{
-        animation: "fade-in 420ms ease-out both",
-        animationDelay,
-      }}
     >
       <div className="border-b border-[var(--border-line)] py-5 font-mono text-[11px] uppercase tracking-[0.24em] text-[var(--graphite-muted)] lg:border-b-0 lg:py-8 lg:pr-8">
         {String(index + 1).padStart(2, "0")} // ENTRY

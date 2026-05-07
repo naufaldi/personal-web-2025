@@ -1,5 +1,5 @@
-import { motion, useReducedMotion } from 'framer-motion'
-import { ReactNode } from 'react'
+import { motion, useReducedMotion, type ViewportOptions } from 'framer-motion'
+import type { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 
 interface FadeInUpProps {
@@ -7,21 +7,23 @@ interface FadeInUpProps {
   className?: string
   delay?: number
   duration?: number
-  animateOpacity?: boolean
+  distance?: number
+  viewport?: ViewportOptions
 }
 
 const FadeInUp = ({
   children,
   className,
-  delay = 0.12,
-  duration = 0.8,
-  animateOpacity = false,
+  delay = 0.08,
+  duration = 0.45,
+  distance = 16,
+  viewport = { once: true, margin: '-48px 0px -80px' },
 }: FadeInUpProps) => {
   const prefersReducedMotion = useReducedMotion()
 
   const initialState = prefersReducedMotion
     ? { y: 0, opacity: 1 }
-    : { y: 20, opacity: animateOpacity ? 0 : 1 }
+    : { y: distance, opacity: 0 }
 
   const animateState = {
     y: 0,
@@ -32,7 +34,7 @@ const FadeInUp = ({
     <motion.div
       initial={initialState}
       whileInView={animateState}
-      viewport={{ once: true, margin: '-50px' }}
+      viewport={viewport}
       transition={{
         duration: prefersReducedMotion ? 0 : duration,
         delay: prefersReducedMotion ? 0 : delay,

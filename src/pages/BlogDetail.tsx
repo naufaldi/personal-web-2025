@@ -92,25 +92,28 @@ export default function BlogDetail() {
   return (
     <div className="blog-detail-pattern relative flex min-h-screen flex-col bg-[var(--paper)]">
       <div className="site-container relative z-10 w-full py-10 md:py-14">
-        <div className="mb-6 border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)]">
-          <Link
-            to="/blogs"
-            className="motion-link group flex items-center justify-between gap-4 px-4 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--graphite-muted)] transition-colors hover:bg-[var(--surface-subtle)] hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] sm:px-5"
-          >
-            <span className="inline-flex items-center gap-2">
-              <ArrowLeft
-                className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1"
-                aria-hidden="true"
-              />
-              route:/blogs
-            </span>
-            <span className="hidden text-[var(--status-green)] sm:inline">
-              return_index
-            </span>
-          </Link>
-        </div>
+        <FadeInUp delay={0.02} duration={0.32}>
+          <div className="mb-6 border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)]">
+            <Link
+              to="/blogs"
+              className="motion-link group flex items-center justify-between gap-4 px-4 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--graphite-muted)] transition-colors hover:bg-[var(--surface-subtle)] hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] sm:px-5"
+            >
+              <span className="inline-flex items-center gap-2">
+                <ArrowLeft
+                  className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1"
+                  aria-hidden="true"
+                />
+                route:/blogs
+              </span>
+              <span className="hidden text-[var(--status-green)] sm:inline">
+                return_index
+              </span>
+            </Link>
+          </div>
+        </FadeInUp>
 
-        <section className="mb-6 border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)]">
+        <FadeInUp delay={0.06} duration={0.34}>
+          <section className="mb-6 border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)]">
           <div className="flex flex-col gap-2 border-b border-[var(--border-line)] px-3 py-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--graphite-muted)] sm:flex-row sm:items-center sm:justify-between">
             <span>02 // BLOG_META</span>
             <span>BUILD:2026</span>
@@ -165,7 +168,8 @@ export default function BlogDetail() {
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--status-green)]" />
             ARTICLE_READY
           </div>
-        </section>
+          </section>
+        </FadeInUp>
 
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px] xl:grid-cols-[minmax(0,1fr)_320px]">
           <div className="min-w-0">

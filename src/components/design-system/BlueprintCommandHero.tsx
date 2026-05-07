@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import FadeInUp from '@/components/common/FadeInUp'
+import { StaggerGroup, StaggerItem } from '@/components/common/StaggerGroup'
 import DrawingFrame from '@/components/design-system/DrawingFrame'
 import MetadataRow from '@/components/design-system/MetadataRow'
 import RouteRail from '@/components/design-system/RouteRail'
@@ -61,8 +62,12 @@ export default function BlueprintCommandHero({
               className="absolute left-0 top-0 h-px w-32 bg-[var(--status-green)]"
               aria-hidden="true"
             />
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
-              <div className="space-y-7">
+            <StaggerGroup
+              className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]"
+              staggerDelay={0.055}
+              initialDelay={0.08}
+            >
+              <StaggerItem className="space-y-7">
                 <div className="flex flex-wrap items-center justify-between gap-4">
                   <TechnicalLabel variant="mono">01 // {eyebrow}</TechnicalLabel>
                   <TechnicalLabel variant="status">{statusLabel}</TechnicalLabel>
@@ -84,23 +89,27 @@ export default function BlueprintCommandHero({
                   <MetadataRow items={metadata} />
                   <p className="text-body-readable">{description}</p>
                 </div>
-              </div>
+              </StaggerItem>
 
-              <aside
-                className="border-t border-[var(--border-line)] pt-5 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0"
-                aria-label={`${eyebrow} routes`}
-              >
-                <TechnicalLabel variant="mono">02 // ROUTES</TechnicalLabel>
-                <RouteRail items={routes} ariaLabel={`${eyebrow} route links`} />
-              </aside>
-            </div>
+              <StaggerItem>
+                <aside
+                  className="border-t border-[var(--border-line)] pt-5 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0"
+                  aria-label={`${eyebrow} routes`}
+                >
+                  <TechnicalLabel variant="mono">02 // ROUTES</TechnicalLabel>
+                  <RouteRail items={routes} ariaLabel={`${eyebrow} route links`} />
+                </aside>
+              </StaggerItem>
+            </StaggerGroup>
 
-            <div className="mt-9 border-t border-[var(--border-line)] pt-5">
-              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                <MetadataRow items={footerMetadata} />
-                <TechnicalLabel variant="mono">BUILD:2026</TechnicalLabel>
+            <FadeInUp delay={0.18} duration={0.36}>
+              <div className="mt-9 border-t border-[var(--border-line)] pt-5">
+                <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                  <MetadataRow items={footerMetadata} />
+                  <TechnicalLabel variant="mono">BUILD:2026</TechnicalLabel>
+                </div>
               </div>
-            </div>
+            </FadeInUp>
           </div>
         </FadeInUp>
       </section>

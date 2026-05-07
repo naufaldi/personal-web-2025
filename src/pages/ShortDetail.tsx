@@ -1,5 +1,6 @@
 import { Link, useNavigate, useParams } from 'react-router'
 import { ArrowLeft } from 'lucide-react'
+import FadeInUp from '@/components/common/FadeInUp'
 import MarkdownRenderer from '@/components/shorts/MarkdownRenderer'
 import { Button } from '@/components/ui/button'
 import DrawingFrame from '@/components/design-system/DrawingFrame'
@@ -32,53 +33,57 @@ export default function ShortDetail() {
     <div className="relative flex min-h-screen flex-col bg-[var(--paper)] text-[var(--graphite)]">
       <DrawingFrame className="py-10 md:py-14">
         <div className="mx-auto max-w-5xl">
-          <Button
-            type="button"
-            variant="technical"
-            onClick={() => navigate('/shorts')}
-            className="mb-8"
-          >
-            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-            Back to shorts
-          </Button>
+          <FadeInUp delay={0.02} duration={0.32}>
+            <Button
+              type="button"
+              variant="technical"
+              onClick={() => navigate('/shorts')}
+              className="mb-8"
+            >
+              <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+              Back to shorts
+            </Button>
+          </FadeInUp>
 
-          <article className="border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)]">
-            <header className="grid gap-px bg-[var(--border-line)] md:grid-cols-[minmax(0,1fr)_280px]">
-              <div className="bg-[var(--paper)] p-5 md:p-8">
-                <div className="text-drawing-label">01 // SHORT_DETAIL</div>
-                <h1 className="mt-8 max-w-3xl font-mono text-4xl font-semibold leading-tight text-[var(--graphite)] md:text-6xl">
-                  {short.title}
-                </h1>
+          <FadeInUp delay={0.06}>
+            <article className="border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)]">
+              <header className="grid gap-px bg-[var(--border-line)] md:grid-cols-[minmax(0,1fr)_280px]">
+                <div className="bg-[var(--paper)] p-5 md:p-8">
+                  <div className="text-drawing-label">01 // SHORT_DETAIL</div>
+                  <h1 className="mt-8 max-w-3xl font-mono text-4xl font-semibold leading-tight text-[var(--graphite)] md:text-6xl">
+                    {short.title}
+                  </h1>
 
-                {short.tags.length > 0 && (
-                  <div className="mt-8 flex flex-wrap items-center gap-2">
-                    {short.tags.map((tag) => (
-                      <TechnicalLabel key={tag} variant="outline">
-                        {tag}
-                      </TechnicalLabel>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <aside className="bg-[var(--paper)] p-5 md:p-8" aria-label="Short metadata">
-                <TechnicalLabel variant="status">DETAIL_READY</TechnicalLabel>
-                <div className="mt-8">
-                  <MetadataRow
-                    items={[
-                      `route: /shorts/${short.slug}`,
-                      `date: ${short.date}`,
-                      `tags: ${short.tags.length}`,
-                    ]}
-                  />
+                  {short.tags.length > 0 && (
+                    <div className="mt-8 flex flex-wrap items-center gap-2">
+                      {short.tags.map((tag) => (
+                        <TechnicalLabel key={tag} variant="outline">
+                          {tag}
+                        </TechnicalLabel>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              </aside>
-            </header>
 
-            <div className="prose prose-invert light:prose-light max-w-none p-5 md:p-8">
-              <MarkdownRenderer content={short.content} />
-            </div>
-          </article>
+                <aside className="bg-[var(--paper)] p-5 md:p-8" aria-label="Short metadata">
+                  <TechnicalLabel variant="status">DETAIL_READY</TechnicalLabel>
+                  <div className="mt-8">
+                    <MetadataRow
+                      items={[
+                        `route: /shorts/${short.slug}`,
+                        `date: ${short.date}`,
+                        `tags: ${short.tags.length}`,
+                      ]}
+                    />
+                  </div>
+                </aside>
+              </header>
+
+              <div className="prose prose-invert light:prose-light max-w-none p-5 md:p-8">
+                <MarkdownRenderer content={short.content} />
+              </div>
+            </article>
+          </FadeInUp>
         </div>
       </DrawingFrame>
     </div>

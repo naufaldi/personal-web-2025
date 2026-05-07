@@ -6,6 +6,7 @@ import ExperienceRow from '@/components/design-system/ExperienceRow'
 import SectionHeader from '@/components/design-system/SectionHeader'
 import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 import FadeInUp from '@/components/common/FadeInUp'
+import { StaggerGroup, StaggerItem } from '@/components/common/StaggerGroup'
 import { Button } from '@/components/ui/button'
 
 export default function ExperienceSection() {
@@ -80,17 +81,17 @@ export default function ExperienceSection() {
           </div>
         </FadeInUp>
 
-        <FadeInUp delay={0.18}>
-          <div className="relative mt-8 border-t border-[var(--border-line)]">
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute left-[112px] top-0 hidden h-full border-l border-dashed border-[var(--border-dashed)] md:block lg:left-36"
-            />
-            {latestExperiences.map((experience, index) => (
-              <ExperienceRow key={experience.id} experience={experience} index={index} />
-            ))}
-          </div>
-        </FadeInUp>
+        <StaggerGroup className="relative mt-8 border-t border-[var(--border-line)]" initialDelay={0.05}>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-[112px] top-0 hidden h-full border-l border-dashed border-[var(--border-dashed)] md:block lg:left-36"
+          />
+          {latestExperiences.map((experience, index) => (
+            <StaggerItem key={experience.id}>
+              <ExperienceRow experience={experience} index={index} />
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
       </div>
     </section>
   )
