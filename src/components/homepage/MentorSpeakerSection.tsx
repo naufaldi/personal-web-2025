@@ -6,6 +6,7 @@ import {
 } from '@/data/mentorSpeaker'
 import MentorSpeakerItem from './MentorSpeakerItem'
 import FadeInUp from '@/components/common/FadeInUp'
+import { StaggerGroup, StaggerItem } from '@/components/common/StaggerGroup'
 import SectionHeader from '@/components/design-system/SectionHeader'
 import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 import { Button } from '@/components/ui/button'
@@ -80,17 +81,17 @@ export default function MentorSpeakerSection() {
           </div>
         </FadeInUp>
 
-        <FadeInUp delay={0.18}>
-          <div className="relative mt-8 border-t border-[var(--border-line)]">
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute left-[112px] top-0 hidden h-full border-l border-dashed border-[var(--border-dashed)] md:block lg:left-36"
-            />
-            {previewItems.map((item, index) => (
-              <MentorSpeakerItem key={item.id} item={item} index={index} />
-            ))}
-          </div>
-        </FadeInUp>
+        <StaggerGroup className="relative mt-8 border-t border-[var(--border-line)]" initialDelay={0.05}>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-[112px] top-0 hidden h-full border-l border-dashed border-[var(--border-dashed)] md:block lg:left-36"
+          />
+          {previewItems.map((item, index) => (
+            <StaggerItem key={item.id}>
+              <MentorSpeakerItem item={item} index={index} />
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
       </div>
     </section>
   )

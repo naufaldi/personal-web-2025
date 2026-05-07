@@ -5,6 +5,7 @@ import WorkRow from '@/components/design-system/WorkRow'
 import SectionHeader from '@/components/design-system/SectionHeader'
 import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 import FadeInUp from '@/components/common/FadeInUp'
+import { StaggerGroup, StaggerItem } from '@/components/common/StaggerGroup'
 import { Button } from '@/components/ui/button'
 
 export default function PortfolioSection() {
@@ -75,17 +76,20 @@ export default function PortfolioSection() {
           </div>
         </FadeInUp>
 
-        <FadeInUp delay={0.18}>
-          <div className="relative mt-8 border-t border-[var(--border-line)] bg-[var(--paper)]/72">
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute left-[112px] top-0 hidden h-full border-l border-dashed border-[var(--border-dashed)] md:block lg:left-36"
-            />
-            {featuredItems.map((item, index) => (
-              <WorkRow key={item.id} item={item} index={index} />
-            ))}
-          </div>
-        </FadeInUp>
+        <StaggerGroup
+          className="relative mt-8 border-t border-[var(--border-line)] bg-[var(--paper)]/72"
+          initialDelay={0.05}
+        >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-[112px] top-0 hidden h-full border-l border-dashed border-[var(--border-dashed)] md:block lg:left-36"
+          />
+          {featuredItems.map((item, index) => (
+            <StaggerItem key={item.id}>
+              <WorkRow item={item} index={index} />
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
       </div>
     </section>
   )
