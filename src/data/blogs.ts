@@ -37,6 +37,18 @@ const calculateReadTime = (content: string): number => {
   return Math.ceil(words / wordsPerMinute);
 };
 
+const isPublicBlog = (blog: BlogItem): boolean => {
+  const title = blog.title.trim().toLowerCase();
+  const description = blog.description.trim().toLowerCase();
+
+  return (
+    blog.category !== "draft" &&
+    blog.slug !== "coming-soon" &&
+    title !== "placeholder" &&
+    description !== "placeholder"
+  );
+};
+
 const createBlogItem = (markdownContent: string): BlogItem => {
   const parsed = parseMarkdown<BlogFrontmatter>(markdownContent);
   const readTime = parsed.content
@@ -44,16 +56,16 @@ const createBlogItem = (markdownContent: string): BlogItem => {
     : parsed.frontmatter.readTime || 5;
 
   return {
-      id: parsed.frontmatter.slug,
-      title: parsed.frontmatter.title,
-      description: parsed.frontmatter.description,
-      slug: parsed.frontmatter.slug,
-      category: parsed.frontmatter.category,
-      author: parsed.frontmatter.author,
-      date: parsed.frontmatter.date,
-      image: parsed.frontmatter.image,
-      readTime,
-      content: parsed.content,
+    id: parsed.frontmatter.slug,
+    title: parsed.frontmatter.title,
+    description: parsed.frontmatter.description,
+    slug: parsed.frontmatter.slug,
+    category: parsed.frontmatter.category,
+    author: parsed.frontmatter.author,
+    date: parsed.frontmatter.date,
+    image: parsed.frontmatter.image,
+    readTime,
+    content: parsed.content,
   };
 };
 
@@ -61,7 +73,10 @@ const sortByNewest = (first: BlogItem, second: BlogItem): number =>
   new Date(second.date).getTime() - new Date(first.date).getTime();
 
 const loadBlogs = (): BlogItem[] =>
-  Object.values(markdownModules).map(createBlogItem).sort(sortByNewest);
+  Object.values(markdownModules)
+    .map(createBlogItem)
+    .filter(isPublicBlog)
+    .sort(sortByNewest);
 
 export const blogItems = loadBlogs();
 
@@ -73,7 +88,7 @@ export const getBlogsByCategory = (
   category: BlogCategory | "All"
 ): BlogItem[] => {
   if (category === "All") {
-    return blogItems.filter((blog) => blog.category !== "draft");
+    return blogItems;
   }
   return blogItems.filter((blog) => blog.category === category);
 };

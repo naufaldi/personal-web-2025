@@ -26,8 +26,9 @@
   ],
   "scripts": {
     "dev": "vite",
-    "generate:discoverability": "bun scripts/generate-discoverability.ts",
-    "build": "bun run generate:discoverability && tsc && vite build",
+    "generate:discoverability": "bun run scripts/generate-discoverability.ts",
+    "prerender:seo": "bun run scripts/prerender-seo.ts",
+    "build": "bun run generate:discoverability && tsc && vite build && bun run prerender:seo",
     "preview": "vite preview"
   },
   "dependencies": {

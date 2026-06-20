@@ -1,7 +1,21 @@
-import { Children, isValidElement, type ComponentPropsWithoutRef, type ReactNode } from "react";
-import Mermaid from "@/components/mdx/Mermaid";
+import {
+  Children,
+  Suspense,
+  isValidElement,
+  lazy,
+  type ComponentPropsWithoutRef,
+  type ReactNode,
+} from "react";
 import Callout, { type CalloutType } from "@/components/mdx/Callout";
-import CodeBlock from "@/components/mdx/CodeBlock";
+
+const Mermaid = lazy(() => import("@/components/mdx/Mermaid"));
+const CodeBlock = lazy(() => import("@/components/mdx/CodeBlock"));
+
+const mdxToolFallback = (
+  <div className="mb-4 rounded-lg border border-slate-800/70 bg-slate-900/50 p-4 text-sm text-slate-400 light:border-slate-300 light:bg-slate-100 light:text-slate-600">
+    Loading...
+  </div>
+);
 
 const CALLOUT_TYPES: Record<string, CalloutType> = {
   NOTE: "note",
@@ -189,11 +203,17 @@ export const mdxComponents = {
     if (language === "mermaid") {
       return (
         <div className="mb-6 -mx-8 md:-mx-16 rounded-lg overflow-hidden border border-slate-800/70 light:border-slate-300/70 bg-slate-950/40 light:bg-white/40 p-4">
-          <Mermaid chart={codeString} />
+          <Suspense fallback={mdxToolFallback}>
+            <Mermaid chart={codeString} />
+          </Suspense>
         </div>
       );
     }
 
-    return <CodeBlock code={codeString} language={language} />;
+    return (
+      <Suspense fallback={mdxToolFallback}>
+        <CodeBlock code={codeString} language={language} />
+      </Suspense>
+    );
   },
 };

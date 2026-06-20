@@ -83,11 +83,19 @@ const toIsoDate = (value?: string): string => {
   return parsed.toISOString().slice(0, 10)
 }
 
+const isPlaceholderContent = (attributes: Record<string, unknown>): boolean => {
+  const title = String(attributes.title ?? '').trim().toLowerCase()
+  const description = String(attributes.description ?? '').trim().toLowerCase()
+  return title === 'placeholder' || description === 'placeholder'
+}
+
 const loadBlogs = (): BlogEntry[] =>
   readMarkdownDir(BLOGS_DIR, (attributes, body) => {
     const slug = String(attributes.slug ?? '')
     const category = String(attributes.category ?? '')
-    if (!slug || !isIndexableBlogSlug(slug, category)) return null
+    if (!slug || !isIndexableBlogSlug(slug, category) || isPlaceholderContent(attributes)) {
+      return null
+    }
     return {
       title: String(attributes.title ?? slug),
       slug,
@@ -187,6 +195,102 @@ ${urls}
 </urlset>
 `
 }
+
+const renderRobots = (): string => `User-agent: *
+Content-Signal: search=yes,ai-input=yes,ai-train=no
+Allow: /
+Disallow: /blogs/community
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# LLM context: ${SITE_URL}/llms.txt
+# AI policy: ${SITE_URL}/.well-known/ai.txt
+
+Sitemap: ${SITE_URL}/sitemap.xml
+`
+
+const renderAiTxt = (): string => `# ai.txt
+#
+# AI Governance & Interoperability Policy
+# Site: ${SITE_NAME} (${SITE_FULL_NAME})
+
+Site-Name: ${SITE_NAME}
+Site-URL: ${SITE_URL}
+Site-Type: Personal portfolio and technical writing website
+Primary-Language: en-US
+Content-Scope: Public website content only
+
+# AI Permissions
+
+Allow-AI-Retrieval: true
+Allow-AI-Indexing: true
+Allow-AI-Summarization: true
+Allow-AI-Embeddings: true
+Allow-AI-Training: false
+
+# Attribution & Citation
+
+Require-Attribution: true
+Preferred-Citation: canonical-url
+Preferred-Source-Format: direct-link
+
+# Governance Notes
+
+Usage-Policy: Public website content may be accessed and processed by AI systems for legitimate indexing, retrieval, research, and summarization use cases.
+Restriction-Policy: AI model training is not broadly granted by this policy. Respect page-level restrictions, applicable law, privacy obligations, and canonical URLs.
+Privacy-Scope: Local browser-only features such as blog view counters are not public crawlable content.
+
+# Public Policy References
+
+Robots-Policy: ${SITE_URL}/robots.txt
+Sitemap: ${SITE_URL}/sitemap.xml
+LLM-Index: ${SITE_URL}/llms.txt
+LLM-Full-Context: ${SITE_URL}/llms-full.txt
+Source-Repository: https://github.com/naufaldi/personal-web-v5.git
+
+# AI Preferences
+
+Preferred-Answer-Language: English
+Preferred-Retrieval-Mode: canonical-public-pages
+Preferred-Context: grounded-in-public-site-content
+
+# About This Site
+
+Description: ${SITE_DESCRIPTION}
+
+# Metadata
+
+Last-Updated: ${new Date().toISOString().slice(0, 10)}
+Maintainer: ${SITE_FULL_NAME}
+`
 
 const renderLlmsIndex = (
   blogs: BlogEntry[],
@@ -401,11 +505,16 @@ const shorts = loadShorts()
 const sitemapEntries = buildSitemapEntries(blogs, projects, shorts)
 
 ensureDir(PUBLIC_DIR)
+ensureDir(path.join(PUBLIC_DIR, '.well-known'))
 fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap.xml'), renderSitemap(sitemapEntries))
+fs.writeFileSync(path.join(PUBLIC_DIR, 'robots.txt'), renderRobots())
 fs.writeFileSync(path.join(PUBLIC_DIR, 'llms.txt'), renderLlmsIndex(blogs, projects, shorts))
 fs.writeFileSync(path.join(PUBLIC_DIR, 'llms-full.txt'), renderLlmsFull(blogs, projects, shorts))
+fs.writeFileSync(path.join(PUBLIC_DIR, '.well-known/ai.txt'), renderAiTxt())
 
 console.log(`Generated discoverability files in ${PUBLIC_DIR}`)
 console.log(`- sitemap.xml (${sitemapEntries.length} URLs)`)
+console.log(`- robots.txt`)
 console.log(`- llms.txt`)
 console.log(`- llms-full.txt`)
+console.log(`- .well-known/ai.txt`)

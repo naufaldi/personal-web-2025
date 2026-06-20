@@ -152,8 +152,8 @@ font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-seri
 
 ### Navigation / Header
 
-**Style:** Minimal, fixed or sticky top to keep core actions discoverable  
-**Background:** Token-driven paper/charcoal surface with readable text in both themes  
+**Style:** Minimal, fixed or sticky top to keep core actions discoverable
+**Background:** Token-driven paper/charcoal surface with readable text in both themes
 **Height:** 64px (mobile), 72px (desktop) with `px-6` horizontal padding to honor the spacing scale
 
 ```
@@ -671,8 +671,8 @@ Desktop: 1024px+ (xl, 2xl)
 
 ## 12. Theme Modes
 
-**Theme:** Light and dark mode are both supported.  
-**Default:** The app may start in light mode, while users can switch via the theme toggle.  
+**Theme:** Light and dark mode are both supported.
+**Default:** The app may start in light mode, while users can switch via the theme toggle.
 **Persistence:** Theme choice is stored locally through the shared ThemeProvider.
 
 **Implementation:**

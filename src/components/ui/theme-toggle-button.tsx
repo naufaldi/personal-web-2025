@@ -63,7 +63,7 @@ const createCircleTransitionCss = (
 
   return `
     @supports (view-transition-name: root) {
-      ::view-transition-old(root) { 
+      ::view-transition-old(root) {
         animation: none;
       }
       ::view-transition-new(root) {
