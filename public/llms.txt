@@ -1,0 +1,63 @@
+# Naufaldi Rafif Satriya
+
+> Personal portfolio of Naufaldi Rafif Satriya, a software engineer, mentor, and technical writer focused on modern web development, TypeScript, React, and developer experience.
+
+Use this file as a short index for understanding Faldi. For fuller context, use `llms-full.txt`.
+
+Important notes:
+
+- Scope is limited to public website content at https://faldi.xyz.
+- Canonical blog URLs live on https://faldi.xyz/blogs/:slug.
+- Draft, placeholder, and coming-soon content are excluded from the public index.
+- AI retrieval, indexing, and summarization are allowed with attribution. Broad AI training is not granted.
+
+## Primary sources
+
+- [Full site context](https://faldi.xyz/llms-full.txt): Detailed summary for AI retrieval and citation.
+- [Homepage](https://faldi.xyz/): Portfolio landing page.
+- [About](https://faldi.xyz/about): Extended profile and work history.
+- [Projects](https://faldi.xyz/projects): Curated project catalog.
+- [Blog index](https://faldi.xyz/blogs): Technical writing and personal essays.
+- [Speaker & mentor](https://faldi.xyz/speaker): Speaking and mentoring work.
+
+## Key facts
+
+- Naufaldi Rafif Satriya is a software engineer and mentor from Indonesia.
+- Strong frontend foundation with growing backend and product-system ownership.
+- Public writing covers frontend engineering, career growth, AI tooling, and developer experience.
+- Mentoring and speaking work spans workshops, bootcamps, and community sessions.
+
+## Recent projects
+
+- [Viralkan – Community Road Damage Reporting Platform](https://faldi.xyz/projects/viralkan-app): A full-stack civic engagement platform enabling citizens to report road damage, built from scratch with React, Hono, PostgreSQL, and PostGIS. Designed to...
+- [Pangan Indonesia – Food Price Data API & Cache System](https://faldi.xyz/projects/pangan-be): A high-performance FastAPI backend for Indonesian food price data with efficient data ingestion pipeline, PostgreSQL caching layer, and clean architecture...
+- [Industry Talent - Job Listing Platform](https://faldi.xyz/projects/industry-talent): Industry Talent is a cutting-edge job listing and application platform that streamlines the hiring process by leveraging powerful integrations and a respo...
+- [Duwork Agency Landing Page](https://faldi.xyz/projects/duwork-agency): Developed the Duwork Studio landing page with TypeScript and React/Next.js, enhancing user engagement by 40% through dynamic content and innovative design.
+- [Illustration Agency Landing Page](https://faldi.xyz/projects/illustration-agency): This landing page serves as a digital storefront for an Illustration Agency, designed to enhance outreach and client engagement. The site integrates with...
+
+## Recent writing
+
+- [Tips Lolos Probation: Panduan Buat Kamu yang Baru Mulai Kerja](https://faldi.xyz/blogs/tips-lolos-probation): Banyak orang gagal probation bukan karena ga bisa kerja, tapi karena ga tau apa yang dinilai. Artikel ini bahas cara lolos probation dengan strategi yang...
+- [How to Setup MiniMax in OpenCode](https://faldi.xyz/blogs/setup-minimax-opencode): Step-by-step guide to configure MiniMax-M2.1 as your AI coding assistant in OpenCode, from installation to authentication.
+- [How to Add MiniMax MCP Tools to OpenCode](https://faldi.xyz/blogs/setup-mcp-minimax-opencode): Extend OpenCode with MiniMax MCP server to add web search and understand image capabilities for enhanced AI-assisted coding.
+- [When Docker Isn't Enough: Surviving a k3s Compromise on Your VPS](https://faldi.xyz/blogs/k3s-compromise-incident-report): A real-world incident report documenting how CVE-2025-66478 led to a k3s installation, cryptomining attack, and complete VPS compromise. Includes forensic...
+- [From TypeScript to Go: Finally Understanding Compilers vs Transpiler](https://faldi.xyz/blogs/compiler-vs-transpiler): I used Go and JavaScript labs to finally understand what actually happens between my code, a transpiler like Babel/TS, and the machine. This is my fronten...
+- [Why Do I Read? A Reflection on Books, Manhwa, and a Critical Tweet](https://faldi.xyz/blogs/reading-book): I felt guilty for reading manhwa instead of books. Then I started to question why books are seen as 'smarter' in the first place.
+- [AI Context Engineering: How to Level Up Prompting, Context, and Output with Modern Tools](https://faldi.xyz/blogs/ai-context-engineering-how-to-level-up-prompting-context-and-output-with-modern-tools): Most developers blame the AI when they get bad answers. The truth? 90% of “dumb” output is your fault—because you haven’t engineered the prompt, context,...
+- [A Practical Guide Environment Variables: A Guide from OS to Next.js](https://faldi.xyz/blogs/a-practical-guide-environment-variables-a-guide-from-os-to-next-js): I still remember the frustration. I was deploying a Next.js app in a Docker container for the first time. I dutifully set my NEXT PUBLIC API URL variable...
+- [Managing State in React: Why You Should Avoid "Too Much State" in a Single Component](https://faldi.xyz/blogs/managing-state-in-react-why-you-should-avoid-quot-too-much-state-quot-in-a-single-component): In React projects, it’s common to see components with a long list of state variables, sometimes more than ten in one file. State helps us keep track of ch...
+- [Building Strong Relationships with Your Engineering Manager (From a Developer’s Perspective)](https://faldi.xyz/blogs/building-strong-relationships-with-your-engineering-manager-from-a-developer-s-perspective): There’s still too little discussion about how to effectively work with your Engineering Manager,how to communicate clearly, manage expectations, and stay...
+
+## Short notes
+
+- [Tailwind CSS Quick Tips and Snippets](https://faldi.xyz/shorts/tailwind-css-tips): Tailwind CSS Quick Tips and Snippets Quick reference for common Tailwind CSS patterns and utilities. Responsive Design Use responsive prefixes for mobile-...
+- [ESLint Configuration for TypeScript Projects](https://faldi.xyz/shorts/typescript-eslint-config): ESLint Configuration for TypeScript Projects Configure ESLint for TypeScript to catch type errors and enforce coding standards. Installation Install the n...
+- [AI Rule: Ensure Data Privacy Compliance](https://faldi.xyz/shorts/ai-rule-data-privacy): AI Rule: Ensure Data Privacy Compliance AI systems must comply with data privacy laws like GDPR, CCPA, and other regional regulations. Data Minimization C...
+- [Integrating ESLint with Prettier](https://faldi.xyz/shorts/eslint-prettier-integration): Integrating ESLint with Prettier Integrate ESLint with Prettier to maintain code consistency and avoid conflicts. Installation Install the necessary packa...
+- [Using React Hooks for State Management](https://faldi.xyz/shorts/react-hooks-state): Using React Hooks for State Management React Hooks like useState and useEffect manage state and side effects in functional components. Basic useState Exam...
+
+## Optional
+
+- [robots.txt](https://faldi.xyz/robots.txt): Crawler access policy.
+- [sitemap.xml](https://faldi.xyz/sitemap.xml): Site URL index.
+- [ai.txt](https://faldi.xyz/.well-known/ai.txt): AI usage and citation preferences.

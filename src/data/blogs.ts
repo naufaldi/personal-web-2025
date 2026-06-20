@@ -37,6 +37,18 @@ const calculateReadTime = (content: string): number => {
   return Math.ceil(words / wordsPerMinute);
 };
 
+const isPublicBlog = (blog: BlogItem): boolean => {
+  const title = blog.title.trim().toLowerCase();
+  const description = blog.description.trim().toLowerCase();
+
+  return (
+    blog.category !== "draft" &&
+    blog.slug !== "coming-soon" &&
+    title !== "placeholder" &&
+    description !== "placeholder"
+  );
+};
+
 const loadBlogs = (): BlogItem[] => {
   const blogs: BlogItem[] = [];
 
@@ -62,7 +74,7 @@ const loadBlogs = (): BlogItem[] => {
     });
   }
 
-  return blogs.sort((a, b) => {
+  return blogs.filter(isPublicBlog).sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 };
@@ -77,7 +89,7 @@ export const getBlogsByCategory = (
   category: BlogCategory | "All"
 ): BlogItem[] => {
   if (category === "All") {
-    return blogItems.filter((blog) => blog.category !== "draft");
+    return blogItems;
   }
   return blogItems.filter((blog) => blog.category === category);
 };

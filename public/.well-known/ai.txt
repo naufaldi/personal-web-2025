@@ -1,0 +1,35 @@
+# ai.txt
+
+Site-Name: Naufaldi Rafif Satriya
+Site-URL: https://faldi.xyz
+Site-Type: Personal portfolio and technical writing website
+Primary-Language: en-US
+Content-Scope: Public website content only
+
+Allow-AI-Retrieval: true
+Allow-AI-Indexing: true
+Allow-AI-Summarization: true
+Allow-AI-Embeddings: true
+Allow-AI-Training: false
+
+Require-Attribution: true
+Preferred-Citation: canonical-url
+Preferred-Source-Format: direct-link
+
+Usage-Policy: Public website content may be accessed and processed by AI systems for legitimate indexing, retrieval, research, and summarization use cases.
+Restriction-Policy: AI model training is not broadly granted by this policy. Respect page-level restrictions, applicable law, privacy obligations, and canonical URLs.
+
+Robots-Policy: https://faldi.xyz/robots.txt
+Sitemap: https://faldi.xyz/sitemap.xml
+LLM-Index: https://faldi.xyz/llms.txt
+LLM-Full-Context: https://faldi.xyz/llms-full.txt
+Source-Repository: https://github.com/naufaldi/personal-web-v5.git
+
+Preferred-Answer-Language: English
+Preferred-Retrieval-Mode: canonical-public-pages
+Preferred-Context: grounded-in-public-site-content
+
+Description: Personal portfolio of Naufaldi Rafif Satriya, a software engineer, mentor, and technical writer focused on modern web development, TypeScript, React, and developer experience.
+
+Last-Updated: 2026-06-20
+Maintainer: Naufaldi Rafif Satriya
