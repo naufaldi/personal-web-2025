@@ -70,7 +70,7 @@ export default function WorkRow({ item, index }: WorkRowProps) {
                 src={item.image}
                 alt={`${item.title} project preview`}
                 className={cn(
-                  'h-full w-full object-cover grayscale transition duration-300 group-hover/row:opacity-100 group-hover/row:grayscale-0',
+                  'h-full w-full object-cover grayscale transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/row:opacity-100 group-hover/row:grayscale-0 group-hover/row:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover/row:scale-100',
                   'opacity-70',
                 )}
                 loading="lazy"

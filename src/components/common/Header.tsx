@@ -18,7 +18,7 @@ export default function Header() {
         <div className="flex h-[72px] items-center justify-between gap-5">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 group"
+            className="motion-link inline-flex items-center gap-2 group"
             aria-label="Home"
           >
             <div className="inline-flex h-8 w-8 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--border-line)] bg-[var(--surface-raised)]">

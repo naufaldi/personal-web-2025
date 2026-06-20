@@ -1,10 +1,15 @@
 # ai.txt
+#
+# AI Governance & Interoperability Policy
+# Site: Faldi (Naufaldi Rafif Satriya)
 
-Site-Name: Naufaldi Rafif Satriya
+Site-Name: Faldi
 Site-URL: https://faldi.xyz
 Site-Type: Personal portfolio and technical writing website
 Primary-Language: en-US
 Content-Scope: Public website content only
+
+# AI Permissions
 
 Allow-AI-Retrieval: true
 Allow-AI-Indexing: true
@@ -12,12 +17,19 @@ Allow-AI-Summarization: true
 Allow-AI-Embeddings: true
 Allow-AI-Training: false
 
+# Attribution & Citation
+
 Require-Attribution: true
 Preferred-Citation: canonical-url
 Preferred-Source-Format: direct-link
 
+# Governance Notes
+
 Usage-Policy: Public website content may be accessed and processed by AI systems for legitimate indexing, retrieval, research, and summarization use cases.
 Restriction-Policy: AI model training is not broadly granted by this policy. Respect page-level restrictions, applicable law, privacy obligations, and canonical URLs.
+Privacy-Scope: Local browser-only features such as blog view counters are not public crawlable content.
+
+# Public Policy References
 
 Robots-Policy: https://faldi.xyz/robots.txt
 Sitemap: https://faldi.xyz/sitemap.xml
@@ -25,11 +37,17 @@ LLM-Index: https://faldi.xyz/llms.txt
 LLM-Full-Context: https://faldi.xyz/llms-full.txt
 Source-Repository: https://github.com/naufaldi/personal-web-v5.git
 
+# AI Preferences
+
 Preferred-Answer-Language: English
 Preferred-Retrieval-Mode: canonical-public-pages
 Preferred-Context: grounded-in-public-site-content
 
-Description: Personal portfolio of Naufaldi Rafif Satriya, a software engineer, mentor, and technical writer focused on modern web development, TypeScript, React, and developer experience.
+# About This Site
+
+Description: Personal portfolio of Naufaldi Rafif Satriya — software engineer, mentor, and technical writer focused on modern web development, TypeScript, React, and developer experience.
+
+# Metadata
 
 Last-Updated: 2026-06-20
 Maintainer: Naufaldi Rafif Satriya

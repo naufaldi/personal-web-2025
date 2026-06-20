@@ -19,7 +19,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
             return (
               <h2
                 id={id}
-                className="text-2xl md:text-3xl text-slate-200 light:text-slate-900 mb-4 mt-6 scroll-mt-24 font-mono font-bold"
+                className="mb-4 mt-8 scroll-mt-24 font-blog text-2xl font-bold leading-tight text-slate-200 light:text-slate-900 md:text-[28px]"
               >
                 {children}
               </h2>
@@ -31,7 +31,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
             return (
               <h3
                 id={id}
-                className="text-xl md:text-2xl text-slate-200 light:text-slate-900 mb-3 mt-5 scroll-mt-24 font-mono font-semibold"
+                className="mb-3 mt-6 scroll-mt-24 font-blog text-xl font-semibold leading-snug text-slate-200 light:text-slate-900 md:text-2xl"
               >
                 {children}
               </h3>
@@ -94,7 +94,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 light:text-blue-600 underline hover:text-blue-300 light:hover:text-blue-700 transition-colors font-blog font-medium"
+              className="motion-link text-blue-400 light:text-blue-600 hover:text-blue-300 light:hover:text-blue-700 transition-colors font-blog font-medium"
             >
               {children}
             </a>

@@ -116,7 +116,7 @@ const SheetContent =
           {
             children
           }
-          <SheetPrimitive.Close className="absolute right-4 top-4 rounded-[var(--radius-sm)] border border-[var(--border-line)] bg-[var(--paper)] p-1.5 text-[var(--graphite-muted)] transition-all hover:border-[var(--border-strong)] hover:text-[var(--graphite)] focus:outline-none focus:ring-2 focus:ring-[var(--border-strong)] disabled:pointer-events-none">
+          <SheetPrimitive.Close className="motion-icon-action absolute right-4 top-4 rounded-[var(--radius-sm)] border border-[var(--border-line)] bg-[var(--paper)] p-1.5 text-[var(--graphite-muted)] transition-all hover:border-[var(--border-strong)] hover:text-[var(--graphite)] focus:outline-none focus:ring-2 focus:ring-[var(--border-strong)] disabled:pointer-events-none">
             <X className="h-5 w-5" />
             <span className="sr-only">
               Close

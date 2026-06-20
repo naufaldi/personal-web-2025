@@ -13,27 +13,24 @@ interface GroupedTOCItem {
 }
 
 const groupTOCItems = (items: TOCItem[]): GroupedTOCItem[] => {
-  const grouped: GroupedTOCItem[] = [];
-  let currentH2: TOCItem | null = null;
-  let currentH3s: TOCItem[] = [];
-
-  for (const item of items) {
+  return items.reduce<GroupedTOCItem[]>((groups, item) => {
     if (item.level === 2) {
-      if (currentH2) {
-        grouped.push({ h2: currentH2, h3s: currentH3s });
-      }
-      currentH2 = item;
-      currentH3s = [];
-    } else if (item.level === 3 && currentH2) {
-      currentH3s.push(item);
+      return [...groups, { h2: item, h3s: [] }];
     }
-  }
 
-  if (currentH2) {
-    grouped.push({ h2: currentH2, h3s: currentH3s });
-  }
+    const lastGroup = groups[groups.length - 1];
+    if (!lastGroup) {
+      return groups;
+    }
 
-  return grouped;
+    return [
+      ...groups.slice(0, -1),
+      {
+        ...lastGroup,
+        h3s: [...lastGroup.h3s, item],
+      },
+    ];
+  }, []);
 };
 
 export default function TableOfContents({ items }: TableOfContentsProps) {
@@ -138,7 +135,7 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
                     {hasH3s ? (
                       <button
                         onClick={() => toggleSection(group.h2.id)}
-                        className="ml-2 mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
+                        className="motion-icon-action ml-2 mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
                         aria-label={
                           isExpanded
                             ? `Collapse ${group.h2.text}`
@@ -160,7 +157,7 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
                       onClick={() => handleClick(group.h2.id)}
                       aria-current={isActive ? "true" : undefined}
                       className={cn(
-                        "flex-1 py-1.5 pr-1 text-left font-body text-[13px] font-medium leading-[1.45] transition-colors duration-150",
+                        "motion-link flex-1 py-1.5 pr-1 text-left font-body text-[13px] font-medium leading-[1.45] transition-colors duration-150",
                         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]",
                         isActive
                           ? "text-[var(--status-green)]"
@@ -188,7 +185,7 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
                               onClick={() => handleClick(h3.id)}
                               aria-current={isH3Active ? "true" : undefined}
                               className={cn(
-                                "block w-full py-1 pl-10 pr-1 text-left font-mono text-[10px] uppercase leading-[1.5] tracking-[0.12em] transition-colors duration-150",
+                                "motion-link block w-full py-1 pl-10 pr-1 text-left font-mono text-[10px] uppercase leading-[1.5] tracking-[0.12em] transition-colors duration-150",
                                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]",
                                 isH3Active
                                   ? "text-[var(--status-green)]"

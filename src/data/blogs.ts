@@ -49,35 +49,34 @@ const isPublicBlog = (blog: BlogItem): boolean => {
   );
 };
 
-const loadBlogs = (): BlogItem[] => {
-  const blogs: BlogItem[] = [];
+const createBlogItem = (markdownContent: string): BlogItem => {
+  const parsed = parseMarkdown<BlogFrontmatter>(markdownContent);
+  const readTime = parsed.content
+    ? calculateReadTime(parsed.content)
+    : parsed.frontmatter.readTime || 5;
 
-  for (const path in markdownModules) {
-    const markdownContent = markdownModules[path] as string;
-    const parsed = parseMarkdown<BlogFrontmatter>(markdownContent);
-
-    const readTime = parsed.content
-      ? calculateReadTime(parsed.content)
-      : parsed.frontmatter.readTime || 5;
-
-    blogs.push({
-      id: parsed.frontmatter.slug,
-      title: parsed.frontmatter.title,
-      description: parsed.frontmatter.description,
-      slug: parsed.frontmatter.slug,
-      category: parsed.frontmatter.category,
-      author: parsed.frontmatter.author,
-      date: parsed.frontmatter.date,
-      image: parsed.frontmatter.image,
-      readTime,
-      content: parsed.content,
-    });
-  }
-
-  return blogs.filter(isPublicBlog).sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-  });
+  return {
+    id: parsed.frontmatter.slug,
+    title: parsed.frontmatter.title,
+    description: parsed.frontmatter.description,
+    slug: parsed.frontmatter.slug,
+    category: parsed.frontmatter.category,
+    author: parsed.frontmatter.author,
+    date: parsed.frontmatter.date,
+    image: parsed.frontmatter.image,
+    readTime,
+    content: parsed.content,
+  };
 };
+
+const sortByNewest = (first: BlogItem, second: BlogItem): number =>
+  new Date(second.date).getTime() - new Date(first.date).getTime();
+
+const loadBlogs = (): BlogItem[] =>
+  Object.values(markdownModules)
+    .map(createBlogItem)
+    .filter(isPublicBlog)
+    .sort(sortByNewest);
 
 export const blogItems = loadBlogs();
 

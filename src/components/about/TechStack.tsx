@@ -33,7 +33,7 @@ export default function TechStack({ items, className }: TechStackProps) {
         return (
           <div
             key={item.name}
-            className="group bg-[var(--paper)] px-3 py-3 transition-colors hover:bg-[var(--surface-subtle)]"
+            className="motion-card group bg-[var(--paper)] px-3 py-3 transition-colors hover:bg-[var(--surface-subtle)]"
           >
             <div className="mb-3 flex items-center justify-between gap-3">
               <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--graphite-muted)]">

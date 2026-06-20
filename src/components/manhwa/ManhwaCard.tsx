@@ -20,7 +20,7 @@ export default function ManhwaCard({ manhwa }: ManhwaCardProps) {
     <article
       role="article"
       className={cn(
-        'group flex h-full flex-col border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)] transition-colors duration-200 hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)]',
+        'motion-card group flex h-full flex-col border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)] transition-colors duration-200 hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)]',
       )}
     >
       <div className="relative aspect-[2/3] w-full overflow-hidden bg-[var(--surface-subtle)]">

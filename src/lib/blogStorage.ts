@@ -1,14 +1,26 @@
 import { supabase } from './supabase'
 
 const ANONYMOUS_USER_ID_KEY = 'blog_anonymous_user_id'
+const SAVED_BLOGS_KEY = 'blog_saved_blogs'
 
 const getAnonymousUserId = (): string => {
-  let userId = localStorage.getItem(ANONYMOUS_USER_ID_KEY)
-  if (!userId) {
-    userId = crypto.randomUUID()
-    localStorage.setItem(ANONYMOUS_USER_ID_KEY, userId)
+  const storedUserId = localStorage.getItem(ANONYMOUS_USER_ID_KEY)
+  if (storedUserId) {
+    return storedUserId
   }
+
+  const userId = crypto.randomUUID()
+  localStorage.setItem(ANONYMOUS_USER_ID_KEY, userId)
   return userId
+}
+
+const readSavedBlogs = (): string[] => {
+  const saved = localStorage.getItem(SAVED_BLOGS_KEY)
+  return saved ? (JSON.parse(saved) as string[]) : []
+}
+
+const writeSavedBlogs = (savedBlogs: string[]): void => {
+  localStorage.setItem(SAVED_BLOGS_KEY, JSON.stringify(savedBlogs))
 }
 
 export const getBlogViews = async (slug: string): Promise<number> => {
@@ -150,32 +162,27 @@ export const toggleBlogLike = async (slug: string): Promise<boolean> => {
       }
 
       return false
-    } else {
-      const { error } = await supabase
-        .from('blog_likes')
-        .insert({ slug, user_id: userId })
-
-      if (error) {
-        console.error('Error adding blog like:', error)
-        return false
-      }
-
-      return true
     }
+
+    const { error } = await supabase
+      .from('blog_likes')
+      .insert({ slug, user_id: userId })
+
+    if (error) {
+      console.error('Error adding blog like:', error)
+      return false
+    }
+
+    return true
   } catch (error) {
     console.error('Error toggling blog like:', error)
     return false
   }
 }
 
-const SAVED_BLOGS_KEY = 'blog_saved_blogs'
-
 export const isBlogSaved = (slug: string): boolean => {
   try {
-    const saved = localStorage.getItem(SAVED_BLOGS_KEY)
-    if (!saved) return false
-    const savedBlogs = JSON.parse(saved) as string[]
-    return savedBlogs.includes(slug)
+    return readSavedBlogs().includes(slug)
   } catch (error) {
     console.error('Error checking saved blog:', error)
     return false
@@ -184,20 +191,15 @@ export const isBlogSaved = (slug: string): boolean => {
 
 export const toggleBlogSave = (slug: string): boolean => {
   try {
-    const saved = localStorage.getItem(SAVED_BLOGS_KEY)
-    let savedBlogs: string[] = saved ? JSON.parse(saved) : []
+    const savedBlogs = readSavedBlogs()
+    const nextSavedBlogs = savedBlogs.includes(slug)
+      ? savedBlogs.filter((savedSlug) => savedSlug !== slug)
+      : [...savedBlogs, slug]
 
-    if (savedBlogs.includes(slug)) {
-      savedBlogs = savedBlogs.filter((s) => s !== slug)
-    } else {
-      savedBlogs.push(slug)
-    }
-
-    localStorage.setItem(SAVED_BLOGS_KEY, JSON.stringify(savedBlogs))
-    return savedBlogs.includes(slug)
+    writeSavedBlogs(nextSavedBlogs)
+    return nextSavedBlogs.includes(slug)
   } catch (error) {
     console.error('Error toggling saved blog:', error)
     return false
   }
 }
-

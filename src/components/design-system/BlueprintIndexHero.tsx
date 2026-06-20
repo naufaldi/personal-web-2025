@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { ArrowRight } from 'lucide-react'
 import FadeInUp from '@/components/common/FadeInUp'
+import { StaggerGroup, StaggerItem } from '@/components/common/StaggerGroup'
 import DrawingFrame from '@/components/design-system/DrawingFrame'
 import MetadataRow from '@/components/design-system/MetadataRow'
 import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
@@ -65,23 +66,27 @@ export default function BlueprintIndexHero({
         aria-labelledby={titleId}
       >
         <FadeInUp delay={0.1}>
-          <div className="relative mx-auto w-full max-w-[1180px] border border-[var(--border-line)] bg-[var(--paper)]/70 p-5 shadow-[var(--shadow-paper-xs)] md:p-8">
+          <div className="relative mx-auto w-full max-w-[1180px] border border-[var(--border-line)] bg-[var(--hero-panel)] p-5 shadow-[var(--shadow-paper-xs)] backdrop-blur-[2px] md:p-8">
             <div
               className="absolute left-0 top-0 h-px w-32 bg-[var(--status-green)]"
               aria-hidden="true"
             />
 
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
-              <div className="min-w-0 space-y-7">
+            <StaggerGroup
+              className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]"
+              staggerDelay={0.055}
+              initialDelay={0.08}
+            >
+              <StaggerItem className="min-w-0 space-y-7">
                 <div className="flex flex-wrap items-center justify-between gap-4 border-b border-dashed border-[var(--border-dashed)] pb-5">
                   <TechnicalLabel variant="mono">01 // {eyebrow}</TechnicalLabel>
                   <TechnicalLabel variant="status">{statusLabel}</TechnicalLabel>
                 </div>
 
-                <div className="border border-[var(--border-line)] bg-[var(--paper)] px-4 py-5 md:px-6 md:py-7">
+                <div className="border border-[var(--border-line)] bg-[var(--hero-title-surface)] px-4 py-5 md:px-6 md:py-7">
                   <h1
                     id={titleId}
-                    className="font-display text-[clamp(3.1rem,6.8vw,7.15rem)] font-black uppercase leading-[0.86] tracking-normal text-[var(--graphite)]"
+                    className="text-hero-name text-[var(--graphite)]"
                   >
                     {title}
                   </h1>
@@ -90,55 +95,57 @@ export default function BlueprintIndexHero({
                 <div className="max-w-2xl md:pl-6">
                   <p className="text-body-readable max-w-2xl">{description}</p>
                 </div>
-              </div>
+              </StaggerItem>
 
-              <aside
-                className="border-t border-[var(--border-line)] pt-5 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0"
-                aria-label={`${eyebrow} metadata`}
-              >
-                <div className="grid grid-cols-2 border border-[var(--border-line)]">
-                  {stats.slice(0, 2).map((stat, index) => (
-                    <div
-                      key={stat.label}
-                      className={cn('p-4', index === 0 && 'border-r border-[var(--border-line)]')}
-                    >
-                      <TechnicalLabel>{stat.label}</TechnicalLabel>
-                      <p className="mt-4 font-mono text-3xl text-[var(--graphite)]">
-                        {stat.value}
-                      </p>
-                    </div>
-                  ))}
-                  {latestLabel && latestValue && (
-                    <div className="col-span-2 border-t border-[var(--border-line)] p-4">
-                      <TechnicalLabel>{latestLabel}</TechnicalLabel>
-                      <p className="mt-4 font-mono text-sm uppercase tracking-[0.16em] text-[var(--graphite)]">
-                        {latestValue}
-                      </p>
-                    </div>
-                  )}
-                </div>
-
-                <div className="mt-8 space-y-4">
-                  <MetadataRow items={metadata} />
-                  {actionHref && (
-                    <a
-                      href={actionHref}
-                      className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite)] transition-colors hover:text-[var(--status-green)]"
-                    >
-                      {actionLabel}
-                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                    </a>
-                  )}
-                </div>
-
-                {graph && (
-                  <div className="mt-8 hidden border border-dashed border-[var(--border-dashed)] p-4 lg:block">
-                    {graphLabel && <div className="mb-4 text-drawing-label">{graphLabel}</div>}
-                    <div className="aspect-square overflow-hidden">{graph}</div>
+              <StaggerItem>
+                <aside
+                  className="border-t border-[var(--border-line)] pt-5 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0"
+                  aria-label={`${eyebrow} metadata`}
+                >
+                  <div className="grid grid-cols-2 border border-[var(--border-line)]">
+                    {stats.slice(0, 2).map((stat, index) => (
+                      <div
+                        key={stat.label}
+                        className={cn('p-4', index === 0 && 'border-r border-[var(--border-line)]')}
+                      >
+                        <TechnicalLabel>{stat.label}</TechnicalLabel>
+                        <p className="mt-4 font-mono text-3xl text-[var(--graphite)]">
+                          {stat.value}
+                        </p>
+                      </div>
+                    ))}
+                    {latestLabel && latestValue && (
+                      <div className="col-span-2 border-t border-[var(--border-line)] p-4">
+                        <TechnicalLabel>{latestLabel}</TechnicalLabel>
+                        <p className="mt-4 font-mono text-sm uppercase tracking-[0.16em] text-[var(--graphite)]">
+                          {latestValue}
+                        </p>
+                      </div>
+                    )}
                   </div>
-                )}
-              </aside>
-            </div>
+
+                  <div className="mt-8 space-y-4">
+                    <MetadataRow items={metadata} />
+                    {actionHref && (
+                      <a
+                        href={actionHref}
+                        className="motion-link inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite)] transition-colors hover:text-[var(--status-green)]"
+                      >
+                        {actionLabel}
+                        <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                      </a>
+                    )}
+                  </div>
+
+                  {graph && (
+                    <div className="mt-8 hidden border border-dashed border-[var(--border-dashed)] p-4 lg:block">
+                      {graphLabel && <div className="mb-4 text-drawing-label">{graphLabel}</div>}
+                      <div className="aspect-square overflow-hidden">{graph}</div>
+                    </div>
+                  )}
+                </aside>
+              </StaggerItem>
+            </StaggerGroup>
           </div>
         </FadeInUp>
       </section>

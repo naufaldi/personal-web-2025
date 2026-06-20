@@ -20,39 +20,37 @@ const markdownModules = import.meta.glob<string>('../content/projects/*.md', {
   import: 'default',
 })
 
-const loadProjects = (): PortfolioItem[] => {
-  const projects: PortfolioItem[] = []
+const createPortfolioItem = (markdownContent: string): PortfolioItem => {
+  const parsed = parseMarkdown<PortfolioFrontmatter>(markdownContent)
 
-  for (const path in markdownModules) {
-    const markdownContent = markdownModules[path] as string
-    const parsed = parseMarkdown<PortfolioFrontmatter>(markdownContent)
+  return {
+    id: parsed.frontmatter.slug,
+    title: parsed.frontmatter.title,
+    description: parsed.frontmatter.description,
+    slug: parsed.frontmatter.slug,
+    image: parsed.frontmatter.image,
+    liveUrl: parsed.frontmatter.liveUrl,
+    githubUrl: parsed.frontmatter.githubUrl,
+    techStack: parsed.frontmatter.techStack,
+    content: parsed.content,
+    date: parsed.frontmatter.date,
+    type: parsed.frontmatter.type || 'project',
+  }
+}
 
-    projects.push({
-      id: parsed.frontmatter.slug,
-      title: parsed.frontmatter.title,
-      description: parsed.frontmatter.description,
-      slug: parsed.frontmatter.slug,
-      image: parsed.frontmatter.image,
-      liveUrl: parsed.frontmatter.liveUrl,
-      githubUrl: parsed.frontmatter.githubUrl,
-      techStack: parsed.frontmatter.techStack,
-      content: parsed.content,
-      date: parsed.frontmatter.date,
-      type: parsed.frontmatter.type || 'project',
-    })
+const sortByNewest = (first: PortfolioItem, second: PortfolioItem): number => {
+  if (!first.date || !second.date) {
+    return 0
   }
 
-  return projects.sort((a, b) => {
-    if (a.date && b.date) {
-      return new Date(b.date).getTime() - new Date(a.date).getTime()
-    }
-    return 0
-  })
+  return new Date(second.date).getTime() - new Date(first.date).getTime()
 }
+
+const loadProjects = (): PortfolioItem[] =>
+  Object.values(markdownModules).map(createPortfolioItem).sort(sortByNewest)
 
 export const portfolioItems = loadProjects()
 
 export const getProjectBySlug = (slug: string): PortfolioItem | undefined => {
   return portfolioItems.find((project) => project.slug === slug)
 }
-

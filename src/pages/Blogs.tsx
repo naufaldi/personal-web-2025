@@ -1,9 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { FileText } from "lucide-react";
 import { getBlogsByCategory, type BlogCategory } from "@/data/blogs";
 import BlogCard from "@/components/blogs/BlogCard";
+import FadeInUp from "@/components/common/FadeInUp";
+import { StaggerGroup, StaggerItem } from "@/components/common/StaggerGroup";
 import BlueprintIndexHero from "@/components/design-system/BlueprintIndexHero";
 import { cn } from "@/lib";
+import { usePageMeta } from "@/hooks/usePageMeta";
+import { getStaticRouteMeta } from "@/lib/seo";
 import {
   Pagination,
   PaginationContent,
@@ -42,6 +46,17 @@ const formatCategoryLabel = (category: BlogCategory | "All") =>
   category === "All" ? "ALL_POSTS" : category.toUpperCase().replace(/\s+/g, "_");
 
 export default function Blogs() {
+  const meta = useMemo(() => {
+    const route = getStaticRouteMeta("/blogs");
+    return {
+      title: route?.title ?? "Blog",
+      description: route?.description ?? "",
+      path: "/blogs",
+    };
+  }, []);
+
+  usePageMeta(meta);
+
   const [selectedCategory, setSelectedCategory] = useState<
     BlogCategory | "All"
   >("All");
@@ -105,53 +120,54 @@ export default function Blogs() {
       </div>
 
       <div className="site-container relative z-10">
+        <FadeInUp delay={0.04}>
+          <section className="border-b border-[var(--border-line)]">
+            <div className="grid grid-cols-1 gap-6 py-6 lg:grid-cols-[170px_minmax(0,1fr)] lg:items-center">
+              <div className="text-drawing-label">
+                03 // ROUTES
+              </div>
 
-        <section className="border-b border-slate-800/70 light:border-[#e3e5e8]">
-          <div className="grid grid-cols-1 gap-6 py-6 lg:grid-cols-[170px_minmax(0,1fr)] lg:items-center">
-            <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-500 light:text-[#8c929b]">
-              03 // ROUTES
+              <div
+                className="grid grid-cols-2 border border-[var(--border-line)] sm:flex"
+                role="tablist"
+                aria-label="Filter blog posts by category"
+              >
+                {categories.map((category) => {
+                  const isActive = selectedCategory === category;
+
+                  return (
+                    <button
+                      key={category}
+                      role="tab"
+                      aria-selected={isActive}
+                      aria-controls="blog-feed"
+                      onClick={() => setSelectedCategory(category)}
+                      className={cn(
+                        "motion-button group relative min-h-12 border-b border-r border-[var(--border-line)] px-4 py-3 text-left font-mono text-[11px] uppercase tracking-[0.18em] transition-colors duration-200 last:border-r-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] sm:border-b-0",
+                        isActive
+                          ? "bg-[var(--graphite)] text-[var(--paper)]"
+                          : "bg-[var(--paper)] text-[var(--graphite-muted)] hover:bg-[var(--surface-subtle)] hover:text-[var(--graphite)]"
+                      )}
+                    >
+                      <span className="flex items-center gap-2">
+                        <span
+                          className={cn(
+                            "h-1.5 w-1.5 rounded-full transition-colors",
+                            isActive
+                              ? "bg-[#22c55e]"
+                              : "bg-[var(--border-strong)]"
+                          )}
+                          aria-hidden="true"
+                        />
+                        {formatCategoryLabel(category)}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-
-            <div
-              className="grid grid-cols-2 border border-slate-800/70 light:border-[#e3e5e8] sm:flex"
-              role="tablist"
-              aria-label="Filter blog posts by category"
-            >
-              {categories.map((category) => {
-                const isActive = selectedCategory === category;
-
-                return (
-                  <button
-                    key={category}
-                    role="tab"
-                    aria-selected={isActive}
-                    aria-controls="blog-feed"
-                    onClick={() => setSelectedCategory(category)}
-                    className={cn(
-                      "group relative min-h-12 border-b border-r border-slate-800/70 px-4 py-3 text-left font-mono text-[11px] uppercase tracking-[0.18em] transition-colors duration-200 last:border-r-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40 light:border-[#e3e5e8] light:focus-visible:ring-slate-900/30 sm:border-b-0",
-                      isActive
-                        ? "bg-slate-100 text-slate-950 light:bg-[#111214] light:text-white"
-                        : "bg-slate-950/40 text-slate-400 hover:bg-slate-900/80 hover:text-slate-100 light:bg-white/70 light:text-[#5b5f66] light:hover:bg-[#f3f4f4] light:hover:text-[#111214]"
-                    )}
-                  >
-                    <span className="flex items-center gap-2">
-                      <span
-                        className={cn(
-                          "h-1.5 w-1.5 rounded-full transition-colors",
-                          isActive
-                            ? "bg-[#22c55e]"
-                            : "bg-slate-700 light:bg-[#d7dbe0]"
-                        )}
-                        aria-hidden="true"
-                      />
-                      {formatCategoryLabel(category)}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+          </section>
+        </FadeInUp>
 
         <div className="sr-only" aria-live="polite" role="status">
           {filteredBlogs.length === 0
@@ -163,55 +179,66 @@ export default function Blogs() {
           id="blog-feed"
           role="feed"
           aria-label="Blog posts"
-          className="border-b border-slate-800/70 light:border-[#e3e5e8]"
+          className="border-b border-[var(--border-line)]"
         >
           {paginatedBlogs.length === 0 ? (
-            <div className="grid grid-cols-1 gap-6 py-16 lg:grid-cols-[170px_minmax(0,1fr)]">
-              <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-500 light:text-[#8c929b]">
-                00 // EMPTY
+            <FadeInUp key={`${selectedCategory}-empty`}>
+              <div className="grid grid-cols-1 gap-6 py-16 lg:grid-cols-[170px_minmax(0,1fr)]">
+                <div className="text-drawing-label">
+                  00 // EMPTY
+                </div>
+                <div className="border border-dashed border-[var(--border-dashed)] px-6 py-12">
+                  <FileText
+                    className="mb-5 h-8 w-8 text-[var(--graphite-muted)]"
+                    aria-hidden="true"
+                  />
+                  <h2 className="font-mono text-2xl text-[var(--graphite)]">
+                    No entries on this route
+                  </h2>
+                  <p className="mt-3 max-w-xl font-body text-sm font-medium leading-7 text-[var(--graphite-muted)]">
+                    Try another category rail to inspect the rest of the writing
+                    archive.
+                  </p>
+                </div>
               </div>
-              <div className="border border-dashed border-slate-700 px-6 py-12 light:border-[#d7dbe0]">
-                <FileText
-                  className="mb-5 h-8 w-8 text-slate-500 light:text-[#8c929b]"
-                  aria-hidden="true"
-                />
-                <h2 className="font-mono text-2xl text-slate-100 light:text-[#111214]">
-                  No entries on this route
-                </h2>
-                <p className="mt-3 max-w-xl font-body text-sm font-medium leading-7 text-slate-400 light:text-[#5b5f66]">
-                  Try another category rail to inspect the rest of the writing
-                  archive.
-                </p>
-              </div>
-            </div>
+            </FadeInUp>
           ) : (
-            paginatedBlogs.map((blog, index) => (
-              <BlogCard key={blog.id} blog={blog} index={startIndex + index} />
-            ))
+            <StaggerGroup
+              key={`${selectedCategory}-${currentPage}`}
+              staggerDelay={0.045}
+              initialDelay={0.03}
+            >
+              {paginatedBlogs.map((blog, index) => (
+                <StaggerItem key={blog.id}>
+                  <BlogCard blog={blog} index={startIndex + index} />
+                </StaggerItem>
+              ))}
+            </StaggerGroup>
           )}
         </section>
 
         {totalPages > 1 && (
-          <section className="grid grid-cols-1 gap-6 py-7 lg:grid-cols-[170px_minmax(0,1fr)] lg:items-center">
-            <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-500 light:text-[#8c929b]">
-              04 // PAGE_CTRL
-            </div>
-
-            <div className="flex flex-col gap-4 border border-slate-800/70 bg-slate-950/50 p-3 light:border-[#e3e5e8] light:bg-white/70 md:flex-row md:items-center md:justify-between">
-              <div className="px-2 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-400 light:text-[#5b5f66]">
-                Page {String(currentPage).padStart(2, "0")} /{" "}
-                {String(totalPages).padStart(2, "0")}
+          <FadeInUp delay={0.04}>
+            <section className="grid grid-cols-1 gap-6 py-7 lg:grid-cols-[170px_minmax(0,1fr)] lg:items-center">
+              <div className="text-drawing-label">
+                04 // PAGE_CTRL
               </div>
 
-              <Pagination className="mx-0 w-full justify-start md:w-auto md:justify-end">
-                <PaginationContent className="flex-wrap justify-start gap-1 md:justify-end">
-                  <PaginationItem>
-                    <PaginationPrevious
-                      onClick={() => handlePageChange(currentPage - 1)}
-                      disabled={currentPage === 1}
-                      className="h-10 rounded-none border-slate-800/70 bg-transparent px-4 font-mono text-[11px] uppercase tracking-[0.18em] shadow-none light:border-[#e3e5e8]"
-                    />
-                  </PaginationItem>
+              <div className="flex flex-col gap-4 border border-[var(--border-line)] bg-[var(--hero-panel)] p-3 md:flex-row md:items-center md:justify-between">
+                <div className="px-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[var(--graphite-muted)]">
+                  Page {String(currentPage).padStart(2, "0")} /{" "}
+                  {String(totalPages).padStart(2, "0")}
+                </div>
+
+                <Pagination className="mx-0 w-full justify-start md:w-auto md:justify-end">
+                  <PaginationContent className="flex-wrap justify-start gap-1 md:justify-end">
+                    <PaginationItem>
+                      <PaginationPrevious
+                        onClick={() => handlePageChange(currentPage - 1)}
+                        disabled={currentPage === 1}
+                        className="h-10 rounded-none border-[var(--border-line)] bg-transparent px-4 font-mono text-[11px] uppercase tracking-[0.18em] shadow-none"
+                      />
+                    </PaginationItem>
 
                   {Array.from(
                     {
@@ -230,7 +257,7 @@ export default function Blogs() {
                             onClick={() => handlePageChange(page)}
                             isActive={page === currentPage}
                             aria-label={`Go to page ${page}`}
-                            className="h-10 w-10 rounded-none border-slate-800/70 bg-transparent font-mono text-[11px] shadow-none light:border-[#e3e5e8]"
+                            className="h-10 w-10 rounded-none border-[var(--border-line)] bg-transparent font-mono text-[11px] shadow-none"
                           >
                             {page}
                           </PaginationLink>
@@ -242,24 +269,25 @@ export default function Blogs() {
                     ) {
                       return (
                         <PaginationItem key={page}>
-                          <PaginationEllipsis className="h-10 w-10 text-slate-500 light:text-[#8c929b]" />
+                          <PaginationEllipsis className="h-10 w-10 text-[var(--graphite-muted)]" />
                         </PaginationItem>
                       );
                     }
                     return null;
                   })}
 
-                  <PaginationItem>
-                    <PaginationNext
-                      onClick={() => handlePageChange(currentPage + 1)}
-                      disabled={currentPage === totalPages}
-                      className="h-10 rounded-none border-slate-800/70 bg-transparent px-4 font-mono text-[11px] uppercase tracking-[0.18em] shadow-none light:border-[#e3e5e8]"
-                    />
-                  </PaginationItem>
-                </PaginationContent>
-              </Pagination>
-            </div>
-          </section>
+                    <PaginationItem>
+                      <PaginationNext
+                        onClick={() => handlePageChange(currentPage + 1)}
+                        disabled={currentPage === totalPages}
+                        className="h-10 rounded-none border-[var(--border-line)] bg-transparent px-4 font-mono text-[11px] uppercase tracking-[0.18em] shadow-none"
+                      />
+                    </PaginationItem>
+                  </PaginationContent>
+                </Pagination>
+              </div>
+            </section>
+          </FadeInUp>
         )}
       </div>
     </div>

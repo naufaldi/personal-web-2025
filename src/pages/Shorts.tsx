@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import ShortsHero from '@/components/shorts/ShortsHero'
 import ShortCard from '@/components/shorts/ShortCard'
 import ShortsFilter from '@/components/shorts/ShortsFilter'
@@ -6,33 +6,50 @@ import FadeInUp from '@/components/common/FadeInUp'
 import SectionHeader from '@/components/design-system/SectionHeader'
 import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 import { allShorts, getAllTags } from '@/data/shorts'
+import type { Short } from '@/data/shorts'
+import { usePageMeta } from '@/hooks/usePageMeta'
+import { getStaticRouteMeta } from '@/lib/seo'
+
+const matchesSelectedTags = (selectedTags: string[]) => (short: Short): boolean =>
+  selectedTags.length === 0 ||
+  short.tags.some((tag) => selectedTags.includes(tag))
+
+const matchesSearchQuery = (searchQuery: string) => (short: Short): boolean => {
+  const query = searchQuery.toLowerCase().trim()
+  if (query.length === 0) {
+    return true
+  }
+
+  return (
+    short.title.toLowerCase().includes(query) ||
+    short.tags.some((tag) => tag.toLowerCase().includes(query)) ||
+    short.content.toLowerCase().includes(query)
+  )
+}
 
 export default function Shorts() {
+  const meta = useMemo(() => {
+    const route = getStaticRouteMeta('/shorts')
+    return {
+      title: route?.title ?? 'Shorts',
+      description: route?.description ?? '',
+      path: '/shorts',
+    }
+  }, [])
+
+  usePageMeta(meta)
+
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [searchQuery, setSearchQuery] = useState<string>('')
   const allTags = getAllTags()
 
-  const filteredShorts = useMemo(() => {
-    let filtered = allShorts
-
-    if (selectedTags.length > 0) {
-      filtered = filtered.filter((short) =>
-        short.tags.some((tag) => selectedTags.includes(tag)),
-      )
-    }
-
-    if (searchQuery.trim().length > 0) {
-      const query = searchQuery.toLowerCase().trim()
-      filtered = filtered.filter(
-        (short) =>
-          short.title.toLowerCase().includes(query) ||
-          short.tags.some((tag) => tag.toLowerCase().includes(query)) ||
-          short.content.toLowerCase().includes(query),
-      )
-    }
-
-    return filtered
-  }, [selectedTags, searchQuery])
+  const filteredShorts = useMemo(
+    () =>
+      allShorts
+        .filter(matchesSelectedTags(selectedTags))
+        .filter(matchesSearchQuery(searchQuery)),
+    [selectedTags, searchQuery],
+  )
 
   const handleTagToggle = (tag: string) => {
     setSelectedTags((prev) =>

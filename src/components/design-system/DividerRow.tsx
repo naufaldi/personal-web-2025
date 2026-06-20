@@ -7,7 +7,7 @@ export default function DividerRow({ children, className, ...props }: DividerRow
   return (
     <article
       className={cn(
-        'group/row relative border-b border-[var(--border-line)] py-6',
+        'motion-card group/row relative border-b border-[var(--border-line)] py-6',
         className,
       )}
       {...props}

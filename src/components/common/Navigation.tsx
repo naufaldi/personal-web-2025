@@ -38,9 +38,9 @@ const secondaryItems: NavItem[] = [
 
 const linkClassName = (isActive: boolean) =>
   cn(
-    'relative inline-flex h-10 items-center px-1 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--paper)]',
+    'motion-link relative inline-flex h-10 items-center px-1 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--paper)]',
     isActive &&
-      'text-[var(--graphite)] after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:bg-[var(--graphite)]',
+      'motion-link-active text-[var(--graphite)]',
   )
 
 export default function Navigation() {
@@ -63,10 +63,10 @@ export default function Navigation() {
           <NavigationMenuItem className="relative">
             <NavigationMenuTrigger
               className={cn(
-                'relative inline-flex h-10 items-center gap-1 px-1 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--paper)] data-[state=open]:text-[var(--graphite)]',
+                'motion-link relative inline-flex h-10 items-center gap-1 px-1 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--paper)] data-[state=open]:text-[var(--graphite)]',
                 'rounded-none bg-transparent py-0 hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent',
                 isSecondaryActive &&
-                  'text-[var(--graphite)] after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:bg-[var(--graphite)]',
+                  'motion-link-active text-[var(--graphite)]',
               )}
             >
               Other
@@ -78,8 +78,8 @@ export default function Navigation() {
                     <Link
                       to={item.href}
                       className={cn(
-                        'block rounded-[var(--radius-xs)] px-3 py-3 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:bg-[var(--surface-subtle)] hover:text-[var(--graphite)] focus:bg-[var(--surface-subtle)] focus:text-[var(--graphite)] focus-visible:outline-none',
-                        pathname === item.href && 'text-[var(--graphite)]',
+                        'motion-link block rounded-[var(--radius-xs)] px-3 py-3 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:bg-[var(--surface-subtle)] hover:text-[var(--graphite)] focus:bg-[var(--surface-subtle)] focus:text-[var(--graphite)] focus-visible:outline-none',
+                        pathname === item.href && 'motion-link-active text-[var(--graphite)]',
                       )}
                     >
                       {item.name}
@@ -108,8 +108,8 @@ export default function Navigation() {
                   to={item.href}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    'border-b border-[var(--border-line)] py-4 font-mono text-sm uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)]',
-                    pathname === item.href && 'text-[var(--graphite)]',
+                    'motion-link border-b border-[var(--border-line)] py-4 font-mono text-sm uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)]',
+                    pathname === item.href && 'motion-link-active text-[var(--graphite)]',
                   )}
                 >
                   {item.name}

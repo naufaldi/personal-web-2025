@@ -1,11 +1,25 @@
+import { useMemo } from "react";
 import { ChevronRight } from "lucide-react";
 import HeroSection from "@/components/homepage/HeroSection";
 import ExperienceSection from "@/components/homepage/ExperienceSection";
 import PortfolioSection from "@/components/homepage/PortfolioSection";
 import MentorSpeakerSection from "@/components/homepage/MentorSpeakerSection";
 import FadeInUp from "@/components/common/FadeInUp";
+import { usePageMeta } from "@/hooks/usePageMeta";
+import { getStaticRouteMeta } from "@/lib/seo";
 
 export default function Home() {
+  const meta = useMemo(() => {
+    const route = getStaticRouteMeta("/");
+    return {
+      title: route?.title ?? "Software Engineer Portfolio",
+      description: route?.description ?? "",
+      path: "/",
+    };
+  }, []);
+
+  usePageMeta(meta);
+
   return (
     <div className="relative flex min-h-screen flex-col bg-[var(--paper)] text-[var(--graphite)]">
       <HeroSection />
@@ -20,7 +34,7 @@ export default function Home() {
             </p>
             <a
               href="#projects"
-              className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
+              className="motion-link inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
             >
               Browse work
               <ChevronRight className="h-3.5 w-3.5" />

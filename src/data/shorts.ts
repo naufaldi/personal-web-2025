@@ -14,24 +14,23 @@ const markdownModules = import.meta.glob<string>('../content/shorts/*.md', {
   import: 'default',
 })
 
-const loadShorts = (): Short[] => {
-  const shorts: Short[] = []
+const createShort = (markdownContent: string): Short => {
+  const parsed = parseMarkdown(markdownContent)
 
-  for (const path in markdownModules) {
-    const markdownContent = markdownModules[path] as string
-    const parsed = parseMarkdown(markdownContent)
-
-    shorts.push({
-      title: parsed.frontmatter.title,
-      slug: parsed.frontmatter.slug,
-      tags: parsed.frontmatter.tags,
-      date: parsed.frontmatter.date,
-      content: parsed.content,
-    })
+  return {
+    title: parsed.frontmatter.title,
+    slug: parsed.frontmatter.slug,
+    tags: parsed.frontmatter.tags,
+    date: parsed.frontmatter.date,
+    content: parsed.content,
   }
-
-  return shorts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
+
+const sortByNewest = (first: Short, second: Short): number =>
+  new Date(second.date).getTime() - new Date(first.date).getTime()
+
+const loadShorts = (): Short[] =>
+  Object.values(markdownModules).map(createShort).sort(sortByNewest)
 
 export const allShorts = loadShorts()
 
@@ -40,10 +39,5 @@ export const getShortBySlug = (slug: string): Short | undefined => {
 }
 
 export const getAllTags = (): string[] => {
-  const tagSet = new Set<string>()
-  allShorts.forEach((short) => {
-    short.tags.forEach((tag) => tagSet.add(tag))
-  })
-  return Array.from(tagSet).sort()
+  return Array.from(new Set(allShorts.flatMap((short) => short.tags))).sort()
 }
-

@@ -7,7 +7,7 @@ import { cn } from '@/lib'
 
 const generalLinks = [
   { name: 'Home', href: '/', external: false },
-  { name: 'Blog', href: 'https://blog.faldi.xyz/', external: true },
+  { name: 'Blog', href: '/blogs', external: false },
   { name: 'Projects', href: '/projects', external: false },
   { name: 'About', href: '/about', external: false },
   { name: 'Speaker', href: '/speaker', external: false },
@@ -17,7 +17,7 @@ const websiteLinks = [
   { name: 'Book', href: '/book', external: false },
   { name: 'Manhwa', href: '/manhwa', external: false },
   { name: 'Short', href: '/shorts', external: false },
-  { name: 'Speaking', href: '/speaking', external: false },
+  { name: 'Speaker', href: '/speaker', external: false },
 ]
 
 const resourceLinks = [
@@ -37,7 +37,7 @@ const socialIcons = [
 ]
 
 const footerLinkClassName =
-  'font-mono text-xs uppercase tracking-[0.08em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]'
+  'motion-link font-mono text-xs uppercase tracking-[0.08em] text-[var(--graphite-muted)] transition-colors hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]'
 
 const renderLink = (link: { name: string; href: string; external: boolean }) => {
   if (link.external) {
@@ -97,6 +97,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className={cn(
                       'inline-flex h-9 w-9 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--border-line)] text-[var(--graphite-muted)] transition-colors hover:border-[var(--border-strong)] hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]',
+                      'motion-icon-action',
                     )}
                     aria-label={social.ariaLabel}
                   >

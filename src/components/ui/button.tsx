@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[var(--radius-sm)] text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] disabled:pointer-events-none disabled:opacity-45 active:translate-y-px [&_svg]:pointer-events-none [&_svg]:shrink-0",
+  "motion-button inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[var(--radius-sm)] text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] disabled:pointer-events-none disabled:opacity-45 active:translate-y-px [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -22,13 +22,13 @@ const buttonVariants = cva(
         technical:
           "border border-[var(--border-line)] bg-[var(--paper)] font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite)] hover:border-[var(--graphite)] hover:bg-[var(--surface-subtle)]",
         ghost: "text-[var(--graphite-muted)] hover:text-[var(--graphite)] hover:bg-[var(--surface-subtle)]",
-        link: "text-[var(--graphite-muted)] underline-offset-4 hover:text-[var(--graphite)] hover:underline",
+        link: "motion-link text-[var(--graphite-muted)] underline-offset-4 hover:text-[var(--graphite)]",
       },
       size: {
         default: "px-4 py-2 text-sm",
         sm: "px-3 py-1.5 text-xs",
         lg: "px-5 py-2.5 text-base",
-        icon: "h-10 w-10 p-0 [&_svg]:size-5",
+        icon: "motion-icon-action h-10 w-10 p-0 [&_svg]:size-5",
       },
     },
     defaultVariants: {

@@ -12,7 +12,7 @@ const AccordionTrigger = React.forwardRef<
   <CollapsiblePrimitive.Trigger
     ref={ref}
     className={cn(
-      'group flex w-full items-center justify-between gap-2 rounded-md transition-colors hover:bg-slate-800/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40',
+      'motion-button group flex w-full items-center justify-between gap-2 rounded-md transition-colors hover:bg-slate-800/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-100/40',
       className,
     )}
     {...props}
@@ -41,4 +41,3 @@ const AccordionContent = React.forwardRef<
 AccordionContent.displayName = CollapsiblePrimitive.Content.displayName
 
 export { Accordion, AccordionTrigger, AccordionContent }
-

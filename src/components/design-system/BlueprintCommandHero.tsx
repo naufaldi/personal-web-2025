@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react'
-import { ArrowRight } from 'lucide-react'
 import FadeInUp from '@/components/common/FadeInUp'
+import { StaggerGroup, StaggerItem } from '@/components/common/StaggerGroup'
 import DrawingFrame from '@/components/design-system/DrawingFrame'
 import MetadataRow from '@/components/design-system/MetadataRow'
+import RouteRail from '@/components/design-system/RouteRail'
 import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 
 interface CommandRoute {
@@ -56,22 +57,26 @@ export default function BlueprintCommandHero({
         aria-labelledby={titleId}
       >
         <FadeInUp delay={0.1}>
-          <div className="relative mx-auto w-full max-w-[1180px] border border-[var(--border-line)] bg-[var(--paper)]/70 p-5 shadow-[var(--shadow-paper-xs)] md:p-8">
+          <div className="relative mx-auto w-full max-w-[1180px] border border-[var(--border-line)] bg-[var(--hero-panel)] p-5 shadow-[var(--shadow-paper-xs)] backdrop-blur-[2px] md:p-8">
             <div
               className="absolute left-0 top-0 h-px w-32 bg-[var(--status-green)]"
               aria-hidden="true"
             />
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
-              <div className="space-y-7">
+            <StaggerGroup
+              className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]"
+              staggerDelay={0.055}
+              initialDelay={0.08}
+            >
+              <StaggerItem className="space-y-7">
                 <div className="flex flex-wrap items-center justify-between gap-4">
                   <TechnicalLabel variant="mono">01 // {eyebrow}</TechnicalLabel>
                   <TechnicalLabel variant="status">{statusLabel}</TechnicalLabel>
                 </div>
 
-                <div className="border border-[var(--border-line)] bg-[var(--paper)] px-4 py-5 md:px-6 md:py-7">
+                <div className="border border-[var(--border-line)] bg-[var(--hero-title-surface)] px-4 py-5 md:px-6 md:py-7">
                   <h1
                     id={titleId}
-                    className="font-display text-[clamp(3.15rem,7.4vw,7.7rem)] font-black uppercase leading-[0.86] tracking-normal text-[var(--graphite)]"
+                    className="text-hero-name text-[var(--graphite)]"
                   >
                     {title}
                   </h1>
@@ -84,52 +89,27 @@ export default function BlueprintCommandHero({
                   <MetadataRow items={metadata} />
                   <p className="text-body-readable">{description}</p>
                 </div>
-              </div>
+              </StaggerItem>
 
-              <aside
-                className="border-t border-[var(--border-line)] pt-5 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0"
-                aria-label={`${eyebrow} routes`}
-              >
-                <TechnicalLabel variant="mono">02 // ROUTES</TechnicalLabel>
-                <div className="mt-8 divide-y divide-[var(--border-line)] border-y border-[var(--border-line)]">
-                  {routes.map((route, index) => (
-                    <a
-                      key={route.label}
-                      href={route.href}
-                      className={
-                        index === 0
-                          ? 'group flex items-center justify-between gap-4 border-l-2 border-l-[var(--status-green)] bg-[var(--graphite)] px-4 py-4 text-sm font-medium text-[var(--paper)] transition-colors hover:bg-[var(--graphite-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]'
-                          : 'group flex items-center justify-between gap-4 border-l-2 border-l-transparent bg-[var(--paper)] px-4 py-4 text-sm text-[var(--graphite)] transition-colors hover:border-l-[var(--status-green)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]'
-                      }
-                    >
-                      <span className="grid gap-3">
-                        <span
-                          className={
-                            index === 0
-                              ? 'font-mono text-[11px] tracking-[0.14em] text-[var(--status-green)]'
-                              : 'text-drawing-label'
-                          }
-                        >
-                          {route.index}
-                        </span>
-                        <span className="inline-flex items-center gap-2">
-                          {route.icon}
-                          {route.label}
-                        </span>
-                      </span>
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </a>
-                  ))}
+              <StaggerItem>
+                <aside
+                  className="border-t border-[var(--border-line)] pt-5 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0"
+                  aria-label={`${eyebrow} routes`}
+                >
+                  <TechnicalLabel variant="mono">02 // ROUTES</TechnicalLabel>
+                  <RouteRail items={routes} ariaLabel={`${eyebrow} route links`} />
+                </aside>
+              </StaggerItem>
+            </StaggerGroup>
+
+            <FadeInUp delay={0.18} duration={0.36}>
+              <div className="mt-9 border-t border-[var(--border-line)] pt-5">
+                <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                  <MetadataRow items={footerMetadata} />
+                  <TechnicalLabel variant="mono">BUILD:2026</TechnicalLabel>
                 </div>
-              </aside>
-            </div>
-
-            <div className="mt-9 border-t border-[var(--border-line)] pt-5">
-              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                <MetadataRow items={footerMetadata} />
-                <TechnicalLabel variant="mono">BUILD:2026</TechnicalLabel>
               </div>
-            </div>
+            </FadeInUp>
           </div>
         </FadeInUp>
       </section>

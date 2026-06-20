@@ -7,3 +7,5 @@ node_modules
 docs/cv.md
 docs/bio-web.md
 dist/
+.playwright-cli/
+test-results/

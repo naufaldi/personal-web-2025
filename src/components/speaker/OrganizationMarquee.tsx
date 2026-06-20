@@ -60,7 +60,7 @@ export default function OrganizationMarquee() {
                   href={logo.websiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-20 w-40 flex-shrink-0 items-center justify-center border-x border-[var(--border-line)] bg-[var(--paper)] grayscale opacity-60 transition-all duration-300 hover:bg-[var(--surface-subtle)] hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
+                  className="motion-card flex h-20 w-40 flex-shrink-0 items-center justify-center border-x border-[var(--border-line)] bg-[var(--paper)] grayscale opacity-60 transition-all duration-300 hover:bg-[var(--surface-subtle)] hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
                   aria-label={`Visit ${logo.name} (opens in new tab)`}
                 >
                   {content}
@@ -101,7 +101,7 @@ export default function OrganizationMarquee() {
                 href={logo.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-20 items-center justify-center bg-[var(--paper)] grayscale opacity-60 transition-all duration-300 hover:bg-[var(--surface-subtle)] hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
+                className="motion-card flex h-20 items-center justify-center bg-[var(--paper)] grayscale opacity-60 transition-all duration-300 hover:bg-[var(--surface-subtle)] hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
                 aria-label={`Visit ${logo.name} (opens in new tab)`}
               >
                 {content}

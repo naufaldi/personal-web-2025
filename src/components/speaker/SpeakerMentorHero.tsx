@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import FadeInUp from '@/components/common/FadeInUp'
 import DrawingFrame from '@/components/design-system/DrawingFrame'
 import MetadataRow from '@/components/design-system/MetadataRow'
+import RouteRail from '@/components/design-system/RouteRail'
 import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 import { Button } from '@/components/ui/button'
 import { mentorSpeakerEngagements } from '@/data/mentorSpeaker'
@@ -18,6 +19,19 @@ export default function SpeakerMentorHero() {
   const voluntaryCount = mentorSpeakerEngagements.filter(
     (item) => item.type === 'voluntary',
   ).length
+  const routeItems = [
+    {
+      index: '01',
+      label: 'Talks archive',
+      href: '#speaking-heading',
+      icon: <Code2 className="h-4 w-4" aria-hidden="true" />,
+    },
+    {
+      index: '02',
+      label: 'Mentorship track',
+      href: '#mentoring-heading',
+    },
+  ]
 
   return (
     <DrawingFrame
@@ -44,7 +58,7 @@ export default function SpeakerMentorHero() {
         aria-labelledby="speaker-hero-heading"
       >
         <FadeInUp delay={0.1}>
-          <div className="relative mx-auto w-full max-w-[1180px] border border-[var(--border-line)] bg-[var(--paper)]/70 p-5 shadow-[var(--shadow-paper-xs)] md:p-8">
+          <div className="relative mx-auto w-full max-w-[1180px] border border-[var(--border-line)] bg-[var(--hero-panel)] p-5 shadow-[var(--shadow-paper-xs)] backdrop-blur-[2px] md:p-8">
             <div
               className="absolute left-0 top-0 h-px w-32 bg-[var(--status-green)]"
               aria-hidden="true"
@@ -60,10 +74,10 @@ export default function SpeakerMentorHero() {
                   </div>
                 </div>
 
-                <div className="border border-[var(--border-line)] bg-[var(--paper)] px-4 py-5 md:px-6 md:py-7">
+                <div className="border border-[var(--border-line)] bg-[var(--hero-title-surface)] px-4 py-5 md:px-6 md:py-7">
                   <h1
                     id="speaker-hero-heading"
-                    className="font-display text-[clamp(3.15rem,7.4vw,7.7rem)] font-black uppercase leading-[0.86] tracking-normal text-[var(--graphite)]"
+                    className="text-hero-name text-[var(--graphite)]"
                   >
                     Speaker & Mentor
                   </h1>
@@ -93,32 +107,8 @@ export default function SpeakerMentorHero() {
                 aria-label="Speaker page routes"
               >
                 <TechnicalLabel variant="mono">02 // ROUTES</TechnicalLabel>
-                <div className="mt-8 divide-y divide-[var(--border-line)] border-y border-[var(--border-line)]">
-                  <a
-                    href="#speaking-heading"
-                    className="group flex items-center justify-between gap-4 border-l-2 border-l-[var(--status-green)] bg-[var(--graphite)] px-4 py-4 text-sm font-medium text-[var(--paper)] transition-colors hover:bg-[var(--graphite-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
-                  >
-                    <span className="grid gap-3">
-                      <span className="font-mono text-[11px] tracking-[0.14em] text-[var(--status-green)]">
-                        01
-                      </span>
-                      <span className="inline-flex items-center gap-2">
-                        <Code2 className="h-4 w-4" aria-hidden="true" />
-                        Talks archive
-                      </span>
-                    </span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </a>
-                  <a
-                    href="#mentoring-heading"
-                    className="group flex items-center justify-between gap-4 border-l-2 border-l-transparent bg-[var(--paper)] px-4 py-4 text-sm text-[var(--graphite)] transition-colors hover:border-l-[var(--status-green)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)]"
-                  >
-                    <span className="grid gap-3">
-                      <span className="text-drawing-label">02</span>
-                      <span>Mentorship track</span>
-                    </span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </a>
+                <div>
+                  <RouteRail items={routeItems} ariaLabel="Speaker page route links" />
                   <Button asChild variant="technical" className="mt-5 w-full justify-between">
                     <Link to="/about">
                       Read profile
