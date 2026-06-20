@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import ShortsHero from '@/components/shorts/ShortsHero'
 import ShortCard from '@/components/shorts/ShortCard'
 import ShortsFilter from '@/components/shorts/ShortsFilter'
@@ -7,6 +7,8 @@ import SectionHeader from '@/components/design-system/SectionHeader'
 import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 import { allShorts, getAllTags } from '@/data/shorts'
 import type { Short } from '@/data/shorts'
+import { usePageMeta } from '@/hooks/usePageMeta'
+import { getStaticRouteMeta } from '@/lib/seo'
 
 const matchesSelectedTags = (selectedTags: string[]) => (short: Short): boolean =>
   selectedTags.length === 0 ||
@@ -26,6 +28,17 @@ const matchesSearchQuery = (searchQuery: string) => (short: Short): boolean => {
 }
 
 export default function Shorts() {
+  const meta = useMemo(() => {
+    const route = getStaticRouteMeta('/shorts')
+    return {
+      title: route?.title ?? 'Shorts',
+      description: route?.description ?? '',
+      path: '/shorts',
+    }
+  }, [])
+
+  usePageMeta(meta)
+
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [searchQuery, setSearchQuery] = useState<string>('')
   const allTags = getAllTags()

@@ -1,7 +1,10 @@
+import { useMemo } from "react";
 import FadeInUp from "@/components/common/FadeInUp";
 import BlueprintIndexHero from "@/components/design-system/BlueprintIndexHero";
 import PortfolioCard from "@/components/homepage/PortfolioCard";
 import { portfolioItems } from "@/data/portfolio";
+import { usePageMeta } from "@/hooks/usePageMeta";
+import { getStaticRouteMeta } from "@/lib/seo";
 
 const formatLatestDate = (dateString?: string) => {
   if (!dateString) {
@@ -142,6 +145,17 @@ const RouteChipGraph = () => (
 );
 
 export default function Projects() {
+  const meta = useMemo(() => {
+    const route = getStaticRouteMeta("/projects");
+    return {
+      title: route?.title ?? "Projects",
+      description: route?.description ?? "",
+      path: "/projects",
+    };
+  }, []);
+
+  usePageMeta(meta);
+
   return (
     <div className="relative min-h-screen bg-[var(--paper)] text-[var(--graphite)]">
       <BlueprintIndexHero

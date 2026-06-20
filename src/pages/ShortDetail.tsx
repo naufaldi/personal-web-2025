@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { Link, useNavigate, useParams } from 'react-router'
 import { ArrowLeft } from 'lucide-react'
 import FadeInUp from '@/components/common/FadeInUp'
@@ -7,11 +8,32 @@ import DrawingFrame from '@/components/design-system/DrawingFrame'
 import MetadataRow from '@/components/design-system/MetadataRow'
 import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 import { getShortBySlug } from '@/data/shorts'
+import { usePageMeta } from '@/hooks/usePageMeta'
+import { excerptFromMarkdown } from '@/lib/seo'
 
 export default function ShortDetail() {
   const { slug } = useParams<{ slug: string }>()
   const navigate = useNavigate()
   const short = slug ? getShortBySlug(slug) : undefined
+
+  const meta = useMemo(() => {
+    if (!short) {
+      return {
+        title: 'Short not found',
+        description: 'The requested short note could not be found.',
+        path: `/shorts/${slug ?? ''}`,
+        noIndex: true,
+      }
+    }
+
+    return {
+      title: short.title,
+      description: excerptFromMarkdown(short.content),
+      path: `/shorts/${short.slug}`,
+    }
+  }, [short, slug])
+
+  usePageMeta(meta)
 
   if (!short) {
     return (

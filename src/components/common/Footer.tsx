@@ -7,7 +7,7 @@ import { cn } from '@/lib'
 
 const generalLinks = [
   { name: 'Home', href: '/', external: false },
-  { name: 'Blog', href: 'https://blog.faldi.xyz/', external: true },
+  { name: 'Blog', href: '/blogs', external: false },
   { name: 'Projects', href: '/projects', external: false },
   { name: 'About', href: '/about', external: false },
   { name: 'Speaker', href: '/speaker', external: false },
@@ -17,7 +17,7 @@ const websiteLinks = [
   { name: 'Book', href: '/book', external: false },
   { name: 'Manhwa', href: '/manhwa', external: false },
   { name: 'Short', href: '/shorts', external: false },
-  { name: 'Speaking', href: '/speaking', external: false },
+  { name: 'Speaker', href: '/speaker', external: false },
 ]
 
 const resourceLinks = [

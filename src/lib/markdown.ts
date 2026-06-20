@@ -23,7 +23,7 @@ export interface BlogFrontmatter {
   title: string
   slug: string
   description: string
-  category: 'My journey' | 'Idea' | 'Technical writer' | 'Opinions'
+  category: 'My journey' | 'Idea' | 'Technical writer' | 'Opinions' | 'draft'
   author: {
     name: string
     avatar: string
