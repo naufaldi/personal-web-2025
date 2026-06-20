@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useParams, Link } from "react-router";
 import { ArrowLeft, ExternalLink, FileCode2, Github } from "lucide-react";
 import { getProjectBySlug } from "@/data/portfolio";
@@ -9,6 +9,8 @@ import { getTechIcon } from "@/lib/techIcons";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import FadeInUp from "@/components/common/FadeInUp";
+import { usePageMeta } from "@/hooks/usePageMeta";
+import { buildCreativeWorkJsonLd } from "@/lib/seo";
 
 const formatDate = (dateString?: string) => {
   if (!dateString) {
@@ -31,6 +33,35 @@ export default function ProjectDetail() {
     slug: string;
   }>();
   const project = slug ? getProjectBySlug(slug) : undefined;
+
+  const meta = useMemo(() => {
+    if (!project) {
+      return {
+        title: "Project not found",
+        description: "The requested project could not be found.",
+        path: `/projects/${slug ?? ""}`,
+        noIndex: true,
+      };
+    }
+
+    return {
+      title: project.title,
+      description: project.description,
+      path: `/projects/${project.slug}`,
+      image: project.image,
+      jsonLd: buildCreativeWorkJsonLd({
+        title: project.title,
+        description: project.description,
+        slug: project.slug,
+        date: project.date,
+        image: project.image,
+        techStack: project.techStack,
+      }),
+    };
+  }, [project, slug]);
+
+  usePageMeta(meta);
+
   const [imgError, setImgError] = useState(false);
   const [imgLoading, setImgLoading] = useState(true);
 

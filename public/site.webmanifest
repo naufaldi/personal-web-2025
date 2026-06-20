@@ -1,0 +1,53 @@
+{
+  "name": "Faldi",
+  "short_name": "Faldi",
+  "description": "Personal portfolio of Naufaldi Rafif Satriya — software engineer, mentor, and technical writer.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#020817",
+  "theme_color": "#020817",
+  "lang": "en",
+  "categories": ["portfolio", "productivity", "education"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Home",
+      "short_name": "Home",
+      "description": "Open the portfolio homepage",
+      "url": "/"
+    },
+    {
+      "name": "Projects",
+      "short_name": "Projects",
+      "description": "Browse curated projects",
+      "url": "/projects"
+    },
+    {
+      "name": "Blog",
+      "short_name": "Blog",
+      "description": "Read technical writing",
+      "url": "/blogs"
+    },
+    {
+      "name": "Speaker",
+      "short_name": "Speaker",
+      "description": "View speaking and mentoring work",
+      "url": "/speaker"
+    }
+  ]
+}

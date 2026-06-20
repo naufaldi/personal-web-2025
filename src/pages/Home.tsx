@@ -1,11 +1,25 @@
+import { useMemo } from "react";
 import { ChevronRight } from "lucide-react";
 import HeroSection from "@/components/homepage/HeroSection";
 import ExperienceSection from "@/components/homepage/ExperienceSection";
 import PortfolioSection from "@/components/homepage/PortfolioSection";
 import MentorSpeakerSection from "@/components/homepage/MentorSpeakerSection";
 import FadeInUp from "@/components/common/FadeInUp";
+import { usePageMeta } from "@/hooks/usePageMeta";
+import { getStaticRouteMeta } from "@/lib/seo";
 
 export default function Home() {
+  const meta = useMemo(() => {
+    const route = getStaticRouteMeta("/");
+    return {
+      title: route?.title ?? "Software Engineer Portfolio",
+      description: route?.description ?? "",
+      path: "/",
+    };
+  }, []);
+
+  usePageMeta(meta);
+
   return (
     <div className="relative flex min-h-screen flex-col bg-[var(--paper)] text-[var(--graphite)]">
       <HeroSection />

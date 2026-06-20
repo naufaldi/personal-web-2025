@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { FileText } from "lucide-react";
 import { getBlogsByCategory, type BlogCategory } from "@/data/blogs";
 import BlogCard from "@/components/blogs/BlogCard";
@@ -6,6 +6,8 @@ import FadeInUp from "@/components/common/FadeInUp";
 import { StaggerGroup, StaggerItem } from "@/components/common/StaggerGroup";
 import BlueprintIndexHero from "@/components/design-system/BlueprintIndexHero";
 import { cn } from "@/lib";
+import { usePageMeta } from "@/hooks/usePageMeta";
+import { getStaticRouteMeta } from "@/lib/seo";
 import {
   Pagination,
   PaginationContent,
@@ -44,6 +46,17 @@ const formatCategoryLabel = (category: BlogCategory | "All") =>
   category === "All" ? "ALL_POSTS" : category.toUpperCase().replace(/\s+/g, "_");
 
 export default function Blogs() {
+  const meta = useMemo(() => {
+    const route = getStaticRouteMeta("/blogs");
+    return {
+      title: route?.title ?? "Blog",
+      description: route?.description ?? "",
+      path: "/blogs",
+    };
+  }, []);
+
+  usePageMeta(meta);
+
   const [selectedCategory, setSelectedCategory] = useState<
     BlogCategory | "All"
   >("All");

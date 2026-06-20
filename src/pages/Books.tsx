@@ -1,10 +1,24 @@
+import { useMemo } from 'react'
 import BooksHero from '@/components/books/BooksHero'
 import ReadBooksSection from '@/components/books/ReadBooksSection'
 import CurrentlyReadingSection from '@/components/books/CurrentlyReadingSection'
 import WishlistSection from '@/components/books/WishlistSection'
 import { readBooks, currentlyReadingBooks, wishlistBooks } from '@/data/books'
+import { usePageMeta } from '@/hooks/usePageMeta'
+import { getStaticRouteMeta } from '@/lib/seo'
 
 export default function Books() {
+  const meta = useMemo(() => {
+    const route = getStaticRouteMeta('/book')
+    return {
+      title: route?.title ?? 'Books',
+      description: route?.description ?? '',
+      path: '/book',
+    }
+  }, [])
+
+  usePageMeta(meta)
+
   const hasReadBooks = readBooks.length > 0
   const hasCurrentlyReading = currentlyReadingBooks.length > 0
   const hasWishlist = wishlistBooks.length > 0

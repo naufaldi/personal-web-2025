@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { BriefcaseBusiness, UserRound } from 'lucide-react'
 import AboutMeSection from '@/components/about/AboutMeSection'
 import WhatImUpToSection from '@/components/about/WhatImUpToSection'
@@ -5,8 +6,21 @@ import ExperiencesSection from '@/components/about/ExperiencesSection'
 import JourneyPhotoMarquee from '@/components/about/JourneyPhotoMarquee'
 import BlueprintCommandHero from '@/components/design-system/BlueprintCommandHero'
 import { aboutBio } from '@/data/about'
+import { usePageMeta } from '@/hooks/usePageMeta'
+import { getStaticRouteMeta } from '@/lib/seo'
 
 export default function About() {
+  const meta = useMemo(() => {
+    const route = getStaticRouteMeta('/about')
+    return {
+      title: route?.title ?? 'About',
+      description: route?.description ?? '',
+      path: '/about',
+    }
+  }, [])
+
+  usePageMeta(meta)
+
   return (
     <div className="relative min-h-screen bg-[var(--paper)] text-[var(--graphite)]">
       <BlueprintCommandHero

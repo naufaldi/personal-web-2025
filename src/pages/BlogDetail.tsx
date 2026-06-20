@@ -1,5 +1,6 @@
 import {
   useEffect,
+  useMemo,
   useState,
   type ComponentType,
 } from "react";
@@ -17,6 +18,8 @@ import BlogMetadata from "@/components/blogs/BlogMetadata";
 import BlogActions from "@/components/blogs/BlogActions";
 import { Badge } from "@/components/ui/badge";
 import FadeInUp from "@/components/common/FadeInUp";
+import { usePageMeta } from "@/hooks/usePageMeta";
+import { buildBlogPostingJsonLd, isIndexableBlogSlug } from "@/lib/seo";
 
 const mdxModules = import.meta.glob<{
   default: ComponentType<{ components?: Record<string, unknown> }>;
@@ -39,6 +42,38 @@ const formatDate = (dateString?: string) => {
 export default function BlogDetail() {
   const { slug } = useParams<{ slug: string }>();
   const blog = slug ? getBlogBySlug(slug) : undefined;
+  const isPublished =
+    blog !== undefined && isIndexableBlogSlug(blog.slug, blog.category);
+
+  const meta = useMemo(() => {
+    if (!blog || !isPublished) {
+      return {
+        title: "Blog not found",
+        description: "The requested blog post could not be found.",
+        path: `/blogs/${slug ?? ""}`,
+        noIndex: true,
+      };
+    }
+
+    return {
+      title: blog.title,
+      description: blog.description,
+      path: `/blogs/${blog.slug}`,
+      type: "article" as const,
+      image: blog.image,
+      jsonLd: buildBlogPostingJsonLd({
+        title: blog.title,
+        description: blog.description,
+        slug: blog.slug,
+        date: blog.date,
+        image: blog.image,
+        authorName: blog.author.name,
+      }),
+    };
+  }, [blog, isPublished, slug]);
+
+  usePageMeta(meta);
+
   const [viewsTracked, setViewsTracked] = useState(false);
   const [MdxContent, setMdxContent] = useState<ComponentType<{
     components?: Record<string, unknown>;
@@ -65,7 +100,7 @@ export default function BlogDetail() {
     });
   }, [blog]);
 
-  if (!blog || !blog.content) {
+  if (!blog || !blog.content || !isPublished) {
     return (
       <div className="drawing-sheet flex min-h-screen flex-col items-center justify-center bg-[var(--paper)] px-6">
         <div className="border border-[var(--border-line)] bg-[var(--paper)] p-8 text-center shadow-[var(--shadow-paper-xs)]">
