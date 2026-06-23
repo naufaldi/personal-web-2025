@@ -49,5 +49,5 @@ Description: Personal portfolio of Naufaldi Rafif Satriya — software engineer,
 
 # Metadata
 
-Last-Updated: 2026-06-20
+Last-Updated: 2026-06-23
 Maintainer: Naufaldi Rafif Satriya

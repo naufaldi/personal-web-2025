@@ -36,16 +36,16 @@ Important notes:
 
 ## Recent writing
 
+- [Postmortem: The Disguised Crypto Miner on My VPS](https://faldi.xyz/blogs/crypto-miner-systemguard-incident-postmortem): A postmortem of a disguised XMRig miner running as systemguard on my VPS: what happened, how it was detected, how it was removed, and what I changed afterward.
 - [Tips Lolos Probation: Panduan Buat Kamu yang Baru Mulai Kerja](https://faldi.xyz/blogs/tips-lolos-probation): Banyak orang gagal probation bukan karena ga bisa kerja, tapi karena ga tau apa yang dinilai. Artikel ini bahas cara lolos probation dengan strategi yang jelas.
-- [How to Setup MiniMax in OpenCode](https://faldi.xyz/blogs/setup-minimax-opencode): Step-by-step guide to configure MiniMax-M2.1 as your AI coding assistant in OpenCode, from installation to authentication.
 - [How to Add MiniMax MCP Tools to OpenCode](https://faldi.xyz/blogs/setup-mcp-minimax-opencode): Extend OpenCode with MiniMax MCP server to add web_search and understand_image capabilities for enhanced AI-assisted coding.
+- [How to Setup MiniMax in OpenCode](https://faldi.xyz/blogs/setup-minimax-opencode): Step-by-step guide to configure MiniMax-M2.1 as your AI coding assistant in OpenCode, from installation to authentication.
 - [When Docker Isn't Enough: Surviving a k3s Compromise on Your VPS](https://faldi.xyz/blogs/k3s-compromise-incident-report): A real-world incident report documenting how CVE-2025-66478 led to a k3s installation, cryptomining attack, and complete VPS compromise. Includes forensic analysis, remediation steps, and lessons learned.
 - [From TypeScript to Go: Finally Understanding Compilers vs Transpiler](https://faldi.xyz/blogs/compiler-vs-transpiler): I used Go and JavaScript labs to finally understand what actually happens between my code, a transpiler like Babel/TS, and the machine. This is my frontend‑to‑Go journey through compilers, interpreters, and JIT.
 - [Why Do I Read? A Reflection on Books, Manhwa, and a Critical Tweet](https://faldi.xyz/blogs/reading-book): I felt guilty for reading manhwa instead of books. Then I started to question why books are seen as 'smarter' in the first place.
 - [AI Context Engineering: How to Level Up Prompting, Context, and Output with Modern Tools](https://faldi.xyz/blogs/ai-context-engineering-how-to-level-up-prompting-context-and-output-with-modern-tools): Most developers blame the AI when they get bad answers. The truth? 90% of “dumb” output is your fault—because you haven’t engineered the prompt, context, or out
 - [A Practical Guide Environment Variables: A Guide from OS to Next.js](https://faldi.xyz/blogs/a-practical-guide-environment-variables-a-guide-from-os-to-next-js): I still remember the frustration. I was deploying a Next.js app in a Docker container for the first time. I dutifully set my `NEXT_PUBLIC_API_URL` variable usin
 - [Managing State in React: Why You Should Avoid &quot;Too Much State&quot; in a Single Component](https://faldi.xyz/blogs/managing-state-in-react-why-you-should-avoid-quot-too-much-state-quot-in-a-single-component): In React projects, it’s common to see components with a long list of state variables, sometimes more than ten in one file. State helps us keep track of changing
-- [Building Strong Relationships with Your Engineering Manager (From a Developer’s Perspective)](https://faldi.xyz/blogs/building-strong-relationships-with-your-engineering-manager-from-a-developer-s-perspective): There’s still too little discussion about how to effectively work with your Engineering Manager,how to communicate clearly, manage expectations, and stay aligne
 
 ## Short notes
 

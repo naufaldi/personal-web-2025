@@ -175,35 +175,43 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 ## Recent blog writing
 
+### Postmortem: The Disguised Crypto Miner on My VPS
+
+- URL: https://faldi.xyz/blogs/crypto-miner-systemguard-incident-postmortem
+- Category: Technical writer
+- Published: Tue Jun 23 2026 00:00:00 GMT+0000 (Coordinated Universal Time)
+- Description: A postmortem of a disguised XMRig miner running as systemguard on my VPS: what happened, how it was detected, how it was removed, and what I changed afterward.
+- Summary: Postmortem: The Disguised Crypto Miner on My VPS On June 23, 2026, I found a disguised crypto miner running on my VPS. It was not obvious at first. The symptom looked like a normal resource problem: RAM usage was higher than expected, CPU was noisy, and disk usage had crossed th…
+
 ### Tips Lolos Probation: Panduan Buat Kamu yang Baru Mulai Kerja
 
 - URL: https://faldi.xyz/blogs/tips-lolos-probation
 - Category: Idea
-- Published: Tue Mar 17 2026 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Tue Mar 17 2026 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: Banyak orang gagal probation bukan karena ga bisa kerja, tapi karena ga tau apa yang dinilai. Artikel ini bahas cara lolos probation dengan strategi yang jelas.
 - Summary: Banyak orang gagal probation. Bukan karena ga bisa kerja. Tapi karena ga tau apa yang dinilai. Lebaran selesai. Bursa kerja mulai bergerak. Banyak yang resign, banyak yang mulai di tempat baru. Kalau kamu salah satunya, satu hal yang paling bikin deg degan ya masa probation. Bia…
-
-### How to Setup MiniMax in OpenCode
-
-- URL: https://faldi.xyz/blogs/setup-minimax-opencode
-- Category: Technical writer
-- Published: Tue Jan 20 2026 07:00:00 GMT+0700 (Western Indonesia Time)
-- Description: Step-by-step guide to configure MiniMax-M2.1 as your AI coding assistant in OpenCode, from installation to authentication.
-- Summary: OpenCode is a powerful AI coding assistant that supports multiple LLM providers. This guide shows you how to set up MiniMax M2.1, a state of the art coding model, as your OpenCode provider. What You'll Get By the end of this guide, you'll have: OpenCode installed and ready to us…
 
 ### How to Add MiniMax MCP Tools to OpenCode
 
 - URL: https://faldi.xyz/blogs/setup-mcp-minimax-opencode
 - Category: Technical writer
-- Published: Tue Jan 20 2026 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Tue Jan 20 2026 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: Extend OpenCode with MiniMax MCP server to add web_search and understand_image capabilities for enhanced AI-assisted coding.
 - Summary: The Model Context Protocol (MCP) allows OpenCode to access external tools and services. This guide shows you how to add the MiniMax MCP server to OpenCode, giving your AI assistant the ability to search the web and analyze images directly within your coding workflow. What You'll…
+
+### How to Setup MiniMax in OpenCode
+
+- URL: https://faldi.xyz/blogs/setup-minimax-opencode
+- Category: Technical writer
+- Published: Tue Jan 20 2026 00:00:00 GMT+0000 (Coordinated Universal Time)
+- Description: Step-by-step guide to configure MiniMax-M2.1 as your AI coding assistant in OpenCode, from installation to authentication.
+- Summary: OpenCode is a powerful AI coding assistant that supports multiple LLM providers. This guide shows you how to set up MiniMax M2.1, a state of the art coding model, as your OpenCode provider. What You'll Get By the end of this guide, you'll have: OpenCode installed and ready to us…
 
 ### When Docker Isn't Enough: Surviving a k3s Compromise on Your VPS
 
 - URL: https://faldi.xyz/blogs/k3s-compromise-incident-report
 - Category: Security Incident
-- Published: Mon Dec 08 2025 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Mon Dec 08 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: A real-world incident report documenting how CVE-2025-66478 led to a k3s installation, cryptomining attack, and complete VPS compromise. Includes forensic analysis, remediation steps, and lessons learned.
 - Summary: When Docker Isn't Enough: Surviving a k3s Compromise on Your VPS A real world incident report on how CVE 2025 66478 led to a k3s installation, cryptomining, and what we did to survive it Published: December 8, 2025 Executive Summary On December 8, 2025, I discovered something al…
 
@@ -211,7 +219,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://faldi.xyz/blogs/compiler-vs-transpiler
 - Category: Technical writer
-- Published: Wed Dec 03 2025 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Wed Dec 03 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: I used Go and JavaScript labs to finally understand what actually happens between my code, a transpiler like Babel/TS, and the machine. This is my frontend‑to‑Go journey through compilers, interpreters, and JIT.
 - Summary: Compiler vs Transpiler: My Journey from JS/TS to Golang Clarity Since yesterday, I’ve been learning about compilers and transpilers to better understand the difference between Golang and JavaScript as languages. Before we go into that, we need to understand that there are 3 soft…
 
@@ -219,7 +227,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://faldi.xyz/blogs/reading-book
 - Category: Opinions
-- Published: Tue Nov 18 2025 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Tue Nov 18 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: I felt guilty for reading manhwa instead of books. Then I started to question why books are seen as 'smarter' in the first place.
 - Summary: I suddenly felt the urge to write again. It was triggered by a tweet I saw about books, which said: "Gw gak yakin semua orang yang hobi membaca are that smart. Most of them cannot utilize what they read in real lyfe. Mostly ended up being a snowflake Real case: ada orang yg menu…
 
@@ -227,7 +235,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://faldi.xyz/blogs/ai-context-engineering-how-to-level-up-prompting-context-and-output-with-modern-tools
 - Category: Technical writer
-- Published: Tue Jul 22 2025 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Tue Jul 22 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: Most developers blame the AI when they get bad answers. The truth? 90% of “dumb” output is your fault—because you haven’t engineered the prompt, context, or out
 - Summary: Most developers blame the AI when they get bad answers. The truth? 90% of “dumb” output is your fault—because you haven’t engineered the prompt, context, or output. 1\. Prompting Fundamentals: Input → Context → Output Prompting is not just “asking” AI for help—it’s designing a r…
 
@@ -235,7 +243,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://faldi.xyz/blogs/a-practical-guide-environment-variables-a-guide-from-os-to-next-js
 - Category: Technical writer
-- Published: Mon Jun 30 2025 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Mon Jun 30 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: I still remember the frustration. I was deploying a Next.js app in a Docker container for the first time. I dutifully set my `NEXT_PUBLIC_API_URL` variable usin
 - Summary: I still remember the frustration. I was deploying a Next.js app in a Docker container for the first time. I dutifully set my NEXT PUBLIC API URL variable using the docker run e command, thinking I had followed best practices. But when the app loaded, the API calls failed. Poppin…
 
@@ -251,7 +259,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://faldi.xyz/blogs/building-strong-relationships-with-your-engineering-manager-from-a-developer-s-perspective
 - Category: Technical writer
-- Published: Fri Jun 13 2025 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Fri Jun 13 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: There’s still too little discussion about how to effectively work with your Engineering Manager,how to communicate clearly, manage expectations, and stay aligne
 - Summary: There’s still too little discussion about how to effectively work with your Engineering Manager,how to communicate clearly, manage expectations, and stay aligned. Most articles approach this from the manager’s point of view. But what if you’re a mid level or junior developer? Wh…
 
@@ -259,7 +267,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://faldi.xyz/blogs/share-the-truth-don-t-normalize-the-problem
 - Category: Technical writer
-- Published: Wed Jun 11 2025 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Wed Jun 11 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: This screenshot appeared on my feed and speaks directly to jobseekers.
 - Summary: This screenshot appeared on my feed and speaks directly to jobseekers. Here’s the post: I paused to reflect. I recognize this as a “widely known secret” taboo to air on social media. Yet I’d trusted HR professionals to act objectively. Reading this post shattered that illusion.…
 
@@ -267,7 +275,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://faldi.xyz/blogs/from-fetcher-function-to-custom-hook-a-practical-guide-with-react-query
 - Category: Technical writer
-- Published: Tue May 13 2025 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Tue May 13 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: ![Image](https://blog.faldi.xyz/content/images/2025/05/image-2.png)
 - Summary: 1\. Introduction Data fetching in React often starts simple. A classic example looks like this: This works, until it doesn’t. As the complexity of your app grows, so does the complexity of managing your data fetching logic. At some point, you’ll need to handle more than just fet…
 
@@ -283,7 +291,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://faldi.xyz/blogs/what-does-it-really-mean-to-be-a-frontend-engineer
 - Category: Technical writer
-- Published: Mon May 05 2025 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Mon May 05 2025 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: “Frontend engineer” can mean many things, depending on where you work.
 - Summary: “Frontend engineer” can mean many things, depending on where you work. At some companies, you lead product discussions with designers, writers, and backend teams to shape what gets built. At others, you focus on landing pages, highly designed, SEO optimized, animated. Some teams…
 
@@ -339,7 +347,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://faldi.xyz/blogs/nextjs-leaflet-adding-geoman-to-leaflet
 - Category: Technical writer
-- Published: Thu Sep 26 2024 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Thu Sep 26 2024 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: Geoman is a powerful library that enables the creation and editing of geospatial data on maps. It integrates seamlessly with Leaflet, making it an excellent cho
 - Summary: Geoman is a powerful library that enables the creation and editing of geospatial data on maps. It integrates seamlessly with Leaflet, making it an excellent choice for anyone working with interactive web maps. One of the best features of Geoman is its easy integration with Leafl…
 
@@ -355,7 +363,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://faldi.xyz/blogs/nextjs-and-react-leafleat-add-geojson
 - Category: Technical writer
-- Published: Tue Jan 16 2024 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Tue Jan 16 2024 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: After posting about how to add leafleat in NextJS, in this tutorial we will learn how to adding coordinate with GEOJSON. GEOJSON is format for geospatial data s
 - Summary: After posting about how to add leafleat in NextJS, in this tutorial we will learn how to adding coordinate with GEOJSON. GEOJSON is format for geospatial data structure. GeoJSON is a geospatial data interchange format based on JavaScript Object Notation (JSON). It defines severa…
 
@@ -363,17 +371,9 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://faldi.xyz/blogs/technical-guide-setup-nextjs-with-leaflet
 - Category: Technical writer
-- Published: Thu Jan 04 2024 07:00:00 GMT+0700 (Western Indonesia Time)
+- Published: Thu Jan 04 2024 00:00:00 GMT+0000 (Coordinated Universal Time)
 - Description: you can create next js with `create-next-js-app`
 - Summary: Setup NextJS you can create next js with create next js app or use template like starter nextjs tailwindcss Navigate to project Setup Leaflet Because leaflet its not reactjs, we need dependencies for reactjs with react leaflet . Docs about react leaflet can read here if you're u…
-
-### Unveiling the Power of Leaflet: A Frontend Engineer&#x27;s Guide to Interactive Maps
-
-- URL: https://faldi.xyz/blogs/unveiling-the-power-of-leaflet-a-frontend-engineer-x27-s-guide-to-interactive-maps
-- Category: Technical writer
-- Published: Thu Nov 30 2023 07:00:00 GMT+0700 (Western Indonesia Time)
-- Description: Are you a frontend engineer looking to add interactive maps to your web applications with ease and flexibility? Look no further than Leaflet, a dynamic JavaScri
-- Summary: Are you a frontend engineer looking to add interactive maps to your web applications with ease and flexibility? Look no further than Leaflet, a dynamic JavaScript library that's transforming the way we integrate maps into web interfaces. What is Leaflet? Leaflet is a robust, ope…
 
 ## Short notes
 
