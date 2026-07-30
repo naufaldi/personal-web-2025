@@ -1,18 +1,18 @@
 ---
 title: "twin.macro Sebagai Alternatif menggunakan TailwindCSS dan CSS-in-JS"
 slug: twin-macro-sebagai-alternatif-menggunakan-tailwindcss-dan-css-in-js
-description: "twin.macro adalah salah satu library yang dibuat oleh [Ben Rogerson](https://github.com/ben-rogerson?ref=blog.faldi.xyz), menggunakan Tailwind dan mencampurkann"
+description: "twin.macro adalah salah satu library yang dibuat oleh [Ben Rogerson](https://github.com/ben-rogerson?ref=blog.naufaldi.com), menggunakan Tailwind dan mencampurkann"
 category: "Technical writer"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2021-03-14
 image: "https://images.unsplash.com/photo-1612831661153-4914a5ff7851?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wxfDF8YWxsfDF8fHx8fHwyfHwxNjE1NzQ2NjY1&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/menggunakan-twin-macro-dan-emotion-di-nextjs/"
+canonical: "https://blog.naufaldi.com/menggunakan-twin-macro-dan-emotion-di-nextjs/"
 ---
 
 
-twin.macro adalah salah satu library yang dibuat oleh [Ben Rogerson](https://github.com/ben-rogerson?ref=blog.faldi.xyz), menggunakan Tailwind dan mencampurkannya dengan CSS-in-JS menjadikan twin.macro sebagai salah satu alternatif untuk bisa menuliskan Tailwind dengan lebih mudah dan lebih bervariatif.
+twin.macro adalah salah satu library yang dibuat oleh [Ben Rogerson](https://github.com/ben-rogerson?ref=blog.naufaldi.com), menggunakan Tailwind dan mencampurkannya dengan CSS-in-JS menjadikan twin.macro sebagai salah satu alternatif untuk bisa menuliskan Tailwind dengan lebih mudah dan lebih bervariatif.
 
 ## Apa itu twin.macro?
 
@@ -25,27 +25,27 @@ Ada beberapa cara untuk bisa melakukan install twin.macro. Untuk versi bahasa in
 ### Light libraries
 
 *   **Preact**  
-    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/preact-styled-components?ref=blog.faldi.xyz) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/preact-emotion?ref=blog.faldi.xyz) / [goober](https://github.com/ben-rogerson/twin.examples/tree/master/preact-goober?ref=blog.faldi.xyz)
+    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/preact-styled-components?ref=blog.naufaldi.com) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/preact-emotion?ref=blog.naufaldi.com) / [goober](https://github.com/ben-rogerson/twin.examples/tree/master/preact-goober?ref=blog.naufaldi.com)
 *   **React**  
-    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/react-styled-components?ref=blog.faldi.xyz) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/react-emotion?ref=blog.faldi.xyz)
+    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/react-styled-components?ref=blog.naufaldi.com) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/react-emotion?ref=blog.naufaldi.com)
 
 ### Tooled libraries
 
 *   **Create React App**  
-    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/cra-styled-components?ref=blog.faldi.xyz) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/cra-emotion?ref=blog.faldi.xyz)
+    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/cra-styled-components?ref=blog.naufaldi.com) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/cra-emotion?ref=blog.naufaldi.com)
 *   **Snowpack**  
-    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/snowpack-react-styled-components?ref=blog.faldi.xyz) / [styled-components (ts)](https://github.com/ben-rogerson/twin.examples/tree/master/snowpack-react-styled-components-typescript?ref=blog.faldi.xyz) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/snowpack-react-emotion?ref=blog.faldi.xyz) / [emotion (ts)](https://github.com/ben-rogerson/twin.examples/tree/master/snowpack-react-emotion-typescript?ref=blog.faldi.xyz)
+    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/snowpack-react-styled-components?ref=blog.naufaldi.com) / [styled-components (ts)](https://github.com/ben-rogerson/twin.examples/tree/master/snowpack-react-styled-components-typescript?ref=blog.naufaldi.com) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/snowpack-react-emotion?ref=blog.naufaldi.com) / [emotion (ts)](https://github.com/ben-rogerson/twin.examples/tree/master/snowpack-react-emotion-typescript?ref=blog.naufaldi.com)
 *   **Vite**  
-    [styled-components (ts)](https://github.com/ben-rogerson/twin.examples/tree/master/vite-styled-components-typescript?ref=blog.faldi.xyz) / emotion
+    [styled-components (ts)](https://github.com/ben-rogerson/twin.examples/tree/master/vite-styled-components-typescript?ref=blog.naufaldi.com) / emotion
 
 ### Advanced frameworks
 
 *   **Gatsby**  
-    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/gatsby-styled-components?ref=blog.faldi.xyz) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/gatsby-emotion?ref=blog.faldi.xyz)
+    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/gatsby-styled-components?ref=blog.naufaldi.com) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/gatsby-emotion?ref=blog.naufaldi.com)
 *   **Next.js**  
-    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/next-styled-components?ref=blog.faldi.xyz) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/next-emotion?ref=blog.faldi.xyz)
+    [styled-components](https://github.com/ben-rogerson/twin.examples/tree/master/next-styled-components?ref=blog.naufaldi.com) / [emotion](https://github.com/ben-rogerson/twin.examples/tree/master/next-emotion?ref=blog.naufaldi.com)
 *   **Laravel**  
-    [styled-components (ts)](https://github.com/ben-rogerson/twin.examples/tree/master/laravel-styled-components-typescript?ref=blog.faldi.xyz)
+    [styled-components (ts)](https://github.com/ben-rogerson/twin.examples/tree/master/laravel-styled-components-typescript?ref=blog.naufaldi.com)
 
 ## Cara Menggunakan twin.macro
 
@@ -231,7 +231,7 @@ ben-rogerson/twin.macro
 
 ![Image](https://repository-images.githubusercontent.com/241534790/69c92980-3222-11eb-992f-a0802be3963d)
 
-](https://github.com/ben-rogerson/twin.macro?ref=blog.faldi.xyz)
+](https://github.com/ben-rogerson/twin.macro?ref=blog.naufaldi.com)
 
 [
 
@@ -243,7 +243,7 @@ I’ll explain what is twin.macro and I’ll show you all of the features provid
 
 ![Image](https://res.cloudinary.com/practicaldev/image/fetch/s--xs2Gl0_f--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/bnimsixcpkqm82y2iith.png)
 
-](https://dev.to/angelmtztrc/the-powerful-of-twin-macro-5gjn?ref=blog.faldi.xyz)
+](https://dev.to/angelmtztrc/the-powerful-of-twin-macro-5gjn?ref=blog.naufaldi.com)
 
 ### Sumber Kode Github:
 
@@ -257,9 +257,9 @@ Project Example Emotion and Twin Macro with NextJS - naufaldi/example-emotion-tw
 
 ![Image](https://avatars.githubusercontent.com/u/13159420?s=400&v=4)
 
-](https://github.com/naufaldi/example-emotion-twin-macro-nextjs?ref=blog.faldi.xyz)
+](https://github.com/naufaldi/example-emotion-twin-macro-nextjs?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=twin.macro Sebagai Alternatif menggunakan TailwindCSS dan CSS-in-JS&url=http://blog.faldi.xyz/menggunakan-twin-macro-dan-emotion-di-nextjs/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/menggunakan-twin-macro-dan-emotion-di-nextjs/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/menggunakan-twin-macro-dan-emotion-di-nextjs//&title=twin.macro Sebagai Alternatif menggunakan TailwindCSS dan CSS-in-JS "LinkedIn")[](/cdn-cgi/l/email-protection#5e612d2b3c343b3d2a632a29373070333f3d2c317e0d3b3c3f393f377e1f322a3b2c303f2a37387e333b3039392b303f353f307e0a3f37322937303a1d0d0d7e3a3f307e1d0d0d73373073140d783f332e653c313a2763362a2a2e6471713c32313970383f323a377026272471333b3039392b303f353f30732a29373073333f3d2c31733a3f30733b33312a373130733a3773303b262a342d71 "Email")
+Bagikan[](https://twitter.com/share?text=twin.macro Sebagai Alternatif menggunakan TailwindCSS dan CSS-in-JS&url=https://blog.naufaldi.com/menggunakan-twin-macro-dan-emotion-di-nextjs/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/menggunakan-twin-macro-dan-emotion-di-nextjs/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/menggunakan-twin-macro-dan-emotion-di-nextjs//&title=twin.macro Sebagai Alternatif menggunakan TailwindCSS dan CSS-in-JS "LinkedIn")[](/cdn-cgi/l/email-protection#5e612d2b3c343b3d2a632a29373070333f3d2c317e0d3b3c3f393f377e1f322a3b2c303f2a37387e333b3039392b303f353f307e0a3f37322937303a1d0d0d7e3a3f307e1d0d0d73373073140d783f332e653c313a2763362a2a2e6471713c32313970383f323a377026272471333b3039392b303f353f30732a29373073333f3d2c31733a3f30733b33312a373130733a3773303b262a342d71 "Email")
 
 Topik [CSS](/tag/css/) [NextJS](/tag/nextjs/) [ReactJS](/tag/reactjs/) [TailwindCSS](/tag/tailwindcss/) [Tutorial](/tag/tutorial/)
 

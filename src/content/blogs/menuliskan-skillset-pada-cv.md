@@ -17,9 +17,9 @@ Beberapa waktu lalu, di Menfess Codingfess ada submit yang cukup menarik, yaitu 
 
 > Code; menurut kalian, lebay gak kalo nulis skill sebanyak ini kalo memang bisa? Atau untuk Redux misalnya gak perlu dipecah2 mendetail gt?  
 >   
-> P.s: not mine. [pic.twitter.com/k0eep3IMCn](https://t.co/k0eep3IMCn?ref=blog.faldi.xyz)
+> P.s: not mine. [pic.twitter.com/k0eep3IMCn](https://t.co/k0eep3IMCn?ref=blog.naufaldi.com)
 > 
-> — CODINGFESS (@codingfess) [June 28, 2022](https://twitter.com/codingfess/status/1541720734032347136?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — CODINGFESS (@codingfess) [June 28, 2022](https://twitter.com/codingfess/status/1541720734032347136?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 Kalau melihat skillset tersebut, rasanya kita sedang bertemu 10x Engineer(atau 10x Designer karena bisa figma). Kenapa bisa dikatakan 10x Engineer? ya karena udah bisa
 
@@ -36,26 +36,26 @@ Saya sendiri sudah mencoba mengupas sedikit mengenai skillset ini di Twitter, cu
 > Review "Portofolio" belajar member codingfess.  
 > Kita mulai dari Programming language dkk.  
 >   
-> \- HTML dan CSS itu debatable disebut sbgai bahsa pemrograman. Knpa? ya karena klo pkek definisi aku, kita g bsa kasih algoritma, bikin AI, computation disana. Apalgi disebut framework/lib. [https://t.co/8y6HiDIDbt](https://t.co/8y6HiDIDbt?ref=blog.faldi.xyz) [pic.twitter.com/uS0tTA9cdB](https://t.co/uS0tTA9cdB?ref=blog.faldi.xyz)
+> \- HTML dan CSS itu debatable disebut sbgai bahsa pemrograman. Knpa? ya karena klo pkek definisi aku, kita g bsa kasih algoritma, bikin AI, computation disana. Apalgi disebut framework/lib. [https://t.co/8y6HiDIDbt](https://t.co/8y6HiDIDbt?ref=blog.naufaldi.com) [pic.twitter.com/uS0tTA9cdB](https://t.co/uS0tTA9cdB?ref=blog.naufaldi.com)
 > 
-> — FλL-D1 | Ningen (人間) (@F2aldi) [June 28, 2022](https://twitter.com/F2aldi/status/1541753529479864320?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — FλL-D1 | Ningen (人間) (@F2aldi) [June 28, 2022](https://twitter.com/F2aldi/status/1541753529479864320?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 Untuk itu, saya mencoba memberikan beberapa insight yang saya dapatkan saat menuliskan CV. Bahkan di beberapa CV senior yang saya dapatkan, jarang sekali menuliskan skillset mereka secara item. Lebih banyak secara Story. Misalnya saja template CV dari Mas Adit
 
-> Buat link templatenya di mari, ya:[https://t.co/PDiPRSSKED](https://t.co/PDiPRSSKED?ref=blog.faldi.xyz)
+> Buat link templatenya di mari, ya:[https://t.co/PDiPRSSKED](https://t.co/PDiPRSSKED?ref=blog.naufaldi.com)
 > 
-> — Adith Widya Pradipta 🇮🇩🇵🇸 (@adith\_wp) [January 3, 2022](https://twitter.com/adith_wp/status/1477861530683146244?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — Adith Widya Pradipta 🇮🇩🇵🇸 (@adith\_wp) [January 3, 2022](https://twitter.com/adith_wp/status/1477861530683146244?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 Aku sendiri juga menggunakan template ini dan winrate dipanggil HRD 100%(Alhamdulillah).
 
 Lalu beberapa CV yang bisa dijadikan inspirasi
 
-*   [https://read.cv/ri7nz](https://read.cv/ri7nz?ref=blog.faldi.xyz)
-*   [CV Afrian Junior](https://twitter.com/afrian_junior/status/1477981243761324032?s=20&t=oI14WJoFZJoERASPgQnOHQ&ref=blog.faldi.xyz)
-*   [CV Gilang Maulana](https://twitter.com/GMiwanusa/status/1477872913118281730?s=20&t=oI14WJoFZJoERASPgQnOHQ&ref=blog.faldi.xyz)
-*   [CV Manda Putra](https://mandaputtra.id/about/?ref=blog.faldi.xyz)
+*   [https://read.cv/ri7nz](https://read.cv/ri7nz?ref=blog.naufaldi.com)
+*   [CV Afrian Junior](https://twitter.com/afrian_junior/status/1477981243761324032?s=20&t=oI14WJoFZJoERASPgQnOHQ&ref=blog.naufaldi.com)
+*   [CV Gilang Maulana](https://twitter.com/GMiwanusa/status/1477872913118281730?s=20&t=oI14WJoFZJoERASPgQnOHQ&ref=blog.naufaldi.com)
+*   [CV Manda Putra](https://mandaputtra.id/about/?ref=blog.naufaldi.com)
 
-Lebih lanjut mungkin bisa check [statusnya mas ezash mengenai CV](https://twitter.com/ezash/status/1477799322607521795?ref=blog.faldi.xyz).
+Lebih lanjut mungkin bisa check [statusnya mas ezash mengenai CV](https://twitter.com/ezash/status/1477799322607521795?ref=blog.naufaldi.com).
 
 # Lesson Learned
 
@@ -91,7 +91,7 @@ Seenggaknya ini akan memberikan HR atau recruiter pekerjaan kita selama jadi Sof
 
 Lantas bagaimana bila tidak memiliki pengalaman kerja? Mungkin jawabannya ada pada impact / hasil kerja dikomunitas atau sewaktu hackathon. Misalnya saja saya menuliskan di CV seperti ini
 
-![Image](https://blog.faldi.xyz/content/images/2022/07/Screen-Shot-2022-07-05-at-00.09.48.png)
+![Image](https://blog.naufaldi.com/content/images/2022/07/Screen-Shot-2022-07-05-at-00.09.48.png)
 
 Sehingga, kita bisa memberitahu orang orang bahwa kita sedang berkontribusi kekomunitas dengan dampak A,B,C dan D dan kita mampu bekerja secara tim.
 
@@ -99,7 +99,7 @@ Sehingga, kita bisa memberitahu orang orang bahwa kita sedang berkontribusi keko
 
 Memberitahu kemampuan kita kepada User / Recruiter itu penting. Namun mempertanggung jawabkan apa yang kita bangun jauh lebih penting. Semua orang juga pernah menggunakan teknologi A,B atau C. Sayangnya, sedalam apa dan se-impact apa teknologi yang digunakan juga berperan terhadap pemahaman kita akan teknologi tersebut.
 
-Bagikan[](https://twitter.com/share?text=Menuliskan Skillset pada CV&url=http://blog.faldi.xyz/menuliskan-skillset-pada-cv/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/menuliskan-skillset-pada-cv/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/menuliskan-skillset-pada-cv//&title=Menuliskan Skillset pada CV "LinkedIn")[](/cdn-cgi/l/email-protection#536c202631393630276e1e363d263f3a2038323d7300383a3f3f203627732332373273100575323e2368313c372a6e3b272723697c7c313f3c347d35323f373a7d2b2a297c3e363d263f3a2038323d7e20383a3f3f2036277e233237327e30257c "Email")
+Bagikan[](https://twitter.com/share?text=Menuliskan Skillset pada CV&url=https://blog.naufaldi.com/menuliskan-skillset-pada-cv/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/menuliskan-skillset-pada-cv/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/menuliskan-skillset-pada-cv//&title=Menuliskan Skillset pada CV "LinkedIn")[](/cdn-cgi/l/email-protection#536c202631393630276e1e363d263f3a2038323d7300383a3f3f203627732332373273100575323e2368313c372a6e3b272723697c7c313f3c347d35323f373a7d2b2a297c3e363d263f3a2038323d7e20383a3f3f2036277e233237327e30257c "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/)
 

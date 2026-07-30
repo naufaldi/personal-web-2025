@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2024-09-26
 image: "https://images.unsplash.com/photo-1727324735318-c25d437052f7?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDV8fHx8fHx8fDE3MjczODA4Mjh8&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/nextjs-leaflet-add-geoman/"
+canonical: "https://blog.naufaldi.com/nextjs-leaflet-add-geoman/"
 ---
 
 
@@ -24,7 +24,7 @@ One of the best features of Geoman is its easy integration with Leaflet.js and R
 
 ### **Integrating Geoman into Leaflet**
 
-In this tutorial, I’ll demonstrate how to integrate Geoman into a **Next.js** project using **React-Leaflet**. If you’re new to React-Leaflet integration, you can refer to [this guide](https://blog.faldi.xyz/geojson-leafleat-add-geojson/) for a detailed explanation.
+In this tutorial, I’ll demonstrate how to integrate Geoman into a **Next.js** project using **React-Leaflet**. If you’re new to React-Leaflet integration, you can refer to [this guide](https://blog.naufaldi.com/geojson-leafleat-add-geojson/) for a detailed explanation.
 
 #### Step 1: Install Geoman
 
@@ -113,7 +113,7 @@ map.on('pm:create', (e) => {
 
 This allows you to trigger specific actions, such as saving the drawn polygon or interacting with the created object when the user draws a shape on the map.
 
-You can explore more about Geoman's toolbar controls [here](https://geoman.io/docs/leaflet/toolbar?ref=blog.faldi.xyz). By default, many controls are enabled, but you can customize them as needed.
+You can explore more about Geoman's toolbar controls [here](https://geoman.io/docs/leaflet/toolbar?ref=blog.naufaldi.com). By default, many controls are enabled, but you can customize them as needed.
 
 #### Step 5: Add the Geoman Controls to the Map
 
@@ -140,11 +140,11 @@ Finally, we integrate the `AddGeomanControls` function into the map component:
 </MapContainer>
 ```
 
-You can find the full example code [here on GitHub](https://github.com/naufaldi/nextjs-leaflet/blob/main/src/lib/components/maps-geoman/index.tsx?ref=blog.faldi.xyz).
+You can find the full example code [here on GitHub](https://github.com/naufaldi/nextjs-leaflet/blob/main/src/lib/components/maps-geoman/index.tsx?ref=blog.naufaldi.com).
 
 That’s it for this simple tutorial on integrating Geoman. In the next part, we’ll cover how to create dynamic maps and save the drawn shapes to a database.
 
-Bagikan[](https://twitter.com/share?text=NextJS Leaflet : Adding Geoman to Leaflet&url=http://blog.faldi.xyz/nextjs-leaflet-add-geoman/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/nextjs-leaflet-add-geoman/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/nextjs-leaflet-add-geoman//&title=NextJS Leaflet : Adding Geoman to Leaflet "LinkedIn")[](/cdn-cgi/l/email-protection#f8c78b8d9a929d9b8cc5b69d808cb2abd8b49d999e949d8cd8c2d8b99c9c91969fd8bf9d97959996d88c97d8b49d999e949d8cde999588c39a979c81c5908c8c88c2d7d79a94979fd69e99949c91d6808182d7969d808c928bd5949d999e949d8cd5999c9cd59f9d97959996d7 "Email")
+Bagikan[](https://twitter.com/share?text=NextJS Leaflet : Adding Geoman to Leaflet&url=https://blog.naufaldi.com/nextjs-leaflet-add-geoman/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/nextjs-leaflet-add-geoman/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/nextjs-leaflet-add-geoman//&title=NextJS Leaflet : Adding Geoman to Leaflet "LinkedIn")[](/cdn-cgi/l/email-protection#f8c78b8d9a929d9b8cc5b69d808cb2abd8b49d999e949d8cd8c2d8b99c9c91969fd8bf9d97959996d88c97d8b49d999e949d8cde999588c39a979c81c5908c8c88c2d7d79a94979fd69e99949c91d6808182d7969d808c928bd5949d999e949d8cd5999c9cd59f9d97959996d7 "Email")
 
 Topik [Documentation](/tag/documentation/) [NextJS](/tag/nextjs/) [Tutorial](/tag/tutorial/)
 

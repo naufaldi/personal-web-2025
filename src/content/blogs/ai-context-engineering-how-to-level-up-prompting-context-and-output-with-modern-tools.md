@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2025-07-22
 image: "https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fEFJfGVufDB8fHx8MTc1MzE0MjkwNHww&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/ai-context-engineering-how-to-level-up-prompting-context-and-output-with-modern-tools/"
+canonical: "https://blog.naufaldi.com/ai-context-engineering-how-to-level-up-prompting-context-and-output-with-modern-tools/"
 ---
 
 Most developers blame the AI when they get bad answers. The truth? 90% of “dumb” output is your fault—because you haven’t engineered the prompt, context, or output.
@@ -27,7 +27,7 @@ _Bad prompt:_
 
 > "I got a bug in @/useFetchPerson, pls fix."
 
-The difference isn’t subtle. Specificity guides model attention, limits hallucination, and defines the rules of engagement. [PromptingGuide.ai](https://www.promptingguide.ai/introduction/elements?ref=blog.faldi.xyz) breaks this down into: **Instruction**, **Input Data**, **Context**, and **Output Indicator**.
+The difference isn’t subtle. Specificity guides model attention, limits hallucination, and defines the rules of engagement. [PromptingGuide.ai](https://www.promptingguide.ai/introduction/elements?ref=blog.naufaldi.com) breaks this down into: **Instruction**, **Input Data**, **Context**, and **Output Indicator**.
 
 **Best practices for input:**
 
@@ -70,11 +70,11 @@ This clarity accelerates review, reduces back-and-forth, and drives higher-quali
 You’ve seen how a strong prompt sets the stage—but that’s only half the battle. Here’s where you win or lose: context engineering. This is the heavy lifting that turns a prompt into a production-grade solution.
 
 > **"Context engineering is the delicate art and science of filling the context window with just the right information for the next step."**  
-> — [Andrej Karpathy](https://x.com/karpathy/status/1937902205765607626?ref=blog.faldi.xyz)
+> — [Andrej Karpathy](https://x.com/karpathy/status/1937902205765607626?ref=blog.naufaldi.com)
 
 If you think writing a clever prompt is enough, you’re already falling behind. In production, **context** is the main lever that separates toy LLM demos from tools that actually work.
 
-> **“Context is not just the single prompt users send to an LLM. Context is the complete information payload provided to a LLM at inference time, encompassing all structured informational components that the model needs to plausibly accomplish a given task.”** —[A Systematic Analysis of Over 1400 Research Papers](https://arxiv.org/pdf/2507.13334?ref=blog.faldi.xyz)
+> **“Context is not just the single prompt users send to an LLM. Context is the complete information payload provided to a LLM at inference time, encompassing all structured informational components that the model needs to plausibly accomplish a given task.”** —[A Systematic Analysis of Over 1400 Research Papers](https://arxiv.org/pdf/2507.13334?ref=blog.naufaldi.com)
 
 ---
 
@@ -96,11 +96,11 @@ Prompt Engineering   │   Context Engineering
 
 - Ruthlessly curate only the code, logs, docs, and metadata _directly_ relevant to your current task. Irrelevant info = worse output.
 - Add stack traces, env config, related types or interfaces—but avoid dumping full files unless essential.
-- Chunk or summarize large inputs. Use Markdown/XML tags for clarity if supported ([PromptingGuide.ai](https://www.promptingguide.ai/techniques?ref=blog.faldi.xyz)).
+- Chunk or summarize large inputs. Use Markdown/XML tags for clarity if supported ([PromptingGuide.ai](https://www.promptingguide.ai/techniques?ref=blog.naufaldi.com)).
 - For debugging: always specify what code, what error, what environment, what dependencies. Ambiguity here means garbage output.
 
 > “MEM1 trains AI agents to keep only what matters—merging memory and reasoning at every step—so they never get overwhelmed, no matter how long the task.”  
-> — [MEM1: Singapore-MIT 2025](https://arxiv.org/pdf/2506.15841?ref=blog.faldi.xyz)
+> — [MEM1: Singapore-MIT 2025](https://arxiv.org/pdf/2506.15841?ref=blog.naufaldi.com)
 
 **Concrete Example:** If you’re debugging `useFetchPerson`, don’t just paste the function. Include:
 
@@ -127,7 +127,7 @@ _Multi-file refactor:_
 
 **Advanced context: Cognitive tools and symbolic mechanisms**
 
-- Modular cognitive tools (from IBM, Zurich, etc) show breaking tasks into steps, surfacing symbols, and scoping context for each reasoning layer are the next frontier in LLM performance ([IBM Cognitive Tools 2025](https://arxiv.org/pdf/2506.12115?ref=blog.faldi.xyz), [ICML Princeton 2025](https://openreview.net/forum?id=y1SnRPDWx4&ref=blog.faldi.xyz)).
+- Modular cognitive tools (from IBM, Zurich, etc) show breaking tasks into steps, surfacing symbols, and scoping context for each reasoning layer are the next frontier in LLM performance ([IBM Cognitive Tools 2025](https://arxiv.org/pdf/2506.12115?ref=blog.naufaldi.com), [ICML Princeton 2025](https://openreview.net/forum?id=y1SnRPDWx4&ref=blog.naufaldi.com)).
 - This is why Markdown, JSON, and structured formats massively improve parsing and reasoning for LLMs.
 
 ---
@@ -160,7 +160,7 @@ Most teams never get past “prompt glue” and brittle context hacks. **MCP (Mo
 
 **Want to go deeper?**
 
-- Explore ready-to-use MCP servers and real integrations here: [awesome-mcp-servers](https://github.com/appcypher/awesome-mcp-servers?ref=blog.faldi.xyz)
+- Explore ready-to-use MCP servers and real integrations here: [awesome-mcp-servers](https://github.com/appcypher/awesome-mcp-servers?ref=blog.naufaldi.com)
 - Find plug-and-play connectors for databases, local files, cloud APIs, IDEs, and more. Build, test, and connect your own context sources—no more brittle RAG glue.
 
 ### Conclusion

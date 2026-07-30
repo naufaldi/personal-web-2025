@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2025-06-30
 image: "https://images.unsplash.com/photo-1749741355867-8d40976f2bfb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wxfDF8YWxsfDF8fHx8fHx8fDE3NTEyNTYwNTN8&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/a-practical-guide-environment-variables-a-guide-from-os-to-next-js/"
+canonical: "https://blog.naufaldi.com/a-practical-guide-environment-variables-a-guide-from-os-to-next-js/"
 ---
 
 
@@ -194,7 +194,7 @@ To tie it all together, let's trace the two distinct paths an environment variab
 
 **Path 1: The Public Frontend Variable (The "T-Shirt")** `[.env.local file]` -> `next build` -> `NEXT_PUBLIC_API_URL` gets permanently "baked" into -> `/_next/static/chunks/app.js` -> **Sent to User's Browser**.
 
-![Image](https://blog.faldi.xyz/content/images/2025/06/image.png)
+![Image](https://blog.naufaldi.com/content/images/2025/06/image.png)
 
 **Path 2: The Private Backend Variable (The "Secret Password")** `[ECS Task Definition / docker run -e]` -> `STRIPE_SECRET_KEY` is injected into -> `[Running Container]` -> `[Node.js Process]` -> **Accessed by API Route on the Server (Never leaves the server)**.
 
@@ -212,7 +212,7 @@ Let's commit to these golden rules:
 
 By embracing these principles, we'll not only save ourselves from future troubleshooting headaches but also build more professional and resilient applications.
 
-Bagikan[](https://twitter.com/share?text=A Practical Guide Environment Variables: A Guide from OS to Next.js&url=http://blog.faldi.xyz/a-practical-guide-environment-variables-a-guide-from-os-to-next-js/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/a-practical-guide-environment-variables-a-guide-from-os-to-next-js/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/a-practical-guide-environment-variables-a-guide-from-os-to-next-js//&title=A Practical Guide Environment Variables: A Guide from OS to Next.js "LinkedIn")[](/cdn-cgi/l/email-protection#f8c78b8d9a929d9b8cc5b9d8a88a999b8c919b9994d8bf8d919c9dd8bd968e918a9796959d968cd8ae998a91999a949d8bc2d8b9d8bf8d919c9dd89e8a9795d8b7abd88c97d8b69d808cd6928bde999588c39a979c81c5908c8c88c2d7d79a94979fd69e99949c91d6808182d799d5888a999b8c919b9994d59f8d919c9dd59d968e918a9796959d968cd58e998a91999a949d8bd599d59f8d919c9dd59e8a9795d5978bd58c97d5969d808cd5928bd7 "Email")
+Bagikan[](https://twitter.com/share?text=A Practical Guide Environment Variables: A Guide from OS to Next.js&url=https://blog.naufaldi.com/a-practical-guide-environment-variables-a-guide-from-os-to-next-js/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/a-practical-guide-environment-variables-a-guide-from-os-to-next-js/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/a-practical-guide-environment-variables-a-guide-from-os-to-next-js//&title=A Practical Guide Environment Variables: A Guide from OS to Next.js "LinkedIn")[](/cdn-cgi/l/email-protection#f8c78b8d9a929d9b8cc5b9d8a88a999b8c919b9994d8bf8d919c9dd8bd968e918a9796959d968cd8ae998a91999a949d8bc2d8b9d8bf8d919c9dd89e8a9795d8b7abd88c97d8b69d808cd6928bde999588c39a979c81c5908c8c88c2d7d79a94979fd69e99949c91d6808182d799d5888a999b8c919b9994d59f8d919c9dd59d968e918a9796959d968cd58e998a91999a949d8bd599d59f8d919c9dd59e8a9795d5978bd58c97d5969d808cd5928bd7 "Email")
 
 Topik [Documentation](/tag/documentation/) [Getting Started](/tag/getting-started/) [Lesson Learned](/tag/lesson-learned/)
 

@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Sat Apr 19 2025 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1743945968054-088cff86a63a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDJ8fHx8fHx8fDE3NDUwMzYzMTZ8&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/catching-up-with-ai/"
+canonical: "https://blog.naufaldi.com/catching-up-with-ai/"
 ---
 
 
@@ -20,7 +20,7 @@ However, with the emergence of generative AI tools like ChatGPT, Claude, and Gem
 
 ## AI as a Buddy Engineer
 
-![Image](https://blog.faldi.xyz/content/images/2025/04/image.png)
+![Image](https://blog.naufaldi.com/content/images/2025/04/image.png)
 
 Imagine you're building a monorepo app—Next.js frontend, Hono backend API.  
 You’re unsure whether to call the backend directly or proxy via a Next.js API route using TanStack Query. You second-guess every architecture choice. You need feedback—but there’s no one to ask.
@@ -42,7 +42,7 @@ One that helps you:
 
 So how about AI as a mentor?
 
-![Image](https://blog.faldi.xyz/content/images/2025/04/image-1.png)
+![Image](https://blog.naufaldi.com/content/images/2025/04/image-1.png)
 
 Imagine you're debugging a `Tailwind CSS` error in your `Next.js` monorepo—something like:
 
@@ -76,9 +76,9 @@ And when used consistently, this kind of feedback loop becomes a powerful force 
 
 > cooking some chrome extension 🍳 wdyt?  
 >   
-> \> WIP. only 5 hours progress [pic.twitter.com/b7UiDseuEz](https://t.co/b7UiDseuEz?ref=blog.faldi.xyz)
+> \> WIP. only 5 hours progress [pic.twitter.com/b7UiDseuEz](https://t.co/b7UiDseuEz?ref=blog.naufaldi.com)
 > 
-> — Gading Nasution ᵍⁿ (@gadingnstn) [April 18, 2025](https://twitter.com/gadingnstn/status/1913271036893864212?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — Gading Nasution ᵍⁿ (@gadingnstn) [April 18, 2025](https://twitter.com/gadingnstn/status/1913271036893864212?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 One of my Twitter mutuals recently built a Chrome extension in just **five hours**.
 
@@ -103,7 +103,7 @@ The result? More momentum in how we learn and build—especially when we’re wo
 At the end of the day, AI isn’t a shortcut. It’s a multiplier.  
 It doesn’t replace documentation—it **amplifies** it.
 
-Bagikan[](https://twitter.com/share?text=Catching Up with AI&url=http://blog.faldi.xyz/catching-up-with-ai/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/catching-up-with-ai/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/catching-up-with-ai//&title=Catching Up with AI "LinkedIn")[](/cdn-cgi/l/email-protection#211e5254434b4442551c6240554249484f46017451015648554901606807404c511a434e45581c495555511b0e0e434d4e460f47404d45480f59585b0e4240554249484f460c54510c564855490c40480e "Email")
+Bagikan[](https://twitter.com/share?text=Catching Up with AI&url=https://blog.naufaldi.com/catching-up-with-ai/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/catching-up-with-ai/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/catching-up-with-ai//&title=Catching Up with AI "LinkedIn")[](/cdn-cgi/l/email-protection#211e5254434b4442551c6240554249484f46017451015648554901606807404c511a434e45581c495555511b0e0e434d4e460f47404d45480f59585b0e4240554249484f460c54510c564855490c40480e "Email")
 
 Topik [Lesson Learned](/tag/lesson-learned/) [Opini](/tag/opini/)
 

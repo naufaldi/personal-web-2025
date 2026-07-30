@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2021-10-06
 image: "https://images.unsplash.com/photo-1600195077909-46e573870d99?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGxlYXJufGVufDB8fHx8MTYzMzUyMzEzMQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/meningkatkan-readability-pada-kode/"
+canonical: "https://blog.naufaldi.com/meningkatkan-readability-pada-kode/"
 ---
 
 
@@ -78,11 +78,11 @@ Komentar untuk memberikan keterangan, alasan diperlukannya kode tersebut
 
 ### **Referensi Terkait Komentar di Kode :**
 
-> [Best practices for writing code comments](https://stackoverflow.blog/2021/07/05/best-practices-for-writing-code-comments/?ref=blog.faldi.xyz)
+> [Best practices for writing code comments](https://stackoverflow.blog/2021/07/05/best-practices-for-writing-code-comments/?ref=blog.naufaldi.com)
 
-Selain itu, saya merekomendasikan untuk melakukan penambahan ekstensi di VS Code untuk komentar yang lebih baik, yaitu [Better Comment](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments&ref=blog.faldi.xyz)
+Selain itu, saya merekomendasikan untuk melakukan penambahan ekstensi di VS Code untuk komentar yang lebih baik, yaitu [Better Comment](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments&ref=blog.naufaldi.com)
 
-![Image](https://blog.faldi.xyz/content/images/2021/10/image.png)
+![Image](https://blog.naufaldi.com/content/images/2021/10/image.png)
 
 Beberapa variasi better comment di vscode
 
@@ -114,14 +114,14 @@ beberapa contoh dalam memberikan penamaan yang jelas pada komponen
 
 Komponen yang dimaksud disini, misalkan ingin membuat re-usable komponen untuk digunakan atau saat menggunakan `styled-component` . Contoh paling mudah memberikan nama, bisa dilihat pada bagaimana framework-framework dalam memberikan nama pada komponennya. Misal
 
-*   [Material UI](https://mui.com/?ref=blog.faldi.xyz)
+*   [Material UI](https://mui.com/?ref=blog.naufaldi.com)
 
 atau beberapa real project yang pernah saya /dan teman-teman buat :
 
-*   [Logos Fest](https://github.com/logos-engineer/logos-fest?ref=blog.faldi.xyz)
-*   [VPN Landingpage](https://github.com/naufaldi/next-landing-vpn?ref=blog.faldi.xyz)
-*   [Personal Web](https://github.com/naufaldi/next-landing-vpn?ref=blog.faldi.xyz)
-*   [Naufaldi.xyz](https://github.com/naufaldi/naufaldi.xyz?ref=blog.faldi.xyz)
+*   [Logos Fest](https://github.com/logos-engineer/logos-fest?ref=blog.naufaldi.com)
+*   [VPN Landingpage](https://github.com/naufaldi/next-landing-vpn?ref=blog.naufaldi.com)
+*   [Personal Web](https://github.com/naufaldi/next-landing-vpn?ref=blog.naufaldi.com)
+*   [Naufaldi.xyz](https://github.com/naufaldi/naufaldi.xyz?ref=blog.naufaldi.com)
 
 ### **Referensi penamaan komponen bisa dilihat pada**
 
@@ -135,13 +135,13 @@ At Inturn we spend a lot of time debating and crafting best practices around com
 
 ![Image](https://miro.medium.com/max/1200/1*sI1qso8UqytGP7ZQRSwTjg.jpeg)
 
-](https://medium.com/inturn-eng/naming-styled-components-d7097950a245?ref=blog.faldi.xyz)
+](https://medium.com/inturn-eng/naming-styled-components-d7097950a245?ref=blog.naufaldi.com)
 
 ## 😆 Menggunakan Metodelogi Penamaan
 
 Paling sering penamaan, itu salah satunya adalah CSS. Saya sendiri selama ini selalu menggunakan BEM / Utility-first / Atomic CSS dalam menuliskan CSS.
 
-![Image](https://blog.faldi.xyz/content/images/2021/10/image-1.png)
+![Image](https://blog.naufaldi.com/content/images/2021/10/image-1.png)
 
 Metode Penamaan di CSS
 
@@ -183,8 +183,8 @@ Maka saat kita ingin menuliskan class / naming pada CSS kita cukup mengikuti ped
 
 Lebih lengkap seputar BEM dan Atomic CSS/ Utility-first bisa dilihat pada referensi berikut
 
-*   [BEM 101](https://css-tricks.com/bem-101/?ref=blog.faldi.xyz)
-*   [Atomic CSS 101](https://css-tricks.com/lets-define-exactly-atomic-css/?ref=blog.faldi.xyz)
+*   [BEM 101](https://css-tricks.com/bem-101/?ref=blog.naufaldi.com)
+*   [Atomic CSS 101](https://css-tricks.com/lets-define-exactly-atomic-css/?ref=blog.naufaldi.com)
 
 Beberapa framework implementasinya
 
@@ -195,11 +195,11 @@ Beberapa framework implementasinya
 
 Terlepas dari situ, saya sendiri masih terus mencari dan memikirkan untuk bisa meningkatkan kualitas kode yang saya tulis apalagi banyak kolega atau teman yang menyarankan untuk  membaca buku "clean code a handbook of agile software craftsmanship".
 
-Jadi bila ada yang salah atau saran pada tulisan ini silahkan tulis komentar di Twitterku, [@f2aldi](https://twitter.com/f2aldi?ref=blog.faldi.xyz) dan mari kita berdiskusi. Boleh juga bila teman-teman ada yang ingin ditanyakan terkait dengan tulisan ini.
+Jadi bila ada yang salah atau saran pada tulisan ini silahkan tulis komentar di Twitterku, [@f2aldi](https://twitter.com/f2aldi?ref=blog.naufaldi.com) dan mari kita berdiskusi. Boleh juga bila teman-teman ada yang ingin ditanyakan terkait dengan tulisan ini.
 
 Semoga membantu ya!
 
-Bagikan[](https://twitter.com/share?text=Meningkatkan Readability pada Kode&url=http://blog.faldi.xyz/meningkatkan-readability-pada-kode/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/meningkatkan-readability-pada-kode/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/meningkatkan-readability-pada-kode//&title=Meningkatkan Readability pada Kode "LinkedIn")[](/cdn-cgi/l/email-protection#d7e8a4a2b5bdb2b4a3ea9ab2b9beb9b0bcb6a3bcb6b9f785b2b6b3b6b5bebbbea3aef7a7b6b3b6f79cb8b3b2f1b6baa7ecb5b8b3aeeabfa3a3a7edf8f8b5bbb8b0f9b1b6bbb3bef9afaeadf8bab2b9beb9b0bcb6a3bcb6b9faa5b2b6b3b6b5bebbbea3aefaa7b6b3b6fabcb8b3b2f8 "Email")
+Bagikan[](https://twitter.com/share?text=Meningkatkan Readability pada Kode&url=https://blog.naufaldi.com/meningkatkan-readability-pada-kode/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/meningkatkan-readability-pada-kode/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/meningkatkan-readability-pada-kode//&title=Meningkatkan Readability pada Kode "LinkedIn")[](/cdn-cgi/l/email-protection#d7e8a4a2b5bdb2b4a3ea9ab2b9beb9b0bcb6a3bcb6b9f785b2b6b3b6b5bebbbea3aef7a7b6b3b6f79cb8b3b2f1b6baa7ecb5b8b3aeeabfa3a3a7edf8f8b5bbb8b0f9b1b6bbb3bef9afaeadf8bab2b9beb9b0bcb6a3bcb6b9faa5b2b6b3b6b5bebbbea3aefaa7b6b3b6fabcb8b3b2f8 "Email")
 
 Topik [Insight](/tag/insight/) [ReactJS](/tag/reactjs/) [Tutorial](/tag/tutorial/)
 

@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2021-04-01
 image: "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDQ1fHxjb2RlfGVufDB8fHx8MTYxNzIyMzM3OQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/menggunakan-gulp-untuk-membuat-reusable-component-di-html-css-dan-vanilla-js/"
+canonical: "https://blog.naufaldi.com/menggunakan-gulp-untuk-membuat-reusable-component-di-html-css-dan-vanilla-js/"
 ---
 
 
@@ -22,7 +22,7 @@ Gulp merupakan salah satu tools untuk proses _task management_ seperti automasi,
 *   Menjalankan reload saat ada perubahaan pada website
 *   dst
 
-Pembahasan terkait dengan Gulp tidak akan saya bahas pada postingan ini, namun bisa dilihat pada tautan di [Petani Kode.](https://www.petanikode.com/gulp-untuk-pemula/?ref=blog.faldi.xyz)
+Pembahasan terkait dengan Gulp tidak akan saya bahas pada postingan ini, namun bisa dilihat pada tautan di [Petani Kode.](https://www.petanikode.com/gulp-untuk-pemula/?ref=blog.naufaldi.com)
 
 * * *
 
@@ -40,7 +40,7 @@ Akhirnya, saya menggunakan Gulp. Sebuah tools yang membantu saya bisa membuat ta
 
 ## Menggunakan Gulp Plugin Include File
 
-Jawabannya ada pada gulp plugin dengan memberikan kita fasilitas dalam melakukan include file html ke dalam sebuah halaman html, namanya `[gulp-file-include](https://www.npmjs.com/package/gulp-file-include?ref=blog.faldi.xyz)`.
+Jawabannya ada pada gulp plugin dengan memberikan kita fasilitas dalam melakukan include file html ke dalam sebuah halaman html, namanya `[gulp-file-include](https://www.npmjs.com/package/gulp-file-include?ref=blog.naufaldi.com)`.
 
 Karena, saya sendiri juga baru dalam menggunakan Gulp dan pertama kali mencoba Tailwind pada Gulp, saya mencoba mencari Boilerplate Gulp dan Tailwind dan menemukan repositorinya:
 
@@ -54,7 +54,7 @@ Gulp with TailwindCSS Starter Kit. Contribute to lazymozek/gulp-with-tailwindcss
 
 ![Image](https://avatars.githubusercontent.com/u/75535242?s=400&v=4)
 
-](https://github.com/lazymozek/gulp-with-tailwindcss?ref=blog.faldi.xyz)
+](https://github.com/lazymozek/gulp-with-tailwindcss?ref=blog.naufaldi.com)
 
 Berangkat dari repositoy tersebut, saya merubah / menambahkan `gulp-file-include` dengan menambahkan
 
@@ -238,11 +238,11 @@ Kalau teman-teman lihat, pada file diatas terdapat
 
 Nah, tanda `@@include('./letak-file.html` merupakan syntax untuk melakukan import file html component yang nantinya Gulp akan mengcompile dan menggabungkan kedua file tersebut. Sehingga nanti isinya seperti ini:
 
-![Image](https://blog.faldi.xyz/content/images/2021/04/Screen-Shot-2021-04-01-at-14.58.00.png)
+![Image](https://blog.naufaldi.com/content/images/2021/04/Screen-Shot-2021-04-01-at-14.58.00.png)
 
 List Direktori
 
-![Image](https://blog.faldi.xyz/content/images/2021/04/Screen-Shot-2021-04-01-at-14.58.26.png)
+![Image](https://blog.naufaldi.com/content/images/2021/04/Screen-Shot-2021-04-01-at-14.58.26.png)
 
 Komponen Header tercompile dan muncul pada file index.html
 
@@ -266,13 +266,13 @@ Gulp HTML Import with TailwindCSS. Contribute to naufaldi/gulp-tailwind-include-
 
 ![Image](https://avatars.githubusercontent.com/u/13159420?s=400&v=4)
 
-](https://github.com/naufaldi/gulp-tailwind-include-html?ref=blog.faldi.xyz)
+](https://github.com/naufaldi/gulp-tailwind-include-html?ref=blog.naufaldi.com)
 
 ## Referensi
 
-> [Using Gulp 4 in your workflow for Sass and JS files](https://coder-coder.com/gulp-4-walk-through/?ref=blog.faldi.xyz)
+> [Using Gulp 4 in your workflow for Sass and JS files](https://coder-coder.com/gulp-4-walk-through/?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Menggunakan Gulp untuk membuat Reusable Component di HTML,CSS dan Vanilla JS&url=http://blog.faldi.xyz/menggunakan-gulp-untuk-membuat-reusable-component-di-html-css-dan-vanilla-js/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/menggunakan-gulp-untuk-membuat-reusable-component-di-html-css-dan-vanilla-js/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/menggunakan-gulp-untuk-membuat-reusable-component-di-html-css-dan-vanilla-js//&title=Menggunakan Gulp untuk membuat Reusable Component di HTML,CSS dan Vanilla JS "LinkedIn")[](/cdn-cgi/l/email-protection#e7d89492858d828493daaa828980809289868c8689c7a0928b97c7928993928cc78a828a85928693c7b582929486858b82c7a4888a978889828993c7838ec7afb3aaabcba4b4b4c7838689c7b186898e8b8b86c7adb4c1868a97dc8588839eda8f939397ddc8c8858b8880c981868b838ec99f9e9dc88a828980809289868c8689ca80928b97ca928993928cca8a828a85928693ca9582929486858b82ca84888a978889828993ca838eca8f938a8bca849494ca838689ca9186898e8b8b86ca8d94c8 "Email")
+Bagikan[](https://twitter.com/share?text=Menggunakan Gulp untuk membuat Reusable Component di HTML,CSS dan Vanilla JS&url=https://blog.naufaldi.com/menggunakan-gulp-untuk-membuat-reusable-component-di-html-css-dan-vanilla-js/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/menggunakan-gulp-untuk-membuat-reusable-component-di-html-css-dan-vanilla-js/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/menggunakan-gulp-untuk-membuat-reusable-component-di-html-css-dan-vanilla-js//&title=Menggunakan Gulp untuk membuat Reusable Component di HTML,CSS dan Vanilla JS "LinkedIn")[](/cdn-cgi/l/email-protection#e7d89492858d828493daaa828980809289868c8689c7a0928b97c7928993928cc78a828a85928693c7b582929486858b82c7a4888a978889828993c7838ec7afb3aaabcba4b4b4c7838689c7b186898e8b8b86c7adb4c1868a97dc8588839eda8f939397ddc8c8858b8880c981868b838ec99f9e9dc88a828980809289868c8689ca80928b97ca928993928cca8a828a85928693ca9582929486858b82ca84888a978889828993ca838eca8f938a8bca849494ca838689ca9186898e8b8b86ca8d94c8 "Email")
 
 Topik [Getting Started](/tag/getting-started/) [Lesson Learned](/tag/lesson-learned/) [TailwindCSS](/tag/tailwindcss/) [Tutorial](/tag/tutorial/)
 

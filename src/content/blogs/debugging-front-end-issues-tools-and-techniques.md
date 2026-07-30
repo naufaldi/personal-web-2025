@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2023-01-24
 image: "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wxfDF8YWxsfDF8fHx8fHwyfHwxNjc0NTcwMDQx&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/debugging-front-end-issues-tools-and-techniques/"
+canonical: "https://blog.naufaldi.com/debugging-front-end-issues-tools-and-techniques/"
 ---
 
 
@@ -18,7 +18,7 @@ There are several tools and techniques that can be used to debug front-end issue
 
 # Browser Developer Tools
 
-![Image](https://blog.faldi.xyz/content/images/2023/01/image.png)
+![Image](https://blog.naufaldi.com/content/images/2023/01/image.png)
 
 ## Element
 
@@ -33,7 +33,7 @@ For example, when debugging HTML/CSS, you can check the style section and comput
 
 ## Console
 
-![Image](https://blog.faldi.xyz/content/images/2023/01/image-1.png)
+![Image](https://blog.naufaldi.com/content/images/2023/01/image-1.png)
 
 Use the console browser to check for errors. Every error related to JavaScript will be displayed here, providing enough information to help determine where the problem is occurring in our code.
 
@@ -45,7 +45,7 @@ It appears that some of our code has failed to fetch data, which may be related 
 
 Another things is, if we use Safari than we will encounter some "strange" or "uniq" error like i got yesterday.
 
-![Image](https://blog.faldi.xyz/content/images/2023/01/image-2.png)
+![Image](https://blog.naufaldi.com/content/images/2023/01/image-2.png)
 
 Error Safari 15
 
@@ -55,7 +55,7 @@ We may not know the cause of this error or why it is happening, but it could be 
 
 ## Network
 
-![Image](https://blog.faldi.xyz/content/images/2023/01/image-3.png)
+![Image](https://blog.naufaldi.com/content/images/2023/01/image-3.png)
 
 Network tab in chrome allow you to view and debug network requests and responses for a website. We can easily identify and troubleshoot issues with
 
@@ -67,7 +67,7 @@ To easily disable caching and test different network speeds, we can use Chrome D
 
 # React Developer Tools
 
-![Image](https://blog.faldi.xyz/content/images/2023/01/image-4.png)
+![Image](https://blog.naufaldi.com/content/images/2023/01/image-4.png)
 
 React Developer Tools is a browser extension that allows developers to inspect and debug React components in a website or application. It allows developers to easily view the component hierarchy and props, as well as the state and context of a React application.
 
@@ -75,7 +75,7 @@ This can be extremely helpful for identifying and troubleshooting issues with th
 
 # Lighthouse
 
-![Image](https://blog.faldi.xyz/content/images/2023/01/image-5.png)
+![Image](https://blog.naufaldi.com/content/images/2023/01/image-5.png)
 
 Lighthouse is a tool that can be used to analyze the performance, accessibility, best practices, and SEO of a website.
 
@@ -83,7 +83,7 @@ Using Lighthouse will generate report to giving us insight about our website, an
 
 # Sentry
 
-![Image](https://blog.faldi.xyz/content/images/2023/01/image-6.png)
+![Image](https://blog.naufaldi.com/content/images/2023/01/image-6.png)
 
 Sentry as Tracking Error
 
@@ -95,7 +95,7 @@ Sentry can be used for web, mobile and server-side applications, and supports mu
 
 Debugging code as a front-end developer can be quite challenging in today's environment, especially with the many new features and tools available. However, new updates and features are continually being released to improve debugging. Some examples that are not mentioned in this article include the Debugger in Chrome and Elastic APM. It is hoped that this article will help to improve the debugging skills of front-end developers.
 
-Bagikan[](https://twitter.com/share?text=Debugging Front-end Issues: Tools and Techniques&url=http://blog.faldi.xyz/debugging-front-end-issues-tools-and-techniques/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/debugging-front-end-issues-tools-and-techniques/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/debugging-front-end-issues-tools-and-techniques//&title=Debugging Front-end Issues: Tools and Techniques "LinkedIn")[](/cdn-cgi/l/email-protection#a09fd3d5c2cac5c3d49de4c5c2d5c7c7c9cec780e6d2cfced48dc5cec480e9d3d3d5c5d39a80f4cfcfccd380c1cec480f4c5c3c8cec9d1d5c5d386c1cdd09bc2cfc4d99dc8d4d4d09a8f8fc2cccfc78ec6c1ccc4c98ed8d9da8fc4c5c2d5c7c7c9cec78dc6d2cfced48dc5cec48dc9d3d3d5c5d38dd4cfcfccd38dc1cec48dd4c5c3c8cec9d1d5c5d38f "Email")
+Bagikan[](https://twitter.com/share?text=Debugging Front-end Issues: Tools and Techniques&url=https://blog.naufaldi.com/debugging-front-end-issues-tools-and-techniques/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/debugging-front-end-issues-tools-and-techniques/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/debugging-front-end-issues-tools-and-techniques//&title=Debugging Front-end Issues: Tools and Techniques "LinkedIn")[](/cdn-cgi/l/email-protection#a09fd3d5c2cac5c3d49de4c5c2d5c7c7c9cec780e6d2cfced48dc5cec480e9d3d3d5c5d39a80f4cfcfccd380c1cec480f4c5c3c8cec9d1d5c5d386c1cdd09bc2cfc4d99dc8d4d4d09a8f8fc2cccfc78ec6c1ccc4c98ed8d9da8fc4c5c2d5c7c7c9cec78dc6d2cfced48dc5cec48dc9d3d3d5c5d38dd4cfcfccd38dc1cec48dd4c5c3c8cec9d1d5c5d38f "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/)
 

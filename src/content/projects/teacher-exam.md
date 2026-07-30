@@ -3,7 +3,7 @@ title: "Teacher Exam - AI Exam Sheet Generator"
 slug: "teacher-exam"
 description: "A full-stack exam generation platform for Indonesian elementary teachers, turning one topic prompt into print-ready A4 exam sheets with answer keys, explanations, curriculum grounding, and review workflows."
 image: "https://opengraph.githubassets.com/portfolio-2026-05-05/naufaldi/teacher-exam"
-liveUrl: "https://ujian-sekolah.faldi.xyz"
+liveUrl: "https://ujian-sekolah.naufaldi.com"
 githubUrl: "https://github.com/naufaldi/teacher-exam"
 techStack:
   [
@@ -60,5 +60,5 @@ Teacher Exam is a focused education tool for generating, reviewing, and printing
 
 ## Links
 
-- Live app: [https://ujian-sekolah.faldi.xyz](https://ujian-sekolah.faldi.xyz)
+- Live app: [https://ujian-sekolah.naufaldi.com](https://ujian-sekolah.naufaldi.com)
 - GitHub repository: [https://github.com/naufaldi/teacher-exam](https://github.com/naufaldi/teacher-exam)

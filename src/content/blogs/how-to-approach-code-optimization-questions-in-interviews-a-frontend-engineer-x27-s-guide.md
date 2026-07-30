@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Mon Oct 07 2024 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1719937051157-d3d81cc28e86?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wxfDF8YWxsfDF8fHx8fHx8fDE3MjgyNzczOTZ8&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/guide-to-code-optimization-questions-for-frontend-engineers/"
+canonical: "https://blog.naufaldi.com/guide-to-code-optimization-questions-for-frontend-engineers/"
 ---
 
 
@@ -146,7 +146,7 @@ Don’t hesitate to ask for feedback at the end of the interview. Questions like
 
 By maintaining this structured approach, you'll be able to tackle code optimization questions with confidence in future interviews.
 
-Bagikan[](https://twitter.com/share?text=How to Approach Code Optimization Questions in Interviews: A Frontend Engineer's Guide&url=http://blog.faldi.xyz/guide-to-code-optimization-questions-for-frontend-engineers/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/guide-to-code-optimization-questions-for-frontend-engineers/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/guide-to-code-optimization-questions-for-frontend-engineers//&title=How to Approach Code Optimization Questions in Interviews: A Frontend Engineer's Guide "LinkedIn")[](/cdn-cgi/l/email-protection#8db2fef8efe7e8eef9b0c5e2faadf9e2adccfdfdffe2eceee5adcee2e9e8adc2fdf9e4e0e4f7ecf9e4e2e3addcf8e8fef9e4e2e3feade4e3adc4e3f9e8fffbe4e8fafeb7adccadcbffe2e3f9e8e3e9adc8e3eae4e3e8e8ffabaef5bfbab6feadcaf8e4e9e8abece0fdb6efe2e9f4b0e5f9f9fdb7a2a2efe1e2eaa3ebece1e9e4a3f5f4f7a2eaf8e4e9e8a0f9e2a0eee2e9e8a0e2fdf9e4e0e4f7ecf9e4e2e3a0fcf8e8fef9e4e2e3fea0ebe2ffa0ebffe2e3f9e8e3e9a0e8e3eae4e3e8e8fffea2 "Email")
+Bagikan[](https://twitter.com/share?text=How to Approach Code Optimization Questions in Interviews: A Frontend Engineer's Guide&url=https://blog.naufaldi.com/guide-to-code-optimization-questions-for-frontend-engineers/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/guide-to-code-optimization-questions-for-frontend-engineers/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/guide-to-code-optimization-questions-for-frontend-engineers//&title=How to Approach Code Optimization Questions in Interviews: A Frontend Engineer's Guide "LinkedIn")[](/cdn-cgi/l/email-protection#8db2fef8efe7e8eef9b0c5e2faadf9e2adccfdfdffe2eceee5adcee2e9e8adc2fdf9e4e0e4f7ecf9e4e2e3addcf8e8fef9e4e2e3feade4e3adc4e3f9e8fffbe4e8fafeb7adccadcbffe2e3f9e8e3e9adc8e3eae4e3e8e8ffabaef5bfbab6feadcaf8e4e9e8abece0fdb6efe2e9f4b0e5f9f9fdb7a2a2efe1e2eaa3ebece1e9e4a3f5f4f7a2eaf8e4e9e8a0f9e2a0eee2e9e8a0e2fdf9e4e0e4f7ecf9e4e2e3a0fcf8e8fef9e4e2e3fea0ebe2ffa0ebffe2e3f9e8e3e9a0e8e3eae4e3e8e8fffea2 "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/) [Programming](/tag/programming/)
 

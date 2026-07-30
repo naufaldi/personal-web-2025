@@ -1,18 +1,18 @@
 ---
 title: "The Dual Passion: Story-Driven and Strategy Games as My Escape and Challenge"
 slug: the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge
-description: "![Image](https://blog.faldi.xyz/content/images/2024/09/image.png)"
+description: "![Image](https://blog.naufaldi.com/content/images/2024/09/image.png)"
 category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Thu Sep 26 2024 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGdhbWV8ZW58MHx8fHwxNzI3MzgwOTU4fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge/"
+canonical: "https://blog.naufaldi.com/the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge/"
 ---
 
 
-![Image](https://blog.faldi.xyz/content/images/2024/09/image.png)
+![Image](https://blog.naufaldi.com/content/images/2024/09/image.png)
 
 Baldur Gate 3
 
@@ -29,7 +29,7 @@ Playing _Baldur's Gate 3_ was also my first introduction to something called tab
 
 When it comes to strategy games, the first one I got into was _Age of Empires_, which was also the first game I ever played. From there, I moved on to _Red Alert_, and even today, I still enjoy playing _Age of Empires IV_. However, during my bachelor’s degree, I discovered new publishers like Paradox Interactive and Creative Assembly, which completely transformed my approach to strategy games.
 
-![Image](https://blog.faldi.xyz/content/images/2024/09/image-1.png)
+![Image](https://blog.naufaldi.com/content/images/2024/09/image-1.png)
 
 Someone who play Byzantium, Twist history itself
 
@@ -40,7 +40,7 @@ These developers gave me a new perspective on strategy games, particularly **Gra
 
 In Grand Strategy games, planning ahead is crucial. Take _Europa Universalis IV_, for instance. If you can’t directly defeat the Ottomans as the Mamluks, a smart strategy is to ally with smaller bordering nations, attack together, and slowly chip away at their power. But the challenge lies in making sure those small nations don’t turn on you, which adds an extra layer of complexity. That kind of planning and foresight has sharpened my decision-making skills.
 
-![Image](https://blog.faldi.xyz/content/images/2024/09/image-2.png)
+![Image](https://blog.naufaldi.com/content/images/2024/09/image-2.png)
 
 Become Elf Warrior
 
@@ -52,7 +52,7 @@ Playing _Europa Universalis IV_? You can become the Ottoman Empire, conquer land
 
 This is what I love about games—they transport me into different roles and worlds, allowing me to experience life from new perspectives.
 
-![Image](https://blog.faldi.xyz/content/images/2024/09/image-3.png)
+![Image](https://blog.naufaldi.com/content/images/2024/09/image-3.png)
 
 All DLC EU4
 
@@ -67,7 +67,7 @@ Yet, there’s a downside. Sometimes, I get too obsessed. It turns into an addic
 
 Isn’t that ironic?
 
-Bagikan[](https://twitter.com/share?text=The Dual Passion: Story-Driven and Strategy Games as My Escape and Challenge&url=http://blog.faldi.xyz/the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge//&title=The Dual Passion: Story-Driven and Strategy Games as My Escape and Challenge "LinkedIn")[](/cdn-cgi/l/email-protection#6e511d1b0c040b0d1a533a060b4e2a1b0f024e3e0f1d1d070100544e3d1a011c17432a1c07180b004e0f000a4e3d1a1c0f1a0b09174e290f030b1d4e0f1d4e23174e2b1d0d0f1e0b4e0f000a4e2d060f02020b00090b480f031e550c010a1753061a1a1e5441410c02010940080f020a0740161714411a060b430a1b0f02431e0f1d1d070100431d1a011c17430a1c07180b00430f000a431d1a1c0f1a0b091743090f030b1d430f1d430317430b1d0d0f1e0b430f000a430d060f02020b00090b41 "Email")
+Bagikan[](https://twitter.com/share?text=The Dual Passion: Story-Driven and Strategy Games as My Escape and Challenge&url=https://blog.naufaldi.com/the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge//&title=The Dual Passion: Story-Driven and Strategy Games as My Escape and Challenge "LinkedIn")[](/cdn-cgi/l/email-protection#6e511d1b0c040b0d1a533a060b4e2a1b0f024e3e0f1d1d070100544e3d1a011c17432a1c07180b004e0f000a4e3d1a1c0f1a0b09174e290f030b1d4e0f1d4e23174e2b1d0d0f1e0b4e0f000a4e2d060f02020b00090b480f031e550c010a1753061a1a1e5441410c02010940080f020a0740161714411a060b430a1b0f02431e0f1d1d070100431d1a011c17430a1c07180b00430f000a431d1a1c0f1a0b091743090f030b1d430f1d430317430b1d0d0f1e0b430f000a430d060f02020b00090b41 "Email")
 
 Topik [Culture](/tag/culture/) [Story](/tag/story/)
 

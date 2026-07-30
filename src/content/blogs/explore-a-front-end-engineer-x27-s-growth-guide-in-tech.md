@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2023-11-15
 image: "https://images.unsplash.com/photo-1496070242169-b672c576566b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fGZyb2d8ZW58MHx8fHwxNzAwMDQ0NTIwfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/breaking-out-of-the-shell-front-end-engineer-guide/"
+canonical: "https://blog.naufaldi.com/breaking-out-of-the-shell-front-end-engineer-guide/"
 ---
 
 
@@ -42,7 +42,7 @@ Reading books is also a great way to deepen your understanding. Titles like "Cle
 
 Being a software engineer is about more than just mastering code; it's about understanding the broader environment and continuously adapting. Just like the frog under the coconut shell, it's easy to get trapped in our small world, but there's a vast universe out there filled with opportunities and learning. The key is to stay curious, open-minded, and ready to step beyond your current horizon.
 
-Bagikan[](https://twitter.com/share?text=Breaking Out of the Shell: A Front-End Engineer's Guide to Growth and Adaptability&url=http://blog.faldi.xyz/breaking-out-of-the-shell-front-end-engineer-guide/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/breaking-out-of-the-shell-front-end-engineer-guide/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/breaking-out-of-the-shell-front-end-engineer-guide//&title=Breaking Out of the Shell: A Front-End Engineer's Guide to Growth and Adaptability "LinkedIn")[](/cdn-cgi/l/email-protection#013e7274636b6462753c437364606a686f66214e7475216e6721756964215269646d6d3b21402147736e6f752c446f6521446f66686f64647327227933363a7221467468656421756e2146736e76756921606f652140656071756063686d68757827606c713a636e65783c697575713b2e2e636d6e662f67606d65682f79787b2e637364606a686f662c6e74752c6e672c7569642c7269646d6d2c67736e6f752c646f652c646f66686f6464732c66746865642e "Email")
+Bagikan[](https://twitter.com/share?text=Breaking Out of the Shell: A Front-End Engineer's Guide to Growth and Adaptability&url=https://blog.naufaldi.com/breaking-out-of-the-shell-front-end-engineer-guide/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/breaking-out-of-the-shell-front-end-engineer-guide/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/breaking-out-of-the-shell-front-end-engineer-guide//&title=Breaking Out of the Shell: A Front-End Engineer's Guide to Growth and Adaptability "LinkedIn")[](/cdn-cgi/l/email-protection#013e7274636b6462753c437364606a686f66214e7475216e6721756964215269646d6d3b21402147736e6f752c446f6521446f66686f64647327227933363a7221467468656421756e2146736e76756921606f652140656071756063686d68757827606c713a636e65783c697575713b2e2e636d6e662f67606d65682f79787b2e637364606a686f662c6e74752c6e672c7569642c7269646d6d2c67736e6f752c646f652c646f66686f6464732c66746865642e "Email")
 
 Topik [Culture](/tag/culture/) [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/) [Opini](/tag/opini/)
 

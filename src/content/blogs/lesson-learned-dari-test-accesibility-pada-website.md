@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2020-12-09
 image: "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MXwxMTc3M3wwfDF8c2VhcmNofDJ8fHVzYWJpbGl0eXxlbnwwfHx8&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/lesson-learned-dari-test-accesibility-pada-website/"
+canonical: "https://blog.naufaldi.com/lesson-learned-dari-test-accesibility-pada-website/"
 ---
 
 
@@ -28,9 +28,9 @@ Cakupannya meliputi :
 
 Berapa jumlah perusahaan di Indonesia yang mementingkan Accesibility? atau mungkin bisa dikatakan pernah melakukan testing pada Accesbility Web? Bagaimana cara mereka melakukan testing? Seberapa penting memang melakukan testing Accesbility?
 
-Merupakan pertanyaan yang saya pikirkan saat mendengarkan mengenai Accesbility. Sebabnya jelas, karena saya tidak pernah sekalipun melakukan testing pada Accesbility. Tidak pernah memikirkan Semantic HTML, ARIA, Kontras Warna dst. Namun, suatu waktu saya menjadi penasaran dengan Accesibility dan mulai membaca lebih jauh dan bertemulah dengan website [https://www.a11yproject.com/](https://www.a11yproject.com/?ref=blog.faldi.xyz)
+Merupakan pertanyaan yang saya pikirkan saat mendengarkan mengenai Accesbility. Sebabnya jelas, karena saya tidak pernah sekalipun melakukan testing pada Accesbility. Tidak pernah memikirkan Semantic HTML, ARIA, Kontras Warna dst. Namun, suatu waktu saya menjadi penasaran dengan Accesibility dan mulai membaca lebih jauh dan bertemulah dengan website [https://www.a11yproject.com/](https://www.a11yproject.com/?ref=blog.naufaldi.com)
 
-![Image](https://blog.faldi.xyz/content/images/2020/12/Screen-Shot-2020-12-09-at-11.45.07.png)
+![Image](https://blog.naufaldi.com/content/images/2020/12/Screen-Shot-2020-12-09-at-11.45.07.png)
 
 a11y Project
 
@@ -38,17 +38,17 @@ Saat itulah, saya merasa sepertinya perlu untuk belajar sedikit sedikit, menerap
 
 ## Solusi
 
-Nah, lalu saya menemukan website [https://accessibilityinsights.io/](https://accessibilityinsights.io/?ref=blog.faldi.xyz) dari Mas Adityo.
+Nah, lalu saya menemukan website [https://accessibilityinsights.io/](https://accessibilityinsights.io/?ref=blog.naufaldi.com) dari Mas Adityo.
 
-> Pakai plugin ini Di [https://t.co/6XKGISv5Pu](https://t.co/6XKGISv5Pu?ref=blog.faldi.xyz) lumayan dalam hasilnya. Seneng makenya
+> Pakai plugin ini Di [https://t.co/6XKGISv5Pu](https://t.co/6XKGISv5Pu?ref=blog.naufaldi.com) lumayan dalam hasilnya. Seneng makenya
 > 
-> — Adityo Pratomo (@kotakmakan) [November 10, 2020](https://twitter.com/kotakmakan/status/1326112568029577217?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — Adityo Pratomo (@kotakmakan) [November 10, 2020](https://twitter.com/kotakmakan/status/1326112568029577217?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 Mulailah dari situ saya mencoba untuk melakukan test Accesibility Insight pada salah satu situs web saya yaitu :
 
-**Demo** : [https://dashboard-cowork.vercel.app/](https://dashboard-cowork.vercel.app/?ref=blog.faldi.xyz)
+**Demo** : [https://dashboard-cowork.vercel.app/](https://dashboard-cowork.vercel.app/?ref=blog.naufaldi.com)
 
-![Image](https://blog.faldi.xyz/content/images/2020/12/Screen-Shot-2020-12-09-at-11.59.11.png)
+![Image](https://blog.naufaldi.com/content/images/2020/12/Screen-Shot-2020-12-09-at-11.59.11.png)
 
 Dashboard CoWork Test Accesbility
 
@@ -79,7 +79,7 @@ Accessible Rich Internet Applications (ARIA) is a set of attributes that define
 
 ![Image](https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png)
 
-](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA?ref=blog.faldi.xyz)
+](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA?ref=blog.naufaldi.com)
 
 ### Dukung saya di Karyakarsa :
 
@@ -93,11 +93,11 @@ Dukung Naufaldi Rafif S di Karyakarsa!
 
 ![Image](https://karyakarsa.s3.ap-southeast-1.amazonaws.com/header-5e38f4d4bc716.jpg)
 
-](https://karyakarsa.com/naufaldisatriya/tip?ref=blog.faldi.xyz)
+](https://karyakarsa.com/naufaldisatriya/tip?ref=blog.naufaldi.com)
 
 **Sumber**
 
-> [Accessibility: Konsep untuk Pastikan Situs Web Mudah Diakses Penyandang Disabilitas](https://glints.com/id/lowongan/accessibility-adalah/?ref=blog.faldi.xyz)
+> [Accessibility: Konsep untuk Pastikan Situs Web Mudah Diakses Penyandang Disabilitas](https://glints.com/id/lowongan/accessibility-adalah/?ref=blog.naufaldi.com)
 
 [
 
@@ -109,9 +109,9 @@ Web Accessibility Initiative (WAI)W3C Web Accessibility Initiative (WAI)
 
 ![Image](https://www.w3.org/WAI/assets/images/social-sharing-default.jpg)
 
-](https://www.w3.org/WAI/WCAG2AA-Conformance?ref=blog.faldi.xyz)
+](https://www.w3.org/WAI/WCAG2AA-Conformance?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Lesson Learned dari Test Accesibility pada Website&url=http://blog.faldi.xyz/lesson-learned-dari-test-accesibility-pada-website/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/lesson-learned-dari-test-accesibility-pada-website/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/lesson-learned-dari-test-accesibility-pada-website//&title=Lesson Learned dari Test Accesibility pada Website "LinkedIn")[](/cdn-cgi/l/email-protection#dee1adabbcb4bbbdaae392bbadadb1b0fe92bbbfacb0bbbafebabfacb7fe8abbadaafe9fbdbdbbadb7bcb7b2b7aaa7feaebfbabffe89bbbcadb7aabbf8bfb3aee5bcb1baa7e3b6aaaaaee4f1f1bcb2b1b9f0b8bfb2bab7f0a6a7a4f1b2bbadadb1b0f3b2bbbfacb0bbbaf3babfacb7f3aabbadaaf3bfbdbdbbadb7bcb7b2b7aaa7f3aebfbabff3a9bbbcadb7aabbf1 "Email")
+Bagikan[](https://twitter.com/share?text=Lesson Learned dari Test Accesibility pada Website&url=https://blog.naufaldi.com/lesson-learned-dari-test-accesibility-pada-website/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/lesson-learned-dari-test-accesibility-pada-website/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/lesson-learned-dari-test-accesibility-pada-website//&title=Lesson Learned dari Test Accesibility pada Website "LinkedIn")[](/cdn-cgi/l/email-protection#dee1adabbcb4bbbdaae392bbadadb1b0fe92bbbfacb0bbbafebabfacb7fe8abbadaafe9fbdbdbbadb7bcb7b2b7aaa7feaebfbabffe89bbbcadb7aabbf8bfb3aee5bcb1baa7e3b6aaaaaee4f1f1bcb2b1b9f0b8bfb2bab7f0a6a7a4f1b2bbadadb1b0f3b2bbbfacb0bbbaf3babfacb7f3aabbadaaf3bfbdbdbbadb7bcb7b2b7aaa7f3aebfbabff3a9bbbcadb7aabbf1 "Email")
 
 Topik [Lesson Learned](/tag/lesson-learned/) [Insight](/tag/insight/)
 

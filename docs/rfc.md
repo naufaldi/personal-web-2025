@@ -434,4 +434,4 @@ import FadeInUp from '@/components/common/FadeInUp'
 
 ## Reference
 
-Based on structure from [faldi.xyz](https://faldi.xyz/) - minimal, clean portfolio structure
+Based on structure from [naufaldi.com](https://naufaldi.com/) - minimal, clean portfolio structure

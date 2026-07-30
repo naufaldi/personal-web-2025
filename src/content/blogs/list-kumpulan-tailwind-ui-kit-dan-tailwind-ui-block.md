@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2021-04-25
 image: "https://images.unsplash.com/photo-1506729623306-b5a934d88b53?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fFVJfGVufDB8fHx8MTYxOTM3NDUzOQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/list-kumpulan-tailwind-ui-kit-dan-tailwind-ui-block/"
+canonical: "https://blog.naufaldi.com/list-kumpulan-tailwind-ui-kit-dan-tailwind-ui-block/"
 ---
 
 
@@ -26,7 +26,7 @@ Bahasa : HTML, React dan Vue
 
 Ready component dari Official Tailwind. Beberapa ada yang Free, namun kebanyakan Premium
 
-[https://tailwindui.com/](https://tailwindui.com/?ref=blog.faldi.xyz)
+[https://tailwindui.com/](https://tailwindui.com/?ref=blog.naufaldi.com)
 
 ## 2\. Tailblocks
 
@@ -34,7 +34,7 @@ Bahasa: HTML
 
 Ready Component dan Block dari  Mert Cukuren. Fully Free.
 
-[https://tailblocks.cc/](https://tailblocks.cc/?ref=blog.faldi.xyz)
+[https://tailblocks.cc/](https://tailblocks.cc/?ref=blog.naufaldi.com)
 
 ## 3\. Tailwind CSS Component
 
@@ -42,7 +42,7 @@ Bahasa: HTML
 
 Ready Component dan Template dari Komunitas. Fully Free.
 
-[https://tailwindcomponents.com/](https://tailwindcomponents.com/?ref=blog.faldi.xyz)
+[https://tailwindcomponents.com/](https://tailwindcomponents.com/?ref=blog.naufaldi.com)
 
 ## 4\.  Tailwind Toolbox
 
@@ -50,7 +50,7 @@ Bahasa : HTML dan Vanilla JS
 
 Ready Component dan Template. Fully Free dan didukung dengan JS untuk lebih interaktif
 
-[https://www.tailwindtoolbox.com/](https://www.tailwindtoolbox.com/?ref=blog.faldi.xyz)
+[https://www.tailwindtoolbox.com/](https://www.tailwindtoolbox.com/?ref=blog.naufaldi.com)
 
 ## 5\. Meraki UI
 
@@ -58,13 +58,13 @@ Bahasa : HTML
 
 Ready Component dan Fully Free. Support RTL
 
-[https://merakiui.com/](https://merakiui.com/?ref=blog.faldi.xyz)
+[https://merakiui.com/](https://merakiui.com/?ref=blog.naufaldi.com)
 
 ## 6.Tailwind Card
 
 Ready Component Card dan Fully Free. Hanya komponen kartu dengan berbagai jenis desain dan style
 
-[https://tailwind-cards.netlify.app/](https://tailwind-cards.netlify.app/?ref=blog.faldi.xyz)
+[https://tailwind-cards.netlify.app/](https://tailwind-cards.netlify.app/?ref=blog.naufaldi.com)
 
 ## 7\. Treact
 
@@ -72,7 +72,7 @@ Bahasa : ReactJS
 
 Ready Component and Template. Build with ReactJS and Tailwind v2. Ada tambahan animasi dengan Framer Motion
 
-[https://treact.owaiskhan.me/](https://treact.owaiskhan.me/?ref=blog.faldi.xyz)
+[https://treact.owaiskhan.me/](https://treact.owaiskhan.me/?ref=blog.naufaldi.com)
 
 ## 8\. Tailwind Starter Kit by Creative Team
 
@@ -80,7 +80,7 @@ Bahasa : ReactJS, VueJS dan HTML
 
 Ready Component and Template. Menggunakan Theme Material UI, khas Creative Team. Fully Free
 
-[https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation?ref=blog.faldi.xyz)
+[https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation?ref=blog.naufaldi.com)
 
 ## 9.Mamba UI
 
@@ -88,31 +88,31 @@ Bahasa : ReactJS dan VueJS
 
 Ready Component and Template. Fully Free.
 
-[https://mambaui.com](https://mambaui.com/?ref=blog.faldi.xyz)
+[https://mambaui.com](https://mambaui.com/?ref=blog.naufaldi.com)
 
 ## 10\. Windmill Dashboard
 
 Ready Component Dashboard. Fully Free. React UI Library
 
-[https://github.com/estevanmaito/windmill-dashboard-react](https://github.com/estevanmaito/windmill-dashboard-react?ref=blog.faldi.xyz)
+[https://github.com/estevanmaito/windmill-dashboard-react](https://github.com/estevanmaito/windmill-dashboard-react?ref=blog.naufaldi.com)
 
 ## 11\. TailwindUIKit
 
 Ready Component dan Template. Freemium.
 
-[https://tailwinduikit.com/](https://tailwinduikit.com/?ref=blog.faldi.xyz)
+[https://tailwinduikit.com/](https://tailwinduikit.com/?ref=blog.naufaldi.com)
 
 ## 12\. TailKit
 
 Ready Component. Fully Free. Dashboard, Landingpage dan Component.
 
-[https://www.tailwind-kit.com/](https://www.tailwind-kit.com/?ref=blog.faldi.xyz)
+[https://www.tailwind-kit.com/](https://www.tailwind-kit.com/?ref=blog.naufaldi.com)
 
 * * *
 
 Kurang lebih itu saja beberapa Tailwind UI Kit yang bisa membantu kita dalam membuat komponen komponen dengan Tailwind UI. Semoga membantu!
 
-Bagikan[](https://twitter.com/share?text=List Kumpulan Tailwind UI Kit dan Tailwind UI Block&url=http://blog.faldi.xyz/list-kumpulan-tailwind-ui-kit-dan-tailwind-ui-block/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/list-kumpulan-tailwind-ui-kit-dan-tailwind-ui-block/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/list-kumpulan-tailwind-ui-kit-dan-tailwind-ui-block//&title=List Kumpulan Tailwind UI Kit dan Tailwind UI Block "LinkedIn")[](/cdn-cgi/l/email-protection#26195553444c4345521b6a4f5552066d534b56534a47480672474f4a514f484206736f066d4f52064247480672474f4a514f484206736f06644a49454d00474b561d4449425f1b4e5252561c0909444a49410840474a424f085e5f5c094a4f55520b4d534b56534a47480b52474f4a514f48420b534f0b4d4f520b4247480b52474f4a514f48420b534f0b444a49454d09 "Email")
+Bagikan[](https://twitter.com/share?text=List Kumpulan Tailwind UI Kit dan Tailwind UI Block&url=https://blog.naufaldi.com/list-kumpulan-tailwind-ui-kit-dan-tailwind-ui-block/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/list-kumpulan-tailwind-ui-kit-dan-tailwind-ui-block/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/list-kumpulan-tailwind-ui-kit-dan-tailwind-ui-block//&title=List Kumpulan Tailwind UI Kit dan Tailwind UI Block "LinkedIn")[](/cdn-cgi/l/email-protection#26195553444c4345521b6a4f5552066d534b56534a47480672474f4a514f484206736f066d4f52064247480672474f4a514f484206736f06644a49454d00474b561d4449425f1b4e5252561c0909444a49410840474a424f085e5f5c094a4f55520b4d534b56534a47480b52474f4a514f48420b534f0b4d4f520b4247480b52474f4a514f48420b534f0b444a49454d09 "Email")
 
 Topik [Insight](/tag/insight/) [TailwindCSS](/tag/tailwindcss/)
 

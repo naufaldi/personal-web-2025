@@ -15,7 +15,7 @@ Meta description adalah salah satu hal yang cukup vital dalam dunia website, apa
 
 Ketika kita mencoba untuk melakukan test pada website kita di Web Dev Measure, salah satu hal yang dikritisi adalah ada tidaknya meta deskripsi.
 
-![Image](https://blog.faldi.xyz/content/images/2021/06/image-3.png)
+![Image](https://blog.naufaldi.com/content/images/2021/06/image-3.png)
 
 Hasil Web Dev Measure
 
@@ -67,7 +67,7 @@ Check out this Next.js primer on SEO fundamentals. Utilize the Open Graph Protoc
 
 ![Image](https://www.netlify.com/img/blog/good-cards.png)
 
-](https://www.netlify.com/blog/2020/05/08/improve-your-seo-and-social-sharing-cards-with-next.js/?ref=blog.faldi.xyz)
+](https://www.netlify.com/blog/2020/05/08/improve-your-seo-and-social-sharing-cards-with-next.js/?ref=blog.naufaldi.com)
 
 [
 
@@ -79,4 +79,4 @@ Add a meta description to a Next.js website using the built-in Head component.
 
 ![Image](https://assets.coderrocketfuel.com/next-js-article-thumbnail.png)
 
-](https://coderrocketfuel.com/article/how-to-add-a-meta-description-tag-to-a-next-js-website?ref=blog.faldi.xyz)
+](https://coderrocketfuel.com/article/how-to-add-a-meta-description-tag-to-a-next-js-website?ref=blog.naufaldi.com)

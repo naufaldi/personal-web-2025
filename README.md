@@ -1,6 +1,6 @@
-# faldi.xyz — Personal Portfolio
+# naufaldi.com — Personal Portfolio
 
-[![Live Site](https://img.shields.io/badge/live-faldi.xyz-blue)](https://faldi.xyz)
+[![Live Site](https://img.shields.io/badge/live-naufaldi.com-blue)](https://naufaldi.com)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![React](https://img.shields.io/badge/React-18-61dafb)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6)](https://www.typescriptlang.org)
@@ -108,7 +108,7 @@ VITE_SUPABASE_KEY=your_supabase_anon_key
 The site is deployed via **GitHub Actions** with two targets:
 
 - **Netlify** — Static hosting with `netlify.toml` config
-- **Docker + VPS** — Containerized deployment to `faldi.xyz` using Caddy reverse proxy and Watchtower for auto-updates
+- **Docker + VPS** — Containerized deployment to `naufaldi.com` using Caddy reverse proxy and Watchtower for auto-updates
 
 ## License
 

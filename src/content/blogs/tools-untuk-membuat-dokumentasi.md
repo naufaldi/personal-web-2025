@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2022-04-07
 image: "https://images.unsplash.com/photo-1562564055-71e051d33c19?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGRvY3VtZW50fGVufDB8fHx8MTY0OTM1NjUzMg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/tools-membuat-dokumentasi/"
+canonical: "https://blog.naufaldi.com/tools-membuat-dokumentasi/"
 ---
 
 
@@ -25,7 +25,7 @@ Karena itulah ada banyak sekali jenis jenis cara untuk bisa membuat dokumentasi,
 
 ## Readme
 
-Sesimple Readme di Github, teman-teman bisa menggunakan [https://readme.so/](https://readme.so/?ref=blog.faldi.xyz) untuk memudahkan dalam membuat Readme. Readme disini bisa digunakan untuk memberikan informasi yang ringan mengenai sebuah project misalnya untuk
+Sesimple Readme di Github, teman-teman bisa menggunakan [https://readme.so/](https://readme.so/?ref=blog.naufaldi.com) untuk memudahkan dalam membuat Readme. Readme disini bisa digunakan untuk memberikan informasi yang ringan mengenai sebuah project misalnya untuk
 
 *   Step by Step pemasangan software di local machine
 *   Tech Stack yang digunakan
@@ -46,7 +46,7 @@ ohmyzsh/README.md at master · ohmyzsh/ohmyzsh
 
 ![Image](https://repository-images.githubusercontent.com/291137/fb009080-6110-11e9-82c2-b21ca7831f5c)
 
-](https://github.com/ohmyzsh/ohmyzsh/blob/master/README.md?ref=blog.faldi.xyz)
+](https://github.com/ohmyzsh/ohmyzsh/blob/master/README.md?ref=blog.naufaldi.com)
 
 [
 
@@ -58,7 +58,7 @@ twin.macro/README.md at master · ben-rogerson/twin.macro
 
 ![Image](https://repository-images.githubusercontent.com/241534790/69c92980-3222-11eb-992f-a0802be3963d)
 
-](https://github.com/ben-rogerson/twin.macro/blob/master/README.md?ref=blog.faldi.xyz)
+](https://github.com/ben-rogerson/twin.macro/blob/master/README.md?ref=blog.naufaldi.com)
 
 ## Storybook
 
@@ -72,7 +72,7 @@ Storybook is an open source tool for building UI components and pages in isolati
 
 ![Image](https://storybook.js.org/images/social/open-graph.png)
 
-](https://storybook.js.org/?ref=blog.faldi.xyz)
+](https://storybook.js.org/?ref=blog.naufaldi.com)
 
 Storybook adalah tools untuk membuat dokumentasi terkait dengan UI Component, misalnya ketika kita akan membuat sebuah
 
@@ -87,7 +87,7 @@ Webpack App
 
 
 
-](https://react-data-table-component.netlify.app/?ref=blog.faldi.xyz)
+](https://react-data-table-component.netlify.app/?ref=blog.naufaldi.com)
 
 [
 
@@ -95,7 +95,7 @@ Storybook
 
 
 
-](https://govuk-react.github.io/govuk-react/?path=%2Fstory%2Fwelcome--page&ref=blog.faldi.xyz)
+](https://govuk-react.github.io/govuk-react/?path=%2Fstory%2Fwelcome--page&ref=blog.naufaldi.com)
 
 ## Docusaurus
 
@@ -109,7 +109,7 @@ An optimized site generator in React. Docusaurus helps you to move fast and writ
 
 ![Image](https://docusaurus.io/img/docusaurus-soc.png)
 
-](https://docusaurus.io/?ref=blog.faldi.xyz)
+](https://docusaurus.io/?ref=blog.naufaldi.com)
 
 Docusaurus adalah sebuah Site Generator dengan menggunakan ReactJS yang berfokus pada dokumentasi, sehingga saat kita menggunakan kita bisa langsung fokus pada penulisan dokumentasi produk kita. Tidak perlu mengurus Styling (kecuali bila ingin disesuaikan dengan brand perusahaan).
 
@@ -132,7 +132,7 @@ Real-time audio & video SDKs, ready to launch 🚀
 
 
 
-](https://docs.dyte.io/react/installation?ref=blog.faldi.xyz)
+](https://docs.dyte.io/react/installation?ref=blog.naufaldi.com)
 
 [
 
@@ -144,11 +144,11 @@ Animations: Web Animations API to Build and Run on Ionic Apps
 
 ![Image](https://ionicframework.com/docs/logos/ionic-text-docs-dark.svg)
 
-](https://ionicframework.com/docs/utilities/animations?ref=blog.faldi.xyz)
+](https://ionicframework.com/docs/utilities/animations?ref=blog.naufaldi.com)
 
 ## Notion
 
-[https://www.notion.so/](https://www.notion.so/?ref=blog.faldi.xyz)
+[https://www.notion.so/](https://www.notion.so/?ref=blog.naufaldi.com)
 
 Notion adalah salah satu project management untuk menuliskan catatan catatan penting dalam sebuah ruang kerja. Alasan inilah yang membuat banyak perusahaan menggunakannya sebagai tempat untuk membuat dokumentasi di Notion yang batasannya tidak hanya pada template-template yang dimiliki Notion, namun juga komunitasnya.
 
@@ -165,7 +165,7 @@ Selain itu, munculnya Notion API membuat kita bisa membuat Web berbasis Notion, 
 
 Beberapa contoh Wiki Engineering di Notion :
 
-[https://www.notion.so/templates/engineering-wiki](https://www.notion.so/templates/engineering-wiki?ref=blog.faldi.xyz)
+[https://www.notion.so/templates/engineering-wiki](https://www.notion.so/templates/engineering-wiki?ref=blog.naufaldi.com)
 
 [
 
@@ -177,7 +177,7 @@ A new tool that blends your everyday work apps into one. It’s the all-in-one w
 
 ![Image](https://www.notion.so/images/meta/default.png)
 
-](https://www.notion.so/API-Documentation-e4a7746e6a3f45dbb58ea6b45b8f9744?ref=blog.faldi.xyz)
+](https://www.notion.so/API-Documentation-e4a7746e6a3f45dbb58ea6b45b8f9744?ref=blog.naufaldi.com)
 
 [
 
@@ -189,7 +189,7 @@ Imitation is the sincerest form of flattery. 65+ Notion docs for early stage s
 
 ![Image](https://images.ctfassets.net/c1d9eptjtfvv/6kVKeiTtQCcDoJJGnL4WIp/f81d3a8fc37439c8c9fc375d0949afda/Group_240.png?fit=scale&w=600&h=315)
 
-](https://air.inc/blog/documentation-for-dummies-notion-templates-for-early-stage-startups?ref=blog.faldi.xyz)
+](https://air.inc/blog/documentation-for-dummies-notion-templates-for-early-stage-startups?ref=blog.naufaldi.com)
 
 ## Custom
 
@@ -207,7 +207,7 @@ The Next.js Static Site Generator. Contribute to shuding/nextra development by c
 
 ![Image](https://repository-images.githubusercontent.com/272492043/4f671c80-3995-11eb-9928-5f15561aff6b)
 
-](https://github.com/shuding/nextra?ref=blog.faldi.xyz)
+](https://github.com/shuding/nextra?ref=blog.naufaldi.com)
 
 Menggunakan NextJS untuk membuat SSG, Nextra merupakan salah satu lib yang bisa kita gunakan karena menggunakan Tech Stack
 
@@ -227,7 +227,7 @@ SWR is a React Hooks library for data fetching. SWR first returns the data from 
 
 ![Image](https://swr-card.vercel.app/?title=Getting%20Started)
 
-](https://swr.vercel.app/docs/getting-started?ref=blog.faldi.xyz)
+](https://swr.vercel.app/docs/getting-started?ref=blog.naufaldi.com)
 
 ### Gatsby Docs Theme
 
@@ -243,7 +243,7 @@ Informative and easy to use documentation themes for your project. Most of them 
 
 ![Image](https://gatsbytemplates.io/logo.png)
 
-](https://gatsbytemplates.io/gatsby-documentation-themes/?ref=blog.faldi.xyz)
+](https://gatsbytemplates.io/gatsby-documentation-themes/?ref=blog.naufaldi.com)
 
 * * *
 
@@ -261,9 +261,9 @@ In software development we create different types of documentation. Let’s tell
 
 ![Image](https://images.prismic.io/superpupertest/bfdee19c-ad15-4ea5-b12e-5a2e6ffbf909_The+Importance+of+Documentation+in+Software+Development.webp)
 
-](https://maddevs.io/customer-university/importance-of-documentation/?ref=blog.faldi.xyz)
+](https://maddevs.io/customer-university/importance-of-documentation/?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Tools untuk Membuat Dokumentasi&url=http://blog.faldi.xyz/tools-membuat-dokumentasi/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/tools-membuat-dokumentasi/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/tools-membuat-dokumentasi//&title=Tools untuk Membuat Dokumentasi "LinkedIn")[](/cdn-cgi/l/email-protection#b986caccdbd3dcdacd84edd6d6d5ca99ccd7cdccd299f4dcd4dbccd8cd99fdd6d2ccd4dcd7cdd8cad09fd8d4c982dbd6ddc084d1cdcdc9839696dbd5d6de97dfd8d5ddd097c1c0c396cdd6d6d5ca94d4dcd4dbccd8cd94ddd6d2ccd4dcd7cdd8cad096 "Email")
+Bagikan[](https://twitter.com/share?text=Tools untuk Membuat Dokumentasi&url=https://blog.naufaldi.com/tools-membuat-dokumentasi/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/tools-membuat-dokumentasi/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/tools-membuat-dokumentasi//&title=Tools untuk Membuat Dokumentasi "LinkedIn")[](/cdn-cgi/l/email-protection#b986caccdbd3dcdacd84edd6d6d5ca99ccd7cdccd299f4dcd4dbccd8cd99fdd6d2ccd4dcd7cdd8cad09fd8d4c982dbd6ddc084d1cdcdc9839696dbd5d6de97dfd8d5ddd097c1c0c396cdd6d6d5ca94d4dcd4dbccd8cd94ddd6d2ccd4dcd7cdd8cad096 "Email")
 
 Topik [Insight](/tag/insight/) [Opini](/tag/opini/) [Lesson Learned](/tag/lesson-learned/)
 

@@ -7,12 +7,12 @@ author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2021-03-30
-image: "http://blog.faldi.xyz/content/images/2021/03/twin-nextjs.png"
-canonical: "http://blog.faldi.xyz/memulai-nextjs-tailwind-macro-emotion/"
+image: "https://blog.naufaldi.com/content/images/2021/03/twin-nextjs.png"
+canonical: "https://blog.naufaldi.com/memulai-nextjs-tailwind-macro-emotion/"
 ---
 
 
-Ada beberapa kemudahan ketika kita menggunakan twin.macro dan Emotion pada proyek NextJS kita, seperti yang telah saya tuliskan pada [_twin.macro Sebagai Alternatif menggunakan TailwindCSS dan CSS-in-JS_](https://blog.faldi.xyz/menggunakan-twin-macro-dan-emotion-di-nextjs/) . Nah, kesempatan kali ini saya coba menjelaskan bagaimana cara install twin.macro di NextJS dengan Emotion.
+Ada beberapa kemudahan ketika kita menggunakan twin.macro dan Emotion pada proyek NextJS kita, seperti yang telah saya tuliskan pada [_twin.macro Sebagai Alternatif menggunakan TailwindCSS dan CSS-in-JS_](https://blog.naufaldi.com/menggunakan-twin-macro-dan-emotion-di-nextjs/) . Nah, kesempatan kali ini saya coba menjelaskan bagaimana cara install twin.macro di NextJS dengan Emotion.
 
 Walaupun di dokumentasi twin.macro, bagian github NextJS sudah ada tata caranya. Namun, saya akan menuliskan versi bahasa Indonesia dan yang lebih mudah dimengerti.
 
@@ -36,7 +36,7 @@ npm install -D twin.macro tailwindcss @emotion/babel-plugin babel-plugin-macros
 
 ## Menambahkan Global Styles
 
-Global Styles ini berisikan beberapa default style, style untuk animasi @keyframes dan beberapa class css yang membuat [ring classes](https://tailwindcss.com/docs/ring-width?ref=blog.faldi.xyz) dan  box-shadows bekerja.
+Global Styles ini berisikan beberapa default style, style untuk animasi @keyframes dan beberapa class css yang membuat [ring classes](https://tailwindcss.com/docs/ring-width?ref=blog.naufaldi.com) dan  box-shadows bekerja.
 
 Menambahkan `global styles` dengan `import` di `_app.js` :
 
@@ -155,7 +155,7 @@ Starter Project For NextJS, Twin.macro and Emotion - naufaldi/nextjs-twinmacro-e
 
 ![Image](https://avatars.githubusercontent.com/u/13159420?s=400&v=4)
 
-](https://github.com/naufaldi/nextjs-twinmacro-emotion?ref=blog.faldi.xyz)
+](https://github.com/naufaldi/nextjs-twinmacro-emotion?ref=blog.naufaldi.com)
 
 ## Referensi
 
@@ -169,9 +169,9 @@ Packed with examples for different frameworks, this repo helps you get started w
 
 ![Image](https://repository-images.githubusercontent.com/292246407/0b9e4580-3226-11eb-9621-640bb2391c37)
 
-](https://github.com/ben-rogerson/twin.examples/tree/master/next-emotion?ref=blog.faldi.xyz)
+](https://github.com/ben-rogerson/twin.examples/tree/master/next-emotion?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Cara Install NextJS + twin.macro + Emotion&url=http://blog.faldi.xyz/memulai-nextjs-tailwind-macro-emotion/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/memulai-nextjs-tailwind-macro-emotion/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/memulai-nextjs-tailwind-macro-emotion//&title=Cara Install NextJS + twin.macro + Emotion "LinkedIn")[](/cdn-cgi/l/email-protection#ab94d8dec9c1cec8df96e8cad9ca8be2c5d8dfcac7c78be5ced3dfe1f88b808bdfdcc2c585c6cac8d9c48b808beec6c4dfc2c4c58dcac6db90c9c4cfd296c3dfdfdb918484c9c7c4cc85cdcac7cfc285d3d2d184c6cec6dec7cac286c5ced3dfc1d886dfcac2c7dcc2c5cf86c6cac8d9c486cec6c4dfc2c4c584 "Email")
+Bagikan[](https://twitter.com/share?text=Cara Install NextJS + twin.macro + Emotion&url=https://blog.naufaldi.com/memulai-nextjs-tailwind-macro-emotion/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/memulai-nextjs-tailwind-macro-emotion/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/memulai-nextjs-tailwind-macro-emotion//&title=Cara Install NextJS + twin.macro + Emotion "LinkedIn")[](/cdn-cgi/l/email-protection#ab94d8dec9c1cec8df96e8cad9ca8be2c5d8dfcac7c78be5ced3dfe1f88b808bdfdcc2c585c6cac8d9c48b808beec6c4dfc2c4c58dcac6db90c9c4cfd296c3dfdfdb918484c9c7c4cc85cdcac7cfc285d3d2d184c6cec6dec7cac286c5ced3dfc1d886dfcac2c7dcc2c5cf86c6cac8d9c486cec6c4dfc2c4c584 "Email")
 
 Topik [Getting Started](/tag/getting-started/) [NextJS](/tag/nextjs/) [ReactJS](/tag/reactjs/) [TailwindCSS](/tag/tailwindcss/) [Tutorial](/tag/tutorial/)
 

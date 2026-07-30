@@ -1,24 +1,24 @@
 ---
 title: "Quick Note Showwcase ID : Suka Duka Menjadi Tech Content Creator"
 slug: quick-note-showwcase-id-suka-duka-menjadi-tech-content-creator
-description: "* [Sandhika Galih](https://twitter.com/sandhikagalih?ref=blog.faldi.xyz)"
+description: "* [Sandhika Galih](https://twitter.com/sandhikagalih?ref=blog.naufaldi.com)"
 category: "Technical writer"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2022-08-06
 image: "https://images.unsplash.com/photo-1513477967668-2aaf11838bd6?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxpbXBhY3R8ZW58MHx8fHwxNjU5NzIwNzAw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/rangkuman-showwcase-id-suka-duka-menjadi-tech-content-creator/"
+canonical: "https://blog.naufaldi.com/rangkuman-showwcase-id-suka-duka-menjadi-tech-content-creator/"
 ---
 
 
 ## Narasumber:
 
-*   [Sandhika Galih](https://twitter.com/sandhikagalih?ref=blog.faldi.xyz)
-*   [Borrys Hasian](https://twitter.com/borryshasian?ref=blog.faldi.xyz)
-*   [Iqbal Farabi](https://twitter.com/iqbal_farabi?ref=blog.faldi.xyz)
-*   [Riza Fahmi](https://twitter.com/rizafahmi22?ref=blog.faldi.xyz)
-*   [Zain Fathoni](https://twitter.com/zainfathoni?ref=blog.faldi.xyz)
+*   [Sandhika Galih](https://twitter.com/sandhikagalih?ref=blog.naufaldi.com)
+*   [Borrys Hasian](https://twitter.com/borryshasian?ref=blog.naufaldi.com)
+*   [Iqbal Farabi](https://twitter.com/iqbal_farabi?ref=blog.naufaldi.com)
+*   [Riza Fahmi](https://twitter.com/rizafahmi22?ref=blog.naufaldi.com)
+*   [Zain Fathoni](https://twitter.com/zainfathoni?ref=blog.naufaldi.com)
 
 ## **Alasan menjadi Content Creator**
 
@@ -84,13 +84,13 @@ Semua dikerjakan sendiri, seperti editing video, pamflet, script, danmemikirkan 
 
 **Thats it!**
 
-Lebih lanjut mungkin teman-teman bisa check [Twitter Showwcase Indonesia](https://twitter.com/ShowwcaseID?ref=blog.faldi.xyz) atau Check rekaman Twitter Space berikut:
+Lebih lanjut mungkin teman-teman bisa check [Twitter Showwcase Indonesia](https://twitter.com/ShowwcaseID?ref=blog.naufaldi.com) atau Check rekaman Twitter Space berikut:
 
-> Pengen jadi content creator tapi nggak tahu harus mulai dari mana? Yuk ikutan Showwcase Space bersama [@iqbal\_farabi](https://twitter.com/iqbal_farabi?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz) [@sandhikagalih](https://twitter.com/sandhikagalih?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz) [@rizafahmi22](https://twitter.com/rizafahmi22?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz) Jumat, 5 Agustus jam 7 PM! Dapatkan saldo Gopay 50K buat 5 pemenang di kuis yang didukung oleh [@Idcloudhostcom](https://twitter.com/Idcloudhostcom?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz) [https://t.co/FDal5LbxtX](https://t.co/FDal5LbxtX?ref=blog.faldi.xyz) [pic.twitter.com/FAkGWvYf4j](https://t.co/FAkGWvYf4j?ref=blog.faldi.xyz)
+> Pengen jadi content creator tapi nggak tahu harus mulai dari mana? Yuk ikutan Showwcase Space bersama [@iqbal\_farabi](https://twitter.com/iqbal_farabi?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com) [@sandhikagalih](https://twitter.com/sandhikagalih?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com) [@rizafahmi22](https://twitter.com/rizafahmi22?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com) Jumat, 5 Agustus jam 7 PM! Dapatkan saldo Gopay 50K buat 5 pemenang di kuis yang didukung oleh [@Idcloudhostcom](https://twitter.com/Idcloudhostcom?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com) [https://t.co/FDal5LbxtX](https://t.co/FDal5LbxtX?ref=blog.naufaldi.com) [pic.twitter.com/FAkGWvYf4j](https://t.co/FAkGWvYf4j?ref=blog.naufaldi.com)
 > 
-> — Showwcase Indonesia (@ShowwcaseID) [August 3, 2022](https://twitter.com/ShowwcaseID/status/1554776971250630656?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — Showwcase Indonesia (@ShowwcaseID) [August 3, 2022](https://twitter.com/ShowwcaseID/status/1554776971250630656?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Quick Note Showwcase ID : Suka Duka Menjadi Tech Content Creator&url=http://blog.faldi.xyz/rangkuman-showwcase-id-suka-duka-menjadi-tech-content-creator/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/rangkuman-showwcase-id-suka-duka-menjadi-tech-content-creator/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/rangkuman-showwcase-id-suka-duka-menjadi-tech-content-creator//&title=Quick Note Showwcase ID : Suka Duka Menjadi Tech Content Creator "LinkedIn")[](/cdn-cgi/l/email-protection#310e4244535b5452450c604458525a117f5e45541162595e464652504254117875110b1162445a501175445a50117c545f5b505558116554525911725e5f45545f451172435450455e4317505c410a535e55480c594545410b1e1e535d5e561f57505d55581f49484b1e43505f565a445c505f1c42595e4646525042541c58551c42445a501c55445a501c5c545f5b5055581c455452591c525e5f45545f451c52435450455e431e "Email")
+Bagikan[](https://twitter.com/share?text=Quick Note Showwcase ID : Suka Duka Menjadi Tech Content Creator&url=https://blog.naufaldi.com/rangkuman-showwcase-id-suka-duka-menjadi-tech-content-creator/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/rangkuman-showwcase-id-suka-duka-menjadi-tech-content-creator/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/rangkuman-showwcase-id-suka-duka-menjadi-tech-content-creator//&title=Quick Note Showwcase ID : Suka Duka Menjadi Tech Content Creator "LinkedIn")[](/cdn-cgi/l/email-protection#310e4244535b5452450c604458525a117f5e45541162595e464652504254117875110b1162445a501175445a50117c545f5b505558116554525911725e5f45545f451172435450455e4317505c410a535e55480c594545410b1e1e535d5e561f57505d55581f49484b1e43505f565a445c505f1c42595e4646525042541c58551c42445a501c55445a501c5c545f5b5055581c455452591c525e5f45545f451c52435450455e431e "Email")
 
 Topik [Insight](/tag/insight/) [Resume](/tag/resume/) [Twitter Space](/tag/twitter-space/)
 

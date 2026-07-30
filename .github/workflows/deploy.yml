@@ -110,7 +110,7 @@ jobs:
               app:
                 image: ghcr.io/naufaldi/personal-web-v5:prod
                 labels:
-                  - "caddy=faldi.xyz"
+                  - "caddy=naufaldi.com"
                   - "caddy.reverse_proxy={{upstreams 3000}}"
                   - "com.centurylinklabs.watchtower.enable=true"
                 environment:

@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2023-07-05
 image: "https://images.unsplash.com/photo-1688374705239-c17dd6b68435?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDR8fHx8fHwyfHwxNjg4NTIyNjU2fA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/getting-started-with-zustand/"
+canonical: "https://blog.naufaldi.com/getting-started-with-zustand/"
 ---
 
 
@@ -233,7 +233,7 @@ In this updated code, we import the `setTodos` action from the `useToDoStore` an
 
 ## Live Code Demo
 
-Bagikan[](https://twitter.com/share?text=Getting Started with Zustand, State Management for Hooks User&url=http://blog.faldi.xyz/getting-started-with-zustand/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/getting-started-with-zustand/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/getting-started-with-zustand//&title=Getting Started with Zustand, State Management for Hooks User "LinkedIn")[](/cdn-cgi/l/email-protection#6e511d1b0c040b0d1a53290b1a1a0700094e3d1a0f1c1a0b0a4e19071a064e341b1d1a0f000a424e3d1a0f1a0b4e230f000f090b030b001a4e08011c4e260101051d4e3b1d0b1c480f031e550c010a1753061a1a1e5441410c02010940080f020a074016171441090b1a1a070009431d1a0f1c1a0b0a4319071a0643141b1d1a0f000a41 "Email")
+Bagikan[](https://twitter.com/share?text=Getting Started with Zustand, State Management for Hooks User&url=https://blog.naufaldi.com/getting-started-with-zustand/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/getting-started-with-zustand/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/getting-started-with-zustand//&title=Getting Started with Zustand, State Management for Hooks User "LinkedIn")[](/cdn-cgi/l/email-protection#6e511d1b0c040b0d1a53290b1a1a0700094e3d1a0f1c1a0b0a4e19071a064e341b1d1a0f000a424e3d1a0f1a0b4e230f000f090b030b001a4e08011c4e260101051d4e3b1d0b1c480f031e550c010a1753061a1a1e5441410c02010940080f020a074016171441090b1a1a070009431d1a0f1c1a0b0a4319071a0643141b1d1a0f000a41 "Email")
 
 Topik [Getting Started](/tag/getting-started/) [Insight](/tag/insight/) [ReactJS](/tag/reactjs/) [NextJS](/tag/nextjs/)
 

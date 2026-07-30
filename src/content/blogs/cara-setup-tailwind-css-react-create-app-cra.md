@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2020-11-08
 image: "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ"
-canonical: "http://blog.faldi.xyz/cara-setup-tailwind-css-react-create-app-cra/"
+canonical: "https://blog.naufaldi.com/cara-setup-tailwind-css-react-create-app-cra/"
 ---
 
 
@@ -125,15 +125,15 @@ Ingat, bahwa yang kita import bukanlah file dari tailwind.css melainkan hasil co
 
 Kurang lebih setelah step step tersebut, kita bisa melihat direktori dari file CRA kita seperti ini :
 
-![Image](https://blog.faldi.xyz/content/images/2020/11/Screen-Shot-2020-11-08-at-23.03.19.png)
+![Image](https://blog.naufaldi.com/content/images/2020/11/Screen-Shot-2020-11-08-at-23.03.19.png)
 
 Direktori CRA + TailwindCSS
 
 **Catatan :**
 
-1.  Kita bisa membuat custom css dan meletakannya di tailwind.css dengan menggunakan `@apply`  yang dijelaskan pada dokumentasi Tailwind. Masalahnya,adalah saat kita membuat banyak sekali custom class, maka setiap kita membuat custom class baru pada tailwind.css , kita harus build ulang / compile ulang dengan melakukan npm run build:css agar apa yang kita tulis pada `tailwind.css` terupdate di `main.css` Ada beberapa alternative untuk melakukan compile otomatis. tentunya, akan memberatkan komputer kita. yaitu dengan menggunakan tutorial dari [Dave Ceddia](https://daveceddia.com/tailwind-create-react-app/?ref=blog.faldi.xyz) menggunakan packages `chokidar` atau menggunakan `watch` packages.
+1.  Kita bisa membuat custom css dan meletakannya di tailwind.css dengan menggunakan `@apply`  yang dijelaskan pada dokumentasi Tailwind. Masalahnya,adalah saat kita membuat banyak sekali custom class, maka setiap kita membuat custom class baru pada tailwind.css , kita harus build ulang / compile ulang dengan melakukan npm run build:css agar apa yang kita tulis pada `tailwind.css` terupdate di `main.css` Ada beberapa alternative untuk melakukan compile otomatis. tentunya, akan memberatkan komputer kita. yaitu dengan menggunakan tutorial dari [Dave Ceddia](https://daveceddia.com/tailwind-create-react-app/?ref=blog.naufaldi.com) menggunakan packages `chokidar` atau menggunakan `watch` packages.
 2.  Optimasi untuk proses build yang akan saya tulis pada tulisan selanjutnya dengan menggunakan PurgeCSS
-3.  Gunakan autoprefixer versi 9 apabila kamu menggunakan PostCSS versi 8. Hal ini karena ada bug / issues yang bisa teman-teman lihat [disini](https://github.com/postcss/postcss/wiki/PostCSS-8-for-end-users?ref=blog.faldi.xyz)  dan [disini](https://stackoverflow.com/questions/64057023/error-postcss-plugin-autoprefixer-requires-postcss-8-update-postcss-or-downgra?ref=blog.faldi.xyz)
+3.  Gunakan autoprefixer versi 9 apabila kamu menggunakan PostCSS versi 8. Hal ini karena ada bug / issues yang bisa teman-teman lihat [disini](https://github.com/postcss/postcss/wiki/PostCSS-8-for-end-users?ref=blog.naufaldi.com)  dan [disini](https://stackoverflow.com/questions/64057023/error-postcss-plugin-autoprefixer-requires-postcss-8-update-postcss-or-downgra?ref=blog.naufaldi.com)
 
 ### Kode di Github :
 
@@ -147,7 +147,7 @@ Create React App + Tailwind. Contribute to naufaldi/cra-tailwind development by 
 
 ![Image](https://avatars0.githubusercontent.com/u/13159420?s=400&v=4)
 
-](https://github.com/naufaldi/cra-tailwind?ref=blog.faldi.xyz)
+](https://github.com/naufaldi/cra-tailwind?ref=blog.naufaldi.com)
 
 Semoga membantu!
 
@@ -163,7 +163,7 @@ Dukung Naufaldi Rafif S di Karyakarsa!
 
 ![Image](https://karyakarsa.s3.ap-southeast-1.amazonaws.com/header-5e38f4d4bc716.jpg)
 
-](https://karyakarsa.com/naufaldisatriya?ref=blog.faldi.xyz)
+](https://karyakarsa.com/naufaldisatriya?ref=blog.naufaldi.com)
 
 ### Sumber Lain :
 
@@ -177,7 +177,7 @@ TL;DR Link to the React, Tailwind GitHub template https://github.com/Rohithgilla
 
 ![Image](https://res.cloudinary.com/practicaldev/image/fetch/s--GarkiKyH--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/luypje6wq63ddym8kgql.png)
 
-](https://dev.to/gillarohith/config-tailwind-css-in-react-js-project-in-tl-dr-way-1m6k?ref=blog.faldi.xyz)
+](https://dev.to/gillarohith/config-tailwind-css-in-react-js-project-in-tl-dr-way-1m6k?ref=blog.naufaldi.com)
 
 [
 
@@ -187,11 +187,11 @@ Using Tailwind CSS with Create React App
 
 ![Image](https://daveceddia.com/images/create-react-app-with-tailwind.png)
 
-](https://daveceddia.com/tailwind-create-react-app/?ref=blog.faldi.xyz#production)
+](https://daveceddia.com/tailwind-create-react-app/?ref=blog.naufaldi.com#production)
 
-> [How to configure create-react-app to use Tailwind CSS](https://blog.logrocket.com/create-react-app-and-tailwindcss/?ref=blog.faldi.xyz)
+> [How to configure create-react-app to use Tailwind CSS](https://blog.logrocket.com/create-react-app-and-tailwindcss/?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Cara Setup Tailwind CSS + React Create App \(CRA\)&url=http://blog.faldi.xyz/cara-setup-tailwind-css-react-create-app-cra/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/cara-setup-tailwind-css-react-create-app-cra/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/cara-setup-tailwind-css-react-create-app-cra//&title=Cara Setup Tailwind CSS + React Create App \(CRA\) "LinkedIn")[](/cdn-cgi/l/email-protection#300f4345525a5553440d73514251106355444540106451595c47595e5410736363101b106255515344107342555144551071404010187362711916515d400b525f54490d584444400a1f1f525c5f571e56515c54591e48494a1f535142511d43554445401d4451595c47595e541d5343431d42555153441d5342555144551d5140401d5342511f "Email")
+Bagikan[](https://twitter.com/share?text=Cara Setup Tailwind CSS + React Create App \(CRA\)&url=https://blog.naufaldi.com/cara-setup-tailwind-css-react-create-app-cra/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/cara-setup-tailwind-css-react-create-app-cra/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/cara-setup-tailwind-css-react-create-app-cra//&title=Cara Setup Tailwind CSS + React Create App \(CRA\) "LinkedIn")[](/cdn-cgi/l/email-protection#300f4345525a5553440d73514251106355444540106451595c47595e5410736363101b106255515344107342555144551071404010187362711916515d400b525f54490d584444400a1f1f525c5f571e56515c54591e48494a1f535142511d43554445401d4451595c47595e541d5343431d42555153441d5342555144551d5140401d5342511f "Email")
 
 Topik [ReactJS](/tag/reactjs/) [Tutorial](/tag/tutorial/) [TailwindCSS](/tag/tailwindcss/)
 

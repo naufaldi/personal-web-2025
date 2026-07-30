@@ -7,8 +7,8 @@ author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2025-06-13
-image: "http://blog.faldi.xyz/content/images/2025/06/Professional-Office-Meeting-Sora.png"
-canonical: "http://blog.faldi.xyz/relationship-with-engineer-manager/"
+image: "https://blog.naufaldi.com/content/images/2025/06/Professional-Office-Meeting-Sora.png"
+canonical: "https://blog.naufaldi.com/relationship-with-engineer-manager/"
 ---
 
 
@@ -146,7 +146,7 @@ If your current environment doesn’t support you, learn what you can, make your
 
 > “If your manager can’t help you grow, find a mentor in the community. Work hard. Make an impact. And if you don’t get promoted here, prepare to level up somewhere else.”
 
-Bagikan[](https://twitter.com/share?text=Building Strong Relationships with Your Engineering Manager \(From a Developer’s Perspective\)&url=http://blog.faldi.xyz/relationship-with-engineer-manager/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/relationship-with-engineer-manager/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/relationship-with-engineer-manager//&title=Building Strong Relationships with Your Engineering Manager \(From a Developer’s Perspective\) "LinkedIn")[](/cdn-cgi/l/email-protection#6b54181e09010e081f56291e02070f02050c4b381f1904050c4b390e070a1f0204051803021b184b1c021f034b32041e194b2e050c02050e0e1902050c4b260a050a0c0e194b432d1904064b0a4b2f0e1d0e07041b0e1989ebf2184b3b0e19181b0e081f021d0e424d0a061b5009040f1256031f1f1b5144440907040c450d0a070f024513121144190e070a1f0204051803021b461c021f03460e050c02050e0e1946060a050a0c0e1944 "Email")
+Bagikan[](https://twitter.com/share?text=Building Strong Relationships with Your Engineering Manager \(From a Developer’s Perspective\)&url=https://blog.naufaldi.com/relationship-with-engineer-manager/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/relationship-with-engineer-manager/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/relationship-with-engineer-manager//&title=Building Strong Relationships with Your Engineering Manager \(From a Developer’s Perspective\) "LinkedIn")[](/cdn-cgi/l/email-protection#6b54181e09010e081f56291e02070f02050c4b381f1904050c4b390e070a1f0204051803021b184b1c021f034b32041e194b2e050c02050e0e1902050c4b260a050a0c0e194b432d1904064b0a4b2f0e1d0e07041b0e1989ebf2184b3b0e19181b0e081f021d0e424d0a061b5009040f1256031f1f1b5144440907040c450d0a070f024513121144190e070a1f0204051803021b461c021f03460e050c02050e0e1946060a050a0c0e1944 "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/)
 

@@ -1,18 +1,18 @@
 ---
 title: "Pelajaran yang Saya Dapatkan Saat Memberikan Mentorship Frontend"
 slug: pelajaran-yang-saya-dapatkan-saat-memberikan-mentorship-frontend
-description: "![Image](https://blog.faldi.xyz/content/images/2020/10/Screen-Shot-2020-10-15-at-19.12.13.png)"
+description: "![Image](https://blog.naufaldi.com/content/images/2020/10/Screen-Shot-2020-10-15-at-19.12.13.png)"
 category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Thu Oct 15 2020 07:00:00 GMT+0700 (Western Indonesia Time)
-image: "http://blog.faldi.xyz/content/images/2020/10/Screen-Shot-2020-10-16-at-04.56.07.png"
-canonical: "http://blog.faldi.xyz/pelajaran-yang-saya-dapatkan-saat-melakukan-mentorship/"
+image: "https://blog.naufaldi.com/content/images/2020/10/Screen-Shot-2020-10-16-at-04.56.07.png"
+canonical: "https://blog.naufaldi.com/pelajaran-yang-saya-dapatkan-saat-melakukan-mentorship/"
 ---
 
 
-![Image](https://blog.faldi.xyz/content/images/2020/10/Screen-Shot-2020-10-15-at-19.12.13.png)
+![Image](https://blog.naufaldi.com/content/images/2020/10/Screen-Shot-2020-10-15-at-19.12.13.png)
 
 Web MOFON (Mentorship Frontend)
 
@@ -21,16 +21,16 @@ Awal September 2020 adalah salah satu keputusan mendadak yang pernah aku lakukan
 > Buat ah..  
 > Mentorship Frontend Dev.  
 > Goal :  
-> Bisa nyelesaikan challenge ini[https://t.co/pIL321Issq](https://t.co/pIL321Issq?ref=blog.faldi.xyz)  
+> Bisa nyelesaikan challenge ini[https://t.co/pIL321Issq](https://t.co/pIL321Issq?ref=blog.naufaldi.com)
 > ✓ Masukin Grup dgn max member 10orng  
 > ✓ Progress selama sebulan  
 > ✓ 3 kali VideoCall Grup  
 > ✓ 5 kali One-on-One Video  
 > ✓ Lifetime pendampingan  
 > Minat? DM ae.  
-> Invest kopi :50k [https://t.co/VC1KWIwU35](https://t.co/VC1KWIwU35?ref=blog.faldi.xyz)
+> Invest kopi :50k [https://t.co/VC1KWIwU35](https://t.co/VC1KWIwU35?ref=blog.naufaldi.com)
 > 
-> — FλL-D1 (@F2aldi) [September 10, 2020](https://twitter.com/F2aldi/status/1303990026737340416?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — FλL-D1 (@F2aldi) [September 10, 2020](https://twitter.com/F2aldi/status/1303990026737340416?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 Tweet pada 10 September
 
@@ -48,7 +48,7 @@ Lantas, apa saja yang bisa saya pelajari dalam 1 Bulan mentorship ini?
 
 Ya, sebelum adanya mentorship frontend ini, saya menggunakan Headseat yang memiliki suara mic dengan kualitas cukup buruk. Ini membuat saya sedikit frustasi karena saat direkam maupun saat webinar, suara yang dihasilkan menjadi lebih _cempreng._ Sejujurnya, suara saya aslinya _cempreng_ makanya saya semakin frustasi. Akhirnya saya putuskan untuk membeli Headseat baru, yaitu dBE GM200 setelah melihat review di
 
-Tentu saja, saya membelinya di Tokopedia. Tautan toko ada disini [YES PC](https://www.tokopedia.com/yespc/dbe-gm200-gm-200-7-1-virtual-surround-gaming-headphone-headset?ref=blog.faldi.xyz). Pembelian Headseat tersebut membuat saya senang, karena suara yang dihasilkan lebih baik daripada headseat saya sebelumnya.
+Tentu saja, saya membelinya di Tokopedia. Tautan toko ada disini [YES PC](https://www.tokopedia.com/yespc/dbe-gm200-gm-200-7-1-virtual-surround-gaming-headphone-headset?ref=blog.naufaldi.com). Pembelian Headseat tersebut membuat saya senang, karena suara yang dihasilkan lebih baik daripada headseat saya sebelumnya.
 
 ## **Pemilihan Platform Berpengaruh**
 
@@ -86,7 +86,7 @@ Akhir kata, masih banyak hal yang bisa saya tingkatkan dalam menjalankan program
 
 Terima Kasih
 
-Bagikan[](https://twitter.com/share?text=Pelajaran yang Saya Dapatkan Saat Memberikan Mentorship Frontend&url=http://blog.faldi.xyz/pelajaran-yang-saya-dapatkan-saat-melakukan-mentorship/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/pelajaran-yang-saya-dapatkan-saat-melakukan-mentorship/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/pelajaran-yang-saya-dapatkan-saat-melakukan-mentorship//&title=Pelajaran yang Saya Dapatkan Saat Memberikan Mentorship Frontend "LinkedIn")[](/cdn-cgi/l/email-protection#a39cd0d6c1c9c6c0d79ef3c6cfc2c9c2d1c2cd83dac2cdc483f0c2dac283e7c2d3c2d7c8c2cd83f0c2c2d783eec6cec1c6d1cac8c2cd83eec6cdd7ccd1d0cbcad383e5d1cccdd7c6cdc785c2ced398c1ccc7da9ecbd7d7d3998c8cc1cfccc48dc5c2cfc7ca8ddbdad98cd3c6cfc2c9c2d1c2cd8edac2cdc48ed0c2dac28ec7c2d3c2d7c8c2cd8ed0c2c2d78ecec6cfc2c8d6c8c2cd8ecec6cdd7ccd1d0cbcad38c "Email")
+Bagikan[](https://twitter.com/share?text=Pelajaran yang Saya Dapatkan Saat Memberikan Mentorship Frontend&url=https://blog.naufaldi.com/pelajaran-yang-saya-dapatkan-saat-melakukan-mentorship/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/pelajaran-yang-saya-dapatkan-saat-melakukan-mentorship/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/pelajaran-yang-saya-dapatkan-saat-melakukan-mentorship//&title=Pelajaran yang Saya Dapatkan Saat Memberikan Mentorship Frontend "LinkedIn")[](/cdn-cgi/l/email-protection#a39cd0d6c1c9c6c0d79ef3c6cfc2c9c2d1c2cd83dac2cdc483f0c2dac283e7c2d3c2d7c8c2cd83f0c2c2d783eec6cec1c6d1cac8c2cd83eec6cdd7ccd1d0cbcad383e5d1cccdd7c6cdc785c2ced398c1ccc7da9ecbd7d7d3998c8cc1cfccc48dc5c2cfc7ca8ddbdad98cd3c6cfc2c9c2d1c2cd8edac2cdc48ed0c2dac28ec7c2d3c2d7c8c2cd8ed0c2c2d78ecec6cfc2c8d6c8c2cd8ecec6cdd7ccd1d0cbcad38c "Email")
 
 Topik [Lesson Learned](/tag/lesson-learned/)
 

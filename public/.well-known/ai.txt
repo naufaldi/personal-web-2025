@@ -4,7 +4,7 @@
 # Site: Faldi (Naufaldi Rafif Satriya)
 
 Site-Name: Faldi
-Site-URL: https://faldi.xyz
+Site-URL: https://naufaldi.com
 Site-Type: Personal portfolio and technical writing website
 Primary-Language: en-US
 Content-Scope: Public website content only
@@ -31,10 +31,10 @@ Privacy-Scope: Local browser-only features such as blog view counters are not pu
 
 # Public Policy References
 
-Robots-Policy: https://faldi.xyz/robots.txt
-Sitemap: https://faldi.xyz/sitemap.xml
-LLM-Index: https://faldi.xyz/llms.txt
-LLM-Full-Context: https://faldi.xyz/llms-full.txt
+Robots-Policy: https://naufaldi.com/robots.txt
+Sitemap: https://naufaldi.com/sitemap.xml
+LLM-Index: https://naufaldi.com/llms.txt
+LLM-Full-Context: https://naufaldi.com/llms-full.txt
 Source-Repository: https://github.com/naufaldi/personal-web-v5.git
 
 # AI Preferences
@@ -49,5 +49,5 @@ Description: Personal portfolio of Naufaldi Rafif Satriya — software engineer,
 
 # Metadata
 
-Last-Updated: 2026-06-23
+Last-Updated: 2026-07-30
 Maintainer: Naufaldi Rafif Satriya

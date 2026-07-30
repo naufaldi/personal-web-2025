@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Personal portfolio website of Naufaldi Rafif Satriya — Product Engineer & Mentor",
   "type": "module",
-  "homepage": "https://faldi.xyz",
+  "homepage": "https://naufaldi.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/naufaldi/personal-web-v5.git"
@@ -11,7 +11,7 @@
   "author": {
     "name": "Naufaldi Rafif Satriya",
     "email": "naufaldi.rafif@gmail.com",
-    "url": "https://faldi.xyz"
+    "url": "https://naufaldi.com"
   },
   "license": "MIT",
   "keywords": [

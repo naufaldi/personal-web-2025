@@ -8,13 +8,13 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2023-06-21
 image: "https://images.unsplash.com/photo-1687186735445-df877226fae9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDV8fHx8fHwyfHwxNjg3MzIzNjU5fA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/memilih-state-management/"
+canonical: "https://blog.naufaldi.com/memilih-state-management/"
 ---
 
 
 > code; buat para react developer nih, kalian lebih sering gunain redux daripada react context kah?
 > 
-> — CODINGFESS (@codingfess) [August 1, 2022](https://twitter.com/codingfess/status/1553922071314731008?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — CODINGFESS (@codingfess) [August 1, 2022](https://twitter.com/codingfess/status/1553922071314731008?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 As a frontend engineer, you're constantly faced with the challenge of managing application state effectively. The state of your application includes various data elements that are crucial for its proper functioning. In this blog post, we will explore the concept of state, dive into the realm of state management, and provide you with a comprehensive list of recommended state management solutions. Finally, we will discuss essential factors to consider when choosing the right state management approach for your frontend projects.
 
@@ -79,7 +79,7 @@ But as one of Redux Maintenancer, we recommendation to use Redux Toolkit for sim
 
 > Please note that you are writing a lot of boilerplate here that is not necessary when writing modern Redux. Modern Redux does not have the split between action/reducer etc files, it does not use switch..case reducers, action types are auto-generated, as well as action creators.
 > 
-> — Lenz Weber-Tronic (@phry) [September 3, 2021](https://twitter.com/phry/status/1433698359215280149?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — Lenz Weber-Tronic (@phry) [September 3, 2021](https://twitter.com/phry/status/1433698359215280149?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 **Example**
 
@@ -272,11 +272,11 @@ An overview of the best state management libraries and how to choose the right s
 
 ![Image](https://daveceddia.com/images/react-state-management.png)
 
-](https://daveceddia.com/react-state-management/?ref=blog.faldi.xyz)
+](https://daveceddia.com/react-state-management/?ref=blog.naufaldi.com)
 
-> [A guide to choosing the right React state management solution](http://blog.logrocket.com/guide-choosing-right-react-state-management-solution/?ref=blog.faldi.xyz)
+> [A guide to choosing the right React state management solution](http://blog.logrocket.com/guide-choosing-right-react-state-management-solution/?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=State Management in ReactJS&url=http://blog.faldi.xyz/memilih-state-management/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/memilih-state-management/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/memilih-state-management//&title=State Management in ReactJS "LinkedIn")[](/cdn-cgi/l/email-protection#c4fbb7b1a6aea1a7b0f997b0a5b0a1e489a5aaa5a3a1a9a1aab0e4adaae496a1a5a7b08e97e2a5a9b4ffa6aba0bdf9acb0b0b4feebeba6a8aba3eaa2a5a8a0adeabcbdbeeba9a1a9ada8adace9b7b0a5b0a1e9a9a5aaa5a3a1a9a1aab0eb "Email")
+Bagikan[](https://twitter.com/share?text=State Management in ReactJS&url=https://blog.naufaldi.com/memilih-state-management/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/memilih-state-management/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/memilih-state-management//&title=State Management in ReactJS "LinkedIn")[](/cdn-cgi/l/email-protection#c4fbb7b1a6aea1a7b0f997b0a5b0a1e489a5aaa5a3a1a9a1aab0e4adaae496a1a5a7b08e97e2a5a9b4ffa6aba0bdf9acb0b0b4feebeba6a8aba3eaa2a5a8a0adeabcbdbeeba9a1a9ada8adace9b7b0a5b0a1e9a9a5aaa5a3a1a9a1aab0eb "Email")
 
 Topik [Getting Started](/tag/getting-started/) [Insight](/tag/insight/) [ReactJS](/tag/reactjs/)
 

@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2023-06-26
 image: "https://images.unsplash.com/photo-1687295051794-03a70e3f8a14?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDN8fHx8fHwyfHwxNjg3Nzk1Mzk4fA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/menambahkan-open-graph-pada-web-app-nextjs/"
+canonical: "https://blog.naufaldi.com/menambahkan-open-graph-pada-web-app-nextjs/"
 ---
 
 
@@ -16,7 +16,7 @@ canonical: "http://blog.faldi.xyz/menambahkan-open-graph-pada-web-app-nextjs/"
 
 The Open Graph Protocol is a technology created by Facebook that allows web pages to become rich objects in social media. For example, when we share a page on Twitter or Facebook, there will be a preview
 
-![Image](https://blog.faldi.xyz/content/images/2023/06/image.png)
+![Image](https://blog.naufaldi.com/content/images/2023/06/image.png)
 
 Open graph is about meta tag, more improvement in SEO, and shareable in social media. Its often requirement from tim SEO for better crawl from google.
 
@@ -25,7 +25,7 @@ Open graph is about meta tag, more improvement in SEO, and shareable in social m
 Based on Open Graph Website, there are minimum for adding
 
 *   `og:title` - The title of your object as it should appear within the graph, e.g., "The Rock".
-*   `og:type` - The [type](https://ogp.me/?ref=blog.faldi.xyz#types) of your object, e.g., "video.movie". Depending on the type you specify, other properties may also be required.
+*   `og:type` - The [type](https://ogp.me/?ref=blog.naufaldi.com#types) of your object, e.g., "video.movie". Depending on the type you specify, other properties may also be required.
 *   `og:image` - An image URL which should represent your object within the graph.
 *   `og:url` - The canonical URL of your object that will be used as its permanent ID in the graph, e.g., "https://www.imdb.com/title/tt0117500/".
 
@@ -55,7 +55,7 @@ API Reference for the Open Graph Image and Twitter Image file conventions.
 
 ![Image](https://nextjs.org/api/og?title=Metadata%20Files:%20opengraph-image%20and%20twitter-image)
 
-](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image?ref=blog.faldi.xyz)
+](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image?ref=blog.naufaldi.com)
 
 # Open Graph for Social Media
 
@@ -135,7 +135,7 @@ Tidak ada dua markup situs web yang dibuat setara. Begitu pula, sulit bagi platf
 
 ![Image](https://cms-assets.tutsplus.com/uploads/users/30/posts/27927/preview_image/share.jpg)
 
-](https://webdesign.tutsplus.com/id/tutorials/open-graph-take-control-of-how-social-media-shares-your-web-pages--cms-27927?ref=blog.faldi.xyz)
+](https://webdesign.tutsplus.com/id/tutorials/open-graph-take-control-of-how-social-media-shares-your-web-pages--cms-27927?ref=blog.naufaldi.com)
 
 [
 
@@ -145,7 +145,7 @@ Webmasters - Sharing - Documentation - Meta for Developers
 
 ![Image](https://facebook.com/security/hsts-pixel.gif?c=3.2.5)
 
-](https://developers.facebook.com/docs/sharing/webmasters/?ref=blog.faldi.xyz)
+](https://developers.facebook.com/docs/sharing/webmasters/?ref=blog.naufaldi.com)
 
 [
 
@@ -155,9 +155,9 @@ Getting started with Cards
 
 ![Image](https://cdn.cms-twdigitalassets.com/content/dam/developer-twitter/redesign-2021-images/og-social-card/devwebsite_card_tn.jpg.twimg.768.jpg)
 
-](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started?ref=blog.faldi.xyz)
+](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=How to add Open Graph to NextJS&url=http://blog.faldi.xyz/menambahkan-open-graph-pada-web-app-nextjs/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/menambahkan-open-graph-pada-web-app-nextjs/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/menambahkan-open-graph-pada-web-app-nextjs//&title=How to add Open Graph to NextJS "LinkedIn")[](/cdn-cgi/l/email-protection#330c404651595650470e7b5c4413475c13525757137c43565d13744152435b13475c137d564b47796015525e4308515c574a0e5b474743091c1c515f5c541d55525f575a1d4b4a491c5e565d525e51525b58525d1e5c43565d1e544152435b1e435257521e4456511e5243431e5d564b4759401c "Email")
+Bagikan[](https://twitter.com/share?text=How to add Open Graph to NextJS&url=https://blog.naufaldi.com/menambahkan-open-graph-pada-web-app-nextjs/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/menambahkan-open-graph-pada-web-app-nextjs/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/menambahkan-open-graph-pada-web-app-nextjs//&title=How to add Open Graph to NextJS "LinkedIn")[](/cdn-cgi/l/email-protection#330c404651595650470e7b5c4413475c13525757137c43565d13744152435b13475c137d564b47796015525e4308515c574a0e5b474743091c1c515f5c541d55525f575a1d4b4a491c5e565d525e51525b58525d1e5c43565d1e544152435b1e435257521e4456511e5243431e5d564b4759401c "Email")
 
 Topik [Getting Started](/tag/getting-started/) [ReactJS](/tag/reactjs/) [NextJS](/tag/nextjs/) [Insight](/tag/insight/)
 

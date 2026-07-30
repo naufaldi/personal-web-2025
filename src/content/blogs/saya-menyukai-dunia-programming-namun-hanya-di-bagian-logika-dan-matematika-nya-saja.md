@@ -8,13 +8,13 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2020-11-10
 image: "https://images.unsplash.com/photo-1604778368096-1ef9ada56c0a?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ"
-canonical: "http://blog.faldi.xyz/dunia-programming-tidak-hanya-berkutat-seputar-logika-dan-matematika/"
+canonical: "https://blog.naufaldi.com/dunia-programming-tidak-hanya-berkutat-seputar-logika-dan-matematika/"
 ---
 
 
 Kemarin lusa, saya mendapatkan permintaan jawaban menarik di Quora Indonesia.
 
-![Image](https://blog.faldi.xyz/content/images/2020/11/Screen-Shot-2020-11-01-at-13.31.40.png)
+![Image](https://blog.naufaldi.com/content/images/2020/11/Screen-Shot-2020-11-01-at-13.31.40.png)
 
 Q: Saya menyukai dunia programming namun hanya di bagian logika dan matematika nya saja. Apakah masuk jurusan Ilmu Komputer/Teknik Informatika pas buat saya? **Saya tidak ingin membuang waktu hanya untuk belajar HTML, CSS, dsb.)**
 
@@ -60,7 +60,7 @@ Jadi, kalau kamu mau masuk Ilmu komputer / Teknik informatika? Perbaiki cara ber
 
 Kalau sudah, maka siapa pun bisa menjadi pemrogram. Bahkan seorang yang tidak menyukai matematika dan logika. Bahkan orang orang dari jurusan sosial atau jurusan bahasa.
 
-Bagikan[](https://twitter.com/share?text=Dunia Programming Tidak Hanya Berkutat seputar Logika dan Matematika&url=http://blog.faldi.xyz/dunia-programming-tidak-hanya-berkutat-seputar-logika-dan-matematika/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/dunia-programming-tidak-hanya-berkutat-seputar-logika-dan-matematika/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/dunia-programming-tidak-hanya-berkutat-seputar-logika-dan-matematika//&title=Dunia Programming Tidak Hanya Berkutat seputar Logika dan Matematika "LinkedIn")[](/cdn-cgi/l/email-protection#043b7771666e6167703940716a6d652454766b63766569696d6a6324506d60656f244c656a7d65244661766f71706570247761747170657624486b636d6f652460656a24496570616965706d6f65226569743f666b607d396c7070743e2b2b66686b632a626568606d2a7c7d7e2b60716a6d652974766b63766569696d6a6329706d60656f296c656a7d65296661766f71706570297761747170657629686b636d6f652960656a29696570616965706d6f652b "Email")
+Bagikan[](https://twitter.com/share?text=Dunia Programming Tidak Hanya Berkutat seputar Logika dan Matematika&url=https://blog.naufaldi.com/dunia-programming-tidak-hanya-berkutat-seputar-logika-dan-matematika/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/dunia-programming-tidak-hanya-berkutat-seputar-logika-dan-matematika/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/dunia-programming-tidak-hanya-berkutat-seputar-logika-dan-matematika//&title=Dunia Programming Tidak Hanya Berkutat seputar Logika dan Matematika "LinkedIn")[](/cdn-cgi/l/email-protection#043b7771666e6167703940716a6d652454766b63766569696d6a6324506d60656f244c656a7d65244661766f71706570247761747170657624486b636d6f652460656a24496570616965706d6f65226569743f666b607d396c7070743e2b2b66686b632a626568606d2a7c7d7e2b60716a6d652974766b63766569696d6a6329706d60656f296c656a7d65296661766f71706570297761747170657629686b636d6f652960656a29696570616965706d6f652b "Email")
 
 Topik [Opini](/tag/opini/)
 

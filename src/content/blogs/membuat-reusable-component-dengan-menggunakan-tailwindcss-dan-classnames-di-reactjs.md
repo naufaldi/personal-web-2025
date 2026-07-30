@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2020-12-03
 image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MXwxMTc3M3wwfDF8c2VhcmNofDI5fHx8ZW58MHx8fA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/membuat-reusable-component-dengan-menggunakan-tailwind-dan-classnames/"
+canonical: "https://blog.naufaldi.com/membuat-reusable-component-dengan-menggunakan-tailwind-dan-classnames/"
 ---
 
 
@@ -18,7 +18,7 @@ Sering kali, ketika kita mengerjakan sebuah website maka kita akan mendapati ban
 
 ## Permasalahan
 
-Beberapa hari belakangan ini, aku sendiri merasakan sering membuat komponen komponen yang sama ditambah lagi, kira-kira ada tidak sih cara membaut reusable komponen dengan menggunakan [TailwindCSS](https://tailwindcss.com/?ref=blog.faldi.xyz)? Apalagi [TailwindCSS](https://tailwindcss.com/?ref=blog.faldi.xyz) memiliki nama-nama class yang cukup memudahkan dalam membuat _reusable component_ seperti _component button_ berikut
+Beberapa hari belakangan ini, aku sendiri merasakan sering membuat komponen komponen yang sama ditambah lagi, kira-kira ada tidak sih cara membaut reusable komponen dengan menggunakan [TailwindCSS](https://tailwindcss.com/?ref=blog.naufaldi.com)? Apalagi [TailwindCSS](https://tailwindcss.com/?ref=blog.naufaldi.com) memiliki nama-nama class yang cukup memudahkan dalam membuat _reusable component_ seperti _component button_ berikut
 
 ```html
  <button className='relative bg-blue-500 text-white p-6 rounded text-2xl font-bold overflow-visible'>
@@ -38,7 +38,7 @@ Sehingga kita bisa mengatur `button` kita bisa _reusable_ dan warna _background_
 
 ## Solusi
 
-Menggunakan `[classnames npm module](https://www.npmjs.com/package/classnames?ref=blog.faldi.xyz)` untuk bisa merubah / mengatur supaya pengaturan `class component` bisa disesuaikan.
+Menggunakan `[classnames npm module](https://www.npmjs.com/package/classnames?ref=blog.naufaldi.com)` untuk bisa merubah / mengatur supaya pengaturan `class component` bisa disesuaikan.
 
 **Semula seperti ini**
 
@@ -58,7 +58,7 @@ Menggunakan `[classnames npm module](https://www.npmjs.com/package/classnames?re
 
 **Lantas, bagaimana caranya?**
 
-Pertama, Install terlebih dahulu `[classname](https://www.npmjs.com/package/classnames?ref=blog.faldi.xyz)`
+Pertama, Install terlebih dahulu `[classname](https://www.npmjs.com/package/classnames?ref=blog.naufaldi.com)`
 
 ```
 npm install classnames --save
@@ -134,7 +134,7 @@ Selesai.
 
 ## Kesimpulan
 
-Kurang lebih seperti itu cara saya membuat reusable component di [ReactJS](reactjs.org/)/[NextJS](nextjs.org/) dengan [TailwindCSS](https://tailwindcss.com/?ref=blog.faldi.xyz) dan bantuan [classnames](https://www.npmjs.com/package/classnames?ref=blog.faldi.xyz). Kalau teman-teman ada cara lain, bisa sharing atau berbagi di Twitter / hubungi saya via Twitter.
+Kurang lebih seperti itu cara saya membuat reusable component di [ReactJS](reactjs.org/)/[NextJS](nextjs.org/) dengan [TailwindCSS](https://tailwindcss.com/?ref=blog.naufaldi.com) dan bantuan [classnames](https://www.npmjs.com/package/classnames?ref=blog.naufaldi.com). Kalau teman-teman ada cara lain, bisa sharing atau berbagi di Twitter / hubungi saya via Twitter.
 
 ### Dukung saya di Karyakarsa :
 
@@ -148,7 +148,7 @@ Dukung Naufaldi Rafif S di Karyakarsa!
 
 ![Image](https://karyakarsa.s3.ap-southeast-1.amazonaws.com/header-5e38f4d4bc716.jpg)
 
-](https://karyakarsa.com/naufaldisatriya/tip?ref=blog.faldi.xyz)
+](https://karyakarsa.com/naufaldisatriya/tip?ref=blog.naufaldi.com)
 
 ## Sumber Belajar Lain :
 
@@ -162,9 +162,9 @@ Tailwind is a popular utility-first CSS framework that provides low-level class 
 
 ![Image](https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/679ef6ca-6993-4573-a557-28341ae5cc7d/reusable-react-components-tailwind.png)
 
-](https://www.smashingmagazine.com/2020/05/reusable-react-components-tailwind/?ref=blog.faldi.xyz)
+](https://www.smashingmagazine.com/2020/05/reusable-react-components-tailwind/?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Membuat Reusable Component dengan Menggunakan TailwindCSS dan Classnames di ReactJS&url=http://blog.faldi.xyz/membuat-reusable-component-dengan-menggunakan-tailwind-dan-classnames/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/membuat-reusable-component-dengan-menggunakan-tailwind-dan-classnames/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/membuat-reusable-component-dengan-menggunakan-tailwind-dan-classnames//&title=Membuat Reusable Component dengan Menggunakan TailwindCSS dan Classnames di ReactJS "LinkedIn")[](/cdn-cgi/l/email-protection#d1eea2a4b3bbb4b2a5ec9cb4bcb3a4b0a5f183b4a4a2b0b3bdb4f192bebca1bebfb4bfa5f1b5b4bfb6b0bff19cb4bfb6b6a4bfb0bab0bff185b0b8bda6b8bfb5928282f1b5b0bff192bdb0a2a2bfb0bcb4a2f1b5b8f183b4b0b2a59b82f7b0bca1eab3beb5a8ecb9a5a5a1ebfefeb3bdbeb6ffb7b0bdb5b8ffa9a8abfebcb4bcb3a4b0a5fca3b4a4a2b0b3bdb4fcb2bebca1bebfb4bfa5fcb5b4bfb6b0bffcbcb4bfb6b6a4bfb0bab0bffca5b0b8bda6b8bfb5fcb5b0bffcb2bdb0a2a2bfb0bcb4a2fe "Email")
+Bagikan[](https://twitter.com/share?text=Membuat Reusable Component dengan Menggunakan TailwindCSS dan Classnames di ReactJS&url=https://blog.naufaldi.com/membuat-reusable-component-dengan-menggunakan-tailwind-dan-classnames/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/membuat-reusable-component-dengan-menggunakan-tailwind-dan-classnames/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/membuat-reusable-component-dengan-menggunakan-tailwind-dan-classnames//&title=Membuat Reusable Component dengan Menggunakan TailwindCSS dan Classnames di ReactJS "LinkedIn")[](/cdn-cgi/l/email-protection#d1eea2a4b3bbb4b2a5ec9cb4bcb3a4b0a5f183b4a4a2b0b3bdb4f192bebca1bebfb4bfa5f1b5b4bfb6b0bff19cb4bfb6b6a4bfb0bab0bff185b0b8bda6b8bfb5928282f1b5b0bff192bdb0a2a2bfb0bcb4a2f1b5b8f183b4b0b2a59b82f7b0bca1eab3beb5a8ecb9a5a5a1ebfefeb3bdbeb6ffb7b0bdb5b8ffa9a8abfebcb4bcb3a4b0a5fca3b4a4a2b0b3bdb4fcb2bebca1bebfb4bfa5fcb5b4bfb6b0bffcbcb4bfb6b6a4bfb0bab0bffca5b0b8bda6b8bfb5fcb5b0bffcb2bdb0a2a2bfb0bcb4a2fe "Email")
 
 Topik [NextJS](/tag/nextjs/) [ReactJS](/tag/reactjs/) [TailwindCSS](/tag/tailwindcss/) [Tutorial](/tag/tutorial/)
 

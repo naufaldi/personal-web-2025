@@ -1,6 +1,6 @@
 import { siteConfig } from '@/data/site'
 
-export const SITE_URL = 'https://faldi.xyz'
+export const SITE_URL = 'https://naufaldi.com'
 export const SITE_NAME = 'Faldi'
 export const SITE_FULL_NAME = 'Naufaldi Rafif Satriya'
 export const SITE_TAGLINE = siteConfig.tagline

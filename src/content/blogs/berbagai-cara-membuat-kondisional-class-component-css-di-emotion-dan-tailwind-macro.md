@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2021-04-03
 image: "https://images.unsplash.com/photo-1608142172765-6949c94646ca?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxtYWNib29rfGVufDB8fHx8MTYxNzQ1MDA3MQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/membuat-props-class-component-di-emotion-dan-tailwind-macro/"
+canonical: "https://blog.naufaldi.com/membuat-props-class-component-di-emotion-dan-tailwind-macro/"
 ---
 
 
@@ -24,7 +24,7 @@ Kalau kita menggunakan Tailwind biasa, kita bisa menggunakan `tenary` pada class
  </div>
 ```
 
-atau menggunakan `dependencies` seperti `[classnames](https://www.npmjs.com/package/classnames?ref=blog.faldi.xyz)` yang membantu dalam _logic_ class.
+atau menggunakan `dependencies` seperti `[classnames](https://www.npmjs.com/package/classnames?ref=blog.naufaldi.com)` yang membantu dalam _logic_ class.
 
 Lantas, bagaimana dengan Twin's?
 
@@ -108,9 +108,9 @@ ben-rogerson/twin.macro
 
 ![Image](https://repository-images.githubusercontent.com/241534790/69c92980-3222-11eb-992f-a0802be3963d)
 
-](https://github.com/ben-rogerson/twin.macro?ref=blog.faldi.xyz)
+](https://github.com/ben-rogerson/twin.macro?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Berbagai Cara Membuat Kondisional Class Component / CSS di Emotion dan Tailwind Macro&url=http://blog.faldi.xyz/membuat-props-class-component-di-emotion-dan-tailwind-macro/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/membuat-props-class-component-di-emotion-dan-tailwind-macro/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/membuat-props-class-component-di-emotion-dan-tailwind-macro//&title=Berbagai Cara Membuat Kondisional Class Component / CSS di Emotion dan Tailwind Macro "LinkedIn")[](/cdn-cgi/l/email-protection#19266a6c7b737c7a6d245b7c6b7b787e7870395a786b7839547c747b6c786d395276777d706a7076777875395a75786a6a395a76746976777c776d3936395a4a4a397d70395c74766d707677397d7877394d7870756e70777d3954787a6b763f787469227b767d6024716d6d692336367b75767e377f78757d703761606336747c747b6c786d34696b76696a347a75786a6a347a76746976777c776d347d70347c74766d707677347d7877346d7870756e70777d3474787a6b7636 "Email")
+Bagikan[](https://twitter.com/share?text=Berbagai Cara Membuat Kondisional Class Component / CSS di Emotion dan Tailwind Macro&url=https://blog.naufaldi.com/membuat-props-class-component-di-emotion-dan-tailwind-macro/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/membuat-props-class-component-di-emotion-dan-tailwind-macro/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/membuat-props-class-component-di-emotion-dan-tailwind-macro//&title=Berbagai Cara Membuat Kondisional Class Component / CSS di Emotion dan Tailwind Macro "LinkedIn")[](/cdn-cgi/l/email-protection#19266a6c7b737c7a6d245b7c6b7b787e7870395a786b7839547c747b6c786d395276777d706a7076777875395a75786a6a395a76746976777c776d3936395a4a4a397d70395c74766d707677397d7877394d7870756e70777d3954787a6b763f787469227b767d6024716d6d692336367b75767e377f78757d703761606336747c747b6c786d34696b76696a347a75786a6a347a76746976777c776d347d70347c74766d707677347d7877346d7870756e70777d3474787a6b7636 "Email")
 
 Topik [CSS](/tag/css/) [Insight](/tag/insight/) [TailwindCSS](/tag/tailwindcss/) [Tutorial](/tag/tutorial/)
 

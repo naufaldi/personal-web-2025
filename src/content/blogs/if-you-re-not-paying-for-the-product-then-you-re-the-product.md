@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2020-09-30
 image: "https://images.unsplash.com/photo-1537731121640-bc1c4aba9b80?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ"
-canonical: "http://blog.faldi.xyz/if-youre-not-paying-for-the-product-then-youre-the-product/"
+canonical: "https://blog.naufaldi.com/if-youre-not-paying-for-the-product-then-youre-the-product/"
 ---
 
 
@@ -59,7 +59,7 @@ Mengejutkan bagi sebagian orang memang, kalau Facebook bisa "_tracking_" berdasa
 
 Hal ini dibuktikan dengan salah satu video para peneliti yang membuat penelitian mengenai sebuah iklan, dan mereka mendapatkan hasil berbeda antara iklan A dan B. Kurang lebih iklan berbeda bisa diberikan kepada orang yang berbeda dengan "preferensi" ras mereka.
 
-![Image](https://blog.faldi.xyz/content/images/2020/09/Screen-Shot-2020-09-30-at-22.48.01.png)
+![Image](https://blog.naufaldi.com/content/images/2020/09/Screen-Shot-2020-09-30-at-22.48.01.png)
 
 Salah satu cuplikan video dari Vox
 
@@ -85,7 +85,7 @@ Ad Library
 
 ](https://www.facebook.com/ads/library)
 
-Bagikan[](https://twitter.com/share?text=If you’re not paying for the product, then you’re the product&url=http://blog.faldi.xyz/if-youre-not-paying-for-the-product-then-youre-the-product/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/if-youre-not-paying-for-the-product-then-youre-the-product/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/if-youre-not-paying-for-the-product-then-youre-the-product//&title=If you’re not paying for the product, then you’re the product "LinkedIn")[](/cdn-cgi/l/email-protection#b788c4c2d5ddd2d4c38afed197ced8c255372ec5d297d9d8c397c7d6ceded9d097d1d8c597c3dfd297c7c5d8d3c2d4c39b97c3dfd2d997ced8c255372ec5d297c3dfd297c7c5d8d3c2d4c391d6dac78cd5d8d3ce8adfc3c3c78d9898d5dbd8d099d1d6dbd3de99cfcecd98ded19aced8c2c5d29ad9d8c39ac7d6ceded9d09ad1d8c59ac3dfd29ac7c5d8d3c2d4c39ac3dfd2d99aced8c2c5d29ac3dfd29ac7c5d8d3c2d4c398 "Email")
+Bagikan[](https://twitter.com/share?text=If you’re not paying for the product, then you’re the product&url=https://blog.naufaldi.com/if-youre-not-paying-for-the-product-then-youre-the-product/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/if-youre-not-paying-for-the-product-then-youre-the-product/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/if-youre-not-paying-for-the-product-then-youre-the-product//&title=If you’re not paying for the product, then you’re the product "LinkedIn")[](/cdn-cgi/l/email-protection#b788c4c2d5ddd2d4c38afed197ced8c255372ec5d297d9d8c397c7d6ceded9d097d1d8c597c3dfd297c7c5d8d3c2d4c39b97c3dfd2d997ced8c255372ec5d297c3dfd297c7c5d8d3c2d4c391d6dac78cd5d8d3ce8adfc3c3c78d9898d5dbd8d099d1d6dbd3de99cfcecd98ded19aced8c2c5d29ad9d8c39ac7d6ceded9d09ad1d8c59ac3dfd29ac7c5d8d3c2d4c39ac3dfd2d99aced8c2c5d29ac3dfd29ac7c5d8d3c2d4c398 "Email")
 
 Topik [Opini](/tag/opini/)
 

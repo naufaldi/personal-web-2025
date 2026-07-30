@@ -33,7 +33,7 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# LLM context: https://faldi.xyz/llms.txt
-# AI policy: https://faldi.xyz/.well-known/ai.txt
+# LLM context: https://naufaldi.com/llms.txt
+# AI policy: https://naufaldi.com/.well-known/ai.txt
 
-Sitemap: https://faldi.xyz/sitemap.xml
+Sitemap: https://naufaldi.com/sitemap.xml

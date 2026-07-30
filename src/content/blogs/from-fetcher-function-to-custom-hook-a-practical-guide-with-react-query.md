@@ -1,18 +1,18 @@
 ---
 title: "From Fetcher Function to Custom Hook: A Practical Guide with React Query"
 slug: from-fetcher-function-to-custom-hook-a-practical-guide-with-react-query
-description: "![Image](https://blog.faldi.xyz/content/images/2025/05/image-2.png)"
+description: "![Image](https://blog.naufaldi.com/content/images/2025/05/image-2.png)"
 category: "Technical writer"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2025-05-13
-image: "http://blog.faldi.xyz/content/images/2025/05/Data-Flow-Illustration-Sora.png"
-canonical: "http://blog.faldi.xyz/from-fetcher-function-to-custom-hook-a-practical-guide-with-react-quer/"
+image: "https://blog.naufaldi.com/content/images/2025/05/Data-Flow-Illustration-Sora.png"
+canonical: "https://blog.naufaldi.com/from-fetcher-function-to-custom-hook-a-practical-guide-with-react-quer/"
 ---
 
 
-![Image](https://blog.faldi.xyz/content/images/2025/05/image-2.png)
+![Image](https://blog.naufaldi.com/content/images/2025/05/image-2.png)
 
 ## **1\. Introduction**
 
@@ -424,7 +424,7 @@ Conditional flag to tell React Query when it should run this query. Useful for t
 
 Custom logic to only refetch if we already have data. Prevents unnecessary requests on tab switch.
 
-For further options and in-depth details on query configurations, we recommend reading the [TanStack Query Documentation](https://tanstack.com/query?ref=blog.faldi.xyz) to fully understand how to use React Query’s options for your specific needs.
+For further options and in-depth details on query configurations, we recommend reading the [TanStack Query Documentation](https://tanstack.com/query?ref=blog.naufaldi.com) to fully understand how to use React Query’s options for your specific needs.
 
 * * *
 
@@ -614,7 +614,7 @@ By separating those layers, you get:
 
 Whether you’re scaling a team or just want fewer bugs in your frontend, this is a pattern worth adopting.
 
-Bagikan[](https://twitter.com/share?text=From Fetcher Function to Custom Hook: A Practical Guide with React Query&url=http://blog.faldi.xyz/from-fetcher-function-to-custom-hook-a-practical-guide-with-react-quer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/from-fetcher-function-to-custom-hook-a-practical-guide-with-react-quer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/from-fetcher-function-to-custom-hook-a-practical-guide-with-react-quer//&title=From Fetcher Function to Custom Hook: A Practical Guide with React Query "LinkedIn")[](/cdn-cgi/l/email-protection#211e5254434b4442551c67534e4c01674455424944530167544f4255484e4f01554e01625452554e4c01694e4e4a1b01600171534042554842404d016654484544015648554901734440425501705444535807404c511a434e45581c495555511b0e0e434d4e460f47404d45480f59585b0e47534e4c0c474455424944530c47544f4255484e4f0c554e0c425452554e4c0c494e4e4a0c400c51534042554842404d0c46544845440c564855490c53444042550c505444530e "Email")
+Bagikan[](https://twitter.com/share?text=From Fetcher Function to Custom Hook: A Practical Guide with React Query&url=https://blog.naufaldi.com/from-fetcher-function-to-custom-hook-a-practical-guide-with-react-quer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/from-fetcher-function-to-custom-hook-a-practical-guide-with-react-quer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/from-fetcher-function-to-custom-hook-a-practical-guide-with-react-quer//&title=From Fetcher Function to Custom Hook: A Practical Guide with React Query "LinkedIn")[](/cdn-cgi/l/email-protection#211e5254434b4442551c67534e4c01674455424944530167544f4255484e4f01554e01625452554e4c01694e4e4a1b01600171534042554842404d016654484544015648554901734440425501705444535807404c511a434e45581c495555511b0e0e434d4e460f47404d45480f59585b0e47534e4c0c474455424944530c47544f4255484e4f0c554e0c425452554e4c0c494e4e4a0c400c51534042554842404d0c46544845440c564855490c53444042550c505444530e "Email")
 
 Topik [Documentation](/tag/documentation/) [NextJS](/tag/nextjs/) [ReactJS](/tag/reactjs/) [Snippet](/tag/snippet/)
 

@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Tue Apr 18 2023 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1681671408340-118a341a6297?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8YWxsfDR8fHx8fHwyfHwxNjgxNzk3Njc0&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/exploring-the-latest-trends-in-front-end-design/"
+canonical: "https://blog.naufaldi.com/exploring-the-latest-trends-in-front-end-design/"
 ---
 
 
@@ -30,7 +30,7 @@ Framer Studio is a powerful tool for creating interactive prototypes. Learn how 
 
 ![Image](https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/736482/0820R_Microinteractions_Lina_Social-482526bd5a5a68fb6d8c096b298e97ad.png)
 
-](https://www.toptal.com/designers/framer-js/microinteractions-in-framer-studio?ref=blog.faldi.xyz)
+](https://www.toptal.com/designers/framer-js/microinteractions-in-framer-studio?ref=blog.naufaldi.com)
 
 ### Dark Mode
 
@@ -38,7 +38,7 @@ Dark mode is another trend that is becoming more prevalent in front-end design. 
 
 Example :
 
-> [A Complete Guide to Dark Mode on the Web](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/?ref=blog.faldi.xyz)
+> [A Complete Guide to Dark Mode on the Web](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/?ref=blog.naufaldi.com)
 
 ### Minimalistic and Clean Design
 
@@ -56,7 +56,7 @@ Discover 79,000+ Minimalist designs on Dribbble. Your resource to discover and c
 
 ![Image](https://cdn.dribbble.com/userupload/5222792/file/original-204bc5a842161e7e974d1764ab540973.png?compress=1&resize=400x300&vertical=top)
 
-](https://dribbble.com/tags/minimalist?ref=blog.faldi.xyz)
+](https://dribbble.com/tags/minimalist?ref=blog.naufaldi.com)
 
 ### Animations
 
@@ -74,7 +74,7 @@ An open source, production-ready motion library for React on the web.
 
 ![Image](https://www.framer.com/images/social/api.png)
 
-](https://www.framer.com/motion/?ref=blog.faldi.xyz)
+](https://www.framer.com/motion/?ref=blog.naufaldi.com)
 
 ### 3D Elements and Virtual Reality
 
@@ -92,7 +92,7 @@ Example :
 
 ![Image](https://cdn.dribbble.com/userupload/5862976/file/original-982262f1388ccba1c3a08e792a78979c.png?resize=1600x1200)
 
-](https://dribbble.com/shots/21059700-3D-Modeling-for-UX-UI-Design?ref=blog.faldi.xyz)
+](https://dribbble.com/shots/21059700-3D-Modeling-for-UX-UI-Design?ref=blog.naufaldi.com)
 
 ### Bold Typography and Larger Text
 
@@ -110,7 +110,7 @@ Figma Community file - UI Design Exploration using editorial style. I hope you a
 
 ![Image](https://s3-alpha.figma.com/hub/file/1081845947/bba0d90c-cb70-4b9a-87d3-0edb2ba5e0e8-cover.png)
 
-](https://www.figma.com/community/file/1012705930955746513?fuid=644515545118759607&ref=blog.faldi.xyz)
+](https://www.figma.com/community/file/1012705930955746513?fuid=644515545118759607&ref=blog.naufaldi.com)
 
 ### Motion Design
 
@@ -122,9 +122,9 @@ In conclusion, front-end design is an ever-evolving field, and staying up-to-dat
 
 ## Reference
 
-> [latest trends in front end development | Front End Trends](https://devdevshow.com/latest-trends-in-front-end-development/?ref=blog.faldi.xyz)
+> [latest trends in front end development | Front End Trends](https://devdevshow.com/latest-trends-in-front-end-development/?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Exploring the Latest Trends in Front-End Design&url=http://blog.faldi.xyz/exploring-the-latest-trends-in-front-end-design/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/exploring-the-latest-trends-in-front-end-design/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/exploring-the-latest-trends-in-front-end-design//&title=Exploring the Latest Trends in Front-End Design "LinkedIn")[](/cdn-cgi/l/email-protection#a798d4d2c5cdc2c4d39ae2dfd7cbc8d5cec9c087d3cfc287ebc6d3c2d4d387f3d5c2c9c3d487cec987e1d5c8c9d38ae2c9c387e3c2d4cec0c981c6cad79cc5c8c3de9acfd3d3d79d8888c5cbc8c089c1c6cbc3ce89dfdedd88c2dfd7cbc8d5cec9c08ad3cfc28acbc6d3c2d4d38ad3d5c2c9c3d48acec98ac1d5c8c9d38ac2c9c38ac3c2d4cec0c988 "Email")
+Bagikan[](https://twitter.com/share?text=Exploring the Latest Trends in Front-End Design&url=https://blog.naufaldi.com/exploring-the-latest-trends-in-front-end-design/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/exploring-the-latest-trends-in-front-end-design/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/exploring-the-latest-trends-in-front-end-design//&title=Exploring the Latest Trends in Front-End Design "LinkedIn")[](/cdn-cgi/l/email-protection#a798d4d2c5cdc2c4d39ae2dfd7cbc8d5cec9c087d3cfc287ebc6d3c2d4d387f3d5c2c9c3d487cec987e1d5c8c9d38ae2c9c387e3c2d4cec0c981c6cad79cc5c8c3de9acfd3d3d79d8888c5cbc8c089c1c6cbc3ce89dfdedd88c2dfd7cbc8d5cec9c08ad3cfc28acbc6d3c2d4d38ad3d5c2c9c3d48acec98ac1d5c8c9d38ac2c9c38ac3c2d4cec0c988 "Email")
 
 Topik [Insight](/tag/insight/) [Opini](/tag/opini/)
 

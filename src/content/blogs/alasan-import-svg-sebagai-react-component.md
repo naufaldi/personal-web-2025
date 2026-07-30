@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2020-11-09
 image: "https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ"
-canonical: "http://blog.faldi.xyz/alasan-import-svg-sebagai-react-component/"
+canonical: "https://blog.naufaldi.com/alasan-import-svg-sebagai-react-component/"
 ---
 
 
@@ -105,7 +105,7 @@ Ya, sesimple itu. `IconSearch` adalah nama dari komponen SVG kita. Sedangkan `Re
 
 Dengan kita menggunakan cara ini, kita bisa mengubah SVG sesuai yang kita mau. Mau merubah warna atau fill SVG? Mau merubah size? Mau merubah warna saat hover element atau pseudoclass lain? Bisa.
 
-Oh ya, konteksnya ini bila teman-teman menggunakan `Create React App`. Kalau teman-teman tidak menggunakan CRA. Bisa jadi menggunakan / setup Webpack sendiri atau NextJS maka teman-teman bisa menggunakan `babel-plugin-inline-react-svg`  dari Airbnb. Cek di [Github](https://github.com/airbnb/babel-plugin-inline-react-svg?ref=blog.faldi.xyz) untuk dokumentasinya.
+Oh ya, konteksnya ini bila teman-teman menggunakan `Create React App`. Kalau teman-teman tidak menggunakan CRA. Bisa jadi menggunakan / setup Webpack sendiri atau NextJS maka teman-teman bisa menggunakan `babel-plugin-inline-react-svg`  dari Airbnb. Cek di [Github](https://github.com/airbnb/babel-plugin-inline-react-svg?ref=blog.naufaldi.com) untuk dokumentasinya.
 
 Besok, saya tuliskan bagaimana cara menggunakannya. Stay tune ya!
 
@@ -121,9 +121,9 @@ Dukung Naufaldi Rafif S di Karyakarsa!
 
 ![Image](https://karyakarsa.s3.ap-southeast-1.amazonaws.com/header-5e38f4d4bc716.jpg)
 
-](https://karyakarsa.com/naufaldisatriya/tip?ref=blog.faldi.xyz)
+](https://karyakarsa.com/naufaldisatriya/tip?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Alasan Import SVG sebagai React Component&url=http://blog.faldi.xyz/alasan-import-svg-sebagai-react-component/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/alasan-import-svg-sebagai-react-component/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/alasan-import-svg-sebagai-react-component//&title=Alasan Import SVG sebagai React Component "LinkedIn")[](/cdn-cgi/l/email-protection#f1ce8284939b949285ccb09d9082909fd1b89c819e8385d1a2a7b6d182949390969098d1a394909285d1b29e9c819e9f949f85d7909c81ca939e9588cc99858581cbdede939d9e96df97909d9598df89888bde909d9082909fdc989c819e8385dc828796dc82949390969098dc8394909285dc929e9c819e9f949f85de "Email")
+Bagikan[](https://twitter.com/share?text=Alasan Import SVG sebagai React Component&url=https://blog.naufaldi.com/alasan-import-svg-sebagai-react-component/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/alasan-import-svg-sebagai-react-component/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/alasan-import-svg-sebagai-react-component//&title=Alasan Import SVG sebagai React Component "LinkedIn")[](/cdn-cgi/l/email-protection#f1ce8284939b949285ccb09d9082909fd1b89c819e8385d1a2a7b6d182949390969098d1a394909285d1b29e9c819e9f949f85d7909c81ca939e9588cc99858581cbdede939d9e96df97909d9598df89888bde909d9082909fdc989c819e8385dc828796dc82949390969098dc8394909285dc929e9c819e9f949f85de "Email")
 
 Topik [ReactJS](/tag/reactjs/) [Tutorial](/tag/tutorial/)
 

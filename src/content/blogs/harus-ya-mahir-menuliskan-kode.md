@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2020-09-30
 image: "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ"
-canonical: "http://blog.faldi.xyz/harus-mahir-menuliskan-kode/"
+canonical: "https://blog.naufaldi.com/harus-mahir-menuliskan-kode/"
 ---
 
 
@@ -36,11 +36,11 @@ Karena, bekerja dalam bidang teknologi tidak melulu berkaitan dengan kemahiran d
 
 Contohnya adalah
 
-![Image](https://blog.faldi.xyz/content/images/2020/09/Screen-Shot-2020-09-30-at-10.12.38.png)
+![Image](https://blog.naufaldi.com/content/images/2020/09/Screen-Shot-2020-09-30-at-10.12.38.png)
 
 Meminta bantuan untuk membuatkan program
 
-![Image](https://blog.faldi.xyz/content/images/2020/09/Screen-Shot-2020-09-30-at-10.13.20.png)
+![Image](https://blog.naufaldi.com/content/images/2020/09/Screen-Shot-2020-09-30-at-10.13.20.png)
 
 Kurangnya kepekaan dalam membaca dokumentasi
 
@@ -71,9 +71,9 @@ Selain itu, Industri selalu meminta tanpa mau memupuk. Mereka hanya meminta tale
 
 Ya, berbicara soal pekerjaan ini sangat kompleks karena pekerjaan ini memang masih seumur jagung namun pertumbuhannya sangat tinggi sehingga _gap_\-nya sangat besar antara pendidikan, industri dan talent.
 
-_[Tulisan ulang dari Quora Indonesia](https://qr.ae/pNPB3L?ref=blog.faldi.xyz)_
+_[Tulisan ulang dari Quora Indonesia](https://qr.ae/pNPB3L?ref=blog.naufaldi.com)_
 
-Bagikan[](https://twitter.com/share?text=Harus ya, mahir menuliskan kode?&url=http://blog.faldi.xyz/harus-mahir-menuliskan-kode/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/harus-mahir-menuliskan-kode/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/harus-mahir-menuliskan-kode//&title=Harus ya, mahir menuliskan kode? "LinkedIn")[](/cdn-cgi/l/email-protection#6e511d1b0c040b0d1a53260f1c1b1d4e170f424e030f06071c4e030b001b02071d050f004e05010a0b51480f031e550c010a1753061a1a1e5441410c02010940080f020a074016171441060f1c1b1d43030f06071c43030b001b02071d050f004305010a0b41 "Email")
+Bagikan[](https://twitter.com/share?text=Harus ya, mahir menuliskan kode?&url=https://blog.naufaldi.com/harus-mahir-menuliskan-kode/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/harus-mahir-menuliskan-kode/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/harus-mahir-menuliskan-kode//&title=Harus ya, mahir menuliskan kode? "LinkedIn")[](/cdn-cgi/l/email-protection#6e511d1b0c040b0d1a53260f1c1b1d4e170f424e030f06071c4e030b001b02071d050f004e05010a0b51480f031e550c010a1753061a1a1e5441410c02010940080f020a074016171441060f1c1b1d43030f06071c43030b001b02071d050f004305010a0b41 "Email")
 
 Topik [Opini](/tag/opini/)
 

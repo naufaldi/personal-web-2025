@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2024-01-04
 image: "https://images.unsplash.com/photo-1703875497895-0de198243647?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDh8fHx8fHwyfHwxNzA0MzM0NTU1fA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/technical-guide-setup-nextjs-with-leaflet/"
+canonical: "https://blog.naufaldi.com/technical-guide-setup-nextjs-with-leaflet/"
 ---
 
 
@@ -22,7 +22,7 @@ npx create-next-app nextjs-leaflet
 yarn create next-app nextjs-leaflet
 ```
 
-or use template like [starter nextjs tailwindcss](https://github.com/naufaldi/nextjs-leaflet?ref=blog.faldi.xyz)
+or use template like [starter nextjs tailwindcss](https://github.com/naufaldi/nextjs-leaflet?ref=blog.naufaldi.com)
 
 ```
 npx degit sozonome/nextarter-tailwind nextjs-leaflet
@@ -52,7 +52,7 @@ yarn add -D @types/leaflet
 
 Take a Note, my components look like this:
 
-![Image](https://blog.faldi.xyz/content/images/2024/01/image.png)
+![Image](https://blog.naufaldi.com/content/images/2024/01/image.png)
 
 **First**, we create Map Components in `src/lib/components`
 
@@ -185,7 +185,7 @@ export default Home;
 
 If everything is correct, it should display something like this:
 
-![Image](https://blog.faldi.xyz/content/images/2024/01/image-1.png)
+![Image](https://blog.naufaldi.com/content/images/2024/01/image-1.png)
 
 ## Full Code:
 
@@ -199,9 +199,9 @@ Setup NextJS with leaflet. Contribute to naufaldi/nextjs-leaflet development by 
 
 ![Image](https://opengraph.githubassets.com/cecda923488aa4db32699a054986deed9a23cf5b1d203bbd2319a4e1cee857ad/naufaldi/nextjs-leaflet)
 
-](https://github.com/naufaldi/nextjs-leaflet/blob/main/src/lib/pages/home/index.tsx?ref=blog.faldi.xyz)
+](https://github.com/naufaldi/nextjs-leaflet/blob/main/src/lib/pages/home/index.tsx?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Technical Guide : Setup NextJS with Leaflet&url=http://blog.faldi.xyz/technical-guide-setup-nextjs-with-leaflet/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/technical-guide-setup-nextjs-with-leaflet/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/technical-guide-setup-nextjs-with-leaflet//&title=Technical Guide : Setup NextJS with Leaflet "LinkedIn")[](/cdn-cgi/l/email-protection#e4db9791868e818790d9b081878c8a8d878588c4a3918d8081c4dec4b781909194c4aa819c90aeb7c4938d908cc4a8818582888190c2858994df868b809dd98c909094decbcb86888b83ca828588808dca9c9d9ecb9081878c8a8d878588c983918d8081c99781909194c98a819c908e97c9938d908cc988818582888190cb "Email")
+Bagikan[](https://twitter.com/share?text=Technical Guide : Setup NextJS with Leaflet&url=https://blog.naufaldi.com/technical-guide-setup-nextjs-with-leaflet/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/technical-guide-setup-nextjs-with-leaflet/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/technical-guide-setup-nextjs-with-leaflet//&title=Technical Guide : Setup NextJS with Leaflet "LinkedIn")[](/cdn-cgi/l/email-protection#e4db9791868e818790d9b081878c8a8d878588c4a3918d8081c4dec4b781909194c4aa819c90aeb7c4938d908cc4a8818582888190c2858994df868b809dd98c909094decbcb86888b83ca828588808dca9c9d9ecb9081878c8a8d878588c983918d8081c99781909194c98a819c908e97c9938d908cc988818582888190cb "Email")
 
 Topik [Getting Started](/tag/getting-started/) [NextJS](/tag/nextjs/) [Tutorial](/tag/tutorial/)
 

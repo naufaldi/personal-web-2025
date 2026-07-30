@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Thu Feb 20 2025 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1739909198159-a834175bd911?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDJ8fHx8fHx8fDE3NDAwNDA2Njh8&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/open-journal-my-journey-after-getting-laid-off/"
+canonical: "https://blog.naufaldi.com/open-journal-my-journey-after-getting-laid-off/"
 ---
 
 
@@ -29,15 +29,15 @@ I know I need to push myself to the limit. My focus must shift to learning, espe
 Here’s my to-do list:
 
 *   Learn Japanese at Cetta
-*   Continue learning backend development by working on my booking project ([GitHub Repository](https://github.com/naufaldi?tab=repositories&ref=blog.faldi.xyz))
-*   Learn data structures and algorithms from the [Udemy course](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/?ref=blog.faldi.xyz)
+*   Continue learning backend development by working on my booking project ([GitHub Repository](https://github.com/naufaldi?tab=repositories&ref=blog.naufaldi.com))
+*   Learn data structures and algorithms from the [Udemy course](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/?ref=blog.naufaldi.com)
 *   Solve easy-level problems on Leetcode
 *   Work from a coffee shop to stay productive
 *   Schedule 1:1 sessions with senior professionals for insights and motivation
 
 I hope this routine helps me become more productive and focused during this challenging time.
 
-Bagikan[](https://twitter.com/share?text=Open Journal: My Journey After Getting Laid Off #1&url=http://blog.faldi.xyz/open-journal-my-journey-after-getting-laid-off/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/open-journal-my-journey-after-getting-laid-off/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/open-journal-my-journey-after-getting-laid-off//&title=Open Journal: My Journey After Getting Laid Off #1 "LinkedIn")[](/cdn-cgi/l/email-protection#e2dd91978088878196dfad92878cc2a88d97908c838ed8c2af9bc2a88d97908c879bc2a384968790c2a58796968b8c85c2ae838b86c2ad8484c2c1d3c4838f92d9808d869bdf8a969692d8cdcd808e8d85cc84838e868bcc9a9b98cd8d92878ccf888d97908c838ecf8f9bcf888d97908c879bcf8384968790cf858796968b8c85cf8e838b86cf8d8484cd "Email")
+Bagikan[](https://twitter.com/share?text=Open Journal: My Journey After Getting Laid Off #1&url=https://blog.naufaldi.com/open-journal-my-journey-after-getting-laid-off/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/open-journal-my-journey-after-getting-laid-off/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/open-journal-my-journey-after-getting-laid-off//&title=Open Journal: My Journey After Getting Laid Off #1 "LinkedIn")[](/cdn-cgi/l/email-protection#e2dd91978088878196dfad92878cc2a88d97908c838ed8c2af9bc2a88d97908c879bc2a384968790c2a58796968b8c85c2ae838b86c2ad8484c2c1d3c4838f92d9808d869bdf8a969692d8cdcd808e8d85cc84838e868bcc9a9b98cd8d92878ccf888d97908c838ecf8f9bcf888d97908c879bcf8384968790cf858796968b8c85cf8e838b86cf8d8484cd "Email")
 
 Topik [Unemployed Journal](/tag/unemployed-journal/)
 

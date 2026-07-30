@@ -3,7 +3,7 @@ import path from 'node:path'
 import fm from 'front-matter'
 import type { JsonLdPayload, SeoRoute } from '../src/lib/seo'
 
-const SITE_URL = 'https://faldi.xyz'
+const SITE_URL = 'https://naufaldi.com'
 const SITE_NAME = 'Naufaldi Rafif Satriya'
 const SITE_TITLE = 'Faldi - Software Engineer Portfolio'
 const SITE_DESCRIPTION =

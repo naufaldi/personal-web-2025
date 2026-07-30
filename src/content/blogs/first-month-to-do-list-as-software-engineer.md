@@ -8,15 +8,15 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Tue Jul 26 2022 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHRhc2t8ZW58MHx8fHwxNjU4ODE4MDMx&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/first-month-to-do-list-as-software-engineer/"
+canonical: "https://blog.naufaldi.com/first-month-to-do-list-as-software-engineer/"
 ---
 
 
 Menarik, kalau melihat problem yang dialami teman-teman di Codingfess, yaitu banyak yang merasakan saat transisi masuk perusahaan banyak sekali yang merasa menganggur. Padahal awal probation itu cukup krusial, apalagi ada kaitannya dengan nanti masa akhir penilaian saat probation.
 
-> code; hari pertama(bahkan sampe seminggu ada) kerja sebagai soft eng [pic.twitter.com/WJUQCvqmJo](https://t.co/WJUQCvqmJo?ref=blog.faldi.xyz)
+> code; hari pertama(bahkan sampe seminggu ada) kerja sebagai soft eng [pic.twitter.com/WJUQCvqmJo](https://t.co/WJUQCvqmJo?ref=blog.naufaldi.com)
 > 
-> — CODINGFESS (@codingfess) [July 19, 2022](https://twitter.com/codingfess/status/1549441337141137408?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — CODINGFESS (@codingfess) [July 19, 2022](https://twitter.com/codingfess/status/1549441337141137408?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 Mengingat saya juga baru saja menjalani masa probation, mungkin bisa sharing sedikit pengalaman saat masa probation di eFishery dibulan pertama.
 
@@ -100,7 +100,7 @@ Lebih baik, komunikasikan dengan Manager / Lead, untuk mendapatkan "kerjaan" ata
 
 **Overcommunication** is better than **misscommunication**.
 
-Bagikan[](https://twitter.com/share?text=First Month To Do List as Software Engineer&url=http://blog.faldi.xyz/first-month-to-do-list-as-software-engineer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/first-month-to-do-list-as-software-engineer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/first-month-to-do-list-as-software-engineer//&title=First Month To Do List as Software Engineer "LinkedIn")[](/cdn-cgi/l/email-protection#97a8e4e2f5fdf2f4e3aad1fee5e4e3b7daf8f9e3ffb7c3f8b7d3f8b7dbfee4e3b7f6e4b7c4f8f1e3e0f6e5f2b7d2f9f0fef9f2f2e5b1f6fae7acf5f8f3eeaaffe3e3e7adb8b8f5fbf8f0b9f1f6fbf3feb9efeeedb8f1fee5e4e3bafaf8f9e3ffbae3f8baf3f8bafbfee4e3baf6e4bae4f8f1e3e0f6e5f2baf2f9f0fef9f2f2e5b8 "Email")
+Bagikan[](https://twitter.com/share?text=First Month To Do List as Software Engineer&url=https://blog.naufaldi.com/first-month-to-do-list-as-software-engineer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/first-month-to-do-list-as-software-engineer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/first-month-to-do-list-as-software-engineer//&title=First Month To Do List as Software Engineer "LinkedIn")[](/cdn-cgi/l/email-protection#97a8e4e2f5fdf2f4e3aad1fee5e4e3b7daf8f9e3ffb7c3f8b7d3f8b7dbfee4e3b7f6e4b7c4f8f1e3e0f6e5f2b7d2f9f0fef9f2f2e5b1f6fae7acf5f8f3eeaaffe3e3e7adb8b8f5fbf8f0b9f1f6fbf3feb9efeeedb8f1fee5e4e3bafaf8f9e3ffbae3f8baf3f8bafbfee4e3baf6e4bae4f8f1e3e0f6e5f2baf2f9f0fef9f2f2e5b8 "Email")
 
 Topik [Getting Started](/tag/getting-started/) [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/)
 

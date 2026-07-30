@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2021-06-22
 image: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wxfDF8YWxsfDF8fHx8fHwyfHwxNjI0MzU1MTcy&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/membuat-gradient-underline/"
+canonical: "https://blog.naufaldi.com/membuat-gradient-underline/"
 ---
 
 
@@ -28,9 +28,9 @@ Jangan lupa memberikan property `content` dan `width` untuk lebar `background` s
 
 Kodenya bisa teman-teman dapatkan di tautan codepen diatas. Semoga membantu!
 
-> [Gradient Underlines](https://css-tricks.com/snippets/css/gradient-underlines/?ref=blog.faldi.xyz)
+> [Gradient Underlines](https://css-tricks.com/snippets/css/gradient-underlines/?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Snippet Membuat Gradient Underline&url=http://blog.faldi.xyz/membuat-gradient-underline/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/membuat-gradient-underline/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/membuat-gradient-underline//&title=Snippet Membuat Gradient Underline "LinkedIn")[](/cdn-cgi/l/email-protection#39064a4c5b535c5a4d046a575049495c4d19745c545b4c584d197e4b585d505c574d196c575d5c4b5550575c1f585449025b565d4004514d4d490316165b55565e175f58555d501741404316545c545b4c584d145e4b585d505c574d144c575d5c4b5550575c16 "Email")
+Bagikan[](https://twitter.com/share?text=Snippet Membuat Gradient Underline&url=https://blog.naufaldi.com/membuat-gradient-underline/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/membuat-gradient-underline/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/membuat-gradient-underline//&title=Snippet Membuat Gradient Underline "LinkedIn")[](/cdn-cgi/l/email-protection#39064a4c5b535c5a4d046a575049495c4d19745c545b4c584d197e4b585d505c574d196c575d5c4b5550575c1f585449025b565d4004514d4d490316165b55565e175f58555d501741404316545c545b4c584d145e4b585d505c574d144c575d5c4b5550575c16 "Email")
 
 Topik [CSS](/tag/css/) [Tutorial](/tag/tutorial/) [Snippet](/tag/snippet/)
 

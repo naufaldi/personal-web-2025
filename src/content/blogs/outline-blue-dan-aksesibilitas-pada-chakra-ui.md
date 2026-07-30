@@ -8,21 +8,21 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2021-06-07
 image: "https://images.unsplash.com/photo-1593642532744-d377ab507dc8?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wxfDF8YWxsfDF8fHx8fHwyfHwxNjIzMDQ4NDg1&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/outline-blue-dan-accesbility-pada-chakra-ui/"
+canonical: "https://blog.naufaldi.com/outline-blue-dan-accesbility-pada-chakra-ui/"
 ---
 
 
 Pernah tidak, teman-teman saat pergi berkunjung ke setiap website yang menggunakan Chakra UI terdapat sebuah kesamaan? Seperti ini misalnya
 
-![Image](https://blog.faldi.xyz/content/images/2021/06/image.png)
+![Image](https://blog.naufaldi.com/content/images/2021/06/image.png)
 
 Sumber : Web Ksana.in 
 
-![Image](https://blog.faldi.xyz/content/images/2021/06/image-1.png)
+![Image](https://blog.naufaldi.com/content/images/2021/06/image-1.png)
 
 Sumber : Web Future Bright 
 
-![Image](https://blog.faldi.xyz/content/images/2021/06/image-2.png)
+![Image](https://blog.naufaldi.com/content/images/2021/06/image-2.png)
 
 Sumber : NextJS Chakra Notion
 
@@ -30,13 +30,13 @@ Sudah mendapatkan kesamaannya? Benar, yaitu munculnya garis biru pada setiap ele
 
 Hal ini membuat saya bertanda tanya, kenapa Chakra UI memberikan `focus:box-shadow` yang ternyata adalah property `box-shadow` bukan `border` atau `outline` pada setiap element.
 
-Ternyata, setelah saya mencari cari, itu terkait dengan Accesibility yang mengacu kepada WAI-ARIA standards. WAI-ARIA merupakan [Web Accessibility Initiative's Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria/?ref=blog.faldi.xyz) atau bisa disebut secara singkat adalah ARIA merupakan Strategi, standar, informasi untuk membuat Web aksesibel bagi penyandang disabilitas.
+Ternyata, setelah saya mencari cari, itu terkait dengan Accesibility yang mengacu kepada WAI-ARIA standards. WAI-ARIA merupakan [Web Accessibility Initiative's Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria/?ref=blog.naufaldi.com) atau bisa disebut secara singkat adalah ARIA merupakan Strategi, standar, informasi untuk membuat Web aksesibel bagi penyandang disabilitas.
 
 Lantas, apa hubungannya penggunaan `box-shadow` pada tag element `a` di HTML? Berdasarkan Tips dari a11yproject disebutkan bahwa
 
 > Menghapus outlines di CSS dapat mempersulit / memunculkan masalah bagi para orang-orang yang menavigasikan web dengan menggunakan keyboard.
 
-Sumber : [https://www.a11yproject.com/posts/2013-01-25-never-remove-css-outlines/](https://www.a11yproject.com/posts/2013-01-25-never-remove-css-outlines/?ref=blog.faldi.xyz)  
+Sumber : [https://www.a11yproject.com/posts/2013-01-25-never-remove-css-outlines/](https://www.a11yproject.com/posts/2013-01-25-never-remove-css-outlines/?ref=blog.naufaldi.com)  
 
 Alasannya, dengan menghapuskan `box-shadow` atau mungkin `outline` di CSS menjadikan sebuah element link atau element tidak memiliki indikator focus kepada para pengguna  yang menggunakan keyboard untuk melakukan navigasi.
 
@@ -44,7 +44,7 @@ Masalah lainnya, bagi para pengguna mouse atau klien merasa bahwa `box-shadow` a
 
 ### Solusi
 
-Beruntungnya, pada salah satu pembahasan `outline` ini di [Issues Github Chakra UI](https://github.com/chakra-ui/chakra-ui/issues/3449?ref=blog.faldi.xyz) ada yang memberikan sebuah tautan mengenai cara memanipulasinya.
+Beruntungnya, pada salah satu pembahasan `outline` ini di [Issues Github Chakra UI](https://github.com/chakra-ui/chakra-ui/issues/3449?ref=blog.naufaldi.com) ada yang memberikan sebuah tautan mengenai cara memanipulasinya.
 
 Menggunakan Package focus-visible
 
@@ -58,7 +58,7 @@ Polyfill for :focus-visible pseudo-selector
 
 ![Image](https://static.npmjs.com/338e4905a2684ca96e08c7780fc68412.png)
 
-](https://www.npmjs.com/package/focus-visible?ref=blog.faldi.xyz)
+](https://www.npmjs.com/package/focus-visible?ref=blog.naufaldi.com)
 
 Salah satu packages yang bisa menghilangkan `focus` pada pengguna mouse namun bisa memunculkan `focus` pada pengguna keyboard.
 
@@ -147,7 +147,7 @@ Removing CSS outlines without proper fallbacks can make it impossible to navigat
 
 ![Image](https://a11yproject.com/img/social/og-image-home.png)
 
-](https://www.a11yproject.com/posts/2013-01-25-never-remove-css-outlines/?ref=blog.faldi.xyz)
+](https://www.a11yproject.com/posts/2013-01-25-never-remove-css-outlines/?ref=blog.naufaldi.com)
 
 [
 
@@ -159,7 +159,7 @@ tl;dr The Chakra-ui component library overrides the default accessibility outlin
 
 ![Image](https://miro.medium.com/max/1200/1*mmn9zryoWF3WKw7a345zMw.png)
 
-](https://medium.com/@keeganfamouss/accessibility-on-demand-with-chakra-ui-and-focus-visible-19413b1bc6f9?ref=blog.faldi.xyz)
+](https://medium.com/@keeganfamouss/accessibility-on-demand-with-chakra-ui-and-focus-visible-19413b1bc6f9?ref=blog.naufaldi.com)
 
 [
 
@@ -171,9 +171,9 @@ I&#39;m getting blue outline borders around all my clickable components, for exa
 
 ![Image](https://opengraph.githubassets.com/258ba5407b9b3449a6829f05d551cbbd1854b4cf2d50c327b2b8e50353bbc12a/chakra-ui/chakra-ui/issues/708)
 
-](https://github.com/chakra-ui/chakra-ui/issues/708?ref=blog.faldi.xyz)
+](https://github.com/chakra-ui/chakra-ui/issues/708?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Outline Blue dan Aksesibilitas pada Chakra UI&url=http://blog.faldi.xyz/outline-blue-dan-accesbility-pada-chakra-ui/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/outline-blue-dan-accesbility-pada-chakra-ui/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/outline-blue-dan-accesbility-pada-chakra-ui//&title=Outline Blue dan Aksesibilitas pada Chakra UI "LinkedIn")[](/cdn-cgi/l/email-protection#88b7fbfdeae2edebfcb5c7fdfce4e1e6eda8cae4fdeda8ece9e6a8c9e3fbedfbe1eae1e4e1fce9fba8f8e9ece9a8cbe0e9e3fae9a8ddc1aee9e5f8b3eae7ecf1b5e0fcfcf8b2a7a7eae4e7efa6eee9e4ece1a6f0f1f2a7e7fdfce4e1e6eda5eae4fdeda5ece9e6a5e9ebebedfbeae1e4e1fcf1a5f8e9ece9a5ebe0e9e3fae9a5fde1a7 "Email")
+Bagikan[](https://twitter.com/share?text=Outline Blue dan Aksesibilitas pada Chakra UI&url=https://blog.naufaldi.com/outline-blue-dan-accesbility-pada-chakra-ui/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/outline-blue-dan-accesbility-pada-chakra-ui/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/outline-blue-dan-accesbility-pada-chakra-ui//&title=Outline Blue dan Aksesibilitas pada Chakra UI "LinkedIn")[](/cdn-cgi/l/email-protection#88b7fbfdeae2edebfcb5c7fdfce4e1e6eda8cae4fdeda8ece9e6a8c9e3fbedfbe1eae1e4e1fce9fba8f8e9ece9a8cbe0e9e3fae9a8ddc1aee9e5f8b3eae7ecf1b5e0fcfcf8b2a7a7eae4e7efa6eee9e4ece1a6f0f1f2a7e7fdfce4e1e6eda5eae4fdeda5ece9e6a5e9ebebedfbeae1e4e1fcf1a5f8e9ece9a5ebe0e9e3fae9a5fde1a7 "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/) [NextJS](/tag/nextjs/) [ChakraUI](/tag/chakraui/) [Accesibility](/tag/accesibility/) [CSS](/tag/css/)
 

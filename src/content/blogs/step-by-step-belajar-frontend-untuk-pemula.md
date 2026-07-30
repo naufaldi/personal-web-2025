@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2022-09-03
 image: "https://images.unsplash.com/photo-1535957998253-26ae1ef29506?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fHdvcmt8ZW58MHx8fHwxNjYyMjEyMTc1&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/step-by-step-belajar-frontend-untuk-pemula/"
+canonical: "https://blog.naufaldi.com/step-by-step-belajar-frontend-untuk-pemula/"
 ---
 
 
@@ -28,13 +28,13 @@ Learn to become a modern frontend developer using this roadmap. Community driven
 
 ![Image](https://roadmap.sh/brand-square.png)
 
-](https://roadmap.sh/frontend?ref=blog.faldi.xyz)
+](https://roadmap.sh/frontend?ref=blog.naufaldi.com)
 
 Siapa saja sebenarnya bisa menggunakan guide yang saya buat ini. Karena dasarnya sama, fundamentalnya sama entah otodidak atau belajar dari kampus.
 
 Sayangnya, memang benar mungkin tidak semua sumber belajar yang saya bagikan ini bersifat gratis. Ada beberapa yang berbayar. Jadi mungkin bisa menabung / meminta kantor untuk membayarkan hehe. Subsidilah ya..
 
-Kalau masih mahasiswa malah bagus, bisa menggunakan [Github Education Pack](https://education.github.com/pack?ref=blog.faldi.xyz) yang memberikan beberapa course secara gratis seperti Educative dan Frontend Master
+Kalau masih mahasiswa malah bagus, bisa menggunakan [Github Education Pack](https://education.github.com/pack?ref=blog.naufaldi.com) yang memberikan beberapa course secara gratis seperti Educative dan Frontend Master
 
 # Pengenalan Web
 
@@ -59,7 +59,7 @@ Featuring Vint Cerf, the inventor of TCP/IP, David Karp the founder of Tumblr to
 
 ![Image](https://i.ytimg.com/vi/Dxcc6ycZ73M/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCS1Ig8oFRRaf-j00LmhVLTdXin0Q&days_since_epoch=19026)
 
-](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&ref=blog.faldi.xyz)
+](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&ref=blog.naufaldi.com)
 
 ## HTML
 
@@ -83,7 +83,7 @@ W3Schools offers free online tutorials, references and exercises in all the majo
 
 ![Image](https://www.w3schools.com/images/w3schools_logo_436_2.png)
 
-](https://www.w3schools.com/html/html_intro.asp?ref=blog.faldi.xyz)
+](https://www.w3schools.com/html/html_intro.asp?ref=blog.naufaldi.com)
 
 [
 
@@ -95,7 +95,7 @@ More than an introduction, in this course you’ll go from building your first w
 
 ![Image](https://static.frontendmasters.com/assets/courses/2018-06-12-web-development-v2/posterframe.jpg)
 
-](https://frontendmasters.com/courses/web-development-v2/?ref=blog.faldi.xyz)
+](https://frontendmasters.com/courses/web-development-v2/?ref=blog.naufaldi.com)
 
 [
 
@@ -107,7 +107,7 @@ At its heart, HTML is a language made up of elements, which can be applied to pi
 
 ![Image](https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png)
 
-](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML?ref=blog.faldi.xyz)
+](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML?ref=blog.naufaldi.com)
 
 [
 
@@ -119,7 +119,7 @@ Learn to Code — For Free
 
 ![Image](https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png)
 
-](https://www.freecodecamp.org/learn/responsive-web-design/?ref=blog.faldi.xyz#basic-html-and-html5)
+](https://www.freecodecamp.org/learn/responsive-web-design/?ref=blog.naufaldi.com#basic-html-and-html5)
 
 ## CSS
 
@@ -148,7 +148,7 @@ Learn to Code — For Free
 
 ![Image](https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png)
 
-](https://www.freecodecamp.org/learn/responsive-web-design/?ref=blog.faldi.xyz#basic-css)
+](https://www.freecodecamp.org/learn/responsive-web-design/?ref=blog.naufaldi.com#basic-css)
 
 [
 
@@ -160,7 +160,7 @@ Get to know CSS in the right way without the fluff. You’ll style text, build n
 
 ![Image](https://static.frontendmasters.com/assets/courses/2021-12-14-getting-started-css/posterframe.jpg)
 
-](https://frontendmasters.com/courses/getting-started-css/?ref=blog.faldi.xyz)
+](https://frontendmasters.com/courses/getting-started-css/?ref=blog.naufaldi.com)
 
 [
 
@@ -172,7 +172,7 @@ An evergreen CSS course and reference to level up your web styling expertise.
 
 ![Image](https://web-dev.imgix.net/image/foR0vJZKULb5AGJExlazy1xYDgI2/N5mplhgLlq9qzABgyYKQ.png?auto=format&fit=max&w=1200&fm=auto)
 
-](https://web.dev/learn/css/?ref=blog.faldi.xyz)
+](https://web.dev/learn/css/?ref=blog.naufaldi.com)
 
 ## CSS Layout
 
@@ -187,11 +187,11 @@ An evergreen CSS course and reference to level up your web styling expertise.
 *   Multicolumn
 *   CSS Writing Modes
 
-[https://frontendmasters.com/courses/css-grid-flexbox-v2](https://frontendmasters.com/courses/css-grid-flexbox-v2?ref=blog.faldi.xyz)
+[https://frontendmasters.com/courses/css-grid-flexbox-v2](https://frontendmasters.com/courses/css-grid-flexbox-v2?ref=blog.naufaldi.com)
 
-[https://css-tricks.com/snippets/css/a-guide-to-flexbox/](https://css-tricks.com/snippets/css/a-guide-to-flexbox/?ref=blog.faldi.xyz)
+[https://css-tricks.com/snippets/css/a-guide-to-flexbox/](https://css-tricks.com/snippets/css/a-guide-to-flexbox/?ref=blog.naufaldi.com)
 
-[https://css-tricks.com/snippets/css/complete-guide-grid/](https://css-tricks.com/snippets/css/complete-guide-grid/?ref=blog.faldi.xyz)  
+[https://css-tricks.com/snippets/css/complete-guide-grid/](https://css-tricks.com/snippets/css/complete-guide-grid/?ref=blog.naufaldi.com)
 
 ## CSS Animasi
 
@@ -219,7 +219,7 @@ The A11Y Project is a community-driven effort to make digital accessibility easi
 
 ![Image](https://a11yproject.com/img/social/og-image-home.png)
 
-](https://www.a11yproject.com/?ref=blog.faldi.xyz)
+](https://www.a11yproject.com/?ref=blog.naufaldi.com)
 
 [
 
@@ -231,7 +231,7 @@ The aria-label attribute defines a string value that labels an interactive eleme
 
 ![Image](https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png)
 
-](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label?ref=blog.faldi.xyz)
+](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label?ref=blog.naufaldi.com)
 
 [
 
@@ -243,7 +243,7 @@ In our final tutorial article, we’ll focus on (pun intended) accessibility, in
 
 ![Image](https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png)
 
-](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility?ref=blog.faldi.xyz)
+](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility?ref=blog.naufaldi.com)
 
 # Javascript Dasar
 
@@ -266,7 +266,7 @@ JavaScript is used everywhere. If you don’t already know how to program inJava
 
 ![Image](https://www.freecodecamp.org/news/content/images/2021/06/javascriptfull.png)
 
-](https://www.freecodecamp.org/news/full-javascript-course-for-beginners/?ref=blog.faldi.xyz)
+](https://www.freecodecamp.org/news/full-javascript-course-for-beginners/?ref=blog.naufaldi.com)
 
 ## Javascript Animasi
 
@@ -280,7 +280,7 @@ Javascript animation engine
 
 ![Image](https://animejs.com/documentation/assets/img/social-media-image.png)
 
-](https://animejs.com/?ref=blog.faldi.xyz)
+](https://animejs.com/?ref=blog.naufaldi.com)
 
 [
 
@@ -290,7 +290,7 @@ JavaScript animations
 
 ![Image](https://javascript.info/img/site_preview_en_1200x630.png)
 
-](https://javascript.info/js-animation?ref=blog.faldi.xyz)
+](https://javascript.info/js-animation?ref=blog.naufaldi.com)
 
 Struktur Data dan Algoritma
 
@@ -316,7 +316,7 @@ Typescript
 
 TBD
 
-Bagikan[](https://twitter.com/share?text=Step by Step Belajar Frontend untuk Pemula&url=http://blog.faldi.xyz/step-by-step-belajar-frontend-untuk-pemula/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/step-by-step-belajar-frontend-untuk-pemula/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/step-by-step-belajar-frontend-untuk-pemula//&title=Step by Step Belajar Frontend untuk Pemula "LinkedIn")[](/cdn-cgi/l/email-protection#ccf3bfb9aea6a9afb8f19fb8a9bcecaeb5ec9fb8a9bcec8ea9a0ada6adbeec8abea3a2b8a9a2a8ecb9a2b8b9a7ec9ca9a1b9a0adeaada1bcf7aea3a8b5f1a4b8b8bcf6e3e3aea0a3abe2aaada0a8a5e2b4b5b6e3bfb8a9bce1aeb5e1bfb8a9bce1aea9a0ada6adbee1aabea3a2b8a9a2a8e1b9a2b8b9a7e1bca9a1b9a0ade3 "Email")
+Bagikan[](https://twitter.com/share?text=Step by Step Belajar Frontend untuk Pemula&url=https://blog.naufaldi.com/step-by-step-belajar-frontend-untuk-pemula/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/step-by-step-belajar-frontend-untuk-pemula/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/step-by-step-belajar-frontend-untuk-pemula//&title=Step by Step Belajar Frontend untuk Pemula "LinkedIn")[](/cdn-cgi/l/email-protection#ccf3bfb9aea6a9afb8f19fb8a9bcecaeb5ec9fb8a9bcec8ea9a0ada6adbeec8abea3a2b8a9a2a8ecb9a2b8b9a7ec9ca9a1b9a0adeaada1bcf7aea3a8b5f1a4b8b8bcf6e3e3aea0a3abe2aaada0a8a5e2b4b5b6e3bfb8a9bce1aeb5e1bfb8a9bce1aea9a0ada6adbee1aabea3a2b8a9a2a8e1b9a2b8b9a7e1bca9a1b9a0ade3 "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/) [NextJS](/tag/nextjs/) [ReactJS](/tag/reactjs/) [Tutorial](/tag/tutorial/)
 

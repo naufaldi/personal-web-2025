@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2020-11-13
 image: "https://images.unsplash.com/photo-1593642531955-b62e17bdaa9c?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ"
-canonical: "http://blog.faldi.xyz/cara-bertanya-permasalahan-dalam-pemrogram-yang-baik/"
+canonical: "https://blog.naufaldi.com/cara-bertanya-permasalahan-dalam-pemrogram-yang-baik/"
 ---
 
 
@@ -57,7 +57,7 @@ Akhir kata, semoga dengan tulisan ini bisa memperbaiki cara kita untuk bertanya 
 
 Semoga membantu!
 
-Bagikan[](https://twitter.com/share?text=Cara Bertanya Permasalahan dalam Pemrogram yang Baik&url=http://blog.faldi.xyz/cara-bertanya-permasalahan-dalam-pemrogram-yang-baik/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/cara-bertanya-permasalahan-dalam-pemrogram-yang-baik/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/cara-bertanya-permasalahan-dalam-pemrogram-yang-baik//&title=Cara Bertanya Permasalahan dalam Pemrogram yang Baik "LinkedIn")[](/cdn-cgi/l/email-protection#86b9f5f3e4ece3e5f2bbc5e7f4e7a6c4e3f4f2e7e8ffe7a6d6e3f4ebe7f5e7eae7eee7e8a6e2e7eae7eba6d6e3ebf4e9e1f4e7eba6ffe7e8e1a6c4e7efeda0e7ebf6bde4e9e2ffbbeef2f2f6bca9a9e4eae9e1a8e0e7eae2efa8fefffca9e5e7f4e7abe4e3f4f2e7e8ffe7abf6e3f4ebe7f5e7eae7eee7e8abe2e7eae7ebabf6e3ebf4e9e1f4e7ebabffe7e8e1abe4e7efeda9 "Email")
+Bagikan[](https://twitter.com/share?text=Cara Bertanya Permasalahan dalam Pemrogram yang Baik&url=https://blog.naufaldi.com/cara-bertanya-permasalahan-dalam-pemrogram-yang-baik/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/cara-bertanya-permasalahan-dalam-pemrogram-yang-baik/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/cara-bertanya-permasalahan-dalam-pemrogram-yang-baik//&title=Cara Bertanya Permasalahan dalam Pemrogram yang Baik "LinkedIn")[](/cdn-cgi/l/email-protection#86b9f5f3e4ece3e5f2bbc5e7f4e7a6c4e3f4f2e7e8ffe7a6d6e3f4ebe7f5e7eae7eee7e8a6e2e7eae7eba6d6e3ebf4e9e1f4e7eba6ffe7e8e1a6c4e7efeda0e7ebf6bde4e9e2ffbbeef2f2f6bca9a9e4eae9e1a8e0e7eae2efa8fefffca9e5e7f4e7abe4e3f4f2e7e8ffe7abf6e3f4ebe7f5e7eae7eee7e8abe2e7eae7ebabf6e3ebf4e9e1f4e7ebabffe7e8e1abe4e7efeda9 "Email")
 
 Topik [Opini](/tag/opini/) [Tutorial](/tag/tutorial/)
 

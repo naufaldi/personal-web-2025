@@ -1,20 +1,20 @@
 ---
 title: "Open Journal : A Day of Reflection and Action"
 slug: open-journal-a-day-of-reflection-and-action
-description: "![Warung Bakmi Jwa Mas Yono](https://blog.faldi.xyz/content/images/2025/02/IMG_3608.jpeg)"
+description: "![Warung Bakmi Jwa Mas Yono](https://blog.naufaldi.com/content/images/2025/02/IMG_3608.jpeg)"
 category: "My journey"
 author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Fri Feb 21 2025 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1726137569914-ae2ad1c634f6?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wxfDF8YWxsfDF8fHx8fHx8fDE3NDAxMjE0ODR8&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/open-journal-a-day-of-reflection-and-action/"
+canonical: "https://blog.naufaldi.com/open-journal-a-day-of-reflection-and-action/"
 ---
 
 
 ### Recap Yesterday
 
-![Warung Bakmi Jwa Mas Yono](https://blog.faldi.xyz/content/images/2025/02/IMG_3608.jpeg)
+![Warung Bakmi Jwa Mas Yono](https://blog.naufaldi.com/content/images/2025/02/IMG_3608.jpeg)
 
 Warung Bakmi jawa Mas Yono
 
@@ -24,7 +24,7 @@ The highlight of the day came in the evening when I received a call for an inter
 
 ### Today Story
 
-![Image](https://blog.faldi.xyz/content/images/2025/02/IMG_3625.jpeg)
+![Image](https://blog.naufaldi.com/content/images/2025/02/IMG_3625.jpeg)
 
 Productiv with Coffe
 
@@ -47,7 +47,7 @@ Based on my plans for today, here’s what I will focus on:
 
 I’m considering whether I should work late into the night or sleep early and wake up refreshed. I’ll just see how it goes and adjust as needed.
 
-Bagikan[](https://twitter.com/share?text=Open Journal :  A Day of Reflection and Action&url=http://blog.faldi.xyz/open-journal-a-day-of-reflection-and-action/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/open-journal-a-day-of-reflection-and-action/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/open-journal-a-day-of-reflection-and-action//&title=Open Journal :  A Day of Reflection and Action "LinkedIn")[](/cdn-cgi/l/email-protection#94abe7e1f6fef1f7e0a9dbe4f1fab4defbe1e6faf5f8b4aeb4b4d5b4d0f5edb4fbf2b4c6f1f2f8f1f7e0fdfbfab4f5faf0b4d5f7e0fdfbfab2f5f9e4aff6fbf0eda9fce0e0e4aebbbbf6f8fbf3baf2f5f8f0fdbaecedeebbfbe4f1fab9fefbe1e6faf5f8b9f5b9f0f5edb9fbf2b9e6f1f2f8f1f7e0fdfbfab9f5faf0b9f5f7e0fdfbfabb "Email")
+Bagikan[](https://twitter.com/share?text=Open Journal :  A Day of Reflection and Action&url=https://blog.naufaldi.com/open-journal-a-day-of-reflection-and-action/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/open-journal-a-day-of-reflection-and-action/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/open-journal-a-day-of-reflection-and-action//&title=Open Journal :  A Day of Reflection and Action "LinkedIn")[](/cdn-cgi/l/email-protection#94abe7e1f6fef1f7e0a9dbe4f1fab4defbe1e6faf5f8b4aeb4b4d5b4d0f5edb4fbf2b4c6f1f2f8f1f7e0fdfbfab4f5faf0b4d5f7e0fdfbfab2f5f9e4aff6fbf0eda9fce0e0e4aebbbbf6f8fbf3baf2f5f8f0fdbaecedeebbfbe4f1fab9fefbe1e6faf5f8b9f5b9f0f5edb9fbf2b9e6f1f2f8f1f7e0fdfbfab9f5faf0b9f5f7e0fdfbfabb "Email")
 
 Topik [Unemployed Journal](/tag/unemployed-journal/)
 

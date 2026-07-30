@@ -29,13 +29,13 @@ Kata-kata tersebut saya kira banyak dialami oleh mayoritas pekerja teknologi ata
 
 Radikalnya, contoh ekstrimnya berakhir dengan para pekerja Teknologi dan kreatif menawarkan harga yang gila-gilaan murah! Berakhirlah dengan sebuah pertanyaan di Quora Indonesia.
 
-![Image](https://blog.faldi.xyz/content/images/2020/09/Screen-Shot-2020-09-27-at-21.33.21.png)
+![Image](https://blog.naufaldi.com/content/images/2020/09/Screen-Shot-2020-09-27-at-21.33.21.png)
 
 Salah satu pertanyaan di Quora Indonesia
 
 Jawaban simple dari saya adalah karena pasar belum teredukasi mengenai proses pembuatan desain logo, desain website dan pembuatan website. Tanpa mengetahui proses pembuatan, mereka tidak mengetahui penyebab harga logo yang mahal, prosesnya seperti apa. Tanpa adanya pengetahuan mengenai hal tersebut mereka akan mengira, prosesnya mudah seperti membalikkan telapak tangan.
 
-Padahal, kenyataannya ? Tentu tidak sesimple itu bukan? Proses pembuatan logo, kalau menurut [_Hubspot_](https://blog.hubspot.com/marketing/how-to-design-logo?ref=blog.faldi.xyz)_._ Prosesnya tidak hanya "menggambar" saja. Melainkan ada step by step. Kalau saya jabarkan secara pribadi mungkin seperti
+Padahal, kenyataannya ? Tentu tidak sesimple itu bukan? Proses pembuatan logo, kalau menurut [_Hubspot_](https://blog.hubspot.com/marketing/how-to-design-logo?ref=blog.naufaldi.com)_._ Prosesnya tidak hanya "menggambar" saja. Melainkan ada step by step. Kalau saya jabarkan secara pribadi mungkin seperti
 
 1.  Ceritakan apa yang ingin kita gambarkan pada logo kita
 2.  Tuliskan kedalam kata-kata
@@ -59,9 +59,9 @@ _"Gambar gitu doang kok mahal? Gratislah!"_
 
 _"Kok enggak kerja, dirumah melulu?"_
 
-Tulisan ulang dari **_[Jawaban di Quora Indonesia](https://qr.ae/pNPy7M?ref=blog.faldi.xyz)_**
+Tulisan ulang dari **_[Jawaban di Quora Indonesia](https://qr.ae/pNPy7M?ref=blog.naufaldi.com)_**
 
-Bagikan[](https://twitter.com/share?text=Murahnya Biaya Desain dan Pembuatan Aplikasi&url=http://blog.faldi.xyz/murahnya-biaya-desain-dan-kode/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/murahnya-biaya-desain-dan-kode/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/murahnya-biaya-desain-dan-kode//&title=Murahnya Biaya Desain dan Pembuatan Aplikasi "LinkedIn")[](/cdn-cgi/l/email-protection#6e511d1b0c040b0d1a53231b1c0f0600170f4e2c070f170f4e2a0b1d0f07004e0a0f004e3e0b030c1b0f1a0f004e2f1e0207050f1d07480f031e550c010a1753061a1a1e5441410c02010940080f020a074016171441031b1c0f0600170f430c070f170f430a0b1d0f0700430a0f004305010a0b41 "Email")
+Bagikan[](https://twitter.com/share?text=Murahnya Biaya Desain dan Pembuatan Aplikasi&url=https://blog.naufaldi.com/murahnya-biaya-desain-dan-kode/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/murahnya-biaya-desain-dan-kode/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/murahnya-biaya-desain-dan-kode//&title=Murahnya Biaya Desain dan Pembuatan Aplikasi "LinkedIn")[](/cdn-cgi/l/email-protection#6e511d1b0c040b0d1a53231b1c0f0600170f4e2c070f170f4e2a0b1d0f07004e0a0f004e3e0b030c1b0f1a0f004e2f1e0207050f1d07480f031e550c010a1753061a1a1e5441410c02010940080f020a074016171441031b1c0f0600170f430c070f170f430a0b1d0f0700430a0f004305010a0b41 "Email")
 
 Topik [Opini](/tag/opini/)
 

@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2022-01-06
 image: "https://images.unsplash.com/photo-1593642532454-e138e28a63f4?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wxfDF8YWxsfDF8fHx8fHwyfHwxNjQxMzY0Nzcz&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/rekomendasi-library-react-untuk-membuat-table/"
+canonical: "https://blog.naufaldi.com/rekomendasi-library-react-untuk-membuat-table/"
 ---
 
 
@@ -21,11 +21,11 @@ Kebutuhanku itu diantaranya
 *   Dokumentasi yang jelas
 *   Pengguna yang banyak sehingga saat ada kendala, kita bisa mudah bertanya.
 
-Maka, ketemulah 2 React Table ini, yang memenuhi kriteria tersebut. Sekaligus bisa menjadi rekomendasi temen-temen karena kalau melihat dari [Top 5 React Table](https://blog.bitsrc.io/top-5-react-table-libraries-170505f75da7?ref=blog.faldi.xyz) atau [React Example Table](https://reactjsexample.com/tag/table/?ref=blog.faldi.xyz) hanya memberikan list, namun belum bisa memberikan beberapa pertimbangan terkait dengan setelah digunakan seperti apa.
+Maka, ketemulah 2 React Table ini, yang memenuhi kriteria tersebut. Sekaligus bisa menjadi rekomendasi temen-temen karena kalau melihat dari [Top 5 React Table](https://blog.bitsrc.io/top-5-react-table-libraries-170505f75da7?ref=blog.naufaldi.com) atau [React Example Table](https://reactjsexample.com/tag/table/?ref=blog.naufaldi.com) hanya memberikan list, namun belum bisa memberikan beberapa pertimbangan terkait dengan setelah digunakan seperti apa.
 
 # React Data Table Component
 
-![Image](https://blog.faldi.xyz/content/images/2022/01/image.png)
+![Image](https://blog.naufaldi.com/content/images/2022/01/image.png)
 
 Contoh Table
 
@@ -55,7 +55,7 @@ Since 7.4.0 (e0236e0), Primitive type was introduced which didn&#39;t allow data
 
 ![Image](https://opengraph.githubassets.com/d01a38f82c19c125e1053c780c69cfcd4551a65c4832657009277e55b4f37ea8/jbetancur/react-data-table-component/pull/938)
 
-](https://github.com/jbetancur/react-data-table-component/pull/938?ref=blog.faldi.xyz)
+](https://github.com/jbetancur/react-data-table-component/pull/938?ref=blog.naufaldi.com)
 
 Saat ini, komunitas sedang mengembangkan React Data Table versi 7 yang akan menggunakan Typescript(versi sebelumnya menggunakan Javascript)  sehingga type checking lebih mudah.
 
@@ -73,11 +73,11 @@ A responsive table library with built-in sorting, pagination, selection, expanda
 
 ![Image](https://opengraph.githubassets.com/9b4df10deeede5b89819125020f17d75ac12e743c9faf1c80aaeef88cce8cea3/jbetancur/react-data-table-component)
 
-](https://github.com/jbetancur/react-data-table-component?ref=blog.faldi.xyz)
+](https://github.com/jbetancur/react-data-table-component?ref=blog.naufaldi.com)
 
 # React Table
 
-![Image](https://blog.faldi.xyz/content/images/2022/01/image-1.png)
+![Image](https://blog.naufaldi.com/content/images/2022/01/image-1.png)
 
 Kalau ini lebih simple lagi tampilannya, sehingga mudah untuk kita merubah tampian dan bisa diintegrasikan dengan library lain tidak terlepas Boostrap / Material UI.
 
@@ -100,7 +100,7 @@ Husband, Co-Founder, Open source fanatic, React Junkie, Javascripter - tannerlin
 
 ![Image](https://avatars.githubusercontent.com/u/5580297?v=4?s=400)
 
-](https://github.com/tannerlinsley?ref=blog.faldi.xyz)
+](https://github.com/tannerlinsley?ref=blog.naufaldi.com)
 
 Awalnya, saat sebelum menggunakan React Data Table, dan memerlukan beberap fitur tambahan. Sayangnya, pada React Data Table, tidak ada. Akhirnya aku migrasi ke React Table. Salah satu fiturnya yaitu
 
@@ -118,10 +118,10 @@ Is there any plan to add a feature for fixed or ‘sticky’ columns allowing fo
 
 ![Image](https://opengraph.githubassets.com/af1e7d8673751d72c44364ebec62bc029a226a9de1463476033d746d32d2671e/tannerlinsley/react-table/issues/848)
 
-](https://github.com/tannerlinsley/react-table/issues/848?ref=blog.faldi.xyz)
+](https://github.com/tannerlinsley/react-table/issues/848?ref=blog.naufaldi.com)
 
 Sayangnya, ada beberapa type yang tidak sesuai apabila kita menggunakan Typescript. Misalnya pernah dibahas di  
-[https://github.com/tannerlinsley/react-table/issues/3468](https://github.com/tannerlinsley/react-table/issues/3468?ref=blog.faldi.xyz)
+[https://github.com/tannerlinsley/react-table/issues/3468](https://github.com/tannerlinsley/react-table/issues/3468?ref=blog.naufaldi.com)
 
 jadi, kita harus mengakali supaya React Table bisa compatible dengan Type-nya. Ini dibahas juga pada issues #3064
 
@@ -135,7 +135,7 @@ So I have a JavaScript class with useTable. In Java script its been used like be
 
 ![Image](https://opengraph.githubassets.com/b5d12b399108fe596600753a50695d860ad3bf67e8add4ad0d16e787a9412521/tannerlinsley/react-table/issues/3064)
 
-](https://github.com/tannerlinsley/react-table/issues/3064?ref=blog.faldi.xyz)
+](https://github.com/tannerlinsley/react-table/issues/3064?ref=blog.naufaldi.com)
 
 Jadi ya harus berhati hati saat menggunakan React-Table dan mengalami permasalah di type checking. Walaupun begitu, aku tetap menggunakan React Table, karena fiturnya lengkap seperti
 
@@ -160,9 +160,9 @@ Hooks for building lightweight, fast and extendable datagrids for React. The bes
 
 ![Image](https://react-table.tanstack.com/_next/static/images/og-dark-96face4cad6f204cbcc2b548b1276abd.png)
 
-](https://react-table.tanstack.com/?ref=blog.faldi.xyz)
+](https://react-table.tanstack.com/?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=Rekomendasi Library React untuk Membuat Table&url=http://blog.faldi.xyz/rekomendasi-library-react-untuk-membuat-table/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/rekomendasi-library-react-untuk-membuat-table/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/rekomendasi-library-react-untuk-membuat-table//&title=Rekomendasi Library React untuk Membuat Table "LinkedIn")[](/cdn-cgi/l/email-protection#66591513040c0305125b34030d090b03080207150f462a0f041407141f46340307051246130812130d462b030b04130712463207040a0340070b165d0409021f5b0e1212165c4949040a09014800070a020f481e1f1c4914030d090b03080207150f4b0a0f041407141f4b14030705124b130812130d4b0b030b041307124b1207040a0349 "Email")
+Bagikan[](https://twitter.com/share?text=Rekomendasi Library React untuk Membuat Table&url=https://blog.naufaldi.com/rekomendasi-library-react-untuk-membuat-table/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/rekomendasi-library-react-untuk-membuat-table/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/rekomendasi-library-react-untuk-membuat-table//&title=Rekomendasi Library React untuk Membuat Table "LinkedIn")[](/cdn-cgi/l/email-protection#66591513040c0305125b34030d090b03080207150f462a0f041407141f46340307051246130812130d462b030b04130712463207040a0340070b165d0409021f5b0e1212165c4949040a09014800070a020f481e1f1c4914030d090b03080207150f4b0a0f041407141f4b14030705124b130812130d4b0b030b041307124b1207040a0349 "Email")
 
 Topik [Insight](/tag/insight/) [ReactJS](/tag/reactjs/) [Lesson Learned](/tag/lesson-learned/)
 

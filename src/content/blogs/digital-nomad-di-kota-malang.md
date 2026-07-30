@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Fri Aug 19 2022 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1598234714067-e9195cb86db8?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDh8fG1hbGFuZ3xlbnwwfHx8fDE2NjA4OTgxNjQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/nomad-malang/"
+canonical: "https://blog.naufaldi.com/nomad-malang/"
 ---
 
 
@@ -18,7 +18,7 @@ Kota Malang bisa menjadi pilihan untuk teman-teman yang sedang mencari sebuah ko
 
 Kalau melihat data dari Digital Nomads, score Malang setidaknya 2.85 dari beberapa parameter yang dimiliki oleh Digital Nomads seperti dibawah ini:
 
-![Image](https://blog.faldi.xyz/content/images/2022/08/Screen-Shot-2022-08-19-at-15.07.39.png)
+![Image](https://blog.naufaldi.com/content/images/2022/08/Screen-Shot-2022-08-19-at-15.07.39.png)
 
 ## Biaya Hidup
 
@@ -41,7 +41,7 @@ Listnya pernah saya buatkan untuk beberapa coffeshop yang mendukung untuk bekerj
 >   
 > Review Tempat ngopi di Malang khusus untuk kerja kerja kerja 😂
 > 
-> — FλL-D1 | Ningen (人間) (@F2aldi) [October 27, 2021](https://twitter.com/F2aldi/status/1453214694303490050?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — FλL-D1 | Ningen (人間) (@F2aldi) [October 27, 2021](https://twitter.com/F2aldi/status/1453214694303490050?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 ## Co-Working Space
 
@@ -55,11 +55,11 @@ Salah satu alasan yang cukup bagus untuk digital nomad di Malang adalah banyakny
 
 Bosen dengan makan ayam geprek? Bosen dengan makanan yang itu itu aja? Ada beberapa pilihan makanan / kuliner yang bisa dicoba. Mulai dari Bakso President, Pecel Kawi, Hok Lay Malang, Post Ketan Legend dst. Ada banyak kuliner di Malang yang bisa teman-teman coba dengan harga yang cukup bersahabat.
 
-> [https://t.co/ZyxypKnlpd](https://t.co/ZyxypKnlpd?ref=blog.faldi.xyz)  
+> [https://t.co/ZyxypKnlpd](https://t.co/ZyxypKnlpd?ref=blog.naufaldi.com)
 >   
 > You're welcome
 > 
-> — Ghifar Ulwan (@ghifarulwan) [August 13, 2022](https://twitter.com/ghifarulwan/status/1558423489438105601?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — Ghifar Ulwan (@ghifarulwan) [August 13, 2022](https://twitter.com/ghifarulwan/status/1558423489438105601?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 ## Wisata Alam
 
@@ -86,7 +86,7 @@ Terlepas itu semua, Malang punya beberapa kekurangan. Tidak ada transportasi pub
 
 Jadi, walaupun saya merekomendasikan Malang karena sudah 8 tahun disini dan merasa sudah jatuh hati pada Malang, maka bisa menjadi salah satu tempat singgah buat teman-teman yang hobi untuk menjadi seorang digital nomad. Kabarin saja bila ke Malang. Kita siap untuk memberikan tour secara gratis. Cukup bayarin saja kopi kita,haha.
 
-Bagikan[](https://twitter.com/share?text=Digital Nomad di Kota Malang&url=http://blog.faldi.xyz/nomad-malang/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/nomad-malang/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/nomad-malang//&title=Digital Nomad di Kota Malang "LinkedIn")[](/cdn-cgi/l/email-protection#241b5751464e41475019604d434d504548046a4b49454004404d046f4b504504694548454a43024549541f464b405d194c5050541e0b0b46484b430a424548404d0a5c5d5e0b4a4b49454009494548454a430b "Email")
+Bagikan[](https://twitter.com/share?text=Digital Nomad di Kota Malang&url=https://blog.naufaldi.com/nomad-malang/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/nomad-malang/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/nomad-malang//&title=Digital Nomad di Kota Malang "LinkedIn")[](/cdn-cgi/l/email-protection#241b5751464e41475019604d434d504548046a4b49454004404d046f4b504504694548454a43024549541f464b405d194c5050541e0b0b46484b430a424548404d0a5c5d5e0b4a4b49454009494548454a430b "Email")
 
 Topik [Insight](/tag/insight/) [Opini](/tag/opini/)
 

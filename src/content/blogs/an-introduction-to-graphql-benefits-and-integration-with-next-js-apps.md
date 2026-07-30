@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2023-08-20
 image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNlcnZlcnxlbnwwfHx8fDE2OTI1MzQ0MzF8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/getting-started-with-graphql/"
+canonical: "https://blog.naufaldi.com/getting-started-with-graphql/"
 ---
 
 
@@ -92,7 +92,7 @@ function MyApp({ Component, pageProps }) {
 export default MyApp;
 ```
 
-We are utilizing an unofficial Pokémon GraphQL server for our GraphQL operations. You can refer to its documentation at [https://graphql-pokeapi.vercel.app/](https://graphql-pokeapi.vercel.app/?ref=blog.faldi.xyz) and explore its live GraphQL Playground at [https://graphql-pokeapi.graphcdn.app/](https://graphql-pokeapi.graphcdn.app/?ref=blog.faldi.xyz).
+We are utilizing an unofficial Pokémon GraphQL server for our GraphQL operations. You can refer to its documentation at [https://graphql-pokeapi.vercel.app/](https://graphql-pokeapi.vercel.app/?ref=blog.naufaldi.com) and explore its live GraphQL Playground at [https://graphql-pokeapi.graphcdn.app/](https://graphql-pokeapi.graphcdn.app/?ref=blog.naufaldi.com).
 
 ### Step 4: Create a GraphQL Query
 
@@ -175,7 +175,7 @@ GraphQL
 
 ![Image](https://graphql.org/img/og-image.png)
 
-](https://graphql.org/learn/?ref=blog.faldi.xyz)
+](https://graphql.org/learn/?ref=blog.naufaldi.com)
 
 [
 
@@ -187,9 +187,9 @@ In this article, you will review what GraphQL is, familiarize yourself with impo
 
 ![Image](https://community-cdn-digitalocean-com.global.ssl.fastly.net/GGKoRg9bd1m8VSdqbTBLLcnb)
 
-](https://www.digitalocean.com/community/tutorials/an-introduction-to-graphql?ref=blog.faldi.xyz)
+](https://www.digitalocean.com/community/tutorials/an-introduction-to-graphql?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=An Introduction to GraphQL: Benefits and Integration with Next.js Apps&url=http://blog.faldi.xyz/getting-started-with-graphql/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/getting-started-with-graphql/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/getting-started-with-graphql//&title=An Introduction to GraphQL: Benefits and Integration with Next.js Apps "LinkedIn")[](/cdn-cgi/l/email-protection#d6e9a5a3b4bcb3b5a2eb97b8f69fb8a2a4b9b2a3b5a2bfb9b8f6a2b9f691a4b7a6be879aecf694b3b8b3b0bfa2a5f6b7b8b2f69fb8a2b3b1a4b7a2bfb9b8f6a1bfa2bef698b3aea2f8bca5f697a6a6a5f0b7bba6edb4b9b2afebbea2a2a6ecf9f9b4bab9b1f8b0b7bab2bff8aeafacf9b1b3a2a2bfb8b1fba5a2b7a4a2b3b2fba1bfa2befbb1a4b7a6bea7baf9 "Email")
+Bagikan[](https://twitter.com/share?text=An Introduction to GraphQL: Benefits and Integration with Next.js Apps&url=https://blog.naufaldi.com/getting-started-with-graphql/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/getting-started-with-graphql/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/getting-started-with-graphql//&title=An Introduction to GraphQL: Benefits and Integration with Next.js Apps "LinkedIn")[](/cdn-cgi/l/email-protection#d6e9a5a3b4bcb3b5a2eb97b8f69fb8a2a4b9b2a3b5a2bfb9b8f6a2b9f691a4b7a6be879aecf694b3b8b3b0bfa2a5f6b7b8b2f69fb8a2b3b1a4b7a2bfb9b8f6a1bfa2bef698b3aea2f8bca5f697a6a6a5f0b7bba6edb4b9b2afebbea2a2a6ecf9f9b4bab9b1f8b0b7bab2bff8aeafacf9b1b3a2a2bfb8b1fba5a2b7a4a2b3b2fba1bfa2befbb1a4b7a6bea7baf9 "Email")
 
 Topik [Getting Started](/tag/getting-started/) [Tutorial](/tag/tutorial/) [NextJS](/tag/nextjs/)
 

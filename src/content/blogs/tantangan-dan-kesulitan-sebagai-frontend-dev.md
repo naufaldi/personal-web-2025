@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2020-09-29
 image: "https://images.unsplash.com/photo-1599687267812-35c05ff70ee9?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;2000&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ"
-canonical: "http://blog.faldi.xyz/tantangan-sebagai-frontend-dev/"
+canonical: "https://blog.naufaldi.com/tantangan-sebagai-frontend-dev/"
 ---
 
 
@@ -69,7 +69,7 @@ Itu hanya masalah warna. Belum Font, Button, dst. Walaupun mungkin kedepan, saya
 
 ## Penyesuaian Browser
 
-Baru saja kemarin saya diberi laporan sama teman bahwa salah satu situs yang kami kerjakan tidak sesuai. Padahal, sama-sama menggunakan Firefox versi terbaru. Bedanya, saya test menggunakan Firefox versi Developer dan teman saya yang biasa. Ini masih belum tahu, letak permasalahan dimana. Padahal juga sudah menggunakan [Normalize CSS](https://necolas.github.io/normalize.css/?ref=blog.faldi.xyz) di Tailwind 💆‍♂️
+Baru saja kemarin saya diberi laporan sama teman bahwa salah satu situs yang kami kerjakan tidak sesuai. Padahal, sama-sama menggunakan Firefox versi terbaru. Bedanya, saya test menggunakan Firefox versi Developer dan teman saya yang biasa. Ini masih belum tahu, letak permasalahan dimana. Padahal juga sudah menggunakan [Normalize CSS](https://necolas.github.io/normalize.css/?ref=blog.naufaldi.com) di Tailwind 💆‍♂️
 
 Namun, setelah dicari tahu, itu karena saya belum melakukan pengecekatan pada browser dengan screensize 1024px di firefox.  Memang ada baiknya ada Timeline tersendiri untuk melakukan testing Browser compatibility dan Device compatibility. Itu padahal masih antar dekstop. Belum dengan perangkat mobile yang beragam jenis ukuran.
 
@@ -77,7 +77,7 @@ Untung saja Internet Explorer sudah dimatikan walaupun banyak pengguna yang masi
 
 ## Error Tracking dan CORS
 
-[**Cross-Origin Resource Sharing (CORS)**](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS?ref=blog.faldi.xyz)
+[**Cross-Origin Resource Sharing (CORS)**](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS?ref=blog.naufaldi.com)
 
 Sering sekali saya temukan dalam konsumsi API yaitu CORS. Pernah 2 hari debugging, ternyata yang masalah di backend karena CORS. Bukan di frontendnya 🤦‍♂️ Parahnya,error yang saya dapat hanyalah **_"Network Failed"_**. Sepengelaman dan pengetahuan saya, Network Failed artinya ada jaringan yang bermasalah disisi client. Berarti saya dong yang salah? Namun, nyatanya itu ada di CORS. Lantas kenapa dikatakan Network Failed? Yah, mungkin pemahaman saya terkait dengan networking masih kurang banyak.
 
@@ -103,7 +103,7 @@ Itu hal yang harus kita pikirkan dalam pembuatan Web Apps berbasis ReactJS. Kare
 
 Yah, itu aja sih curhatanku mengenai  **_tantangan dan kesulitan sebagai pengembang antarmuka_** , mungkin bagi sebagian orang apa yang saya rasakan ini bukan kesulitan. Namun, setidaknya hal hal tersebutlah yang harus kita antisipasi di proyek - proyek selanjutnya. Setidaknya, saya harus bisa belajar dari masalah tersebut.
 
-Bagikan[](https://twitter.com/share?text=Tantangan dan Kesulitan sebagai Frontend Dev&url=http://blog.faldi.xyz/tantangan-sebagai-frontend-dev/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/tantangan-sebagai-frontend-dev/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/tantangan-sebagai-frontend-dev//&title=Tantangan dan Kesulitan sebagai Frontend Dev "LinkedIn")[](/cdn-cgi/l/email-protection#e3dc90968189868097deb7828d97828d84828dc387828dc3a88690968f8a97828dc39086818284828ac3a5918c8d97868d87c3a78695c5828e93d8818c879ade8b979793d9cccc818f8c84cd85828f878acd9b9a99cc97828d97828d84828dce9086818284828ace85918c8d97868d87ce878695cc "Email")
+Bagikan[](https://twitter.com/share?text=Tantangan dan Kesulitan sebagai Frontend Dev&url=https://blog.naufaldi.com/tantangan-sebagai-frontend-dev/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/tantangan-sebagai-frontend-dev/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/tantangan-sebagai-frontend-dev//&title=Tantangan dan Kesulitan sebagai Frontend Dev "LinkedIn")[](/cdn-cgi/l/email-protection#e3dc90968189868097deb7828d97828d84828dc387828dc3a88690968f8a97828dc39086818284828ac3a5918c8d97868d87c3a78695c5828e93d8818c879ade8b979793d9cccc818f8c84cd85828f878acd9b9a99cc97828d97828d84828dce9086818284828ace85918c8d97868d87ce878695cc "Email")
 
 Topik [Opini](/tag/opini/)
 

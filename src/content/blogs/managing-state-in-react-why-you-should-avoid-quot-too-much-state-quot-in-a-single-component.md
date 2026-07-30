@@ -7,8 +7,8 @@ author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Tue Jun 17 2025 07:00:00 GMT+0700 (Western Indonesia Time)
-image: "http://blog.faldi.xyz/content/images/2025/06/ChatGPT-Image-Jun-17-2025-React-State-Management.png"
-canonical: "http://blog.faldi.xyz/untitled-2/"
+image: "https://blog.naufaldi.com/content/images/2025/06/ChatGPT-Image-Jun-17-2025-React-State-Management.png"
+canonical: "https://blog.naufaldi.com/untitled-2/"
 ---
 
 
@@ -513,7 +513,7 @@ Remember: Every state variable you add is a commitment. Be clear about its purpo
 
 A well-organized state structure won’t just help your team deliver faster,it will also help you scale your codebase with confidence.
 
-Bagikan[](https://twitter.com/share?text=Managing State in React: Why You Should Avoid "Too Much State" in a Single Component&url=http://blog.faldi.xyz/untitled-2/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/untitled-2/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/untitled-2//&title=Managing State in React: Why You Should Avoid "Too Much State" in a Single Component "LinkedIn")[](/cdn-cgi/l/email-protection#cef1bdbbaca4abadbaf383afa0afa9a7a0a9ee9dbaafbaabeea7a0ee9cabafadbaf4ee99a6b7ee97a1bbee9da6a1bba2aaee8fb8a1a7aaeee8bfbba1baf59aa1a1ee83bbada6ee9dbaafbaabe8bfbba1baf5eea7a0eeafee9da7a0a9a2abee8da1a3bea1a0aba0bae8afa3bef5aca1aab7f3a6bababef4e1e1aca2a1a9e0a8afa2aaa7e0b6b7b4e1bba0baa7baa2abaae3fce1 "Email")
+Bagikan[](https://twitter.com/share?text=Managing State in React: Why You Should Avoid "Too Much State" in a Single Component&url=https://blog.naufaldi.com/untitled-2/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/untitled-2/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/untitled-2//&title=Managing State in React: Why You Should Avoid "Too Much State" in a Single Component "LinkedIn")[](/cdn-cgi/l/email-protection#cef1bdbbaca4abadbaf383afa0afa9a7a0a9ee9dbaafbaabeea7a0ee9cabafadbaf4ee99a6b7ee97a1bbee9da6a1bba2aaee8fb8a1a7aaeee8bfbba1baf59aa1a1ee83bbada6ee9dbaafbaabe8bfbba1baf5eea7a0eeafee9da7a0a9a2abee8da1a3bea1a0aba0bae8afa3bef5aca1aab7f3a6bababef4e1e1aca2a1a9e0a8afa2aaa7e0b6b7b4e1bba0baa7baa2abaae3fce1 "Email")
 
 Topik [Insight](/tag/insight/) [Programming](/tag/programming/) [ReactJS](/tag/reactjs/) [NextJS](/tag/nextjs/) [Tutorial](/tag/tutorial/)
 

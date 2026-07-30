@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Tue Apr 02 2024 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1707343848723-bd87dea7b118?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wxfDF8YWxsfDF8fHx8fHwyfHwxNzEyMDE2MDUyfA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/reflection-interview-senior-frontend-engineer/"
+canonical: "https://blog.naufaldi.com/reflection-interview-senior-frontend-engineer/"
 ---
 
 
@@ -30,7 +30,7 @@ That's at least what I can learn for today. So, in this quarter, I will:
 
 I hope this will improve my capability as a Frontend Engineer and my goal to become a Senior Frontend Engineer and improve my skill as a Software Engineer.
 
-Bagikan[](https://twitter.com/share?text=Reflection on a Senior Frontend Engineer Interview&url=http://blog.faldi.xyz/reflection-interview-senior-frontend-engineer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/reflection-interview-senior-frontend-engineer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/reflection-interview-senior-frontend-engineer//&title=Reflection on a Senior Frontend Engineer Interview "LinkedIn")[](/cdn-cgi/l/email-protection#86b9f5f3e4ece3e5f2bbd4e3e0eae3e5f2efe9e8a6e9e8a6e7a6d5e3e8efe9f4a6c0f4e9e8f2e3e8e2a6c3e8e1efe8e3e3f4a6cfe8f2e3f4f0efe3f1a0e7ebf6bde4e9e2ffbbeef2f2f6bca9a9e4eae9e1a8e0e7eae2efa8fefffca9f4e3e0eae3e5f2efe9e8abefe8f2e3f4f0efe3f1abf5e3e8efe9f4abe0f4e9e8f2e3e8e2abe3e8e1efe8e3e3f4a9 "Email")
+Bagikan[](https://twitter.com/share?text=Reflection on a Senior Frontend Engineer Interview&url=https://blog.naufaldi.com/reflection-interview-senior-frontend-engineer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/reflection-interview-senior-frontend-engineer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/reflection-interview-senior-frontend-engineer//&title=Reflection on a Senior Frontend Engineer Interview "LinkedIn")[](/cdn-cgi/l/email-protection#86b9f5f3e4ece3e5f2bbd4e3e0eae3e5f2efe9e8a6e9e8a6e7a6d5e3e8efe9f4a6c0f4e9e8f2e3e8e2a6c3e8e1efe8e3e3f4a6cfe8f2e3f4f0efe3f1a0e7ebf6bde4e9e2ffbbeef2f2f6bca9a9e4eae9e1a8e0e7eae2efa8fefffca9f4e3e0eae3e5f2efe9e8abefe8f2e3f4f0efe3f1abf5e3e8efe9f4abe0f4e9e8f2e3e8e2abe3e8e1efe8e3e3f4a9 "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/)
 

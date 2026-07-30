@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2024-01-16
 image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDR8fG1hcHxlbnwwfHx8fDE3MDUzODc4NTB8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/geojson-leafleat-add-geojson/"
+canonical: "https://blog.naufaldi.com/geojson-leafleat-add-geojson/"
 ---
 
 
@@ -218,7 +218,7 @@ const { name, address } = dataGeoJSON.features[0]
 
 If your implementation is correct, the markers on your Leaflet map will display additional information extracted from your `dataGeoJSON`. This might include text labels, descriptions, or any other relevant details contained in the GeoJSON data.
 
-![Image](https://blog.faldi.xyz/content/images/2024/01/image-2.png)
+![Image](https://blog.naufaldi.com/content/images/2024/01/image-2.png)
 
 Full Code something like this
 
@@ -325,9 +325,9 @@ Setup NextJS with leaflet. Contribute to naufaldi/nextjs-leaflet development by 
 
 ![Image](https://opengraph.githubassets.com/4e3b0e572b945670ea94885b3785aa558f395990615d44c86dcc5b9ce4754994/naufaldi/nextjs-leaflet)
 
-](https://github.com/naufaldi/nextjs-leaflet/blob/main/src/lib/pages/geojson/index.tsx?ref=blog.faldi.xyz)
+](https://github.com/naufaldi/nextjs-leaflet/blob/main/src/lib/pages/geojson/index.tsx?ref=blog.naufaldi.com)
 
-Bagikan[](https://twitter.com/share?text=NextJS and React Leafleat : Add GeoJSON&url=http://blog.faldi.xyz/geojson-leafleat-add-geojson/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/geojson-leafleat-add-geojson/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/geojson-leafleat-add-geojson//&title=NextJS and React Leafleat : Add GeoJSON "LinkedIn")[](/cdn-cgi/l/email-protection#9fa0eceafdf5fafceba2d1fae7ebd5ccbffef1fbbfcdfafefcebbfd3fafef9f3fafeebbfa5bfdefbfbbfd8faf0d5ccd0d1b9fef2efa4fdf0fbe6a2f7ebebefa5b0b0fdf3f0f8b1f9fef3fbf6b1e7e6e5b0f8faf0f5ecf0f1b2f3fafef9f3fafeebb2fefbfbb2f8faf0f5ecf0f1b0 "Email")
+Bagikan[](https://twitter.com/share?text=NextJS and React Leafleat : Add GeoJSON&url=https://blog.naufaldi.com/geojson-leafleat-add-geojson/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/geojson-leafleat-add-geojson/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/geojson-leafleat-add-geojson//&title=NextJS and React Leafleat : Add GeoJSON "LinkedIn")[](/cdn-cgi/l/email-protection#9fa0eceafdf5fafceba2d1fae7ebd5ccbffef1fbbfcdfafefcebbfd3fafef9f3fafeebbfa5bfdefbfbbfd8faf0d5ccd0d1b9fef2efa4fdf0fbe6a2f7ebebefa5b0b0fdf3f0f8b1f9fef3fbf6b1e7e6e5b0f8faf0f5ecf0f1b2f3fafef9f3fafeebb2fefbfbb2f8faf0f5ecf0f1b0 "Email")
 
 Topik [Documentation](/tag/documentation/) [ReactJS](/tag/reactjs/) [Tutorial](/tag/tutorial/) [Getting Started](/tag/getting-started/)
 

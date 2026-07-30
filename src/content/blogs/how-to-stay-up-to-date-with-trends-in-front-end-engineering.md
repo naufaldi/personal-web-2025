@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Fri Feb 10 2023 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1661956600684-97d3a4320e45?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wxfDF8YWxsfDF8fHx8fHwyfHwxNjc2MDExNjk2&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/how-to-stay-up-to-date-with-trends-in-front-end-engineering/"
+canonical: "https://blog.naufaldi.com/how-to-stay-up-to-date-with-trends-in-front-end-engineering/"
 ---
 
 
@@ -44,7 +44,7 @@ As a frontend developer, it is important to stay up-to-date with the latest deve
 
 In conclusion, staying up-to-date with the latest trends in front-end engineering is crucial for creating modern and user-friendly websites, and for staying competitive in the field. By attending conferences and events, following industry leaders, joining online communities, experimenting with new technologies, and taking online courses, front-end engineers can stay up-to-date with the latest trends and technologies in the field.
 
-Bagikan[](https://twitter.com/share?text=How to Stay Up-to-Date with Trends in Front-End Engineering&url=http://blog.faldi.xyz/how-to-stay-up-to-date-with-trends-in-front-end-engineering/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/how-to-stay-up-to-date-with-trends-in-front-end-engineering/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/how-to-stay-up-to-date-with-trends-in-front-end-engineering//&title=How to Stay Up-to-Date with Trends in Front-End Engineering "LinkedIn")[](/cdn-cgi/l/email-protection#e6d99593848c838592dbae8991c69289c6b592879fc6b396cb9289cba2879283c6918f928ec6b29483888295c68f88c6a094898892cba38882c6a388818f888383948f8881c0878b96dd8489829fdb8e929296dcc9c9848a8981c880878a828fc89e9f9cc98e8991cb9289cb9592879fcb9396cb9289cb82879283cb918f928ecb929483888295cb8f88cb8094898892cb838882cb8388818f888383948f8881c9 "Email")
+Bagikan[](https://twitter.com/share?text=How to Stay Up-to-Date with Trends in Front-End Engineering&url=https://blog.naufaldi.com/how-to-stay-up-to-date-with-trends-in-front-end-engineering/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/how-to-stay-up-to-date-with-trends-in-front-end-engineering/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/how-to-stay-up-to-date-with-trends-in-front-end-engineering//&title=How to Stay Up-to-Date with Trends in Front-End Engineering "LinkedIn")[](/cdn-cgi/l/email-protection#e6d99593848c838592dbae8991c69289c6b592879fc6b396cb9289cba2879283c6918f928ec6b29483888295c68f88c6a094898892cba38882c6a388818f888383948f8881c0878b96dd8489829fdb8e929296dcc9c9848a8981c880878a828fc89e9f9cc98e8991cb9289cb9592879fcb9396cb9289cb82879283cb918f928ecb929483888295cb8f88cb8094898892cb838882cb8388818f888383948f8881c9 "Email")
 
 Topik [Insight](/tag/insight/)
 

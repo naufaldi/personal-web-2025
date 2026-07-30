@@ -7,17 +7,17 @@ author:
   name: "Naufaldi Rafif S"
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2025-06-11
-image: "http://blog.faldi.xyz/content/images/2025/06/Blog-Writing-Strategy.png"
-canonical: "http://blog.faldi.xyz/share-the-truth-dont-normalize-the-problem/"
+image: "https://blog.naufaldi.com/content/images/2025/06/Blog-Writing-Strategy.png"
+canonical: "https://blog.naufaldi.com/share-the-truth-dont-normalize-the-problem/"
 ---
 
 
 This screenshot appeared on my feed and speaks directly to jobseekers.  
 Here’s the post:
 
-![Image](https://blog.faldi.xyz/content/images/2025/06/image-2.png)
+![Image](https://blog.naufaldi.com/content/images/2025/06/image-2.png)
 
-![Image](https://blog.faldi.xyz/content/images/2025/06/image-3.png)
+![Image](https://blog.naufaldi.com/content/images/2025/06/image-3.png)
 
 I paused to reflect. I recognize this as a “widely-known secret”  taboo to air on social media. Yet I’d trusted HR professionals to act objectively. Reading this post shattered that illusion.
 
@@ -39,11 +39,11 @@ If the reason is “overqualified” or “overbudget,” just say it. That’s 
 
 I’ve received good rejection emails. Maybe they’re templates, but at least they’re something. They show respect. They bring closure. They reflect professionalism.
 
-![Image](https://blog.faldi.xyz/content/images/2025/06/image-4.png)
+![Image](https://blog.naufaldi.com/content/images/2025/06/image-4.png)
 
-![Image](https://blog.faldi.xyz/content/images/2025/06/image-5.png)
+![Image](https://blog.naufaldi.com/content/images/2025/06/image-5.png)
 
-![Image](https://blog.faldi.xyz/content/images/2025/06/image-6.png)
+![Image](https://blog.naufaldi.com/content/images/2025/06/image-6.png)
 
 ## Second: Keep it professional.
 
@@ -133,7 +133,7 @@ If you know a good candidate , someone you’ve worked with, someone whose perfo
 
 Keep sharing. Keep telling the truth. But let’s stop accepting bad practices as “just how it is.” Let’s raise the bar, because if we all do our part, we all move better.
 
-Bagikan[](https://twitter.com/share?text=Share the Truth, Don’t Normalize the Problem&url=http://blog.faldi.xyz/share-the-truth-dont-normalize-the-problem/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/share-the-truth-dont-normalize-the-problem/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/share-the-truth-dont-normalize-the-problem//&title=Share the Truth, Don’t Normalize the Problem "LinkedIn")[](/cdn-cgi/l/email-protection#1f206c6a7d757a7c6b224c777e6d7a3f6b777a3f4b6d6a6b77333f5b7071fd9f866b3f51706d727e7376657a3f6b777a3f4f6d707d737a72397e726f247d707b6622776b6b6f2530307d73707831797e737b7631676665306c777e6d7a326b777a326b6d6a6b77327b70716b3271706d727e7376657a326b777a326f6d707d737a7230 "Email")
+Bagikan[](https://twitter.com/share?text=Share the Truth, Don’t Normalize the Problem&url=https://blog.naufaldi.com/share-the-truth-dont-normalize-the-problem/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/share-the-truth-dont-normalize-the-problem/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/share-the-truth-dont-normalize-the-problem//&title=Share the Truth, Don’t Normalize the Problem "LinkedIn")[](/cdn-cgi/l/email-protection#1f206c6a7d757a7c6b224c777e6d7a3f6b777a3f4b6d6a6b77333f5b7071fd9f866b3f51706d727e7376657a3f6b777a3f4f6d707d737a72397e726f247d707b6622776b6b6f2530307d73707831797e737b7631676665306c777e6d7a326b777a326b6d6a6b77327b70716b3271706d727e7376657a326b777a326f6d707d737a7230 "Email")
 
 Topik [Culture](/tag/culture/) [Opini](/tag/opini/) [Insight](/tag/insight/)
 

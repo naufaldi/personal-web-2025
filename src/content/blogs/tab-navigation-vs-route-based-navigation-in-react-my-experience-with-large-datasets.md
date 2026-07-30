@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Wed Mar 12 2025 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1741557571786-e922da981949?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDJ8fHx8fHx8fDE3NDE3NjgzODZ8&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/tab-navigation-vs-route-based-navigation-in-react-my-experience-with-large-datasets/"
+canonical: "https://blog.naufaldi.com/tab-navigation-vs-route-based-navigation-in-react-my-experience-with-large-datasets/"
 ---
 
 
@@ -191,7 +191,7 @@ Remember, these recommendations come from my specific experience - your mileage 
 
 What navigation approach has worked best for your projects? I'd love to hear your experiences in the comments!
 
-Bagikan[](https://twitter.com/share?text=Tab Navigation vs Route-Based Navigation in React: My Experience with Large Datasets&url=http://blog.faldi.xyz/tab-navigation-vs-route-based-navigation-in-react-my-experience-with-large-datasets/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/tab-navigation-vs-route-based-navigation-in-react-my-experience-with-large-datasets/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/tab-navigation-vs-route-based-navigation-in-react-my-experience-with-large-datasets//&title=Tab Navigation vs Route-Based Navigation in React: My Experience with Large Datasets "LinkedIn")[](/cdn-cgi/l/email-protection#625d111700080701165f360300422c03140b0503160b0d0c42141142300d1716074f2003110706422c03140b0503160b0d0c420b0c42300703011658422f1b42271a1207100b070c010742150b160a422e0310050742260316031107161144030f1259000d061b5f0a161612584d4d000e0d054c04030e060b4c1a1b184d1603004f0c03140b0503160b0d0c4f14114f100d1716074f00031107064f0c03140b0503160b0d0c4f0b0c4f10070301164f0f1b4f071a1207100b070c01074f150b160a4f0e031005074f06031603110716114d "Email")
+Bagikan[](https://twitter.com/share?text=Tab Navigation vs Route-Based Navigation in React: My Experience with Large Datasets&url=https://blog.naufaldi.com/tab-navigation-vs-route-based-navigation-in-react-my-experience-with-large-datasets/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/tab-navigation-vs-route-based-navigation-in-react-my-experience-with-large-datasets/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/tab-navigation-vs-route-based-navigation-in-react-my-experience-with-large-datasets//&title=Tab Navigation vs Route-Based Navigation in React: My Experience with Large Datasets "LinkedIn")[](/cdn-cgi/l/email-protection#625d111700080701165f360300422c03140b0503160b0d0c42141142300d1716074f2003110706422c03140b0503160b0d0c420b0c42300703011658422f1b42271a1207100b070c010742150b160a422e0310050742260316031107161144030f1259000d061b5f0a161612584d4d000e0d054c04030e060b4c1a1b184d1603004f0c03140b0503160b0d0c4f14114f100d1716074f00031107064f0c03140b0503160b0d0c4f0b0c4f10070301164f0f1b4f071a1207100b070c01074f150b160a4f0e031005074f06031603110716114d "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/) [Tutorial](/tag/tutorial/)
 

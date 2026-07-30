@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: Tue May 06 2025 07:00:00 GMT+0700 (Western Indonesia Time)
 image: "https://images.unsplash.com/photo-1566443280617-35db331c54fb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxuZXR3b3JrfGVufDB8fHx8MTc0NjUwMjUwMHww&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/laid-off-burned-out-hired-senior-engineer/"
+canonical: "https://blog.naufaldi.com/laid-off-burned-out-hired-senior-engineer/"
 ---
 
 
@@ -48,7 +48,7 @@ It was confusing. In October 2024, the company even launched a new chapter in In
 
 So I built more. Learned more. Contacted people for help. I started setting up 1:1 and took notes from each one.
 
-![Image](https://blog.faldi.xyz/content/images/2025/05/image-1.png)
+![Image](https://blog.naufaldi.com/content/images/2025/05/image-1.png)
 
 People I reached out to:
 
@@ -81,7 +81,7 @@ So I tried a coping mechanism: video games. At that time, I got into _Factorio_.
 
 That’s why my playtime hit 200+ hours. Shoutout to Mas Didik Wicaksono for introducing me to the game. In a weird way, _Factorio_ became part of my survival toolkit.
 
-![Image](https://blog.faldi.xyz/content/images/2025/05/image.png)
+![Image](https://blog.naufaldi.com/content/images/2025/05/image.png)
 
 By now, the rumors were real. The company was falling apart. A full collapse felt near. I needed out.
 
@@ -170,7 +170,7 @@ After thinking it through, I chose **Company C**. (I’ll write a separate post 
 Once I accepted, the recruiter asked when I could start. I said, "As soon as possible."  
 He replied, “Okay, you can start on March 3st.”
 
-I was only unemployed for **two weeks**. That’s why my [unemployed journal](https://blog.faldi.xyz/tag/unemployed-journal/) ended on day 2. Things moved fast.
+I was only unemployed for **two weeks**. That’s why my [unemployed journal](https://blog.naufaldi.com/tag/unemployed-journal/) ended on day 2. Things moved fast.
 
 * * *
 
@@ -188,7 +188,7 @@ What Does It Really Mean to Be a Frontend Engineer?
 
 ![Image](https://images.unsplash.com/photo-1581093806997-124204d9fa9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDN8fGVuZ2luZWVyfGVufDB8fHx8MTc0NjQxNjg5OXww&ixlib=rb-4.0.3&q=80&w=2000)
 
-](https://blog.faldi.xyz/what-does-it-really-mean-to-be-a-frontend-engineer/)
+](https://blog.naufaldi.com/what-does-it-really-mean-to-be-a-frontend-engineer/)
 
 Some people say titles don’t matter. But to me, they do:
 
@@ -212,7 +212,7 @@ I want to be a **Software Engineer**.
 
 And that’s why I wrote all this — to share my story, how I survived, how I learned, and how I finally made it.
 
-Bagikan[](https://twitter.com/share?text=Laid Off. Burned Out. Then Hired as a Senior Engineer.&url=http://blog.faldi.xyz/laid-off-burned-out-hired-senior-engineer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/laid-off-burned-out-hired-senior-engineer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/laid-off-burned-out-hired-senior-engineer//&title=Laid Off. Burned Out. Then Hired as a Senior Engineer. "LinkedIn")[](/cdn-cgi/l/email-protection#b28dc1c7d0d8d7d1c68ffed3dbd692fdd4d49c92f0c7c0dcd7d692fdc7c69c92e6dad7dc92fadbc0d7d692d3c192d392e1d7dcdbddc092f7dcd5dbdcd7d7c09c94d3dfc289d0ddd6cb8fdac6c6c2889d9dd0deddd59cd4d3ded6db9ccacbc89dded3dbd69fddd4d49fd0c7c0dcd7d69fddc7c69fdadbc0d7d69fc1d7dcdbddc09fd7dcd5dbdcd7d7c09d "Email")
+Bagikan[](https://twitter.com/share?text=Laid Off. Burned Out. Then Hired as a Senior Engineer.&url=https://blog.naufaldi.com/laid-off-burned-out-hired-senior-engineer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/laid-off-burned-out-hired-senior-engineer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/laid-off-burned-out-hired-senior-engineer//&title=Laid Off. Burned Out. Then Hired as a Senior Engineer. "LinkedIn")[](/cdn-cgi/l/email-protection#b28dc1c7d0d8d7d1c68ffed3dbd692fdd4d49c92f0c7c0dcd7d692fdc7c69c92e6dad7dc92fadbc0d7d692d3c192d392e1d7dcdbddc092f7dcd5dbdcd7d7c09c94d3dfc289d0ddd6cb8fdac6c6c2889d9dd0deddd59cd4d3ded6db9ccacbc89dded3dbd69fddd4d49fd0c7c0dcd7d69fddc7c69fdadbc0d7d69fc1d7dcdbddc09fd7dcd5dbdcd7d7c09d "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/) [Unemployed Journal](/tag/unemployed-journal/)
 

@@ -46,7 +46,7 @@ personal-web-2025/
     └── .well-known/ai.txt
 ```
 
-Vite copies `public/` into `dist/` on build. Canonical site URL: `https://faldi.xyz/`
+Vite copies `public/` into `dist/` on build. Canonical site URL: `https://naufaldi.com/`
 
 ## Checklist for a new route or content item
 
@@ -74,7 +74,7 @@ Generation rules:
 
 - Exclude blog posts with `category: draft`
 - Exclude stub slugs such as `community` and `coming-soon`
-- Use `https://faldi.xyz/blogs/:slug` as canonical for local blog pages
+- Use `https://naufaldi.com/blogs/:slug` as canonical for local blog pages
 
 ### 3. Static policy files
 
@@ -101,11 +101,11 @@ test -f dist/robots.txt && test -f dist/sitemap.xml && test -f dist/llms.txt
 
 After deploy, verify live:
 
-- `https://faldi.xyz/robots.txt`
-- `https://faldi.xyz/sitemap.xml`
-- `https://faldi.xyz/llms.txt`
-- `https://faldi.xyz/llms-full.txt`
-- `https://faldi.xyz/.well-known/ai.txt`
+- `https://naufaldi.com/robots.txt`
+- `https://naufaldi.com/sitemap.xml`
+- `https://naufaldi.com/llms.txt`
+- `https://naufaldi.com/llms-full.txt`
+- `https://naufaldi.com/.well-known/ai.txt`
 
 Submit the sitemap in Google Search Console.
 

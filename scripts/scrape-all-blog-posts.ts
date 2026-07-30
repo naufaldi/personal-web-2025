@@ -79,7 +79,7 @@ async function fetchSitemap(): Promise<
     "📍 Fetching sitemap...",
   );
   const sitemapUrl =
-    "https://blog.faldi.xyz/sitemap-posts.xml";
+    "https://blog.naufaldi.com/sitemap-posts.xml";
 
   try {
     const response =
@@ -106,7 +106,7 @@ async function fetchSitemap(): Promise<
         match[1];
       if (
         url.includes(
-          "blog.faldi.xyz",
+          "blog.naufaldi.com",
         ) &&
         !url.includes(
           "sitemap",

@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2025-05-05
 image: "https://images.unsplash.com/photo-1581093806997-124204d9fa9d?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDN8fGVuZ2luZWVyfGVufDB8fHx8MTc0NjQxNjg5OXww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/what-does-it-really-mean-to-be-a-frontend-engineer/"
+canonical: "https://blog.naufaldi.com/what-does-it-really-mean-to-be-a-frontend-engineer/"
 ---
 
 
@@ -116,7 +116,7 @@ We’re defined by our mindset.
 Let’s build things that work.  
 Let’s become engineers who own what they create.
 
-Bagikan[](https://twitter.com/share?text=What Does It Really Mean to Be a Frontend Engineer?&url=http://blog.faldi.xyz/what-does-it-really-mean-to-be-a-frontend-engineer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/what-does-it-really-mean-to-be-a-frontend-engineer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/what-does-it-really-mean-to-be-a-frontend-engineer//&title=What Does It Really Mean to Be a Frontend Engineer? "LinkedIn")[](/cdn-cgi/l/email-protection#caf5b9bfa8a0afa9bef79da2abbeea8ea5afb9ea83beea98afaba6a6b3ea87afaba4eabea5ea88afeaabea8cb8a5a4beafa4aeea8fa4ada3a4afafb8f5ecaba7baf1a8a5aeb3f7a2bebebaf0e5e5a8a6a5ade4acaba6aea3e4b2b3b0e5bda2abbee7aea5afb9e7a3bee7b8afaba6a6b3e7a7afaba4e7bea5e7a8afe7abe7acb8a5a4beafa4aee7afa4ada3a4afafb8e5 "Email")
+Bagikan[](https://twitter.com/share?text=What Does It Really Mean to Be a Frontend Engineer?&url=https://blog.naufaldi.com/what-does-it-really-mean-to-be-a-frontend-engineer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/what-does-it-really-mean-to-be-a-frontend-engineer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/what-does-it-really-mean-to-be-a-frontend-engineer//&title=What Does It Really Mean to Be a Frontend Engineer? "LinkedIn")[](/cdn-cgi/l/email-protection#caf5b9bfa8a0afa9bef79da2abbeea8ea5afb9ea83beea98afaba6a6b3ea87afaba4eabea5ea88afeaabea8cb8a5a4beafa4aeea8fa4ada3a4afafb8f5ecaba7baf1a8a5aeb3f7a2bebebaf0e5e5a8a6a5ade4acaba6aea3e4b2b3b0e5bda2abbee7aea5afb9e7a3bee7b8afaba6a6b3e7a7afaba4e7bea5e7a8afe7abe7acb8a5a4beafa4aee7afa4ada3a4afafb8e5 "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/)
 

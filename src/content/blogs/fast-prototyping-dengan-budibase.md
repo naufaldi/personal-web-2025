@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2022-08-26
 image: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxsb3clMjBjb2RlfGVufDB8fHx8MTY2MTUwNTUzOA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/fast-prototyping-dengan-budibase/"
+canonical: "https://blog.naufaldi.com/fast-prototyping-dengan-budibase/"
 ---
 
 
@@ -36,7 +36,7 @@ Beberapa kelebihan Budibase adalah kemampuannya untuk bisa melakukan integrasi d
 *   Connect to Data Source
 *   Sign In with Google (SSO)
 
-![Image](https://blog.faldi.xyz/content/images/2022/08/image-2.png)
+![Image](https://blog.naufaldi.com/content/images/2022/08/image-2.png)
 
 *   Role User
 *   Self Hosted / Budibase Hosted
@@ -60,9 +60,9 @@ Budibase memberikan beberapa contoh Web Apps yang mampu didevelop dengan menggun
 *   Simple Display Data from Database
 *   dst
 
-![Image](https://blog.faldi.xyz/content/images/2022/08/image-1.png)
+![Image](https://blog.naufaldi.com/content/images/2022/08/image-1.png)
 
-Contoh diatas merupakan dashboard untuk Car Rental Admin Panel Template [https://ikhlas.budibase.app/app/appcar-rental-admin-panel-1](https://ikhlas.budibase.app/app/appcar-rental-admin-panel-1?ref=blog.faldi.xyz)
+Contoh diatas merupakan dashboard untuk Car Rental Admin Panel Template [https://ikhlas.budibase.app/app/appcar-rental-admin-panel-1](https://ikhlas.budibase.app/app/appcar-rental-admin-panel-1?ref=blog.naufaldi.com)
 
 ##   
 **Menggunakan Budibase sebagai Solusi**
@@ -95,7 +95,7 @@ Sehingga kalau kasus seperti itu, mungkin Budibase cukup sebagai prototype dan m
 
 Mungkin kedepan saya akan menuliskan mengenai Pro and Cons saat menggunakan Budibase berdasarkan pengalaman saya saat mencoba menggunakan Budibase. Sekian dan Terima kasih
 
-Bagikan[](https://twitter.com/share?text=Fast Prototyping Dengan Budibase&url=http://blog.faldi.xyz/fast-prototyping-dengan-budibase/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/fast-prototyping-dengan-budibase/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/fast-prototyping-dengan-budibase//&title=Fast Prototyping Dengan Budibase "LinkedIn")[](/cdn-cgi/l/email-protection#92ade1e7f0f8f7f1e6afd4f3e1e6b2c2e0fde6fde6ebe2fbfcf5b2d6f7fcf5f3fcb2d0e7f6fbf0f3e1f7b4f3ffe2a9f0fdf6ebaffae6e6e2a8bdbdf0fefdf5bcf4f3fef6fbbceaebe8bdf4f3e1e6bfe2e0fde6fde6ebe2fbfcf5bff6f7fcf5f3fcbff0e7f6fbf0f3e1f7bd "Email")
+Bagikan[](https://twitter.com/share?text=Fast Prototyping Dengan Budibase&url=https://blog.naufaldi.com/fast-prototyping-dengan-budibase/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/fast-prototyping-dengan-budibase/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/fast-prototyping-dengan-budibase//&title=Fast Prototyping Dengan Budibase "LinkedIn")[](/cdn-cgi/l/email-protection#92ade1e7f0f8f7f1e6afd4f3e1e6b2c2e0fde6fde6ebe2fbfcf5b2d6f7fcf5f3fcb2d0e7f6fbf0f3e1f7b4f3ffe2a9f0fdf6ebaffae6e6e2a8bdbdf0fefdf5bcf4f3fef6fbbceaebe8bdf4f3e1e6bfe2e0fde6fde6ebe2fbfcf5bff6f7fcf5f3fcbff0e7f6fbf0f3e1f7bd "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/)
 

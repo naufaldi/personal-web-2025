@@ -58,7 +58,7 @@ const renderLink = (link: { name: string; href: string; external: boolean }) => 
 export default function Footer() {
   const footerSignals = [
     { label: 'BUILD', value: '2026' },
-    { label: 'SYSTEM', value: 'faldi.xyz' },
+    { label: 'SYSTEM', value: 'naufaldi.com' },
     { label: 'OWNER', value: siteConfig.name },
   ]
 

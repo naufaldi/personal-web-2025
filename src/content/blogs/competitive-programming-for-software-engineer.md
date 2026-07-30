@@ -8,7 +8,7 @@ author:
   avatar: "https://avatars.githubusercontent.com/naufaldi?v=4"
 date: 2023-04-20
 image: "https://images.unsplash.com/photo-1494778696781-8f23fd5553c4?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDh8fGNvbXBldGl0aXZlJTIwfGVufDB8fHx8MTY4MTk4NDE0Mg&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000"
-canonical: "http://blog.faldi.xyz/competitive-programming-for-software-engineer/"
+canonical: "https://blog.naufaldi.com/competitive-programming-for-software-engineer/"
 ---
 
 
@@ -19,7 +19,7 @@ Sebuah Tweet cukup menarik muncul diberanda Twitter, salah satu akun menfess ter
 >   
 > code;
 > 
-> — CODINGFESS (@codingfess) [October 5, 2022](https://twitter.com/codingfess/status/1577605868837015552?ref_src=twsrc%5Etfw&ref=blog.faldi.xyz)
+> — CODINGFESS (@codingfess) [October 5, 2022](https://twitter.com/codingfess/status/1577605868837015552?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 
 Menariknya, Competitive Programming merupakan hal yang lumrah di dunia Software Engineering, tetapi masih banyak orang yang belum terbiasa mengerjakan soal-soal di HackerRank atau yang dikenal sebagai Competitive Programming.
 
@@ -65,7 +65,7 @@ Level up your coding skills and quickly land a job. This is the best place to ex
 
 ![Image](https://leetcode.com/static/images/LeetCode_Sharing.png)
 
-](https://leetcode.com/?ref=blog.faldi.xyz)
+](https://leetcode.com/?ref=blog.naufaldi.com)
 
 ### Hackerrank
 
@@ -79,7 +79,7 @@ HackerRank is the market-leading technical assessment and remote interview solut
 
 ![Image](https://www.hackerrank.com/wp-content/uploads/2022/10/Homepage-Social-Share-1024x468.png)
 
-](https://www.hackerrank.com/?ref=blog.faldi.xyz)
+](https://www.hackerrank.com/?ref=blog.naufaldi.com)
 
 ### Codewars
 
@@ -93,7 +93,7 @@ A coding practice website for all programming levels – Join a community of ove
 
 ![Image](https://uploads-ssl.webflow.com/62e3ee10882dc50bcae8d07a/634816d46fc4a32b2a583416_codewars-og-image.png)
 
-](https://www.codewars.com/dashboard?ref=blog.faldi.xyz)
+](https://www.codewars.com/dashboard?ref=blog.naufaldi.com)
 
 ### HackerEarth
 
@@ -107,7 +107,7 @@ HackerEarth is a global hub of 7.6M+ developers. We help companies accurately as
 
 ![Image](https://static-fastly.hackerearth.com/newton/static/images/he-header-logo.svg)
 
-](https://www.hackerearth.com/?ref=blog.faldi.xyz)
+](https://www.hackerearth.com/?ref=blog.naufaldi.com)
 
 * * *
 
@@ -115,7 +115,7 @@ Akhir kata, Competitive programming sangat penting bagi seorang software enginee
 
 Selain itu, competitive programming juga dapat membantu software engineer untuk memperluas wawasan mereka tentang berbagai jenis algoritma dan struktur data yang digunakan dalam pemrograman. Dengan menguasai berbagai teknik dan strategi untuk menyelesaikan masalah, software engineer dapat menjadi lebih efektif dalam menulis kode yang berkualitas tinggi dan lebih efisien.
 
-Bagikan[](https://twitter.com/share?text=Competitive Programming for Software Engineer&url=http://blog.faldi.xyz/competitive-programming-for-software-engineer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=http://blog.faldi.xyz/competitive-programming-for-software-engineer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=http://blog.faldi.xyz/competitive-programming-for-software-engineer//&title=Competitive Programming for Software Engineer "LinkedIn")[](/cdn-cgi/l/email-protection#ad92ded8cfc7c8ced990eec2c0ddc8d9c4d9c4dbc88dfddfc2cadfccc0c0c4c3ca8dcbc2df8dfec2cbd9daccdfc88de8c3cac4c3c8c8df8bccc0dd96cfc2c9d490c5d9d9dd978282cfc1c2ca83cbccc1c9c483d5d4d782cec2c0ddc8d9c4d9c4dbc880dddfc2cadfccc0c0c4c3ca80cbc2df80dec2cbd9daccdfc880c8c3cac4c3c8c8df82 "Email")
+Bagikan[](https://twitter.com/share?text=Competitive Programming for Software Engineer&url=https://blog.naufaldi.com/competitive-programming-for-software-engineer/ "Twitter")[](https://www.facebook.com/sharer/sharer.php?u=https://blog.naufaldi.com/competitive-programming-for-software-engineer/ "Facebook")[](https://www.linkedin.com/shareArticle?mini=true&url=https://blog.naufaldi.com/competitive-programming-for-software-engineer//&title=Competitive Programming for Software Engineer "LinkedIn")[](/cdn-cgi/l/email-protection#ad92ded8cfc7c8ced990eec2c0ddc8d9c4d9c4dbc88dfddfc2cadfccc0c0c4c3ca8dcbc2df8dfec2cbd9daccdfc88de8c3cac4c3c8c8df8bccc0dd96cfc2c9d490c5d9d9dd978282cfc1c2ca83cbccc1c9c483d5d4d782cec2c0ddc8d9c4d9c4dbc880dddfc2cadfccc0c0c4c3ca80cbc2df80dec2cbd9daccdfc880c8c3cac4c3c8c8df82 "Email")
 
 Topik [Insight](/tag/insight/) [Lesson Learned](/tag/lesson-learned/) [Opini](/tag/opini/)
 
