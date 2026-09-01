@@ -1,141 +1,38 @@
-name: Deploy to Server
+name: Validate Cloudflare deployment
 
 on:
   push:
     branches:
       - main
+  pull_request:
 
 permissions:
-  packages: write
+  contents: read
+
+concurrency:
+  group: cloudflare-validation-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  commit-hash:
-    runs-on: ubuntu-latest
-    outputs:
-      commit_hash: ${{ steps.get_commit.outputs.commit_hash }}
-    steps:
-      - uses: actions/checkout@v4
-      - name: Get commit hash
-        id: get_commit
-        run: echo "commit_hash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
-
-  build-and-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
-      - name: Install dependencies
-        run: bun install --frozen-lockfile
-      - name: Type check
-        run: bun run tsc --noEmit
-      - name: Build
-        env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-        run: bun run build
-
-  build-and-push-image:
-    needs:
-      - build-and-test
-      - commit-hash
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Log in to the Container registry
-        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          bun-version: 1.4.0
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          platforms: linux/amd64
-          push: true
-          no-cache: true
-          build-args:
-            |
-            VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}
-            VITE_SUPABASE_ANON_KEY=${{ secrets.VITE_SUPABASE_ANON_KEY }}
-          tags:
-            |
-            ghcr.io/naufaldi/personal-web-v5:${{ needs.commit-hash.outputs.commit_hash }}
-            ghcr.io/naufaldi/personal-web-v5:prod
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs:
-      - build-and-push-image
-      - commit-hash
-    steps:
-      - name: Deploy to VPS
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
-          script:
-            |
-            echo "Starting deployment..."
+      - name: Test Cloudflare configuration
+        run: node --test tests/cloudflare-config.test.mjs
 
-            # Create project directory
-            mkdir -p ~/personal-web-v5
-            cd ~/personal-web-v5
-
-            # Login to GitHub Container Registry
-            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
-
-            # Pull the latest image
-            docker pull ghcr.io/naufaldi/personal-web-v5:prod
-
-            # Create docker-compose.prod.yml
-            cat > docker-compose.prod.yml << 'EOL'
-            version: '3.8'
-
-            services:
-              app:
-                image: ghcr.io/naufaldi/personal-web-v5:prod
-                labels:
-                  - "caddy=naufaldi.com"
-                  - "caddy.reverse_proxy={{upstreams 3000}}"
-                  - "com.centurylinklabs.watchtower.enable=true"
-                environment:
-                  - NODE_ENV=production
-                  - VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}
-                  - VITE_SUPABASE_ANON_KEY=${{ secrets.VITE_SUPABASE_ANON_KEY }}
-                restart: always
-                networks:
-                  - edge
-                  - personal-web-private
-
-            networks:
-              edge:
-                external: true
-              personal-web-private:
-                driver: bridge
-            EOL
-
-            # Deploy using docker-compose.prod.yml
-            docker compose -f docker-compose.prod.yml down || true
-            docker compose -f docker-compose.prod.yml up -d
-
-            # Show running containers
-            echo "Checking running containers..."
-            docker ps | grep personal-web-v5 || true
-
-            # Clean up old images
-            docker image prune -f
+      - name: Build and validate Cloudflare artifact
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+        run: bun run deploy:dry-run

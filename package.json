@@ -29,6 +29,8 @@
     "generate:discoverability": "bun run scripts/generate-discoverability.ts",
     "prerender:seo": "bun run scripts/prerender-seo.ts",
     "build": "bun run generate:discoverability && tsc && vite build && bun run prerender:seo",
+    "deploy:dry-run": "bun run build && wrangler deploy --dry-run",
+    "deploy": "bun run build && wrangler deploy",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -85,6 +87,7 @@
     "shadcn-ui": "^0.9.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.3.3",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "wrangler": "4.127.1"
   }
 }
