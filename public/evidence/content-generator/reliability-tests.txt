@@ -1,0 +1,78 @@
+Local reliability verification: 2026-09-05T13:58:15.375Z
+Source: 00411bd5eba9ea2c1cbece3eee1d31dac2d3c40e
+Local Worker/D1 test bindings; fake providers. Test names and summary only.
+
+ ✓ src/services/generation-durability.test.ts > durable generation ownership and checkpoints (D1) > claims atomically and blocks an overlapping delivery from its provider 72ms
+ ✓ src/services/generation-durability.test.ts > durable generation ownership and checkpoints (D1) > reuses a durable paid result after lease expiry and fences the old owner 18ms
+ ✓ src/services/generation-durability.test.ts > durable generation ownership and checkpoints (D1) > records ambiguous in-flight results without repeating the paid call 51ms
+ ✓ src/services/generation-durability.test.ts > durable generation ownership and checkpoints (D1) > rejects a late provider response after another delivery fences its attempt 17ms
+ ✓ src/services/generation-durability.test.ts > durable generation ownership and checkpoints (D1) > saves metered usage atomically with the provider checkpoint for crash compensation 17ms
+ ✓ src/services/generation-durability.test.ts > durable generation ownership and checkpoints (D1) > retains compensation intent and exact metered usage across retries 18ms
+ ✓ src/services/generation-durability.test.ts > generation compensation fault boundaries (D1) > recovers before-refund with one refund and no extra provider request 67ms
+ ✓ src/services/generation-durability.test.ts > generation compensation fault boundaries (D1) > recovers after-refund-commit with one refund and no extra provider request 44ms
+ ✓ src/services/generation-durability.test.ts > generation compensation fault boundaries (D1) > recovers deleted-project with one refund and no extra provider request 54ms
+ ✓ src/services/generation-durability.test.ts > bounded provider rejection policy > retries explicit 429 twice using the injected clock 3ms
+ ✓ src/services/generation-durability.test.ts > bounded provider rejection policy > never retries an uncertain 500 or a 429 beyond its remaining deadline 0ms
+ ✓ src/services/generation-durability.test.ts > safe generation failure classification > retains status and ambiguity without leaking provider payloads 1ms
+ ✓ src/services/generation-durability.test.ts > generation settlement fault boundary (D1) > resumes committed settlement with deleted=false 95ms
+ ✓ src/services/generation-durability.test.ts > generation settlement fault boundary (D1) > resumes committed settlement with deleted=true 111ms
+ ✓ src/services/generation-durability.test.ts > provider-guided retry deadlines > waits for each provider hint and still caps retries at two 1ms
+ ✓ src/services/generation-durability.test.ts > provider-guided retry deadlines > does not shorten guidance that exceeds the remaining 13-minute budget 1ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > does not debit when the caller snapshot changed before begin 29ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > debit and operation roll back together when ledger insert fails 17ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > terminated debit is refunded once by repeated reconciliation 16ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > saved result survives isolate loss and applies exactly once 14ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > failed slide application rolls back state and accounting then replays 15ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > project accounting failure also rolls back the slide and applied state 15ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > result persistence failure leaves a recoverable debit 15ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > failed refund leaves durable work for reconciliation 13ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > concurrent apply and refund choose one terminal financial outcome 15ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > a same-millisecond manual edit wins and AI credits return 14ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > late provider completion cannot apply after expiration refund 15ms
+ ✓ src/services/charged-operations.test.ts > ChargedOperations durable boundaries > deleted slide refunds its durable operation 14ms
+ ✓ src/services/generation-dispatcher.test.ts > GenerationDispatcher queue layer > sends one versioned generation job and records delivery 15ms
+ ✓ src/services/generation-dispatcher.test.ts > GenerationDispatcher queue layer > keeps an ambiguous send durable and redelivers without deleting the project 11ms
+ ✓ src/services/generation-dispatcher.test.ts > GenerationDispatcher queue layer > leaves readiness recovery to the journal when committed=true 14ms
+ ✓ src/services/generation-dispatcher.test.ts > GenerationDispatcher queue layer > leaves readiness recovery to the journal when committed=false 15ms
+ ✓ src/services/generation-dispatcher.test.ts > GenerationDispatcher queue layer > accepts legacy jobs and rejects unsupported versions and malformed payloads 6ms
+ ✓ src/services/astraflow-client.test.ts > normalizeImageResult > rejects URL-only provider payloads 1ms
+ ✓ src/services/astraflow-client.test.ts > normalizeImageResult > normalizes b64_json to data url 0ms
+ ✓ src/services/astraflow-client.test.ts > normalizeImageResult > keeps b64_json that is already a data url 0ms
+ ✓ src/services/astraflow-client.test.ts > normalizeImageResult > returns null for empty payload 0ms
+ ✓ src/services/astraflow-client.test.ts > normalizeImageResult > raises a clear non-retryable typed error for URL-only payloads 0ms
+ ✓ src/services/astraflow-client.test.ts > buildImageGenerationPayload > uses gpt-image-1-mini default base64 response without unsupported response_format 0ms
+ ✓ src/services/astraflow-client.test.ts > buildImageGenerationPayload > uses gpt-image-2 default base64 response without unsupported response_format 0ms
+ ✓ src/services/astraflow-client.test.ts > buildImageGenerationPayload > explicitly requests b64_json for Qwen 0ms
+ ✓ src/services/astraflow-client.test.ts > effectiveTimeoutMs > keeps the configured operation timeout without a caller cap 0ms
+ ✓ src/services/astraflow-client.test.ts > effectiveTimeoutMs > uses the smaller positive caller cap 0ms
+ ✓ src/services/astraflow-client.test.ts > effectiveTimeoutMs > ignores non-positive caller caps 0ms
+ ✓ src/services/astraflow-client.test.ts > chat vision helpers > builds image_url content and strips it back to text 1ms
+ ✓ src/services/astraflow-client.test.ts > AstraflowClient Fake > chatCompletion returns JSON string from fake 5ms
+ ✓ src/services/astraflow-client.test.ts > AstraflowClient Fake > chatCompletion accepts multimodal user content 1ms
+ ✓ src/services/astraflow-client.test.ts > AstraflowClient Fake > generateImage returns a browser-visible PNG fixture 1ms
+ ✓ src/services/astraflow-client.test.ts > AstraflowClient Fake > generateImage returns a data url from fake 0ms
+ ✓ src/services/astraflow-client.test.ts > provider cancellation > interrupting chat aborts fetch 11ms
+ ✓ src/services/astraflow-client.test.ts > provider cancellation > interrupting image aborts fetch 1ms
+ ✓ src/services/astraflow-client.test.ts > provider cancellation > deadline aborts pending fetch using the Effect clock 1ms
+ ✓ src/services/astraflow-client.test.ts > provider usage normalization > normalizes {"prompt_tokens":0,"completion_tokens":0} 1ms
+ ✓ src/services/astraflow-client.test.ts > provider usage normalization > normalizes {"prompt_tokens":3000,"completion_tokens":2} 1ms
+ ✓ src/services/astraflow-client.test.ts > provider usage normalization > normalizes {"prompt_tokens":0} 1ms
+ ✓ src/services/astraflow-client.test.ts > provider usage normalization > normalizes {"completion_tokens":0} 0ms
+ ✓ src/services/astraflow-client.test.ts > provider usage normalization > normalizes {"prompt_tokens":-1,"completion_tokens":1.5} 1ms
+ ✓ src/services/astraflow-client.test.ts > provider usage normalization > normalizes undefined 1ms
+ ✓ src/services/astraflow-client.test.ts > provider usage normalization > interruption aborts response body consumption 1ms
+ ✓ src/services/astraflow-client.test.ts > provider retry guidance > parses delay seconds and HTTP dates, rejecting malformed hints 0ms
+ ✓ src/services/astraflow-client.test.ts > provider retry guidance > chat preserves 7 from a rejected response 1ms
+ ✓ src/services/astraflow-client.test.ts > provider retry guidance > chat preserves Wed, 21 Oct 2015 07:28:09 GMT from a rejected response 1ms
+ ✓ src/services/astraflow-client.test.ts > provider retry guidance > image preserves 7 from a rejected response 1ms
+ ✓ src/services/astraflow-client.test.ts > provider retry guidance > image preserves Wed, 21 Oct 2015 07:28:09 GMT from a rejected response 0ms
+ ✓ src/generation-queue-policy.test.ts > generation acknowledgement policy > maps 'success' to a safe transport decision 2ms
+ ✓ src/generation-queue-policy.test.ts > generation acknowledgement policy > maps 'terminal_failure' to a safe transport decision 0ms
+ ✓ src/generation-queue-policy.test.ts > generation acknowledgement policy > maps 'ambiguous_external_result' to a safe transport decision 0ms
+ ✓ src/generation-queue-policy.test.ts > generation acknowledgement policy > maps 'compensation_pending' to a safe transport decision 0ms
+ ✓ src/generation-queue-policy.test.ts > generation acknowledgement policy > maps 'retryable_failure' to a safe transport decision 0ms
+ ✓ src/generation-queue-policy.test.ts > generation acknowledgement policy > maps 'retryable_failure' to a safe transport decision 0ms
+ Test Files  5 passed (5)
+      Tests  70 passed (70)
+   Start at  20:57:43
+   Duration  32.10s (transform 4.70s, setup 28.31s, import 276ms, tests 976ms, environment 0ms)

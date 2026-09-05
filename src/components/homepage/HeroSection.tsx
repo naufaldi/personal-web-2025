@@ -20,7 +20,7 @@ const heroRoutes = [
   },
   {
     index: "03",
-    label: "Download CV",
+    label: "View LinkedIn profile",
     href: siteConfig.socialLinks.linkedin ?? "#",
   },
 ];

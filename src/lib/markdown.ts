@@ -14,6 +14,8 @@ export interface PortfolioFrontmatter {
   image: string
   liveUrl?: string
   githubUrl?: string
+  status?: string
+  featuredOrder?: number
   techStack: string[]
   date: string
   type?: 'project' | 'blog'
@@ -45,4 +47,3 @@ export const parseMarkdown = <T = Frontmatter>(markdown: string): ParsedMarkdown
     content: body.trim(),
   }
 }
-

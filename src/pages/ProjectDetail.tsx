@@ -166,7 +166,7 @@ export default function ProjectDetail() {
 
             <div className="flex items-center gap-2 border-t border-[var(--border-line)] px-3 py-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--status-green)]">
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--status-green)]" />
-              PROJECT_READY
+              {project.status ?? "Project notes"}
             </div>
           </section>
         </FadeInUp>
@@ -232,7 +232,7 @@ export default function ProjectDetail() {
                       <div className="min-w-0 border-l border-[var(--border-line)] pl-4 font-mono text-[10px] uppercase leading-6 tracking-[0.2em] text-[var(--graphite-muted)]">
                         <div className="break-all">ROUTE: /PROJECTS/{project.slug}</div>
                         <div>SOURCE: MARKDOWN</div>
-                        <div>STATE: PUBLISHED</div>
+                        <div>{project.status ?? "Project notes"}</div>
                       </div>
                     </div>
 

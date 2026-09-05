@@ -1,20 +1,19 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router'
-import { portfolioItems } from '@/data/portfolio'
+import { featuredPortfolioItems } from '@/data/portfolio'
 import WorkRow from '@/components/design-system/WorkRow'
 import SectionHeader from '@/components/design-system/SectionHeader'
-import { TechnicalLabel } from '@/components/design-system/TechnicalLabel'
 import FadeInUp from '@/components/common/FadeInUp'
 import { StaggerGroup, StaggerItem } from '@/components/common/StaggerGroup'
 import { Button } from '@/components/ui/button'
 
 export default function PortfolioSection() {
-  const featuredItems = portfolioItems.slice(0, 4)
+  const featuredItems = featuredPortfolioItems
   const projectSignals = [
     {
       label: 'WORK_INDEX',
       value: `${featuredItems.length} featured`,
-      detail: 'Selected recent builds',
+      detail: 'Selected for depth, not release date',
     },
     {
       label: 'SYSTEM_SCOPE',
@@ -23,8 +22,8 @@ export default function PortfolioSection() {
     },
     {
       label: 'PRIMARY_OUTPUT',
-      value: 'Working software',
-      detail: 'Shipped systems shaped around practical workflows',
+      value: 'Decisions and evidence',
+      detail: 'What I built, how I checked it, and what remains',
     },
   ]
 
@@ -37,7 +36,7 @@ export default function PortfolioSection() {
             label="PORTFOLIO_WORK_ROW"
             title="Portfolio"
             titleId="projects-heading"
-            description="Selected products, systems, and experiments showing the move from interface craft toward broader software engineering."
+            description="I build interfaces, APIs, and the data flows behind them. These projects show the decisions, failure cases, and checks that shaped my work."
             action={
               <Button asChild variant="technical">
                 <Link to="/projects">
@@ -65,11 +64,6 @@ export default function PortfolioSection() {
                       {signal.detail}
                     </p>
                   </div>
-                  {signal.label === 'WORK_INDEX' && (
-                    <TechnicalLabel variant="mono" className="mt-1">
-                      Live
-                    </TechnicalLabel>
-                  )}
                 </div>
               </div>
             ))}

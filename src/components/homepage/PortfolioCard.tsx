@@ -13,8 +13,9 @@ interface PortfolioCardProps {
 }
 
 const getOutputState = (item: PortfolioItem) => {
+  if (item.status) return item.status;
   if (item.liveUrl) {
-    return "LIVE_OUTPUT";
+    return "Website linked";
   }
 
   if (item.githubUrl) {
@@ -152,7 +153,7 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
             className="motion-button inline-flex items-center gap-1.5 rounded-none border border-[var(--graphite)] bg-[var(--graphite)] px-3 py-2 font-body text-sm font-semibold text-[var(--paper)] transition-colors duration-200 hover:bg-[var(--graphite-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] active:translate-y-px"
             aria-label={`View ${item.title} project details`}
           >
-            Brief
+            Read case study
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
           {item.liveUrl && (

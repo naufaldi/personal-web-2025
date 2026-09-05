@@ -37,13 +37,21 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 ## Projects
 
+### Content Generator: recovering interrupted work
+
+- URL: https://naufaldi.com/projects/content-generator
+- Description: I worked on the API, background jobs, and credit recovery behind an AI carousel editor. The difficult part was keeping retries from repeating paid work or refunding twice.
+- Stack: TypeScript, Effect, Cloudflare Workers, D1, Queues, R2, TanStack Start
+- Updated: 2026-09-05
+- Summary: Why I worked on this Content Generator turns a prompt into an editable carousel. A user can generate slides, change the copy, and work with images. Each paid operation also changes a credit balance. That last detail changes the engineering problem. A failed request can leave the user without a result even though the s…
+
 ### Teacher Exam - AI Exam Sheet Generator
 
 - URL: https://naufaldi.com/projects/teacher-exam
-- Description: A full-stack exam generation platform for Indonesian elementary teachers, turning one topic prompt into print-ready A4 exam sheets with answer keys, explanations, curriculum grounding, and review workflows.
+- Description: I built an exam generation workflow for Indonesian elementary teachers, from the API and saved history to teacher review and A4 printing.
 - Stack: React, Vite, TypeScript, Hono, Effect-TS, Drizzle, PostgreSQL, better-auth, Docker, Caddy
 - Updated: 2026-04-22
-- Summary: Overview Teacher Exam is an AI assisted exam sheet generator built for Indonesian elementary school teachers. The app turns a compact teacher prompt, such as a grade level, subject, topic, and exam type, into a structured A4 ready assessment with mixed question types, an answer key, and teacher facing explanations. Th…
+- Summary: Why I built this I wanted an exam generator that fits how Indonesian elementary school teachers prepare a worksheet. A useful result needs questions, answer keys, explanations, and a layout that can be printed on A4 paper. The project takes a short prompt through generation, review, and printing. My work spans the Rea…
 
 ### Worker Class - International Workers' Day Countdown
 
@@ -83,7 +91,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 - Description: A full-stack civic engagement platform enabling citizens to report road damage, built from scratch with React, Hono, PostgreSQL, and PostGIS. Designed to centralize community reports and amplify citizen voices through social media virality.
 - Stack: React 18, Vite, TypeScript, Hono, PostgreSQL, PostGIS, Cloudflare R2, Tailwind CSS, Firebase Auth, Docker, Caddy
 - Updated: 2025-01-17
-- Summary: Overview Viralkan is a community driven civic engagement platform that enables citizens in Bekasi, Indonesia to report road damage and infrastructure issues. Built entirely from scratch, the platform serves as a centralized hub for collecting, verifying, and sharing road condition reports—helping citizens avoid damage…
+- Summary: Status of this case study These notes include planned capabilities. PostGIS installation is not evidence of implemented spatial queries, and infrastructure configuration is not evidence of completed caching or audit logging. The sections below record the project at the time of writing; I have not revalidated its deplo…
 
 ### Pangan Indonesia – Food Price Data API & Cache System
 
@@ -91,7 +99,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 - Description: A high-performance FastAPI backend for Indonesian food price data with efficient data ingestion pipeline, PostgreSQL caching layer, and clean architecture. Built to process and serve structured commodity price data at scale.
 - Stack: Python, FastAPI, PostgreSQL, SQLAlchemy, Pydantic, Alembic, APScheduler, Docker, Caddy
 - Updated: 2025-01-17
-- Summary: Overview Pangan is a backend system for aggregating, caching, and serving Indonesian food price data from government sources. The system fetches commodity price data from official APIs, validates and normalizes it, stores it efficiently in PostgreSQL, and exposes a high performance REST API with advanced filtering and…
+- Summary: Status of this case study These notes describe an API MVP and its intended direction. Performance figures listed as objectives are targets, not fresh benchmarks. Scheduled ingestion, monitoring, and backup/recovery need separate verification; I have not revalidated the deployment in this portfolio update. Overview Pan…
 
 ### Industry Talent - Job Listing Platform
 

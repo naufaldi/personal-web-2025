@@ -1,0 +1,46 @@
+[
+  {
+    "url": "https://content.naufaldi.com",
+    "status": 200,
+    "final_url": "https://content.naufaldi.com/home"
+  },
+  {
+    "url": "https://api-content.naufaldi.com/health",
+    "status": 200,
+    "final_url": "https://api-content.naufaldi.com/health"
+  },
+  {
+    "url": "https://ujian-sekolah.naufaldi.com",
+    "status": 200,
+    "final_url": "https://ujian-sekolah.naufaldi.com"
+  },
+  {
+    "url": "https://github.com/naufaldi/teacher-exam",
+    "status": 200,
+    "final_url": "https://github.com/naufaldi/teacher-exam"
+  },
+  {
+    "url": "https://github.com/naufaldi/teacher-exam/tree/main/screenshots",
+    "status": 200,
+    "final_url": "https://github.com/naufaldi/teacher-exam/tree/main/screenshots"
+  },
+  {
+    "url": "https://github.com/naufaldi/teacher-exam/tree/main/packages/shared",
+    "status": 200,
+    "final_url": "https://github.com/naufaldi/teacher-exam/tree/main/packages/shared"
+  },
+  {
+    "url": "https://ts-hooks-kit.netlify.app",
+    "status": 200,
+    "final_url": "https://ts-hooks-kit.netlify.app"
+  },
+  {
+    "url": "https://github.com/naufaldi/ts-hooks-kit",
+    "status": 200,
+    "final_url": "https://github.com/naufaldi/ts-hooks-kit"
+  },
+  {
+    "url": "https://www.npmjs.com/package/@ts-hooks-kit/core",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

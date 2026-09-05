@@ -7,7 +7,13 @@ liveUrl: "https://api.pangan.id"
 githubUrl: "https://github.com/naufaldi/pangan-be"
 techStack: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Pydantic", "Alembic", "APScheduler", "Docker", "Caddy"]
 date: "2025-01-17"
+status: "MVP · hardening incomplete"
 ---
+
+## Status of this case study
+
+These notes describe an API MVP and its intended direction. Performance figures listed as objectives are targets, not fresh benchmarks. Scheduled ingestion, monitoring, and backup/recovery need separate verification; I have not revalidated the deployment in this portfolio update.
+
 
 ## Overview
 

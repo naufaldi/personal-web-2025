@@ -28,11 +28,11 @@ Important notes:
 
 ## Recent projects
 
-- [Teacher Exam - AI Exam Sheet Generator](https://naufaldi.com/projects/teacher-exam): A full-stack exam generation platform for Indonesian elementary teachers, turning one topic prompt into print-ready A4 exam sheets with answer keys, explanations, curriculum grounding, and review workflows.
+- [Content Generator: recovering interrupted work](https://naufaldi.com/projects/content-generator): I worked on the API, background jobs, and credit recovery behind an AI carousel editor. The difficult part was keeping retries from repeating paid work or refunding twice.
+- [Teacher Exam - AI Exam Sheet Generator](https://naufaldi.com/projects/teacher-exam): I built an exam generation workflow for Indonesian elementary teachers, from the API and saved history to teacher review and A4 printing.
 - [Worker Class - International Workers' Day Countdown](https://naufaldi.com/projects/worker-class): A cinematic single-page countdown for International Workers' Day 2026, combining a full-screen visual treatment, animated countdown state, Three.js particles, GSAP motion, and music controls.
 - [ts-hooks-kit](https://naufaldi.com/projects/ts-hooks-kit): A production-ready React hooks library for React 18 and 19, offering typed, tree-shakeable hooks, documentation, examples, and a migration path from usehooks-ts.
 - [FanGuard - macOS Fan Control](https://naufaldi.com/projects/mac-fan-ctrl): A native macOS fan control utility built with Tauri, Rust, and Svelte, providing temperature monitoring, fan-speed modes, presets, and thermal safety controls.
-- [How to Ship AI Slop into Production](https://naufaldi.com/projects/cursor-feb-2026): A presentation deck about AI-generated code quality, engineering guardrails, and practical workflows for shipping AI-assisted software into production with less risk.
 
 ## Recent writing
 

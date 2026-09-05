@@ -34,6 +34,7 @@ export default function WorkRow({ item, index }: WorkRowProps) {
             <div className="flex flex-wrap items-center gap-2">
               <TechnicalLabel variant="mono">{projectType}</TechnicalLabel>
               <TechnicalLabel variant="outline">{displayDate}</TechnicalLabel>
+              {item.status && <TechnicalLabel variant="outline">{item.status}</TechnicalLabel>}
             </div>
 
             <h3
@@ -86,7 +87,7 @@ export default function WorkRow({ item, index }: WorkRowProps) {
             <span className="text-drawing-label">ROUTE_PROJECT</span>
             <Button asChild variant="technical" className="w-fit">
               <Link to={`/projects/${item.slug}`}>
-                Brief
+                Read case study
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </Button>

@@ -8,6 +8,8 @@ export interface PortfolioItem {
   image: string
   liveUrl?: string
   githubUrl?: string
+  status?: string
+  featuredOrder?: number
   techStack: string[]
   content?: string
   date?: string
@@ -31,6 +33,8 @@ const createPortfolioItem = (markdownContent: string): PortfolioItem => {
     image: parsed.frontmatter.image,
     liveUrl: parsed.frontmatter.liveUrl,
     githubUrl: parsed.frontmatter.githubUrl,
+    status: parsed.frontmatter.status,
+    featuredOrder: parsed.frontmatter.featuredOrder,
     techStack: parsed.frontmatter.techStack,
     content: parsed.content,
     date: parsed.frontmatter.date,
@@ -50,6 +54,10 @@ const loadProjects = (): PortfolioItem[] =>
   Object.values(markdownModules).map(createPortfolioItem).sort(sortByNewest)
 
 export const portfolioItems = loadProjects()
+
+export const featuredPortfolioItems = portfolioItems
+  .filter((item) => item.featuredOrder !== undefined)
+  .sort((first, second) => first.featuredOrder! - second.featuredOrder!)
 
 export const getProjectBySlug = (slug: string): PortfolioItem | undefined => {
   return portfolioItems.find((project) => project.slug === slug)

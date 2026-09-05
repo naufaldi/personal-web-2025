@@ -20,7 +20,13 @@ techStack:
     "Caddy",
   ]
 date: "2025-01-17"
+status: "Prototype · historical notes"
 ---
+
+## Status of this case study
+
+These notes include planned capabilities. PostGIS installation is not evidence of implemented spatial queries, and infrastructure configuration is not evidence of completed caching or audit logging. The sections below record the project at the time of writing; I have not revalidated its deployment in this portfolio update.
+
 
 ## Overview
 
