@@ -49,7 +49,7 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 - URL: https://naufaldi.com/projects/teacher-exam
 - Description: I built an exam generation workflow for Indonesian elementary teachers, from the API and saved history to teacher review and A4 printing.
-- Stack: React, Vite, TypeScript, Hono, Effect-TS, Drizzle, PostgreSQL, better-auth, Docker, Caddy
+- Stack: React, Vite, TypeScript, Effect HttpApi, Effect-TS, Drizzle, PostgreSQL, better-auth, Docker, Caddy
 - Updated: 2026-04-22
 - Summary: Why I built this I wanted an exam generator that fits how Indonesian elementary school teachers prepare a worksheet. A useful result needs questions, answer keys, explanations, and a layout that can be printed on A4 paper. The project takes a short prompt through generation, review, and printing. My work spans the Rea…
 
@@ -182,6 +182,22 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 - Summary: Overview The Slate JS Editor is an advanced rich text editing solution built on the Slate.js framework. Unlike traditional text areas, this editor provides comprehensive text formatting capabilities while maintaining simplicity and performance. It's a showcase of modern text editing technology with an intuitive user i…
 
 ## Recent blog writing
+
+### A filter can hide valid data
+
+- URL: https://naufaldi.com/blogs/a-filter-can-hide-valid-data
+- Category: Technical writer
+- Published: 2026-09-05
+- Description: A class 2 worksheet existed, but the filter only offered classes 5 and 6. Here is how I traced the mismatch.
+- Summary: I opened Teacher Exam's public bank and found a small mismatch: a class 2 worksheet was listed, but the grade filter only offered classes 5 and 6. The data was visible. The interface still made that data harder to find. Start from the mismatch I traced the public bank to a share…
+
+### Why I do not blindly retry paid requests
+
+- URL: https://naufaldi.com/blogs/why-i-do-not-blindly-retry-paid-requests
+- Category: Technical writer
+- Published: 2026-09-05
+- Description: A timeout leaves uncertainty. My Content Generator work made that distinction concrete.
+- Summary: A timeout is easy to turn into a retry button. The harder question is what happened before the response disappeared. In Content Generator, a request can reserve credits and call an AI provider before the result is saved. Repeating the request may repeat work that the provider al…
 
 ### Postmortem: The Disguised Crypto Miner on My VPS
 
@@ -366,22 +382,6 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 - Published: Tue Apr 02 2024 07:00:00 GMT+0700 (Western Indonesia Time)
 - Description: > Of course, everything failed, even because the recruiter froze hiring or the salary didn't match, or there were problems with the technical interview.
 - Summary: Of course, everything failed, even because the recruiter froze hiring or the salary didn't match, or there were problems with the technical interview. In the past few weeks, I have been doing interviews for the position of Senior Frontend Engineer at some companies. It's to matc…
-
-### NextJS and React Leafleat : Add GeoJSON
-
-- URL: https://naufaldi.com/blogs/nextjs-and-react-leafleat-add-geojson
-- Category: Technical writer
-- Published: Tue Jan 16 2024 07:00:00 GMT+0700 (Western Indonesia Time)
-- Description: After posting about how to add leafleat in NextJS, in this tutorial we will learn how to adding coordinate with GEOJSON. GEOJSON is format for geospatial data s
-- Summary: After posting about how to add leafleat in NextJS, in this tutorial we will learn how to adding coordinate with GEOJSON. GEOJSON is format for geospatial data structure. GeoJSON is a geospatial data interchange format based on JavaScript Object Notation (JSON). It defines severa…
-
-### Technical Guide : Setup NextJS with Leaflet
-
-- URL: https://naufaldi.com/blogs/technical-guide-setup-nextjs-with-leaflet
-- Category: Technical writer
-- Published: Thu Jan 04 2024 07:00:00 GMT+0700 (Western Indonesia Time)
-- Description: you can create next js with `create-next-js-app`
-- Summary: Setup NextJS you can create next js with create next js app or use template like starter nextjs tailwindcss Navigate to project Setup Leaflet Because leaflet its not reactjs, we need dependencies for reactjs with react leaflet . Docs about react leaflet can read here if you're u…
 
 ## Short notes
 

@@ -36,6 +36,8 @@ Important notes:
 
 ## Recent writing
 
+- [A filter can hide valid data](https://naufaldi.com/blogs/a-filter-can-hide-valid-data): A class 2 worksheet existed, but the filter only offered classes 5 and 6. Here is how I traced the mismatch.
+- [Why I do not blindly retry paid requests](https://naufaldi.com/blogs/why-i-do-not-blindly-retry-paid-requests): A timeout leaves uncertainty. My Content Generator work made that distinction concrete.
 - [Postmortem: The Disguised Crypto Miner on My VPS](https://naufaldi.com/blogs/crypto-miner-systemguard-incident-postmortem): A postmortem of a disguised XMRig miner running as systemguard on my VPS: what happened, how it was detected, how it was removed, and what I changed afterward.
 - [Tips Lolos Probation: Panduan Buat Kamu yang Baru Mulai Kerja](https://naufaldi.com/blogs/tips-lolos-probation): Banyak orang gagal probation bukan karena ga bisa kerja, tapi karena ga tau apa yang dinilai. Artikel ini bahas cara lolos probation dengan strategi yang jelas.
 - [How to Setup MiniMax in OpenCode](https://naufaldi.com/blogs/setup-minimax-opencode): Step-by-step guide to configure MiniMax-M2.1 as your AI coding assistant in OpenCode, from installation to authentication.
@@ -44,8 +46,6 @@ Important notes:
 - [From TypeScript to Go: Finally Understanding Compilers vs Transpiler](https://naufaldi.com/blogs/compiler-vs-transpiler): I used Go and JavaScript labs to finally understand what actually happens between my code, a transpiler like Babel/TS, and the machine. This is my frontend‑to‑Go journey through compilers, interpreters, and JIT.
 - [Why Do I Read? A Reflection on Books, Manhwa, and a Critical Tweet](https://naufaldi.com/blogs/reading-book): I felt guilty for reading manhwa instead of books. Then I started to question why books are seen as 'smarter' in the first place.
 - [AI Context Engineering: How to Level Up Prompting, Context, and Output with Modern Tools](https://naufaldi.com/blogs/ai-context-engineering-how-to-level-up-prompting-context-and-output-with-modern-tools): Most developers blame the AI when they get bad answers. The truth? 90% of “dumb” output is your fault—because you haven’t engineered the prompt, context, or out
-- [A Practical Guide Environment Variables: A Guide from OS to Next.js](https://naufaldi.com/blogs/a-practical-guide-environment-variables-a-guide-from-os-to-next-js): I still remember the frustration. I was deploying a Next.js app in a Docker container for the first time. I dutifully set my `NEXT_PUBLIC_API_URL` variable usin
-- [Managing State in React: Why You Should Avoid &quot;Too Much State&quot; in a Single Component](https://naufaldi.com/blogs/managing-state-in-react-why-you-should-avoid-quot-too-much-state-quot-in-a-single-component): In React projects, it’s common to see components with a long list of state variables, sometimes more than ten in one file. State helps us keep track of changing
 
 ## Short notes
 

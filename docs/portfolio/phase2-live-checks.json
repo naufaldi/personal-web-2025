@@ -1,0 +1,56 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "bytes": 6327,
+    "type": "text/html"
+  },
+  {
+    "path": "/projects/content-generator",
+    "status": 200,
+    "bytes": 13636,
+    "type": "text/html"
+  },
+  {
+    "path": "/projects/teacher-exam",
+    "status": 200,
+    "bytes": 12498,
+    "type": "text/html"
+  },
+  {
+    "path": "/demos/fullstack-walkthrough/",
+    "status": 200,
+    "bytes": 4594,
+    "type": "text/html"
+  },
+  {
+    "path": "/pilot/teacher-exam/",
+    "status": 200,
+    "bytes": 5023,
+    "type": "text/html"
+  },
+  {
+    "path": "/pilot/teacher-exam/session.mjs",
+    "status": 200,
+    "bytes": 1062,
+    "type": "text/javascript"
+  },
+  {
+    "path": "/blogs/a-filter-can-hide-valid-data",
+    "status": 200,
+    "bytes": 8239,
+    "type": "text/html"
+  },
+  {
+    "path": "/blogs/why-i-do-not-blindly-retry-paid-requests",
+    "status": 200,
+    "bytes": 8355,
+    "type": "text/html"
+  },
+  {
+    "path": "/evidence/teacher-exam/workflow-checks.txt",
+    "status": 200,
+    "bytes": 1318,
+    "type": "text/plain"
+  }
+]

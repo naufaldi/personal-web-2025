@@ -90,6 +90,10 @@ I started from visible behavior: a generation result, an error, and a balance in
 
 My frontend experience helped me notice stale state. Working through the backend made me ask a harder question: what should the next execution do when the previous one stopped halfway through?
 
+## Walk through the decisions
+
+[Take the five-minute engineering walkthrough](/demos/fullstack-walkthrough/). It links the architecture, failure tests, frontend state issue, and the limits of my evidence. No account is needed.
+
 ## What remains
 
 Live-provider verification and operating evidence are separate work. I still need measured completion rates, cost per successful generation, and recovery observations under actual usage before making claims about production reliability at scale. Demo credits are not evidence of payment processing.

@@ -10,7 +10,7 @@ techStack:
     "React",
     "Vite",
     "TypeScript",
-    "Hono",
+    "Effect HttpApi",
     "Effect-TS",
     "Drizzle",
     "PostgreSQL",
@@ -46,7 +46,7 @@ I treated generation as one step in a review workflow. Structured output gives t
 ```mermaid
 flowchart TD
   Teacher[Teacher prompt] --> Web[React interface]
-  Web --> API[Hono API and authentication]
+  Web --> API[Effect HttpApi and authentication]
   API --> Generation[Effect services and AI generation]
   Generation --> Validation[Shared schema validation]
   Validation --> DB[PostgreSQL history]
@@ -82,6 +82,24 @@ I am separating documented capabilities from measured impact. The next useful ev
 ## What I learned
 
 Building the interface was only part of making this useful. The data contract determines what the interface can trust, and the review flow determines what the teacher can correct. A technically valid response is still only a draft until someone checks the content.
+
+## A concrete problem found in the public workflow
+
+During the September 5 browser check, the public bank contained a class 2 worksheet but its grade filter offered only classes 5 and 6. The records and the filter were describing different scopes.
+
+I traced the filter to a hardcoded two-grade list. The shared grade schema already supports classes 1–6. I changed the options to derive from that schema, then checked that selecting class 2 sends `grade: 2` and resetting removes the grade filter. This was an engineering observation, not feedback from a teacher pilot.
+
+The regression failed before the change because option 2 did not exist. After the fix, 96 selected local review, preview, and public-bank tests passed in a serial run. These are component tests with mocked APIs; they do not establish real teacher completion times.
+
+[Read the workflow verification](/evidence/teacher-exam/workflow-checks.txt)
+
+The current checkout uses Effect HttpApi. Earlier project notes described its Hono implementation; this diagram reflects the code checked for this update.
+
+## Try the workflow and share feedback
+
+[Open the teacher pilot](/pilot/teacher-exam/) for a short task guide and a local feedback download. No observations are collected automatically. Teachers can review their notes and choose whether to send them to me.
+
+[Take the five-minute engineering walkthrough](/demos/fullstack-walkthrough/) to compare this product workflow with the Content Generator recovery work.
 
 ## What remains
 

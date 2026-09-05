@@ -1,0 +1,15 @@
+Teacher Exam workflow verification, September 5, 2026
+Local component tests; mocked API calls. Not teacher observations or a paid generation test.
+
+Command: pnpm --filter @teacher-exam/web exec vitest run src/routes/__test__/bank-soal-publik.test.tsx src/routes/__test__/review src/routes/__test__/preview --maxWorkers=1
+
+ Test Files  14 passed (14)
+      Tests  96 passed (96)
+   Start at  21:21:33
+   Duration  55.60s (transform 618ms, setup 1.56s, import 30.49s, tests 15.89s, environment 6.16s)
+
+The original parallel run failed with timeouts and test-environment errors. A serial baseline narrowed the failures to a stale test rendering the review page without loader data, even though the route redirects when examId is missing. The test now checks the redirect contract. The grade-filter regression failed because option 2 was missing, then passed after options were derived from the shared grade schema.
+
+The suite checks review and preview behavior through component fixtures and mocked APIs. It does not establish live AI quality, printing on every device, or teacher usability outcomes.
+
+Production check, September 5, 2026: frontend commit fff83fb deployed. Public bank offers grades 1–6; selecting grade 2 returned two grade 2 rows. API and database remained healthy. No teacher pilot outcomes collected.
