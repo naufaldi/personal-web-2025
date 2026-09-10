@@ -122,3 +122,16 @@ Books/Manhwa status: passed for checked views. Side-by-side comparisons: [Books]
 Source artwork intentionally differs from the dark generated interfaces. Existing project details retain their full content and original slugs.
 
 Projects status: passed after production-specific CSS fixes. [Comparison](docs/verification/projects-comparison.png), [mobile](docs/verification/projects-mobile.png), [interaction checks](docs/verification/projects-interactions.json). Scoped selectors prevent shared CSS from overriding note height and title sizes in the production bundle. All 17 entries remain searchable, and unmatched queries show an empty state without moving input focus. Responsive checks at 1487, 1100, 834 and 390 CSS pixels show no overflow. The ts-hooks-kit detail renders and its return link reaches native Projects.
+
+## Writing archive
+
+| Before | After | Why |
+| --- | --- | --- |
+| Paginated React list under a hero | Five-essay composition plus complete searchable index | Match the selected editorial direction |
+| Generated essay headlines and excerpts | Existing essay titles and source excerpts | Preserve authorship and destinations |
+| Top essay action touched the next article’s metadata | Summary excerpt stays in the index | Give both article links clear space |
+| An existing category had no filter button | Include Security Incident from source data | Keep all 86 published entries discoverable by category |
+
+The large title sits behind the lead paper artifact. Existing personal photographs replace generated city imagery. Full titles, readable captions and search add vertical space, so this composition scrolls naturally rather than shrinking typography into one viewport.
+
+Writing status: passed for checked views, with no outstanding actionable P0–P2 issues observed. [Side-by-side comparison](docs/verification/writing-comparison.png), [mobile](docs/verification/writing-mobile.png), [tablet](docs/verification/writing-tablet.png), and [interaction evidence](docs/verification/writing-interactions.json). Category counts are 86 / 10 / 6 / 64 / 5 / 1 for All / Journey / Ideas / Technical / Opinions / Security Incident. Search, empty results, focus retention, keyboard activation and reduced motion passed. Checked widths 1487, 1100, 834, 390, 320 and 744 CSS pixels without horizontal overflow. Article navigation and return to the native archive passed. The 744px viewport verifies reflow; actual browser-chrome 200% zoom and physical touch were not tested in this phase.

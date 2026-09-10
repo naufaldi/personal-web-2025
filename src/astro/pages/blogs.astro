@@ -1,0 +1,33 @@
+---
+import Archive from '../layouts/Archive.astro'
+import Photo from '../components/CollectionPhoto.astro'
+import { writingEntries, featuredWriting } from '@/data/writingCollection'
+import workspace from '@/assets/collected/workspace.jpg'
+import community from '@/assets/collected/community.jpg'
+import personal from '@/assets/collected/personal.jpg'
+import portrait from '@/assets/collected/portrait.jpg'
+import { buildSeoRoutes } from '../../../scripts/seo-data'
+import '../styles/writing-collection.css'
+const { routes } = await buildSeoRoutes()
+const published = new Set(routes.map(route => route.path))
+const entries = writingEntries.filter(entry => entry.href && published.has(entry.href))
+const baseCategories = ['All', 'Journey', 'Ideas', 'Technical', 'Opinions']
+const categories = [...baseCategories, ...new Set(entries.flatMap(entry => entry.categories).filter(category => !baseCategories.includes(category)))]
+const photos = [null, { image: workspace, alt: 'Faldi’s workspace' }, { image: personal, alt: 'Two game controllers in front of a screen' }, { image: workspace, alt: 'Monitors on Faldi’s desk' }, { image: community, alt: 'Friends gathered at a cafe' }]
+---
+<Archive path="/blogs" title="Writing" entries={entries} categories={categories} searchable>
+  <div class="archive-board writing-board" data-board>
+    <h1 class="archive-title font-display">WRITING</h1>
+    <p class="archive-margin font-mono text-caption">Thoughts<br />Notes<br />Essays<br />In progress</p>
+    {featuredWriting.map((entry, index) => <article class={`archive-artifact writing-artifact writing-artifact-${index + 1}`} data-feature-category={entry.categories.join('|')} data-search={`${entry.title} ${entry.description ?? ''} ${entry.meta}`}>
+      {photos[index] && <a href={entry.href} class="writing-photo" aria-label={`Read ${entry.title}`}><Photo image={photos[index]!.image} alt={photos[index]!.alt} eager={index < 3} /></a>}
+      <div class="writing-copy">
+        <p class="font-mono text-caption">{entry.categories.join(' / ')} / {entry.meta}</p>
+        <h2><a href={entry.href}>{entry.title}</a></h2>
+        {entry.description && <p class="writing-excerpt text-body">{entry.description}</p>}
+        <a class="editorial-link font-mono text-nav" href={entry.href}>Read essay <span class="text-vermilion" aria-hidden="true">↗</span></a>
+      </div>
+    </article>)}
+    <figure class="archive-decoration writing-life"><Photo image={portrait} alt="Faldi outdoors" /><figcaption class="font-mono text-caption">People /<br />Beyond the code</figcaption></figure>
+  </div>
+</Archive>

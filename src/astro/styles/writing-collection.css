@@ -1,0 +1,61 @@
+.writing-board .archive-title { grid-column: 1 / 10; font-size: clamp(80px,12vw,184px); }
+.writing-board .archive-margin { grid-area: 9 / 1 / 14 / 2; }
+.writing-board .writing-artifact { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; }
+.writing-board .writing-copy { min-width: 0; }
+.writing-board .writing-copy h2 { font: 700 28px/1.1 var(--font-body); letter-spacing: -.035em; margin-block: 12px; }
+.writing-board .writing-excerpt { font-size: 16px; line-height: 1.5; }
+.writing-board .writing-artifact-1 { grid-area: 4 / 2 / 22 / 7; margin-left: 32px; margin-right: 16px; display: block; z-index: 2; }
+.writing-board .writing-artifact-1 .writing-copy { padding: 36px; min-height: 430px; background: color-mix(in srgb,var(--color-paper),var(--color-ink) 5%); }
+.writing-board .writing-artifact-1 h2 { font-size: clamp(36px,4vw,58px); margin-block: 24px; }
+.writing-board .writing-artifact-1 .writing-excerpt { font-size: 18px; }
+.writing-board .writing-artifact-2 { grid-area: 1 / 9 / 11 / 13; margin-left: 8px; }
+.writing-board .writing-artifact-2 .media-frame { aspect-ratio: .8; }
+.writing-board .writing-artifact-3 { grid-area: 11 / 7 / 22 / 13; margin-left: 24px; }
+.writing-board .writing-artifact-3 .media-frame { aspect-ratio: 1.2; }
+.writing-board .writing-artifact-3 .writing-excerpt { display: none; }
+.writing-board .writing-artifact-4 { grid-area: 21 / 5 / 31 / 9; margin-right: 24px; }
+.writing-board .writing-artifact-4 .media-frame { aspect-ratio: .85; }
+.writing-board .writing-artifact-4 .writing-excerpt { display: none; }
+.writing-board .writing-artifact-5 { grid-area: 21 / 9 / 31 / 13; margin-left: 24px; grid-template-columns: 1fr 1.3fr; }
+.writing-board .writing-artifact-5 h2 { font-size: 24px; }
+.writing-board .writing-artifact-5 .media-frame { aspect-ratio: .65; }
+.writing-board .writing-artifact-5 .writing-excerpt { display: none; }
+.writing-board .writing-life { grid-area: 14 / 1 / 30 / 3; margin-right: -16px; }
+.writing-board .writing-life .media-frame { aspect-ratio: .65; }
+.writing-board .writing-life figcaption { padding-top: 12px; }
+.writing-board.is-filtered .writing-artifact { display: block; }
+.writing-board.is-filtered .writing-photo { display: block; margin-bottom: 24px; }
+.writing-board.is-filtered .media-frame { aspect-ratio: 1.4; }
+.writing-board.is-filtered .writing-artifact-1 h2 { font-size: 36px; }
+.writing-board.is-filtered .writing-artifact-1 .writing-copy { min-height: 0; padding: 24px; }
+@media (min-width:80rem) { .writing-board:not(.is-filtered) { min-height: 950px; } }
+@media (max-width:79.999rem) {
+ .writing-board .archive-title { grid-area: 1 / 1 / 2 / -1; font-size: 16vw; }
+ .writing-board .writing-artifact-1 { grid-area: 2 / 2 / 3 / 7; margin: -40px 0 0; }
+ .writing-board .writing-artifact-2 { grid-area: 3 / 1 / 4 / 6; margin: 0; }
+ .writing-board .writing-artifact-3 { grid-area: 4 / 2 / 5 / 7; margin: 0; }
+ .writing-board .writing-artifact-4 { grid-area: 5 / 1 / 6 / 6; margin: 0; }
+ .writing-board .writing-artifact-5 { grid-area: 6 / 2 / 7 / 7; margin: 0; }
+ .writing-board .writing-life { grid-area: 7 / 1 / 8 / 3; margin: 0; }
+}
+@media (min-width:64rem) and (max-width:79.999rem) {
+ .writing-board .writing-artifact-1 { grid-area: 2 / 3 / 3 / 13; }
+ .writing-board .writing-artifact-2 { grid-area: 3 / 1 / 4 / 11; }
+ .writing-board .writing-artifact-3 { grid-area: 4 / 3 / 5 / 13; }
+ .writing-board .writing-artifact-4 { grid-area: 5 / 1 / 6 / 11; }
+ .writing-board .writing-artifact-5 { grid-area: 6 / 3 / 7 / 13; }
+ .writing-board .writing-life { grid-area: 7 / 1 / 8 / 5; }
+}
+@media (max-width:47.999rem) {
+ .writing-board > :not(.archive-margin) { grid-area: auto; grid-column: 1 / -1; margin: 0; }
+ .writing-board .writing-artifact { display: block; }
+ .writing-board .writing-artifact-1 { margin-top: -24px; }
+ .writing-board .writing-artifact-1 .writing-copy { padding: 24px; min-height: 0; }
+ .writing-board .writing-photo { display: block; margin: 0 32px 24px 0; }
+ .writing-board .writing-artifact .media-frame { aspect-ratio: 1.2; }
+ .writing-board .writing-copy h2 { font-size: 28px; }
+ .writing-board .writing-artifact-1 h2 { font-size: 36px; }
+ .writing-board .writing-life { margin-left: 64px; }
+}
+
+.writing-board .writing-artifact-2 .writing-excerpt { display: none; }

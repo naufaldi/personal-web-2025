@@ -1,0 +1,10 @@
+{
+  "communityMentoring": 8,
+  "aboutExperienceExpanded": true,
+  "booksEmptyToIndex": {
+    "count": 1,
+    "index": true
+  },
+  "missingImageFallback": true,
+  "homepageNative": true
+}

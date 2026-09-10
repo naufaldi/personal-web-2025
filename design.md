@@ -2,7 +2,7 @@
 
 > One personal collection, composed with type, imagery and space.
 
-**Theme:** warm-light only. **Implementation target:** Astro + Tailwind CSS v4, homepage first. This document defines the agreed visual tokens and shared UI rules. The homepage now uses these tokens; unmigrated React pages retain their existing styling.
+**Theme:** warm-light only. **Implementation target:** Astro + Tailwind CSS v4, homepage first. This document defines the agreed visual tokens and shared UI rules. The homepage and migrated collection pages now use these tokens; unmigrated React pages retain their existing styling.
 
 ## Sources and responsibilities
 
@@ -226,7 +226,7 @@ Examples: `bg-paper text-ink`, `font-display text-display`, `font-body text-read
 
 ## Next phase and checks
 
-The homepage is implemented in **Astro + Tailwind CSS v4**. Existing pages use a React compatibility island until their own migration. See [migration-2026.md](docs/migration-2026.md) for route ownership, build commands, CSS boundaries and verification. Preserve source content, URLs and SEO contracts as later pages migrate. Use Bun exclusively.
+Home, About, In Good Company, Books, Manhwa, Projects, and Writing archives are implemented in **Astro + Tailwind CSS v4**. Shorts and existing project/article/short detail pages use React compatibility islands until their own migration. See [migration-2026.md](docs/migration-2026.md) for route ownership, build commands, CSS boundaries and verification. Preserve source content, URLs and SEO contracts as later pages migrate. Use Bun exclusively.
 
 Before implementation, confirm token-table/example agreement and valid reference links. During implementation, check loaded fonts and computed styles, responsive composition, contrast, keyboard/reduced motion, complete detail reading and existing-route/SEO behavior. A generated mockup is not runtime verification.
 

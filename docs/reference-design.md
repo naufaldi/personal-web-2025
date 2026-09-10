@@ -82,10 +82,10 @@ The [gallery](reference/README.md) includes seven revised archive/dossier pages 
 
 The homepage now uses native Astro HTML, Tailwind v4 collection styling, self-hosted fonts, optimized existing photographs and a small browser script. It implements category filters, inline expansion, keyboard/Escape handling and an in-flow index. See [migration-2026.md](migration-2026.md) for the exact architecture and verification record.
 
-Work remains in `/Users/naufaldi.satriya/WebApps/personal-web-2025` on `codex/collected-by-faldi-design`. All changes are uncommitted. Reference PNGs remain unchanged.
+Work remains in `/Users/naufaldi.satriya/WebApps/personal-web-2025` on `codex/collected-by-faldi-design`. Changes are committed in atomic migration steps as requested. Reference PNGs remain unchanged.
 
 Astro owns URL generation and metadata. Existing React pages mount only on compatibility routes, with their original CSS and theme storage. Current route/content and SEO contracts remain the compatibility baseline. Future page families follow their selected mockups individually; natural scrolling keeps full detail documents readable.
 
 The approved real-photo substitution preserves major artifact placement, but photo subjects, project imagery and sourced copy intentionally differ from the generated reference. Archivo Black is a chosen implementation font; the homepage fits its native wider letters to the available space. No generated personal quotations, event claims or results were imported.
 
-About and In Good Company (`/speaker`) now also use native Astro compositions with real content and in-flow disclosures. Continue with Projects/project details, Writing/Shorts and reading collections in separate implementation phases. Keep the root design specification authoritative, preserve keyboard/touch/reduced-motion behavior, and compare each rendered page with its selected reference before retiring its compatibility route.
+About and In Good Company (`/speaker`) now also use native Astro compositions with real content and in-flow disclosures. Books, Manhwa, Projects, and Writing archives are also native Astro. Continue with Shorts, project details, and article reading views in separate implementation phases. Keep the root design specification authoritative, preserve keyboard/touch/reduced-motion behavior, and compare each rendered page with its selected reference before retiring its compatibility route.

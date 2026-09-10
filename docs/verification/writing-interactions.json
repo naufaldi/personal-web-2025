@@ -1,0 +1,42 @@
+{
+  "All": {
+    "count": 86,
+    "focus": "All",
+    "pressed": "true"
+  },
+  "Journey": {
+    "count": 10,
+    "focus": "Journey",
+    "pressed": "true"
+  },
+  "Ideas": {
+    "count": 6,
+    "focus": "Ideas",
+    "pressed": "true"
+  },
+  "Technical": {
+    "count": 64,
+    "focus": "Technical",
+    "pressed": "true"
+  },
+  "Opinions": {
+    "count": 5,
+    "focus": "Opinions",
+    "pressed": "true"
+  },
+  "Security Incident": {
+    "count": 1,
+    "focus": "Security Incident",
+    "pressed": "true"
+  },
+  "search": "One matching essay; empty result; focus preserved",
+  "motion": "Reduced-motion and keyboard: zero active animations",
+  "responsive": [
+    1487,
+    1100,
+    834,
+    390,
+    320,
+    744
+  ]
+}

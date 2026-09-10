@@ -17,7 +17,7 @@ Work is in the main checkout `/Users/naufaldi.satriya/WebApps/personal-web-2025`
 | Missing routes | Catch-all served root HTML with status 200 | Dedicated Astro `404.html`, noindex, static-host 404 rule |
 | `.html` aliases | Copied route HTML | Copies retained, Netlify canonical 301 rules generated; local compatibility entry normalizes alias before React mounts |
 
-Native routes are `/`, `/about`, `/speaker`, `/book`, `/manhwa`, and the 404 page. Compatibility routes are `/projects`, `/blogs`, `/shorts`, plus published `/projects/:slug`, `/blogs/:slug`, and `/shorts/:slug`. No new community, photography, book-detail or manhwa-detail URLs were invented.
+Native routes are `/`, `/about`, `/speaker`, `/book`, `/manhwa`, `/projects`, `/blogs`, and the 404 page. Compatibility routes are `/shorts`, plus published `/projects/:slug`, `/blogs/:slug`, and `/shorts/:slug`. No new community, photography, book-detail or manhwa-detail URLs were invented.
 
 Astro 5.18.2 and `@astrojs/react` 4.4.2 are locked in Bun for React 18 compatibility. Tailwind uses its Vite plugin inside Astro. The existing blog markdown/MDX transform remains, including its `?raw` exclusion. Content imports and the `@/` source alias are preserved.
 
@@ -86,11 +86,11 @@ The initial homepage phase passed four Bun migration tests with 979 assertions, 
 
 Visual evidence and iteration history are in [design-qa.md](../design-qa.md). Viewports: 1487×1058, 1280×900, 1024×768, 834×1112, 390×844, and 744×529 CSS pixels for equivalent 200% desktop reflow. The agent-browser iPhone preset did not enable touch by itself. Touch was enabled through the same session’s local DevTools connection, following the [Emulation](https://chromedevtools.github.io/devtools-protocol/tot/Emulation/) and [Input](https://chromedevtools.github.io/devtools-protocol/tot/Input/) APIs. A dispatched touch event opened an artifact with coarse pointer enabled and hover disabled; see [touch evidence](verification/touch.json). No physical-device or Safari verification is claimed. Native browser zoom was not exercised separately from equivalent CSS viewport reflow.
 
-All 16 reference PNG hashes were checked against the pre-migration snapshot. No source markdown was changed. Generated sitemap/AI-policy dates changed through the normal build pipeline. There was no commit, push or deployment.
+All 16 reference PNG hashes were checked against the pre-migration snapshot. No source markdown was changed. Generated sitemap/AI-policy dates changed through the normal build pipeline. The initial homepage phase ended uncommitted. Subsequent phases use atomic commits at the user’s request; nothing has been pushed or deployed.
 
 ## Remaining page migration
 
-Migrate Projects and project details next, then Writing/Shorts and Books/Manhwa using their selected references. Each phase should remove only its own compatibility route and unused code after content/SEO/browser checks. Keep full detail documents and original slugs. Retire the React island and legacy CSS only after the last dependent route migrates.
+Migrate Shorts and the project/article/short detail reading views next using their selected references. Each phase should remove only its own compatibility route and unused code after content/SEO/browser checks. Keep full detail documents and original slugs. Retire the React island and legacy CSS only after the last dependent route migrates.
 
 Preview is local. A later deployment must verify Netlify alias/404 rules, canonical-domain behavior and live crawler files. Host configuration and personal infrastructure were not accessed.
 
@@ -123,3 +123,13 @@ Shared archive components handle entry/index rendering and optional search. The 
 `/projects` now uses native Astro, all 17 existing project records, a four-artifact composition, a full index, and search. Curated experiment membership covers the Leaflet, Slate, Reading List, and Redux learning projects; other entries remain Software. Search matches title, description, and technology tags across the complete index. Empty searches keep the field focused and provide a readable empty state. Project details remain on their existing React routes. Their Back links now perform document navigation to the Astro archive.
 
 The real Leaflet and Slate captures are sourced from existing project frontmatter. Slate is copied into `src/assets/shelves/project-slate.png`; Leaflet reuses the homepage asset. TS Hooks Kit and Reading List use editable, sourced title/description artifacts. Their generated mockup interfaces were not presented as real software captures. No Markdown source or project slug was changed.
+
+## Writing collection and current handoff
+
+`/blogs` is now a native Astro archive with 86 published articles, five sourced featured essays, category filters, full-index search, and original article destinations. The page intersects existing blog records with the SEO route inventory, preserving published content and excluding draft/placeholder routes. Categories preserve Journey, Ideas, Technical, Opinions, plus the existing Security Incident category. Additional source categories are discovered instead of silently disappearing from filter choices. Titles decode legacy HTML entities; excerpts strip Markdown and use the first complete source sentence where available. No generated essay text or fictional quotations were imported. Existing personal images illustrate the composition.
+
+Article detail routes still hydrate their existing React/MDX renderer. Both normal and missing-article return links now use document navigation to the native Writing page. Native archives have no React islands or legacy CSS. The source articles, metadata, canonical slugs, sitemap and 120 HTML compatibility aliases are retained. Only the Books, Manhwa, Projects and Blogs page modules were deleted in this phase; retained legacy components/dependencies can be pruned as the remaining detail pages migrate.
+
+The user’s “together” item is treated as the existing In Good Company page (`/speaker`), already implemented; no new route was invented.
+
+Final archive verification: `bun run build` passes with 122 pages and 120 compatibility aliases. `bun run test:migration` passes seven tests and 1100 assertions. Astro reports zero errors, zero warnings and 17 existing hints. [Direct route checks](verification/archive-routes.json) cover all 121 published paths and unknown-route 404 handling. [Shared interaction checks](verification/archive-regressions.json) cover community filtering, About history, the Books empty-feature/index path, missing-image fallback and the native homepage. Reference PNGs and source Markdown are unchanged. Screenshots and corrections are recorded in [design-qa.md](../design-qa.md). Physical touch and native browser zoom remain outside this phase’s verification.

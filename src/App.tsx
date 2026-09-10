@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import Layout from '@/components/common/Layout'
 
 const ProjectDetail = lazy(() => import('@/pages/ProjectDetail'))
-const Blogs = lazy(() => import('@/pages/Blogs'))
 const BlogDetail = lazy(() => import('@/pages/BlogDetail'))
 const Shorts = lazy(() => import('@/pages/Shorts'))
 const ShortDetail = lazy(() => import('@/pages/ShortDetail'))
@@ -20,7 +19,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="projects/:slug" element={<ProjectDetail />} />
-            <Route path="blogs" element={<Blogs />} />
             <Route path="blogs/:slug" element={<BlogDetail />} />
 
             <Route path="shorts" element={<Shorts />} />

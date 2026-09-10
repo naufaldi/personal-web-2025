@@ -23,7 +23,7 @@ describe('Astro static migration contract', () => {
       expect(html.match(/<title>/g)).toHaveLength(1)
       expect(html).toContain('application/ld+json')
       if (route.path !== '/') {
-        if (['/about', '/projects', '/speaker', '/book', '/manhwa'].includes(route.path)) expect(html).not.toContain('<astro-island')
+        if (['/about', '/blogs', '/projects', '/speaker', '/book', '/manhwa'].includes(route.path)) expect(html).not.toContain('<astro-island')
         else {
           expect(html).toContain('data-prerendered-content="true"')
           expect(html).toContain('client="only"')
@@ -59,6 +59,17 @@ describe('Astro static migration contract', () => {
     expect(manhwa).toContain('Teenage Mercenary')
     expect(books).toContain('System Design Interview')
     expect(books).toContain('Refactoring')
+  })
+
+  test('project and writing indexes link every published detail without exposing drafts', async () => {
+    for (const prefix of ['/projects/', '/blogs/']) {
+      const html = await readFile(`dist${prefix}index.html`, 'utf8')
+      const details = routes.filter(route => route.path.startsWith(prefix))
+      expect(html.match(/data-record/g)).toHaveLength(details.length)
+      for (const route of details) expect(html).toContain(`href="${route.path}"`)
+      expect(html).toContain('data-archive-search')
+      expect(html).not.toContain('href="/blogs/coming-soon"')
+    }
   })
 
   test('JSON-LD cannot terminate its script element with content text', () => {

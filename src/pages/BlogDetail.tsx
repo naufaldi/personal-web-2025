@@ -111,7 +111,7 @@ export default function BlogDetail() {
             Blog not found
           </h1>
           <Link
-            to="/blogs"
+            reloadDocument to="/blogs"
             className="motion-button inline-flex items-center gap-2 border border-[var(--border-line)] px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--graphite)] transition-colors hover:border-[var(--border-strong)] hover:bg-[var(--surface-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)]"
           >
             <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
@@ -130,7 +130,7 @@ export default function BlogDetail() {
         <FadeInUp delay={0.02} duration={0.32}>
           <div className="mb-6 border border-[var(--border-line)] bg-[var(--paper)] shadow-[var(--shadow-paper-xs)]">
             <Link
-              to="/blogs"
+              reloadDocument to="/blogs"
               className="motion-link group flex items-center justify-between gap-4 px-4 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--graphite-muted)] transition-colors hover:bg-[var(--surface-subtle)] hover:text-[var(--graphite)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--border-strong)] sm:px-5"
             >
               <span className="inline-flex items-center gap-2">
