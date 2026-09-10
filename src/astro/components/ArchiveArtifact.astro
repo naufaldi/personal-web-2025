@@ -1,0 +1,13 @@
+---
+import type { ArchiveEntry } from '@/data/archive'
+import Photo from './CollectionPhoto.astro'
+interface Props { entry: ArchiveEntry; placement: string; number: number; textOnly?: boolean }
+const { entry, placement, number, textOnly = false } = Astro.props
+const href = entry.href ?? `#${entry.id}`
+---
+<article class:list={['archive-artifact', placement]} data-feature-category={entry.categories.join('|')} data-search={`${entry.title} ${entry.meta} ${entry.description ?? ''}`}>
+  <a class="archive-face" href={href} data-reveal={!entry.href ? entry.id : undefined} aria-label={`${entry.href ? 'Read' : 'View'} ${entry.title}`}>
+    {entry.image && !textOnly ? <Photo image={entry.image} alt={`${entry.title} ${entry.id.startsWith('book-') || entry.id.startsWith('manhwa-') ? 'cover' : 'project image'}`} eager={number < 3} /> : <div class="archive-paper"><p class="font-mono text-caption">{entry.categories.join(' / ')}</p><h2>{entry.title}</h2>{entry.description && <p class="archive-excerpt text-body">{entry.description}</p>}<span class="font-mono text-caption">{entry.meta}</span><span class="font-mono text-nav">{entry.href ? 'Read more' : 'View details'} ↗</span></div>}
+  </a>
+  {entry.image && !textOnly && <div class="archive-caption font-mono text-caption"><a href={href} data-reveal={!entry.href ? entry.id : undefined}>{entry.title} /<br />{entry.meta}</a><span class="text-vermilion">{String(number).padStart(2, '0')}</span></div>}
+</article>

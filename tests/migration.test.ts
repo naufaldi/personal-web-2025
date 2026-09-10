@@ -23,7 +23,7 @@ describe('Astro static migration contract', () => {
       expect(html.match(/<title>/g)).toHaveLength(1)
       expect(html).toContain('application/ld+json')
       if (route.path !== '/') {
-        if (['/about', '/speaker'].includes(route.path)) expect(html).not.toContain('<astro-island')
+        if (['/about', '/speaker', '/book', '/manhwa'].includes(route.path)) expect(html).not.toContain('<astro-island')
         else {
           expect(html).toContain('data-prerendered-content="true"')
           expect(html).toContain('client="only"')
@@ -46,6 +46,19 @@ describe('Astro static migration contract', () => {
       expect(html).toContain('<details')
       expect(html).toContain('aria-label="Full site index"')
     }
+  })
+
+  test('reading shelves keep every unique title and overlapping shelf labels', async () => {
+    const books = await readFile('dist/book/index.html', 'utf8')
+    const manhwa = await readFile('dist/manhwa/index.html', 'utf8')
+    expect(books.match(/data-record/g)).toHaveLength(6)
+    expect(manhwa.match(/data-record/g)).toHaveLength(14)
+    expect(manhwa).toContain('data-category="Reading|Recommended"')
+    expect(manhwa.match(/id="manhwa-1"/g)).toHaveLength(1)
+    expect(manhwa).toContain('Mercenary Enrollment')
+    expect(manhwa).toContain('Teenage Mercenary')
+    expect(books).toContain('System Design Interview')
+    expect(books).toContain('Refactoring')
   })
 
   test('JSON-LD cannot terminate its script element with content text', () => {

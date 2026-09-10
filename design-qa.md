@@ -96,3 +96,16 @@ Status: passed for the implemented desktop/responsive/browser checks; no outstan
 Compared both selected references with their actual renderings in the same visual input: [About comparison](docs/verification/about-comparison.png), [community comparison](docs/verification/community-comparison.png). Layout differences are deliberate: native Archivo Black is wider than the generated lettering; readable 14px captions take more room; actual owned photos replace generated subjects. About preserves the dominant central portrait, upper-right workspace, biography and supporting photographs. Community preserves the two-line title, central tall photo, upper-right wide photo, note, poster and supporting photo.
 
 Evidence: [community desktop](docs/verification/community-desktop.png), [tablet](docs/verification/community-tablet.png), [mobile](docs/verification/community-mobile.png), [filtered index](docs/verification/community-mentoring-index.png), [interaction checks](docs/verification/inner-pages-interactions.json). All categories match their source counts; filter state persists through index switching; Enter opens a record without animation; Escape returns focus; reduced motion produces zero active animations. No horizontal overflow at 1487, 834, 390 or 744 CSS pixels. The 744px check is reflow coverage, not a native zoom claim.
+
+## Books and Manhwa
+
+| Before | After | Why |
+| --- | --- | --- |
+| Separate reading-status sections | Unequal covers in one collection and an alternate index | Follow the selected archive mockups |
+| Repeated Manhwa titles in recommendation sections | One title with multiple filter memberships | Preserve source classifications without duplicate artifacts |
+| Filtered title retained grid coordinates | Reset absolute title grid area | Keep empty-state links and controls uncovered |
+| Book caption covered by the next cover | Pragmatic Programmer caption above its cover | Preserve intentional image overlap without hiding text |
+
+Real cover editions and their colors differ from the generated mockup. Some existing cover sources are low resolution; no synthetic reconstruction was used. All source records remain accessible in the native index.
+
+Books/Manhwa status: passed for checked views. Side-by-side comparisons: [Books](docs/verification/books-comparison.png), [Manhwa](docs/verification/manhwa-comparison.png). [Filter evidence](docs/verification/shelves-interactions.json) verifies all category counts. Desktop 1487 × 1058, tablet 834 × 1112, and mobile 390 × 844 have no horizontal overflow. All lazy images were scrolled into view and decoded before full screenshots. Enter opens details and Escape restores the initiating cover. Six migration tests pass with 993 assertions.

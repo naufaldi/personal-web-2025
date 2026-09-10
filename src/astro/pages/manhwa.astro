@@ -1,0 +1,19 @@
+---
+import Archive from '../layouts/Archive.astro'
+import Artifact from '../components/ArchiveArtifact.astro'
+import Photo from '../components/CollectionPhoto.astro'
+import { manhwaEntries, selectEntries } from '@/data/shelves'
+import workspace from '@/assets/collected/workspace.jpg'
+import personal from '@/assets/collected/personal.jpg'
+const featured = selectEntries(manhwaEntries, ['manhwa-1', 'manhwa-4', 'manhwa-7', 'manhwa-11'])
+---
+<Archive path="/manhwa" title="Manhwa" entries={manhwaEntries} categories={['All', 'Reading', 'Wishlist', 'Recommended']}>
+  <div class="archive-board shelf-board manhwa-board" data-board>
+    <h1 class="archive-title font-display">MANHWA</h1>
+    <p class="archive-margin font-mono text-caption">MANHWA<br />ARCHIVE<br /><br />Stories<br />Characters<br />Worlds</p>
+    {featured.map((entry, index) => <Artifact entry={entry} number={index + 1} placement={`shelf-cover shelf-cover-${index + 1}`} />)}
+    <figure class="shelf-life shelf-life-left"><Photo image={workspace} alt="Faldi’s desk and monitors" /><figcaption class="font-mono text-caption">Off screen /<br />Between chapters</figcaption></figure>
+    <figure class="shelf-life shelf-life-right"><Photo image={personal} alt="Game controllers in front of a screen" /><figcaption class="font-mono text-caption">Other worlds /<br />Away from work</figcaption></figure>
+    <a href="#index" class="shelf-note archive-paper" data-open-index><p class="font-mono text-caption">On the shelf /</p><p class="text-heading">Stories.<br />Characters.<br />Worlds.</p><span class="font-mono text-nav">Browse all {manhwaEntries.length} titles ↗</span></a>
+  </div>
+</Archive>

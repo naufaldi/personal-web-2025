@@ -1,0 +1,16 @@
+---
+import type { ArchiveEntry } from '@/data/archive'
+import { collectionRoutes } from '@/data/collected'
+interface Props { entries: ArchiveEntry[]; title: string }
+const { entries, title } = Astro.props
+---
+<section class="editorial-index" id="index" aria-labelledby="archive-index-heading" data-directory>
+  <h2 class="font-display text-reading-title" id="archive-index-heading" tabindex="-1">{title} / Index</h2>
+  <p class="font-mono text-caption">{entries.length} entries in the collection</p>
+  {entries.map(entry => <details id={entry.id} data-record data-category={entry.categories.join('|')} data-search={`${entry.title} ${entry.meta} ${entry.description ?? ''} ${entry.tags?.join(' ') ?? ''}`}>
+    <summary><span class="font-mono text-caption">{entry.categories.join(' / ')}</span><h3 class="text-heading">{entry.title}</h3></summary>
+    <div><p class="font-mono text-caption">{entry.meta}</p>{entry.description && <p class="text-body">{entry.description}</p>}{entry.tags && <p class="font-mono text-caption">{entry.tags.join(' · ')}</p>}
+    {entry.href && <a class="editorial-link font-mono text-nav" href={entry.href}>Read {title === 'Projects' ? 'project' : 'article'} ↗</a>}</div>
+  </details>)}
+  <nav class="site-index font-mono text-nav" aria-label="Full site index">{collectionRoutes.map(item => <a href={item.href}>{item.title}</a>)}</nav>
+</section>

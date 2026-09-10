@@ -17,7 +17,7 @@ Work is in the main checkout `/Users/naufaldi.satriya/WebApps/personal-web-2025`
 | Missing routes | Catch-all served root HTML with status 200 | Dedicated Astro `404.html`, noindex, static-host 404 rule |
 | `.html` aliases | Copied route HTML | Copies retained, Netlify canonical 301 rules generated; local compatibility entry normalizes alias before React mounts |
 
-Native routes are `/`, `/about`, `/speaker`, and the 404 page. Compatibility routes are `/projects`, `/blogs`, `/shorts`, `/book`, `/manhwa`, plus published `/projects/:slug`, `/blogs/:slug`, and `/shorts/:slug`. No new community, photography, book-detail or manhwa-detail URLs were invented.
+Native routes are `/`, `/about`, `/speaker`, `/book`, `/manhwa`, and the 404 page. Compatibility routes are `/projects`, `/blogs`, `/shorts`, plus published `/projects/:slug`, `/blogs/:slug`, and `/shorts/:slug`. No new community, photography, book-detail or manhwa-detail URLs were invented.
 
 Astro 5.18.2 and `@astrojs/react` 4.4.2 are locked in Bun for React 18 compatibility. Tailwind uses its Vite plugin inside Astro. The existing blog markdown/MDX transform remains, including its `?raw` exclusion. Content imports and the `@/` source alias are preserved.
 
@@ -109,3 +109,11 @@ The editorial controller preserves filter state between views, announces counts,
 Final verification: `bun run build` passes (122 pages, 120 aliases); `bun run test:migration` passes five tests and 987 assertions. [Interaction evidence](verification/inner-pages-interactions.json) records all category counts, pressed state/focus, index persistence, keyboard activation, Escape, reduced motion, and About anchor behavior. [Route evidence](verification/inner-pages-routes.json) confirms all 121 published routes return 200 with canonical metadata and unknown URLs return 404. New native pages contain no React islands; six career records and 21 engagement records remain in the static output.
 
 Visual comparisons: [About](verification/about-comparison.png) and [In Good Company](verification/community-comparison.png), selected reference and implementation side by side. Desktop 1487 × 1058, tablet 834 × 1112, mobile 390 × 844, and 744 × 529 reflow checked. The latter represents 200% layout space, not native browser-chrome zoom. Physical-device touch and live hosting redirects were not re-tested in this phase. Reference PNGs are unchanged.
+
+## Books and Manhwa collections
+
+`/book` and `/manhwa` now render as native Astro archives. Both preserve the large-title/cover composition, full index, multi-label filtering, and native in-flow title details. Books contains all six source records. Manhwa groups exact repeated titles into 14 entries with combined Reading/Wishlist/Recommended membership; original data and alternate titles remain unchanged. No reviews, chapter progress or publication claims were invented. Publication status is explicitly labeled as the value listed in existing data.
+
+Seven cover images are copied from the existing Open Library/AniList URLs into `src/assets/shelves` and transformed by Astro. Each downloaded cover was visually checked against its title. Cover art remains the work of its respective creators/publishers. Original source URLs remain in `src/data/books.ts` and `src/data/manhwa.ts`. Existing own photos provide supporting artifacts. No generated reference image is used as page artwork. Source purchase/reading URLs contain placeholder-like paths; the new shelf details show the sourced title/author/status instead of promoting those unverified destinations. The original link data remains unchanged.
+
+Shared archive components handle entry/index rendering and optional search. The editorial controller now supports multiple category labels. A category without a featured cover shows a link to matching index entries. A filtered-title grid positioning bug was corrected for both archives and community. Keyboard/reduced-motion updates remain immediate. Old Books and Manhwa React route modules were removed.

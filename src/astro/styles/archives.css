@@ -1,0 +1,94 @@
+.archive-board { width: 100%; position: relative; isolation: isolate; display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); grid-template-rows: repeat(30,minmax(0,1fr)); min-height: 850px; aspect-ratio: 1423 / 850; }
+.archive-title { pointer-events: none; grid-area: 1 / 1 / 10 / 10; z-index: -1; font-weight: 400; font-size: clamp(80px,13vw,200px); letter-spacing: -.065em; line-height: .95; }
+.archive-margin { grid-area: 9 / 1 / 14 / 3; }
+.archive-artifact { position: relative; min-width: 0; align-self: start; }
+.archive-face { display: block; }
+.archive-caption { padding-top: 12px; color: var(--color-ink-muted); }
+.archive-caption a { display: inline-block; min-height: 44px; }
+.archive-caption span { display: block; }
+.archive-paper { padding: 28px; background: color-mix(in srgb,var(--color-paper),var(--color-ink) 5%); display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 300px; }
+.archive-paper h2 { font: 700 clamp(24px,3vw,44px)/1.08 var(--font-body); letter-spacing: -.04em; overflow-wrap: anywhere; }
+.archive-paper > span:last-child { min-height: 44px; display: flex; align-items: center; }
+.archive-excerpt { max-width: 50ch; }
+.shelf-cover-1 { grid-area: 5 / 3 / 28 / 7; margin-left: 16px; margin-right: 32px; z-index: 2; }
+.shelf-cover-2 { grid-area: 5 / 7 / 17 / 10; margin-left: 32px; margin-right: 40px; }
+.shelf-cover-3 { grid-area: 16 / 8 / 29 / 11; margin-left: 12px; margin-right: 48px; z-index: 2; }
+.shelf-cover .media-frame { background: transparent; }
+.shelf-cover .media-frame img { height: auto; object-fit: contain; }
+.books-board .archive-title { margin-left: 64px; font-size: clamp(100px,16vw,245px); }
+.books-board .shelf-cover-1 { margin-top: 24px; }
+.books-board .shelf-cover-2 { grid-row-start: 4; }
+.books-board .shelf-cover-3 { grid-row-start: 17; }
+.shelf-life { position: relative; min-width: 0; align-self: start; }
+.shelf-life .media-frame { aspect-ratio: .8; }
+.shelf-life figcaption { padding-top: 12px; }
+.shelf-life-left { grid-area: 16 / 1 / 29 / 3; margin-right: 16px; }
+.shelf-life-right { grid-area: 2 / 10 / 15 / 13; margin-left: 40px; }
+.shelf-life-right .media-frame { aspect-ratio: 1; }
+.shelf-note { grid-area: 18 / 11 / 29 / 13; margin-left: -24px; align-self: start; }
+.manhwa-board .archive-title { grid-column: 2 / -1; font-size: clamp(80px,11.8vw,180px); }
+.manhwa-board .shelf-cover-1 { grid-area: 5 / 3 / 29 / 7; margin-right: 16px; }
+.manhwa-board .shelf-cover-2 { grid-area: 4 / 9 / 16 / 11; margin: 0; }
+.manhwa-board .shelf-cover-3 { grid-area: 16 / 7 / 29 / 9; margin: 0 16px; }
+.manhwa-board .shelf-cover-4 { grid-area: 17 / 10 / 30 / 12; margin-right: 16px; }
+.manhwa-board .shelf-life-left { grid-area: 10 / 2 / 25 / 4; margin-left: -16px; filter: grayscale(1); }
+.manhwa-board .shelf-life-left .media-frame { aspect-ratio: .5; }
+.manhwa-board .shelf-life-right { grid-area: 3 / 11 / 15 / 13; margin-left: 32px; filter: grayscale(1); }
+.manhwa-board .shelf-life-right .media-frame { aspect-ratio: .8; }
+.manhwa-board .shelf-note { grid-area: 19 / 1 / 29 / 3; margin: 0 24px 0 0; z-index: 3; padding: 20px; min-height: 250px; }
+.archive-filters { display: flex; flex-wrap: wrap; gap: 8px 32px; }
+.archive-search { display: flex; justify-content: flex-end; align-items: center; gap: 16px; margin-bottom: 24px; }
+.archive-search input { min-height: 44px; max-width: 100%; width: 260px; padding: 8px 12px; border: 1px solid var(--color-ink-muted); border-radius: var(--radius-control); background: transparent; }
+.archive-empty { padding: 24px 0; }
+.archive-empty a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 6px; }
+.archive-board.is-filtered { min-height: 0; aspect-ratio: auto; grid-template-rows: auto; gap: 48px 32px; padding-top: 220px; }
+.archive-board.is-filtered .archive-title { grid-area: auto; position: absolute; inset: 0 auto auto 0; font-size: clamp(64px,12vw,160px); margin: 0; }
+.archive-board.is-filtered .archive-margin, .archive-board.is-filtered .shelf-life, .archive-board.is-filtered .shelf-note, .archive-board.is-filtered .archive-decoration { display: none; }
+.archive-board.is-filtered .archive-artifact { grid-area: auto; grid-column: span 4; margin: 0; }
+@media (hover:hover) and (pointer:fine) { .archive-face { transition: transform 140ms cubic-bezier(.23,1,.32,1); } .archive-face:hover { transform: translateY(-3px); } }
+@media (max-width: 79.999rem) {
+ .archive-board { grid-template-columns: repeat(6,minmax(0,1fr)); grid-template-rows: auto; gap: 40px 24px; aspect-ratio: auto; min-height: 0; }
+ .archive-title, .books-board .archive-title, .manhwa-board .archive-title { grid-area: 1 / 1 / 2 / -1; font-size: 15vw; margin: 0; }
+ .archive-margin { display: none; }
+ .shelf-board .shelf-cover-1 { grid-area: 2 / 2 / 4 / 5; margin: -56px 0 0; }
+ .shelf-board .shelf-cover-2 { grid-area: 4 / 1 / 5 / 3; margin: 0; }
+ .shelf-board .shelf-cover-3 { grid-area: 4 / 4 / 5 / 6; margin: 40px 0 0; }
+ .shelf-board .shelf-cover-4 { grid-area: 5 / 2 / 6 / 4; margin: 0; }
+ .shelf-board .shelf-life-left { grid-area: 5 / 5 / 6 / 7; margin: 0; }
+ .shelf-board .shelf-life-right { grid-area: 6 / 1 / 7 / 4; margin: 0; }
+ .shelf-board .shelf-note { grid-area: 6 / 5 / 7 / 7; margin: 0; padding: 20px; }
+ .archive-board.is-filtered .archive-artifact { grid-column: span 3; }
+}
+@media (min-width: 64rem) and (max-width: 79.999rem) {
+ .archive-board { grid-template-columns: repeat(12,minmax(0,1fr)); }
+ .shelf-board .shelf-cover-1 { grid-area: 2 / 3 / 4 / 8; }
+ .shelf-board .shelf-cover-2 { grid-area: 4 / 1 / 5 / 5; }
+ .shelf-board .shelf-cover-3 { grid-area: 4 / 7 / 5 / 11; }
+ .shelf-board .shelf-cover-4 { grid-area: 5 / 3 / 6 / 7; }
+ .shelf-board .shelf-life-left { grid-area: 5 / 9 / 6 / 13; }
+ .shelf-board .shelf-life-right { grid-area: 6 / 1 / 7 / 7; }
+ .shelf-board .shelf-note { grid-area: 6 / 9 / 7 / 13; }
+ .archive-board.is-filtered .archive-artifact { grid-column: span 4; }
+}
+@media (max-width: 47.999rem) {
+ .archive-board { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px 16px; }
+ .archive-board > :not(.archive-margin), .archive-board.is-filtered .archive-artifact { grid-area: auto; grid-column: 1 / -1; margin: 0; }
+ .shelf-board .shelf-cover-1 { margin: -36px 0 0 40px; }
+ .shelf-board .shelf-cover-2, .shelf-board .shelf-cover-4 { margin-right: 64px; }
+ .shelf-board .shelf-cover-3 { margin-left: 64px; }
+ .books-board .archive-title { font-size: 23vw; }
+ .shelf-board .shelf-note { min-height: 240px; }
+ .archive-board.is-filtered { padding-top: 120px; }
+ .archive-filters { gap: 0 24px; }
+ .archive-search { align-items: stretch; flex-direction: column; gap: 8px; }
+ .archive-search input { width: 100%; }
+}
+@media (prefers-reduced-motion:reduce) { .archive-face { transition: none; } }
+
+@media (min-width: 80rem) {
+ .books-board .shelf-cover-2 { grid-row-start: 6; }
+ .books-board .shelf-cover-2 .archive-caption { position: absolute; bottom: calc(100% + 12px); background: var(--color-paper); padding: 8px; }
+ .books-board .shelf-cover-3 { grid-row-start: 16; margin-right: 88px; }
+ .manhwa-board .shelf-life-left figcaption { position: absolute; bottom: calc(100% + 12px); max-width: 140px; }
+}
+.shelf-note .text-heading { font-size: clamp(24px,2vw,32px); }

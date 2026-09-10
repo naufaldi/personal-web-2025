@@ -41,7 +41,7 @@
 @media (prefers-reduced-motion: reduce) { .company-board figure > a { transition: none; } }
 
 .company-board.is-filtered { min-height: 0; aspect-ratio: auto; grid-template-rows: auto; gap: 40px 32px; padding-top: 300px; }
-.company-board.is-filtered .editorial-title { position: absolute; inset: 0 auto auto 0; font-size: clamp(64px, 9vw, 130px); }
+.company-board.is-filtered .editorial-title { grid-area: auto; position: absolute; inset: 0 auto auto 0; font-size: clamp(64px, 9vw, 130px); }
 .company-board.is-filtered .editorial-margin { display: none; }
 .company-board.is-filtered figure { grid-area: auto; grid-column: span 4; margin: 0 !important; }
 @media (max-width: 79.999rem) { .company-board.is-filtered figure { grid-column: span 3; } }

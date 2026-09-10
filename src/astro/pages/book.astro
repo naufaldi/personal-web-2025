@@ -1,0 +1,19 @@
+---
+import Archive from '../layouts/Archive.astro'
+import Artifact from '../components/ArchiveArtifact.astro'
+import Photo from '../components/CollectionPhoto.astro'
+import { bookEntries, selectEntries } from '@/data/shelves'
+import workspace from '@/assets/collected/workspace.jpg'
+import portrait from '@/assets/collected/portrait.jpg'
+const featured = selectEntries(bookEntries, ['book-1', 'book-2', 'book-3'])
+---
+<Archive path="/book" title="Books" entries={bookEntries} categories={['All', 'Read', 'Reading', 'Wishlist', 'Recommended']}>
+  <div class="archive-board shelf-board books-board" data-board>
+    <h1 class="archive-title font-display">BOOKS</h1>
+    <p class="archive-margin font-mono text-caption">COLLECTED<br />BY<br /><br />Reading<br />Ideas<br />Always more</p>
+    {featured.map((entry, index) => <Artifact entry={entry} number={index + 1} placement={`shelf-cover shelf-cover-${index + 1}`} />)}
+    <figure class="shelf-life shelf-life-left"><Photo image={portrait} alt="Faldi outdoors" /><figcaption class="font-mono text-caption">Beyond the page /<br />Room to think</figcaption></figure>
+    <figure class="shelf-life shelf-life-right"><Photo image={workspace} alt="Faldi’s workspace" /><figcaption class="font-mono text-caption">At the desk /<br />Ideas into practice</figcaption></figure>
+    <a href="#index" class="shelf-note archive-paper" data-open-index><p class="font-mono text-caption">Reading list / Open</p><p class="text-heading">Read.<br />Reading.<br />Next.</p><span class="font-mono text-nav">Browse all {bookEntries.length} books ↗</span></a>
+  </div>
+</Archive>

@@ -1,0 +1,51 @@
+{
+  "book": {
+    "All": {
+      "count": 6,
+      "focus": "All",
+      "overflow": false
+    },
+    "Read": {
+      "count": 3,
+      "focus": "Read",
+      "overflow": false
+    },
+    "Reading": {
+      "count": 1,
+      "focus": "Reading",
+      "overflow": false
+    },
+    "Wishlist": {
+      "count": 2,
+      "focus": "Wishlist",
+      "overflow": false
+    },
+    "Recommended": {
+      "count": 2,
+      "focus": "Recommended",
+      "overflow": false
+    }
+  },
+  "manhwa": {
+    "All": {
+      "count": 14,
+      "focus": "All",
+      "overflow": false
+    },
+    "Reading": {
+      "count": 6,
+      "focus": "Reading",
+      "overflow": false
+    },
+    "Wishlist": {
+      "count": 8,
+      "focus": "Wishlist",
+      "overflow": false
+    },
+    "Recommended": {
+      "count": 6,
+      "focus": "Recommended",
+      "overflow": false
+    }
+  }
+}

@@ -1,0 +1,32 @@
+---
+import Document from './Document.astro'
+import CollectionHeader from '../components/CollectionHeader.astro'
+import ArchiveIndex from '../components/ArchiveIndex.astro'
+import type { ArchiveEntry } from '@/data/archive'
+import { buildSeoRoutes } from '../../../scripts/seo-data'
+import '../styles/collected.css'
+import '../styles/inner-collections.css'
+import '../styles/archives.css'
+interface Props { path: string; title: string; entries: ArchiveEntry[]; categories: string[]; searchable?: boolean }
+const { path, title, entries, categories, searchable = false } = Astro.props
+const { routes } = await buildSeoRoutes()
+const route = routes.find(route => route.path === path)!
+---
+<Document route={route} collection>
+  <a class="skip-link font-mono text-nav" href="#collection">Skip to {title.toLowerCase()}</a>
+  <div class="collection-layout archive-layout" data-editorial>
+    <CollectionHeader />
+    <main id="collection" tabindex="-1">
+      {searchable && <div class="archive-search" data-search-control hidden><label class="font-mono text-caption" for="archive-search">Search {title.toLowerCase()}</label><input id="archive-search" class="font-body text-body" type="search" autocomplete="off" data-archive-search /></div>}
+      <slot />
+      <p class="archive-empty font-mono text-caption" data-empty hidden>No featured entries match. <a href="#index" data-open-index>Browse matching entries in the index ↗</a></p>
+      <div class="editorial-controls font-mono text-nav">
+        <div class="archive-filters" role="group" aria-label={`Filter ${title.toLowerCase()}`} data-editorial-filters hidden>{categories.map(category => <button type="button" data-editorial-filter={category} aria-pressed={category === 'All'}>{category}</button>)}</div>
+        <a href="#index" data-view-toggle>Open index ↗</a>
+      </div>
+      <ArchiveIndex entries={entries} title={title} />
+      <p class="sr-only" role="status" aria-live="polite" data-editorial-status></p>
+    </main>
+  </div>
+  <script>import '../scripts/editorial'</script>
+</Document>
