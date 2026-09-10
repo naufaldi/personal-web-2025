@@ -80,3 +80,19 @@ Reference: [About mockup](docs/reference/about-v2.png). Evidence: [desktop](docs
 | Career content separated from the composition | In-flow native details with preserved anchor | Keep complete history accessible without a section stack |
 
 Real portrait, workspace, game controllers, and community photos replace fictional mockup imagery. Archivo Black is wider and shorter than the generated title glyphs; no font stretching. Browser checks confirmed six career records, keyboard focus restoration, and no tablet/mobile overflow.
+
+## In Good Company and final inner-page QA
+
+Status: passed for the implemented desktop/responsive/browser checks; no outstanding P0–P2 issues observed. Physical touch and actual browser-chrome 200% zoom remain untested in this phase.
+
+| Before | After | Why |
+| --- | --- | --- |
+| Separate stats, logo, mentoring and speaking sections | One In Good Company collection with five varied artifacts | Preserve the selected composition |
+| Top photo caption collided with the poster | Wider photo crop with reserved caption space | Keep every detail link readable and clickable |
+| Portrait caption crossed bottom filters | Shorter portrait crop | Separate artifact context from navigation |
+| Generated workshop imagery and claims | Existing photos labeled as archive material, sourced event text | Avoid inventing events or attributing an unrelated photograph to a talk |
+| Duplicated event presentation | Featured IDs reference the full 21-record index | Keep names, dates and links consistent |
+
+Compared both selected references with their actual renderings in the same visual input: [About comparison](docs/verification/about-comparison.png), [community comparison](docs/verification/community-comparison.png). Layout differences are deliberate: native Archivo Black is wider than the generated lettering; readable 14px captions take more room; actual owned photos replace generated subjects. About preserves the dominant central portrait, upper-right workspace, biography and supporting photographs. Community preserves the two-line title, central tall photo, upper-right wide photo, note, poster and supporting photo.
+
+Evidence: [community desktop](docs/verification/community-desktop.png), [tablet](docs/verification/community-tablet.png), [mobile](docs/verification/community-mobile.png), [filtered index](docs/verification/community-mentoring-index.png), [interaction checks](docs/verification/inner-pages-interactions.json). All categories match their source counts; filter state persists through index switching; Enter opens a record without animation; Escape returns focus; reduced motion produces zero active animations. No horizontal overflow at 1487, 834, 390 or 744 CSS pixels. The 744px check is reflow coverage, not a native zoom claim.

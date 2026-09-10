@@ -1,0 +1,55 @@
+---
+import Document from '../layouts/Document.astro'
+import CollectionHeader from '../components/CollectionHeader.astro'
+import Photo from '../components/CollectionPhoto.astro'
+import { communityEntries, featuredCommunity } from '@/data/communityCollection'
+import { collectionRoutes } from '@/data/collected'
+import { buildSeoRoutes } from '../../../scripts/seo-data'
+import '../styles/collected.css'
+import '../styles/inner-collections.css'
+import '../styles/community.css'
+const { routes } = await buildSeoRoutes()
+const route = routes.find(route => route.path === '/speaker')!
+const categories = ['All', 'Workshops', 'Talks', 'Mentoring', 'Community']
+---
+<Document route={route} collection>
+  <a class="skip-link font-mono text-nav" href="#community">Skip to community</a>
+  <div class="collection-layout inner-collection" data-editorial>
+    <CollectionHeader />
+    <main id="community" tabindex="-1">
+      <div class="editorial-board company-board" data-board>
+        <h1 class="editorial-title font-display">IN GOOD<br />COMPANY</h1>
+        <p class="editorial-margin font-mono text-caption">COMMUNITY<br />BUILDS<br />BETTER<br /><br /><span class="text-vermilion">01</span><br />Workshops<br />Mentoring<br />Learning</p>
+        {featuredCommunity.map(({ entry, placement, image, alt, label }, index) => <figure class={`company-${placement}`} data-feature-category={entry.category}>
+          <a href={`#engagement-${entry.id}`} data-reveal={`engagement-${entry.id}`} aria-label={`Read ${entry.eventName}`}>
+            {image ? <Photo image={image} alt={alt!} eager={index < 2} /> : <div class:list={['company-paper', { 'company-poster': placement === 'workshop' }]}>
+              <p class="font-mono text-caption">{entry.category} /</p>
+              <h2>{placement === 'workshop' ? `Grid.
+Flexbox.
+Possibilities.` : `People.
+Ideas.
+Conversations.`}</h2>
+              <p class="font-mono text-caption">{entry.eventName}<br />{entry.date}</p>
+            </div>}
+          </a>
+          <figcaption>{entry.category} /<br />{label}<br />{image && <span class="archive-caption">Community photo archive</span>}<a href={`#engagement-${entry.id}`} data-reveal={`engagement-${entry.id}`} class="editorial-link">View details ↗</a></figcaption>
+        </figure>)}
+      </div>
+      <div class="editorial-controls font-mono text-nav">
+        <div class="community-filters" role="group" aria-label="Filter engagements" data-editorial-filters hidden>{categories.map(category => <button type="button" data-editorial-filter={category} aria-pressed={category === 'All'}>{category}</button>)}</div>
+        <a href="#index" data-view-toggle>Open index ↗</a>
+      </div>
+      <section class="editorial-index" id="index" aria-labelledby="community-index-heading" data-directory>
+        <h2 class="font-display text-reading-title" id="community-index-heading" tabindex="-1">People, ideas, conversations.</h2>
+        <p class="text-body reading-copy">Talks, workshops, mentoring, and voluntary work. A record of learning with other people.</p>
+        {communityEntries.map(entry => <details id={`engagement-${entry.id}`} data-record data-category={entry.category}>
+          <summary><span class="font-mono text-caption">{entry.category}<br />{entry.date}</span><h3 class="text-heading">{entry.eventName}</h3></summary>
+          <div><p class="text-body">{entry.brief}</p>{entry.links && Object.entries(entry.links).map(([name, href]) => <a class="editorial-link font-mono text-nav" href={href}>{name === 'website' ? 'Visit website' : name === 'x' ? 'Follow on X' : name === 'youtube' ? 'Watch on YouTube' : 'LinkedIn'} ↗</a>)}</div>
+        </details>)}
+        <nav class="site-index font-mono text-nav" aria-label="Full site index">{collectionRoutes.map(item => <a href={item.href}>{item.title}</a>)}</nav>
+      </section>
+      <p class="sr-only" role="status" aria-live="polite" data-editorial-status></p>
+    </main>
+  </div>
+  <script>import '../scripts/editorial'</script>
+</Document>

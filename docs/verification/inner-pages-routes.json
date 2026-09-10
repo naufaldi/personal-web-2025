@@ -1,0 +1,489 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/about",
+      "status": 200
+    },
+    {
+      "path": "/blogs",
+      "status": 200
+    },
+    {
+      "path": "/blogs/a-practical-guide-environment-variables-a-guide-from-os-to-next-js",
+      "status": 200
+    },
+    {
+      "path": "/blogs/ai-context-engineering-how-to-level-up-prompting-context-and-output-with-modern-tools",
+      "status": 200
+    },
+    {
+      "path": "/blogs/alasan-import-svg-sebagai-react-component",
+      "status": 200
+    },
+    {
+      "path": "/blogs/an-introduction-to-graphql-benefits-and-integration-with-next-js-apps",
+      "status": 200
+    },
+    {
+      "path": "/blogs/berbagai-cara-membuat-kondisional-class-component-css-di-emotion-dan-tailwind-macro",
+      "status": 200
+    },
+    {
+      "path": "/blogs/building-strong-relationships-with-your-engineering-manager-from-a-developer-s-perspective",
+      "status": 200
+    },
+    {
+      "path": "/blogs/burnout-dan-cara-mengatasi",
+      "status": 200
+    },
+    {
+      "path": "/blogs/cara-bertanya-permasalahan-dalam-pemrogram-yang-baik",
+      "status": 200
+    },
+    {
+      "path": "/blogs/cara-import-svg-di-nextjs",
+      "status": 200
+    },
+    {
+      "path": "/blogs/cara-import-svg-sebagai-react-component-di-nextjs",
+      "status": 200
+    },
+    {
+      "path": "/blogs/cara-install-nextjs-twin-macro-dan-emotion-css-in-js",
+      "status": 200
+    },
+    {
+      "path": "/blogs/cara-install-react-id-swiper-untuk-membuat-komponen-react-slideshow",
+      "status": 200
+    },
+    {
+      "path": "/blogs/cara-menangani-responsive-di-nextjs-ssr",
+      "status": 200
+    },
+    {
+      "path": "/blogs/cara-menghitung-nilai-project-freelance-untuk-pemula",
+      "status": 200
+    },
+    {
+      "path": "/blogs/cara-menonaktifkan-scroll-horizontal-pada-visual-studio-code",
+      "status": 200
+    },
+    {
+      "path": "/blogs/cara-setup-tailwind-css-react-create-app-cra",
+      "status": 200
+    },
+    {
+      "path": "/blogs/catching-up-with-ai",
+      "status": 200
+    },
+    {
+      "path": "/blogs/competitive-programming-for-software-engineer",
+      "status": 200
+    },
+    {
+      "path": "/blogs/compiler-vs-transpiler",
+      "status": 200
+    },
+    {
+      "path": "/blogs/crypto-miner-systemguard-incident-postmortem",
+      "status": 200
+    },
+    {
+      "path": "/blogs/debugging-front-end-issues-tools-and-techniques",
+      "status": 200
+    },
+    {
+      "path": "/blogs/digital-nomad-di-kota-malang",
+      "status": 200
+    },
+    {
+      "path": "/blogs/explore-a-front-end-engineer-x27-s-growth-guide-in-tech",
+      "status": 200
+    },
+    {
+      "path": "/blogs/exploring-the-latest-trends-in-front-end-design",
+      "status": 200
+    },
+    {
+      "path": "/blogs/fast-prototyping-dengan-budibase",
+      "status": 200
+    },
+    {
+      "path": "/blogs/firefox-relay-for-anonymous-email",
+      "status": 200
+    },
+    {
+      "path": "/blogs/first-month-to-do-list-as-software-engineer",
+      "status": 200
+    },
+    {
+      "path": "/blogs/from-fetcher-function-to-custom-hook-a-practical-guide-with-react-query",
+      "status": 200
+    },
+    {
+      "path": "/blogs/getting-started-with-zustand-state-management-for-hooks-user",
+      "status": 200
+    },
+    {
+      "path": "/blogs/harus-ya-mahir-menuliskan-kode",
+      "status": 200
+    },
+    {
+      "path": "/blogs/how-to-add-open-graph-to-nextjs",
+      "status": 200
+    },
+    {
+      "path": "/blogs/how-to-approach-code-optimization-questions-in-interviews-a-frontend-engineer-x27-s-guide",
+      "status": 200
+    },
+    {
+      "path": "/blogs/how-to-stay-up-to-date-with-trends-in-front-end-engineering",
+      "status": 200
+    },
+    {
+      "path": "/blogs/if-you-re-not-paying-for-the-product-then-you-re-the-product",
+      "status": 200
+    },
+    {
+      "path": "/blogs/k3s-compromise-incident-report",
+      "status": 200
+    },
+    {
+      "path": "/blogs/laid-off-burned-out-then-hired-as-a-senior-engineer",
+      "status": 200
+    },
+    {
+      "path": "/blogs/lesson-learned-dari-test-accesibility-pada-website",
+      "status": 200
+    },
+    {
+      "path": "/blogs/library-react-untuk-membuat-table",
+      "status": 200
+    },
+    {
+      "path": "/blogs/list-kumpulan-tailwind-ui-kit-dan-tailwind-ui-block",
+      "status": 200
+    },
+    {
+      "path": "/blogs/managing-state-in-react-why-you-should-avoid-quot-too-much-state-quot-in-a-single-component",
+      "status": 200
+    },
+    {
+      "path": "/blogs/membandingkan-tailwindcss-dengan-framework-lain",
+      "status": 200
+    },
+    {
+      "path": "/blogs/membuat-redirect-dengan-onclick-after-event-di-react",
+      "status": 200
+    },
+    {
+      "path": "/blogs/membuat-reusable-component-dengan-menggunakan-tailwindcss-dan-classnames-di-reactjs",
+      "status": 200
+    },
+    {
+      "path": "/blogs/membuat-reusable-component-dengan-twin-macro-nextjs-dan-emotion-bag-1",
+      "status": 200
+    },
+    {
+      "path": "/blogs/mencegah-scrolling-saat-modal-terbuka",
+      "status": 200
+    },
+    {
+      "path": "/blogs/mengatasi-error-module-not-found-can-x27-t-resolve-x27-swiper-swiper-css-x27-di-react-id-swiper",
+      "status": 200
+    },
+    {
+      "path": "/blogs/menggunakan-aos-animation-library-di-nextjs",
+      "status": 200
+    },
+    {
+      "path": "/blogs/menggunakan-debian-package-ppa-daripada-snap-package",
+      "status": 200
+    },
+    {
+      "path": "/blogs/menggunakan-gulp-untuk-membuat-reusable-component-di-html-css-dan-vanilla-js",
+      "status": 200
+    },
+    {
+      "path": "/blogs/meningkatkan-readability-pada-kode",
+      "status": 200
+    },
+    {
+      "path": "/blogs/menulis-untuk-membuat-sejarah",
+      "status": 200
+    },
+    {
+      "path": "/blogs/nextjs-and-react-leafleat-add-geojson",
+      "status": 200
+    },
+    {
+      "path": "/blogs/nextjs-leaflet-adding-geoman-to-leaflet",
+      "status": 200
+    },
+    {
+      "path": "/blogs/nvm-untuk-manajemen-node-version",
+      "status": 200
+    },
+    {
+      "path": "/blogs/open-journal-a-day-of-reflection-and-action",
+      "status": 200
+    },
+    {
+      "path": "/blogs/open-journal-my-journey-after-getting-laid-off-1",
+      "status": 200
+    },
+    {
+      "path": "/blogs/outline-blue-dan-aksesibilitas-pada-chakra-ui",
+      "status": 200
+    },
+    {
+      "path": "/blogs/pattern-blur-image-memilih-antara-svg-atau-png",
+      "status": 200
+    },
+    {
+      "path": "/blogs/pelajaran-yang-saya-dapatkan-saat-memberikan-mentorship-frontend",
+      "status": 200
+    },
+    {
+      "path": "/blogs/pentingnya-bahasa-inggris-untuk-pemrogram",
+      "status": 200
+    },
+    {
+      "path": "/blogs/quick-note-showwcase-id-suka-duka-menjadi-tech-content-creator",
+      "status": 200
+    },
+    {
+      "path": "/blogs/reading-book",
+      "status": 200
+    },
+    {
+      "path": "/blogs/reflection-on-a-senior-frontend-engineer-interview",
+      "status": 200
+    },
+    {
+      "path": "/blogs/repository-github-untuk-meningkatkan-skill-pemrograman",
+      "status": 200
+    },
+    {
+      "path": "/blogs/rfc-request-for-comment-apa-dan-mengapa",
+      "status": 200
+    },
+    {
+      "path": "/blogs/saya-menyukai-dunia-programming-namun-hanya-di-bagian-logika-dan-matematika-nya-saja",
+      "status": 200
+    },
+    {
+      "path": "/blogs/seputar-custom-scrollbar-css-pada-firefox-dan-chrome",
+      "status": 200
+    },
+    {
+      "path": "/blogs/setup-mcp-minimax-opencode",
+      "status": 200
+    },
+    {
+      "path": "/blogs/setup-minimax-opencode",
+      "status": 200
+    },
+    {
+      "path": "/blogs/share-the-truth-don-t-normalize-the-problem",
+      "status": 200
+    },
+    {
+      "path": "/blogs/snippet-membuat-gradient-underline",
+      "status": 200
+    },
+    {
+      "path": "/blogs/state-management-in-reactjs",
+      "status": 200
+    },
+    {
+      "path": "/blogs/step-by-step-belajar-frontend-untuk-pemula",
+      "status": 200
+    },
+    {
+      "path": "/blogs/tab-navigation-vs-route-based-navigation-in-react-my-experience-with-large-datasets",
+      "status": 200
+    },
+    {
+      "path": "/blogs/tantangan-dan-kesulitan-sebagai-frontend-dev",
+      "status": 200
+    },
+    {
+      "path": "/blogs/technical-guide-setup-nextjs-with-leaflet",
+      "status": 200
+    },
+    {
+      "path": "/blogs/the-dual-passion-story-driven-and-strategy-games-as-my-escape-and-challenge",
+      "status": 200
+    },
+    {
+      "path": "/blogs/tips-lolos-probation",
+      "status": 200
+    },
+    {
+      "path": "/blogs/tips-memaksimalkan-magang",
+      "status": 200
+    },
+    {
+      "path": "/blogs/tips-meningkatkan-produktifitas-dengan-visual-studio-code",
+      "status": 200
+    },
+    {
+      "path": "/blogs/tools-untuk-membuat-dokumentasi",
+      "status": 200
+    },
+    {
+      "path": "/blogs/twin-macro-sebagai-alternatif-menggunakan-tailwindcss-dan-css-in-js",
+      "status": 200
+    },
+    {
+      "path": "/blogs/understanding-guard-clauses-in-frontend-development-enhancing-code-readability-and-efficiency",
+      "status": 200
+    },
+    {
+      "path": "/blogs/unit-testing-react-component",
+      "status": 200
+    },
+    {
+      "path": "/blogs/unveiling-the-power-of-leaflet-a-frontend-engineer-x27-s-guide-to-interactive-maps",
+      "status": 200
+    },
+    {
+      "path": "/blogs/what-does-it-really-mean-to-be-a-frontend-engineer",
+      "status": 200
+    },
+    {
+      "path": "/book",
+      "status": 200
+    },
+    {
+      "path": "/manhwa",
+      "status": 200
+    },
+    {
+      "path": "/projects",
+      "status": 200
+    },
+    {
+      "path": "/projects/cursor-feb-2026",
+      "status": 200
+    },
+    {
+      "path": "/projects/dipa-agency",
+      "status": 200
+    },
+    {
+      "path": "/projects/duwork-agency",
+      "status": 200
+    },
+    {
+      "path": "/projects/illustration-agency",
+      "status": 200
+    },
+    {
+      "path": "/projects/inagata-technosmith",
+      "status": 200
+    },
+    {
+      "path": "/projects/industry-talent",
+      "status": 200
+    },
+    {
+      "path": "/projects/logos-festival",
+      "status": 200
+    },
+    {
+      "path": "/projects/mac-fan-ctrl",
+      "status": 200
+    },
+    {
+      "path": "/projects/nextjs-leaflet",
+      "status": 200
+    },
+    {
+      "path": "/projects/pangan-be",
+      "status": 200
+    },
+    {
+      "path": "/projects/reading-list",
+      "status": 200
+    },
+    {
+      "path": "/projects/redux-toolkit-example",
+      "status": 200
+    },
+    {
+      "path": "/projects/slate-js-editor",
+      "status": 200
+    },
+    {
+      "path": "/projects/teacher-exam",
+      "status": 200
+    },
+    {
+      "path": "/projects/ts-hooks-kit",
+      "status": 200
+    },
+    {
+      "path": "/projects/viralkan-app",
+      "status": 200
+    },
+    {
+      "path": "/projects/worker-class",
+      "status": 200
+    },
+    {
+      "path": "/shorts",
+      "status": 200
+    },
+    {
+      "path": "/shorts/ai-rule-avoid-bias",
+      "status": 200
+    },
+    {
+      "path": "/shorts/ai-rule-data-privacy",
+      "status": 200
+    },
+    {
+      "path": "/shorts/ai-rule-transparency",
+      "status": 200
+    },
+    {
+      "path": "/shorts/eslint-config-react",
+      "status": 200
+    },
+    {
+      "path": "/shorts/eslint-prettier-integration",
+      "status": 200
+    },
+    {
+      "path": "/shorts/fetching-with-react-query",
+      "status": 200
+    },
+    {
+      "path": "/shorts/prettier-config",
+      "status": 200
+    },
+    {
+      "path": "/shorts/react-hooks-state",
+      "status": 200
+    },
+    {
+      "path": "/shorts/tailwind-css-tips",
+      "status": 200
+    },
+    {
+      "path": "/shorts/typescript-eslint-config",
+      "status": 200
+    },
+    {
+      "path": "/speaker",
+      "status": 200
+    }
+  ],
+  "unknown": 404
+}

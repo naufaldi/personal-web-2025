@@ -65,3 +65,13 @@
  .editorial-index summary > span:first-child { grid-column: 1 / -1; }
  .editorial-index details > div { margin-left: 0; }
 }
+
+@media (min-width: 64rem) and (max-width: 79.999rem) {
+ .editorial-board { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+ .about-portrait { grid-area: 2 / 1 / 4 / 7; }
+ .about-intro { grid-area: 2 / 7 / 3 / 13; }
+ .about-workspace { grid-area: 3 / 9 / 4 / 13; }
+ .about-community { grid-area: 4 / 5 / 5 / 13; }
+ .about-tools { grid-area: 4 / 1 / 5 / 5; }
+ .about-quiet { grid-area: 5 / 9 / 6 / 13; }
+}

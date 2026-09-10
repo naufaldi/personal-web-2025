@@ -23,7 +23,7 @@ describe('Astro static migration contract', () => {
       expect(html.match(/<title>/g)).toHaveLength(1)
       expect(html).toContain('application/ld+json')
       if (route.path !== '/') {
-        if (['/about'].includes(route.path)) expect(html).not.toContain('<astro-island')
+        if (['/about', '/speaker'].includes(route.path)) expect(html).not.toContain('<astro-island')
         else {
           expect(html).toContain('data-prerendered-content="true"')
           expect(html).toContain('client="only"')
@@ -31,6 +31,20 @@ describe('Astro static migration contract', () => {
         expect(await readFile(`dist${route.path}.html`, 'utf8')).toBe(html)
       }
       if (route.content) expect(html).toContain('<article>')
+    }
+  })
+
+  test('native inner pages preserve career and engagement records without hydration', async () => {
+    const about = await readFile('dist/about/index.html', 'utf8')
+    const community = await readFile('dist/speaker/index.html', 'utf8')
+    expect(about).toContain('id="experiences-heading"')
+    expect(about.match(/<article>/g)).toHaveLength(6)
+    expect(community.match(/data-record/g)).toHaveLength(21)
+    expect(community.match(/data-feature-category/g)).toHaveLength(5)
+    for (const html of [about, community]) {
+      expect(html).not.toContain('<astro-island')
+      expect(html).toContain('<details')
+      expect(html).toContain('aria-label="Full site index"')
     }
   })
 

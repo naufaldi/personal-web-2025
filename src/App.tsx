@@ -2,7 +2,6 @@ import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import Layout from '@/components/common/Layout'
 
-const Speaker = lazy(() => import('@/pages/Speaker'))
 const Manhwa = lazy(() => import('@/pages/Manhwa'))
 const Projects = lazy(() => import('@/pages/Projects'))
 const ProjectDetail = lazy(() => import('@/pages/ProjectDetail'))
@@ -27,7 +26,6 @@ export default function App() {
             <Route path="projects/:slug" element={<ProjectDetail />} />
             <Route path="blogs" element={<Blogs />} />
             <Route path="blogs/:slug" element={<BlogDetail />} />
-            <Route path="speaker" element={<Speaker />} />
 
             <Route path="shorts" element={<Shorts />} />
             <Route path="shorts/:slug" element={<ShortDetail />} />

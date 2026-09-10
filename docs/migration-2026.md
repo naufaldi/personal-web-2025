@@ -1,4 +1,4 @@
-# Collected by Faldi: 2026 homepage migration
+# Collected by Faldi: 2026 migration
 
 ## Result and scope
 
@@ -17,7 +17,7 @@ Work is in the main checkout `/Users/naufaldi.satriya/WebApps/personal-web-2025`
 | Missing routes | Catch-all served root HTML with status 200 | Dedicated Astro `404.html`, noindex, static-host 404 rule |
 | `.html` aliases | Copied route HTML | Copies retained, Netlify canonical 301 rules generated; local compatibility entry normalizes alias before React mounts |
 
-Native routes are `/` and the 404 page. Compatibility routes are `/about`, `/projects`, `/blogs`, `/speaker`, `/shorts`, `/book`, `/manhwa`, plus published `/projects/:slug`, `/blogs/:slug`, and `/shorts/:slug`. No new community, photography, book-detail or manhwa-detail URLs were invented.
+Native routes are `/`, `/about`, `/speaker`, and the 404 page. Compatibility routes are `/projects`, `/blogs`, `/shorts`, `/book`, `/manhwa`, plus published `/projects/:slug`, `/blogs/:slug`, and `/shorts/:slug`. No new community, photography, book-detail or manhwa-detail URLs were invented.
 
 Astro 5.18.2 and `@astrojs/react` 4.4.2 are locked in Bun for React 18 compatibility. Tailwind uses its Vite plugin inside Astro. The existing blog markdown/MDX transform remains, including its `?raw` exclusion. Content imports and the `@/` source alias are preserved.
 
@@ -80,7 +80,7 @@ bun run preview --host 127.0.0.1 --port 4322
 
 `build` runs discoverability generation, Astro/TypeScript checks, Astro static generation and alias finalization. It generated 122 pages: 121 published routes and one 404, plus 120 non-home HTML aliases. There were no type errors; existing legacy Lucide brand-icon deprecation hints remain.
 
-Four Bun migration tests pass with 979 assertions, covering native homepage isolation, every published route's metadata/static fallback/HTML alias, safe JSON-LD embedding, crawler files and 404 behavior. [HTTP evidence](verification/routes.json) records 121 successful direct requests with headings and canonical URLs; an unknown route returned 404. These are HTTP/static checks for the full inventory, not 121 separate hydrated browser sessions.
+The initial homepage phase passed four Bun migration tests with 979 assertions, covering native homepage isolation, every published route's metadata/static fallback/HTML alias, safe JSON-LD embedding, crawler files and 404 behavior. [HTTP evidence](verification/routes.json) records 121 successful direct requests with headings and canonical URLs; an unknown route returned 404. These are HTTP/static checks for the full inventory, not 121 separate hydrated browser sessions.
 
 [Browser route evidence](verification/browser-routes.json) covers every legacy collection route and representative project/article/short details, using the requested agent-browser CLI. The long article was also checked through its final Closing Note after lazy content loaded. Browser checks covered home navigation, legacy theme persistence, filters/index/expansion, keyboard/Escape, reduced motion, emulated touch, missing media and empty/reset states. Script-blocked checks used a temporary localhost server with CSP `script-src 'none'`, confirming homepage/index access and legacy project reading fallback.
 
@@ -90,7 +90,7 @@ All 16 reference PNG hashes were checked against the pre-migration snapshot. No 
 
 ## Remaining page migration
 
-Migrate About next, then Projects and project details, Community, Writing/Shorts, and Books/Manhwa using their selected references. Each phase should remove only its own compatibility route and unused code after content/SEO/browser checks. Keep full detail documents and original slugs. Retire the React island and legacy CSS only after the last dependent route migrates.
+Migrate Projects and project details next, then Writing/Shorts and Books/Manhwa using their selected references. Each phase should remove only its own compatibility route and unused code after content/SEO/browser checks. Keep full detail documents and original slugs. Retire the React island and legacy CSS only after the last dependent route migrates.
 
 Preview is local. A later deployment must verify Netlify alias/404 rules, canonical-domain behavior and live crawler files. Host configuration and personal infrastructure were not accessed.
 
@@ -99,3 +99,13 @@ Preview is local. A later deployment must verify Netlify alias/404 rules, canoni
 `/about` is native Astro, using the approved About composition and existing biography, six career records, and local photographs. `#experiences-heading` opens the complete career history. Native details retain content access without JavaScript; the small editorial controller adds index switching and Escape focus restoration. The old About route module was removed. Legacy links to About perform document navigation. Shared header/photo components and page-scoped composition CSS keep the homepage unchanged.
 
 Verified at 1487 × 1058, 834 × 1112, and 390 × 844 with agent-browser. Career expansion renders six records; Escape closes and restores the initiating link. No horizontal overflow at mobile/tablet. Production build and migration contract checks run before commit. Existing source claims are preserved in career details; conflicting aggregate mentoring metrics are not promoted.
+
+## In Good Company migration, September 10
+
+`/speaker` now renders the selected In Good Company composition in Astro. Five featured artifacts derive from `src/data/communityCollection.ts`, which references the unchanged 21 records in `mentorSpeaker.ts`. Categories are Workshops (2), Talks (5), Mentoring (8), and Community (6). The same category selection filters the featured composition and complete index. All records and resource links are present in static HTML inside native details elements. Generated handwritten notes/posters are replaced with editable typography using real event titles. Archive photographs are explicitly labeled; they do not claim to depict the linked engagement.
+
+The editorial controller preserves filter state between views, announces counts, keeps filter focus, opens matching records, and restores the triggering artifact on Escape. Pointer filtering uses an interruptible 220ms opacity/transform transition; keyboard and reduced-motion changes are immediate. Detail expansion is a native immediate disclosure. The old `Speaker.tsx` route module is removed. Shared legacy components remain available for later cleanup; no remaining React route imports About or Speaker.
+
+Final verification: `bun run build` passes (122 pages, 120 aliases); `bun run test:migration` passes five tests and 987 assertions. [Interaction evidence](verification/inner-pages-interactions.json) records all category counts, pressed state/focus, index persistence, keyboard activation, Escape, reduced motion, and About anchor behavior. [Route evidence](verification/inner-pages-routes.json) confirms all 121 published routes return 200 with canonical metadata and unknown URLs return 404. New native pages contain no React islands; six career records and 21 engagement records remain in the static output.
+
+Visual comparisons: [About](verification/about-comparison.png) and [In Good Company](verification/community-comparison.png), selected reference and implementation side by side. Desktop 1487 × 1058, tablet 834 × 1112, mobile 390 × 844, and 744 × 529 reflow checked. The latter represents 200% layout space, not native browser-chrome zoom. Physical-device touch and live hosting redirects were not re-tested in this phase. Reference PNGs are unchanged.

@@ -46,15 +46,17 @@ if (root) {
       records.forEach(record => { record.open = false })
     } else if (target.dataset.editorialFilter) {
       category = target.dataset.editorialFilter
-      view(true)
+      board.classList.toggle('is-filtered', category !== 'All')
+      root.querySelectorAll<HTMLElement>('[data-feature-category]').forEach(feature => { feature.hidden = category !== 'All' && feature.dataset.featureCategory !== category })
       records.forEach(record => {
         record.hidden = category !== 'All' && record.dataset.category !== category
         if (record.hidden) record.open = false
       })
       root.querySelectorAll<HTMLElement>('[data-editorial-filter]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.editorialFilter === category)))
       status.textContent = `${records.filter(record => !record.hidden).length} entries. ${category}.`
-      directory.getAnimations().forEach(animation => animation.cancel())
-      if (event.detail > 0 && !reduced.matches) directory.animate([{ opacity: .4, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 220, easing: 'cubic-bezier(.23,1,.32,1)' })
+      const surface = directory.hidden ? board : directory
+      root.getAnimations({ subtree: true }).forEach(animation => animation.cancel())
+      if (event.detail > 0 && !reduced.matches) surface.animate([{ opacity: .4, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 220, easing: 'cubic-bezier(.23,1,.32,1)' })
     }
   })
   root.addEventListener('keydown', event => {

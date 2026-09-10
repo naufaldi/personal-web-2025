@@ -1,0 +1,63 @@
+{
+  "All": {
+    "count": 21,
+    "focus": "All",
+    "pressed": "true"
+  },
+  "Workshops": {
+    "count": 2,
+    "focus": "Workshops",
+    "pressed": "true"
+  },
+  "Talks": {
+    "count": 5,
+    "focus": "Talks",
+    "pressed": "true"
+  },
+  "Mentoring": {
+    "count": 8,
+    "focus": "Mentoring",
+    "pressed": "true"
+  },
+  "Community": {
+    "count": 6,
+    "focus": "Community",
+    "pressed": "true"
+  },
+  "index": {
+    "index": true,
+    "visible": 8
+  },
+  "keyboard": {
+    "animations": 0,
+    "open": true
+  },
+  "escape": {
+    "board": true,
+    "focus": "engagement-13"
+  },
+  "reduced": {
+    "animations": 0,
+    "reduced": true
+  },
+  "1487": {
+    "overflow": false,
+    "width": 1487
+  },
+  "834": {
+    "overflow": false,
+    "width": 834
+  },
+  "390": {
+    "overflow": false,
+    "width": 390
+  },
+  "744": {
+    "overflow": false,
+    "width": 744
+  },
+  "aboutAnchor": {
+    "open": true,
+    "records": 6
+  }
+}
