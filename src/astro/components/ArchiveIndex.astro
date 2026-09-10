@@ -1,14 +1,15 @@
 ---
+import Photo from './CollectionPhoto.astro'
 import type { ArchiveEntry } from '@/data/archive'
 import { collectionRoutes } from '@/data/collected'
 interface Props { entries: ArchiveEntry[]; title: string }
 const { entries, title } = Astro.props
 ---
-<section class="editorial-index" id="index" aria-labelledby="archive-index-heading" data-directory>
+<section class:list={["editorial-index", { "project-index": title === "Projects" }]} id="index" aria-labelledby="archive-index-heading" data-directory>
   <h2 class="font-display text-reading-title" id="archive-index-heading" tabindex="-1">{title} / Index</h2>
   <p class="font-mono text-caption">{entries.length} entries in the collection</p>
   {entries.map(entry => <details id={entry.id} data-record data-category={entry.categories.join('|')} data-search={`${entry.title} ${entry.meta} ${entry.description ?? ''} ${entry.tags?.join(' ') ?? ''}`}>
-    <summary><span class="font-mono text-caption">{entry.categories.join(' / ')}</span><h3 class="text-heading">{entry.title}</h3></summary>
+    <summary>{title === 'Projects' && entry.image && <span class="index-cover"><Photo image={entry.image} alt={`${entry.title} ${entry.imageKind === 'illustration' ? 'illustrated cover' : 'screenshot'}`} /></span>}<span class="font-mono text-caption">{entry.categories.join(' / ')}</span><h3 class="text-heading">{entry.title}</h3></summary>
     <div><p class="font-mono text-caption">{entry.meta}</p>{entry.description && <p class="text-body">{entry.description}</p>}{entry.tags && <p class="font-mono text-caption">{entry.tags.join(' · ')}</p>}
     {entry.href && <a class="editorial-link font-mono text-nav" href={entry.href}>Read {title === 'Projects' ? 'project' : 'article'} ↗</a>}</div>
   </details>)}

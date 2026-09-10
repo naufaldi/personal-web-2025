@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "redux-toolkit-example",
+    "kind": "screenshot",
+    "source": "https://res.cloudinary.com/cynux/image/upload/v1763365749/portfolio-2025/portfolio/redux-toolkit.png"
+  },
+  {
+    "slug": "worker-class",
+    "kind": "illustration",
+    "source": "Generated watercolor cover"
+  },
+  {
+    "slug": "mac-fan-ctrl",
+    "kind": "illustration",
+    "source": "Generated watercolor cover"
+  },
+  {
+    "slug": "ts-hooks-kit",
+    "kind": "illustration",
+    "source": "Generated watercolor cover"
+  },
+  {
+    "slug": "logos-festival",
+    "kind": "screenshot",
+    "source": "https://res.cloudinary.com/cynux/image/upload/v1762849055/portfolio-2025/portfolio/logos-fest.png"
+  },
+  {
+    "slug": "illustration-agency",
+    "kind": "screenshot",
+    "source": "https://res.cloudinary.com/cynux/image/upload/v1762849054/portfolio-2025/portfolio/amazigh.png"
+  },
+  {
+    "slug": "cursor-feb-2026",
+    "kind": "illustration",
+    "source": "Generated watercolor cover"
+  },
+  {
+    "slug": "viralkan-app",
+    "kind": "illustration",
+    "source": "https://res.cloudinary.com/cynux/image/upload/v1762849053/portfolio-2025/portfolio/viralkan.png",
+    "error": "HTTP Error 404: Not Found",
+    "replacement": "Generated watercolor cover after original source returned404"
+  },
+  {
+    "slug": "pangan-be",
+    "kind": "illustration",
+    "source": "https://res.cloudinary.com/cynux/image/upload/v1762849053/portfolio-2025/portfolio/pangan.png",
+    "error": "HTTP Error 404: Not Found",
+    "replacement": "Generated watercolor cover after original source returned404"
+  },
+  {
+    "slug": "dipa-agency",
+    "kind": "screenshot",
+    "source": "https://res.cloudinary.com/cynux/image/upload/v1762849053/portfolio-2025/portfolio/dipa.png"
+  },
+  {
+    "slug": "industry-talent",
+    "kind": "screenshot",
+    "source": "https://res.cloudinary.com/cynux/image/upload/v1762849056/portfolio-2025/portfolio/industry-talent.png"
+  },
+  {
+    "slug": "teacher-exam",
+    "kind": "illustration",
+    "source": "Generated watercolor cover"
+  },
+  {
+    "slug": "reading-list",
+    "kind": "illustration",
+    "source": "Generated watercolor cover"
+  },
+  {
+    "slug": "inagata-technosmith",
+    "kind": "screenshot",
+    "source": "https://res.cloudinary.com/cynux/image/upload/v1762849054/portfolio-2025/portfolio/inagata.png"
+  },
+  {
+    "slug": "nextjs-leaflet",
+    "kind": "screenshot",
+    "source": "https://res.cloudinary.com/cynux/image/upload/v1762849055/portfolio-2025/portfolio/map.png"
+  },
+  {
+    "slug": "duwork-agency",
+    "kind": "screenshot",
+    "source": "https://res.cloudinary.com/cynux/image/upload/v1762849054/portfolio-2025/portfolio/duworks.png"
+  },
+  {
+    "slug": "slate-js-editor",
+    "kind": "screenshot",
+    "source": "https://res.cloudinary.com/cynux/image/upload/v1763365750/portfolio-2025/portfolio/slate-js.png"
+  }
+]

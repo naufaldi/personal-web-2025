@@ -7,6 +7,7 @@ export interface ArchiveEntry {
   meta: string
   description?: string
   href?: string
+  imageKind?: 'illustration' | 'screenshot'
   image?: ImageMetadata
   tags?: string[]
 }
