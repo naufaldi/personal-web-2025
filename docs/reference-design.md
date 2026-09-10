@@ -83,8 +83,12 @@ The homepage now uses native Astro HTML, Tailwind v4 collection styling, self-ho
 
 Work remains in `/Users/naufaldi.satriya/WebApps/personal-web-2025` on `codex/collected-by-faldi-design`. Changes are committed in atomic migration steps as requested. Reference PNGs remain unchanged.
 
-Astro owns URL generation and metadata. Existing React pages mount only on compatibility routes, with their original CSS and theme storage. Current route/content and SEO contracts remain the compatibility baseline. Future page families follow their selected mockups individually; natural scrolling keeps full detail documents readable.
+Astro owns URL generation and metadata. All published routes now render native Astro HTML; retained legacy React source does not mount on those routes. Current route/content and SEO contracts remain the compatibility baseline. Future page families follow their selected mockups individually; natural scrolling keeps full detail documents readable.
 
 The approved real-photo substitution preserves major artifact placement, but photo subjects, project imagery and sourced copy intentionally differ from the generated reference. Archivo Black is a chosen implementation font; the homepage fits its native wider letters to the available space. No generated personal quotations, event claims or results were imported.
 
-About and In Good Company (`/speaker`) now also use native Astro compositions with real content and in-flow disclosures. Books, Manhwa, Projects, and Writing archives are also native Astro. Project and article details are now native Astro reading views. Shorts is retired; its source Markdown is retained but its routes and navigation are removed. Keep the root design specification authoritative, preserve keyboard/touch/reduced-motion behavior, and compare each rendered page with its selected reference before retiring its compatibility route.
+About and In Good Company (`/speaker`) now also use native Astro compositions with real content and in-flow disclosures. Books, Manhwa, Projects, and Writing archives are also native Astro. Project and article details are now native Astro reading views. Shorts is retired; its source Markdown is retained but its routes and navigation are removed. Keep the root design specification authoritative, preserve keyboard/touch/reduced-motion behavior, and compare each rendered page with its selected reference as it changes.
+
+## Selected detail revision
+
+The [v3 detail studies](reference/detail-studies/README.md) now guide project and article pages. Project pages pair the actual project cover with context and resource links. Articles use the shared reading watercolor beside the title. Both retain a visible desktop contents rail, a narrow unboxed body and full-width bottom navigation. Contents collapse on compact screens after script initialization and remain available without JavaScript. Keep all source Markdown, including content omitted by the generated mockups.

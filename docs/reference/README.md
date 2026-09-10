@@ -60,11 +60,15 @@ These are visual implementation references, not production assets. Replace mocku
 
 ### Project detail
 
-![Project detail mockup](project-detail-v2.png)
+![Selected project detail mockup](detail-studies/project-detail-v3.png)
+
+[Previous v2 study](project-detail-v2.png), retained for history.
 
 ### Writing detail
 
-![Writing detail mockup](reading-v2.png)
+![Selected blog detail mockup](detail-studies/blog-detail-v3.png)
+
+[Previous v2 study](reading-v2.png), retained for history.
 
 ### Community detail
 

@@ -10,7 +10,7 @@ function normalizeHeadings() {
     visit(tree)
   }
 }
-const processor = createMarkdownProcessor({ gfm: true, remarkPlugins: [normalizeHeadings], smartypants: false, syntaxHighlight: { type: 'shiki', excludeLangs: ['mermaid'] }, shikiConfig: { theme: 'github-light' } })
+const processor = createMarkdownProcessor({ gfm: true, remarkPlugins: [normalizeHeadings], smartypants: false, syntaxHighlight: { type: 'shiki', excludeLangs: ['mermaid'] }, shikiConfig: { theme: 'github-dark' } })
 export async function renderReading(content: string) {
   const result = await (await processor).render(content)
   return { html: result.code, headings: result.metadata.headings.filter(heading => heading.depth <= 3) }

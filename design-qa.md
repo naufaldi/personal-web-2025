@@ -156,3 +156,28 @@ Status: passed for the checked desktop, tablet and mobile views, with no outstan
 [Responsive checks](docs/verification/reading-responsive.json) cover Projects, a project detail and an article at 1487, 834, 390 and 320 CSS pixels, all without horizontal overflow and with one H1. [Browser interaction evidence](docs/verification/reading-interactions.json) confirms all 17 index covers load, project search, keyboard filtering with zero animations, heading targets, code copying, two Mermaid diagrams and the retired page. [Script-blocked evidence](docs/verification/reading-nojs.json) confirms native article content, diagram source, TOC disclosure and the project index remain accessible. [Route checks](docs/verification/completed-route-checks.json) cover 110 retained paths and 13 retired/unknown URL cases. Production build and eight migration tests pass (1094 assertions).
 
 Physical touch, Safari, actual browser-chrome 200% zoom and live host redirects were not tested in this phase. Some images embedded in older article bodies remain external and may fail independently; the reading view provides descriptive fallback text. Reference PNGs and all original source Markdown remain unchanged.
+
+## Approved detail v3 implementation
+
+Source targets: [project](docs/reference/detail-studies/project-detail-v3.png) and [blog](docs/reference/detail-studies/blog-detail-v3.png), each 1065 × 1477 pixels. Production captures: [project desktop](docs/verification/project-detail-v3-desktop.png) and [blog desktop](docs/verification/blog-detail-v3-desktop.png), each 1440 × 2000 CSS/pixel viewport at density 1. Each paired comparison displays both images at 720 × 1000, preserving their approximately equal aspect ratios. The source is a shortened complete-page study; the implementation capture shows the opening 2000 pixels of the complete original document. Footer and later code therefore occur farther down.
+
+Full-view comparisons: [project pair](docs/verification/project-detail-v3-comparison.png), [blog pair](docs/verification/blog-detail-v3-comparison.png). Focused code/contents evidence: [code view](docs/verification/blog-detail-v3-code.png). Additional [responsive evidence](docs/verification/detail-v3-responsive.json) covers desktop, tablet, mobile and narrow mobile for both page types.
+
+| Before | After | Why |
+| --- | --- | --- |
+| Closed desktop contents and an unrelated support portrait | Visible sticky contents rail with a subtle divider; support portrait removed | Follow the approved reading composition |
+| Workspace photograph beside the blog title | Existing reading watercolor, with illustration provenance | Match the selected blog study |
+| First iteration reserved two rows for the illustration, leaving a large blank gap | Peripheral illustration positioned independently on desktop; prose occupies the row beside contents | Keep reading directly below the title without obscuring text |
+| Copy controls after light code blocks | Dark syntax-highlighted code, with a reserved top strip for copy controls | Match the study while keeping long lines scrollable |
+| Shared hover styling colored Copy red on black | Paper-colored hover/focus text and visible focus outline | Preserve contrast on the dark surface |
+| Narrow bottom navigation | Full-width hairline and reading navigation | Close the continuous composition consistently |
+
+Comparison history: the initial browser pass exposed the P1 blank reading gap. The corrected desktop capture and paired comparison confirm it is removed. The focused code pass exposed the P2 hover contrast mismatch; the revised code capture confirms paper-colored focused text. No actionable P0–P2 issue remains in the checked states.
+
+Fidelity review: Archivo Black retains its native wider letterforms and weight 400; Manrope/Source Code Pro retain the settled text hierarchy, with 18px desktop/17px mobile prose and captions at least 14px. These deliberately differ from the mockup's synthesized lettering and enlarged excerpt typography. Warm paper, ink, vermilion and flat surfaces remain consistent. Cover subjects and the blog watercolor are the actual existing assets, displayed without distortion. Unequal openings, generous gaps and rail/body separation match the chosen direction. Original Markdown and metadata replace generated placeholder text; no invented claims were copied.
+
+Interaction evidence: the Zustand contents link reached `#zustand` and became current; keyboard Enter did the same. Copy returned “Copied” with paper-colored focused text. Reduced-motion media was verified true with zero active animations. Both Mermaid diagrams rendered and retained their source. No browser runtime errors were reported on these tested routes. With scripts blocked, the state-management article retained 11,061 text characters, its open native contents and zero copy controls. Eight viewport checks reported no horizontal overflow or failed cover images.
+
+Build/check and all eight migration tests passed (1,094 assertions), covering static route metadata, one H1, aliases, all 17 project covers and retired Shorts. Original source Markdown and previously tracked reference PNGs are unchanged. Physical touch, Safari and actual browser-chrome 200% zoom were not retested; responsive widths are not claimed as substitutes. External images/links inside historical article content remain subject to their original hosts.
+
+Final result: passed.

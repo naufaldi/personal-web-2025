@@ -1,4 +1,30 @@
 export {}
+const toc = document.querySelector<HTMLDetailsElement>('.reading-toc')
+const compactReading = matchMedia('(max-width: 63.999rem)')
+if (toc && compactReading.matches) toc.open = false
+compactReading.addEventListener('change', ({ matches }) => {
+  if (toc && !matches) toc.open = true
+})
+const tocLinks = [...document.querySelectorAll<HTMLAnchorElement>('.reading-toc a')]
+const sections = tocLinks.flatMap(link => {
+  const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)))
+  return heading ? [{ link, heading }] : []
+})
+function updateCurrentHeading() {
+  const passed = sections.filter(({ heading }) => heading.getBoundingClientRect().top <= 120)
+  const current = passed[passed.length - 1] ?? sections[0]
+  sections.forEach(({ link }) => {
+    if (link === current?.link) link.setAttribute('aria-current', 'location')
+    else link.removeAttribute('aria-current')
+  })
+}
+let scheduled = false
+addEventListener('scroll', () => {
+  if (scheduled) return
+  scheduled = true
+  requestAnimationFrame(() => { updateCurrentHeading(); scheduled = false })
+}, { passive: true })
+updateCurrentHeading()
 document.querySelectorAll<HTMLPreElement>('.reading-prose pre').forEach(pre => {
   pre.tabIndex = 0
   pre.setAttribute('aria-label', 'Code example')
@@ -11,7 +37,10 @@ document.querySelectorAll<HTMLPreElement>('.reading-prose pre').forEach(pre => {
     catch { button.textContent = 'Select code to copy'; pre.focus() }
     setTimeout(() => { button.textContent = 'Copy code' }, 1800)
   })
-  pre.after(button)
+  const block = document.createElement('div')
+  block.className = 'reading-code-block'
+  pre.before(block)
+  block.append(button, pre)
 })
 document.querySelectorAll<HTMLImageElement>('.reading-layout img').forEach(image => {
   const fallback = () => {
@@ -34,7 +63,7 @@ if (diagrams.length) {
       const figure = document.createElement('figure')
       figure.className = 'reading-diagram'
       figure.innerHTML = svg
-      code.closest('pre')?.before(figure)
+      code.closest('.reading-code-block')?.before(figure)
     } catch { /* Keep the original diagram source readable when rendering fails. */ }
   }
 }
