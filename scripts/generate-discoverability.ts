@@ -354,10 +354,6 @@ ${projectLines}
 
 ${blogLines}
 
-## Short notes
-
-${shortLines}
-
 ## Speaking and mentoring highlights
 
 ${engagementLines}
@@ -453,7 +449,6 @@ ${SITE_FULL_NAME}, also known as ${siteConfig.name}, is a software engineer and 
 - ${SITE_URL}/projects
 - ${SITE_URL}/blogs
 - ${SITE_URL}/speaker
-- ${SITE_URL}/shorts
 - ${SITE_URL}/book
 - ${SITE_URL}/manhwa
 
@@ -468,10 +463,6 @@ ${projectSections}
 ## Recent blog writing
 
 ${blogSections}
-
-## Short notes
-
-${shortSections}
 
 ## Speaking and mentoring
 
@@ -501,7 +492,7 @@ const ensureDir = (dir: string) => {
 
 const blogs = loadBlogs()
 const projects = loadProjects()
-const shorts = loadShorts()
+const shorts: ShortEntry[] = []
 const sitemapEntries = buildSitemapEntries(blogs, projects, shorts)
 
 ensureDir(PUBLIC_DIR)

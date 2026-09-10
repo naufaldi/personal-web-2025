@@ -1,28 +1,20 @@
 ---
-import Document from '../layouts/Document.astro'
-import LegacyApp from '../components/LegacyApp'
+import Reading from '../layouts/Reading.astro'
 import { buildSeoRoutes } from '../../../scripts/seo-data'
-import { renderStaticContent } from '../../../scripts/seo-render'
-import '@/index.css'
-
+import { projectCover } from '@/data/projectCollection'
+import { portfolioItems } from '@/data/portfolio'
+import { writingEntries } from '@/data/writingCollection'
 export async function getStaticPaths() {
   const { routes } = await buildSeoRoutes()
-  return routes.filter(route => !['/', '/blogs', '/projects', '/about', '/speaker', '/book', '/manhwa'].includes(route.path) && !route.noindex).map(route => ({
-    params: { path: route.path.slice(1) }, props: { route },
-  }))
+  return routes.filter(route => route.kind === 'project' || route.kind === 'blog').map(route => ({ params: { path: route.path.slice(1) }, props: { route } }))
 }
 const { route } = Astro.props
+const slug = route.path.split('/').slice(-1)[0]!
+const project = route.kind === 'project' ? portfolioItems.find(item => item.slug === slug) : undefined
+const cover = project ? projectCover(slug) : undefined
+const writing = writingEntries.find(item => item.id === slug)
+const title = project?.title ?? writing?.title ?? route.title.replace(/ - Blog - Naufaldi Rafif Satriya$/, '')
+const meta = project ? project.techStack.join(' / ') : `${writing?.categories.join(' / ') ?? 'Writing'} / ${writing?.meta ?? route.date}`
+const links = project ? [{ title: 'View project', href: project.liveUrl }, { title: 'Source code', href: project.githubUrl }].filter((link): link is {title: string; href: string} => Boolean(link.href && /^https?:\/\//.test(link.href))) : []
 ---
-<Document route={route}>
-  <script define:vars={{ canonicalPath: route.path }}>
-    if (location.pathname === `${canonicalPath}.html`) {
-      history.replaceState(history.state, '', canonicalPath + location.search + location.hash)
-    }
-  </script>
-  <LegacyApp client:only="react">
-    <div slot="fallback">
-      <nav aria-label="Site"><a href="/">Home</a> / <a href="/projects">Projects</a> / <a href="/blogs">Writing</a></nav>
-      <Fragment set:html={renderStaticContent(route)} />
-    </div>
-  </LegacyApp>
-</Document>
+<Reading route={route} title={title} meta={meta} summary={project?.description} cover={cover?.image} coverKind={cover?.kind} links={links} />

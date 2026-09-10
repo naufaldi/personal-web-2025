@@ -117,13 +117,7 @@ export const STATIC_ROUTES: StaticRouteMeta[] = [
     changefreq: 'monthly',
     priority: 0.85,
   },
-  {
-    path: '/shorts',
-    title: `Shorts – ${SITE_NAME}`,
-    description: 'Short-form engineering notes, snippets, and quick technical references.',
-    changefreq: 'monthly',
-    priority: 0.7,
-  },
+
   {
     path: '/book',
     title: `Books – ${SITE_NAME}`,

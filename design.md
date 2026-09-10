@@ -226,8 +226,10 @@ Examples: `bg-paper text-ink`, `font-display text-display`, `font-body text-read
 
 ## Next phase and checks
 
-Home, About, In Good Company, Books, Manhwa, Projects, and Writing archives are implemented in **Astro + Tailwind CSS v4**. Shorts and existing project/article/short detail pages use React compatibility islands until their own migration. See [migration-2026.md](docs/migration-2026.md) for route ownership, build commands, CSS boundaries and verification. Preserve source content, URLs and SEO contracts as later pages migrate. Use Bun exclusively.
+Home, About, In Good Company, Books, Manhwa, Projects, and Writing archives are implemented in **Astro + Tailwind CSS v4**. Project and article details also render as native Astro reading views. Shorts is retired. See [migration-2026.md](docs/migration-2026.md) for route ownership, build commands, CSS boundaries and verification. Preserve source content and the remaining public URLs and SEO contracts. Use Bun exclusively.
 
 Before implementation, confirm token-table/example agreement and valid reference links. During implementation, check loaded fonts and computed styles, responsive composition, contrast, keyboard/reduced motion, complete detail reading and existing-route/SEO behavior. A generated mockup is not runtime verification.
 
 Homepage fitting: Archivo Black has wider native letterforms than the generated reference. The desktop FALDI lockup uses `clamp(5rem, 14vw, 14rem)` to keep the complete name readable beside the software artifact; this is a composition-specific override of the reusable display role. Tablet/mobile sizes reflow without stretching the font. Keyboard-triggered UI state changes are immediate.
+
+Project covers use verified screenshots where available, otherwise individual watercolor illustrations on warm paper. Keep illustration provenance separate from product screenshots. Reuse the cover across archive, index, detail, and social metadata; never bake titles or interface claims into conceptual art.

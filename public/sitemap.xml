@@ -31,12 +31,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://naufaldi.com/shorts</loc>
-    <lastmod>2026-09-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
     <loc>https://naufaldi.com/book</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -665,65 +659,5 @@
     <lastmod>2020-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://naufaldi.com/shorts/tailwind-css-tips</loc>
-    <lastmod>2024-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://naufaldi.com/shorts/typescript-eslint-config</loc>
-    <lastmod>2024-01-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://naufaldi.com/shorts/ai-rule-data-privacy</loc>
-    <lastmod>2024-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://naufaldi.com/shorts/eslint-prettier-integration</loc>
-    <lastmod>2024-01-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://naufaldi.com/shorts/react-hooks-state</loc>
-    <lastmod>2024-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://naufaldi.com/shorts/ai-rule-transparency</loc>
-    <lastmod>2024-01-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://naufaldi.com/shorts/eslint-config-react</loc>
-    <lastmod>2024-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://naufaldi.com/shorts/prettier-config</loc>
-    <lastmod>2024-01-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://naufaldi.com/shorts/ai-rule-avoid-bias</loc>
-    <lastmod>2024-01-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://naufaldi.com/shorts/fetching-with-react-query</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
   </url>
 </urlset>

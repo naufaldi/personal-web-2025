@@ -47,14 +47,6 @@ Important notes:
 - [A Practical Guide Environment Variables: A Guide from OS to Next.js](https://naufaldi.com/blogs/a-practical-guide-environment-variables-a-guide-from-os-to-next-js): I still remember the frustration. I was deploying a Next.js app in a Docker container for the first time. I dutifully set my `NEXT_PUBLIC_API_URL` variable usin
 - [Managing State in React: Why You Should Avoid &quot;Too Much State&quot; in a Single Component](https://naufaldi.com/blogs/managing-state-in-react-why-you-should-avoid-quot-too-much-state-quot-in-a-single-component): In React projects, it’s common to see components with a long list of state variables, sometimes more than ten in one file. State helps us keep track of changing
 
-## Short notes
-
-- [Tailwind CSS Quick Tips and Snippets](https://naufaldi.com/shorts/tailwind-css-tips)
-- [ESLint Configuration for TypeScript Projects](https://naufaldi.com/shorts/typescript-eslint-config)
-- [AI Rule: Ensure Data Privacy Compliance](https://naufaldi.com/shorts/ai-rule-data-privacy)
-- [Integrating ESLint with Prettier](https://naufaldi.com/shorts/eslint-prettier-integration)
-- [Using React Hooks for State Management](https://naufaldi.com/shorts/react-hooks-state)
-
 ## Speaking and mentoring highlights
 
 - Agentic AI for Builders: From Prompt to Autonomous Coding Loop (speaker, 19 February 2026)

@@ -21,16 +21,13 @@ describe('Astro static migration contract', () => {
       const html = route.path === '/' ? home : await readFile(`dist${route.path}/index.html`, 'utf8')
       expect(html).toContain(`href="${route.canonicalUrl}"`)
       expect(html.match(/<title>/g)).toHaveLength(1)
+      expect(html.match(/<h1(?: | >|>)/g)).toHaveLength(1)
       expect(html).toContain('application/ld+json')
       if (route.path !== '/') {
-        if (['/about', '/blogs', '/projects', '/speaker', '/book', '/manhwa'].includes(route.path)) expect(html).not.toContain('<astro-island')
-        else {
-          expect(html).toContain('data-prerendered-content="true"')
-          expect(html).toContain('client="only"')
-        }
+        expect(html).not.toContain('<astro-island')
         expect(await readFile(`dist${route.path}.html`, 'utf8')).toBe(html)
       }
-      if (route.content) expect(html).toContain('<article>')
+      if (route.content) expect(html).toContain('id="reading-content"')
     }
   })
 
@@ -70,6 +67,21 @@ describe('Astro static migration contract', () => {
       expect(html).toContain('data-archive-search')
       expect(html).not.toContain('href="/blogs/coming-soon"')
     }
+  })
+
+  test('all projects have local covers and retired Shorts is absent', async () => {
+    const projects = routes.filter(route => route.kind === 'project')
+    expect(projects).toHaveLength(17)
+    for (const route of projects) {
+      const html = await readFile(`dist${route.path}/index.html`, 'utf8')
+      expect(html).toContain('class="reading-cover"')
+      expect(html).toContain('/_astro/')
+      expect(html).not.toContain('via.placeholder.com')
+      expect(html).not.toContain('opengraph.githubassets.com')
+    }
+    expect(routes.some(route => route.path.startsWith('/shorts'))).toBe(false)
+    for (const file of ['sitemap.xml', 'llms.txt', 'llms-full.txt']) expect(await readFile(`dist/${file}`, 'utf8')).not.toContain('naufaldi.com/shorts')
+    expect(home).not.toContain('href="/shorts"')
   })
 
   test('JSON-LD cannot terminate its script element with content text', () => {

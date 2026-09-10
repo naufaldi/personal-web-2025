@@ -1,0 +1,49 @@
+---
+import Document from './Document.astro'
+import Header from '../components/CollectionHeader.astro'
+import Photo from '../components/CollectionPhoto.astro'
+import { renderReading } from '../lib/reading'
+import { collectionRoutes } from '@/data/collected'
+import type { SeoRoute } from '@/lib/seo'
+import type { ImageMetadata } from 'astro'
+import workspace from '@/assets/collected/workspace.jpg'
+import portrait from '@/assets/collected/portrait.jpg'
+import '../styles/collected.css'
+import '../styles/inner-collections.css'
+import '../styles/reading.css'
+interface Props {
+  route: SeoRoute; title: string; meta: string; summary?: string; cover?: ImageMetadata; coverKind?: 'screenshot' | 'illustration';
+  links?: { title: string; href: string }[];
+}
+const { route, title, meta, summary, cover, coverKind, links = [] } = Astro.props
+const project = route.kind === 'project'
+const back = project ? '/projects' : '/blogs'
+const { html, headings } = await renderReading(route.content ?? '')
+const readingRoute = cover ? { ...route, image: cover.src } : route
+---
+<Document route={readingRoute} collection>
+  <a class="skip-link font-mono text-nav" href="#reading-content">Skip to reading</a>
+  <div class="collection-layout reading-layout">
+    <Header />
+    <main class:list={['reading-main', { 'project-reading': project }]}>
+      <p class="reading-backdrop font-display" aria-hidden="true">{project ? 'PROJECTS' : 'BLOG'}</p>
+      <div class="reading-intro">
+        <a class="editorial-link font-mono text-nav" href={back}>← Back to collection</a>
+        <p class="font-mono text-caption reading-meta">{meta}</p>
+        <h1>{title}</h1>
+        {project && <p class="text-body reading-description">{summary ?? route.description}</p>}
+        {links.length > 0 && <nav class="reading-actions font-mono text-nav" aria-label="Project resources">{links.map(link => <a class="editorial-link" href={link.href}>{link.title} ↗</a>)}</nav>}
+        {project && <a class="editorial-link font-mono text-nav" href="#reading-content">Read project notes ↓</a>}
+      </div>
+      {project && cover ? <figure class="reading-cover"><Photo image={cover} alt={`${title} ${coverKind === 'illustration' ? 'conceptual watercolor illustration' : 'screenshot'}`} eager /><figcaption class="font-mono text-caption">{coverKind === 'illustration' ? 'Illustrated cover / AI-generated artwork' : 'Project screenshot / From the archive'}</figcaption></figure> : <figure class="reading-side-photo"><Photo image={workspace} alt="Faldi’s workspace" eager /><figcaption class="font-mono text-caption">At the desk /<br />Notes and practice</figcaption></figure>}
+      <aside class="reading-aside">
+        {headings.length > 0 && <details class="reading-toc"><summary class="font-mono text-nav">On this page</summary><nav aria-label="Table of contents">{headings.map(heading => <a class:list={['font-mono text-caption', { nested: heading.depth === 3 }]} href={`#${heading.slug}`}>{heading.text}</a>)}</nav></details>}
+        {project && <figure class="reading-support"><Photo image={portrait} alt="Faldi outdoors" /><figcaption class="font-mono text-caption">Collected by Faldi</figcaption></figure>}
+      </aside>
+      <article id="reading-content" class="reading-prose" tabindex="-1" set:html={html} />
+      <nav class="reading-end font-mono text-nav" aria-label="Reading navigation"><a class="editorial-link" href={back}>← Back to collection</a><a class="editorial-link" href="#">Back to top ↑</a></nav>
+    </main>
+    <nav class="site-index font-mono text-nav" aria-label="Full site index">{collectionRoutes.map(item => <a href={item.href}>{item.title}</a>)}</nav>
+  </div>
+  <script>import '../scripts/reading'</script>
+</Document>

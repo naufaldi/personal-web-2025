@@ -31,14 +31,13 @@ Generated handwritten notes, including those signed “faldi,” are not Faldi's
 | `/projects` | Large PROJECTS behind unequal interface/code artifacts | Existing search/filter capability, project destinations and alternate index within the same surface |
 | `/speaker` | Community contact sheet of event images, posters and mentoring artifacts | Categories and individual context/resources, rather than separate event and mentoring sections |
 | `/blogs` | WRITING integrated with unequal essay clippings and occasional photographs | Readable previews, categories, direct article links and alternate index |
-| `/shorts` | SHORTS integrated with useful code/text fragments at varying scales | Search/tags, clear filters, previews and direct note links |
 | `/book` | Flat cover contact sheet with a dominant cover, smaller covers and reading artifacts | Existing reading/wishlist categories via filters and item captions |
 | `/manhwa` | Unequal covers/panels around large type | Existing categories/status and item-level context |
 | `/projects/:slug` | Opened project artifact with peripheral collection context | Actual interface, contribution, decisions and full case study |
-| `/blogs/:slug`, `/shorts/:slug` | Focused reading artifact in the same visual language | Complete body/code, headings, readable column and parent navigation |
+| `/blogs/:slug` | Focused reading artifact in the same visual language | Complete body/code, headings, readable column and parent navigation |
 | Not found | Minimal paper/type composition | Working Home and index links |
 
-Use [current route code](../src/App.tsx) as the compatibility baseline. There is no existing `/experience`, `/speaking`, `/speaking/:slug`, book-detail, manhwa-detail or photography route. About already uses `#experiences-heading`; preserve and verify its rendered target. Use the actual Contact destination rather than generated contact information. Keep books, manhwa, writing, shorts, projects and career content reachable through the index/navigation.
+Use [Astro detail route](../src/astro/pages/[...path].astro) as the route baseline. There is no existing `/experience`, `/speaking`, `/speaking/:slug`, book-detail, manhwa-detail or photography route. About already uses `#experiences-heading`; preserve and verify its rendered target. Use the actual Contact destination rather than generated contact information. Keep books, manhwa, writing, projects and career content reachable through the index/navigation.
 
 ## Collection and detail interaction
 
@@ -88,4 +87,4 @@ Astro owns URL generation and metadata. Existing React pages mount only on compa
 
 The approved real-photo substitution preserves major artifact placement, but photo subjects, project imagery and sourced copy intentionally differ from the generated reference. Archivo Black is a chosen implementation font; the homepage fits its native wider letters to the available space. No generated personal quotations, event claims or results were imported.
 
-About and In Good Company (`/speaker`) now also use native Astro compositions with real content and in-flow disclosures. Books, Manhwa, Projects, and Writing archives are also native Astro. Continue with Shorts, project details, and article reading views in separate implementation phases. Keep the root design specification authoritative, preserve keyboard/touch/reduced-motion behavior, and compare each rendered page with its selected reference before retiring its compatibility route.
+About and In Good Company (`/speaker`) now also use native Astro compositions with real content and in-flow disclosures. Books, Manhwa, Projects, and Writing archives are also native Astro. Project and article details are now native Astro reading views. Shorts is retired; its source Markdown is retained but its routes and navigation are removed. Keep the root design specification authoritative, preserve keyboard/touch/reduced-motion behavior, and compare each rendered page with its selected reference before retiring its compatibility route.

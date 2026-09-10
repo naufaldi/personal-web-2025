@@ -135,3 +135,24 @@ Projects status: passed after production-specific CSS fixes. [Comparison](docs/v
 The large title sits behind the lead paper artifact. Existing personal photographs replace generated city imagery. Full titles, readable captions and search add vertical space, so this composition scrolls naturally rather than shrinking typography into one viewport.
 
 Writing status: passed for checked views, with no outstanding actionable P0–P2 issues observed. [Side-by-side comparison](docs/verification/writing-comparison.png), [mobile](docs/verification/writing-mobile.png), [tablet](docs/verification/writing-tablet.png), and [interaction evidence](docs/verification/writing-interactions.json). Category counts are 86 / 10 / 6 / 64 / 5 / 1 for All / Journey / Ideas / Technical / Opinions / Security Incident. Search, empty results, focus retention, keyboard activation and reduced motion passed. Checked widths 1487, 1100, 834, 390, 320 and 744 CSS pixels without horizontal overflow. Article navigation and return to the native archive passed. The 744px viewport verifies reflow; actual browser-chrome 200% zoom and physical touch were not tested in this phase.
+
+## Project covers and native reading pages
+
+| Before | After | Why |
+| --- | --- | --- |
+| Two screenshot artifacts and two large text-only blocks | Four illustrated/screenshot artifacts, with a cover for all 17 projects in the index and details | Give every project a visual identity |
+| GitHub repository cards, a placeholder and two broken screenshot sources | Eight individual watercolor covers, clearly identified as illustrations | Avoid pretending conceptual art is a real product interface |
+| Reading List cover crossed Slate’s caption | Reserved caption gap and rebalanced desktop rows | Keep controls and text unobscured |
+| Project introduction used the truncated SEO description | Full sourced project description | Metadata length constraints must not shorten visible content |
+| React detail shell and legacy CSS | Native Astro reading canvas, 65ch body, heading links and source content | Extend the approved design through the complete reading experience |
+| Body H1 competed with page title | Body H1 normalized to H2, with stable text-based anchors | Preserve one clear page heading |
+| Decorative project title overflowed mobile | Narrow-screen fluid title sizing | Preserve composition without horizontal scrolling |
+| Shorts remained a migration target | Shorts removed from public navigation, route generation and crawler files | Follow the user’s retirement decision |
+
+Nine retained screenshot sources were visually inspected together in the [cover audit](docs/verification/cover-audit.png). Eight generated covers use the approved watercolor/paper treatment, with individual subjects tied to project purpose. Their subjects are illustrative and do not represent real users or the author. Source details: [cover inventory](docs/verification/project-cover-sources.json).
+
+Status: passed for the checked desktop, tablet and mobile views, with no outstanding actionable P0–P2 issues observed. [Painted project collection](docs/verification/projects-painted-desktop.png), [mobile collection](docs/verification/projects-painted-mobile.png), [project-detail comparison](docs/verification/project-reading-comparison.png), and [article comparison](docs/verification/article-reading-comparison.png) record the visual pass. The comparison keeps oversized background lettering, unequal imagery and a paper reading surface; actual source content and the newly approved paintings intentionally differ from the mockup’s fictional interfaces and copy.
+
+[Responsive checks](docs/verification/reading-responsive.json) cover Projects, a project detail and an article at 1487, 834, 390 and 320 CSS pixels, all without horizontal overflow and with one H1. [Browser interaction evidence](docs/verification/reading-interactions.json) confirms all 17 index covers load, project search, keyboard filtering with zero animations, heading targets, code copying, two Mermaid diagrams and the retired page. [Script-blocked evidence](docs/verification/reading-nojs.json) confirms native article content, diagram source, TOC disclosure and the project index remain accessible. [Route checks](docs/verification/completed-route-checks.json) cover 110 retained paths and 13 retired/unknown URL cases. Production build and eight migration tests pass (1094 assertions).
+
+Physical touch, Safari, actual browser-chrome 200% zoom and live host redirects were not tested in this phase. Some images embedded in older article bodies remain external and may fail independently; the reading view provides descriptive fallback text. Reference PNGs and all original source Markdown remain unchanged.

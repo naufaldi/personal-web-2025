@@ -1,3 +1,7 @@
+# Current migration status
+
+All 110 retained public routes are native Astro: seven collection/profile routes, 17 project details and 86 articles. Shorts and its ten detail URLs are retired and return 404. Source Markdown remains in the repository. React renders the homepage icon on the server only; no route mounts the old React application or loads its CSS. The sections below retain the history of each migration phase.
+
 # Collected by Faldi: 2026 migration
 
 ## Result and scope
@@ -88,9 +92,9 @@ Visual evidence and iteration history are in [design-qa.md](../design-qa.md). Vi
 
 All 16 reference PNG hashes were checked against the pre-migration snapshot. No source markdown was changed. Generated sitemap/AI-policy dates changed through the normal build pipeline. The initial homepage phase ended uncommitted. Subsequent phases use atomic commits at the user’s request; nothing has been pushed or deployed.
 
-## Remaining page migration
+## Remaining work
 
-Migrate Shorts and the project/article/short detail reading views next using their selected references. Each phase should remove only its own compatibility route and unused code after content/SEO/browser checks. Keep full detail documents and original slugs. Retire the React island and legacy CSS only after the last dependent route migrates.
+All retained routes now use native Astro. Shorts is retired. Remaining work is optional cleanup of unused React components/dependencies and verification on physical devices and the eventual hosting environment. Preserve original article/project slugs and source Markdown.
 
 Preview is local. A later deployment must verify Netlify alias/404 rules, canonical-domain behavior and live crawler files. Host configuration and personal infrastructure were not accessed.
 
@@ -133,3 +137,17 @@ Article detail routes still hydrate their existing React/MDX renderer. Both norm
 The user’s “together” item is treated as the existing In Good Company page (`/speaker`), already implemented; no new route was invented.
 
 Final archive verification: `bun run build` passes with 122 pages and 120 compatibility aliases. `bun run test:migration` passes seven tests and 1100 assertions. Astro reports zero errors, zero warnings and 17 existing hints. [Direct route checks](verification/archive-routes.json) cover all 121 published paths and unknown-route 404 handling. [Shared interaction checks](verification/archive-regressions.json) cover community filtering, About history, the Books empty-feature/index path, missing-image fallback and the native homepage. Reference PNGs and source Markdown are unchanged. Screenshots and corrections are recorded in [design-qa.md](../design-qa.md). Physical touch and native browser zoom remain outside this phase’s verification.
+
+## Painted covers and completed reading migration
+
+Every project now has a local cover under `src/assets/project-covers`: nine existing product screenshots and eight generated watercolor illustrations. The eight subjects are reusable pieces (ts-hooks-kit), books (Reading List), cooling (FanGuard), teaching (Teacher Exam), workers (Worker Class), collaborative review (Cursor deck), road reporting (Viralkan), and food commodities (Pangan). Viralkan and Pangan’s original screenshot URLs returned 404; six other records had repository cards or a placeholder. [Provenance inventory](verification/project-cover-sources.json) records each source and fallback. Generated illustrations depict fictional subjects, not the author or actual users. Titles remain HTML text outside the paintings. Screenshots remain screenshots and are not painted over.
+
+`projectCollection.ts` requires a cover for every project, so a new record cannot silently ship without one. Archive artifacts, all 17 index thumbnails, detail covers and project social metadata reuse those assets. Astro emits responsive WebP renditions; original PNGs are retained locally. The original content frontmatter remains unchanged.
+
+Project/article details now use `Reading.astro` and a shared build-time Markdown processor with GFM tables, nested lists, links, images, syntax highlighting and stable heading IDs. Body-level H1 headings become H2 beneath the page title. Reading text is constrained to 65ch; wide code/tables scroll within their own bounds. Table-of-contents disclosure and reading/navigation links work without JavaScript. Small client enhancements add code copying, image failure text and Mermaid rendering while keeping diagram source readable. There is no decorative entrance animation on reading content.
+
+Removed `src/App.tsx`, `src/astro/components/LegacyApp.tsx`, and the ProjectDetail, BlogDetail, Shorts and ShortDetail React page modules. Removed the legacy MDX Vite transform from Astro config. The React integration remains for server-rendered homepage icons; unused React components and their dependencies remain for a separate cleanup rather than broadening this visual migration.
+
+Shorts is absent from the SEO route inventory, generated sitemap/LLM indexes and collection navigation. Static builds no longer emit `/shorts` or its former detail files/aliases. The existing catch-all 404 rule handles those URLs; they are not redirected to unrelated writing. Historical source Markdown and reference PNGs remain unchanged. Live hosting behavior has not been exercised.
+
+Verification for the completed migration: `bun run build` passes (111 pages including 404, 109 compatibility aliases), with zero errors, zero warnings and 14 existing unused-component deprecation hints. `bun run test:migration` passes eight tests and 1094 assertions. Agent-browser verifies 17 loaded project index covers, search/keyboard filters, heading links, code copying, Mermaid rendering and responsive layouts at 1487/834/390/320px. A localhost CSP `script-src 'none'` check verifies content and navigation without page scripts. All 110 public routes return 200; Shorts, its ten detail URLs, its `.html` index alias and an unknown URL return 404. Visual evidence and explicit device/hosting limitations are in [design-qa.md](../design-qa.md). Nothing is pushed or deployed.

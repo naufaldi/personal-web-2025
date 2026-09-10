@@ -95,7 +95,6 @@ export const collectionRoutes = [
   { title: 'Projects', href: '/projects' },
   { title: 'Writing', href: '/blogs' },
   { title: 'Community', href: '/speaker' },
-  { title: 'Shorts', href: '/shorts' },
   { title: 'Books', href: '/book' },
   { title: 'Manhwa', href: '/manhwa' },
 ]

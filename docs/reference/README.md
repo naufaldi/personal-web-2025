@@ -4,7 +4,7 @@ Use these images alongside [root design.md](../../design.md) and the [selected d
 
 One cohesive collection composition per archive page: unequal artifact sizes, overlapping large type, warm paper, near-black and sparse vermilion. Detail states retain that identity while allowing readable full content.
 
-These are visual implementation references, not production assets. Replace generated photos, screenshots, covers, quotes, names, dates and copy with authentic, verified material. Do not use the whole mockup as a website background or treat its pictured controls as implemented behavior. Mobile reflow and interaction still require implementation and verification.
+These are visual implementation references, not production assets. Replace mockup photos, screenshots, quotes, names, dates and copy with authentic material. The user subsequently approved separate watercolor project covers where no usable screenshot exists; those are labeled conceptual illustrations. Do not use the whole mockup as a website background or treat its pictured controls as implemented behavior. Mobile reflow and interaction still require implementation and verification.
 
 ## Current references
 
@@ -15,11 +15,11 @@ These are visual implementation references, not production assets. Replace gener
 | Projects | [projects-v2.png](projects-v2.png) | Software collection |
 | Community | [community-v2.png](community-v2.png) | Events and mentoring collection |
 | Writing | [writing-v2.png](writing-v2.png) | Essay collection |
-| Shorts | [shorts-v2.png](shorts-v2.png) | Snippet collection |
+| Shorts (retired, historical only) | [shorts-v2.png](shorts-v2.png) | Snippet collection |
 | Books | [books-v2.png](books-v2.png) | Reading collection |
 | Manhwa | [manhwa-v2.png](manhwa-v2.png) | Comic collection |
 | Project detail | [project-detail-v2.png](project-detail-v2.png) | Opened project artifact |
-| Writing / short detail | [reading-v2.png](reading-v2.png) | Focused reading view |
+| Writing detail | [reading-v2.png](reading-v2.png) | Focused reading view |
 | Community detail | [community-detail-v2.png](community-detail-v2.png) | Expanded event |
 | Book detail | [book-detail-v2.png](book-detail-v2.png) | Expanded book |
 | Manhwa detail | [manhwa-detail-v2.png](manhwa-detail-v2.png) | Expanded comic |
@@ -46,7 +46,7 @@ These are visual implementation references, not production assets. Replace gener
 
 ![Writing mockup](writing-v2.png)
 
-### Shorts
+### Shorts (retired, historical only)
 
 ![Shorts mockup](shorts-v2.png)
 
@@ -62,9 +62,9 @@ These are visual implementation references, not production assets. Replace gener
 
 ![Project detail mockup](project-detail-v2.png)
 
-### Writing / short detail
+### Writing detail
 
-![Writing / short detail mockup](reading-v2.png)
+![Writing detail mockup](reading-v2.png)
 
 ### Community detail
 

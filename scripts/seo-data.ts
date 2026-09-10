@@ -106,18 +106,7 @@ const staticRoutes: SeoRoute[] = [
     image: DEFAULT_IMAGE,
     kind: 'page',
   },
-  {
-    path: '/shorts',
-    title: 'Short Notes - Naufaldi Rafif Satriya',
-    description:
-      'Short technical notes and quick software engineering references from Naufaldi Rafif Satriya.',
-    canonicalUrl: `${SITE_URL}/shorts`,
-    lastmod: GENERATED_TODAY,
-    priority: 0.7,
-    changefreq: 'monthly',
-    image: DEFAULT_IMAGE,
-    kind: 'collection',
-  },
+
   {
     path: '/book',
     title: 'Books - Naufaldi Rafif Satriya',
@@ -438,7 +427,7 @@ export const buildSeoRoutes = async (): Promise<RouteBuildResult> => {
     readMarkdownDirectory('short'),
   ])
 
-  const contentRoutes = createContentRoutes([...projects, ...blogs, ...shorts])
+  const contentRoutes = createContentRoutes([...projects, ...blogs])
   const routes = [...staticRoutes, ...contentRoutes].sort((a, b) => {
     if (a.path === '/') return -1
     if (b.path === '/') return 1
