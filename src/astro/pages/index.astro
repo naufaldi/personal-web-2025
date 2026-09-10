@@ -1,0 +1,43 @@
+---
+import { ArrowRight } from 'lucide-react'
+import Document from '../layouts/Document.astro'
+import Artifact from '../components/Artifact.astro'
+import { artifacts, collectionRoutes } from '@/data/collected'
+import { siteConfig } from '@/data/site'
+import { buildSeoRoutes } from '../../../scripts/seo-data'
+import '../styles/collected.css'
+const { routes } = await buildSeoRoutes()
+const route = routes.find(route => route.path === '/')!
+---
+<Document route={route} collection>
+  <a class="skip-link font-mono text-nav" href="#collection">Skip to collection</a>
+  <div class="collection-layout" data-collection>
+    <header class="collection-header">
+      <a class="identity" href="/" aria-label="Naufaldi Rafif Satriya, home"><span>Naufaldi Rafif Satriya</span><span class="font-mono text-caption">Software engineer & curious observer</span></a>
+      <nav aria-label="Primary" class="font-mono text-nav"><a href="/about">About</a><a href={siteConfig.socialLinks.email}>Contact</a></nav>
+    </header>
+    <main id="collection" tabindex="-1">
+      <div class="collection-canvas" data-canvas>
+        <div class="collection-title"><p class="font-mono">COLLECTED<br />BY</p><h1 class="font-display text-display">FALDI<span class="sr-only">: work, people, and everyday moments</span></h1></div>
+        <p class="margin-note font-mono text-caption"><span class="text-vermilion">01</span><br />People<br />Places<br />Ideas<br />In progress</p>
+        {artifacts.map((artifact, i) => <Artifact artifact={artifact} number={i + 1} />)}
+      </div>
+      <section id="index" class="collection-index" aria-labelledby="index-heading">
+        <div class="index-heading"><p class="font-mono text-caption">COLLECTED BY FALDI</p><h2 id="index-heading" class="font-display text-page-title">Index.</h2></div>
+        <nav aria-label="Full site index" class="site-index font-mono text-nav">{collectionRoutes.map(route => <a href={route.href}>{route.title}</a>)}</nav>
+        <ol class="artifact-index">{artifacts.map((artifact, i) => <li data-index-item={artifact.id} data-category={artifact.category}>
+          <span class="font-mono text-caption text-vermilion">{String(i + 1).padStart(2, '0')}</span>
+          <a href={artifact.href}>{artifact.title}</a><span class="font-mono text-caption">{artifact.category}</span>
+          <button hidden class="font-mono text-nav" data-index-expand={artifact.id}>View artifact</button>
+        </li>)}</ol>
+      </section>
+      <p class="empty-state font-mono text-caption" hidden>No artifacts in this collection. <button data-reset>Reset to All</button></p>
+      <div class="collection-controls font-mono text-nav">
+        <div role="group" aria-label="Filter collection" class="filters" hidden>{['All', 'Software', 'Photography', 'Community'].map(category => <button type="button" data-filter={category} aria-pressed={category === 'All'}>{category}</button>)}</div>
+        <a href="#index" class="index-toggle" data-index-toggle>Open index <ArrowRight size={20} strokeWidth={1} aria-hidden="true" /></a>
+      </div>
+      <p class="sr-only" role="status" aria-live="polite" data-status></p>
+    </main>
+  </div>
+  <script>import '../scripts/collection'</script>
+</Document>

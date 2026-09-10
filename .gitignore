@@ -9,3 +9,5 @@ docs/bio-web.md
 dist/
 .playwright-cli/
 test-results/
+
+.astro/

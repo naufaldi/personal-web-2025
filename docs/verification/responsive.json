@@ -1,0 +1,44 @@
+[
+  {
+    "viewport": [
+      1487,
+      1058
+    ],
+    "result": "\"{\\\"viewport\\\":[1487,1058],\\\"overflow\\\":false,\\\"font\\\":\\\"\\\\\\\"Archivo Black\\\\\\\", \\\\\\\"Arial Black\\\\\\\", sans-serif\\\",\\\"captionSize\\\":\\\"14px\\\"}\""
+  },
+  {
+    "viewport": [
+      1280,
+      900
+    ],
+    "result": "\"{\\\"viewport\\\":[1280,900],\\\"overflow\\\":false,\\\"font\\\":\\\"\\\\\\\"Archivo Black\\\\\\\", \\\\\\\"Arial Black\\\\\\\", sans-serif\\\",\\\"captionSize\\\":\\\"14px\\\"}\""
+  },
+  {
+    "viewport": [
+      1024,
+      768
+    ],
+    "result": "\"{\\\"viewport\\\":[1024,768],\\\"overflow\\\":false,\\\"font\\\":\\\"\\\\\\\"Archivo Black\\\\\\\", \\\\\\\"Arial Black\\\\\\\", sans-serif\\\",\\\"captionSize\\\":\\\"14px\\\"}\""
+  },
+  {
+    "viewport": [
+      834,
+      1112
+    ],
+    "result": "\"{\\\"viewport\\\":[834,1112],\\\"overflow\\\":false,\\\"font\\\":\\\"\\\\\\\"Archivo Black\\\\\\\", \\\\\\\"Arial Black\\\\\\\", sans-serif\\\",\\\"captionSize\\\":\\\"14px\\\"}\""
+  },
+  {
+    "viewport": [
+      744,
+      529
+    ],
+    "result": "\"{\\\"viewport\\\":[744,529],\\\"overflow\\\":false,\\\"font\\\":\\\"\\\\\\\"Archivo Black\\\\\\\", \\\\\\\"Arial Black\\\\\\\", sans-serif\\\",\\\"captionSize\\\":\\\"14px\\\"}\""
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "result": "\"{\\\"viewport\\\":[390,844],\\\"overflow\\\":false,\\\"font\\\":\\\"\\\\\\\"Archivo Black\\\\\\\", \\\\\\\"Arial Black\\\\\\\", sans-serif\\\",\\\"captionSize\\\":\\\"14px\\\"}\""
+  }
+]

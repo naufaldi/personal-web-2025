@@ -1,0 +1,28 @@
+---
+import Document from '../layouts/Document.astro'
+import LegacyApp from '../components/LegacyApp'
+import { buildSeoRoutes } from '../../../scripts/seo-data'
+import { renderStaticContent } from '../../../scripts/seo-render'
+import '@/index.css'
+
+export async function getStaticPaths() {
+  const { routes } = await buildSeoRoutes()
+  return routes.filter(route => route.path !== '/' && !route.noindex).map(route => ({
+    params: { path: route.path.slice(1) }, props: { route },
+  }))
+}
+const { route } = Astro.props
+---
+<Document route={route}>
+  <script define:vars={{ canonicalPath: route.path }}>
+    if (location.pathname === `${canonicalPath}.html`) {
+      history.replaceState(history.state, '', canonicalPath + location.search + location.hash)
+    }
+  </script>
+  <LegacyApp client:only="react">
+    <div slot="fallback">
+      <nav aria-label="Site"><a href="/">Home</a> / <a href="/projects">Projects</a> / <a href="/blogs">Writing</a></nav>
+      <Fragment set:html={renderStaticContent(route)} />
+    </div>
+  </LegacyApp>
+</Document>

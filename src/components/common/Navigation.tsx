@@ -54,7 +54,7 @@ export default function Navigation() {
         <NavigationMenuList className="flex items-center gap-7">
           {navigationItems.map((item) => (
             <NavigationMenuItem key={item.name}>
-              <Link to={item.href} className={linkClassName(pathname === item.href)}>
+              <Link reloadDocument to={item.href} className={linkClassName(pathname === item.href)}>
                 {item.name}
               </Link>
             </NavigationMenuItem>
@@ -75,7 +75,7 @@ export default function Navigation() {
               <ul className="grid w-56 gap-1 p-2">
                 {secondaryItems.map((item) => (
                   <li key={item.name}>
-                    <Link
+                    <Link reloadDocument
                       to={item.href}
                       className={cn(
                         'motion-link block rounded-[var(--radius-xs)] px-3 py-3 font-mono text-xs uppercase tracking-[0.12em] text-[var(--graphite-muted)] transition-colors hover:bg-[var(--surface-subtle)] hover:text-[var(--graphite)] focus:bg-[var(--surface-subtle)] focus:text-[var(--graphite)] focus-visible:outline-none',
@@ -103,7 +103,7 @@ export default function Navigation() {
             <SheetTitle className="font-mono text-sm uppercase tracking-[0.14em]">Route index</SheetTitle>
             <nav className="mt-10 grid gap-1" aria-label="Mobile navigation">
               {[...navigationItems, ...secondaryItems].map((item) => (
-                <Link
+                <Link reloadDocument
                   key={item.name}
                   to={item.href}
                   onClick={() => setOpen(false)}

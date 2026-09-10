@@ -49,7 +49,7 @@ const renderLink = (link: { name: string; href: string; external: boolean }) => 
   }
 
   return (
-    <Link key={link.name} to={link.href} className={footerLinkClassName}>
+    <Link reloadDocument key={link.name} to={link.href} className={footerLinkClassName}>
       {link.name}
     </Link>
   )

@@ -2,7 +2,6 @@ import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import Layout from '@/components/common/Layout'
 
-const Home = lazy(() => import('@/pages/Home'))
 const About = lazy(() => import('@/pages/About'))
 const Speaker = lazy(() => import('@/pages/Speaker'))
 const Manhwa = lazy(() => import('@/pages/Manhwa'))
@@ -25,7 +24,6 @@ export default function App() {
       <Suspense fallback={routeFallback}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="projects" element={<Projects />} />
             <Route path="projects/:slug" element={<ProjectDetail />} />

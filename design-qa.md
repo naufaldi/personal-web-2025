@@ -1,0 +1,70 @@
+# Collected by Faldi: homepage design QA
+
+**final result: passed**
+
+## Comparison target and evidence
+
+- Source visual truth: [selected homepage](docs/reference/collected-by-faldi-selected.png), 1487×1058 pixels.
+- Rendered implementation: [desktop capture](docs/verification/home-desktop.png), 1487×1058 pixels, at `http://127.0.0.1:4322/`.
+- State: homepage, All filter, closed artifacts, collection view, warm-light theme, loaded self-hosted fonts.
+- Normalization: desktop CSS viewport 1487×1058, device density 1. Source and implementation were displayed together at their original dimensions in [comparison.html](docs/verification/comparison.html), then captured in one [2974×1058 comparison](docs/verification/comparison.png). Source is left, implementation right. No screenshot was used as the actual webpage UI.
+- Responsive evidence: [1280 desktop](docs/verification/home-1280.png), [1024 desktop](docs/verification/home-small-desktop.png), [tablet](docs/verification/home-tablet.png), [mobile](docs/verification/home-mobile.png), and [200% equivalent reflow](docs/verification/home-200-percent-reflow.png). Full-page captures retain natural scrolling. [Responsive measurements](docs/verification/responsive.json) record CSS viewport, overflow, font family and caption size.
+- State evidence: [filtered index](docs/verification/index-software.png), [expanded software](docs/verification/expanded-software.png), [missing media](docs/verification/missing-media.png).
+
+## Findings and resolved iterations
+
+| Before | After | Why |
+| --- | --- | --- |
+| First desktop portrait was about 450px wide and pushed its caption down | Portrait reduced to the intended roughly 420px width | Restores the dominant-photo proportions and paper gaps |
+| Small project clipping overflowed the canvas controls | Sourced copy and 254px cover fit with readable type | Bottom controls remain unobstructed |
+| Unadjusted Archivo Black hid D/I behind the software screenshot | Native letterforms fit a documented homepage-specific display size | Retains the selected font without stretching or losing the name |
+| Absolute mobile title inherited desktop grid placement and hid behind the photograph | Reset the absolute title’s grid placement | FALDI stays visible on mobile and in filtered layouts |
+| 1024px fixed collage collided captions and controls | Normal-flow responsive composition below 1280px | Maintains readable labels while retaining unequal artifact placement |
+| A minimum canvas height could enlarge its intrinsic width | Set canvas width explicitly; larger screens retain 900px height | Prevents horizontal overflow at 1280px |
+| Reference has generated street photos, fictional UI and a signed quotation | Owner-approved existing photographs, actual project capture and sourced biography | Real content replaces fictional evidence without importing unsupported claims |
+
+Iteration 1 found the portrait/clipping issues in [the initial desktop capture](docs/verification/home-desktop-first.png). These P2 findings were fixed before the next desktop capture. Iteration 2 fixed title placement and native font fitting. Iteration 3 found responsive collisions in [the initial small desktop capture](docs/verification/home-small-desktop-first.png), then fixed the reflow threshold and definite canvas width. Final desktop and responsive captures show those fixes. The full-view final comparison has no remaining actionable P0/P1/P2 issue under the approved real-content substitution.
+
+Focused assessment used the desktop, small-desktop, expanded-state and mobile captures to check the title/photo intersection, caption regions and controls. Separate cropped image files were unnecessary because the original-resolution captures expose each region clearly.
+
+## Fidelity assessment
+
+| Surface | Result |
+| --- | --- |
+| Typography | Self-hosted Archivo Black 400, Manrope and Source Code Pro loaded. Caption/navigation text is at least 14px. Native wider display geometry and readable labels intentionally differ from generated pixels. No synthetic bold/stretch. |
+| Layout | One continuous collection with unequal artifacts, title/photo overlap, software above community, contact sheet to the right and generous paper gaps. No hero-plus-section stack. Smaller viewports reflow rather than shrink text. |
+| Color and surfaces | Warm paper, primary/secondary ink, restrained vermilion labels. Flat images, square artifacts, no decorative shadows. Note-paper tint derives from existing ink/paper tokens. |
+| Image quality | Existing assets optimized by Astro to responsive WebP. Original personal/event content is retained. Contact sheet uses grayscale presentation; no generated personal facts or invented software screenshot. |
+| Copy | Biography/project descriptions trace to existing data and markdown. Gaming-photo caption corrected after inspecting the image. No unverified metrics or generated signatures. |
+| Interaction | Working filters, matching index, real destinations, expansion/Close/Escape, focus restoration and visible focus. Reduced-motion and keyboard changes are immediate; pointer motion uses 140/220/260ms. |
+| Responsive behavior | No horizontal overflow in measured 390, 744, 834, 1024, 1280 and 1487px viewports. Essential labels and controls stay uncovered. Large composition may scroll vertically on shorter windows. |
+
+## Runtime checks
+
+- Category filtering returns Software 2, Photography 3 and Community 2 artifacts; All restores 7. Empty-state behavior was exercised with a temporary verification-only unmatched category, then Reset to All restored 7.
+- Index uses the same filtered items, links every collection route, and returns to the preserved filter. Inline expansion uses separate destination links.
+- Keyboard Enter applies filtering without animations; Escape closes expansion and restores focus to the original trigger. Reduced motion reported zero running animations after a pointer filter action.
+- A real emulated touch event changed portrait expansion from false to true with `pointer: touch`, coarse-pointer matching and no hover: [evidence](docs/verification/touch.json).
+- A forced missing-image request preserved 613.56px of portrait space, displayed the fallback and retained the About link. The temporary failure was cleared by reloading.
+- Script-blocked homepage retained all 7 artifacts, 34 links and the full index; interactive filters were hidden. Script-blocked project detail retained its static article. This used CSP on a temporary localhost verification server, not a production CSP change.
+- Every existing collection route and representative detail page rendered in the browser without reported application exceptions. The long MDX article was additionally checked through its final Closing Note (30,722 rendered article characters, no loading state).
+- Legacy theme preference persists and does not change the native homepage’s warm-light palette. Home links leave the legacy router. Local HTML alias entry normalizes to its canonical path before React mounts.
+- All 121 published routes passed direct HTTP metadata/heading checks; unknown route returned 404. Four migration tests passed with 979 assertions. See [migration guide](docs/migration-2026.md) for commands and scope.
+
+## Limits and follow-up polish
+
+- The reference is generated art, not a pixel-perfect asset inventory. Real subject matter, the chosen font’s native proportions and accessible caption sizes are intentional differences.
+- Physical-device and Safari testing remain unperformed. Touch input was emulated in Chromium. The 200% check uses equivalent 744×529 CSS-pixel reflow, not a separate browser-chrome zoom test.
+- Hosting-level Netlify redirect behavior and live canonical-domain behavior require deployment verification. Nothing was deployed.
+- Existing legacy dependency/build deprecation and large-bundle notices remain outside homepage redesign scope; the homepage has no React client island.
+- Optional P3 follow-up: replace the personal images with an owner-curated photography set later, while keeping the same artifact contracts and composition.
+
+## Implementation checklist
+
+- [x] Selected reference and rendered implementation compared together
+- [x] Actionable visual findings fixed and recaptured
+- [x] Desktop, responsive and core interaction states checked
+- [x] Motion, focus, keyboard and script-blocked behavior checked
+- [x] Existing routes, metadata, static fallback and aliases verified
+- [x] Original reference PNGs preserved
+- [x] Migration documentation and local preview prepared

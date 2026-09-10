@@ -16,7 +16,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-[var(--border-line)] bg-[var(--paper)]/94 backdrop-blur-sm">
       <div className="site-container">
         <div className="flex h-[72px] items-center justify-between gap-5">
-          <Link
+          <Link reloadDocument
             to="/"
             className="motion-link inline-flex items-center gap-2 group"
             aria-label="Home"

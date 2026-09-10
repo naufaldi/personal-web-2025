@@ -1,0 +1,15 @@
+---
+import Document from '../layouts/Document.astro'
+import '../styles/collected.css'
+import { siteMetadata } from '../../../scripts/seo-data'
+const route = { path: '/404', title: 'Page not found | Faldi', description: 'This page is not in the collection.', canonicalUrl: `${siteMetadata.siteUrl}/404`, lastmod: '', priority: 0, changefreq: 'never' as const, kind: 'page' as const, noindex: true }
+---
+<Document route={route} collection>
+  <main class="not-found collection-layout">
+    <p class="font-mono text-caption">NOT IN THE COLLECTION / 404</p>
+    <h1 class="font-display text-page-title">Lost page.</h1>
+    <p>This page may have moved, or the address may be incomplete.</p>
+    <a href="/">Back to the collection</a>
+    <a href="/#index">Open index</a>
+  </main>
+</Document>

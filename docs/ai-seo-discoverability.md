@@ -10,7 +10,7 @@ Search engines and AI crawlers need more than a React app shell. They rely on:
 - Static files at predictable URLs (`/robots.txt`, `/sitemap.xml`, `/llms.txt`)
 - Consistent public copy across HTML, UI, and machine-readable files
 
-This site is a Vite React SPA with many markdown-backed routes. We use **build-time generation** plus static public files instead of a Next.js metadata layer.
+Astro generates the homepage and compatibility route HTML at build time. Unmigrated routes then mount React over static fallback content. See [migration-2026.md](migration-2026.md).
 
 ## File roles (do not mix them up)
 
@@ -21,7 +21,7 @@ This site is a Vite React SPA with many markdown-backed routes. We use **build-t
 | `llms.txt` | Short curated index for LLMs | No |
 | `llms-full.txt` | Fuller grounded context for LLMs | No |
 | `.well-known/ai.txt` | Explicit AI usage and citation policy | No |
-| `index.html` meta + JSON-LD | Page title, social previews, rich results | No |
+| `Document.astro` + `seo-render.ts` | Page title, social previews, rich results | No |
 | `site.webmanifest` | PWA identity, icons, shortcuts | No |
 
 **Rule:** `robots.txt` controls *permission*. `llms.txt` controls *curation*. They solve different problems and should both exist.
@@ -30,7 +30,10 @@ This site is a Vite React SPA with many markdown-backed routes. We use **build-t
 
 ```
 personal-web-2025/
-├── index.html                         # root metadata, JSON-LD, noscript fallback
+├── src/astro/layouts/Document.astro   # shared head and metadata
+├── scripts/seo-render.ts              # metadata and static legacy fallback
+├── scripts/seo-data.ts                # published route inventory
+├── scripts/finalize-static.ts         # HTML aliases and redirects
 ├── scripts/generate-discoverability.ts
 ├── src/lib/seo.ts                     # canonical facts and JSON-LD builders
 ├── src/hooks/usePageMeta.ts           # client-side route metadata
@@ -46,14 +49,14 @@ personal-web-2025/
     └── .well-known/ai.txt
 ```
 
-Vite copies `public/` into `dist/` on build. Canonical site URL: `https://naufaldi.com/`
+Astro copies `public/` into `dist/` on build. Canonical site URL: `https://naufaldi.com/`
 
 ## Checklist for a new route or content item
 
-### 1. Baseline SEO (`index.html` + route metadata)
+### 1. Baseline SEO (Astro + route metadata)
 
-- [ ] Root `index.html` has title, description, canonical, robots, OG/Twitter, manifest, JSON-LD, and `<noscript>` fallback
-- [ ] Static routes have metadata in `src/lib/seo.ts`
+- [ ] `Document.astro` emits title, description, canonical, robots, OG/Twitter, manifest and JSON-LD; homepage content and legacy fallback are present without JavaScript
+- [ ] Static routes appear in `scripts/seo-data.ts` and match `src/lib/seo.ts` on legacy pages
 - [ ] Detail pages call `usePageMeta()` with title, description, canonical path, and JSON-LD where appropriate
 
 ### 2. Generated crawler files
@@ -81,11 +84,11 @@ Generation rules:
 - [ ] `robots.txt` allows public crawling and references the sitemap
 - [ ] `.well-known/ai.txt` states public AI usage scope and citation preference
 - [ ] `site.webmanifest` stays valid JSON
-- [ ] `_redirects` keeps SPA deep links working on Netlify
+- [ ] `dist/_redirects` maps HTML aliases to canonical routes and unknown paths to a 404; it must not rewrite every path to the homepage
 
 ### 4. Copy consistency
 
-- [ ] Page metadata matches visible hero/content
+- [ ] Page metadata matches visible content
 - [ ] Generated LLM files only claim features present on the public site
 - [ ] Footer and navigation link to real local routes (`/blogs`, `/speaker`)
 
@@ -109,24 +112,25 @@ After deploy, verify live:
 
 Submit the sitemap in Google Search Console.
 
-## SPA-specific gotchas
+## Migration-specific gotchas
 
-1. **Body content is JS-rendered** — many crawlers only see the root HTML shell on first fetch. Mitigate with root metadata, JSON-LD, `<noscript>`, generated LLM files, and `usePageMeta()` after navigation.
-2. **Social previews on deep links still need prerender/SSG** — client-side metadata helps post-render crawlers, but non-JS social bots still read the initial HTML shell.
-3. **Generated files must be rebuilt** — adding markdown content is not enough; run `bun run generate:discoverability` or `bun run build`.
-4. **Deploy is required** — files in git are not live until built and deployed.
+1. **Preserve static content:** compatibility pages include readable fallback HTML before React loads. The native homepage never mounts React.
+2. **Metadata belongs in initial HTML:** retain canonical, social tags and JSON-LD for every published URL; client hooks alone are insufficient.
+3. **Rebuild after adding markdown:** `bun run build` generates discoverability, route HTML and aliases. Run `bun run test:migration` afterward.
+4. **No homepage catch-all:** unknown paths use `404.html`; the `.html` aliases redirect to their canonical route on Netlify.
+5. **Deployment is separate:** local verification does not establish live hosting behavior.
 
 ## When to extend
 
 | Change | Update |
 |--------|--------|
-| New static route | Add metadata in `src/lib/seo.ts`, use `usePageMeta()`, regenerate discoverability files |
+| New static route | Add to `scripts/seo-data.ts`; keep legacy metadata aligned; regenerate and verify route HTML |
 | New blog/project/short markdown | Regenerate discoverability files |
-| Product positioning change | Sync `index.html`, `src/lib/seo.ts`, and generated LLM files |
+| Product positioning change | Sync `scripts/seo-data.ts`, `src/lib/seo.ts`, and generated LLM files |
 | New AI crawler | Add `User-agent` allow rule in `robots.txt` |
 | Stricter AI policy | Update `.well-known/ai.txt` and cross-links in `llms.txt` |
-| Route-specific social previews | Add prerender/SSG follow-up |
+| Route-specific social previews | Use the shared Astro document and verify emitted HTML |
 
 ## Related reference
 
-This workflow adapts patterns documented in the Go-Pixo repo at `docs/ai-seo-discoverability.md`, adjusted for a multi-route portfolio/blog SPA.
+This workflow adapts patterns documented in the Go-Pixo repo at `docs/ai-seo-discoverability.md`, adjusted for a portfolio with an Astro shell and legacy React pages.

@@ -1,0 +1,13 @@
+{
+  "emulation": {
+    "coarse": true,
+    "hover": false,
+    "touch": 1,
+    "expanded": "false"
+  },
+  "interaction": {
+    "pointer": "touch",
+    "expanded": "true",
+    "overflow": false
+  }
+}

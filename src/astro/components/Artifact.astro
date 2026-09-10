@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets'
+import type { CollectionArtifact } from '@/data/collected'
+interface Props { artifact: CollectionArtifact; number: number }
+const { artifact, number } = Astro.props
+const { id, variant, media, title, category, label, context, href, linkLabel } = artifact
+---
+<article class:list={['artifact', `artifact--${variant}`]} data-artifact={id} data-category={category}>
+  <div class="artifact-face">
+    {media.length > 0 && <div class:list={['media-frame', { 'contact-sheet': variant === 'album' }]}>
+      {media.map(({ image, alt, position }) => <Image src={image} alt={alt} widths={variant === 'album' ? [160, 320, 480] : [360, 640, 960]} sizes={variant === 'album' ? '(min-width: 1024px) 9vw, 40vw' : '(min-width: 1024px) 35vw, 90vw'} format="webp" quality={82} loading={variant === 'portrait' || variant === 'software' ? 'eager' : 'lazy'} fetchpriority={variant === 'portrait' ? 'high' : 'auto'} decoding="async" style={{ objectPosition: position }} />)}
+      {variant === 'album' && <div class="sheet-label"><span>PEOPLE<br />& PLACES</span><span>STILL<br />HERE</span></div>}
+      <span class="media-unavailable" hidden>Image unavailable</span>
+    </div>}
+    {variant === 'library' && <div class="library-cover"><p class="font-mono text-caption">REACT / TS</p><h2>Small tools.<br />Shared.</h2><p class="library-name">ts-hooks-kit</p><p class="font-mono text-caption">Typed hooks.<br />Open source.</p></div>}
+    {variant === 'note' && <div class="personal-note"><p>I’m a software engineer and mentor from Bekasi, Indonesia. Frontend is my strongest foundation.</p><span>From my About page</span></div>}
+    <button hidden class="artifact-open" aria-label={`Expand ${title}`} aria-expanded="false" aria-controls={`detail-${id}`} data-expand={id}></button>
+  </div>
+  <div class="artifact-caption font-mono text-caption">
+    <p>{category} /<br /><a href={href}>{title}</a></p>
+    <span class="artifact-number">{String(number).padStart(2, '0')} / 07</span>
+  </div>
+  <div id={`detail-${id}`} class="artifact-detail" hidden>
+    <button type="button" class="close-detail font-mono text-nav" data-close>Close</button>
+    <p class="font-mono text-caption text-vermilion">{label}</p>
+    <h2 class="font-body text-heading">{title}</h2>
+    <p class="font-body text-body">{context}</p>
+    <a class="detail-link font-mono text-nav" href={href}>{linkLabel}</a>
+  </div>
+</article>
