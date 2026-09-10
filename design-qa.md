@@ -68,3 +68,15 @@ Focused assessment used the desktop, small-desktop, expanded-state and mobile ca
 - [x] Existing routes, metadata, static fallback and aliases verified
 - [x] Original reference PNGs preserved
 - [x] Migration documentation and local preview prepared
+
+## About implementation
+
+Reference: [About mockup](docs/reference/about-v2.png). Evidence: [desktop](docs/verification/about-desktop.png), [tablet](docs/verification/about-tablet.png), [mobile](docs/verification/about-mobile.png).
+
+| Before | After | Why |
+| --- | --- | --- |
+| Stacked React biography sections | One asymmetric About composition | Follow the selected page arrangement |
+| Grid minimum height enlarged its width | Explicit board width | Keep images inside the 32px desktop gutter |
+| Career content separated from the composition | In-flow native details with preserved anchor | Keep complete history accessible without a section stack |
+
+Real portrait, workspace, game controllers, and community photos replace fictional mockup imagery. Archivo Black is wider and shorter than the generated title glyphs; no font stretching. Browser checks confirmed six career records, keyboard focus restoration, and no tablet/mobile overflow.

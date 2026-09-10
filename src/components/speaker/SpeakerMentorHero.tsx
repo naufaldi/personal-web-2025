@@ -110,7 +110,7 @@ export default function SpeakerMentorHero() {
                 <div>
                   <RouteRail items={routeItems} ariaLabel="Speaker page route links" />
                   <Button asChild variant="technical" className="mt-5 w-full justify-between">
-                    <Link to="/about">
+                    <Link reloadDocument to="/about">
                       Read profile
                       <ArrowRight className="h-4 w-4" />
                     </Link>

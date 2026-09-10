@@ -93,3 +93,9 @@ All 16 reference PNG hashes were checked against the pre-migration snapshot. No 
 Migrate About next, then Projects and project details, Community, Writing/Shorts, and Books/Manhwa using their selected references. Each phase should remove only its own compatibility route and unused code after content/SEO/browser checks. Keep full detail documents and original slugs. Retire the React island and legacy CSS only after the last dependent route migrates.
 
 Preview is local. A later deployment must verify Netlify alias/404 rules, canonical-domain behavior and live crawler files. Host configuration and personal infrastructure were not accessed.
+
+## About migration, September 10
+
+`/about` is native Astro, using the approved About composition and existing biography, six career records, and local photographs. `#experiences-heading` opens the complete career history. Native details retain content access without JavaScript; the small editorial controller adds index switching and Escape focus restoration. The old About route module was removed. Legacy links to About perform document navigation. Shared header/photo components and page-scoped composition CSS keep the homepage unchanged.
+
+Verified at 1487 × 1058, 834 × 1112, and 390 × 844 with agent-browser. Career expansion renders six records; Escape closes and restores the initiating link. No horizontal overflow at mobile/tablet. Production build and migration contract checks run before commit. Existing source claims are preserved in career details; conflicting aggregate mentoring metrics are not promoted.
