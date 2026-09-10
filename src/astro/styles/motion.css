@@ -1,0 +1,23 @@
+:root { --motion-fast: 140ms; --motion-base: 220ms; --motion-slow: 260ms; --motion-ease: cubic-bezier(.23,1,.32,1); }
+.collection-header { view-transition-name: identity-header; }
+::view-transition-group(identity-header) { animation: none; }
+::view-transition-old(identity-header) { animation: none; opacity: 0; }
+::view-transition-new(identity-header) { animation: none; }
+::view-transition-old(root) { animation: page-out 140ms cubic-bezier(.23,1,.32,1) both; }
+::view-transition-new(root) { animation: page-in 220ms cubic-bezier(.23,1,.32,1) both; }
+::view-transition { pointer-events: none; }
+@keyframes page-out { to { opacity: 0; } }
+@keyframes page-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+html { background: #f5f3ed; }
+html[data-input=pointer] :is(button, .editorial-link) { transition: transform 140ms var(--motion-ease); }
+html[data-input=pointer] :is(button, .editorial-link):active { transform: scale(.98); transition-duration: 100ms; }
+@media (hover:hover) and (pointer:fine) {
+ html:not([data-input=keyboard]) :is(.artifact-face, .archive-face, .company-board figure > a) { transition: transform 140ms var(--motion-ease); }
+ html:not([data-input=keyboard]) :is(.archive-face, .company-board figure > a):hover,
+ html:not([data-input=keyboard]) .artifact-face:has(.artifact-open:hover) { transform: translateY(-3px); }
+}
+html[data-input=keyboard] :is(.artifact-face, .archive-face, .company-board figure > a, button, .editorial-link) { transition: none; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+ ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+ html :is(.artifact-face, .archive-face, .company-board figure > a, button, .editorial-link) { transition: none !important; transform: none !important; }
+}

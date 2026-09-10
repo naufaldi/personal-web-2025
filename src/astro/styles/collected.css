@@ -196,13 +196,9 @@ button, input, a { touch-action: manipulation; }
 .not-found { padding-block: 15vh; }
 .not-found > a { display: inline-flex; margin: 32px 24px 0 0; padding-block: 12px; text-decoration: underline; }
 @media (hover: hover) and (pointer: fine) {
-  .artifact-face { transition: transform var(--motion-fast) var(--motion-ease); }
-  .artifact-face:has(.artifact-open:hover) { transform: translateY(-3px); }
   a:hover { text-decoration: underline; text-underline-offset: 5px; }
   button:hover { color: var(--color-vermilion); }
 }
-[data-input=pointer] button:active { transform: scale(.98); }
-[data-input=keyboard] .artifact-face { transition: none; }
 @media (max-width: 79.999rem) {
   .collection-header { margin-bottom: 28px; }
   .collection-canvas { grid-template-columns: repeat(6, minmax(0, 1fr)); grid-template-rows: auto; gap: 40px 24px; aspect-ratio: auto; min-height: 0; padding-top: 160px; }

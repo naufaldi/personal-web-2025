@@ -1,4 +1,5 @@
 ---
+import PageMotion from '../components/PageMotion.astro'
 import type { SeoRoute } from '@/lib/seo'
 import { renderSeoBlock } from '../../../scripts/seo-render'
 interface Props { route: SeoRoute; collection?: boolean }
@@ -16,6 +17,7 @@ const { route, collection = false } = Astro.props
     <meta name="theme-color" content={collection ? '#F5F3ED' : '#020817'} />
     {collection && <link rel="preload" href="/fonts/archivo-black-latin-400.woff2" as="font" type="font/woff2" crossorigin />}
     {!collection && <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&family=Manrope:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />}
+    {collection && <PageMotion />}
     <slot name="head" />
   </head>
   <body><slot /></body>

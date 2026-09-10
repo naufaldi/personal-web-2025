@@ -1,9 +1,16 @@
-export {}
+import { setDisclosure } from './motion'
 const toc = document.querySelector<HTMLDetailsElement>('.reading-toc')
+toc?.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && toc.open) {
+    event.preventDefault()
+    setDisclosure(toc, false)
+    toc.querySelector('summary')?.focus({ preventScroll: true })
+  }
+})
 const compactReading = matchMedia('(max-width: 63.999rem)')
-if (toc && compactReading.matches) toc.open = false
+if (toc && compactReading.matches) setDisclosure(toc, false)
 compactReading.addEventListener('change', ({ matches }) => {
-  if (toc && !matches) toc.open = true
+  if (toc && !matches) setDisclosure(toc, true)
 })
 const tocLinks = [...document.querySelectorAll<HTMLAnchorElement>('.reading-toc a')]
 const sections = tocLinks.flatMap(link => {

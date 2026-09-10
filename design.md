@@ -115,7 +115,11 @@ All controls require visible focus. Use ink outline with paper separation; decor
 | Artifact movement | 260ms | `--motion-slow` |
 | Easing | `cubic-bezier(0.23, 1, 0.32, 1)` | `--motion-ease` |
 
-State feedback is immediate; optional movement follows. Reduced motion sets these durations to 0ms and removes travel/parallax. Retain stable IDs through filtering. No scroll hijacking, automatic slideshow or custom-cursor dependency.
+Quiet editorial motion is implemented through shared CSS/WAAPI helpers. Pointer navigation uses browser-native cross-document transitions: outgoing opacity 140ms and incoming opacity plus 6px travel 220ms, overlapping. The identity header remains stationary. Unsupported browsers and script-disabled pages keep ordinary document navigation.
+
+Disclosures enter over 220ms; closing content becomes noninteractive, exits over 140ms and then surrounding visible items reposition within 120ms. Filters reposition retained visible artifacts over 260ms and introduce new items over 220ms; collection/index changes animate entering visible items. Position changes use `cubic-bezier(0.77, 0, 0.175, 1)`. Fine-pointer artifact hover travels at most 3px over 140ms. Compact controls press to `.98` over 100ms and release over 140ms. Only transform and opacity animate; text is never resized during movement.
+
+Keyboard actions, search typing, history traversal, same-page anchors, initial loads and reduced-motion states are immediate. No automatic entrance sequence, scrolling reveal, parallax, bounce or cursor effect is used. State feedback is immediate; optional movement follows. Reduced motion sets these durations to 0ms and removes travel/parallax. Retain stable IDs through filtering. No scroll hijacking, automatic slideshow or custom-cursor dependency.
 
 Use semantic landmarks, a skip link, logical headings and one clear h1. Decorative duplicate title layers are hidden from assistive technology. Verify keyboard/touch parity, 320px reflow, 200%/400% zoom and text/control contrast. New collection pages remain warm-light regardless of system preference; do not overwrite legacy theme storage or change unmigrated pages' theme behavior. Scope migration styling to the new layout.
 

@@ -181,3 +181,27 @@ Interaction evidence: the Zustand contents link reached `#zustand` and became cu
 Build/check and all eight migration tests passed (1,094 assertions), covering static route metadata, one H1, aliases, all 17 project covers and retired Shorts. Original source Markdown and previously tracked reference PNGs are unchanged. Physical touch, Safari and actual browser-chrome 200% zoom were not retested; responsive widths are not claimed as substitutes. External images/links inside historical article content remain subject to their original hosts.
 
 Final result: passed.
+
+## Quiet editorial motion review
+
+The approved motion contract is the visual/interaction target; existing reference compositions remain unchanged. Browser review used production output at port 4341 and a slow-motion development capture at port 4340. [Normal-speed recording](docs/verification/motion-normal.webm) and [quarter-speed disclosure recording](docs/verification/motion-slow.webm) record 1440 × 1000 viewport interaction. Slow playback was applied in the browser only, never shipped. Extracted frames were inspected for text scaling, inconsistent origins and close/reopen artifacts.
+
+| Before | After | Why |
+| --- | --- | --- |
+| Archive filters replayed a whole-surface entrance | Shared visible-item repositioning captures current rendered positions before cancellation | Rapid input retargets without restarting from a fixed frame |
+| Disclosures instantly removed content | 220ms entry; inert/aria-hidden exit over 140ms followed by up to 120ms repositioning | Explain state changes without animating height or blocking the trigger |
+| Homepage close could not reverse during an exit | Reopening invalidates pending completion; keyboard/Escape settles immediately | A stale callback must never hide reopened content |
+| Separate page-family hover rules | Shared fine-pointer 3px lift and compact-control `.98` press | Consistent feedback without moving captions or scaling records |
+| Hard document switches | Pointer-only native page transitions and a stationary identity layer | Add continuity while preserving static routing |
+| Intentional transition skip produced an AbortError during initial QA | Handle the expected `ready` rejection on outgoing and incoming transitions | Clean keyboard/history/reduced-motion fallback |
+| Motion-test setup reused an already-open page | Reload each independent test case | Ensure failure evidence reflects the interaction being tested |
+
+Review verdict: Approve for the checked implementation and states. No outstanding feel-breaking, timing, keyboard, reduced-motion or transform/property issue was found after corrections. Controls and status update immediately; entering items use 6px travel, not scale-from-zero. The deliberate native page crossfade is justified by navigation continuity. Filters/index changes animate visible items only; search remains immediate. Exit content is noninteractive and retains no stale inert state after completion or reversal.
+
+Verification: production build/check and eight migration tests pass (1,094 assertions). Nine real-browser motion tests pass (11 assertions), including reading-contents Escape/focus restoration. [Responsive evidence](docs/verification/motion-responsive.json) covers nine routes at 1440, 834, 390 and 320 CSS pixels, with no horizontal overflow, one H1 and no React islands in all 36 checks. [Desktop home](docs/verification/motion-home-1440.png), [mobile home](docs/verification/motion-home-390.png), [desktop books](docs/verification/motion-book-1440.png) and [mobile reading](docs/verification/motion-state-management-in-reactjs-390.png) preserve the compositions.
+
+Actual Home → About pointer navigation produced a native transition and navigation intent; keyboard return produced no intent. Back/Forward completed with no console errors. Script-blocked Books kept usable native details, zero animation and no native transition opt-in. Navigation exclusion tests cover keyboard, modifiers, same-page hashes, downloads and new-tab targets. The animation code changes only transform/opacity during playback; layout measurement occurs at interaction boundaries rather than in a per-frame layout loop.
+
+Limitations: unsupported-engine fallback is feature-gated but was not tested in a separate unsupported browser engine. Physical touch, Safari, browser-chrome zoom and CPU-throttled performance traces were not completed. The video recorder samples fewer frames than a display refresh; frame review supports visual continuity, not a numerical 60fps claim. No production-host navigation or deployment was tested. Previously tracked reference PNGs and source content remain unchanged.
+
+Final result: passed.

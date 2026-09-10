@@ -45,7 +45,6 @@
 .archive-board.is-filtered .archive-title { grid-area: auto; position: absolute; inset: 0 auto auto 0; font-size: clamp(64px,12vw,160px); margin: 0; }
 .archive-board.is-filtered .archive-margin, .archive-board.is-filtered .shelf-life, .archive-board.is-filtered .shelf-note, .archive-board.is-filtered .archive-decoration { display: none; }
 .archive-board.is-filtered .archive-artifact { grid-area: auto; grid-column: span 4; margin: 0; }
-@media (hover:hover) and (pointer:fine) { .archive-face { transition: transform 140ms cubic-bezier(.23,1,.32,1); } .archive-face:hover { transform: translateY(-3px); } }
 @media (max-width: 79.999rem) {
  .archive-board { grid-template-columns: repeat(6,minmax(0,1fr)); grid-template-rows: auto; gap: 40px 24px; aspect-ratio: auto; min-height: 0; }
  .archive-title, .books-board .archive-title, .manhwa-board .archive-title { grid-area: 1 / 1 / 2 / -1; font-size: 15vw; margin: 0; }
@@ -83,7 +82,6 @@
  .archive-search { align-items: stretch; flex-direction: column; gap: 8px; }
  .archive-search input { width: 100%; }
 }
-@media (prefers-reduced-motion:reduce) { .archive-face { transition: none; } }
 
 @media (min-width: 80rem) {
  .books-board .shelf-cover-2 { grid-row-start: 6; }

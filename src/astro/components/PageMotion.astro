@@ -1,0 +1,46 @@
+---
+import '../styles/motion.css'
+---
+<script is:inline>
+(() => {
+  if (!('onpageswap' in window) || !('onpagereveal' in window)) return
+  const optIn = document.createElement('style')
+  optIn.textContent = '@view-transition { navigation: auto; }'
+  document.head.append(optIn)
+  const key = 'faldi:pointer-navigation'
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)')
+  let target = null
+  let activeTransition = null
+  const clear = () => { try { sessionStorage.removeItem(key) } catch {} }
+  document.addEventListener('click', event => {
+    target = null
+    const link = event.target instanceof Element ? event.target.closest('a[href]') : null
+    if (!link || event.defaultPrevented || event.detail === 0 || event.button !== 0 || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey || link.hasAttribute('download') || (link.target && link.target !== '_self') || reduced.matches) return
+    const url = new URL(link.href, location.href)
+    if (url.origin !== location.origin || (url.pathname === location.pathname && url.search === location.search)) return
+    target = url.href
+  })
+  document.addEventListener('keydown', () => { target = null; clear(); activeTransition?.skipTransition() }, { capture: true })
+  addEventListener('pageswap', event => {
+    activeTransition = event.viewTransition
+    event.viewTransition?.ready.catch(() => {})
+    const next = event.activation?.entry?.url
+    const allowed = target && next === target && event.activation?.navigationType === 'push' && !reduced.matches
+    if (!allowed) { clear(); event.viewTransition?.skipTransition(); return }
+    try { sessionStorage.setItem(key, JSON.stringify({ url: target, time: Date.now() })) }
+    catch { event.viewTransition?.skipTransition() }
+  })
+  addEventListener('pagereveal', event => {
+    activeTransition = event.viewTransition
+    event.viewTransition?.ready.catch(() => {})
+    let intent = null
+    try { intent = JSON.parse(sessionStorage.getItem(key) || 'null') } catch {}
+    clear()
+    const navigation = performance.getEntriesByType('navigation')[0]
+    if (!intent || intent.url !== location.href || Date.now() - intent.time > 10000 || navigation?.type !== 'navigate' || reduced.matches) event.viewTransition?.skipTransition()
+  })
+  reduced.addEventListener('change', () => { if (reduced.matches) { target = null; clear(); activeTransition?.skipTransition() } })
+  addEventListener('pageshow', event => { target = null; if (event.persisted) clear() })
+})()
+</script>
+<script>import '../scripts/motion'</script>

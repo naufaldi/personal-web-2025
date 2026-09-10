@@ -30,7 +30,8 @@
     "build": "bun run generate:discoverability && bun run check && astro build && bun run scripts/finalize-static.ts",
     "preview": "astro preview",
     "check": "astro check && tsc --noEmit",
-    "test:migration": "bun test tests/migration.test.ts"
+    "test:migration": "bun test tests/migration.test.ts",
+    "test:motion": "bun test tests/motion.browser.test.ts"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "6.3.11",
