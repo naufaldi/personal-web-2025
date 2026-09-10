@@ -1,0 +1,19 @@
+---
+import Archive from '../layouts/Archive.astro'
+import Artifact from '../components/ArchiveArtifact.astro'
+import Photo from '../components/CollectionPhoto.astro'
+import { projectEntries, featuredProjects } from '@/data/projectCollection'
+import workspace from '@/assets/collected/workspace.jpg'
+import portrait from '@/assets/collected/portrait.jpg'
+import '../styles/projects-collection.css'
+---
+<Archive path="/projects" title="Projects" entries={projectEntries} categories={['All', 'Software', 'Experiments']} searchable>
+  <div class="archive-board projects-board" data-board>
+    <h1 class="archive-title font-display">PROJECTS</h1>
+    <p class="archive-margin font-mono text-caption">Build<br />Explore<br />Learn<br />Share</p>
+    {featuredProjects.map((entry, i) => <Artifact entry={entry} number={i + 1} placement={`project-artifact project-artifact-${i + 1}`} />)}
+    <figure class="archive-decoration project-workspace"><Photo image={workspace} alt="Faldi’s development workspace" /><figcaption class="font-mono text-caption">At the desk /<br />Building useful things</figcaption></figure>
+    <figure class="archive-decoration project-personal"><Photo image={portrait} alt="Faldi outdoors" /><figcaption class="font-mono text-caption">Beyond the screen</figcaption></figure>
+    <a class="archive-decoration project-note archive-paper" href="#index" data-open-index><p class="font-mono text-caption">The collection /</p><p class="text-heading">Tools, products,<br />and experiments.</p><span class="font-mono text-nav">Browse all {projectEntries.length} projects ↗</span></a>
+  </div>
+</Archive>

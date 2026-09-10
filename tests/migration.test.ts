@@ -23,7 +23,7 @@ describe('Astro static migration contract', () => {
       expect(html.match(/<title>/g)).toHaveLength(1)
       expect(html).toContain('application/ld+json')
       if (route.path !== '/') {
-        if (['/about', '/speaker', '/book', '/manhwa'].includes(route.path)) expect(html).not.toContain('<astro-island')
+        if (['/about', '/projects', '/speaker', '/book', '/manhwa'].includes(route.path)) expect(html).not.toContain('<astro-island')
         else {
           expect(html).toContain('data-prerendered-content="true"')
           expect(html).toContain('client="only"')

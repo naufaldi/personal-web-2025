@@ -109,3 +109,16 @@ Evidence: [community desktop](docs/verification/community-desktop.png), [tablet]
 Real cover editions and their colors differ from the generated mockup. Some existing cover sources are low resolution; no synthetic reconstruction was used. All source records remain accessible in the native index.
 
 Books/Manhwa status: passed for checked views. Side-by-side comparisons: [Books](docs/verification/books-comparison.png), [Manhwa](docs/verification/manhwa-comparison.png). [Filter evidence](docs/verification/shelves-interactions.json) verifies all category counts. Desktop 1487 × 1058, tablet 834 × 1112, and mobile 390 × 844 have no horizontal overflow. All lazy images were scrolled into view and decoded before full screenshots. Enter opens details and Escape restores the initiating cover. Six migration tests pass with 993 assertions.
+
+## Projects archive
+
+| Before | After | Why |
+| --- | --- | --- |
+| React project card grid | Large title, primary software artifact, two real screenshots and supporting pieces | Follow the selected Projects composition |
+| Mockup TS Hooks interface and placeholder Reading List image | Sourced typographic artifacts | Avoid presenting fictional product screenshots |
+| Leaflet caption overlapped Slate | Wider Leaflet crop and reserved caption gap | Keep titles and links readable |
+| Lower artifacts crossed controls | More desktop canvas height | Allow natural scrolling without overlap |
+
+Source artwork intentionally differs from the dark generated interfaces. Existing project details retain their full content and original slugs.
+
+Projects status: passed after production-specific CSS fixes. [Comparison](docs/verification/projects-comparison.png), [mobile](docs/verification/projects-mobile.png), [interaction checks](docs/verification/projects-interactions.json). Scoped selectors prevent shared CSS from overriding note height and title sizes in the production bundle. All 17 entries remain searchable, and unmatched queries show an empty state without moving input focus. Responsive checks at 1487, 1100, 834 and 390 CSS pixels show no overflow. The ts-hooks-kit detail renders and its return link reaches native Projects.

@@ -2,7 +2,6 @@ import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import Layout from '@/components/common/Layout'
 
-const Projects = lazy(() => import('@/pages/Projects'))
 const ProjectDetail = lazy(() => import('@/pages/ProjectDetail'))
 const Blogs = lazy(() => import('@/pages/Blogs'))
 const BlogDetail = lazy(() => import('@/pages/BlogDetail'))
@@ -20,7 +19,6 @@ export default function App() {
       <Suspense fallback={routeFallback}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="projects" element={<Projects />} />
             <Route path="projects/:slug" element={<ProjectDetail />} />
             <Route path="blogs" element={<Blogs />} />
             <Route path="blogs/:slug" element={<BlogDetail />} />
