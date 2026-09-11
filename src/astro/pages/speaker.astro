@@ -2,7 +2,7 @@
 import Document from '../layouts/Document.astro'
 import CollectionHeader from '../components/CollectionHeader.astro'
 import Photo from '../components/CollectionPhoto.astro'
-import { communityEntries, featuredCommunity } from '@/data/communityCollection'
+import { communityEntries, featuredCommunity, communityPhotos } from '@/data/communityCollection'
 import { collectionRoutes } from '@/data/collected'
 import { buildSeoRoutes } from '../../../scripts/seo-data'
 import '../styles/collected.css'
@@ -32,7 +32,7 @@ Conversations.`}</h2>
               <p class="font-mono text-caption">{entry.eventName}<br />{entry.date}</p>
             </div>}
           </a>
-          <figcaption>{entry.category} /<br />{label}<br />{image && <span class="archive-caption">Community photo archive</span>}<a href={`#engagement-${entry.id}`} data-reveal={`engagement-${entry.id}`} class="editorial-link">View details ↗</a></figcaption>
+          <figcaption>{entry.category} /<br />{label}<br />{image && <span class="archive-caption">{communityPhotos[entry.id] ? entry.date : 'Community photo archive'}</span>}<a href={`#engagement-${entry.id}`} data-reveal={`engagement-${entry.id}`} class="editorial-link">View details ↗</a></figcaption>
         </figure>)}
       </div>
       <div class="editorial-controls font-mono text-nav">
@@ -44,7 +44,12 @@ Conversations.`}</h2>
         <p class="text-body reading-copy">Talks, workshops, mentoring, and voluntary work. A record of learning with other people.</p>
         {communityEntries.map(entry => <details id={`engagement-${entry.id}`} data-record data-category={entry.category}>
           <summary><span class="font-mono text-caption">{entry.category}<br />{entry.date}</span><h3 class="text-heading">{entry.eventName}</h3></summary>
-          <div><p class="text-body">{entry.brief}</p>{entry.links && Object.entries(entry.links).map(([name, href]) => <a class="editorial-link font-mono text-nav" href={href}>{name === 'website' ? 'Visit website' : name === 'x' ? 'Follow on X' : name === 'youtube' ? 'Watch on YouTube' : 'LinkedIn'} ↗</a>)}</div>
+          <div>
+            {entry.role && <p class="font-mono text-caption">{entry.role}{entry.venue && <> / {entry.venue}</>}</p>}
+            <p class="text-body">{entry.brief}</p>
+            {entry.topics && entry.topics.length > 0 && <ul class="event-topics text-body">{entry.topics.map(topic => <li>{topic}</li>)}</ul>}
+            {communityPhotos[entry.id] && <div class="event-gallery">{communityPhotos[entry.id].map(photo => <figure><Photo image={photo.image} alt={photo.alt} /><figcaption class="font-mono text-caption">{photo.caption}</figcaption></figure>)}</div>}
+            {entry.links && Object.entries(entry.links).map(([name, href]) => <a class="editorial-link font-mono text-nav" href={href}>{name === 'website' ? (href.startsWith('https://luma.com/') ? 'Event on Luma' : 'Visit website') : name === 'x' ? 'Follow on X' : name === 'youtube' ? 'Watch on YouTube' : 'LinkedIn'} ↗</a>)}</div>
         </details>)}
         <nav class="site-index font-mono text-nav" aria-label="Full site index">{collectionRoutes.map(item => <a href={item.href}>{item.title}</a>)}</nav>
       </section>

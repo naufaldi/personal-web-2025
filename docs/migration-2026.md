@@ -188,3 +188,9 @@ bun run scripts/audit-interactions.ts
 ```
 
 The audit inventory derives from `buildSeoRoutes()`, including retired source slugs for 404 checks. [Route results](verification/interaction-audit.json) contain every canonical route at desktop and mobile with HTTP status, title/canonical agreement, main content, horizontal overflow and image-load checks. [Design QA](../design-qa.md) separates automated checks, Browser visual review and coverage gaps.
+
+
+### Community content enrichment, 11 September 2026
+
+The native `/speaker` collection now draws richer Luma event records from `src/data/mentorSpeaker.ts`. Optional role, venue, category and topic fields preserve the distinction between hosting and presenting. The collection adds twelve records and enriches two existing records, without removing existing mentoring content. Four optimized documentary photographs are imported by `communityCollection.ts` and used in the collage and matching disclosure galleries. See [event and image provenance](community-event-sources.md). No routes, router, animation dependencies or reference PNGs changed.
+

@@ -55,3 +55,10 @@
  .company-people { grid-area: 5 / 9 / 6 / 13; }
  .company-board.is-filtered figure { grid-column: span 4; }
 }
+
+.event-topics { padding-left: 24px; list-style: disc; }
+.event-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-block: 24px; }
+.event-gallery figure { margin: 0; min-width: 0; }
+.event-gallery .media-frame { aspect-ratio: 4 / 3; }
+.event-gallery figcaption { margin-top: 12px; }
+@media (max-width: 47.999rem) { .event-gallery { grid-template-columns: 1fr; } }

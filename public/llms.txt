@@ -49,11 +49,11 @@ Important notes:
 
 ## Speaking and mentoring highlights
 
-- Agentic AI for Builders: From Prompt to Autonomous Coding Loop (speaker, 19 February 2026)
-- 101 Vibe Engineering with MiniMax M2.1 (speaker, January 2026)
-- Basic Javascript with Weather Apps (speaker, March 2024)
-- Workshop NextJs Frontend Development (speaker, February 2024)
-- Workshop Deep Dive Into Grid and Flexbox (speaker, November 2023)
+- Astra Commons Jakarta (voluntary, 12 September 2026)
+- Grok Bot Meetup Jakarta (voluntary, 3 October 2026)
+- Enterprise LLM Architecture: Multimodal, Code & Production APIs #4 (voluntary, 22 August 2026)
+- Cursor Meetup Jakarta: From PRD to Deployment (voluntary, 1 August 2026)
+- OpenAI Build Week Community Hackathon Jakarta (voluntary, 18 July 2026)
 
 ## Preferred citation
 

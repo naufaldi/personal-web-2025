@@ -235,3 +235,22 @@ Final combined run: **27 tests passed, 0 failed, 1,160 assertions**.
 ### Coverage limits
 
 Safari, physical touch hardware, actual 200% browser zoom, assistive-technology testing and a frame-performance trace were not verified in this environment. Viewport emulation and sampled recordings do not establish those results or prove 60fps. Unsupported native transition behavior is covered through event/feature fallback checks, not an actual older browser. External resources were not visited exhaustively; local destinations and static metadata were checked. No unresolved reproduced P0–P2 issue remains in the tested paths; this does not certify the untested environments.
+
+
+## 11 September 2026: preview timing review and community content
+
+Motion review verdict: **Block timing/cohesion approval for the large preview**. This is a polish finding, not a newly reproduced focus or layout regression. The previous behavioral test results do not establish perceptual smoothness.
+
+| Before | After / recommendation | Why |
+| --- | --- | --- |
+| Preview shares 220ms entry and 140ms exit with small disclosures (`src/astro/scripts/motion.ts:2`; `collection.ts:29,76`) | Proposed preview-only 280ms entry and 220ms exit, pending the requested user choice | Large photographic surfaces need a more legible transition; avoid slowing frequent controls globally |
+| Backdrop has a static 40% black background (`src/astro/styles/collected.css:265`) | Proposed synchronized backdrop opacity, same lifecycle and cancellation as the panel | A backdrop appearing/disappearing immediately undermines the content fade |
+| Both directions use a strongly front-loaded ease-out | Review opacity with a gentler curve while retaining ease-out for 6px travel | Duration alone does not determine how quickly the visible change occurs |
+| Event records have sparse descriptions and generic feature images | 12 sourced Luma records added, two enriched, four real event photos placed | Makes the archive useful and ties documentary imagery to the correct event |
+
+Relevant review tiers: purpose and token consistency pass; timing and visual cohesion need revision; existing transform/opacity implementation and immediate keyboard/reduced-motion behavior remain appropriate. No new animation code was changed in this pass. Re-test cancellation, backdrop cleanup, keyboard and reduced-motion settlement when the timing proposal is implemented.
+
+Community verification: production build and type checks pass. Browser inspected the Cursor event hash destination, expanded source content and two-image gallery at the in-app desktop viewport. Images load with meaningful alt text. Source provenance is in [community-event-sources.md](docs/community-event-sources.md). Physical-device and Safari coverage are not claimed.
+
+Follow-up verification: the 390px Cursor event has no horizontal overflow and both gallery images load. All eight migration tests pass (1152 assertions). The first motion run had a browser-startup hook timeout and a geometry assertion failure; a rerun with a 15-second test timeout passed all 13 tests. This is recorded as test-run variability, not proof the first geometry failure was diagnosed. No motion source was changed. `git diff --check` passes.
+

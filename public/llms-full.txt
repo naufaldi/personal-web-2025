@@ -376,16 +376,16 @@ Naufaldi Rafif Satriya, also known as Naufaldi Rafif S., is a software engineer 
 
 ## Speaking and mentoring
 
-- Agentic AI for Builders: From Prompt to Autonomous Coding Loop: Meetup on how autonomous coding agents run through structured cycles: Plan, Act, Verify, and Iterate. Covered decomposing tasks, multi-step execution, evaluating intermediate outputs, and self-correction toward a defined goal—treating AI as a workflow, not a single-shot generator.
-- 101 Vibe Engineering with MiniMax M2.1: Session introducing vibe engineering practices with MiniMax M2.1.
-- Basic Javascript with Weather Apps: Build simple website using HTML/CSS/JS for swifting career to Frontend.
-- Workshop NextJs Frontend Development: Building from Zero to Hero NextJS App with ecosystem.
-- Workshop Deep Dive Into Grid and Flexbox: The aim of this workshop is for participants to master slicing and converting designs into code for all types of layouts created by designers. For example, if participants receive a layout like this, they can use Flexbox or Grid to implement it.
-- Create NextJS Component with Chakra UI: Technical Guide on How Create Chakra UI Component with NextJS
-- Twitter Spaces: Hosting Twitter Spaces to engage with a global audience through real-time dialogue, sharing knowledge and insights about software engineering, career growth, and the tech industry.
-- ADPList Mentorship: Engaged as a mentor on ADPList, providing personalized 1:1 mentorship to emerging engineers, focusing on career growth and technical skills enhancement. Recognized for outstanding impact, achieving Top 1% Mentor status consecutively in February, March, and April 2023.
-- Dibimbing Bootcamp: Mentored over 50 individuals in the 'Dibimbing' bootcamp, focusing on web development, React, and practical product-building skills for a new generation of developers.
-- RevoU Software Engineer Fundamentals: Facilitated the learning journey for mentees in the RevoU short course on Software Engineer Fundamentals, covering HTML, CSS, and JavaScript. Taught and mentored over 100 mentees, demonstrating a strong commitment to education and the development of future talent in the tech industry.
+- Astra Commons Jakarta: A scheduled community gathering over coffee to exchange ideas about building with Astra. The format leaves room for conversations and connections without a formal demo programme.
+- Grok Bot Meetup Jakarta: A community meetup scheduled in Jakarta. See the event page for the current programme and registration details.
+- Enterprise LLM Architecture: Multimodal, Code & Production APIs #4: A practical workshop on moving LLM integrations toward production. The programme covers model and region selection, cost estimation, latency measurement, API integration, key safety, monitoring and reliability.
+- Cursor Meetup Jakarta: From PRD to Deployment: A hands-on workshop connecting a clear problem statement to a deployed product. Participants work through product requirements, documentation and design specifications, implementation, testing and deployment with Cursor.
+- OpenAI Build Week Community Hackathon Jakarta: A one-day build sprint around useful AI workflows for people in Indonesia. The programme combines a Codex introduction, individual building time, mentor check-ins and demonstrations of working prototypes.
+- Stop Reading, Start Vibeing: Which AI Model Wins for Developers? #1: A hands-on comparison of AI models using developer tasks. Participants explore how cost, speed, context and output quality affect the journey from an idea through documentation, planning, coding, review and iteration.
+- Codex Community Meetup Jakarta: A community meetup about practical experiences using Codex. The programme includes developer stories, questions and answers, community demonstrations, and my session sharing Codex experience.
+- From Prompt to Product Jakarta #0: Hands-on Video Generation Workshop: An evening of hands-on video generation and comparing models with real prompts. My session covers choosing the right AI model, followed by Patrick’s video generation workshop and live demonstrations.
+- MiniMax: Building Agent Environments & Infrastructure with Nix: A workshop led by Rasyidan A. F. on reproducible environments for coding agents. The programme covers Nix shells and flakes, MiniMax integration, agent orchestration, monitoring and infrastructure as code.
+- Cafe Cursor Jakarta: A post-Eid gathering for coffee, side projects and conversations with other builders, including visiting members of the Cursor team.
 
 ## Personal sections
 

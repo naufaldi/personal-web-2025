@@ -1,3 +1,4 @@
+import { mentorSpeakerEngagements } from '../src/data/mentorSpeaker'
 import { describe, expect, test } from 'bun:test'
 import { readFile } from 'node:fs/promises'
 import { buildSeoRoutes } from '../scripts/seo-data'
@@ -36,7 +37,13 @@ describe('Astro static migration contract', () => {
     const community = await readFile('dist/speaker/index.html', 'utf8')
     expect(about).toContain('id="experiences-heading"')
     expect(about.match(/<article>/g)).toHaveLength(6)
-    expect(community.match(/data-record/g)).toHaveLength(21)
+    expect(community.match(/data-record/g)).toHaveLength(mentorSpeakerEngagements.length)
+    for (const entry of mentorSpeakerEngagements) expect(community).toContain(`id="engagement-${entry.id}"`)
+    for (let id = 1; id <= 21; id++) expect(community).toContain(`id="engagement-${id}"`)
+    expect(community).toContain('https://luma.com/4qe99i6e')
+    expect(community).toContain('https://luma.com/keng8c0n')
+    expect(community).toContain('cursor-aug-speaker')
+    expect(community).toContain('codex-build-group')
     expect(community.match(/data-feature-category/g)).toHaveLength(5)
     for (const html of [about, community]) {
       expect(html).not.toContain('<astro-island')
