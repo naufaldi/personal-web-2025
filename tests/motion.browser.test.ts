@@ -70,18 +70,58 @@ describe('editorial motion in a real browser', () => {
     const result=evaluate<{focus:boolean; count:number; animations:number}>(`({focus:document.activeElement.matches('[data-archive-search]'),count:[...document.querySelectorAll('[data-record]')].filter(d=>!d.hidden).length,animations:document.getAnimations().length})`)
     expect(result).toEqual({focus:true,count:0,animations:0})
   })
-  test('homepage close can reopen, then filter removes selection safely', () => {
+  test('all homepage dialogs preserve collage geometry and restore focus', () => {
     browser('open', `${origin}/`)
-    browser('reload')
-    const result = evaluate<{open:boolean; selected:number; inert:number}>(`(async()=>{
-      const pause=${wait};const click=${click};${pointer}
-      const button=document.querySelector('[data-expand]');button.scrollIntoView();click(button);await pause(280);
-      click(button);await pause(35);click(button);await pause(300);
-      const open=button.getAttribute('aria-expanded')==='true';
-      click(document.querySelector('[data-filter="Software"]'));await pause(300);
-      return {open,selected:document.querySelectorAll('.is-selected').length,inert:document.querySelectorAll('[inert]').length};
+    const result = evaluate<boolean>(`(async()=>{
+      const pause=${wait}; const click=${click}; ${pointer}
+      const elements=[...document.querySelectorAll('[data-artifact],.collection-title')];
+      const rects=()=>elements.map(e=>{const r=e.getBoundingClientRect();return [r.x,r.y,r.width,r.height]});
+      for(const button of document.querySelectorAll('[data-expand]')) {
+        button.focus({preventScroll:true}); const before=rects();const y=scrollY;
+        click(button);await pause(240);
+        const d=document.querySelector('dialog[open]');
+        if(!d || !d.matches(':modal') || !d.contains(document.activeElement) || scrollY!==y || JSON.stringify(before)!==JSON.stringify(rects()))return false;
+        click(d.querySelector('[data-close]'));await pause(170);
+        if(document.querySelector('dialog[open]') || document.activeElement!==button || scrollY!==y)return false;
+      }return true;
     })()`)
-    expect(result).toEqual({open:true,selected:0,inert:0})
+    expect(result).toBe(true)
+  })
+  test('homepage close reversal preserves latest open and index context', () => {
+    browser('open', `${origin}/#index`)
+    expect(evaluate<boolean>(`(async()=>{
+      const pause=${wait};const click=${click};${pointer}
+      const b=document.querySelector('[data-index-expand]');click(b);await pause(240);
+      const d=document.querySelector('dialog[open]');click(d.querySelector('[data-close]'));await pause(35);click(b);await pause(300);
+      if(!d.open || d.inert)return false;
+      d.dispatchEvent(new Event('cancel',{cancelable:true}));
+      return !d.open && !document.querySelector('#index').hidden && document.activeElement===b;
+    })()`)).toBe(true)
+  })
+  test('modified archive links retain native behavior', () => {
+    expect(evaluate<boolean>(`(()=>{
+      const a=document.querySelector('[data-reveal]');const e=new MouseEvent('click',{bubbles:true,cancelable:true,ctrlKey:true,detail:1});
+      document.addEventListener('click',event=>event.preventDefault(),{once:true});
+      a.dispatchEvent(e);return document.querySelector('[data-board]').hidden===true && !document.querySelector('details').open;
+    })()`)).toBe(true)
+  })
+  test('latest copy attempt owns feedback timer and async completion', () => {
+    browser('open',`${origin}/blogs/state-management-in-reactjs`)
+    expect(evaluate<boolean>(`(async()=>{
+      const pause=${wait};const b=document.querySelector('.copy-code');
+      Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.resolve()},configurable:true});
+      b.click();await pause(1000);b.click();await pause(900);if(b.textContent!=='Copied')return false;
+      let rejectOld;let resolveNew;let n=0;
+      Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>new Promise((resolve,reject)=>{if(n++===0)rejectOld=reject;else resolveNew=resolve})},configurable:true});
+      b.click();b.click();resolveNew();await pause(0);rejectOld();await pause(0);return b.textContent==='Copied';
+    })()`)).toBe(true)
+  })
+
+  test('reduced motion during a dialog exit settles and unlocks immediately', () => {
+    browser('open', `${origin}/`)
+    evaluate(`(()=>{${pointer}const click=${click};click(document.querySelector('[data-expand]'));click(document.querySelector('dialog[open] [data-close]'));document.getAnimations().forEach(a=>a.playbackRate=0.01);})()`)
+    browser('set','media','light','reduced-motion')
+    expect(evaluate<boolean>(`new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve(!document.querySelector('dialog[open]') && !document.documentElement.classList.contains('preview-open') && document.getAnimations().length===0))))`)).toBe(true)
   })
 
   test('navigation enhancement excludes keyboard, modified, hash and download links', () => {
