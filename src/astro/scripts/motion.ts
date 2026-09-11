@@ -129,3 +129,10 @@ addEventListener('pagehide', settleMotion)
 window.addEventListener('pageshow', event => {
   if (event.persisted) { settleMotion(); delete document.documentElement.dataset.input }
 })
+
+export function isNativeLinkAction(event: MouseEvent, target: HTMLElement) {
+  return target instanceof HTMLAnchorElement && (
+    event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
+    target.hasAttribute('download') || Boolean(target.target && target.target !== '_self')
+  )
+}

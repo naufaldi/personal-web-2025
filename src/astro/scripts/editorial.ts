@@ -1,4 +1,4 @@
-import { reflow, setDisclosure, settleMotion, settleExits } from './motion'
+import { isNativeLinkAction, reflow, setDisclosure, settleMotion, settleExits } from './motion'
 const root = document.querySelector<HTMLElement>('[data-editorial]')
 if (root) {
   const board = root.querySelector<HTMLElement>('[data-board]')!
@@ -64,7 +64,7 @@ if (root) {
   }
   root.addEventListener('click', event => {
     const target = event.target instanceof Element ? event.target.closest<HTMLElement>('a, button') : null
-    if (!target) return
+    if (!target || isNativeLinkAction(event, target)) return
     if (target.hasAttribute('data-open-index')) {
       event.preventDefault()
       view(true, event.detail > 0)
