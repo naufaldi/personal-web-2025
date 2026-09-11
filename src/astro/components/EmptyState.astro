@@ -1,0 +1,16 @@
+---
+interface Props { home?: boolean }
+const { home = false } = Astro.props
+---
+<section class:list={['illustrated-state', { 'empty-state': home }]} data-empty hidden aria-label="Collection status">
+  <img src="/images/states/empty.webp" width="720" height="720" alt="" loading="lazy" decoding="async" />
+  <div>
+    <p class="font-mono text-caption text-vermilion">THE COLLECTION /</p>
+    <h2 class="text-heading" data-empty-title>No matches this time.</h2>
+    <p class="text-body" data-empty-description>Try another search or clear the filters to see the collection.</p>
+    <div class="state-actions font-mono text-nav">
+      <button type="button" data-reset data-editorial-reset>Clear filters</button>
+      {!home && <a href="#index" data-open-index>Browse the index ↗</a>}
+    </div>
+  </div>
+</section>

@@ -16,6 +16,16 @@ if (root) {
   const matches = (element: HTMLElement, value: string | undefined) =>
     (category === 'All' || value?.split('|').includes(category)) &&
     (!query || (element.dataset.search ?? element.textContent ?? '').toLocaleLowerCase().includes(query))
+  function updateEmpty() {
+    if (!empty) return
+    const count = records.filter(record => !record.hidden).length
+    empty.hidden = directory.hidden ? features.some(feature => !feature.hidden) : count > 0
+    empty.querySelector<HTMLElement>('[data-empty-title]')!.textContent = count ? 'More in the index.' : 'No matches this time.'
+    empty.querySelector<HTMLElement>('[data-empty-description]')!.textContent = count
+      ? `${count} matching ${count === 1 ? 'entry is' : 'entries are'} in the index. This selection has no featured artifacts.`
+      : 'Try another search or clear the filters to see the collection.'
+    empty.querySelector<HTMLElement>('[data-open-index]')!.hidden = count === 0
+  }
   function filter(animate: boolean) {
     settleExits()
     reflow([...features, ...records], animate, () => {
@@ -27,12 +37,7 @@ if (root) {
     })
     root!.querySelectorAll<HTMLElement>('[data-editorial-filter]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.editorialFilter === category)))
     const count = records.filter(record => !record.hidden).length
-    if (empty) {
-      const noFeatures = features.every(feature => feature.hidden)
-      empty.hidden = directory.hidden ? !noFeatures : count > 0
-      empty.firstChild!.textContent = count === 0 ? 'No entries match. Try another search or filter. ' : 'No featured entries match. '
-      empty.querySelector<HTMLElement>('a')!.hidden = count === 0
-    }
+    updateEmpty()
     status.textContent = `${count} entries. ${category}.${query ? ` Search: ${query}.` : ''}`
     })
   }
@@ -47,7 +52,7 @@ if (root) {
       toggle.textContent = index ? 'Back to collection ↗' : 'Open index ↗'
       toggle.setAttribute('aria-expanded', String(index))
       status.textContent = index ? 'Index view.' : 'Collection view.'
-      if (empty) empty.hidden = index ? records.some(record => !record.hidden) : features.some(feature => !feature.hidden)
+      updateEmpty()
     })
   }
   toggle.setAttribute('aria-controls', directory.id)
@@ -65,7 +70,14 @@ if (root) {
   root.addEventListener('click', event => {
     const target = event.target instanceof Element ? event.target.closest<HTMLElement>('a, button') : null
     if (!target || isNativeLinkAction(event, target)) return
-    if (target.hasAttribute('data-open-index')) {
+    if (target.hasAttribute('data-editorial-reset')) {
+      category = 'All'
+      query = ''
+      if (search) search.value = ''
+      filter(false)
+      const focusTarget = search ?? root.querySelector<HTMLElement>('[data-editorial-filter="All"]')
+      focusTarget?.focus({ preventScroll: true })
+    } else if (target.hasAttribute('data-open-index')) {
       event.preventDefault()
       view(true, event.detail > 0)
       directory.querySelector<HTMLElement>('h2')!.focus()

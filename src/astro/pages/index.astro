@@ -1,4 +1,5 @@
 ---
+import EmptyState from '../components/EmptyState.astro'
 import { ArrowRight } from 'lucide-react'
 import Document from '../layouts/Document.astro'
 import Artifact from '../components/Artifact.astro'
@@ -31,7 +32,7 @@ const route = routes.find(route => route.path === '/')!
           <button hidden class="font-mono text-nav" data-index-expand={artifact.id}>View artifact</button>
         </li>)}</ol>
       </section>
-      <p class="empty-state font-mono text-caption" hidden>No artifacts in this collection. <button data-reset>Reset to All</button></p>
+      <EmptyState home />
       <div class="collection-controls font-mono text-nav">
         <div role="group" aria-label="Filter collection" class="filters" hidden>{['All', 'Software', 'Photography', 'Community'].map(category => <button type="button" data-filter={category} aria-pressed={category === 'All'}>{category}</button>)}</div>
         <a href="#index" class="index-toggle" data-index-toggle>Open index <ArrowRight size={20} strokeWidth={1} aria-hidden="true" /></a>

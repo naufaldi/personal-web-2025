@@ -194,3 +194,7 @@ The audit inventory derives from `buildSeoRoutes()`, including retired source sl
 
 The native `/speaker` collection now draws richer Luma event records from `src/data/mentorSpeaker.ts`. Optional role, venue, category and topic fields preserve the distinction between hosting and presenting. The collection adds twelve records and enriches two existing records, without removing existing mentoring content. Four optimized documentary photographs are imported by `communityCollection.ts` and used in the collage and matching disclosure galleries. See [event and image provenance](community-event-sources.md). No routes, router, animation dependencies or reference PNGs changed.
 
+
+### Illustrated recovery states
+
+`EmptyState.astro` supplies the shared collection/search recovery markup. `editorial.ts` distinguishes zero featured artifacts from zero matching records, and exposes an accessible reset action. The native 404 and media-error fallbacks use generated watercolor assets under `public/images/states/`. `states.css` centralizes their presentation. Static routing and existing source content are preserved.

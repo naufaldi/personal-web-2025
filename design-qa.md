@@ -254,3 +254,19 @@ Community verification: production build and type checks pass. Browser inspected
 
 Follow-up verification: the 390px Cursor event has no horizontal overflow and both gallery images load. All eight migration tests pass (1152 assertions). The first motion run had a browser-startup hook timeout and a geometry assertion failure; a rerun with a 15-second test timeout passed all 13 tests. This is recorded as test-run variability, not proof the first geometry failure was diagnosed. No motion source was changed. `git diff --check` passes.
 
+
+## Illustrated recovery states, 11 September 2026
+
+| Before | After | Why |
+| --- | --- | --- |
+| Community filter leaves a title and blank board | Illustrated “More in the index” message with matching count and index action | Featured artifacts and full records are different subsets; matching records still exist |
+| Empty archive searches have a plain message and no reset | Shared watercolor state with clear-filters action | Clears category and query together, restores search/filter focus |
+| 404 has only text links | Editorial illustration, identity navigation and explicit recovery links | Keeps the collection language on actual missing routes |
+| Failed images display bare text | Repair-desk illustration behind readable fallback text | Recognizable media-error state without hiding source captions or reading content |
+| Narrow index titles can overflow their grid tracks | Shrinkable title track and long-word wrapping | Content must fit after resetting a search at 320px |
+
+Generated three original watercolor illustrations using the supplied second image as the aesthetic reference. Optimized 720px WebP assets live in `public/images/states/`: `empty.webp`, `not-found.webp`, `unavailable.webp`. Decorative illustrations have empty alt text; state explanations and actions are actual HTML. Source reference PNGs were not modified.
+
+Desktop browser review reproduced Community → illustrated index recovery and a direct unknown-route visit. Targeted tests cover index recovery, zero-result reset/focus at 320px on Projects/Writing, unknown routes, and image-error fallback. No artificial loading timer or fictional server error was added to this static site; copy/diagram failures retain their existing local recovery behavior.
+
+Final verification: `bun run build` passed including Astro and TypeScript checks. `bun test tests/states.browser.test.ts tests/migration.test.ts` passed all 11 tests and 1157 assertions after the narrow-grid fix. `git diff --check` passed. Physical-device and Safari verification were not performed.

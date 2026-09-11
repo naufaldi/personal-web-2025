@@ -63,7 +63,7 @@ document.querySelectorAll<HTMLPreElement>('.reading-prose pre').forEach(pre => {
 document.querySelectorAll<HTMLImageElement>('.reading-layout img').forEach(image => {
   const fallback = () => {
     const note = document.createElement('span')
-    note.className = 'font-mono text-caption'
+    note.className = 'reading-media-error font-mono text-caption'
     note.textContent = image.alt ? `Image unavailable: ${image.alt}` : 'Image unavailable'
     image.replaceWith(note)
   }

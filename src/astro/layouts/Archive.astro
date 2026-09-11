@@ -1,4 +1,5 @@
 ---
+import EmptyState from '../components/EmptyState.astro'
 import Document from './Document.astro'
 import CollectionHeader from '../components/CollectionHeader.astro'
 import ArchiveIndex from '../components/ArchiveIndex.astro'
@@ -19,7 +20,7 @@ const route = routes.find(route => route.path === path)!
     <main id="collection" tabindex="-1">
       {searchable && <div class="archive-search" data-search-control hidden><label class="font-mono text-caption" for="archive-search">Search {title.toLowerCase()}</label><input id="archive-search" class="font-body text-body" type="search" autocomplete="off" data-archive-search /></div>}
       <slot />
-      <p class="archive-empty font-mono text-caption" data-empty hidden>No featured entries match. <a href="#index" data-open-index>Browse matching entries in the index ↗</a></p>
+      <EmptyState />
       <div class="editorial-controls font-mono text-nav">
         <div class="archive-filters" role="group" aria-label={`Filter ${title.toLowerCase()}`} data-editorial-filters hidden>{categories.map(category => <button type="button" data-editorial-filter={category} aria-pressed={category === 'All'}>{category}</button>)}</div>
         <a href="#index" data-view-toggle>Open index ↗</a>
