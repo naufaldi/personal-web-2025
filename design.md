@@ -101,7 +101,7 @@ Reserve image dimensions, provide responsive sources and meaningful alt text, lo
 | Filter | Bare text, 44px hit area, slash separators decorative; selected item has vermilion underline and `aria-pressed`; focus remains on activation |
 | Search | Visible label, ink text, secondary-ink boundary, `rounded-control`; clear/reset and honest empty results |
 | Index | Alternate readable view of the same collection data; direct links and return control; no duplicated list section underneath the collage |
-| Expansion controls | Clear Close/Back text, 44px target, `aria-expanded` for inline triggers; Escape closes inline details and returns focus |
+| Expansion controls | Clear Close/Back text, 44px target; Home uses named native dialogs with contained focus and stationary background; archives use inline `aria-expanded` disclosures; Escape restores focus |
 | Reading surface | Unboxed paper, `font-body text-body`, max 65ch; real headings, readable code and underline-distinguished inline links |
 
 All controls require visible focus. Use ink outline with paper separation; decorative image corner marks do not replace focus. Never nest interactive elements or depend on hover, dragging or animation for access. Keep error/empty messages understandable without red alone.

@@ -60,7 +60,7 @@ The old `date.jpg` label described a speaking engagement; visual inspection show
 `src/data/collected.ts` is the single typed source for artifact IDs, categories, captions, context, media and destinations. Collection and index render from it. `src/astro/scripts/collection.ts` progressively enables controls.
 
 - All / Software / Photography / Community filters agree with the index and announce result counts. Filtering keeps button focus and closes a selected artifact excluded by the new filter.
-- Expansion is in flow, exposes `aria-expanded`, and keeps full-page scrolling. Close and Escape return focus to the trigger. Actual destinations remain separate caption/detail links.
+- Homepage previews use native modal dialogs over the unchanged collection. Close and Escape restore the trigger and scroll position; the index stays in flow. Actual destinations remain separate caption/detail links.
 - Open index reveals the same filtered artifacts and all existing collection routes, including About experience. Returning preserves the filter. `/#index` opens the index directly.
 - Without scripts, all seven artifacts and the complete site index remain visible; interactive controls remain hidden and real links still work.
 - Motion uses 140ms feedback, 220ms fades, and 260ms transform transitions. Rapid changes cancel/retarget running animations. Keyboard actions and reduced motion are immediate. Hover effects apply only to fine pointers; touch targets are at least 44px.
@@ -171,3 +171,20 @@ The shared motion module owns duration/easing defaults, input modality, reduced-
 Homepage expansion, archive filters/index changes, About/community records, shelf disclosures and reading contents use these helpers. Press/hover rules are shared without scaling entire reading records. Original HTML, routes, source content, images, metadata and aliases are preserved. No files were removed.
 
 Commands: `bun run build`, `bun run test:migration`, and `bun run test:motion`. The browser motion tests require the existing `agent-browser` CLI and a production preview at `http://127.0.0.1:4341`; set `MOTION_TEST_ORIGIN` to another local preview when needed. They cover stale closes, rapid filters, homepage expansion, Escape/focus, search, reduced motion and navigation exclusions. Browser screenshots cover 36 page/viewport combinations; see [motion QA](../design-qa.md) and [responsive evidence](verification/motion-responsive.json). No push or deployment was performed.
+
+## Site-wide interaction repair (2026-09-11)
+
+Home selection no longer sets the filter reflow class or scrolls the selected artifact. Each existing artifact owns a named native dialog. Its media is copied from the existing face at initialization, without duplicate content records or new assets. Selection preserves collection/index/filter state. Scrollbar space stays reserved while the background is locked; Close/Escape restore the original trigger. Native modal inertness is retained, with explicit Tab wrapping. The entire dialog surface uses the shared 220ms entrance and 140ms exit, avoiding an opaque empty panel during dismissal. Obsolete selected-card CSS was removed.
+
+Shared anchor enhancement now preserves modified/new-tab/download behavior. Code-copy controls use attempt ownership and cancel old reset timers, so old clipboard completions cannot replace newer feedback. No routes, content, reference PNGs, dependencies, or deployment rules changed.
+
+Verification commands (production preview at 4341):
+
+```sh
+bun run build
+bun run scripts/serve-nojs.ts # separate terminal, local script-blocked fixture on 4343
+bun test tests/migration.test.ts tests/motion.browser.test.ts tests/interaction-matrix.browser.test.ts
+bun run scripts/audit-interactions.ts
+```
+
+The audit inventory derives from `buildSeoRoutes()`, including retired source slugs for 404 checks. [Route results](verification/interaction-audit.json) contain every canonical route at desktop and mobile with HTTP status, title/canonical agreement, main content, horizontal overflow and image-load checks. [Design QA](../design-qa.md) separates automated checks, Browser visual review and coverage gaps.

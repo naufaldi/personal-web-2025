@@ -205,3 +205,33 @@ Actual Home → About pointer navigation produced a native transition and naviga
 Limitations: unsupported-engine fallback is feature-gated but was not tested in a separate unsupported browser engine. Physical touch, Safari, browser-chrome zoom and CPU-throttled performance traces were not completed. The video recorder samples fewer frames than a display refresh; frame review supports visual continuity, not a numerical 60fps claim. No production-host navigation or deployment was tested. Previously tracked reference PNGs and source content remain unchanged.
 
 Final result: passed.
+
+## Site-wide interaction repair, 2026-09-11
+
+| Before | After | Why |
+| --- | --- | --- |
+| P2: Home preview enables full-canvas reflow, changes image crop/title and scrolls automatically. Reproduced in Browser. | Native dialog over stationary composition; regression measures background rectangles and scroll. | `collection.ts` selection shared the filter layout state; translation cannot compensate for geometry changes. |
+| P2: Ctrl-click on Books preview sets board.hidden and prevents native link action. Reproduced in browser event dispatch. | Only ordinary same-tab anchor clicks are enhanced. | `editorial.ts` unconditionally prevented default. Same guard needed for Home index. |
+| P2: Copy twice 1000ms apart; 900ms later latest feedback is already cleared. Reproduced with resolved clipboard stub. | Latest attempt owns completion and its 1800ms reset. | `reading.ts` retained earlier timers and accepted stale async results. |
+
+Verification results are recorded below after repair.
+
+P2 correction during keyboard verification: Chromium moved focus to browser chrome after the last dialog link. Explicit Tab/Shift+Tab wrapping now keeps the two preview controls in the requested cycle; native modal background inertness remains browser-owned.
+
+P2 correction from slowed recording: fading only the panel contents left an opaque blank paper rectangle during exit. Entrance/exit now target the whole dialog surface, retaining transform/opacity-only animation and eliminating that intermediate blank surface.
+
+### Verification evidence
+
+Final combined run: **27 tests passed, 0 failed, 1,160 assertions**.
+
+- Production build: 111 pages, 109 HTML aliases; type checks pass (14 pre-existing deprecated-icon hints).
+- Route sweep: 110 canonical routes × 1487×1058 and 390×844 = 220 successful browser loads, matching titles/canonicals, no horizontal overflow and no broken images detected after eager loading. Unknown URL, `/shorts` and all ten retired detail slugs return 404. See [machine-readable results](docs/verification/interaction-audit.json).
+- Interaction matrix: nine page families × four widths (1487, 834, 390, 320), all filters, available disclosures, search/empty results, immediate keyboard state and image fallback. All seven Home previews additionally preserve background geometry, scroll and focus.
+- Regression coverage includes interrupted close/reopen, index return, Tab cycling, reduced-motion changes during a deliberately slowed exit, repeated and out-of-order clipboard completions, native modified-link exclusions, navigation Back/Forward and hashes.
+- Script-blocked browser checks cover all nine families. Static migration tests additionally inspect every route and alias, JSON-LD, project covers, source inventory and discoverability files. Both Mermaid diagrams render on `compiler-vs-transpiler`, with source retained and no mobile overflow.
+- Browser visual review: Home open/close, About experience, community event, Books and Manhwa records, Projects and article detail navigation. Automated browser sweeps supplement this review; they are not a claim of manual visual review of every article.
+- [Desktop closed](docs/verification/preview-1487-closed.png), [desktop open](docs/verification/preview-1487-open.png), [320px open](docs/verification/preview-320-open.png); equivalent 834px and 390px pairs are alongside them. [Normal recording](docs/verification/preview-normal.webm) and [slowed recording](docs/verification/preview-slow.webm) were reviewed as sampled frames. The final surface fades as one piece, with no blank paper rectangle, title resizing or background reflow.
+
+### Coverage limits
+
+Safari, physical touch hardware, actual 200% browser zoom, assistive-technology testing and a frame-performance trace were not verified in this environment. Viewport emulation and sampled recordings do not establish those results or prove 60fps. Unsupported native transition behavior is covered through event/feature fallback checks, not an actual older browser. External resources were not visited exhaustively; local destinations and static metadata were checked. No unresolved reproduced P0–P2 issue remains in the tested paths; this does not certify the untested environments.

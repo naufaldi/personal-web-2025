@@ -47,7 +47,7 @@ Use one typed collection source with stable IDs and derive filtered/index views 
 | --- | --- |
 | Resting | Visible caption/category and clear action; ordinary page scrolling works immediately |
 | Hover/focus | Modest emphasis and visible keyboard focus; no essential information available only on hover |
-| Selected | One item expands while neighbors make room; text and controls remain uncovered |
+| Selected | Homepage opens a focused dialog over stationary artifacts; archive records retain native in-flow disclosures |
 | Close/switch | Visible Close, Escape for inline details, focus restored to the trigger; predictable reading position on switch |
 | Filtered | Pressed state and immediate feedback; keep focus on the filter, politely announce result count, collapse any selection excluded by the filter |
 | Empty | Honest message and working reset to All; never fabricate filler artifacts |
@@ -79,7 +79,7 @@ The [gallery](reference/README.md) includes seven revised archive/dossier pages 
 
 ## Homepage implementation and remaining migration
 
-The homepage now uses native Astro HTML, Tailwind v4 collection styling, self-hosted fonts, optimized existing photographs and a small browser script. It implements category filters, inline expansion, keyboard/Escape handling and an in-flow index. See [migration-2026.md](migration-2026.md) for the exact architecture and verification record.
+The homepage now uses native Astro HTML, Tailwind v4 collection styling, self-hosted fonts, optimized existing photographs and a small browser script. It implements category filters, focused dialog previews, keyboard/Escape handling and an in-flow index. See [migration-2026.md](migration-2026.md) for the exact architecture and verification record.
 
 Work remains in `/Users/naufaldi.satriya/WebApps/personal-web-2025` on `codex/collected-by-faldi-design`. Changes are committed in atomic migration steps as requested. Reference PNGs remain unchanged.
 
