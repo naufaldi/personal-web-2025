@@ -1,4 +1,4 @@
-import { reflow, enter, exit, cancelExit, settleExits, motion } from './motion'
+import { isNativeLinkAction, reflow, enter, exit, cancelExit, settleExits } from './motion'
 const root = document.querySelector<HTMLElement>('[data-collection]')
 
 if (root) {
@@ -9,9 +9,9 @@ if (root) {
   const cards = [...root.querySelectorAll<HTMLElement>('[data-artifact]')]
   const rows = [...root.querySelectorAll<HTMLElement>('[data-index-item]')]
   const filters = [...root.querySelectorAll<HTMLButtonElement>('[data-filter]')]
-  let category = 'All'
   let selected: HTMLElement | null = null
   let indexOpen = false
+  let previewTrigger: HTMLElement | null = null
 
   root.querySelectorAll<HTMLElement>('.filters, [data-expand], [data-index-expand]').forEach(element => { element.hidden = false })
   index.hidden = true
@@ -24,28 +24,23 @@ if (root) {
   function closeSelection(restoreFocus: boolean, animate = false) {
     if (!selected) return
     const card = selected
-    const trigger = card.querySelector<HTMLButtonElement>('[data-expand]')!
-    const detail = card.querySelector<HTMLElement>('.artifact-detail')!
-    trigger.setAttribute('aria-expanded', 'false')
-    if (restoreFocus) trigger.focus({ preventScroll: true })
-    exit(detail, animate, move => {
-      reflow(cards, move, () => {
-        card.classList.remove('is-selected')
-        detail.hidden = true
-        if (selected === card) selected = null
-        canvas.classList.toggle('is-reflow', category !== 'All' || !!selected)
-      }, motion.settle)
+    const dialog = card.querySelector<HTMLDialogElement>('dialog')!
+    card.querySelector('[data-expand]')!.setAttribute('aria-expanded', 'false')
+    exit(dialog, animate, () => {
+      dialog.close()
+      document.documentElement.classList.remove('preview-open')
+      selected = null
+      if (restoreFocus) previewTrigger?.focus({ preventScroll: true })
     })
   }
 
   function setFilter(next: string, animate: boolean) {
     settleExits()
     update(animate, () => {
-      category = next
       if (selected && next !== 'All' && selected.dataset.category !== next) closeSelection(false)
       for (const item of [...cards, ...rows]) item.hidden = next !== 'All' && item.dataset.category !== next
       for (const filter of filters) filter.setAttribute('aria-pressed', String(filter.dataset.filter === next))
-      canvas.classList.toggle('is-reflow', next !== 'All' || !!selected)
+      canvas.classList.toggle('is-reflow', next !== 'All')
       const count = cards.filter(card => !card.hidden).length
       root!.querySelector<HTMLElement>('.empty-state')!.hidden = count > 0
       status.textContent = `${count} artifacts. ${next} collection.`
@@ -67,33 +62,49 @@ if (root) {
   function expand(id: string, animate: boolean, fromIndex = false) {
     const card = cards.find(item => item.dataset.artifact === id)
     if (!card) return
-    if (selected === card && !fromIndex && card.querySelector('[data-expand]')?.getAttribute('aria-expanded') === 'true') {
-      closeSelection(true, animate)
-      return
-    }
-    cancelExit(card.querySelector<HTMLElement>('.artifact-detail')!)
-    update(animate, () => {
-      if (indexOpen) setIndex(false)
-      if (selected !== card) closeSelection(false)
-      selected = card
-      canvas.classList.add('is-reflow')
-      card.classList.add('is-selected')
-      const detail = card.querySelector<HTMLElement>('.artifact-detail')!
-      detail.hidden = false
-      enter(detail, animate)
-      card.querySelector('[data-expand]')!.setAttribute('aria-expanded', 'true')
-      status.textContent = `${card.querySelector('.artifact-caption a')!.textContent} expanded.`
-    })
-    if (fromIndex || selected) {
-      card.querySelector<HTMLButtonElement>('[data-expand]')!.focus({ preventScroll: true })
-      card.scrollIntoView({ block: 'nearest', behavior: 'instant' })
-    }
+    const dialog = card.querySelector<HTMLDialogElement>('dialog')!
+    cancelExit(dialog)
+    if (selected && selected !== card) closeSelection(false)
+    selected = card
+    previewTrigger = fromIndex
+      ? rows.find(row => row.dataset.indexItem === id)!.querySelector<HTMLElement>('[data-index-expand]')!
+      : card.querySelector<HTMLElement>('[data-expand]')!
+    document.documentElement.classList.add('preview-open')
+    if (!dialog.open) dialog.showModal()
+    card.querySelector('[data-expand]')!.setAttribute('aria-expanded', 'true')
+    dialog.querySelector<HTMLButtonElement>('[data-close]')!.focus({ preventScroll: true })
+    enter(dialog, animate)
   }
+
+  cards.forEach(card => {
+    const dialog = card.querySelector<HTMLDialogElement>('dialog')!
+    const media = card.querySelector<HTMLElement>('.artifact-face')!.cloneNode(true) as HTMLElement
+    media.querySelector('[data-expand]')?.remove()
+    media.querySelectorAll('img').forEach(image => { image.loading = 'eager' })
+    dialog.querySelector('.preview-media')!.append(media)
+    dialog.addEventListener('keydown', event => {
+      if (event.key !== 'Tab') return
+      const controls = [...dialog.querySelectorAll<HTMLElement>('button, a[href]')]
+      const first = controls[0]
+      const last = controls[controls.length - 1]
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last.focus({ preventScroll: true })
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first.focus({ preventScroll: true })
+      }
+    })
+    dialog.addEventListener('cancel', event => {
+      event.preventDefault()
+      closeSelection(true)
+    })
+  })
 
   root.addEventListener('click', event => {
     const target = event.target instanceof Element ? event.target : null
     const button = target?.closest<HTMLElement>('button, [data-index-toggle]')
-    if (!button) return
+    if (!button || isNativeLinkAction(event, button)) return
     const animate = event.detail > 0
     if (button.dataset.filter) setFilter(button.dataset.filter, animate)
     else if (button.dataset.expand) expand(button.dataset.expand, animate)

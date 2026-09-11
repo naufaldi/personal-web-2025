@@ -14,17 +14,18 @@ const { id, variant, media, title, category, label, context, href, linkLabel } =
     </div>}
     {variant === 'library' && <div class="library-cover"><p class="font-mono text-caption">REACT / TS</p><h2>Small tools.<br />Shared.</h2><p class="library-name">ts-hooks-kit</p><p class="font-mono text-caption">Typed hooks.<br />Open source.</p></div>}
     {variant === 'note' && <div class="personal-note"><p>I’m a software engineer and mentor from Bekasi, Indonesia. Frontend is my strongest foundation.</p><span>From my About page</span></div>}
-    <button hidden class="artifact-open" aria-label={`Expand ${title}`} aria-expanded="false" aria-controls={`detail-${id}`} data-expand={id}></button>
+    <button hidden class="artifact-open" aria-label={`Expand ${title}`} aria-haspopup="dialog" aria-expanded="false" aria-controls={`detail-${id}`} data-expand={id}></button>
   </div>
   <div class="artifact-caption font-mono text-caption">
     <p>{category} /<br /><a href={href}>{title}</a></p>
     <span class="artifact-number">{String(number).padStart(2, '0')} / 07</span>
   </div>
-  <div id={`detail-${id}`} class="artifact-detail" hidden>
+  <dialog id={`detail-${id}`} class="artifact-preview" aria-labelledby={`preview-title-${id}`}><div class="preview-panel">
+    <div class="preview-media"></div><div class="artifact-detail">
     <button type="button" class="close-detail font-mono text-nav" data-close>Close</button>
     <p class="font-mono text-caption text-vermilion">{label}</p>
-    <h2 class="font-body text-heading">{title}</h2>
+    <h2 id={`preview-title-${id}`} class="font-body text-heading">{title}</h2>
     <p class="font-body text-body">{context}</p>
     <a class="detail-link font-mono text-nav" href={href}>{linkLabel}</a>
-  </div>
+  </div></div></dialog>
 </article>
