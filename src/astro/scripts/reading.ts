@@ -39,10 +39,21 @@ document.querySelectorAll<HTMLPreElement>('.reading-prose pre').forEach(pre => {
   button.type = 'button'
   button.className = 'copy-code'
   button.textContent = 'Copy code'
+  let attempt = 0
+  let reset: ReturnType<typeof setTimeout> | undefined
   button.addEventListener('click', async () => {
-    try { await navigator.clipboard.writeText(pre.textContent ?? ''); button.textContent = 'Copied' }
-    catch { button.textContent = 'Select code to copy'; pre.focus() }
-    setTimeout(() => { button.textContent = 'Copy code' }, 1800)
+    const current = ++attempt
+    clearTimeout(reset)
+    try {
+      await navigator.clipboard.writeText(pre.textContent ?? '')
+      if (current !== attempt) return
+      button.textContent = 'Copied'
+    } catch {
+      if (current !== attempt) return
+      button.textContent = 'Select code to copy'
+      pre.focus()
+    }
+    reset = setTimeout(() => { button.textContent = 'Copy code' }, 1800)
   })
   const block = document.createElement('div')
   block.className = 'reading-code-block'
