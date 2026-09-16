@@ -30,6 +30,8 @@
     "build": "bun run generate:discoverability && bun run check && astro build && bun run scripts/finalize-static.ts",
     "preview": "astro preview",
     "check": "astro check && tsc --noEmit",
+    "deploy:dry-run": "bun run build && wrangler deploy --dry-run",
+    "deploy": "bun run build && wrangler deploy",
     "test:migration": "bun test tests/migration.test.ts",
     "test:motion": "bun test tests/motion.browser.test.ts"
   },
@@ -91,6 +93,7 @@
     "shadcn": "^3.4.2",
     "shadcn-ui": "^0.9.0",
     "tailwindcss": "^4.0.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "wrangler": "4"
   }
 }
