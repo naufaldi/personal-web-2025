@@ -70,32 +70,40 @@ describe('editorial motion in a real browser', () => {
     const result=evaluate<{focus:boolean; count:number; animations:number}>(`({focus:document.activeElement.matches('[data-archive-search]'),count:[...document.querySelectorAll('[data-record]')].filter(d=>!d.hidden).length,animations:document.getAnimations().length})`)
     expect(result).toEqual({focus:true,count:0,animations:0})
   })
-  test('all homepage dialogs preserve collage geometry and restore focus', () => {
-    browser('open', `${origin}/`)
-    const result = evaluate<boolean>(`(async()=>{
-      const pause=${wait}; const click=${click}; ${pointer}
-      const elements=[...document.querySelectorAll('[data-artifact],.collection-title')];
-      const rects=()=>elements.map(e=>{const r=e.getBoundingClientRect();return [r.x,r.y,r.width,r.height]});
-      for(const button of document.querySelectorAll('[data-expand]')) {
-        button.focus({preventScroll:true}); const before=rects();const y=scrollY;
-        click(button);await pause(240);
-        const d=document.querySelector('dialog[open]');
-        if(!d || !d.matches(':modal') || !d.contains(document.activeElement) || scrollY!==y || JSON.stringify(before)!==JSON.stringify(rects()))return false;
-        click(d.querySelector('[data-close]'));await pause(170);
-        if(document.querySelector('dialog[open]') || document.activeElement!==button || scrollY!==y)return false;
-      }return true;
-    })()`)
-    expect(result).toBe(true)
-  })
-  test('homepage close reversal preserves latest open and index context', () => {
-    browser('open', `${origin}/#index`)
+  test('all eight photographs enlarge without moving the gallery and restore focus', () => {
+    browser('open', `${origin}/photography`)
     expect(evaluate<boolean>(`(async()=>{
-      const pause=${wait};const click=${click};${pointer}
-      const b=document.querySelector('[data-index-expand]');click(b);await pause(240);
-      const d=document.querySelector('dialog[open]');click(d.querySelector('[data-close]'));await pause(35);click(b);await pause(300);
-      if(!d.open || d.inert)return false;
-      d.dispatchEvent(new Event('cancel',{cancelable:true}));
-      return !d.open && !document.querySelector('#index').hidden && document.activeElement===b;
+      await document.fonts.ready;const pause=${wait};
+      const links=[...document.querySelectorAll('[data-photo-open]')];
+      if(links.length!==8)return false;
+      for(const link of links){
+        link.focus({preventScroll:true});const x=link.getBoundingClientRect().x;const y=scrollY;
+        link.click();const d=document.querySelector('dialog[open]');
+        if(!d?.matches(':modal')||!d.contains(document.activeElement)||scrollY!==y||link.getBoundingClientRect().x!==x)return false;
+        d.querySelector('button').click();await pause(30);
+        if(d.open||document.activeElement!==link||document.documentElement.classList.contains('photo-open'))return false;
+      }return true;
+    })()`)).toBe(true)
+  })
+  test('homepage has exactly seven distinct direct destinations and a legacy index anchor', () => {
+    browser('open', `${origin}/#index`)
+    expect(evaluate<string[]>(`[...document.querySelectorAll('[data-artifact] a')].map(a=>a.getAttribute('href')).sort()`)).toEqual(['/about','/blogs','/book','/manhwa','/photography','/projects','/speaker'])
+    expect(evaluate<boolean>(`!!document.querySelector('#index') && !document.querySelector('main dialog, [data-filter], [data-index-toggle]')`)).toBe(true)
+  })
+  test('photo failures recover when another photograph opens and modified links remain native', () => {
+    browser('open', `${origin}/photography`)
+    expect(evaluate<boolean>(`(()=>{
+      const links=[...document.querySelectorAll('[data-photo-open]')];
+      let intercepted=true;
+      document.addEventListener('click',e=>{intercepted=e.defaultPrevented;e.preventDefault()},{once:true});
+      links[0].dispatchEvent(new MouseEvent('click',{bubbles:true,cancelable:true,ctrlKey:true}));
+      if(intercepted||document.querySelector('dialog[open]'))return false;
+      links[0].click();const d=document.querySelector('dialog');const img=d.querySelector('img');
+      img.dispatchEvent(new Event('error'));
+      if(!d.querySelector('.has-error')||d.querySelector('.media-unavailable').hidden)return false;
+      d.querySelector('button').click();links[1].click();
+      const recovered=!d.querySelector('.has-error')&&img.style.visibility===''&&img.src===links[1].href;
+      d.querySelector('button').click();return recovered;
     })()`)).toBe(true)
   })
   test('modified archive links retain native behavior', () => {
@@ -117,11 +125,12 @@ describe('editorial motion in a real browser', () => {
     })()`)).toBe(true)
   })
 
-  test('reduced motion during a dialog exit settles and unlocks immediately', () => {
-    browser('open', `${origin}/`)
-    evaluate(`(()=>{${pointer}const click=${click};click(document.querySelector('[data-expand]'));click(document.querySelector('dialog[open] [data-close]'));document.getAnimations().forEach(a=>a.playbackRate=0.01);})()`)
+  test('photography remains immediate with reduced motion', () => {
+    browser('open', `${origin}/photography`)
     browser('set','media','light','reduced-motion')
-    expect(evaluate<boolean>(`new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve(!document.querySelector('dialog[open]') && !document.documentElement.classList.contains('preview-open') && document.getAnimations().length===0))))`)).toBe(true)
+    browser('click','[data-photo-open]')
+    browser('press','Escape')
+    expect(evaluate<boolean>(`!document.querySelector('dialog[open]') && !document.documentElement.classList.contains('photo-open') && document.activeElement.matches('[data-photo-open]') && document.getAnimations().length===0`)).toBe(true)
   })
 
   test('navigation enhancement excludes keyboard, modified, hash and download links', () => {

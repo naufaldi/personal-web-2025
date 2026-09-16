@@ -4,7 +4,6 @@ import Document from '../layouts/Document.astro'
 import CollectionHeader from '../components/CollectionHeader.astro'
 import Photo from '../components/CollectionPhoto.astro'
 import { communityEntries, featuredCommunity, communityPhotos } from '@/data/communityCollection'
-import { collectionRoutes } from '@/data/collected'
 import { buildSeoRoutes } from '../../../scripts/seo-data'
 import '../styles/collected.css'
 import '../styles/inner-collections.css'
@@ -53,7 +52,6 @@ Conversations.`}</h2>
             {communityPhotos[entry.id] && <div class="event-gallery">{communityPhotos[entry.id].map(photo => <figure><Photo image={photo.image} alt={photo.alt} /><figcaption class="font-mono text-caption">{photo.caption}</figcaption></figure>)}</div>}
             {entry.links && Object.entries(entry.links).map(([name, href]) => <a class="editorial-link font-mono text-nav" href={href}>{name === 'website' ? (href.startsWith('https://luma.com/') ? 'Event on Luma' : 'Visit website') : name === 'x' ? 'Follow on X' : name === 'youtube' ? 'Watch on YouTube' : 'LinkedIn'} ↗</a>)}</div>
         </details>)}
-        <nav class="site-index font-mono text-nav" aria-label="Full site index">{collectionRoutes.map(item => <a href={item.href}>{item.title}</a>)}</nav>
       </section>
       <p class="sr-only" role="status" aria-live="polite" data-editorial-status></p>
     </main>

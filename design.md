@@ -96,12 +96,12 @@ Reserve image dimensions, provide responsive sources and meaningful alt text, lo
 
 | Component | Shared styling and behavior |
 | --- | --- |
-| Navigation | Transparent on paper; identity in Manrope 500, links in `font-mono text-nav`; About, Contact and Open index stay accessible |
-| Artifact and caption | Flat image, `rounded-artifact`, caption 8px below in `font-mono text-caption`; separate semantic expansion button and destination link |
-| Filter | Bare text, 44px hit area, slash separators decorative; selected item has vermilion underline and `aria-pressed`; focus remains on activation |
+| Navigation | Transparent on paper; identity in Manrope 500 and Contact on the first row; a left-aligned second row exposes Projects, Blog, Community, Books, Manhwa, Photography and About in `font-mono text-nav`. Links wrap naturally on mobile with 44px targets. Current section has a vermilion underline; exact destinations use `aria-current="page"`, detail-page parent sections use `aria-current="location"`. This is the single global menu; local archive indexes remain collection-specific. |
+| Artifact and caption | Flat image, `rounded-artifact`, caption 8px below in `font-mono text-caption`; homepage artifacts are single anchors with a primary section caption and one unique destination |
+| Archive filter | Bare text, 44px hit area, slash separators decorative; selected item has vermilion underline and `aria-pressed`; focus remains on activation |
 | Search | Visible label, ink text, secondary-ink boundary, `rounded-control`; clear/reset and honest empty results |
-| Index | Alternate readable view of the same collection data; direct links and return control; no duplicated list section underneath the collage |
-| Expansion controls | Clear Close/Back text, 44px target; Home uses named native dialogs with contained focus and stationary background; archives use inline `aria-expanded` disclosures; Escape restores focus |
+| Archive index | Alternate readable view of local collection data; homepage has no alternate index or filters, and `/#index` anchors to the collage |
+| Expansion controls | Clear Close/Back text, 44px target; Photography uses a named native dialog with contained focus, uncropped images and stationary background; homepage artifacts navigate directly; archives use inline `aria-expanded` disclosures; Escape restores focus |
 | Reading surface | Unboxed paper, `font-body text-body`, max 65ch; real headings, readable code and underline-distinguished inline links |
 
 All controls require visible focus. Use ink outline with paper separation; decorative image corner marks do not replace focus. Never nest interactive elements or depend on hover, dragging or animation for access. Keep error/empty messages understandable without red alone.
@@ -237,3 +237,25 @@ Before implementation, confirm token-table/example agreement and valid reference
 Homepage fitting: Archivo Black has wider native letterforms than the generated reference. The desktop FALDI lockup uses `clamp(5rem, 14vw, 14rem)` to keep the complete name readable beside the software artifact; this is a composition-specific override of the reusable display role. Tablet/mobile sizes reflow without stretching the font. Keyboard-triggered UI state changes are immediate.
 
 Project covers use verified screenshots where available, otherwise individual watercolor illustrations on warm paper. Keep illustration provenance separate from product screenshots. Reuse the cover across archive, index, detail, and social metadata; never bake titles or interface claims into conceptual art.
+
+### Homepage section amendment, 16 September 2026
+
+Seven original positions now represent About (portrait), Projects (Leaflet), Photography (DSCF1200), Community (community photo), Books (Clean Code), Manhwa (Solo Leveling), and Blog (Menulis untuk Membuat Sejarah with its sourced excerpt). Header labels and destinations come from `src/data/siteSections.ts`. Each artifact has one direct anchor; no homepage preview dialogs or category controls remain.
+
+Photography uses an unequal responsive composition with natural image proportions, factual captions and the collection label “6 September 2026”. Images link to optimized larger files without scripting. A native dialog enhances those links with Close, Escape, contained focus and focus restoration. Opening and closing are immediate, including reduced motion. Existing colors, fonts and composition positions remain the visual reference.
+
+### Photography board correction, 16 September 2026
+
+Photography uses a single asymmetric desktop board, matching the collection-page composition rather than a multi-row gallery. Oversized PHOTOGRAPHY type shares the grid with six unequal photographs and a small margin note. Desktop uses the available viewport height, with a 720px minimum page height for readable captions. At smaller widths and short/zoomed viewports, content can scroll rather than clip. Images retain their natural proportions using contain; larger dialog views remain uncropped. Mobile retains the unequal offsets and readable document flow.
+
+Three rejected photographs are replaced with inspected Codex Meetup Jakarta photographs; see `docs/photography-sources.md`. The collection label is now September 2026.
+
+### Fuller Photography composition
+
+The owner requested larger images and more photographs. The board now has eight photographs, with two additional inspected images from the same September 13 Codex meetup (DSCF1348 and DSCF1396). The shallow isolated slots are replaced with a denser, staggered two-row desktop composition. Desktop previews use deliberate `object-fit: cover` crops; the enlargement dialog remains uncropped. Tablet/mobile return to natural proportions. The single-screen desktop target, existing brand, oversized title and asymmetric spans remain.
+
+Photo counts are derived from the gallery length. Captions use tabular numerals and improved text wrapping. Pure-black 10% inset image outlines separate bright edges from paper; keyboard focus uses the existing ink outline. No animation or dependency was added. See `docs/verification/photography-polish.md` for the focused full review.
+
+### Photography hierarchy refinement
+
+The fuller two-row layout was still too regular. The homepage supplied the correction: one tall visual anchor, secondary images at independent heights, unequal gutters and varied caption alignment. Photography now uses the vertical Codex conversation as its large center-left anchor, with two smaller images on the left and five landscape images across staggered right-side positions. All eight photographs remain; no new assets or interactions are introduced. The title sits behind the composition, while captions and link targets remain uncovered. Tablet/mobile retain the previous natural-height flow. This supersedes the prior two-row desktop arrangement. Evidence: `docs/verification/navigation/photography-collage-*.png`.

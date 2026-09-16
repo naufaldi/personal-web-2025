@@ -13,8 +13,10 @@ describe('Astro static migration contract', () => {
     expect(home).not.toContain('<astro-island')
     expect(home).not.toContain('Connect with me')
     expect(home).toContain('href="/fonts/archivo-black-latin-400.woff2"')
-    expect(home).toContain('aria-label="Full site index"')
-    expect(home).toContain('data-filter="Software"')
+    expect(home).not.toContain('aria-label="Full site index"')
+    expect(home).not.toContain('data-filter=')
+    expect(home).not.toContain('<dialog')
+    expect(home).toContain('href="/photography"')
   })
 
   test('every published route has static content, metadata, and matching HTML alias', async () => {
@@ -48,7 +50,8 @@ describe('Astro static migration contract', () => {
     for (const html of [about, community]) {
       expect(html).not.toContain('<astro-island')
       expect(html).toContain('<details')
-      expect(html).toContain('aria-label="Full site index"')
+      expect(html).not.toContain('aria-label="Full site index"')
+      expect(html).toContain('aria-label="Primary"')
     }
   })
 
@@ -102,7 +105,8 @@ describe('Astro static migration contract', () => {
   test('404 and crawler files remain static and the SPA rewrite is gone', async () => {
     const missing = await readFile('dist/404.html', 'utf8')
     expect(missing).toContain('noindex, nofollow')
-    expect(missing).toContain('Back to the collection')
+    expect(missing).toContain('Home')
+    expect(missing).toContain('href="/projects"')
     const redirects = await readFile('dist/_redirects', 'utf8')
     expect(redirects).not.toContain('/index.html   200')
     expect(redirects).toContain('/projects.html /projects 301')

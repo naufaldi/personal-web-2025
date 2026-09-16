@@ -1,25 +1,26 @@
 import { expect, test } from 'bun:test'
 const origin=process.env.MOTION_TEST_ORIGIN??'http://127.0.0.1:4341'
+const nojsOrigin=process.env.NOJS_TEST_ORIGIN??'http://127.0.0.1:4343'
 function browser(...args:string[]) {
   const p=Bun.spawnSync(['agent-browser','--session','faldi-matrix',...args],{stdout:'pipe',stderr:'pipe'})
   if(p.exitCode)throw new Error(new TextDecoder().decode(p.stderr))
   return new TextDecoder().decode(p.stdout)
 }
 function evaluate<T>(script:string):T { return (JSON.parse(browser('eval',script,'--json')) as {data:{result:T}}).data.result }
-for(const [width,height] of [[1487,1058],[834,1112],[390,844],[320,740]]) {
+for(const [width,height] of [[1440,1058],[834,1112],[390,844],[320,740]]) {
   test(`page-family interactions ${width}`,()=>{
     browser('set','viewport',String(width),String(height))
-    for(const path of ['/','/about','/speaker','/book','/manhwa','/projects','/blogs','/projects/ts-hooks-kit','/blogs/state-management-in-reactjs']) {
+    for(const path of ['/','/photography','/about','/speaker','/book','/manhwa','/projects','/blogs','/projects/ts-hooks-kit','/blogs/state-management-in-reactjs']) {
       browser('open',origin+path)
       const errors=evaluate<string[]>(`(async()=>{
         const errors=[];const pause=ms=>new Promise(r=>setTimeout(r,ms));
         document.dispatchEvent(new KeyboardEvent('keydown',{key:'Tab',bubbles:true}));
         const check=()=>{if(document.documentElement.scrollWidth>innerWidth+1)errors.push('overflow')};
         await document.fonts.ready;check();
-        for(const trigger of document.querySelectorAll('[data-expand]')) {
-          const before=scrollY;trigger.click();const d=document.querySelector('dialog[open]');
+        for(const trigger of document.querySelectorAll('[data-photo-open]')) {
+          trigger.focus({preventScroll:true});const before=scrollY;trigger.click();const d=document.querySelector('dialog[open]');
           if(!d||!d.matches(':modal')||!d.contains(document.activeElement))errors.push('dialog focus');
-          check();d?.dispatchEvent(new Event('cancel',{cancelable:true}));
+          check();d?.close();await pause(30);
           if(scrollY!==before||document.activeElement!==trigger)errors.push('dialog restore');
         }
         const toggle=document.querySelector('[data-view-toggle],[data-index-toggle]');toggle?.click();check();
@@ -48,9 +49,31 @@ for(const [width,height] of [[1487,1058],[834,1112],[390,844],[320,740]]) {
   },120000)
 }
 
-test('native page navigation, history and homepage dialog keyboard focus',()=>{
-  browser('open',origin+'/')
-  browser('click','[data-expand="portrait"]')
+test('photography is a single desktop board with eight substantial, non-overlapping photographs',()=>{
+  for(const [width,height] of [[1440,900],[1440,720],[1280,800],[1920,1080]]) {
+    browser('set','viewport',String(width),String(height))
+    browser('open',origin+'/photography')
+    const errors=evaluate<string[]>(`(async()=>{
+      await document.fonts.ready;
+      const errors=[];const figures=[...document.querySelectorAll('[data-photo]')];
+      if(figures.length!==8)errors.push('photo count');
+      if(document.documentElement.scrollHeight>innerHeight+1)errors.push('vertical overflow');
+      if(document.documentElement.scrollWidth>innerWidth+1)errors.push('horizontal overflow');
+      const rects=figures.map(f=>f.getBoundingClientRect());
+      for(let i=0;i<rects.length;i++){
+        const r=rects[i];if(r.bottom>innerHeight||r.top<0)errors.push('outside viewport');
+        for(let j=i+1;j<rects.length;j++){const s=rects[j];if(r.left<s.right&&r.right>s.left&&r.top<s.bottom&&r.bottom>s.top)errors.push('overlap');}
+        const image=figures[i].querySelector('img').getBoundingClientRect();if(image.width<160||image.height<100)errors.push('undersized photo');
+      }
+      return errors;
+    })()`)
+    expect({width,height,errors}).toEqual({width,height,errors:[]})
+  }
+})
+
+test('native page navigation, history and photography dialog keyboard focus',()=>{
+  browser('open',origin+'/photography')
+  browser('click','[data-photo-open]')
   browser('press','Tab')
   expect(evaluate<boolean>(`document.querySelector('dialog[open]').contains(document.activeElement)`)).toBe(true)
   browser('press','Tab')
@@ -59,7 +82,7 @@ test('native page navigation, history and homepage dialog keyboard focus',()=>{
   browser('click','.collection-header nav a[href="/about"]')
   expect(browser('get','url').trim()).toBe(origin+'/about')
   browser('back')
-  expect(browser('get','url').trim()).toBe(origin+'/')
+  expect(browser('get','url').trim()).toBe(origin+'/photography')
   browser('forward')
   expect(browser('get','url').trim()).toBe(origin+'/about')
   browser('open',origin+'/about#experiences-heading')
@@ -67,8 +90,9 @@ test('native page navigation, history and homepage dialog keyboard focus',()=>{
 })
 
 test('script-blocked page families retain content and usable links',()=>{
-  for(const path of ['/','/about','/speaker','/book','/manhwa','/projects','/blogs','/projects/ts-hooks-kit','/blogs/state-management-in-reactjs']) {
-    browser('open','http://127.0.0.1:4343'+path)
+  for(const path of ['/','/photography','/about','/speaker','/book','/manhwa','/projects','/blogs','/projects/ts-hooks-kit','/blogs/state-management-in-reactjs']) {
+    browser('open',nojsOrigin+path)
+    if(path==='/photography') expect(evaluate<boolean>(`document.querySelectorAll('[data-photo-open][href$=".webp"]').length===8 && !document.querySelector('dialog[open]')`)).toBe(true)
     expect(evaluate<boolean>(`!!document.querySelector('main') && document.querySelectorAll('main a[href]').length>0 && !document.querySelector('.copy-code') && !document.querySelector('[data-expand]:not([hidden])')`)).toBe(true)
   }
 })

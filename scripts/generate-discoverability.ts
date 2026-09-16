@@ -338,6 +338,7 @@ Important notes:
 - [Projects](${SITE_URL}/projects): Curated project catalog.
 - [Blog index](${SITE_URL}/blogs): Technical writing and personal essays.
 - [Speaker & mentor](${SITE_URL}/speaker): Speaking and mentoring work.
+- [Photography](${SITE_URL}/photography): Photographs by Naufaldi, everyday moments and Codex Meetup Jakarta.
 
 ## Key facts
 
@@ -451,6 +452,7 @@ ${SITE_FULL_NAME}, also known as ${siteConfig.name}, is a software engineer and 
 - ${SITE_URL}/speaker
 - ${SITE_URL}/book
 - ${SITE_URL}/manhwa
+- ${SITE_URL}/photography
 
 ## Work experience highlights
 

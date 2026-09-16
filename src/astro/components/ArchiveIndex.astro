@@ -1,7 +1,6 @@
 ---
 import Photo from './CollectionPhoto.astro'
 import type { ArchiveEntry } from '@/data/archive'
-import { collectionRoutes } from '@/data/collected'
 interface Props { entries: ArchiveEntry[]; title: string }
 const { entries, title } = Astro.props
 ---
@@ -13,5 +12,4 @@ const { entries, title } = Astro.props
     <div><p class="font-mono text-caption">{entry.meta}</p>{entry.description && <p class="text-body">{entry.description}</p>}{entry.tags && <p class="font-mono text-caption">{entry.tags.join(' · ')}</p>}
     {entry.href && <a class="editorial-link font-mono text-nav" href={entry.href}>Read {title === 'Projects' ? 'project' : 'article'} ↗</a>}</div>
   </details>)}
-  <nav class="site-index font-mono text-nav" aria-label="Full site index">{collectionRoutes.map(item => <a href={item.href}>{item.title}</a>)}</nav>
 </section>

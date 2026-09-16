@@ -1,0 +1,39 @@
+---
+import { Image, getImage } from 'astro:assets'
+import Document from '@/astro/layouts/Document.astro'
+import CollectionHeader from '@/astro/components/CollectionHeader.astro'
+import { photographs } from '@/data/photography'
+import { buildSeoRoutes } from '../../../scripts/seo-data'
+import '@/astro/styles/collected.css'
+import '@/astro/styles/photography.css'
+const { routes } = await buildSeoRoutes()
+const route = routes.find(route => route.path === '/photography')!
+const photos = await Promise.all(photographs.map(async photo => ({ ...photo, large: await getImage({ src: photo.image, format: 'webp', quality: 88 }) })))
+---
+<Document route={route} collection>
+  <a class="skip-link font-mono text-nav" href="#photography">Skip to photographs</a>
+  <div class="collection-layout photography-layout">
+    <CollectionHeader />
+    <main id="photography" tabindex="-1">
+      <div class="photography-grid">
+        <h1 class="photography-title font-display">PHOTOGRAPHY</h1>
+        <p class="photography-note font-mono text-caption"><span class="text-vermilion">SEPTEMBER 2026</span><br />Everyday moments &amp; Codex Jakarta <span class="photography-hint">Select a photograph for a closer look.</span></p>
+        {photos.map((photo, index) => <figure class="photograph" data-photo={photo.id}>
+          <a href={photo.large.src} data-photo-open aria-label={`Enlarge: ${photo.caption}`}>
+            <div class="media-frame">
+              <Image src={photo.image} widths={[400, 800, 1200, 1600]} sizes="(min-width: 1024px) 32vw, (min-width: 768px) 50vw, 100vw" format="webp" quality={85} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" alt={photo.alt} />
+              <span class="media-unavailable" hidden>Image unavailable</span>
+            </div>
+          </a>
+          <figcaption class="font-mono text-caption"><span class="text-vermilion">{String(index + 1).padStart(2, '0')} / {String(photos.length).padStart(2, '0')}</span><p>{photo.caption}</p></figcaption>
+        </figure>)}
+      </div>
+      <dialog class="photo-dialog" aria-labelledby="photo-caption">
+        <button class="photo-close font-mono text-nav" type="button" autofocus>Close</button>
+        <div class="media-frame"><img alt="" width="2400" height="1600" /><span class="media-unavailable" hidden>Image unavailable</span></div>
+        <p id="photo-caption" class="font-mono text-caption"></p>
+      </dialog>
+    </main>
+  </div>
+  <script>import '@/astro/scripts/photography'</script>
+</Document>

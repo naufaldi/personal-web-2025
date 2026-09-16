@@ -126,6 +126,13 @@ export const STATIC_ROUTES: StaticRouteMeta[] = [
     priority: 0.5,
   },
   {
+    path: '/photography',
+    title: `Photography – ${SITE_NAME}`,
+    description: 'Photographs by Naufaldi Rafif Satriya, featuring everyday moments and Codex Meetup Jakarta.',
+    changefreq: 'monthly',
+    priority: 0.5,
+  },
+  {
     path: '/manhwa',
     title: `Manhwa – ${SITE_NAME}`,
     description: 'Personal manhwa reading list and recommendations.',

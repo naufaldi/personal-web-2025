@@ -3,7 +3,6 @@ import Document from './Document.astro'
 import Header from '../components/CollectionHeader.astro'
 import Photo from '../components/CollectionPhoto.astro'
 import { renderReading } from '../lib/reading'
-import { collectionRoutes } from '@/data/collected'
 import type { SeoRoute } from '@/lib/seo'
 import type { ImageMetadata } from 'astro'
 import readingArtwork from '@/assets/project-covers/reading-list.png'
@@ -41,7 +40,6 @@ const readingRoute = cover ? { ...route, image: cover.src } : route
       <article id="reading-content" class="reading-prose" tabindex="-1" set:html={html} />
       <nav class="reading-end font-mono text-nav" aria-label="Reading navigation"><a class="editorial-link" href={back}>← All {project ? 'projects' : 'writing'}</a><a class="editorial-link" href="#">Back to top ↑</a></nav>
     </main>
-    <nav class="site-index font-mono text-nav" aria-label="Full site index">{collectionRoutes.map(item => <a href={item.href}>{item.title}</a>)}</nav>
   </div>
   <script>import '../scripts/reading'</script>
 </Document>

@@ -198,3 +198,56 @@ The native `/speaker` collection now draws richer Luma event records from `src/d
 ### Illustrated recovery states
 
 `EmptyState.astro` supplies the shared collection/search recovery markup. `editorial.ts` distinguishes zero featured artifacts from zero matching records, and exposes an accessible reset action. The native 404 and media-error fallbacks use generated watercolor assets under `public/images/states/`. `states.css` centralizes their presentation. Static routing and existing source content are preserved.
+
+### Visible section navigation, 16 September 2026
+
+The homepage now reuses `CollectionHeader.astro`. Identity and Contact occupy the first row; Projects, Blog, Events & Community, Books, Manhwa and About occupy a second row across every page family. Native links work without scripts and wrap on narrow screens. Exact section pages use `aria-current="page"`; project/article details use `aria-current="location"` on the parent section. Navigation labels do not rename editorial headings or URLs. Existing images, crops, content, collection controls and motion behavior are unchanged.
+
+`bun run build` passed with 111 pages, 109 aliases, zero errors/warnings and 14 existing hints. The migration, motion and interaction suites passed 27 tests and 1,218 assertions. The first run had one dialog geometry/focus failure; both its isolated rerun and the complete subsequent suite passed, without changes to dialog implementation or assertions. The transient failure's cause was not established.
+
+Browser verification used the local agent-browser CLI and this checkout's production preview at port 4341. All six links, Home, Contact's mailto target, keyboard focus/Enter, exact/parent active states and reduced-motion navigation passed. Script-blocked navigation passed using this checkout at port 4347. The no-script fixture now accepts `NOJS_TEST_PORT`; the interaction suite accepts `NOJS_TEST_ORIGIN`, preserving the existing defaults because port 4343 was serving another worktree.
+
+Before/after capture covered ten routes at 320, 390, 834 and 1440 CSS pixels. None overflowed horizontally, and header links met 44px minimum targets. Across 316 visible headings, images and artifact/figure boxes, content and sources matched; geometry relative to main content differed by at most 0.391px. The header adds 56px at tablet/desktop, 100px at 390px and 107px at 320px. Representative evidence: [desktop before](verification/navigation/home-desktop-before.png), [desktop after](verification/navigation/home-desktop-after.png), [mobile before](verification/navigation/home-mobile-before.png), [mobile after](verification/navigation/home-mobile-after.png). Reference PNGs and production artwork remain untouched. Physical-device touch, native browser zoom, Safari and deployment were not verified.
+
+Verification commands:
+
+```sh
+bun run build
+NOJS_TEST_PORT=4347 bun run scripts/serve-nojs.ts
+NOJS_TEST_ORIGIN=http://127.0.0.1:4347 bun test tests/migration.test.ts tests/motion.browser.test.ts tests/interaction-matrix.browser.test.ts
+```
+
+## One purpose per artifact and Photography, 16 September 2026
+
+This supersedes the earlier homepage filter/index/preview behavior and the navigation amendment’s promise to retain it. The top header is the only full-site menu. Homepage artifacts directly link to seven distinct destinations using shared section records. Local archive filters/indexes, reading contents and back links remain. `/#index` is an ordinary anchor to the homepage collage; 404 offers Home and Projects.
+
+Native `/photography` adds six approved local photographs, responsive derivatives and progressive image enlargement. Source provenance and processing are in [photography-sources.md](photography-sources.md). Both SEO inventories include the new route; build output creates `/photography.html` compatibility alias and crawler entries. There are no new dependencies, React islands, remote runtime image requests or deployments.
+
+Responsive screenshots: `docs/verification/navigation/sections-{1440,834,390,320}.png` and `photography-{1440,834,390,320}.png`. Earlier navigation before/after screenshots remain for comparison. Content substitutions are intentional; paper, display type, original collage placement, portrait/project/community crops and asymmetric spacing remain.
+
+Verification for the section/Photography amendment:
+- `bun run build` passes (112 static pages, 110 compatibility aliases; existing deprecated-icon warnings remain).
+- `NOJS_TEST_ORIGIN=http://127.0.0.1:4347 bun test tests/migration.test.ts tests/motion.browser.test.ts tests/interaction-matrix.browser.test.ts`: 28 pass, 0 fail, 1,238 assertions.
+- Agent-browser checks cover 1440, 834, 390 and 320px, all six photo dialogs, contained Tab focus, Escape/focus restoration, image failures/recovery, reduced motion, and script-blocked pages.
+- Separate keyboard navigation checks followed all seven homepage destinations in normal and script-blocked browsers, checked exact/parent active states, Home, Contact target and the no-JS larger-image link. A real pointer click from the homepage to About also passed. One rapid automated pointer-navigation run timed out; keyboard traversal and the settled pointer check passed.
+- Published photography derivatives were checked for stripped EXIF/XMP. Responsive screenshots were inspected for natural proportions, wrapping, unchanged brand and unequal placement.
+
+## Photography board correction
+
+User feedback supersedes the initial multi-row Photography composition. The page now has one desktop board: title, margin note and six images share the 12-column grid. A flex page wrapper gives the board the remaining viewport height; a 720px minimum preserves readable content on unusually short screens. Tablet/mobile switch to natural-height flow. No content is hidden to enforce screen fit, and dialog behavior is unchanged.
+
+Replaced Together, in the frame; A closer look at lunch; and Light, shadow, and a parked car with three inspected images from Codex Meetup Jakarta, 13 September 2026. The metadata and board label cover both September collections. Responsive evidence is stored in `docs/verification/navigation/photography-board-*.png`; prior gallery captures remain historical references.
+
+Board correction verification: `bun run build` passes; migration, motion and interaction suites pass with 29 tests and 1,242 assertions. The added desktop contract checks all six figures remain uncropped, non-overlapping and within 1440×900, 1440×720, 1280×800 and 1920×1080 viewports. Existing 834/390/320px checks, no-JS image links, image-error handling, keyboard focus, Escape and reduced-motion checks pass. Replacement assets contain no EXIF/XMP metadata.
+
+### Fuller Photography composition
+
+The owner requested larger images and more photographs. The board now has eight photographs, with two additional inspected images from the same September 13 Codex meetup (DSCF1348 and DSCF1396). The shallow isolated slots are replaced with a denser, staggered two-row desktop composition. Desktop previews use deliberate `object-fit: cover` crops; the enlargement dialog remains uncropped. Tablet/mobile return to natural proportions. The single-screen desktop target, existing brand, oversized title and asymmetric spans remain.
+
+Photo counts are derived from the gallery length. Captions use tabular numerals and improved text wrapping. Pure-black 10% inset image outlines separate bright edges from paper; keyboard focus uses the existing ink outline. No animation or dependency was added. See `docs/verification/photography-polish.md` for the focused full review.
+
+Eight-photo polish verification: build passes; 29 tests pass with 1,242 assertions. All eight dialogs, script-disabled links, image-error recovery and desktop minimum frame dimensions are covered. Responsive captures: `docs/verification/navigation/photography-eight-*.png`.
+
+### Photography hierarchy refinement
+
+The fuller two-row layout was still too regular. The homepage supplied the correction: one tall visual anchor, secondary images at independent heights, unequal gutters and varied caption alignment. Photography now uses the vertical Codex conversation as its large center-left anchor, with two smaller images on the left and five landscape images across staggered right-side positions. All eight photographs remain; no new assets or interactions are introduced. The title sits behind the composition, while captions and link targets remain uncovered. Tablet/mobile retain the previous natural-height flow. This supersedes the prior two-row desktop arrangement. Evidence: `docs/verification/navigation/photography-collage-*.png`.

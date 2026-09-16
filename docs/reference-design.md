@@ -41,6 +41,12 @@ Use [Astro detail route](../src/astro/pages/[...path].astro) as the route baseli
 
 ## Collection and detail interaction
 
+### Visible site navigation
+
+The shared header now reserves a second, left-aligned row for Projects, Blog, Events & Community, Books, Manhwa and About, beneath identity and Contact. These ordinary links remain available across homepage, archives, reading pages and 404, including without scripts. Mobile wraps the links in normal flow. Blog points to `/blogs` and Events & Community to `/speaker`; editorial page titles remain unchanged. The current section uses the design system's vermilion underline. Collection filters and Open index keep their existing behavior.
+
+This navigation amendment supersedes the minimal About/Contact header in the reference images. Preserve all original reference PNGs, imagery, crops, typography and relative artifact placement; the additional header height moves each composition down without rearranging it.
+
 Use one typed collection source with stable IDs and derive filtered/index views from it. An artifact needs category, title, image dimensions/alt text, source/permission record, crop focal point, context and destination when available. Do not introduce a CMS or new backend just to support this collection.
 
 | State | Required behavior |
@@ -92,3 +98,19 @@ About and In Good Company (`/speaker`) now also use native Astro compositions wi
 ## Selected detail revision
 
 The [v3 detail studies](reference/detail-studies/README.md) now guide project and article pages. Project pages pair the actual project cover with context and resource links. Articles use the shared reading watercolor beside the title. Both retain a visible desktop contents rail, a narrow unboxed body and full-width bottom navigation. Contents collapse on compact screens after script initialization and remain available without JavaScript. Keep all source Markdown, including content omitted by the generated mockups.
+
+## Approved section mapping amendment, 16 September 2026
+
+The seven-position homepage reference now uses one destination per artifact: About, Projects, Photography, Community, Books, Manhwa and Blog. See `design.md` for the exact mapping. This supersedes category captions and preview/filter behavior in earlier references. The top header is the single full-site navigation; Photography follows the same paper, typography and unequal composition language with uncropped photo proportions. Original reference PNGs are unchanged.
+
+Photography correction: use the existing collection-board language (oversized title sharing an asymmetric grid with images), not the earlier long photo gallery. Desktop fits one screen at normal viewport heights; mobile reflows. The current six-shot selection includes three Codex Meetup Jakarta photographs. See `design.md` and `docs/photography-sources.md`.
+
+### Fuller Photography composition
+
+The owner requested larger images and more photographs. The board now has eight photographs, with two additional inspected images from the same September 13 Codex meetup (DSCF1348 and DSCF1396). The shallow isolated slots are replaced with a denser, staggered two-row desktop composition. Desktop previews use deliberate `object-fit: cover` crops; the enlargement dialog remains uncropped. Tablet/mobile return to natural proportions. The single-screen desktop target, existing brand, oversized title and asymmetric spans remain.
+
+Photo counts are derived from the gallery length. Captions use tabular numerals and improved text wrapping. Pure-black 10% inset image outlines separate bright edges from paper; keyboard focus uses the existing ink outline. No animation or dependency was added. See `docs/verification/photography-polish.md` for the focused full review.
+
+### Photography hierarchy refinement
+
+The fuller two-row layout was still too regular. The homepage supplied the correction: one tall visual anchor, secondary images at independent heights, unequal gutters and varied caption alignment. Photography now uses the vertical Codex conversation as its large center-left anchor, with two smaller images on the left and five landscape images across staggered right-side positions. All eight photographs remain; no new assets or interactions are introduced. The title sits behind the composition, while captions and link targets remain uncovered. Tablet/mobile retain the previous natural-height flow. This supersedes the prior two-row desktop arrangement. Evidence: `docs/verification/navigation/photography-collage-*.png`.

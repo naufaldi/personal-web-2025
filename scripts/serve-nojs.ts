@@ -1,7 +1,7 @@
 // Local verification fixture: serve the production build with all scripts blocked.
 const root = new URL('../dist/', import.meta.url).pathname
 Bun.serve({
-  hostname: '127.0.0.1', port: 4343,
+  hostname: '127.0.0.1', port: Number(process.env.NOJS_TEST_PORT ?? 4343),
   async fetch(request) {
     const path = decodeURIComponent(new URL(request.url).pathname)
     if (path.includes('..')) return new Response('', { status: 400 })

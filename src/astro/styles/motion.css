@@ -14,7 +14,7 @@ html[data-input=pointer] :is(button, .editorial-link):active { transform: scale(
 @media (hover:hover) and (pointer:fine) {
  html:not([data-input=keyboard]) :is(.artifact-face, .archive-face, .company-board figure > a) { transition: transform 140ms var(--motion-ease); }
  html:not([data-input=keyboard]) :is(.archive-face, .company-board figure > a):hover,
- html:not([data-input=keyboard]) .artifact-face:has(.artifact-open:hover) { transform: translateY(-3px); }
+ html:not([data-input=keyboard]) .artifact-link:hover .artifact-face { transform: translateY(-3px); }
 }
 html[data-input=keyboard] :is(.artifact-face, .archive-face, .company-board figure > a, button, .editorial-link) { transition: none; transform: none; }
 @media (prefers-reduced-motion: reduce) {

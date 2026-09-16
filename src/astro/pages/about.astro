@@ -4,7 +4,6 @@ import CollectionHeader from '../components/CollectionHeader.astro'
 import Photo from '../components/CollectionPhoto.astro'
 import { aboutBio, techStack } from '@/data/about'
 import { workExperiences } from '@/data/experience'
-import { collectionRoutes } from '@/data/collected'
 import portrait from '@/assets/collected/portrait.jpg'
 import workspace from '@/assets/collected/workspace.jpg'
 import community from '@/assets/collected/community.jpg'
@@ -40,7 +39,6 @@ const route = routes.find(route => route.path === '/about')!
         <h2 id="about-index-heading" class="font-display text-reading-title" tabindex="-1">A little more about me.</h2>
         <p class="text-body reading-copy">{aboutBio.bioParagraphs[2]}</p>
         <p class="font-mono text-caption">Working with / {techStack.map(item => item.name).join(' · ')}</p>
-        <nav class="site-index font-mono text-nav" aria-label="Full site index">{collectionRoutes.map(item => <a href={item.href}>{item.title}</a>)}</nav>
       </section>
       <details id="experiences-heading" class="career-record" data-record>
         <summary class="font-body text-heading">Experience <span class="font-mono text-caption">2018 → now</span></summary>

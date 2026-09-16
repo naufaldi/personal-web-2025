@@ -120,6 +120,17 @@ const staticRoutes: SeoRoute[] = [
     kind: 'page',
   },
   {
+    path: '/photography',
+    title: 'Photography - Naufaldi Rafif Satriya',
+    description: 'Photographs by Naufaldi Rafif Satriya. Everyday moments and Codex Meetup Jakarta, September 2026.',
+    canonicalUrl: `${SITE_URL}/photography`,
+    lastmod: GENERATED_TODAY,
+    priority: 0.5,
+    changefreq: 'monthly',
+    image: DEFAULT_IMAGE,
+    kind: 'page',
+  },
+  {
     path: '/manhwa',
     title: 'Manhwa - Naufaldi Rafif Satriya',
     description:

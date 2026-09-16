@@ -1,7 +1,16 @@
 ---
 import { siteConfig } from '@/data/site'
+import { siteSections as sections } from '@/data/siteSections'
+const pathname = Astro.url.pathname.replace(/\/$/, '')
+const currentSection = (href: string): 'page' | 'location' | undefined =>
+  pathname === href ? 'page' : pathname.startsWith(`${href}/`) ? 'location' : undefined
 ---
 <header class="collection-header">
-  <a class="identity" href="/"><span>Naufaldi Rafif Satriya</span><span class="font-mono text-caption">Software engineer & curious observer</span></a>
-  <nav aria-label="Primary" class="font-mono text-nav"><a href="/about" aria-current={Astro.url.pathname === '/about' ? 'page' : undefined}>About</a><a href={siteConfig.socialLinks.email}>Contact</a></nav>
+  <div class="collection-identity-row">
+    <a class="identity" href="/" aria-label="Naufaldi Rafif Satriya, home"><span>Naufaldi Rafif Satriya</span><span class="font-mono text-caption">Software engineer & curious observer</span></a>
+    <a class="collection-contact font-mono text-nav" href={siteConfig.socialLinks.email}>Contact</a>
+  </div>
+  <nav aria-label="Primary" class="font-mono text-nav">
+    {sections.map(section => <a href={section.href} aria-current={currentSection(section.href)}>{section.title}</a>)}
+  </nav>
 </header>
