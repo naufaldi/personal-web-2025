@@ -251,3 +251,41 @@ Eight-photo polish verification: build passes; 29 tests pass with 1,242 assertio
 ### Photography hierarchy refinement
 
 The fuller two-row layout was still too regular. The homepage supplied the correction: one tall visual anchor, secondary images at independent heights, unequal gutters and varied caption alignment. Photography now uses the vertical Codex conversation as its large center-left anchor, with two smaller images on the left and five landscape images across staggered right-side positions. All eight photographs remain; no new assets or interactions are introduced. The title sits behind the composition, while captions and link targets remain uncovered. Tablet/mobile retain the previous natural-height flow. This supersedes the prior two-row desktop arrangement. Evidence: `docs/verification/navigation/photography-collage-*.png`.
+
+
+## Homepage motion selection, 16 September 2026
+
+Selected C after comparing the local motion prototype: 380ms scale/fade entrance with 55ms stagger, 600ms gentle lift/zoom hover, 320ms animated underline and 280ms color transition. The regular homepage now applies this treatment without query parameters or a switcher. Other collection pages retain their existing motion.
+
+The comparison and decision are preserved on local branch `prototype/homepage-motion-20260916-140027` at `73a8b5aadf93b6ad15405e06240517b232c79f92`. Run that branch with `bun run dev` and compare `/?variant=A|B|C`. No prototype assets remain in the active implementation.
+
+Entrances target only initially visible title/cards and leave underlying HTML visible. Keyboard input, reduced-motion changes and page exit settle running entrances. History and hash arrivals remain immediate. Pointer arrivals into collections use the same C entrance as direct loads; the native root transition yields to the artifact entrance. Keyboard arrivals remain immediate. Header link labels are rendered in HTML so underlines also work without JavaScript. Hover/press transforms stay on the inner surface, separate from outer entrance transforms.
+
+Verification: `bun run build` passed with 112 pages and 110 HTML aliases. `MOTION_TEST_ORIGIN=http://127.0.0.1:4351 bun test tests/migration.test.ts tests/motion.browser.test.ts` passed all 22 tests (1,181 assertions). Agent-browser checked the production homepage at 1440/834/390/320px, computed hover/underline timing, keyboard settling, reduced motion, and script-blocked static content at port 4352. No horizontal overflow or prototype controls remained. No push or deployment was performed.
+
+
+## Shared viewport shell and collection motion, 16 September 2026
+
+The desktop shell now fits the viewport at 1024px and wider, with one scrolling main region and a stationary header. Collection boards use their remaining height after search and controls; mobile retains document flow. Short desktop heights retain a scrolling fallback. This supersedes the earlier fixed board minimum heights and homepage-only C motion scope.
+
+C entrance/hover/underline behavior is shared by native collection pages through the document's existing PageMotion entrypoint. Entrances wait for collection controllers, animate only visible board artifacts, and settle on keyboard, focus, input, pointer interaction, reduced motion, and page exit. Reading/disclosure/filter timings remain separate. Scroll restoration merges into each history entry, and reading section tracking follows the actual desktop scroll owner.
+
+`/experience` renders all six work records from the existing data source with static metadata, discoverability entries, and an HTML alias. About retains its profile/index and links to Experience. Its legacy experience hash works on initial arrival and same-document hash changes; script-disabled pages retain an ordinary link. The navigation treats Experience as a child of About.
+
+Verification: the completed production build passed (113 pages, 111 aliases). The migration, motion, interaction matrix, and viewport browser suites passed 35 tests with 1,295 assertions. The viewport suite covers every collection at 1440×900, 1280×720, and 1024×768, including text/caption containment; reading-region scroll, hash links, and history restoration; Experience compatibility; mobile widths; and short desktop fallback. The interaction suite covers 834/390/320px, filters, search, dialogs, keyboard, image failures, and script-blocked pages. Print-media inspection confirmed natural overflow and expanded disclosure content. Browser coverage is local Chromium; no physical-device, Safari, or native browser-zoom claim is made. No push or deployment was performed.
+
+### Collection entrance navigation correction
+
+Collection navigation previously skipped C and fell back to the older 220ms whole-page slide. PageMotion now hands pointer arrivals to the shared entrance controller, which runs once with the original 380ms scale/fade, 55ms stagger, and ease-out curve. Keyboard, reduced-motion, history, and hash arrivals stay immediate. Browser regression coverage records actual animation calls across native document navigation rather than only checking CSS timing values.
+
+Verification of this correction: `bun run build` passed; the four existing migration/motion/interaction/viewport suites passed 35 tests (1,295 assertions). The new collection-entrance browser regression passed on both development and production preview, adding one test (263 assertions) for real pointer navigation across all seven destination collections, direct homepage arrival, keyboard, Back, hashes, and reduced motion.
+
+### Exit-to-entrance handoff correction
+
+Skipping the native transition before scheduling C exposed the completed incoming page for one frame. Collection arrivals now apply a CSS first-frame guard during `pagereveal` and prepare C with its exit promise, keep the outgoing 140ms snapshot fade, and play the prepared entrances after its `finished` promise resolves. The incoming root snapshot remains transparent. Navigation is never delayed or intercepted; keyboard/reduced-motion cancellation also clears prepared animations. The browser regression checks the native exit, transparent incoming snapshot, and prepared C artifacts at transition readiness. A 1.5-second fallback removes the first-frame guard if the module fails to load; reduced motion overrides it immediately.
+
+Handoff verification: production build and all 36 tests passed. The strengthened entrance regression also passed separately with 291 assertions, including computed title opacity zero at transition readiness across every collection destination.
+
+### Matched zoom exit and entrance
+
+Pointer navigation now uses a shared 220ms outgoing scale from 1 to .96 with opacity 1 to 0 and reversed C easing. Collections then play their existing 380ms C entrance with 55ms artifact stagger. Reading and Experience destinations use a 380ms native scale/fade entrance delayed until the exit completes. The header remains stationary; keyboard, reduced motion, and history exclusions remain unchanged. Navigation is not intercepted or delayed.
