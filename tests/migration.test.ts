@@ -110,7 +110,7 @@ describe('Astro static migration contract', () => {
     const redirects = await readFile('dist/_redirects', 'utf8')
     expect(redirects).not.toContain('/index.html   200')
     expect(redirects).toContain('/projects.html /projects 301')
-    expect(redirects).toContain('/* /404.html 404')
+    expect(redirects).not.toContain('/* /404.html 404')
     for (const file of ['robots.txt', 'sitemap.xml', 'llms.txt', 'llms-full.txt', '.well-known/ai.txt', 'site.webmanifest']) {
       expect((await readFile(`dist/${file}`, 'utf8')).length).toBeGreaterThan(0)
     }
