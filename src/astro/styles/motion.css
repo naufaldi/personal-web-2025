@@ -3,11 +3,13 @@
 ::view-transition-group(identity-header) { animation: none; }
 ::view-transition-old(identity-header) { animation: none; opacity: 0; }
 ::view-transition-new(identity-header) { animation: none; }
-::view-transition-old(root) { animation: page-out 140ms cubic-bezier(.23,1,.32,1) both; }
-::view-transition-new(root) { animation: page-in 220ms cubic-bezier(.23,1,.32,1) both; }
+::view-transition-group(root) { animation: none; }
+::view-transition-old(root) { animation: page-out 220ms cubic-bezier(.68,0,.77,0) both; }
+::view-transition-new(root) { animation: page-in 380ms cubic-bezier(.23,1,.32,1) 220ms both; }
+html[data-collection-arrival=pointer]::view-transition-new(root) { animation: none; opacity: 0; }
 ::view-transition { pointer-events: none; }
-@keyframes page-out { to { opacity: 0; } }
-@keyframes page-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes page-out { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(.96); } }
+@keyframes page-in { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: scale(1); } }
 html { background: #f5f3ed; }
 html[data-input=pointer] :is(button, .editorial-link) { transition: transform 140ms var(--motion-ease); }
 html[data-input=pointer] :is(button, .editorial-link):active { transform: scale(.98); transition-duration: 100ms; }
@@ -20,4 +22,9 @@ html[data-input=keyboard] :is(.artifact-face, .archive-face, .company-board figu
 @media (prefers-reduced-motion: reduce) {
  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
  html :is(.artifact-face, .archive-face, .company-board figure > a, button, .editorial-link) { transition: none !important; transform: none !important; }
+}
+
+html[data-collection-pending] :is(.collection-title, [data-artifact], [data-board] > h1, [data-board] > article, [data-board] > figure, [data-board] > a, .photography-title, .photograph) { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+ html[data-collection-pending] :is(.collection-title, [data-artifact], [data-board] > h1, [data-board] > article, [data-board] > figure, [data-board] > a, .photography-title, .photograph) { opacity: 1; }
 }

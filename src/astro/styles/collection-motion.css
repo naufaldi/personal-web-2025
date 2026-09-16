@@ -1,0 +1,47 @@
+html[data-collection-site] {
+  --collection-hover: 600ms;
+  --collection-color: 280ms;
+  --collection-underline: 320ms;
+}
+html[data-collection-site] .collection-layout :is(.archive-face, .company-board figure > a) {
+  transform: none;
+  transition: none;
+}
+html[data-collection-site] .collection-layout :is(.artifact-face, .archive-face > .media-frame, .writing-photo > .media-frame, .editorial-board figure > a > .media-frame, .photograph > a > .media-frame) {
+  transition: transform var(--collection-hover) ease;
+}
+html[data-collection-site] .collection-layout :is(.artifact-caption, .archive-caption, .collection-header nav a, .collection-contact, .editorial-link) { transition: color var(--collection-color) ease; }
+html[data-collection-site] .artifact-link { display: block; }
+html[data-collection-site] :is(.artifact-link, .collection-header a, .archive-caption a, .editorial-link, .writing-copy h2 a, .editorial-controls a, figcaption a):hover { text-decoration: none; }
+html[data-collection-site] :is(.collection-link-label, .artifact-caption strong, .identity > span:first-child, .archive-caption a, .editorial-link, .writing-copy h2 a, .editorial-controls a, figcaption a) { position: relative; }
+html[data-collection-site] :is(.collection-link-label, .artifact-caption strong, .identity > span:first-child) { display: inline-block; }
+html[data-collection-site] :is(.collection-link-label, .artifact-caption strong, .identity > span:first-child, .archive-caption a, .editorial-link, .writing-copy h2 a, .editorial-controls a, figcaption a)::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -4px; height: 1px;
+  background: currentColor; transform: scaleX(0); transform-origin: left;
+  transition: transform var(--collection-underline) ease; pointer-events: none;
+}
+html[data-collection-site] .editorial-link { text-decoration: none; }
+@media (hover: hover) and (pointer: fine) {
+  html[data-collection-site]:not([data-input=keyboard]) .collection-layout .artifact-link:hover .artifact-face:has(.media-frame),
+  html[data-collection-site]:not([data-input=keyboard]) .collection-layout :is(.archive-face, .writing-photo, .editorial-board figure > a, .photograph > a):hover > .media-frame { transform: translateY(-6px) scale(1.02); }
+  html[data-collection-site] .artifact-link:hover .artifact-caption,
+  html[data-collection-site] :is(.archive-caption a, .editorial-link, .collection-header nav a, .collection-contact):hover { color: var(--color-vermilion); }
+  html[data-collection-site] .collection-header a:hover :is(.collection-link-label, span:first-child)::after,
+  html[data-collection-site] .artifact-link:hover .artifact-caption strong::after,
+  html[data-collection-site] :is(.archive-caption a, .editorial-link, .writing-copy h2 a, .editorial-controls a, figcaption a):hover::after { transform: scaleX(1); }
+}
+html[data-collection-site][data-input=pointer] .collection-layout .artifact-link:active .artifact-face,
+html[data-collection-site][data-input=pointer] .collection-layout :is(.archive-face, .writing-photo, .editorial-board figure > a, .photograph > a):active > .media-frame { transform: scale(.98); transition-duration: 100ms; }
+html[data-collection-site] .collection-header a:focus-visible :is(.collection-link-label, span:first-child)::after,
+html[data-collection-site] .artifact-link:focus-visible .artifact-caption strong::after,
+html[data-collection-site] :is(.archive-caption a, .editorial-link, .writing-copy h2 a, .editorial-controls a, figcaption a):focus-visible::after { transform: scaleX(1); transition: none; }
+html[data-collection-site][data-input=keyboard] .collection-layout :is(.artifact-face, .archive-face > .media-frame, .writing-photo > .media-frame, .editorial-board figure > a > .media-frame, .photograph > a > .media-frame) { transform: none; transition: none; }
+html[data-collection-site][data-input=keyboard] .collection-layout :is(.artifact-caption, .archive-caption, .editorial-link, .collection-header a),
+html[data-collection-site][data-input=keyboard] :is(.collection-link-label, .artifact-caption strong, .identity > span:first-child, .archive-caption a, .editorial-link, .writing-copy h2 a, .editorial-controls a, figcaption a)::after { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  html[data-collection-site] .collection-layout :is(.artifact-face, .archive-face > .media-frame, .writing-photo > .media-frame, .editorial-board figure > a > .media-frame, .photograph > a > .media-frame) { transform: none !important; transition: none !important; }
+  html[data-collection-site] .collection-layout a::after, html[data-collection-site] .collection-layout a ::after { transition: none !important; }
+}
+
+html[data-collection-site] .collection-header a[aria-current] { text-decoration: none; }
+html[data-collection-site] .collection-header a[aria-current] .collection-link-label::after { transform: scaleX(1); background: var(--color-vermilion); }

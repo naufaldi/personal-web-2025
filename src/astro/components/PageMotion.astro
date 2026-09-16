@@ -20,7 +20,7 @@ import '../styles/motion.css'
     if (url.origin !== location.origin || (url.pathname === location.pathname && url.search === location.search)) return
     target = url.href
   })
-  document.addEventListener('keydown', () => { target = null; clear(); activeTransition?.skipTransition() }, { capture: true })
+  document.addEventListener('keydown', () => { document.documentElement.dataset.input = 'keyboard'; delete document.documentElement.dataset.collectionPending; target = null; clear(); activeTransition?.skipTransition() }, { capture: true })
   addEventListener('pageswap', event => {
     activeTransition = event.viewTransition
     event.viewTransition?.ready.catch(() => {})
@@ -37,10 +37,18 @@ import '../styles/motion.css'
     try { intent = JSON.parse(sessionStorage.getItem(key) || 'null') } catch {}
     clear()
     const navigation = performance.getEntriesByType('navigation')[0]
-    if (!intent || intent.url !== location.href || Date.now() - intent.time > 10000 || navigation?.type !== 'navigate' || reduced.matches) event.viewTransition?.skipTransition()
+    const allowed = intent && intent.url === location.href && Date.now() - intent.time <= 10000 && navigation?.type === 'navigate' && !reduced.matches
+    if (!allowed) { event.viewTransition?.skipTransition(); return }
+    if (!location.hash && document.querySelector('.collection-canvas, [data-board], .photography-grid')) {
+      document.documentElement.dataset.collectionArrival = 'pointer'
+      document.documentElement.dataset.collectionPending = ''
+      window.collectionExit = event.viewTransition?.finished
+      setTimeout(() => { delete document.documentElement.dataset.collectionPending }, 1500)
+      document.dispatchEvent(new CustomEvent('collection:enter', { detail: event.viewTransition?.finished }))
+    }
   })
   reduced.addEventListener('change', () => { if (reduced.matches) { target = null; clear(); activeTransition?.skipTransition() } })
   addEventListener('pageshow', event => { target = null; if (event.persisted) clear() })
 })()
 </script>
-<script>import '@/astro/scripts/motion'; import '@/astro/scripts/viewport'</script>
+<script>import '@/astro/scripts/motion'; import '@/astro/scripts/viewport'; import '@/astro/scripts/collection-motion'</script>

@@ -8,9 +8,9 @@ const currentSection = (href: string): 'page' | 'location' | undefined =>
 <header class="collection-header">
   <div class="collection-identity-row">
     <a class="identity" href="/" aria-label="Naufaldi Rafif Satriya, home"><span>Naufaldi Rafif Satriya</span><span class="font-mono text-caption">Software engineer & curious observer</span></a>
-    <a class="collection-contact font-mono text-nav" href={siteConfig.socialLinks.email}>Contact</a>
+    <a class="collection-contact font-mono text-nav" href={siteConfig.socialLinks.email}><span class="collection-link-label">Contact</span></a>
   </div>
   <nav aria-label="Primary" class="font-mono text-nav">
-    {sections.map(section => <a href={section.href} aria-current={currentSection(section.href)}>{section.title}</a>)}
+    {sections.map(section => <a href={section.href} aria-current={currentSection(section.href)}><span class="collection-link-label">{section.title}</span></a>)}
   </nav>
 </header>
