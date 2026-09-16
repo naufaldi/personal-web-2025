@@ -17,8 +17,10 @@ const sections = tocLinks.flatMap(link => {
   const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)))
   return heading ? [{ link, heading }] : []
 })
+const readingMain = document.querySelector<HTMLElement>('.reading-main')
 function updateCurrentHeading() {
-  const passed = sections.filter(({ heading }) => heading.getBoundingClientRect().top <= 120)
+  const threshold = compactReading.matches ? 120 : (readingMain?.getBoundingClientRect().top ?? 0) + 80
+  const passed = sections.filter(({ heading }) => heading.getBoundingClientRect().top <= threshold)
   const current = passed[passed.length - 1] ?? sections[0]
   sections.forEach(({ link }) => {
     if (link === current?.link) link.setAttribute('aria-current', 'location')
@@ -26,11 +28,14 @@ function updateCurrentHeading() {
   })
 }
 let scheduled = false
-addEventListener('scroll', () => {
+function scheduleHeadingUpdate() {
   if (scheduled) return
   scheduled = true
   requestAnimationFrame(() => { updateCurrentHeading(); scheduled = false })
-}, { passive: true })
+}
+addEventListener('scroll', scheduleHeadingUpdate, { passive: true })
+readingMain?.addEventListener('scroll', scheduleHeadingUpdate, { passive: true })
+addEventListener('resize', scheduleHeadingUpdate)
 updateCurrentHeading()
 document.querySelectorAll<HTMLPreElement>('.reading-prose pre').forEach(pre => {
   pre.tabIndex = 0

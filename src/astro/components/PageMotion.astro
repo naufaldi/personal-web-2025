@@ -43,4 +43,4 @@ import '../styles/motion.css'
   addEventListener('pageshow', event => { target = null; if (event.persisted) clear() })
 })()
 </script>
-<script>import '../scripts/motion'</script>
+<script>import '@/astro/scripts/motion'; import '@/astro/scripts/viewport'</script>

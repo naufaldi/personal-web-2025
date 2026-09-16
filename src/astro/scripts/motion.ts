@@ -9,7 +9,9 @@ const pending = new Map<HTMLElement, () => void>()
 export const canAnimate = (requested: boolean) => requested && !reduced.matches && document.documentElement.dataset.input === 'pointer'
 const visible = (element: HTMLElement) => {
   const rect = element.getBoundingClientRect()
-  return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < innerHeight
+  const main = element.closest('main')
+  const bounds = main && matchMedia('(min-width: 64rem)').matches ? main.getBoundingClientRect() : { top: 0, bottom: innerHeight }
+  return rect.width > 0 && rect.height > 0 && rect.bottom > bounds.top && rect.top < bounds.bottom
 }
 function cancel(element: HTMLElement) {
   running.get(element)?.cancel()
