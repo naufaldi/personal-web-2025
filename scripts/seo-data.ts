@@ -47,6 +47,7 @@ interface RouteBuildResult {
 }
 
 const staticRoutes: SeoRoute[] = [
+  { path: '/experience', title: 'Experience - Naufaldi Rafif Satriya', description: 'Software engineering roles, achievements, and technologies from 2018 to today.', canonicalUrl: `${SITE_URL}/experience`, lastmod: GENERATED_TODAY, priority: 0.8, changefreq: 'monthly', image: DEFAULT_IMAGE, kind: 'page' },
   {
     path: '/',
     title: SITE_TITLE,

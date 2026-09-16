@@ -3,7 +3,7 @@ import { siteConfig } from '@/data/site'
 import { siteSections as sections } from '@/data/siteSections'
 const pathname = Astro.url.pathname.replace(/\/$/, '')
 const currentSection = (href: string): 'page' | 'location' | undefined =>
-  pathname === href ? 'page' : pathname.startsWith(`${href}/`) ? 'location' : undefined
+  pathname === '/experience' && href === '/about' ? 'location' : pathname === href ? 'page' : pathname.startsWith(`${href}/`) ? 'location' : undefined
 ---
 <header class="collection-header">
   <div class="collection-identity-row">

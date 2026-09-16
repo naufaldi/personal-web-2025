@@ -36,9 +36,13 @@ describe('Astro static migration contract', () => {
 
   test('native inner pages preserve career and engagement records without hydration', async () => {
     const about = await readFile('dist/about/index.html', 'utf8')
+    const experience = await readFile('dist/experience/index.html', 'utf8')
     const community = await readFile('dist/speaker/index.html', 'utf8')
     expect(about).toContain('id="experiences-heading"')
-    expect(about.match(/<article>/g)).toHaveLength(6)
+    expect(about).toContain('href="/experience"')
+    expect(experience.match(/<article /g)).toHaveLength(6)
+    expect(experience).toContain('href="/about" aria-current="location"')
+    expect(experience).not.toContain('<astro-island')
     expect(community.match(/data-record/g)).toHaveLength(mentorSpeakerEngagements.length)
     for (const entry of mentorSpeakerEngagements) expect(community).toContain(`id="engagement-${entry.id}"`)
     for (let id = 1; id <= 21; id++) expect(community).toContain(`id="engagement-${id}"`)
@@ -49,7 +53,7 @@ describe('Astro static migration contract', () => {
     expect(community.match(/data-feature-category/g)).toHaveLength(5)
     for (const html of [about, community]) {
       expect(html).not.toContain('<astro-island')
-      expect(html).toContain('<details')
+      if (html === community) expect(html).toContain('<details')
       expect(html).not.toContain('aria-label="Full site index"')
       expect(html).toContain('aria-label="Primary"')
     }

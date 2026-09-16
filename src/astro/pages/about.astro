@@ -3,7 +3,6 @@ import Document from '../layouts/Document.astro'
 import CollectionHeader from '../components/CollectionHeader.astro'
 import Photo from '../components/CollectionPhoto.astro'
 import { aboutBio, techStack } from '@/data/about'
-import { workExperiences } from '@/data/experience'
 import portrait from '@/assets/collected/portrait.jpg'
 import workspace from '@/assets/collected/workspace.jpg'
 import community from '@/assets/collected/community.jpg'
@@ -27,28 +26,26 @@ const route = routes.find(route => route.path === '/about')!
         <div class="about-intro">
           <h2 class="text-heading">{aboutBio.name}</h2>
           <p class="text-body">{aboutBio.bioParagraphs[0]}</p>
-          <a class="editorial-link font-mono text-nav" href="#experiences-heading" data-reveal="experiences-heading">Read experience <span aria-hidden="true">↗</span></a>
+          <a class="editorial-link font-mono text-nav" href="/experience">Read experience <span aria-hidden="true">↗</span></a>
         </div>
         <figure class="about-workspace"><Photo image={workspace} alt="Faldi’s desk with two monitors" eager /><figcaption>Software /<br />Ideas into tools <span class="text-vermilion">01</span></figcaption></figure>
         <figure class="about-community"><a href="/speaker"><Photo image={community} alt="Friends gathered around a cafe table" /></a><figcaption>Community /<br /><a href="/speaker">Learning together ↗</a> <span class="text-vermilion">02</span></figcaption></figure>
         <figure class="about-tools"><Photo image={personal} alt="Two game controllers in front of a screen" /><figcaption>Off screen /<br />Making room for life</figcaption></figure>
         <figure class="about-quiet"><Photo image={friends} alt="A gathering with friends at a cafe" /><figcaption>People /<br />Conversations beyond code</figcaption></figure>
       </div>
-      <div class="editorial-controls font-mono text-nav"><nav aria-label="Profile views"><a href="#profile" data-profile>Profile</a><a href="#experiences-heading" data-reveal="experiences-heading">Experience</a><a href="/speaker">Mentoring ↗</a></nav><a href="#index" data-view-toggle>Open index ↗</a></div>
+      <div class="editorial-controls font-mono text-nav"><nav aria-label="Profile views"><a href="#profile" data-profile>Profile</a><a id="experiences-heading" href="/experience">Experience</a><a href="/speaker">Mentoring ↗</a></nav><a href="#index" data-view-toggle>Open index ↗</a></div>
       <section class="editorial-index" id="index" aria-labelledby="about-index-heading" data-directory>
         <h2 id="about-index-heading" class="font-display text-reading-title" tabindex="-1">A little more about me.</h2>
         <p class="text-body reading-copy">{aboutBio.bioParagraphs[2]}</p>
         <p class="font-mono text-caption">Working with / {techStack.map(item => item.name).join(' · ')}</p>
       </section>
-      <details id="experiences-heading" class="career-record" data-record>
-        <summary class="font-body text-heading">Experience <span class="font-mono text-caption">2018 → now</span></summary>
-        <div class="career-history">{workExperiences.map(item => <article>
-          <p class="font-mono text-caption">{item.startDate} — {item.endDate}<br />{item.employmentType}</p>
-          <div><h2 class="text-heading">{item.companyName}</h2><p class="text-body">{item.role}</p><ul class="text-body">{item.achievements.map(achievement => <li>{achievement.split('**').join('')}</li>)}</ul><p class="font-mono text-caption">{item.techStack.join(' / ')}</p>{item.website && <a class="editorial-link font-mono text-nav" href={item.website}>Company website ↗</a>}</div>
-        </article>)}</div>
-      </details>
       <p class="sr-only" role="status" data-editorial-status></p>
     </main>
   </div>
-  <script>import '../scripts/editorial'</script>
+  <script>
+    import '@/astro/scripts/editorial'
+    const openExperience = () => { if (location.hash === '#experiences-heading') location.replace('/experience') }
+    addEventListener('hashchange', openExperience)
+    openExperience()
+  </script>
 </Document>

@@ -10,7 +10,7 @@ function evaluate<T>(script:string):T { return (JSON.parse(browser('eval',script
 for(const [width,height] of [[1440,1058],[834,1112],[390,844],[320,740]]) {
   test(`page-family interactions ${width}`,()=>{
     browser('set','viewport',String(width),String(height))
-    for(const path of ['/','/photography','/about','/speaker','/book','/manhwa','/projects','/blogs','/projects/ts-hooks-kit','/blogs/state-management-in-reactjs']) {
+    for(const path of ['/','/photography','/about','/experience','/speaker','/book','/manhwa','/projects','/blogs','/projects/ts-hooks-kit','/blogs/state-management-in-reactjs']) {
       browser('open',origin+path)
       const errors=evaluate<string[]>(`(async()=>{
         const errors=[];const pause=ms=>new Promise(r=>setTimeout(r,ms));
@@ -86,11 +86,13 @@ test('native page navigation, history and photography dialog keyboard focus',()=
   browser('forward')
   expect(browser('get','url').trim()).toBe(origin+'/about')
   browser('open',origin+'/about#experiences-heading')
-  expect(evaluate<boolean>(`!!document.getElementById('experiences-heading')`)).toBe(true)
+  browser('wait','--url','**/experience')
+  expect(browser('get','url').trim()).toBe(origin+'/experience')
+  expect(evaluate<boolean>(`document.querySelectorAll('.career-history article').length===6`)).toBe(true)
 })
 
 test('script-blocked page families retain content and usable links',()=>{
-  for(const path of ['/','/photography','/about','/speaker','/book','/manhwa','/projects','/blogs','/projects/ts-hooks-kit','/blogs/state-management-in-reactjs']) {
+  for(const path of ['/','/photography','/about','/experience','/speaker','/book','/manhwa','/projects','/blogs','/projects/ts-hooks-kit','/blogs/state-management-in-reactjs']) {
     browser('open',nojsOrigin+path)
     if(path==='/photography') expect(evaluate<boolean>(`document.querySelectorAll('[data-photo-open][href$=".webp"]').length===8 && !document.querySelector('dialog[open]')`)).toBe(true)
     expect(evaluate<boolean>(`!!document.querySelector('main') && document.querySelectorAll('main a[href]').length>0 && !document.querySelector('.copy-code') && !document.querySelector('[data-expand]:not([hidden])')`)).toBe(true)

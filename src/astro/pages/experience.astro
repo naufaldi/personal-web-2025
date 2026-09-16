@@ -1,0 +1,25 @@
+---
+import Document from '@/astro/layouts/Document.astro'
+import CollectionHeader from '@/astro/components/CollectionHeader.astro'
+import { workExperiences } from '@/data/experience'
+import { buildSeoRoutes } from '../../../scripts/seo-data'
+import '@/astro/styles/collected.css'
+import '@/astro/styles/inner-collections.css'
+const { routes } = await buildSeoRoutes()
+const route = routes.find(route => route.path === '/experience')!
+---
+<Document route={route} collection>
+  <a class="skip-link font-mono text-nav" href="#experiences-heading">Skip to experience</a>
+  <div class="collection-layout experience-layout">
+    <CollectionHeader />
+    <main id="experiences-heading" tabindex="-1">
+      <a class="editorial-link font-mono text-nav" href="/about">← Back to About</a>
+      <h1 class="font-display text-reading-title">Experience</h1>
+      <p class="font-mono text-caption">2018 → now</p>
+      <div class="career-history">{workExperiences.map(item => <article id={`experience-${item.id}`}>
+        <p class="font-mono text-caption">{item.startDate} — {item.endDate}<br />{item.employmentType}</p>
+        <div><h2 class="text-heading">{item.companyName}</h2><p class="text-body">{item.role}</p><ul class="text-body">{item.achievements.map(achievement => <li>{achievement.split('**').join('')}</li>)}</ul><p class="font-mono text-caption">{item.techStack.join(' / ')}</p>{item.website && <a class="editorial-link font-mono text-nav" href={item.website}>Company website ↗</a>}</div>
+      </article>)}</div>
+    </main>
+  </div>
+</Document>

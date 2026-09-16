@@ -334,7 +334,8 @@ Important notes:
 
 - [Full site context](${SITE_URL}/llms-full.txt): Detailed summary for AI retrieval and citation.
 - [Homepage](${SITE_URL}/): Portfolio landing page.
-- [About](${SITE_URL}/about): Extended profile and work history.
+- [About](${SITE_URL}/about): Extended profile and interests.
+- [Experience](${SITE_URL}/experience): Software engineering roles and work history.
 - [Projects](${SITE_URL}/projects): Curated project catalog.
 - [Blog index](${SITE_URL}/blogs): Technical writing and personal essays.
 - [Speaker & mentor](${SITE_URL}/speaker): Speaking and mentoring work.
@@ -447,6 +448,7 @@ ${SITE_FULL_NAME}, also known as ${siteConfig.name}, is a software engineer and 
 
 - ${SITE_URL}/
 - ${SITE_URL}/about
+- ${SITE_URL}/experience
 - ${SITE_URL}/projects
 - ${SITE_URL}/blogs
 - ${SITE_URL}/speaker

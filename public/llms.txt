@@ -14,7 +14,8 @@ Important notes:
 
 - [Full site context](https://naufaldi.com/llms-full.txt): Detailed summary for AI retrieval and citation.
 - [Homepage](https://naufaldi.com/): Portfolio landing page.
-- [About](https://naufaldi.com/about): Extended profile and work history.
+- [About](https://naufaldi.com/about): Extended profile and interests.
+- [Experience](https://naufaldi.com/experience): Software engineering roles and work history.
 - [Projects](https://naufaldi.com/projects): Curated project catalog.
 - [Blog index](https://naufaldi.com/blogs): Technical writing and personal essays.
 - [Speaker & mentor](https://naufaldi.com/speaker): Speaking and mentoring work.

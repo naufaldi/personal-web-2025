@@ -94,6 +94,14 @@ export const STATIC_ROUTES: StaticRouteMeta[] = [
     priority: 0.9,
   },
   {
+    path: '/experience',
+    title: `Experience – ${SITE_NAME}`,
+    description:
+      'Software engineering roles, achievements, and technologies from 2018 to today.',
+    changefreq: 'monthly',
+    priority: 0.9,
+  },
+  {
     path: '/projects',
     title: `Projects – ${SITE_NAME}`,
     description:
