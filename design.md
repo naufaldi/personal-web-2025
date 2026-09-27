@@ -106,6 +106,16 @@ Reserve image dimensions, provide responsive sources and meaningful alt text, lo
 
 All controls require visible focus. Use ink outline with paper separation; decorative image corner marks do not replace focus. Never nest interactive elements or depend on hover, dragging or animation for access. Keep error/empty messages understandable without red alone.
 
+## Collection title anchor
+
+The eight collection overviews share `CollectionTitle.astro`. Align the actual H1's top-left edge with the main content gutter, independently of search and collection/index visibility. At 1440×900 the anchor is `(40px, 139px)`; compact layouts follow the wrapped navigation. Preserve each title's type size and intentional line breaks. Reading and Experience headings retain their own treatment.
+
+Titles remain outside the toggled boards. Hidden, `aria-hidden` sizing placeholders preserve the original grid tracks and artwork coordinates. These placeholders are not headings or focus targets. Home and Community's companion labels occupy clear space beside or below their titles.
+
+The default collage and C entrance remain. Enlarged user typography, increased leading/spacing, or additional title wrapping activates an intrinsic-height reading flow through `collection-type.ts`; restoring ordinary typography restores the collage. Do not force enlarged text into the viewport grid. Keep search labels within the main scrollport.
+
+See [title alignment verification](docs/verification/title-alignment/README.md) for screenshots, measurements, accessibility findings, and verification limits.
+
 ## Motion and accessibility
 
 | Role | Value | Token |
@@ -115,13 +125,13 @@ All controls require visible focus. Use ink outline with paper separation; decor
 | Artifact movement | 260ms | `--motion-slow` |
 | Easing | `cubic-bezier(0.23, 1, 0.32, 1)` | `--motion-ease` |
 
-Quiet editorial motion is implemented through shared CSS/WAAPI helpers. Pointer navigation into collection pages uses the approved C artifact entrance: 380ms opacity/scale from .96 with 55ms stagger. The outgoing native snapshot shrinks from 1 to .96 and fades for 220ms with the reversed C easing while incoming artifacts are prepared and paused at C’s first frame. The incoming root snapshot stays transparent; after the exit finishes, the live artifacts play C. This prevents a fully visible frame before the entrance and avoids a second whole-page entrance. Reading destinations retain browser-native cross-document transitions: the same 220ms shrink/fade exit followed by a 380ms scale/fade entrance from .96 to 1. The identity header remains stationary. Unsupported browsers and script-disabled pages keep ordinary document navigation.
+Collection entrance preserves the original visible small-to-big treatment: opacity 0 to 1 and scale .96 to 1 over 380ms with a 55ms stagger. Each element uses transform-origin 0 0 during the animation, keeping its top-left anchor fixed while its size changes. Exit fades the outgoing snapshot at full size over 220ms with cubic-bezier(.22,.61,.36,1), avoiding whole-page shrink and apparent margins. The incoming root snapshot remains transparent while live collection entrances wait for exit completion. Reading destinations fade in over 380ms after the exit. The identity header stays stationary. Keyboard, reduced-motion, history, and hash exclusions remain. Unsupported browsers retain ordinary navigation.
 
 Disclosures enter over 220ms; closing content becomes noninteractive, exits over 140ms and then surrounding visible items reposition within 120ms. Filters reposition retained visible artifacts over 260ms and introduce new items over 220ms; collection/index changes animate entering visible items. Position changes use `cubic-bezier(0.77, 0, 0.175, 1)`. Interactive collection image surfaces use the shared C hover described below. Compact controls press to `.98` over 100ms and release over 140ms. Movement uses transform and opacity; link color may transition without changing layout. Text is never resized during movement.
 
 Keyboard actions, search typing, history traversal, same-page anchors and reduced-motion states are immediate. Reading pages remain immediate on initial load. No scrolling reveal, parallax, bounce or cursor effect is used. State feedback is immediate; optional movement follows. Reduced motion sets these durations to 0ms and removes travel/parallax. Retain stable IDs through filtering. No scroll hijacking, automatic slideshow or custom-cursor dependency.
 
-All collection overviews use the selected C motion treatment: initially visible title/cards fade and scale from `.96` over 380ms with a 55ms stagger and the shared ease-out curve. Internal arrivals use only the existing page transition; history restores, hash arrivals, keyboard input and reduced motion skip or settle entrances immediately. Below-fold content stays visible without scroll reveals. Fine-pointer image hover lifts 6px and scales to `1.02` over 600ms with `ease`; press feedback scales to `.98` over 100ms. Navigation and card-title underlines draw/retract over 320ms, with link color changing over 280ms. Shared collection tokens apply to interactive image surfaces, navigation, card links, and editorial actions. Decorative images have no hover movement and reading-prose links retain persistent underlines. Keyboard focus and reduced-motion feedback remain immediate.
+Collection overviews use the anchored scale-and-fade treatment above. History restores, hash arrivals, keyboard input and reduced motion skip or settle entrances immediately. Below-fold content stays visible without scroll reveals. Existing fine-pointer image hover, control press feedback, and animated underlines remain separate from page entrance/exit. Decorative images have no hover movement; reading-prose links retain persistent underlines. Keyboard focus and reduced-motion feedback remain immediate.
 
 Use semantic landmarks, a skip link, logical headings and one clear h1. Decorative duplicate title layers are hidden from assistive technology. Verify keyboard/touch parity, 320px reflow, 200%/400% zoom and text/control contrast. New collection pages remain warm-light regardless of system preference; do not overwrite legacy theme storage or change unmigrated pages' theme behavior. Scope migration styling to the new layout.
 
@@ -270,3 +280,8 @@ At widths of 1024px and above, collection pages share a 100dvh shell (100vh fall
 Boards preserve unequal image spans and editorial typography but derive image heights from the remaining grid space, rather than fixed 850–1100px minimum heights. Full indexes, filtered results, career history, and reading pages scroll inside main. Reading section tracking uses the same scroll region. History restores the main offset; hashes take precedence. No wheel interception or scroll snapping is used.
 
 Experience is a dedicated `/experience` timeline with all existing records. About retains its biography, technologies, and index, linking to Experience without an inline career disclosure. About remains the active navigation parent. Legacy `/about#experiences-heading` links have a visible fallback link and an enhanced replace-navigation to Experience.
+
+
+### Writing collage refinement
+
+The Writing overview now uses unequal, staggered editorial pieces instead of a repeated two-by-two arrangement of narrow photographs. A compact lead essay sits left of a wide workspace photograph; the reading essay anchors the upper right, a text-only React essay sits lower left, and mentoring combines a smaller photograph with its title at lower right. The duplicate workspace image is removed. A portrait balances the bottom left. The shared H1 anchor, content order, search/filter/index behavior, and anchored scale entrance remain unchanged. At desktop widths the board reserves at least 610px to protect long titles; shorter windows use the existing main scroll area. Tablet/mobile retain natural document flow. This intentionally supersedes the earlier Writing artwork-position baseline only; other collections retain their original coordinates. Evidence lives in `docs/verification/writing-grid/`.

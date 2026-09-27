@@ -289,3 +289,29 @@ Handoff verification: production build and all 36 tests passed. The strengthened
 ### Matched zoom exit and entrance
 
 Pointer navigation now uses a shared 220ms outgoing scale from 1 to .96 with opacity 1 to 0 and reversed C easing. Collections then play their existing 380ms C entrance with 55ms artifact stagger. Reading and Experience destinations use a 380ms native scale/fade entrance delayed until the exit completes. The header remains stationary; keyboard, reduced motion, and history exclusions remain unchanged. Navigation is not intercepted or delayed.
+
+
+## Collection title alignment and accessibility, 27 September 2026
+
+Collection H1s now share a top-left anchor independently of search and board/index visibility. `CollectionTitle.astro` keeps one accessible heading outside each board, with aria-hidden sizing placeholders preserving the original artwork tracks. Home/Community companion labels and compact-desktop search labels use clear space around the title. Reading and Experience heading treatments stay separate.
+
+This supersedes page-specific H1 offsets and the assumption that a collection title disappears in index view. Default viewport compositions and C entrance timing remain. Enlarged or spaced user typography switches collections to intrinsic-height flow; ordinary typography restores the collage. A registered title-size property provides the intended size for comparison with text enlargement, and ResizeObserver reacts to changes.
+
+Targeted accessibility corrections include scoped Indonesian language annotations, an explicit language on the State Management quotation, supported named-group semantics for keyboard-scrollable code, clipping only decorative reading backdrops during reflow, and a consistent 404 skip link. No routes, public data schemas, dependencies, or deployment settings changed.
+
+Build and regression commands, screenshots at six viewport sizes, geometry comparisons, axe results, and verification limitations are recorded in [the title alignment report](verification/title-alignment/README.md). Automated checks do not constitute full WCAG conformance; native zoom and actual screen-reader checks remain unverified.
+
+
+### Stationary entrance and exit refinement
+
+Supersedes the earlier C shrink/grow navigation treatment. Scaling the root snapshot and individual artifacts to .96 changed their visible edges even though layout coordinates stayed fixed. Page exit now fades at full size over 140ms; collection entry fades at full size over 220ms with 30ms stagger capped at 90ms. Reading/Experience arrivals use the same fade timings. Shared show/hide helpers also fade without the previous 6px translation. Intentional filter/disclosure layout reflow and hover feedback remain separate. Keyboard, reduced-motion, history, and hash exclusions are preserved. Browser regression samples each collection entrance at five progress points and checks x/y/width/height remain within 0.1px, alongside native exit keyframes and interaction tests.
+
+
+### Correction: retain small-to-big entrance
+
+The opacity-only follow-up was rejected because it felt like a blink. It is superseded by the original .96-to-1 scale-and-fade entrance (380ms, 55ms stagger), with transform-origin set to the element’s top-left in both animation keyframes. Position is fixed; size deliberately changes. Exit remains a full-size fade, lengthened to 220ms with a gentler ease-out; it does not shrink the whole page. Regression assertions now verify fixed x/y throughout entry and actual 4% size growth, rather than incorrectly requiring fixed dimensions.
+
+
+### Writing collage refinement
+
+The Writing overview now uses unequal, staggered editorial pieces instead of a repeated two-by-two arrangement of narrow photographs. A compact lead essay sits left of a wide workspace photograph; the reading essay anchors the upper right, a text-only React essay sits lower left, and mentoring combines a smaller photograph with its title at lower right. The duplicate workspace image is removed. A portrait balances the bottom left. The shared H1 anchor, content order, search/filter/index behavior, and anchored scale entrance remain unchanged. At desktop widths the board reserves at least 610px to protect long titles; shorter windows use the existing main scroll area. Tablet/mobile retain natural document flow. This intentionally supersedes the earlier Writing artwork-position baseline only; other collections retain their original coordinates. Evidence lives in `docs/verification/writing-grid/`.
