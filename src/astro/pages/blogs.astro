@@ -1,5 +1,6 @@
 ---
 import Archive from '../layouts/Archive.astro'
+import { contentLanguage } from '@/astro/lib/contentLanguage'
 import Photo from '../components/CollectionPhoto.astro'
 import { writingEntries, featuredWriting } from '@/data/writingCollection'
 import workspace from '@/assets/collected/workspace.jpg'
@@ -23,8 +24,8 @@ const photos = [null, { image: workspace, alt: 'Faldi’s workspace' }, { image:
       {photos[index] && <a href={entry.href} class="writing-photo" aria-label={`Read ${entry.title}`}><Photo image={photos[index]!.image} alt={photos[index]!.alt} eager={index < 3} /></a>}
       <div class="writing-copy">
         <p class="font-mono text-caption">{entry.categories.join(' / ')} / {entry.meta}</p>
-        <h2><a href={entry.href}>{entry.title}</a></h2>
-        {entry.description && <p class="writing-excerpt text-body">{entry.description}</p>}
+        <h2 lang={contentLanguage(entry.href ?? '', 'title')}><a href={entry.href}>{entry.title}</a></h2>
+        {entry.description && <p class="writing-excerpt text-body" lang={contentLanguage(entry.href ?? '', 'description')}>{entry.description}</p>}
         <a class="editorial-link font-mono text-nav" href={entry.href}>Read essay <span class="text-vermilion" aria-hidden="true">↗</span></a>
       </div>
     </article>)}

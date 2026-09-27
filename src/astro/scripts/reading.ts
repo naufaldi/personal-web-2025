@@ -40,6 +40,7 @@ updateCurrentHeading()
 document.querySelectorAll<HTMLPreElement>('.reading-prose pre').forEach(pre => {
   pre.tabIndex = 0
   pre.setAttribute('aria-label', 'Code example')
+  pre.setAttribute('role', 'group')
   const button = document.createElement('button')
   button.type = 'button'
   button.className = 'copy-code'

@@ -19,7 +19,7 @@
 .reading-diagram { overflow-x: auto; }
 
 .reading-main { position: relative; isolation: isolate; display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); padding-top: 128px; column-gap: 32px; row-gap: 40px; }
-.reading-backdrop { position: absolute; top: 0; z-index: -1; pointer-events: none; line-height: .9; letter-spacing: -.06em; left: 6%; font-size: clamp(96px,20vw,300px); }
+.reading-backdrop { position: absolute; top: 0; z-index: -1; pointer-events: none; line-height: .9; letter-spacing: -.06em; left: 6%; right: 0; overflow: clip; font-size: clamp(96px,20vw,300px); }
 .reading-intro { background: var(--color-paper); min-width: 0; grid-column: 3 / 9; padding: 32px 16px 0; }
 .reading-intro h1 { font-size: clamp(32px,4.2vw,64px); line-height: 1.1; font-family: var(--font-body); font-weight: 700; letter-spacing: -.045em; overflow-wrap: anywhere; }
 .reading-side-photo { position: absolute; right: 0; top: 16px; width: 29%; }

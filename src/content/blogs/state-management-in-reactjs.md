@@ -12,7 +12,7 @@ canonical: "https://blog.naufaldi.com/memilih-state-management/"
 ---
 
 
-> code; buat para react developer nih, kalian lebih sering gunain redux daripada react context kah?
+> <span lang="id">code; buat para react developer nih, kalian lebih sering gunain redux daripada react context kah?</span>
 > 
 > — CODINGFESS (@codingfess) [August 1, 2022](https://twitter.com/codingfess/status/1553922071314731008?ref_src=twsrc%5Etfw&ref=blog.naufaldi.com)
 

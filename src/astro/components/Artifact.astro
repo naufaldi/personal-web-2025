@@ -1,5 +1,7 @@
 ---
 import { Image } from 'astro:assets'
+import { featuredWriting } from '@/data/writingCollection'
+import { contentLanguage } from '@/astro/lib/contentLanguage'
 import type { CollectionArtifact } from '@/data/collected'
 interface Props { artifact: CollectionArtifact; number: number }
 const { artifact: { section, variant, visual, title }, number } = Astro.props
@@ -10,7 +12,7 @@ const { artifact: { section, variant, visual, title }, number } = Astro.props
       {visual.kind === 'image' ? <div class="media-frame">
         <Image src={visual.image} alt={visual.alt} widths={[360, 640, 960]} sizes="(min-width: 1280px) 35vw, 90vw" format="webp" quality={82} loading={variant === 'portrait' || variant === 'software' ? 'eager' : 'lazy'} fetchpriority={variant === 'portrait' ? 'high' : 'auto'} decoding="async" style={{ objectPosition: visual.position }} />
         <span class="media-unavailable" hidden>Image unavailable</span>
-      </div> : <div class="personal-note"><h2>{visual.title}</h2><p>{visual.excerpt}</p></div>}
+      </div> : <div class="personal-note"><h2 lang={contentLanguage(featuredWriting[0].href ?? '', 'title')}>{visual.title}</h2><p lang={contentLanguage(featuredWriting[0].href ?? '', 'description')}>{visual.excerpt}</p></div>}
     </div>
     <div class="artifact-caption font-mono text-caption">
       <p><strong id={`section-${section.id}`}>{section.title}</strong><br />{title}</p>

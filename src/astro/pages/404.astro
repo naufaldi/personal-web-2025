@@ -6,9 +6,10 @@ import { siteMetadata } from '../../../scripts/seo-data'
 const route = { path: '/404', title: 'Page not found | Faldi', description: 'This page is not in the collection.', canonicalUrl: `${siteMetadata.siteUrl}/404`, lastmod: '', priority: 0, changefreq: 'never' as const, kind: 'page' as const, noindex: true }
 ---
 <Document route={route} collection>
+  <a class="skip-link font-mono text-nav" href="#not-found">Skip to page content</a>
   <div class="collection-layout">
     <CollectionHeader />
-    <main class="state-page">
+    <main class="state-page" id="not-found" tabindex="-1">
       <img src="/images/states/not-found.webp" width="720" height="720" alt="" />
       <div>
         <p class="font-mono text-caption text-vermilion">NOT IN THE COLLECTION / 404</p>

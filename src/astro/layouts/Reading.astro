@@ -3,6 +3,7 @@ import Document from './Document.astro'
 import Header from '../components/CollectionHeader.astro'
 import Photo from '../components/CollectionPhoto.astro'
 import { renderReading } from '../lib/reading'
+import { contentLanguage } from '@/astro/lib/contentLanguage'
 import type { SeoRoute } from '@/lib/seo'
 import type { ImageMetadata } from 'astro'
 import readingArtwork from '@/assets/project-covers/reading-list.png'
@@ -28,16 +29,16 @@ const readingRoute = cover ? { ...route, image: cover.src } : route
       <div class="reading-intro">
         <a class="editorial-link font-mono text-nav" href={back}>← Back to {project ? 'projects' : 'writing'}</a>
         <p class="font-mono text-caption reading-meta">{project ? 'Software / Project notes' : meta}</p>
-        <h1>{title}</h1>
+        <h1 lang={contentLanguage(route.path, 'title')}>{title}</h1>
         {project && <p class="text-body reading-description">{summary ?? route.description}</p>}
         {links.length > 0 && <nav class="reading-actions font-mono text-nav" aria-label="Project resources">{links.map(link => <a class="editorial-link" href={link.href}>{link.title} ↗</a>)}</nav>}
         {project && <p class="font-mono text-caption reading-stack">{meta}</p>}
       </div>
       {project && cover ? <figure class="reading-cover"><Photo image={cover} alt={`${title} ${coverKind === 'illustration' ? 'conceptual watercolor illustration' : 'screenshot'}`} eager /><figcaption class="font-mono text-caption">{coverKind === 'illustration' ? 'Illustrated cover / AI-generated artwork' : 'Project screenshot / From the archive'}</figcaption></figure> : <figure class="reading-side-photo"><Photo image={readingArtwork} alt="Watercolor illustration of a reader beside books and a window" eager /><figcaption class="font-mono text-caption">Reading / Notes and practice<br />AI-generated illustration</figcaption></figure>}
       <aside class="reading-aside">
-        {headings.length > 0 && <details class="reading-toc" open><summary class="font-mono text-nav">On this page</summary><nav aria-label="Table of contents">{headings.map(heading => <a class:list={['font-mono text-caption', { nested: heading.depth === 3 }]} href={`#${heading.slug}`}>{heading.text}</a>)}</nav></details>}
+        {headings.length > 0 && <details class="reading-toc" open><summary class="font-mono text-nav">On this page</summary><nav aria-label="Table of contents">{headings.map(heading => <a lang={contentLanguage(route.path)} class:list={['font-mono text-caption', { nested: heading.depth === 3 }]} href={`#${heading.slug}`}>{heading.text}</a>)}</nav></details>}
       </aside>
-      <article id="reading-content" class="reading-prose" tabindex="-1" set:html={html} />
+      <article lang={contentLanguage(route.path)} id="reading-content" class="reading-prose" tabindex="-1" set:html={html} />
       <nav class="reading-end font-mono text-nav" aria-label="Reading navigation"><a class="editorial-link" href={back}>← All {project ? 'projects' : 'writing'}</a><a class="editorial-link" href="#">Back to top ↑</a></nav>
     </main>
   </div>
