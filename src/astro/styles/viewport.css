@@ -80,21 +80,6 @@
   html[data-collection-site] .company-board:not(.is-filtered) .company-paper { flex: 1; min-height: 0; padding: 14px; gap: 8px; }
   html[data-collection-site] .company-board:not(.is-filtered) .company-paper h2 { font-size: 20px; line-height: 1.2; }
   html[data-collection-site] .company-board:not(.is-filtered) figcaption .editorial-link { min-height: 32px; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .archive-margin { display: none; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 12px; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-1 { grid-area: 8 / 2 / 31 / 6; display: block !important; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-1 .writing-copy { height: 100%; min-height: 0; padding: 16px; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-1 .writing-copy h2 { font-size: clamp(24px, 2.5vw, 36px); margin-block: 12px; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-1 .writing-excerpt { font-size: 14px; line-height: 1.5; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-2 { grid-area: 1 / 7 / 16 / 10; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-3 { grid-area: 1 / 10 / 16 / 13; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-4 { grid-area: 17 / 7 / 31 / 10; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-5 { grid-area: 17 / 10 / 31 / 13; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-life { grid-area: 17 / 1 / 31 / 2; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-copy h2 { font-size: 18px; margin-block: 8px; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-copy .text-caption { font-size: 11px; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .editorial-link { font-size: 12px; gap: 4px; margin-top: 0; }
-  html[data-collection-site] .writing-board:not(.is-filtered) .writing-photo .media-frame { height: 100%; }
   html[data-collection-site] .photography-grid { flex: 1 0 530px; height: auto; min-height: 530px; margin-top: 20px; }
   html[data-collection-site] .reading-main { align-content: start; }
   html[data-collection-site] .reading-toc { position: static; max-height: none; overflow: visible; }

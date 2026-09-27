@@ -5,7 +5,7 @@
 .writing-board .writing-copy h2 { font: 700 28px/1.1 var(--font-body); letter-spacing: -.035em; margin-block: 12px; }
 .writing-board .writing-excerpt { font-size: 16px; line-height: 1.5; }
 .writing-board .writing-artifact-1 { grid-area: 4 / 2 / 22 / 7; margin-left: 32px; margin-right: 16px; display: block; z-index: 2; }
-.writing-board .writing-artifact-1 .writing-copy { padding: 36px; min-height: 430px; background: color-mix(in srgb,var(--color-paper),var(--color-ink) 5%); }
+.writing-board .writing-artifact-1 .writing-copy { padding: 36px; min-height: 0; background: color-mix(in srgb,var(--color-paper),var(--color-ink) 5%); }
 .writing-board .writing-artifact-1 h2 { font-size: clamp(36px,4vw,58px); margin-block: 24px; }
 .writing-board .writing-artifact-1 .writing-excerpt { font-size: 18px; }
 .writing-board .writing-artifact-2 { grid-area: 1 / 9 / 11 / 13; margin-left: 8px; }
@@ -13,7 +13,7 @@
 .writing-board .writing-artifact-3 { grid-area: 11 / 7 / 22 / 13; margin-left: 24px; }
 .writing-board .writing-artifact-3 .media-frame { aspect-ratio: 1.2; }
 .writing-board .writing-artifact-3 .writing-excerpt { display: none; }
-.writing-board .writing-artifact-4 { grid-area: 21 / 5 / 31 / 9; margin-right: 24px; }
+.writing-board .writing-artifact-4 { display: block; grid-area: 21 / 5 / 31 / 9; margin-right: 24px; }
 .writing-board .writing-artifact-4 .media-frame { aspect-ratio: .85; }
 .writing-board .writing-artifact-4 .writing-excerpt { display: none; }
 .writing-board .writing-artifact-5 { grid-area: 21 / 9 / 31 / 13; margin-left: 24px; grid-template-columns: 1fr 1.3fr; }
@@ -59,3 +59,23 @@
 }
 
 .writing-board .writing-artifact-2 .writing-excerpt { display: none; }
+
+@media (min-width: 64rem) {
+ html[data-collection-site] .writing-board:not(.is-filtered) { min-height: 610px; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .archive-margin { display: none; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact { display: flex; flex-direction: column; gap: 12px; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-copy { flex: none; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-copy h2 { font-size: clamp(18px, 1.5vw, 22px); margin-block: 8px; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-copy .text-caption { font-size: 11px; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .editorial-link { font-size: 12px; gap: 4px; margin-top: 0; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-1 { grid-area: 8 / 1 / 20 / 5; align-self: start; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-1 .writing-copy { min-height: 0; padding: 24px; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-1 h2 { font-size: clamp(26px, 2.4vw, 36px); margin-block: 16px; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-1 .writing-excerpt { font-size: 14px; line-height: 1.5; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-2 { grid-area: 6 / 5 / 23 / 9; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-3 { grid-area: 1 / 10 / 20 / 13; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-4 { grid-area: 25 / 3 / 31 / 8; align-self: end; padding-top: 16px; border-top: 1px solid var(--color-ink-muted); }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-5 { grid-area: 21 / 9 / 31 / 13; display: grid; grid-template-columns: 1fr 1.15fr; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-artifact-5 h2 { font-size: 18px; }
+ html[data-collection-site] .writing-board:not(.is-filtered) .writing-life { grid-area: 22 / 1 / 31 / 3; }
+}

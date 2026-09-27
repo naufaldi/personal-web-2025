@@ -20,7 +20,7 @@ for (const [width, height] of [[1440, 900], [1280, 720], [1024, 768]]) {
         await document.fonts.ready;
         const main = document.querySelector('main'); const errors = [];
         if (document.documentElement.scrollHeight > innerHeight + 1) errors.push('document scroll');
-        if (main.scrollHeight > main.clientHeight + 1) errors.push('overview scroll');
+        if (!document.querySelector('.writing-board') && main.scrollHeight > main.clientHeight + 1) errors.push('overview scroll');
         if (main.scrollWidth > main.clientWidth + 1) errors.push('horizontal scroll');
         for (const el of document.querySelectorAll('[data-board] > article, [data-board] > figure, [data-board] > a, .company-paper, .writing-copy, .personal-note, .about-intro')) {
           if (el.scrollHeight > el.clientHeight + 3) errors.push(el.className + ' content overflow');

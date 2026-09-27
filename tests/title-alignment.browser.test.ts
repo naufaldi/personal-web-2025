@@ -36,6 +36,24 @@ for (const [width, height] of [[1440, 900], [1280, 720], [1024, 768], [834, 900]
       const expected = artworkBefore.find(sample => sample.w === width && sample.path === route)!
       const actual = evaluate<{ x: number; y: number; width: number; height: number }[]>(`[...document.querySelectorAll('[data-artifact], [data-board] > article, [data-board] > figure, [data-board] > a, .photograph')].map(el => el.getBoundingClientRect().toJSON())`)
       expect(actual.length).toBe(expected.artifacts.length)
+      if (route === '/blogs') {
+        const issues = evaluate<string[]>(`(() => {
+          const elements = [...document.querySelectorAll('.writing-artifact, .writing-life')];
+          const issues = [];
+          elements.forEach((element, index) => {
+            const a = element.getBoundingClientRect();
+            if (element.scrollHeight > element.clientHeight + 3) issues.push('clipped content: ' + index);
+            elements.slice(index + 1).forEach(other => {
+              const b = other.getBoundingClientRect();
+              if (Math.min(a.right, b.right) - Math.max(a.left, b.left) > 1 &&
+                  Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top) > 1) issues.push('overlapping essays');
+            });
+          });
+          return issues;
+        })()`)
+        expect(issues).toEqual([])
+        continue
+      }
       actual.forEach((rect, index) => {
         for (const key of ['x', 'y', 'width', 'height'] as const) {
           expect(Math.abs(rect[key] - expected.artifacts[index].rect[key])).toBeLessThanOrEqual(3)
