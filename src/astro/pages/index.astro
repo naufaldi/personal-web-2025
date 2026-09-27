@@ -1,4 +1,5 @@
 ---
+import CollectionTitle from '@/astro/components/CollectionTitle.astro'
 import Document from '../layouts/Document.astro'
 import Artifact from '../components/Artifact.astro'
 import CollectionHeader from '@/astro/components/CollectionHeader.astro'
@@ -13,8 +14,9 @@ const route = routes.find(route => route.path === '/')!
   <div class="collection-layout" data-collection>
     <CollectionHeader />
     <main id="collection" tabindex="-1">
+      <CollectionTitle page="/" />
       <div id="index" class="collection-canvas" data-canvas>
-        <div class="collection-title"><p class="font-mono">COLLECTED<br />BY</p><h1 class="font-display text-display">FALDI<span class="sr-only">: work, people, and everyday moments</span></h1></div>
+        <CollectionTitle page="/" reserve />
         <p class="margin-note font-mono text-caption"><span class="text-vermilion">01</span><br />People<br />Places<br />Ideas<br />In progress</p>
         {artifacts.map((artifact, i) => <Artifact artifact={artifact} number={i + 1} />)}
       </div>

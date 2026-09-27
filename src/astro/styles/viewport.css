@@ -30,7 +30,7 @@
   html[data-collection-site] :is(.editorial-title, .archive-title) { font-size: clamp(64px, min(11vw, 17vh), 160px); }
   html[data-collection-site] :is(.margin-note, .editorial-margin, .archive-margin) { display: block; grid-area: 9 / 1 / 15 / 3; font-size: 12px; }
   html[data-collection-site] .collection-title > p { flex-basis: 80px; padding-top: 14px; font-size: 14px; }
-  html[data-collection-site] .collection-title h1 { font-size: clamp(80px, min(14vw, 23vh), 210px); margin: 0; }
+  html[data-collection-site] .collection-title .home-title-text { font-size: clamp(80px, min(14vw, 23vh), 210px); margin: 0; }
   html[data-collection-site] .artifact--portrait { grid-area: 6 / 3 / 31 / 7; }
   html[data-collection-site] .artifact--software { grid-area: 2 / 8 / 13 / 11; }
   html[data-collection-site] .artifact--album { grid-area: 1 / 11 / 14 / 13; }
@@ -72,7 +72,6 @@
   html[data-collection-site] .manhwa-board:not(.is-filtered) .shelf-cover-3 { grid-area: 17 / 7 / 31 / 9; }
   html[data-collection-site] .manhwa-board:not(.is-filtered) .shelf-cover-4 { grid-area: 17 / 9 / 31 / 11; }
   html[data-collection-site] .company-board:not(.is-filtered) .editorial-title { grid-area: 1 / 2 / 11 / 8; font-size: clamp(54px, min(8vw, 14vh), 120px); }
-  html[data-collection-site] .company-board:not(.is-filtered) .editorial-margin { grid-area: 2 / 1 / 14 / 2; }
   html[data-collection-site] .company-board:not(.is-filtered) .company-gathering { grid-area: 10 / 4 / 31 / 8; }
   html[data-collection-site] .company-board:not(.is-filtered) .company-mentoring { grid-area: 1 / 9 / 14 / 13; }
   html[data-collection-site] .company-board:not(.is-filtered) .company-notes { grid-area: 16 / 1 / 31 / 4; }

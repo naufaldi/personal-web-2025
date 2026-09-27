@@ -1,4 +1,5 @@
 ---
+import CollectionTitle from '@/astro/components/CollectionTitle.astro'
 import { Image, getImage } from 'astro:assets'
 import Document from '@/astro/layouts/Document.astro'
 import CollectionHeader from '@/astro/components/CollectionHeader.astro'
@@ -15,8 +16,9 @@ const photos = await Promise.all(photographs.map(async photo => ({ ...photo, lar
   <div class="collection-layout photography-layout">
     <CollectionHeader />
     <main id="photography" tabindex="-1">
+      <CollectionTitle page="/photography" />
       <div class="photography-grid">
-        <h1 class="photography-title font-display">PHOTOGRAPHY</h1>
+        <CollectionTitle page="/photography" reserve />
         <p class="photography-note font-mono text-caption"><span class="text-vermilion">SEPTEMBER 2026</span><br />Everyday moments &amp; Codex Jakarta <span class="photography-hint">Select a photograph for a closer look.</span></p>
         {photos.map((photo, index) => <figure class="photograph" data-photo={photo.id}>
           <a href={photo.large.src} data-photo-open aria-label={`Enlarge: ${photo.caption}`}>

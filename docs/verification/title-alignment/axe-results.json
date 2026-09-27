@@ -1,0 +1,680 @@
+[
+  {
+    "path": "/",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 43,
+      "incomplete": 1,
+      "passes": 20,
+      "violations": 0
+    },
+    "incomplete": [
+      {
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodeCount": 2,
+        "nodes": [
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<h1 class=\"collection-heading font-display collection-heading--home\" data-title-lines=\"1\">FALDI<span class=\"sr-only\">: work, people, and everyday moments</span></h1>",
+            "target": [
+              "h1"
+            ]
+          },
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<p class=\"collection-heading-label font-mono\">COLLECTED BY</p>",
+            "target": [
+              ".collection-heading-label"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    ],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/",
+    "violations": []
+  },
+  {
+    "path": "/projects",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 37,
+      "incomplete": 1,
+      "passes": 26,
+      "violations": 0
+    },
+    "incomplete": [
+      {
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodeCount": 1,
+        "nodes": [
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<h1 class=\"collection-heading font-display collection-heading--projects\" data-title-lines=\"1\">PROJECTS</h1>",
+            "target": [
+              "h1"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    ],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/projects",
+    "violations": []
+  },
+  {
+    "path": "/blogs",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 36,
+      "incomplete": 1,
+      "passes": 27,
+      "violations": 0
+    },
+    "incomplete": [
+      {
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodeCount": 1,
+        "nodes": [
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<h1 class=\"collection-heading font-display collection-heading--writing\" data-title-lines=\"1\">WRITING</h1>",
+            "target": [
+              "h1"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    ],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/blogs",
+    "violations": []
+  },
+  {
+    "path": "/speaker",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 40,
+      "incomplete": 1,
+      "passes": 23,
+      "violations": 0
+    },
+    "incomplete": [
+      {
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodeCount": 1,
+        "nodes": [
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<h1 class=\"collection-heading font-display collection-heading--community\" data-title-lines=\"2\">IN GOOD<br>COMPANY</h1>",
+            "target": [
+              "h1"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    ],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/speaker",
+    "violations": []
+  },
+  {
+    "path": "/book",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 40,
+      "incomplete": 1,
+      "passes": 23,
+      "violations": 0
+    },
+    "incomplete": [
+      {
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodeCount": 1,
+        "nodes": [
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<h1 class=\"collection-heading font-display collection-heading--books\" data-title-lines=\"1\">BOOKS</h1>",
+            "target": [
+              "h1"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    ],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/book",
+    "violations": []
+  },
+  {
+    "path": "/manhwa",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 40,
+      "incomplete": 1,
+      "passes": 23,
+      "violations": 0
+    },
+    "incomplete": [
+      {
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodeCount": 1,
+        "nodes": [
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<h1 class=\"collection-heading font-display collection-heading--manhwa\" data-title-lines=\"1\">MANHWA</h1>",
+            "target": [
+              "h1"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    ],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/manhwa",
+    "violations": []
+  },
+  {
+    "path": "/photography",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 45,
+      "incomplete": 1,
+      "passes": 18,
+      "violations": 0
+    },
+    "incomplete": [
+      {
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodeCount": 1,
+        "nodes": [
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<h1 class=\"collection-heading font-display collection-heading--photography\" data-title-lines=\"1\">PHOTOGRAPHY</h1>",
+            "target": [
+              "h1"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    ],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/photography",
+    "violations": []
+  },
+  {
+    "path": "/about",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 41,
+      "incomplete": 1,
+      "passes": 22,
+      "violations": 0
+    },
+    "incomplete": [
+      {
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodeCount": 1,
+        "nodes": [
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<h1 class=\"collection-heading font-display collection-heading--about\" data-title-lines=\"1\">ABOUT</h1>",
+            "target": [
+              "h1"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    ],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/about",
+    "violations": []
+  },
+  {
+    "path": "/experience",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 46,
+      "incomplete": 0,
+      "passes": 17,
+      "violations": 0
+    },
+    "incomplete": [],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/experience",
+    "violations": []
+  },
+  {
+    "path": "/404",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 48,
+      "incomplete": 0,
+      "passes": 15,
+      "violations": 0
+    },
+    "incomplete": [],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/404",
+    "violations": []
+  },
+  {
+    "path": "/projects/ts-hooks-kit",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 40,
+      "incomplete": 1,
+      "passes": 23,
+      "violations": 0
+    },
+    "incomplete": [
+      {
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodeCount": 1,
+        "nodes": [
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<p class=\"reading-backdrop font-display\" aria-hidden=\"true\">PROJECTS</p>",
+            "target": [
+              ".reading-backdrop"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    ],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/projects/ts-hooks-kit",
+    "violations": []
+  },
+  {
+    "path": "/blogs/state-management-in-reactjs",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 35,
+      "incomplete": 1,
+      "passes": 28,
+      "violations": 0
+    },
+    "incomplete": [
+      {
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodeCount": 2,
+        "nodes": [
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<p class=\"reading-backdrop font-display\" aria-hidden=\"true\">BLOG</p>",
+            "target": [
+              ".reading-backdrop"
+            ]
+          },
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "html": "<h1 lang=\"en\">State Management in ReactJS</h1>",
+            "target": [
+              "h1"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    ],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/blogs/state-management-in-reactjs",
+    "violations": []
+  },
+  {
+    "path": "/blogs/menulis-untuk-membuat-sejarah",
+    "axeVersion": "4.12.1",
+    "counts": {
+      "inapplicable": 40,
+      "incomplete": 1,
+      "passes": 23,
+      "violations": 0
+    },
+    "incomplete": [
+      {
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodeCount": 2,
+        "nodes": [
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "html": "<p class=\"reading-backdrop font-display\" aria-hidden=\"true\">BLOG</p>",
+            "target": [
+              ".reading-backdrop"
+            ]
+          },
+          {
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "html": "<h1 lang=\"id\">Menulis untuk Membuat Sejarah</h1>",
+            "target": [
+              "h1"
+            ]
+          }
+        ],
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ]
+      }
+    ],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 12798390076057946000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    },
+    "url": "http://127.0.0.1:4341/blogs/menulis-untuk-membuat-sejarah",
+    "violations": []
+  }
+]

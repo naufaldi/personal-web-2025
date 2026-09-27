@@ -1,4 +1,5 @@
 ---
+import CollectionTitle from '@/astro/components/CollectionTitle.astro'
 import Archive from '../layouts/Archive.astro'
 import Artifact from '../components/ArchiveArtifact.astro'
 import Photo from '../components/CollectionPhoto.astro'
@@ -9,7 +10,7 @@ const featured = selectEntries(manhwaEntries, ['manhwa-1', 'manhwa-4', 'manhwa-7
 ---
 <Archive path="/manhwa" title="Manhwa" entries={manhwaEntries} categories={['All', 'Reading', 'Wishlist', 'Recommended']}>
   <div class="archive-board shelf-board manhwa-board" data-board>
-    <h1 class="archive-title font-display">MANHWA</h1>
+    <CollectionTitle page="/manhwa" reserve />
     <p class="archive-margin font-mono text-caption">MANHWA<br />ARCHIVE<br /><br />Stories<br />Characters<br />Worlds</p>
     {featured.map((entry, index) => <Artifact entry={entry} number={index + 1} placement={`shelf-cover shelf-cover-${index + 1}`} />)}
     <figure class="shelf-life shelf-life-left"><Photo image={workspace} alt="Faldi’s desk and monitors" /><figcaption class="font-mono text-caption">Off screen /<br />Between chapters</figcaption></figure>

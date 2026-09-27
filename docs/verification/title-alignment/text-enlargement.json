@@ -1,0 +1,79 @@
+[
+  {
+    "path": "/",
+    "docWidth": 1440,
+    "expanded": true,
+    "mainScrollWidth": 1376,
+    "mainWidth": 1376
+  },
+  {
+    "path": "/projects",
+    "docWidth": 1440,
+    "expanded": true,
+    "mainScrollWidth": 1376,
+    "mainWidth": 1376
+  },
+  {
+    "path": "/blogs",
+    "docWidth": 1440,
+    "expanded": true,
+    "mainScrollWidth": 1376,
+    "mainWidth": 1376
+  },
+  {
+    "path": "/speaker",
+    "docWidth": 1440,
+    "expanded": true,
+    "mainScrollWidth": 1376,
+    "mainWidth": 1376
+  },
+  {
+    "path": "/book",
+    "docWidth": 1440,
+    "expanded": true,
+    "mainScrollWidth": 1376,
+    "mainWidth": 1376
+  },
+  {
+    "path": "/manhwa",
+    "docWidth": 1440,
+    "expanded": true,
+    "mainScrollWidth": 1376,
+    "mainWidth": 1376
+  },
+  {
+    "path": "/photography",
+    "docWidth": 1440,
+    "expanded": true,
+    "mainScrollWidth": 1376,
+    "mainWidth": 1376
+  },
+  {
+    "path": "/about",
+    "docWidth": 1440,
+    "expanded": true,
+    "mainScrollWidth": 1376,
+    "mainWidth": 1376
+  },
+  {
+    "path": "/experience",
+    "docWidth": 1440,
+    "expanded": false,
+    "mainScrollWidth": 1376,
+    "mainWidth": 1376
+  },
+  {
+    "path": "/404",
+    "docWidth": 1440,
+    "expanded": false,
+    "mainScrollWidth": 1376,
+    "mainWidth": 1376
+  },
+  {
+    "path": "/blogs/state-management-in-reactjs",
+    "docWidth": 1440,
+    "expanded": false,
+    "mainScrollWidth": 1376,
+    "mainWidth": 1376
+  }
+]

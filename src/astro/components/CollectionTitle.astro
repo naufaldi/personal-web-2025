@@ -1,0 +1,32 @@
+---
+import '@/astro/styles/collection-title.css'
+
+const titles = {
+  '/': { lines: ['FALDI'], variant: 'home', spacer: 'collection-title' },
+  '/projects': { lines: ['PROJECTS'], variant: 'projects', spacer: 'archive-title' },
+  '/blogs': { lines: ['WRITING'], variant: 'writing', spacer: 'archive-title' },
+  '/speaker': { lines: ['IN GOOD', 'COMPANY'], variant: 'community', spacer: 'editorial-title' },
+  '/book': { lines: ['BOOKS'], variant: 'books', spacer: 'archive-title' },
+  '/manhwa': { lines: ['MANHWA'], variant: 'manhwa', spacer: 'archive-title' },
+  '/photography': { lines: ['PHOTOGRAPHY'], variant: 'photography', spacer: 'photography-title' },
+  '/about': { lines: ['ABOUT'], variant: 'about', spacer: 'editorial-title' },
+} as const
+interface Props { page: keyof typeof titles; reserve?: boolean }
+const { page, reserve = false } = Astro.props
+const { lines, variant, spacer } = titles[page]
+---
+<!-- Preserve the board's intrinsic grid tracks without duplicating its accessible heading. -->
+{reserve ? (
+  <div class:list={[spacer, 'collection-title-space', 'font-display']} aria-hidden="true">
+    {page === '/' ? <span class="home-title-text text-display">{lines[0]}</span> : lines.map((line, index) => <>{index > 0 && <br />}{line}</>)}
+  </div>
+) : (
+  <div class:list={['collection-heading-layer', `collection-heading-layer--${variant}`]}>
+    <h1 class:list={['collection-heading', 'font-display', `collection-heading--${variant}`]} data-title-lines={lines.length}>
+      {lines.map((line, index) => <>{index > 0 && <br />}{line}</>)}
+      {page === '/' && <span class="sr-only">: work, people, and everyday moments</span>}
+    </h1>
+    {page === '/' && <p class="collection-heading-label font-mono">COLLECTED BY</p>}
+  </div>
+)}
+<script>import '@/astro/scripts/collection-type'</script>

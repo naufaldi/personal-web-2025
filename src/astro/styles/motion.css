@@ -24,7 +24,7 @@ html[data-input=keyboard] :is(.artifact-face, .archive-face, .company-board figu
  html :is(.artifact-face, .archive-face, .company-board figure > a, button, .editorial-link) { transition: none !important; transform: none !important; }
 }
 
-html[data-collection-pending] :is(.collection-title, [data-artifact], [data-board] > h1, [data-board] > article, [data-board] > figure, [data-board] > a, .photography-title, .photograph) { opacity: 0; }
+html[data-collection-pending] :is(.collection-heading, [data-artifact], [data-board] > article, [data-board] > figure, [data-board] > a, .photograph) { opacity: 0; }
 @media (prefers-reduced-motion: reduce) {
- html[data-collection-pending] :is(.collection-title, [data-artifact], [data-board] > h1, [data-board] > article, [data-board] > figure, [data-board] > a, .photography-title, .photograph) { opacity: 1; }
+ html[data-collection-pending] :is(.collection-heading, [data-artifact], [data-board] > article, [data-board] > figure, [data-board] > a, .photograph) { opacity: 1; }
 }

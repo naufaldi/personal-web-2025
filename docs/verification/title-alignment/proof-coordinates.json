@@ -1,0 +1,57 @@
+{
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "origin": "http://127.0.0.1:4321",
+  "pages": [
+    {
+      "page": "home",
+      "headings": [
+        {
+          "text": "FALDI\n: work, people, and everyday moments",
+          "x": 40,
+          "y": 139,
+          "width": 596.75,
+          "height": 181.421875
+        }
+      ]
+    },
+    {
+      "page": "projects",
+      "headings": [
+        {
+          "text": "PROJECTS",
+          "x": 40,
+          "y": 139,
+          "width": 827.28125,
+          "height": 145.34375
+        }
+      ]
+    },
+    {
+      "page": "blogs",
+      "headings": [
+        {
+          "text": "WRITING",
+          "x": 40,
+          "y": 139,
+          "width": 686.828125,
+          "height": 145.34375
+        }
+      ]
+    },
+    {
+      "page": "speaker",
+      "headings": [
+        {
+          "text": "IN GOOD\nCOMPANY",
+          "x": 40,
+          "y": 139,
+          "width": 590.515625,
+          "height": 225.78125
+        }
+      ]
+    }
+  ]
+}

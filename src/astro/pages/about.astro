@@ -1,4 +1,5 @@
 ---
+import CollectionTitle from '@/astro/components/CollectionTitle.astro'
 import Document from '../layouts/Document.astro'
 import CollectionHeader from '../components/CollectionHeader.astro'
 import Photo from '../components/CollectionPhoto.astro'
@@ -19,8 +20,9 @@ const route = routes.find(route => route.path === '/about')!
   <div class="collection-layout inner-collection" data-editorial>
     <CollectionHeader />
     <main id="profile" tabindex="-1">
+      <CollectionTitle page="/about" />
       <div class="editorial-board about-board" data-board>
-        <h1 class="editorial-title font-display">ABOUT</h1>
+        <CollectionTitle page="/about" reserve />
         <p class="editorial-margin font-mono text-caption">People<br />Technology<br />Community<br />A more open web</p>
         <figure class="about-portrait"><Photo image={portrait} alt="Faldi outdoors in a blue shirt" eager /><figcaption>Profile /<br />Naufaldi Rafif Satriya</figcaption></figure>
         <div class="about-intro">

@@ -1,4 +1,5 @@
 ---
+import CollectionTitle from '@/astro/components/CollectionTitle.astro'
 import Archive from '../layouts/Archive.astro'
 import Artifact from '../components/ArchiveArtifact.astro'
 import Photo from '../components/CollectionPhoto.astro'
@@ -9,7 +10,7 @@ const featured = selectEntries(bookEntries, ['book-1', 'book-2', 'book-3'])
 ---
 <Archive path="/book" title="Books" entries={bookEntries} categories={['All', 'Read', 'Reading', 'Wishlist', 'Recommended']}>
   <div class="archive-board shelf-board books-board" data-board>
-    <h1 class="archive-title font-display">BOOKS</h1>
+    <CollectionTitle page="/book" reserve />
     <p class="archive-margin font-mono text-caption">COLLECTED<br />BY<br /><br />Reading<br />Ideas<br />Always more</p>
     {featured.map((entry, index) => <Artifact entry={entry} number={index + 1} placement={`shelf-cover shelf-cover-${index + 1}`} />)}
     <figure class="shelf-life shelf-life-left"><Photo image={portrait} alt="Faldi outdoors" /><figcaption class="font-mono text-caption">Beyond the page /<br />Room to think</figcaption></figure>

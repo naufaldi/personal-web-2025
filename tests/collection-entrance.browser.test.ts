@@ -46,7 +46,7 @@ test('real collection navigation preserves C and excludes keyboard, history, has
         window.__native=animations.filter(a=>a.animationName==='page-in'||a.animationName==='page-out').map(a=>({name:a.animationName,duration:a.effect.getTiming().duration,delay:a.effect.getTiming().delay,frames:a.effect.getKeyframes().map(f=>({opacity:f.opacity,transform:f.transform}))}));
         if(document.documentElement.dataset.collectionArrival!=='pointer')return;
         window.__handoff={prepared:document.documentElement.hasAttribute('data-collection-pending')||animations.filter(a=>a.playState==='paused').length>1,
-          firstOpacity:getComputedStyle(document.querySelector('.collection-title, [data-board] > h1, .photography-title')).opacity,
+          firstOpacity:getComputedStyle(document.querySelector('.collection-heading')).opacity,
           incomingOpacity:getComputedStyle(document.documentElement,'::view-transition-new(root)').opacity,
           outgoing:animations.some(a=>a.animationName==='page-out'),
           exit:animations.find(a=>a.animationName==='page-out')?.effect.getKeyframes().map(f=>({opacity:f.opacity,transform:f.transform})),

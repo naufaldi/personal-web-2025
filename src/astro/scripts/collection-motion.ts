@@ -28,7 +28,7 @@ function enterCollection(afterExit?: Promise<void>) {
   started = true
   const desktop = matchMedia('(min-width: 64rem)').matches
   const bounds = desktop ? main.getBoundingClientRect() : { top: 0, bottom: innerHeight }
-  const elements = [...main.querySelectorAll<HTMLElement>('.collection-title, [data-artifact], [data-board] > h1, [data-board] > article, [data-board] > figure, [data-board] > a, .photography-title, .photograph')]
+  const elements = [...main.querySelectorAll<HTMLElement>('.collection-heading, [data-artifact], [data-board] > article, [data-board] > figure, [data-board] > a, .photograph')]
   const visible = elements.filter(element => {
     const rect = element.getBoundingClientRect()
     return rect.width > 0 && rect.height > 0 && rect.bottom > bounds.top && rect.top < bounds.bottom

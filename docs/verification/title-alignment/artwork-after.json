@@ -1,0 +1,4844 @@
+[
+  {
+    "w": 1440,
+    "h": 900,
+    "path": "/",
+    "artifacts": [
+      {
+        "classes": "artifact artifact--portrait",
+        "rect": {
+          "bottom": 878,
+          "height": 615.84375,
+          "left": 268.65625,
+          "right": 714,
+          "top": 262.15625,
+          "width": 445.34375,
+          "x": 268.65625,
+          "y": 262.15625
+        }
+      },
+      {
+        "classes": "artifact artifact--software",
+        "rect": {
+          "bottom": 434.59375,
+          "height": 270.96875,
+          "left": 840.328125,
+          "right": 1171.328125,
+          "top": 163.625,
+          "width": 331,
+          "x": 840.328125,
+          "y": 163.625
+        }
+      },
+      {
+        "classes": "artifact artifact--album",
+        "rect": {
+          "bottom": 459.21875,
+          "height": 320.21875,
+          "left": 1183.328125,
+          "right": 1400,
+          "top": 139,
+          "width": 216.671875,
+          "x": 1183.328125,
+          "y": 139
+        }
+      },
+      {
+        "classes": "artifact artifact--community",
+        "rect": {
+          "bottom": 730.1875,
+          "height": 270.96875,
+          "left": 726,
+          "right": 1171.328125,
+          "top": 459.21875,
+          "width": 445.328125,
+          "x": 726,
+          "y": 459.21875
+        }
+      },
+      {
+        "classes": "artifact artifact--library",
+        "rect": {
+          "bottom": 878,
+          "height": 147.8125,
+          "left": 726,
+          "right": 1057,
+          "top": 730.1875,
+          "width": 331,
+          "x": 726,
+          "y": 730.1875
+        }
+      },
+      {
+        "classes": "artifact artifact--personal",
+        "rect": {
+          "bottom": 878,
+          "height": 344.875,
+          "left": 1183.328125,
+          "right": 1400,
+          "top": 533.125,
+          "width": 216.671875,
+          "x": 1183.328125,
+          "y": 533.125
+        }
+      },
+      {
+        "classes": "artifact artifact--note",
+        "rect": {
+          "bottom": 878,
+          "height": 369.515625,
+          "left": 40,
+          "right": 256.65625,
+          "top": 508.484375,
+          "width": 216.65625,
+          "x": 40,
+          "y": 508.484375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 320.421875,
+      "height": 181.421875,
+      "left": 40,
+      "right": 636.75,
+      "top": 139,
+      "width": 596.75,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "path": "/projects",
+    "artifacts": [
+      {
+        "classes": "archive-artifact project-artifact project-artifact-1",
+        "rect": {
+          "bottom": 817.984375,
+          "height": 521.125,
+          "left": 268.65625,
+          "right": 714,
+          "top": 296.859375,
+          "width": 445.34375,
+          "x": 268.65625,
+          "y": 296.859375
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-2",
+        "rect": {
+          "bottom": 484.46875,
+          "height": 291.828125,
+          "left": 840.328125,
+          "right": 1171.328125,
+          "top": 192.640625,
+          "width": 331,
+          "x": 840.328125,
+          "y": 192.640625
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-3",
+        "rect": {
+          "bottom": 817.984375,
+          "height": 312.671875,
+          "left": 840.328125,
+          "right": 1171.328125,
+          "top": 505.3125,
+          "width": 331,
+          "x": 840.328125,
+          "y": 505.3125
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-4",
+        "rect": {
+          "bottom": 755.453125,
+          "height": 396.0625,
+          "left": 1183.328125,
+          "right": 1400,
+          "top": 359.390625,
+          "width": 216.671875,
+          "x": 1183.328125,
+          "y": 359.390625
+        }
+      },
+      {
+        "classes": "archive-decoration project-workspace",
+        "rect": {
+          "bottom": 547,
+          "height": 187.609375,
+          "left": 40,
+          "right": 256.65625,
+          "top": 359.390625,
+          "width": 216.65625,
+          "x": 40,
+          "y": 359.390625
+        }
+      },
+      {
+        "classes": "archive-decoration project-personal",
+        "rect": {
+          "bottom": 338.546875,
+          "height": 145.90625,
+          "left": 1183.328125,
+          "right": 1400,
+          "top": 192.640625,
+          "width": 216.671875,
+          "x": 1183.328125,
+          "y": 192.640625
+        }
+      },
+      {
+        "classes": "archive-decoration project-note archive-paper",
+        "rect": {
+          "bottom": 817.984375,
+          "height": 250.140625,
+          "left": 40,
+          "right": 256.65625,
+          "top": 567.84375,
+          "width": 216.65625,
+          "x": 40,
+          "y": 567.84375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 284.34375,
+      "height": 145.34375,
+      "left": 40,
+      "right": 867.28125,
+      "top": 139,
+      "width": 827.28125,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "path": "/blogs",
+    "artifacts": [
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-1",
+        "rect": {
+          "bottom": 818,
+          "height": 479.453125,
+          "left": 154.328125,
+          "right": 599.65625,
+          "top": 338.546875,
+          "width": 445.328125,
+          "x": 154.328125,
+          "y": 338.546875
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-2",
+        "rect": {
+          "bottom": 505.3125,
+          "height": 312.671875,
+          "left": 726,
+          "right": 1057,
+          "top": 192.640625,
+          "width": 331,
+          "x": 726,
+          "y": 192.640625
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-3",
+        "rect": {
+          "bottom": 505.3125,
+          "height": 312.671875,
+          "left": 1069,
+          "right": 1400,
+          "top": 192.640625,
+          "width": 331,
+          "x": 1069,
+          "y": 192.640625
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-4",
+        "rect": {
+          "bottom": 818,
+          "height": 291.84375,
+          "left": 726,
+          "right": 1057,
+          "top": 526.15625,
+          "width": 331,
+          "x": 726,
+          "y": 526.15625
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-5",
+        "rect": {
+          "bottom": 818,
+          "height": 291.84375,
+          "left": 1069,
+          "right": 1400,
+          "top": 526.15625,
+          "width": 331,
+          "x": 1069,
+          "y": 526.15625
+        }
+      },
+      {
+        "classes": "archive-decoration writing-life",
+        "rect": {
+          "bottom": 818,
+          "height": 291.84375,
+          "left": 40,
+          "right": 142.328125,
+          "top": 526.15625,
+          "width": 102.328125,
+          "x": 40,
+          "y": 526.15625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 284.34375,
+      "height": 145.34375,
+      "left": 40,
+      "right": 726.828125,
+      "top": 139,
+      "width": 686.828125,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "path": "/speaker",
+    "artifacts": [
+      {
+        "classes": "company-gathering",
+        "rect": {
+          "bottom": 818,
+          "height": 475.3125,
+          "left": 383,
+          "right": 828.328125,
+          "top": 342.6875,
+          "width": 445.328125,
+          "x": 383,
+          "y": 342.6875
+        }
+      },
+      {
+        "classes": "company-mentoring",
+        "rect": {
+          "bottom": 433.21875,
+          "height": 294.21875,
+          "left": 954.65625,
+          "right": 1400,
+          "top": 139,
+          "width": 445.34375,
+          "x": 954.65625,
+          "y": 139
+        }
+      },
+      {
+        "classes": "company-notes",
+        "rect": {
+          "bottom": 818,
+          "height": 339.515625,
+          "left": 40,
+          "right": 371,
+          "top": 478.484375,
+          "width": 331,
+          "x": 40,
+          "y": 478.484375
+        }
+      },
+      {
+        "classes": "company-workshop",
+        "rect": {
+          "bottom": 818,
+          "height": 362.140625,
+          "left": 840.328125,
+          "right": 1171.328125,
+          "top": 455.859375,
+          "width": 331,
+          "x": 840.328125,
+          "y": 455.859375
+        }
+      },
+      {
+        "classes": "company-people",
+        "rect": {
+          "bottom": 818,
+          "height": 316.875,
+          "left": 1183.328125,
+          "right": 1400,
+          "top": 501.125,
+          "width": 216.671875,
+          "x": 1183.328125,
+          "y": 501.125
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 364.78125,
+      "height": 225.78125,
+      "left": 40,
+      "right": 630.515625,
+      "top": 139,
+      "width": 590.515625,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "path": "/book",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 818,
+          "height": 543.203125,
+          "left": 268.65625,
+          "right": 714,
+          "top": 274.796875,
+          "width": 445.34375,
+          "x": 268.65625,
+          "y": 274.796875
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 501.125,
+          "height": 339.5,
+          "left": 726,
+          "right": 1057,
+          "top": 161.625,
+          "width": 331,
+          "x": 726,
+          "y": 161.625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 818,
+          "height": 294.234375,
+          "left": 840.328125,
+          "right": 1171.328125,
+          "top": 523.765625,
+          "width": 331,
+          "x": 840.328125,
+          "y": 523.765625
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 818,
+          "height": 339.5,
+          "left": 40,
+          "right": 256.65625,
+          "top": 478.5,
+          "width": 216.65625,
+          "x": 40,
+          "y": 478.5
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 478.5,
+          "height": 339.5,
+          "left": 1183.328125,
+          "right": 1400,
+          "top": 139,
+          "width": 216.671875,
+          "x": 1183.328125,
+          "y": 139
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 818,
+          "height": 294.234375,
+          "left": 1183.328125,
+          "right": 1400,
+          "top": 523.765625,
+          "width": 216.671875,
+          "x": 1183.328125,
+          "y": 523.765625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 284.34375,
+      "height": 145.34375,
+      "left": 40,
+      "right": 602.125,
+      "top": 139,
+      "width": 562.125,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "path": "/manhwa",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 818,
+          "height": 543.203125,
+          "left": 268.65625,
+          "right": 714,
+          "top": 274.796875,
+          "width": 445.34375,
+          "x": 268.65625,
+          "y": 274.796875
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 478.5,
+          "height": 339.5,
+          "left": 840.328125,
+          "right": 1057,
+          "top": 139,
+          "width": 216.671875,
+          "x": 840.328125,
+          "y": 139
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 818,
+          "height": 316.875,
+          "left": 726,
+          "right": 942.65625,
+          "top": 501.125,
+          "width": 216.65625,
+          "x": 726,
+          "y": 501.125
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-4",
+        "rect": {
+          "bottom": 818,
+          "height": 316.875,
+          "left": 954.65625,
+          "right": 1171.328125,
+          "top": 501.125,
+          "width": 216.671875,
+          "x": 954.65625,
+          "y": 501.125
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 818,
+          "height": 339.5,
+          "left": 40,
+          "right": 256.65625,
+          "top": 478.5,
+          "width": 216.65625,
+          "x": 40,
+          "y": 478.5
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 478.5,
+          "height": 339.5,
+          "left": 1183.328125,
+          "right": 1400,
+          "top": 139,
+          "width": 216.671875,
+          "x": 1183.328125,
+          "y": 139
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 818,
+          "height": 294.234375,
+          "left": 1183.328125,
+          "right": 1400,
+          "top": 523.765625,
+          "width": 216.671875,
+          "x": 1183.328125,
+          "y": 523.765625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 284.34375,
+      "height": 145.34375,
+      "left": 40,
+      "right": 770.734375,
+      "top": 139,
+      "width": 730.734375,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "path": "/photography",
+    "artifacts": [
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 432.28125,
+          "height": 209.390625,
+          "left": 726,
+          "right": 1041,
+          "top": 222.890625,
+          "width": 315,
+          "x": 726,
+          "y": 222.890625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 653.96875,
+          "height": 234.015625,
+          "left": 40,
+          "right": 248.65625,
+          "top": 419.953125,
+          "width": 208.65625,
+          "x": 40,
+          "y": 419.953125
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 888,
+          "height": 603.53125,
+          "left": 268.65625,
+          "right": 690,
+          "top": 284.46875,
+          "width": 421.34375,
+          "x": 268.65625,
+          "y": 284.46875
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 555.4375,
+          "height": 270.96875,
+          "left": 1077,
+          "right": 1400,
+          "top": 284.46875,
+          "width": 323,
+          "x": 1077,
+          "y": 284.46875
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 666.296875,
+          "height": 209.390625,
+          "left": 726,
+          "right": 1057,
+          "top": 456.90625,
+          "width": 331,
+          "x": 726,
+          "y": 456.90625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 888,
+          "height": 283.296875,
+          "left": 1093,
+          "right": 1400,
+          "top": 604.703125,
+          "width": 307,
+          "x": 1093,
+          "y": 604.703125
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 888,
+          "height": 209.390625,
+          "left": 40,
+          "right": 256.65625,
+          "top": 678.609375,
+          "width": 216.65625,
+          "x": 40,
+          "y": 678.609375
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 888,
+          "height": 209.390625,
+          "left": 726,
+          "right": 1049,
+          "top": 678.609375,
+          "width": 323,
+          "x": 726,
+          "y": 678.609375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 278.6875,
+      "height": 139.6875,
+      "left": 40,
+      "right": 1142,
+      "top": 139,
+      "width": 1102,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "path": "/about",
+    "artifacts": [
+      {
+        "classes": "about-portrait",
+        "rect": {
+          "bottom": 818,
+          "height": 565.84375,
+          "left": 268.65625,
+          "right": 714,
+          "top": 252.15625,
+          "width": 445.34375,
+          "x": 268.65625,
+          "y": 252.15625
+        }
+      },
+      {
+        "classes": "about-workspace",
+        "rect": {
+          "bottom": 818,
+          "height": 294.234375,
+          "left": 1183.328125,
+          "right": 1400,
+          "top": 523.765625,
+          "width": 216.671875,
+          "x": 1183.328125,
+          "y": 523.765625
+        }
+      },
+      {
+        "classes": "about-community",
+        "rect": {
+          "bottom": 818,
+          "height": 294.234375,
+          "left": 726,
+          "right": 1171.328125,
+          "top": 523.765625,
+          "width": 445.328125,
+          "x": 726,
+          "y": 523.765625
+        }
+      },
+      {
+        "classes": "about-tools",
+        "rect": {
+          "bottom": 636.921875,
+          "height": 181.0625,
+          "left": 40,
+          "right": 256.65625,
+          "top": 455.859375,
+          "width": 216.65625,
+          "x": 40,
+          "y": 455.859375
+        }
+      },
+      {
+        "classes": "about-quiet",
+        "rect": {
+          "bottom": 818,
+          "height": 158.4375,
+          "left": 40,
+          "right": 256.65625,
+          "top": 659.5625,
+          "width": 216.65625,
+          "x": 40,
+          "y": 659.5625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 284.34375,
+      "height": 145.34375,
+      "left": 40,
+      "right": 597.546875,
+      "top": 139,
+      "width": 557.546875,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1280,
+    "h": 720,
+    "path": "/",
+    "artifacts": [
+      {
+        "classes": "artifact artifact--portrait",
+        "rect": {
+          "bottom": 698,
+          "height": 465.84375,
+          "left": 242,
+          "right": 634,
+          "top": 232.15625,
+          "width": 392,
+          "x": 242,
+          "y": 232.15625
+        }
+      },
+      {
+        "classes": "artifact artifact--software",
+        "rect": {
+          "bottom": 362.59375,
+          "height": 204.96875,
+          "left": 747,
+          "right": 1038,
+          "top": 157.625,
+          "width": 291,
+          "x": 747,
+          "y": 157.625
+        }
+      },
+      {
+        "classes": "artifact artifact--album",
+        "rect": {
+          "bottom": 381.21875,
+          "height": 242.21875,
+          "left": 1050,
+          "right": 1240,
+          "top": 139,
+          "width": 190,
+          "x": 1050,
+          "y": 139
+        }
+      },
+      {
+        "classes": "artifact artifact--community",
+        "rect": {
+          "bottom": 586.1875,
+          "height": 204.96875,
+          "left": 646,
+          "right": 1038,
+          "top": 381.21875,
+          "width": 392,
+          "x": 646,
+          "y": 381.21875
+        }
+      },
+      {
+        "classes": "artifact artifact--library",
+        "rect": {
+          "bottom": 698,
+          "height": 111.8125,
+          "left": 646,
+          "right": 937,
+          "top": 586.1875,
+          "width": 291,
+          "x": 646,
+          "y": 586.1875
+        }
+      },
+      {
+        "classes": "artifact artifact--personal",
+        "rect": {
+          "bottom": 698,
+          "height": 260.875,
+          "left": 1050,
+          "right": 1240,
+          "top": 437.125,
+          "width": 190,
+          "x": 1050,
+          "y": 437.125
+        }
+      },
+      {
+        "classes": "artifact artifact--note",
+        "rect": {
+          "bottom": 698,
+          "height": 279.515625,
+          "left": 40,
+          "right": 230,
+          "top": 418.484375,
+          "width": 190,
+          "x": 40,
+          "y": 418.484375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 288.03125,
+      "height": 149.03125,
+      "left": 40,
+      "right": 530.1875,
+      "top": 139,
+      "width": 490.1875,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1280,
+    "h": 720,
+    "path": "/projects",
+    "artifacts": [
+      {
+        "classes": "archive-artifact project-artifact project-artifact-1",
+        "rect": {
+          "bottom": 637.984375,
+          "height": 372.484375,
+          "left": 242,
+          "right": 634,
+          "top": 265.5,
+          "width": 392,
+          "x": 242,
+          "y": 265.5
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-2",
+        "rect": {
+          "bottom": 399.59375,
+          "height": 208.59375,
+          "left": 747,
+          "right": 1038,
+          "top": 191,
+          "width": 291,
+          "x": 747,
+          "y": 191
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-3",
+        "rect": {
+          "bottom": 637.984375,
+          "height": 223.5,
+          "left": 747,
+          "right": 1038,
+          "top": 414.484375,
+          "width": 291,
+          "x": 747,
+          "y": 414.484375
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-4",
+        "rect": {
+          "bottom": 593.296875,
+          "height": 283.109375,
+          "left": 1050,
+          "right": 1240,
+          "top": 310.1875,
+          "width": 190,
+          "x": 1050,
+          "y": 310.1875
+        }
+      },
+      {
+        "classes": "archive-decoration project-workspace",
+        "rect": {
+          "bottom": 444.296875,
+          "height": 134.109375,
+          "left": 40,
+          "right": 230,
+          "top": 310.1875,
+          "width": 190,
+          "x": 40,
+          "y": 310.1875
+        }
+      },
+      {
+        "classes": "archive-decoration project-personal",
+        "rect": {
+          "bottom": 295.296875,
+          "height": 104.296875,
+          "left": 1050,
+          "right": 1240,
+          "top": 191,
+          "width": 190,
+          "x": 1050,
+          "y": 191
+        }
+      },
+      {
+        "classes": "archive-decoration project-note archive-paper",
+        "rect": {
+          "bottom": 637.984375,
+          "height": 178.796875,
+          "left": 40,
+          "right": 230,
+          "top": 459.1875,
+          "width": 190,
+          "x": 40,
+          "y": 459.1875
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 255.28125,
+      "height": 116.28125,
+      "left": 40,
+      "right": 701.828125,
+      "top": 139,
+      "width": 661.828125,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1280,
+    "h": 720,
+    "path": "/blogs",
+    "artifacts": [
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-1",
+        "rect": {
+          "bottom": 637.984375,
+          "height": 342.6875,
+          "left": 141,
+          "right": 533,
+          "top": 295.296875,
+          "width": 392,
+          "x": 141,
+          "y": 295.296875
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-2",
+        "rect": {
+          "bottom": 414.484375,
+          "height": 223.484375,
+          "left": 646,
+          "right": 937,
+          "top": 191,
+          "width": 291,
+          "x": 646,
+          "y": 191
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-3",
+        "rect": {
+          "bottom": 414.484375,
+          "height": 223.484375,
+          "left": 949,
+          "right": 1240,
+          "top": 191,
+          "width": 291,
+          "x": 949,
+          "y": 191
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-4",
+        "rect": {
+          "bottom": 637.984375,
+          "height": 208.59375,
+          "left": 646,
+          "right": 937,
+          "top": 429.390625,
+          "width": 291,
+          "x": 646,
+          "y": 429.390625
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-5",
+        "rect": {
+          "bottom": 637.984375,
+          "height": 208.59375,
+          "left": 949,
+          "right": 1240,
+          "top": 429.390625,
+          "width": 291,
+          "x": 949,
+          "y": 429.390625
+        }
+      },
+      {
+        "classes": "archive-decoration writing-life",
+        "rect": {
+          "bottom": 637.984375,
+          "height": 208.59375,
+          "left": 40,
+          "right": 129,
+          "top": 429.390625,
+          "width": 89,
+          "x": 40,
+          "y": 429.390625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 255.28125,
+      "height": 116.28125,
+      "left": 40,
+      "right": 589.46875,
+      "top": 139,
+      "width": 549.46875,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1280,
+    "h": 720,
+    "path": "/speaker",
+    "artifacts": [
+      {
+        "classes": "company-gathering",
+        "rect": {
+          "bottom": 638,
+          "height": 349.3125,
+          "left": 343,
+          "right": 735,
+          "top": 288.6875,
+          "width": 392,
+          "x": 343,
+          "y": 288.6875
+        }
+      },
+      {
+        "classes": "company-mentoring",
+        "rect": {
+          "bottom": 355.21875,
+          "height": 216.21875,
+          "left": 848,
+          "right": 1240,
+          "top": 139,
+          "width": 392,
+          "x": 848,
+          "y": 139
+        }
+      },
+      {
+        "classes": "company-notes",
+        "rect": {
+          "bottom": 638,
+          "height": 249.515625,
+          "left": 40,
+          "right": 331,
+          "top": 388.484375,
+          "width": 291,
+          "x": 40,
+          "y": 388.484375
+        }
+      },
+      {
+        "classes": "company-workshop",
+        "rect": {
+          "bottom": 638,
+          "height": 266.140625,
+          "left": 747,
+          "right": 1038,
+          "top": 371.859375,
+          "width": 291,
+          "x": 747,
+          "y": 371.859375
+        }
+      },
+      {
+        "classes": "company-people",
+        "rect": {
+          "bottom": 638,
+          "height": 232.875,
+          "left": 1050,
+          "right": 1240,
+          "top": 405.125,
+          "width": 190,
+          "x": 1050,
+          "y": 405.125
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 336.53125,
+      "height": 197.53125,
+      "left": 40,
+      "right": 556.703125,
+      "top": 139,
+      "width": 516.703125,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1280,
+    "h": 720,
+    "path": "/book",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 638,
+          "height": 399.203125,
+          "left": 242,
+          "right": 634,
+          "top": 238.796875,
+          "width": 392,
+          "x": 242,
+          "y": 238.796875
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 405.125,
+          "height": 249.5,
+          "left": 646,
+          "right": 937,
+          "top": 155.625,
+          "width": 291,
+          "x": 646,
+          "y": 155.625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 638,
+          "height": 216.234375,
+          "left": 747,
+          "right": 1038,
+          "top": 421.765625,
+          "width": 291,
+          "x": 747,
+          "y": 421.765625
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 638,
+          "height": 249.5,
+          "left": 40,
+          "right": 230,
+          "top": 388.5,
+          "width": 190,
+          "x": 40,
+          "y": 388.5
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 388.5,
+          "height": 249.5,
+          "left": 1050,
+          "right": 1240,
+          "top": 139,
+          "width": 190,
+          "x": 1050,
+          "y": 139
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 638,
+          "height": 216.234375,
+          "left": 1050,
+          "right": 1240,
+          "top": 421.765625,
+          "width": 190,
+          "x": 1050,
+          "y": 421.765625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 255.28125,
+      "height": 116.28125,
+      "left": 40,
+      "right": 489.703125,
+      "top": 139,
+      "width": 449.703125,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1280,
+    "h": 720,
+    "path": "/manhwa",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 638,
+          "height": 399.203125,
+          "left": 242,
+          "right": 634,
+          "top": 238.796875,
+          "width": 392,
+          "x": 242,
+          "y": 238.796875
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 388.5,
+          "height": 249.5,
+          "left": 747,
+          "right": 937,
+          "top": 139,
+          "width": 190,
+          "x": 747,
+          "y": 139
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 638,
+          "height": 232.875,
+          "left": 646,
+          "right": 836,
+          "top": 405.125,
+          "width": 190,
+          "x": 646,
+          "y": 405.125
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-4",
+        "rect": {
+          "bottom": 638,
+          "height": 232.875,
+          "left": 848,
+          "right": 1038,
+          "top": 405.125,
+          "width": 190,
+          "x": 848,
+          "y": 405.125
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 638,
+          "height": 249.5,
+          "left": 40,
+          "right": 230,
+          "top": 388.5,
+          "width": 190,
+          "x": 40,
+          "y": 388.5
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 388.5,
+          "height": 249.5,
+          "left": 1050,
+          "right": 1240,
+          "top": 139,
+          "width": 190,
+          "x": 1050,
+          "y": 139
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 638,
+          "height": 216.234375,
+          "left": 1050,
+          "right": 1240,
+          "top": 421.765625,
+          "width": 190,
+          "x": 1050,
+          "y": 421.765625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 255.28125,
+      "height": 116.28125,
+      "left": 40,
+      "right": 624.59375,
+      "top": 139,
+      "width": 584.59375,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1280,
+    "h": 720,
+    "path": "/photography",
+    "artifacts": [
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 363.28125,
+          "height": 158.390625,
+          "left": 646,
+          "right": 921,
+          "top": 204.890625,
+          "width": 275,
+          "x": 646,
+          "y": 204.890625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 530.96875,
+          "height": 177.015625,
+          "left": 40,
+          "right": 222,
+          "top": 353.953125,
+          "width": 182,
+          "x": 40,
+          "y": 353.953125
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 708,
+          "height": 456.53125,
+          "left": 242,
+          "right": 610,
+          "top": 251.46875,
+          "width": 368,
+          "x": 242,
+          "y": 251.46875
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 456.4375,
+          "height": 204.96875,
+          "left": 957,
+          "right": 1240,
+          "top": 251.46875,
+          "width": 283,
+          "x": 957,
+          "y": 251.46875
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 540.296875,
+          "height": 158.390625,
+          "left": 646,
+          "right": 937,
+          "top": 381.90625,
+          "width": 291,
+          "x": 646,
+          "y": 381.90625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 708,
+          "height": 214.296875,
+          "left": 973,
+          "right": 1240,
+          "top": 493.703125,
+          "width": 267,
+          "x": 973,
+          "y": 493.703125
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 708,
+          "height": 158.390625,
+          "left": 40,
+          "right": 230,
+          "top": 549.609375,
+          "width": 190,
+          "x": 40,
+          "y": 549.609375
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 708,
+          "height": 158.390625,
+          "left": 646,
+          "right": 929,
+          "top": 549.609375,
+          "width": 283,
+          "x": 646,
+          "y": 549.609375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 263.15625,
+      "height": 124.15625,
+      "left": 40,
+      "right": 1019.625,
+      "top": 139,
+      "width": 979.625,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1280,
+    "h": 720,
+    "path": "/about",
+    "artifacts": [
+      {
+        "classes": "about-portrait",
+        "rect": {
+          "bottom": 638,
+          "height": 415.84375,
+          "left": 242,
+          "right": 634,
+          "top": 222.15625,
+          "width": 392,
+          "x": 242,
+          "y": 222.15625
+        }
+      },
+      {
+        "classes": "about-workspace",
+        "rect": {
+          "bottom": 638,
+          "height": 216.234375,
+          "left": 1050,
+          "right": 1240,
+          "top": 421.765625,
+          "width": 190,
+          "x": 1050,
+          "y": 421.765625
+        }
+      },
+      {
+        "classes": "about-community",
+        "rect": {
+          "bottom": 638,
+          "height": 216.234375,
+          "left": 646,
+          "right": 1038,
+          "top": 421.765625,
+          "width": 392,
+          "x": 646,
+          "y": 421.765625
+        }
+      },
+      {
+        "classes": "about-tools",
+        "rect": {
+          "bottom": 504.921875,
+          "height": 133.0625,
+          "left": 40,
+          "right": 230,
+          "top": 371.859375,
+          "width": 190,
+          "x": 40,
+          "y": 371.859375
+        }
+      },
+      {
+        "classes": "about-quiet",
+        "rect": {
+          "bottom": 638,
+          "height": 116.4375,
+          "left": 40,
+          "right": 230,
+          "top": 521.5625,
+          "width": 190,
+          "x": 40,
+          "y": 521.5625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 255.28125,
+      "height": 116.28125,
+      "left": 40,
+      "right": 486.03125,
+      "top": 139,
+      "width": 446.03125,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1024,
+    "h": 768,
+    "path": "/",
+    "artifacts": [
+      {
+        "classes": "artifact artifact--portrait",
+        "rect": {
+          "bottom": 746,
+          "height": 505.84375,
+          "left": 199.328125,
+          "right": 506,
+          "top": 240.15625,
+          "width": 306.671875,
+          "x": 199.328125,
+          "y": 240.15625
+        }
+      },
+      {
+        "classes": "artifact artifact--software",
+        "rect": {
+          "bottom": 381.796875,
+          "height": 222.578125,
+          "left": 597.65625,
+          "right": 824.65625,
+          "top": 159.21875,
+          "width": 227,
+          "x": 597.65625,
+          "y": 159.21875
+        }
+      },
+      {
+        "classes": "artifact artifact--album",
+        "rect": {
+          "bottom": 402.03125,
+          "height": 263.03125,
+          "left": 836.65625,
+          "right": 984,
+          "top": 139,
+          "width": 147.34375,
+          "x": 836.65625,
+          "y": 139
+        }
+      },
+      {
+        "classes": "artifact artifact--community",
+        "rect": {
+          "bottom": 624.59375,
+          "height": 222.5625,
+          "left": 518,
+          "right": 824.65625,
+          "top": 402.03125,
+          "width": 306.65625,
+          "x": 518,
+          "y": 402.03125
+        }
+      },
+      {
+        "classes": "artifact artifact--library",
+        "rect": {
+          "bottom": 746,
+          "height": 121.40625,
+          "left": 518,
+          "right": 745,
+          "top": 624.59375,
+          "width": 227,
+          "x": 518,
+          "y": 624.59375
+        }
+      },
+      {
+        "classes": "artifact artifact--personal",
+        "rect": {
+          "bottom": 746,
+          "height": 283.28125,
+          "left": 836.65625,
+          "right": 984,
+          "top": 462.71875,
+          "width": 147.34375,
+          "x": 836.65625,
+          "y": 462.71875
+        }
+      },
+      {
+        "classes": "artifact artifact--note",
+        "rect": {
+          "bottom": 746,
+          "height": 303.5,
+          "left": 40,
+          "right": 187.328125,
+          "top": 442.5,
+          "width": 147.328125,
+          "x": 40,
+          "y": 442.5
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 268.015625,
+      "height": 129.015625,
+      "left": 40,
+      "right": 464.359375,
+      "top": 139,
+      "width": 424.359375,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1024,
+    "h": 768,
+    "path": "/projects",
+    "artifacts": [
+      {
+        "classes": "archive-artifact project-artifact project-artifact-1",
+        "rect": {
+          "bottom": 686,
+          "height": 412.5,
+          "left": 199.328125,
+          "right": 506,
+          "top": 273.5,
+          "width": 306.671875,
+          "x": 199.328125,
+          "y": 273.5
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-2",
+        "rect": {
+          "bottom": 422,
+          "height": 231,
+          "left": 597.65625,
+          "right": 824.65625,
+          "top": 191,
+          "width": 227,
+          "x": 597.65625,
+          "y": 191
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-3",
+        "rect": {
+          "bottom": 686,
+          "height": 247.5,
+          "left": 597.65625,
+          "right": 824.65625,
+          "top": 438.5,
+          "width": 227,
+          "x": 597.65625,
+          "y": 438.5
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-4",
+        "rect": {
+          "bottom": 636.5,
+          "height": 313.5,
+          "left": 836.65625,
+          "right": 984,
+          "top": 323,
+          "width": 147.34375,
+          "x": 836.65625,
+          "y": 323
+        }
+      },
+      {
+        "classes": "archive-decoration project-workspace",
+        "rect": {
+          "bottom": 471.5,
+          "height": 148.5,
+          "left": 40,
+          "right": 187.328125,
+          "top": 323,
+          "width": 147.328125,
+          "x": 40,
+          "y": 323
+        }
+      },
+      {
+        "classes": "archive-decoration project-personal",
+        "rect": {
+          "bottom": 306.5,
+          "height": 115.5,
+          "left": 836.65625,
+          "right": 984,
+          "top": 191,
+          "width": 147.34375,
+          "x": 836.65625,
+          "y": 191
+        }
+      },
+      {
+        "classes": "archive-decoration project-note archive-paper",
+        "rect": {
+          "bottom": 686,
+          "height": 198,
+          "left": 40,
+          "right": 187.328125,
+          "top": 488,
+          "width": 147.328125,
+          "x": 40,
+          "y": 488
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 246,
+      "height": 107,
+      "left": 40,
+      "right": 649.046875,
+      "top": 139,
+      "width": 609.046875,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1024,
+    "h": 768,
+    "path": "/blogs",
+    "artifacts": [
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-1",
+        "rect": {
+          "bottom": 686,
+          "height": 379.5,
+          "left": 119.65625,
+          "right": 426.328125,
+          "top": 306.5,
+          "width": 306.671875,
+          "x": 119.65625,
+          "y": 306.5
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-2",
+        "rect": {
+          "bottom": 438.5,
+          "height": 247.5,
+          "left": 517.984375,
+          "right": 744.984375,
+          "top": 191,
+          "width": 227,
+          "x": 517.984375,
+          "y": 191
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-3",
+        "rect": {
+          "bottom": 438.5,
+          "height": 247.5,
+          "left": 756.984375,
+          "right": 983.984375,
+          "top": 191,
+          "width": 227,
+          "x": 756.984375,
+          "y": 191
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-4",
+        "rect": {
+          "bottom": 686,
+          "height": 231,
+          "left": 517.984375,
+          "right": 744.984375,
+          "top": 455,
+          "width": 227,
+          "x": 517.984375,
+          "y": 455
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-5",
+        "rect": {
+          "bottom": 686,
+          "height": 231,
+          "left": 756.984375,
+          "right": 983.984375,
+          "top": 455,
+          "width": 227,
+          "x": 756.984375,
+          "y": 455
+        }
+      },
+      {
+        "classes": "archive-decoration writing-life",
+        "rect": {
+          "bottom": 686,
+          "height": 231,
+          "left": 40,
+          "right": 107.65625,
+          "top": 455,
+          "width": 67.65625,
+          "x": 40,
+          "y": 455
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 246,
+      "height": 107,
+      "left": 40,
+      "right": 545.65625,
+      "top": 139,
+      "width": 505.65625,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1024,
+    "h": 768,
+    "path": "/speaker",
+    "artifacts": [
+      {
+        "classes": "company-gathering",
+        "rect": {
+          "bottom": 686,
+          "height": 382.90625,
+          "left": 279,
+          "right": 585.65625,
+          "top": 303.09375,
+          "width": 306.65625,
+          "x": 279,
+          "y": 303.09375
+        }
+      },
+      {
+        "classes": "company-mentoring",
+        "rect": {
+          "bottom": 376.03125,
+          "height": 237.03125,
+          "left": 677.328125,
+          "right": 983.984375,
+          "top": 139,
+          "width": 306.65625,
+          "x": 677.328125,
+          "y": 139
+        }
+      },
+      {
+        "classes": "company-notes",
+        "rect": {
+          "bottom": 686,
+          "height": 273.5,
+          "left": 40,
+          "right": 267,
+          "top": 412.5,
+          "width": 227,
+          "x": 40,
+          "y": 412.5
+        }
+      },
+      {
+        "classes": "company-workshop",
+        "rect": {
+          "bottom": 686,
+          "height": 291.734375,
+          "left": 597.65625,
+          "right": 824.65625,
+          "top": 394.265625,
+          "width": 227,
+          "x": 597.65625,
+          "y": 394.265625
+        }
+      },
+      {
+        "classes": "company-people",
+        "rect": {
+          "bottom": 686,
+          "height": 255.28125,
+          "left": 836.65625,
+          "right": 983.984375,
+          "top": 430.71875,
+          "width": 147.328125,
+          "x": 836.65625,
+          "y": 430.71875
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 299.5625,
+      "height": 160.5625,
+      "left": 40,
+      "right": 459.921875,
+      "top": 139,
+      "width": 419.921875,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1024,
+    "h": 768,
+    "path": "/book",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 686,
+          "height": 437.609375,
+          "left": 199.328125,
+          "right": 506,
+          "top": 248.390625,
+          "width": 306.671875,
+          "x": 199.328125,
+          "y": 248.390625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 430.71875,
+          "height": 273.5,
+          "left": 518,
+          "right": 745,
+          "top": 157.21875,
+          "width": 227,
+          "x": 518,
+          "y": 157.21875
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 686,
+          "height": 237.046875,
+          "left": 597.65625,
+          "right": 824.65625,
+          "top": 448.953125,
+          "width": 227,
+          "x": 597.65625,
+          "y": 448.953125
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 686,
+          "height": 273.5,
+          "left": 40,
+          "right": 187.328125,
+          "top": 412.5,
+          "width": 147.328125,
+          "x": 40,
+          "y": 412.5
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 412.5,
+          "height": 273.5,
+          "left": 836.65625,
+          "right": 984,
+          "top": 139,
+          "width": 147.34375,
+          "x": 836.65625,
+          "y": 139
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 686,
+          "height": 237.046875,
+          "left": 836.65625,
+          "right": 984,
+          "top": 448.953125,
+          "width": 147.34375,
+          "x": 836.65625,
+          "y": 448.953125
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 246,
+      "height": 107,
+      "left": 40,
+      "right": 453.84375,
+      "top": 139,
+      "width": 413.84375,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1024,
+    "h": 768,
+    "path": "/manhwa",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 686,
+          "height": 437.609375,
+          "left": 199.328125,
+          "right": 506,
+          "top": 248.390625,
+          "width": 306.671875,
+          "x": 199.328125,
+          "y": 248.390625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 412.5,
+          "height": 273.5,
+          "left": 597.65625,
+          "right": 744.984375,
+          "top": 139,
+          "width": 147.328125,
+          "x": 597.65625,
+          "y": 139
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 686,
+          "height": 255.28125,
+          "left": 518,
+          "right": 665.328125,
+          "top": 430.71875,
+          "width": 147.328125,
+          "x": 518,
+          "y": 430.71875
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-4",
+        "rect": {
+          "bottom": 686,
+          "height": 255.28125,
+          "left": 677.328125,
+          "right": 824.65625,
+          "top": 430.71875,
+          "width": 147.328125,
+          "x": 677.328125,
+          "y": 430.71875
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 686,
+          "height": 273.5,
+          "left": 40,
+          "right": 187.328125,
+          "top": 412.5,
+          "width": 147.328125,
+          "x": 40,
+          "y": 412.5
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 412.5,
+          "height": 273.5,
+          "left": 836.65625,
+          "right": 983.984375,
+          "top": 139,
+          "width": 147.328125,
+          "x": 836.65625,
+          "y": 139
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 686,
+          "height": 237.046875,
+          "left": 836.65625,
+          "right": 983.984375,
+          "top": 448.953125,
+          "width": 147.328125,
+          "x": 836.65625,
+          "y": 448.953125
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 246,
+      "height": 107,
+      "left": 40,
+      "right": 577.96875,
+      "top": 139,
+      "width": 537.96875,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1024,
+    "h": 768,
+    "path": "/photography",
+    "artifacts": [
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 381.671875,
+          "height": 171.984375,
+          "left": 518,
+          "right": 729,
+          "top": 209.6875,
+          "width": 211,
+          "x": 518,
+          "y": 209.6875
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 563.78125,
+          "height": 192.21875,
+          "left": 40,
+          "right": 179.328125,
+          "top": 371.5625,
+          "width": 139.328125,
+          "x": 40,
+          "y": 371.5625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 756,
+          "height": 495.71875,
+          "left": 199.328125,
+          "right": 482,
+          "top": 260.28125,
+          "width": 282.671875,
+          "x": 199.328125,
+          "y": 260.28125
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 482.84375,
+          "height": 222.5625,
+          "left": 765,
+          "right": 984,
+          "top": 260.28125,
+          "width": 219,
+          "x": 765,
+          "y": 260.28125
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 573.890625,
+          "height": 171.984375,
+          "left": 518,
+          "right": 745,
+          "top": 401.90625,
+          "width": 227,
+          "x": 518,
+          "y": 401.90625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 756,
+          "height": 232.6875,
+          "left": 781,
+          "right": 984,
+          "top": 523.3125,
+          "width": 203,
+          "x": 781,
+          "y": 523.3125
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 756,
+          "height": 171.984375,
+          "left": 40,
+          "right": 187.328125,
+          "top": 584.015625,
+          "width": 147.328125,
+          "x": 40,
+          "y": 584.015625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 756,
+          "height": 171.984375,
+          "left": 518,
+          "right": 737,
+          "top": 584.015625,
+          "width": 219,
+          "x": 518,
+          "y": 584.015625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 238.328125,
+      "height": 99.328125,
+      "left": 40,
+      "right": 823.640625,
+      "top": 139,
+      "width": 783.640625,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 1024,
+    "h": 768,
+    "path": "/about",
+    "artifacts": [
+      {
+        "classes": "about-portrait",
+        "rect": {
+          "bottom": 686,
+          "height": 455.84375,
+          "left": 199.328125,
+          "right": 506,
+          "top": 230.15625,
+          "width": 306.671875,
+          "x": 199.328125,
+          "y": 230.15625
+        }
+      },
+      {
+        "classes": "about-workspace",
+        "rect": {
+          "bottom": 686,
+          "height": 237.046875,
+          "left": 836.65625,
+          "right": 984,
+          "top": 448.953125,
+          "width": 147.34375,
+          "x": 836.65625,
+          "y": 448.953125
+        }
+      },
+      {
+        "classes": "about-community",
+        "rect": {
+          "bottom": 686,
+          "height": 237.046875,
+          "left": 518,
+          "right": 824.65625,
+          "top": 448.953125,
+          "width": 306.65625,
+          "x": 518,
+          "y": 448.953125
+        }
+      },
+      {
+        "classes": "about-tools",
+        "rect": {
+          "bottom": 540.125,
+          "height": 145.859375,
+          "left": 40,
+          "right": 187.328125,
+          "top": 394.265625,
+          "width": 147.328125,
+          "x": 40,
+          "y": 394.265625
+        }
+      },
+      {
+        "classes": "about-quiet",
+        "rect": {
+          "bottom": 686,
+          "height": 127.640625,
+          "left": 40,
+          "right": 187.328125,
+          "top": 558.359375,
+          "width": 147.328125,
+          "x": 40,
+          "y": 558.359375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 246,
+      "height": 107,
+      "left": 40,
+      "right": 450.46875,
+      "top": 139,
+      "width": 410.46875,
+      "x": 40,
+      "y": 139
+    }
+  },
+  {
+    "w": 834,
+    "h": 900,
+    "path": "/",
+    "artifacts": [
+      {
+        "classes": "artifact artifact--portrait",
+        "rect": {
+          "bottom": 910.796875,
+          "height": 637.796875,
+          "left": 159,
+          "right": 540,
+          "top": 273,
+          "width": 381,
+          "x": 159,
+          "y": 273
+        }
+      },
+      {
+        "classes": "artifact artifact--software",
+        "rect": {
+          "bottom": 1318.421875,
+          "height": 367.625,
+          "left": 429,
+          "right": 810,
+          "top": 950.796875,
+          "width": 381,
+          "x": 429,
+          "y": 950.796875
+        }
+      },
+      {
+        "classes": "artifact artifact--album",
+        "rect": {
+          "bottom": 1193.796875,
+          "height": 243,
+          "left": 24,
+          "right": 270,
+          "top": 950.796875,
+          "width": 246,
+          "x": 24,
+          "y": 950.796875
+        }
+      },
+      {
+        "classes": "artifact artifact--community",
+        "rect": {
+          "bottom": 1771.4375,
+          "height": 413.015625,
+          "left": 294,
+          "right": 810,
+          "top": 1358.421875,
+          "width": 516,
+          "x": 294,
+          "y": 1358.421875
+        }
+      },
+      {
+        "classes": "artifact artifact--library",
+        "rect": {
+          "bottom": 2259.4375,
+          "height": 448,
+          "left": 24,
+          "right": 270,
+          "top": 1811.4375,
+          "width": 246,
+          "x": 24,
+          "y": 1811.4375
+        }
+      },
+      {
+        "classes": "artifact artifact--personal",
+        "rect": {
+          "bottom": 2358.328125,
+          "height": 546.890625,
+          "left": 429,
+          "right": 810,
+          "top": 1811.4375,
+          "width": 381,
+          "x": 429,
+          "y": 1811.4375
+        }
+      },
+      {
+        "classes": "artifact artifact--note",
+        "rect": {
+          "bottom": 2807.328125,
+          "height": 409,
+          "left": 24,
+          "right": 405,
+          "top": 2398.328125,
+          "width": 381,
+          "x": 24,
+          "y": 2398.328125
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 310.625,
+      "height": 157.625,
+      "left": 24,
+      "right": 542.421875,
+      "top": 153,
+      "width": 518.421875,
+      "x": 24,
+      "y": 153
+    }
+  },
+  {
+    "w": 834,
+    "h": 900,
+    "path": "/projects",
+    "artifacts": [
+      {
+        "classes": "archive-artifact project-artifact project-artifact-1",
+        "rect": {
+          "bottom": 1061.828125,
+          "height": 722,
+          "left": 159,
+          "right": 675,
+          "top": 339.828125,
+          "width": 516,
+          "x": 159,
+          "y": 339.828125
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-2",
+        "rect": {
+          "bottom": 1413.359375,
+          "height": 311.53125,
+          "left": 24,
+          "right": 540,
+          "top": 1101.828125,
+          "width": 516,
+          "x": 24,
+          "y": 1101.828125
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-3",
+        "rect": {
+          "bottom": 1833.875,
+          "height": 380.515625,
+          "left": 294,
+          "right": 810,
+          "top": 1453.359375,
+          "width": 516,
+          "x": 294,
+          "y": 1453.359375
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-4",
+        "rect": {
+          "bottom": 2356.78125,
+          "height": 458,
+          "left": 159,
+          "right": 540,
+          "top": 1898.78125,
+          "width": 381,
+          "x": 159,
+          "y": 1898.78125
+        }
+      },
+      {
+        "classes": "archive-decoration project-workspace",
+        "rect": {
+          "bottom": 1858.78125,
+          "height": 405.421875,
+          "left": 24,
+          "right": 270,
+          "top": 1453.359375,
+          "width": 246,
+          "x": 24,
+          "y": 1453.359375
+        }
+      },
+      {
+        "classes": "archive-decoration project-personal",
+        "rect": {
+          "bottom": 2356.78125,
+          "height": 458,
+          "left": 564,
+          "right": 810,
+          "top": 1898.78125,
+          "width": 246,
+          "x": 564,
+          "y": 1898.78125
+        }
+      },
+      {
+        "classes": "archive-decoration project-note archive-paper",
+        "rect": {
+          "bottom": 2580.96875,
+          "height": 184.1875,
+          "left": 24,
+          "right": 540,
+          "top": 2396.78125,
+          "width": 516,
+          "x": 24,
+          "y": 2396.78125
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 271.828125,
+      "height": 118.828125,
+      "left": 24,
+      "right": 700.421875,
+      "top": 153,
+      "width": 676.421875,
+      "x": 24,
+      "y": 153
+    }
+  },
+  {
+    "w": 834,
+    "h": 900,
+    "path": "/blogs",
+    "artifacts": [
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-1",
+        "rect": {
+          "bottom": 777.765625,
+          "height": 430,
+          "left": 159,
+          "right": 810,
+          "top": 347.765625,
+          "width": 651,
+          "x": 159,
+          "y": 347.765625
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-2",
+        "rect": {
+          "bottom": 1209.640625,
+          "height": 391.875,
+          "left": 24,
+          "right": 675,
+          "top": 817.765625,
+          "width": 651,
+          "x": 24,
+          "y": 817.765625
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-3",
+        "rect": {
+          "bottom": 1510.890625,
+          "height": 261.25,
+          "left": 159,
+          "right": 810,
+          "top": 1249.640625,
+          "width": 651,
+          "x": 159,
+          "y": 1249.640625
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-4",
+        "rect": {
+          "bottom": 1919.703125,
+          "height": 368.8125,
+          "left": 24,
+          "right": 675,
+          "top": 1550.890625,
+          "width": 651,
+          "x": 24,
+          "y": 1550.890625
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-5",
+        "rect": {
+          "bottom": 2379.078125,
+          "height": 419.375,
+          "left": 159,
+          "right": 810,
+          "top": 1959.703125,
+          "width": 651,
+          "x": 159,
+          "y": 1959.703125
+        }
+      },
+      {
+        "classes": "archive-decoration writing-life",
+        "rect": {
+          "bottom": 2851.53125,
+          "height": 432.453125,
+          "left": 24,
+          "right": 270,
+          "top": 2419.078125,
+          "width": 246,
+          "x": 24,
+          "y": 2419.078125
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 279.765625,
+      "height": 126.765625,
+      "left": 24,
+      "right": 623.015625,
+      "top": 153,
+      "width": 599.015625,
+      "x": 24,
+      "y": 153
+    }
+  },
+  {
+    "w": 834,
+    "h": 900,
+    "path": "/speaker",
+    "artifacts": [
+      {
+        "classes": "company-gathering",
+        "rect": {
+          "bottom": 941.390625,
+          "height": 567.234375,
+          "left": 159,
+          "right": 540,
+          "top": 374.15625,
+          "width": 381,
+          "x": 159,
+          "y": 374.15625
+        }
+      },
+      {
+        "classes": "company-mentoring",
+        "rect": {
+          "bottom": 1371.96875,
+          "height": 390.578125,
+          "left": 294,
+          "right": 810,
+          "top": 981.390625,
+          "width": 516,
+          "x": 294,
+          "y": 981.390625
+        }
+      },
+      {
+        "classes": "company-notes",
+        "rect": {
+          "bottom": 1399.390625,
+          "height": 418,
+          "left": 24,
+          "right": 270,
+          "top": 981.390625,
+          "width": 246,
+          "x": 24,
+          "y": 981.390625
+        }
+      },
+      {
+        "classes": "company-workshop",
+        "rect": {
+          "bottom": 1877.390625,
+          "height": 438,
+          "left": 159,
+          "right": 405,
+          "top": 1439.390625,
+          "width": 246,
+          "x": 159,
+          "y": 1439.390625
+        }
+      },
+      {
+        "classes": "company-people",
+        "rect": {
+          "bottom": 1873.765625,
+          "height": 434.375,
+          "left": 564,
+          "right": 810,
+          "top": 1439.390625,
+          "width": 246,
+          "x": 564,
+          "y": 1439.390625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 398.15625,
+      "height": 245.15625,
+      "left": 24,
+      "right": 665.265625,
+      "top": 153,
+      "width": 641.265625,
+      "x": 24,
+      "y": 153
+    }
+  },
+  {
+    "w": 834,
+    "h": 900,
+    "path": "/book",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 837.015625,
+          "height": 581.1875,
+          "left": 159,
+          "right": 540,
+          "top": 255.828125,
+          "width": 381,
+          "x": 159,
+          "y": 255.828125
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 1276,
+          "height": 398.984375,
+          "left": 24,
+          "right": 270,
+          "top": 877.015625,
+          "width": 246,
+          "x": 24,
+          "y": 877.015625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 1335.84375,
+          "height": 418.828125,
+          "left": 429,
+          "right": 675,
+          "top": 917.015625,
+          "width": 246,
+          "x": 429,
+          "y": 917.015625
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 1737.34375,
+          "height": 361.5,
+          "left": 564,
+          "right": 810,
+          "top": 1375.84375,
+          "width": 246,
+          "x": 564,
+          "y": 1375.84375
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 2212.34375,
+          "height": 435,
+          "left": 24,
+          "right": 405,
+          "top": 1777.34375,
+          "width": 381,
+          "x": 24,
+          "y": 1777.34375
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 2077.34375,
+          "height": 300,
+          "left": 564,
+          "right": 810,
+          "top": 1777.34375,
+          "width": 246,
+          "x": 564,
+          "y": 1777.34375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 271.828125,
+      "height": 118.828125,
+      "left": 24,
+      "right": 483.625,
+      "top": 153,
+      "width": 459.625,
+      "x": 24,
+      "y": 153
+    }
+  },
+  {
+    "w": 834,
+    "h": 900,
+    "path": "/manhwa",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 865.390625,
+          "height": 609.5625,
+          "left": 159,
+          "right": 540,
+          "top": 255.828125,
+          "width": 381,
+          "x": 159,
+          "y": 255.828125
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 1339.078125,
+          "height": 433.6875,
+          "left": 24,
+          "right": 270,
+          "top": 905.390625,
+          "width": 246,
+          "x": 24,
+          "y": 905.390625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 1361.4375,
+          "height": 416.046875,
+          "left": 429,
+          "right": 675,
+          "top": 945.390625,
+          "width": 246,
+          "x": 429,
+          "y": 945.390625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-4",
+        "rect": {
+          "bottom": 1824.96875,
+          "height": 423.53125,
+          "left": 159,
+          "right": 405,
+          "top": 1401.4375,
+          "width": 246,
+          "x": 159,
+          "y": 1401.4375
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 1947.4375,
+          "height": 546,
+          "left": 564,
+          "right": 810,
+          "top": 1401.4375,
+          "width": 246,
+          "x": 564,
+          "y": 1401.4375
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 2517.6875,
+          "height": 530.25,
+          "left": 24,
+          "right": 405,
+          "top": 1987.4375,
+          "width": 381,
+          "x": 24,
+          "y": 1987.4375
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 2237.4375,
+          "height": 250,
+          "left": 564,
+          "right": 810,
+          "top": 1987.4375,
+          "width": 246,
+          "x": 564,
+          "y": 1987.4375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 271.828125,
+      "height": 118.828125,
+      "left": 24,
+      "right": 621.484375,
+      "top": 153,
+      "width": 597.484375,
+      "x": 24,
+      "y": 153
+    }
+  },
+  {
+    "w": 834,
+    "h": 900,
+    "path": "/photography",
+    "artifacts": [
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 634.671875,
+          "height": 371.28125,
+          "left": 294,
+          "right": 810,
+          "top": 263.390625,
+          "width": 516,
+          "x": 294,
+          "y": 263.390625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 948,
+          "height": 281.328125,
+          "left": 24,
+          "right": 405,
+          "top": 666.671875,
+          "width": 381,
+          "x": 24,
+          "y": 666.671875
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 1261.328125,
+          "height": 594.65625,
+          "left": 564,
+          "right": 810,
+          "top": 666.671875,
+          "width": 246,
+          "x": 564,
+          "y": 666.671875
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 1261.328125,
+          "height": 281.328125,
+          "left": 24,
+          "right": 405,
+          "top": 980,
+          "width": 381,
+          "x": 24,
+          "y": 980
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 1574.65625,
+          "height": 281.328125,
+          "left": 159,
+          "right": 540,
+          "top": 1293.328125,
+          "width": 381,
+          "x": 159,
+          "y": 1293.328125
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 1977.9375,
+          "height": 371.28125,
+          "left": 294,
+          "right": 810,
+          "top": 1606.65625,
+          "width": 516,
+          "x": 294,
+          "y": 1606.65625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 2291.265625,
+          "height": 281.328125,
+          "left": 24,
+          "right": 405,
+          "top": 2009.9375,
+          "width": 381,
+          "x": 24,
+          "y": 2009.9375
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 2291.265625,
+          "height": 281.328125,
+          "left": 429,
+          "right": 810,
+          "top": 2009.9375,
+          "width": 381,
+          "x": 429,
+          "y": 2009.9375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 231.390625,
+      "height": 78.390625,
+      "left": 24,
+      "right": 642.5,
+      "top": 153,
+      "width": 618.5,
+      "x": 24,
+      "y": 153
+    }
+  },
+  {
+    "w": 834,
+    "h": 900,
+    "path": "/about",
+    "artifacts": [
+      {
+        "classes": "about-portrait",
+        "rect": {
+          "bottom": 885.890625,
+          "height": 614.28125,
+          "left": 24,
+          "right": 405,
+          "top": 271.609375,
+          "width": 381,
+          "x": 24,
+          "y": 271.609375
+        }
+      },
+      {
+        "classes": "about-workspace",
+        "rect": {
+          "bottom": 989.671875,
+          "height": 382.5,
+          "left": 564,
+          "right": 810,
+          "top": 607.171875,
+          "width": 246,
+          "x": 564,
+          "y": 607.171875
+        }
+      },
+      {
+        "classes": "about-community",
+        "rect": {
+          "bottom": 1417.390625,
+          "height": 387.71875,
+          "left": 294,
+          "right": 810,
+          "top": 1029.671875,
+          "width": 516,
+          "x": 294,
+          "y": 1029.671875
+        }
+      },
+      {
+        "classes": "about-tools",
+        "rect": {
+          "bottom": 1357,
+          "height": 327.328125,
+          "left": 24,
+          "right": 270,
+          "top": 1029.671875,
+          "width": 246,
+          "x": 24,
+          "y": 1029.671875
+        }
+      },
+      {
+        "classes": "about-quiet",
+        "rect": {
+          "bottom": 1901.859375,
+          "height": 444.46875,
+          "left": 564,
+          "right": 810,
+          "top": 1457.390625,
+          "width": 246,
+          "x": 564,
+          "y": 1457.390625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 295.609375,
+      "height": 142.609375,
+      "left": 24,
+      "right": 571.046875,
+      "top": 153,
+      "width": 547.046875,
+      "x": 24,
+      "y": 153
+    }
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "path": "/",
+    "artifacts": [
+      {
+        "classes": "artifact artifact--portrait",
+        "rect": {
+          "bottom": 856.125,
+          "height": 557.125,
+          "left": 48,
+          "right": 374,
+          "top": 299,
+          "width": 326,
+          "x": 48,
+          "y": 299
+        }
+      },
+      {
+        "classes": "artifact artifact--software",
+        "rect": {
+          "bottom": 1246.328125,
+          "height": 350.203125,
+          "left": 16,
+          "right": 374,
+          "top": 896.125,
+          "width": 358,
+          "x": 16,
+          "y": 896.125
+        }
+      },
+      {
+        "classes": "artifact artifact--album",
+        "rect": {
+          "bottom": 1571.984375,
+          "height": 285.65625,
+          "left": 16,
+          "right": 326,
+          "top": 1286.328125,
+          "width": 310,
+          "x": 16,
+          "y": 1286.328125
+        }
+      },
+      {
+        "classes": "artifact artifact--community",
+        "rect": {
+          "bottom": 1922.71875,
+          "height": 310.734375,
+          "left": 16,
+          "right": 374,
+          "top": 1611.984375,
+          "width": 358,
+          "x": 16,
+          "y": 1611.984375
+        }
+      },
+      {
+        "classes": "artifact artifact--library",
+        "rect": {
+          "bottom": 2482.71875,
+          "height": 520,
+          "left": 16,
+          "right": 310,
+          "top": 1962.71875,
+          "width": 294,
+          "x": 16,
+          "y": 1962.71875
+        }
+      },
+      {
+        "classes": "artifact artifact--personal",
+        "rect": {
+          "bottom": 2962.765625,
+          "height": 440.046875,
+          "left": 80,
+          "right": 374,
+          "top": 2522.71875,
+          "width": 294,
+          "x": 80,
+          "y": 2522.71875
+        }
+      },
+      {
+        "classes": "artifact artifact--note",
+        "rect": {
+          "bottom": 3341.765625,
+          "height": 339,
+          "left": 16,
+          "right": 350,
+          "top": 3002.765625,
+          "width": 334,
+          "x": 16,
+          "y": 3002.765625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 281.09375,
+      "height": 74.09375,
+      "left": 16,
+      "right": 231.640625,
+      "top": 207,
+      "width": 215.640625,
+      "x": 16,
+      "y": 207
+    }
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "path": "/projects",
+    "artifacts": [
+      {
+        "classes": "archive-artifact project-artifact project-artifact-1",
+        "rect": {
+          "bottom": 892.0625,
+          "height": 524.5,
+          "left": 16,
+          "right": 374,
+          "top": 367.5625,
+          "width": 358,
+          "x": 16,
+          "y": 367.5625
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-2",
+        "rect": {
+          "bottom": 1152.875,
+          "height": 228.8125,
+          "left": 40,
+          "right": 374,
+          "top": 924.0625,
+          "width": 334,
+          "x": 40,
+          "y": 924.0625
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-3",
+        "rect": {
+          "bottom": 1472.453125,
+          "height": 287.578125,
+          "left": 16,
+          "right": 374,
+          "top": 1184.875,
+          "width": 358,
+          "x": 16,
+          "y": 1184.875
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-4",
+        "rect": {
+          "bottom": 1899.453125,
+          "height": 395,
+          "left": 56,
+          "right": 374,
+          "top": 1504.453125,
+          "width": 318,
+          "x": 56,
+          "y": 1504.453125
+        }
+      },
+      {
+        "classes": "archive-decoration project-workspace",
+        "rect": {
+          "bottom": 2428.296875,
+          "height": 496.84375,
+          "left": 16,
+          "right": 326,
+          "top": 1931.453125,
+          "width": 310,
+          "x": 16,
+          "y": 1931.453125
+        }
+      },
+      {
+        "classes": "archive-decoration project-personal",
+        "rect": {
+          "bottom": 2791.625,
+          "height": 331.328125,
+          "left": 16,
+          "right": 374,
+          "top": 2460.296875,
+          "width": 358,
+          "x": 16,
+          "y": 2460.296875
+        }
+      },
+      {
+        "classes": "archive-decoration project-note archive-paper",
+        "rect": {
+          "bottom": 3007.8125,
+          "height": 184.1875,
+          "left": 16,
+          "right": 374,
+          "top": 2823.625,
+          "width": 358,
+          "x": 16,
+          "y": 2823.625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 262.5625,
+      "height": 55.5625,
+      "left": 16,
+      "right": 332.3125,
+      "top": 207,
+      "width": 316.3125,
+      "x": 16,
+      "y": 207
+    }
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "path": "/blogs",
+    "artifacts": [
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-1",
+        "rect": {
+          "bottom": 681.46875,
+          "height": 310.1875,
+          "left": 16,
+          "right": 374,
+          "top": 371.28125,
+          "width": 358,
+          "x": 16,
+          "y": 371.28125
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-2",
+        "rect": {
+          "bottom": 1175.71875,
+          "height": 462.25,
+          "left": 16,
+          "right": 374,
+          "top": 713.46875,
+          "width": 358,
+          "x": 16,
+          "y": 713.46875
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-3",
+        "rect": {
+          "bottom": 1700.765625,
+          "height": 493.046875,
+          "left": 16,
+          "right": 374,
+          "top": 1207.71875,
+          "width": 358,
+          "x": 16,
+          "y": 1207.71875
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-4",
+        "rect": {
+          "bottom": 2195.015625,
+          "height": 462.25,
+          "left": 16,
+          "right": 374,
+          "top": 1732.765625,
+          "width": 358,
+          "x": 16,
+          "y": 1732.765625
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-5",
+        "rect": {
+          "bottom": 2720.0625,
+          "height": 493.046875,
+          "left": 16,
+          "right": 374,
+          "top": 2227.015625,
+          "width": 358,
+          "x": 16,
+          "y": 2227.015625
+        }
+      },
+      {
+        "classes": "archive-decoration writing-life",
+        "rect": {
+          "bottom": 3258.359375,
+          "height": 506.296875,
+          "left": 80,
+          "right": 374,
+          "top": 2752.0625,
+          "width": 294,
+          "x": 80,
+          "y": 2752.0625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 266.28125,
+      "height": 59.28125,
+      "left": 16,
+      "right": 296.125,
+      "top": 207,
+      "width": 280.125,
+      "x": 16,
+      "y": 207
+    }
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "path": "/speaker",
+    "artifacts": [
+      {
+        "classes": "company-gathering",
+        "rect": {
+          "bottom": 814.203125,
+          "height": 493.109375,
+          "left": 56,
+          "right": 374,
+          "top": 321.09375,
+          "width": 318,
+          "x": 56,
+          "y": 321.09375
+        }
+      },
+      {
+        "classes": "company-mentoring",
+        "rect": {
+          "bottom": 1140.984375,
+          "height": 294.78125,
+          "left": 16,
+          "right": 350,
+          "top": 846.203125,
+          "width": 334,
+          "x": 16,
+          "y": 846.203125
+        }
+      },
+      {
+        "classes": "company-notes",
+        "rect": {
+          "bottom": 1590.984375,
+          "height": 418,
+          "left": 16,
+          "right": 326,
+          "top": 1172.984375,
+          "width": 310,
+          "x": 16,
+          "y": 1172.984375
+        }
+      },
+      {
+        "classes": "company-workshop",
+        "rect": {
+          "bottom": 2060.984375,
+          "height": 438,
+          "left": 64,
+          "right": 374,
+          "top": 1622.984375,
+          "width": 310,
+          "x": 64,
+          "y": 1622.984375
+        }
+      },
+      {
+        "classes": "company-people",
+        "rect": {
+          "bottom": 2619.671875,
+          "height": 526.6875,
+          "left": 16,
+          "right": 334,
+          "top": 2092.984375,
+          "width": 318,
+          "x": 16,
+          "y": 2092.984375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 333.09375,
+      "height": 126.09375,
+      "left": 16,
+      "right": 345.859375,
+      "top": 207,
+      "width": 329.859375,
+      "x": 16,
+      "y": 207
+    }
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "path": "/book",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 786.015625,
+          "height": 497.8125,
+          "left": 56,
+          "right": 374,
+          "top": 288.203125,
+          "width": 318,
+          "x": 56,
+          "y": 288.203125
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 1279.828125,
+          "height": 461.8125,
+          "left": 16,
+          "right": 310,
+          "top": 818.015625,
+          "width": 294,
+          "x": 16,
+          "y": 818.015625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 1793.640625,
+          "height": 481.8125,
+          "left": 80,
+          "right": 374,
+          "top": 1311.828125,
+          "width": 294,
+          "x": 80,
+          "y": 1311.828125
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 2327.140625,
+          "height": 501.5,
+          "left": 16,
+          "right": 374,
+          "top": 1825.640625,
+          "width": 358,
+          "x": 16,
+          "y": 1825.640625
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 2771.140625,
+          "height": 412,
+          "left": 16,
+          "right": 374,
+          "top": 2359.140625,
+          "width": 358,
+          "x": 16,
+          "y": 2359.140625
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 3043.140625,
+          "height": 240,
+          "left": 16,
+          "right": 374,
+          "top": 2803.140625,
+          "width": 358,
+          "x": 16,
+          "y": 2803.140625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 292.203125,
+      "height": 85.203125,
+      "left": 16,
+      "right": 345.5625,
+      "top": 207,
+      "width": 329.5625,
+      "x": 16,
+      "y": 207
+    }
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "path": "/manhwa",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 780.0625,
+          "height": 521.5,
+          "left": 56,
+          "right": 374,
+          "top": 258.5625,
+          "width": 318,
+          "x": 56,
+          "y": 258.5625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 1315.359375,
+          "height": 503.296875,
+          "left": 16,
+          "right": 310,
+          "top": 812.0625,
+          "width": 294,
+          "x": 16,
+          "y": 812.0625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 1829.5625,
+          "height": 482.203125,
+          "left": 80,
+          "right": 374,
+          "top": 1347.359375,
+          "width": 294,
+          "x": 80,
+          "y": 1347.359375
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-4",
+        "rect": {
+          "bottom": 2352.71875,
+          "height": 491.15625,
+          "left": 16,
+          "right": 310,
+          "top": 1861.5625,
+          "width": 294,
+          "x": 16,
+          "y": 1861.5625
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 3154.71875,
+          "height": 770,
+          "left": 16,
+          "right": 374,
+          "top": 2384.71875,
+          "width": 358,
+          "x": 16,
+          "y": 2384.71875
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 3688.21875,
+          "height": 501.5,
+          "left": 16,
+          "right": 374,
+          "top": 3186.71875,
+          "width": 358,
+          "x": 16,
+          "y": 3186.71875
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 3960.21875,
+          "height": 240,
+          "left": 16,
+          "right": 374,
+          "top": 3720.21875,
+          "width": 358,
+          "x": 16,
+          "y": 3720.21875
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 262.5625,
+      "height": 55.5625,
+      "left": 16,
+      "right": 295.40625,
+      "top": 207,
+      "width": 279.40625,
+      "x": 16,
+      "y": 207
+    }
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "path": "/photography",
+    "artifacts": [
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 634.546875,
+          "height": 266.453125,
+          "left": 16,
+          "right": 374,
+          "top": 368.09375,
+          "width": 358,
+          "x": 16,
+          "y": 368.09375
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 911.640625,
+          "height": 245.09375,
+          "left": 48,
+          "right": 374,
+          "top": 666.546875,
+          "width": 326,
+          "x": 48,
+          "y": 666.546875
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 1412.140625,
+          "height": 468.5,
+          "left": 16,
+          "right": 310,
+          "top": 943.640625,
+          "width": 294,
+          "x": 16,
+          "y": 943.640625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 1710.59375,
+          "height": 266.453125,
+          "left": 16,
+          "right": 374,
+          "top": 1444.140625,
+          "width": 358,
+          "x": 16,
+          "y": 1444.140625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 1987.6875,
+          "height": 245.09375,
+          "left": 48,
+          "right": 374,
+          "top": 1742.59375,
+          "width": 326,
+          "x": 48,
+          "y": 1742.59375
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 2286.140625,
+          "height": 266.453125,
+          "left": 16,
+          "right": 374,
+          "top": 2019.6875,
+          "width": 358,
+          "x": 16,
+          "y": 2019.6875
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 2584.59375,
+          "height": 266.453125,
+          "left": 16,
+          "right": 374,
+          "top": 2318.140625,
+          "width": 358,
+          "x": 16,
+          "y": 2318.140625
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 2883.046875,
+          "height": 266.453125,
+          "left": 16,
+          "right": 374,
+          "top": 2616.59375,
+          "width": 358,
+          "x": 16,
+          "y": 2616.59375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 242.09375,
+      "height": 35.09375,
+      "left": 16,
+      "right": 292.859375,
+      "top": 207,
+      "width": 276.859375,
+      "x": 16,
+      "y": 207
+    }
+  },
+  {
+    "w": 390,
+    "h": 844,
+    "path": "/about",
+    "artifacts": [
+      {
+        "classes": "about-portrait",
+        "rect": {
+          "bottom": 802.203125,
+          "height": 533.40625,
+          "left": 48,
+          "right": 374,
+          "top": 268.796875,
+          "width": 326,
+          "x": 48,
+          "y": 268.796875
+        }
+      },
+      {
+        "classes": "about-workspace",
+        "rect": {
+          "bottom": 1560.265625,
+          "height": 462.5,
+          "left": 16,
+          "right": 326,
+          "top": 1097.765625,
+          "width": 310,
+          "x": 16,
+          "y": 1097.765625
+        }
+      },
+      {
+        "classes": "about-community",
+        "rect": {
+          "bottom": 1884.234375,
+          "height": 291.96875,
+          "left": 16,
+          "right": 374,
+          "top": 1592.265625,
+          "width": 358,
+          "x": 16,
+          "y": 1592.265625
+        }
+      },
+      {
+        "classes": "about-tools",
+        "rect": {
+          "bottom": 2314.671875,
+          "height": 398.4375,
+          "left": 64,
+          "right": 374,
+          "top": 1916.234375,
+          "width": 310,
+          "x": 64,
+          "y": 1916.234375
+        }
+      },
+      {
+        "classes": "about-quiet",
+        "rect": {
+          "bottom": 2892.734375,
+          "height": 546.0625,
+          "left": 64,
+          "right": 374,
+          "top": 2346.671875,
+          "width": 310,
+          "x": 64,
+          "y": 2346.671875
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 284.796875,
+      "height": 77.796875,
+      "left": 16,
+      "right": 314.453125,
+      "top": 207,
+      "width": 298.453125,
+      "x": 16,
+      "y": 207
+    }
+  },
+  {
+    "w": 320,
+    "h": 740,
+    "path": "/",
+    "artifacts": [
+      {
+        "classes": "artifact artifact--portrait",
+        "rect": {
+          "bottom": 797.453125,
+          "height": 454.453125,
+          "left": 48,
+          "right": 304,
+          "top": 343,
+          "width": 256,
+          "x": 48,
+          "y": 343
+        }
+      },
+      {
+        "classes": "artifact artifact--software",
+        "rect": {
+          "bottom": 1134.625,
+          "height": 297.171875,
+          "left": 16,
+          "right": 304,
+          "top": 837.453125,
+          "width": 288,
+          "x": 16,
+          "y": 837.453125
+        }
+      },
+      {
+        "classes": "artifact artifact--album",
+        "rect": {
+          "bottom": 1413.625,
+          "height": 239,
+          "left": 16,
+          "right": 256,
+          "top": 1174.625,
+          "width": 240,
+          "x": 16,
+          "y": 1174.625
+        }
+      },
+      {
+        "classes": "artifact artifact--community",
+        "rect": {
+          "bottom": 1719.046875,
+          "height": 265.421875,
+          "left": 16,
+          "right": 304,
+          "top": 1453.625,
+          "width": 288,
+          "x": 16,
+          "y": 1453.625
+        }
+      },
+      {
+        "classes": "artifact artifact--library",
+        "rect": {
+          "bottom": 2174.046875,
+          "height": 415,
+          "left": 16,
+          "right": 240,
+          "top": 1759.046875,
+          "width": 224,
+          "x": 16,
+          "y": 1759.046875
+        }
+      },
+      {
+        "classes": "artifact artifact--personal",
+        "rect": {
+          "bottom": 2568.125,
+          "height": 354.078125,
+          "left": 80,
+          "right": 304,
+          "top": 2214.046875,
+          "width": 224,
+          "x": 80,
+          "y": 2214.046875
+        }
+      },
+      {
+        "classes": "artifact artifact--note",
+        "rect": {
+          "bottom": 2947.125,
+          "height": 339,
+          "left": 16,
+          "right": 280,
+          "top": 2608.125,
+          "width": 264,
+          "x": 16,
+          "y": 2608.125
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 315,
+      "height": 64,
+      "left": 16,
+      "right": 202.25,
+      "top": 251,
+      "width": 186.25,
+      "x": 16,
+      "y": 251
+    }
+  },
+  {
+    "w": 320,
+    "h": 740,
+    "path": "/projects",
+    "artifacts": [
+      {
+        "classes": "archive-artifact project-artifact project-artifact-1",
+        "rect": {
+          "bottom": 838.59375,
+          "height": 437,
+          "left": 16,
+          "right": 304,
+          "top": 401.59375,
+          "width": 288,
+          "x": 16,
+          "y": 401.59375
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-2",
+        "rect": {
+          "bottom": 1067.59375,
+          "height": 197,
+          "left": 40,
+          "right": 304,
+          "top": 870.59375,
+          "width": 264,
+          "x": 40,
+          "y": 870.59375
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-3",
+        "rect": {
+          "bottom": 1346,
+          "height": 246.40625,
+          "left": 16,
+          "right": 304,
+          "top": 1099.59375,
+          "width": 288,
+          "x": 16,
+          "y": 1099.59375
+        }
+      },
+      {
+        "classes": "archive-artifact project-artifact project-artifact-4",
+        "rect": {
+          "bottom": 1722,
+          "height": 344,
+          "left": 56,
+          "right": 304,
+          "top": 1378,
+          "width": 248,
+          "x": 56,
+          "y": 1378
+        }
+      },
+      {
+        "classes": "archive-decoration project-workspace",
+        "rect": {
+          "bottom": 2150.84375,
+          "height": 396.84375,
+          "left": 16,
+          "right": 256,
+          "top": 1754,
+          "width": 240,
+          "x": 16,
+          "y": 1754
+        }
+      },
+      {
+        "classes": "archive-decoration project-personal",
+        "rect": {
+          "bottom": 2455.84375,
+          "height": 273,
+          "left": 16,
+          "right": 304,
+          "top": 2182.84375,
+          "width": 288,
+          "x": 16,
+          "y": 2182.84375
+        }
+      },
+      {
+        "classes": "archive-decoration project-note archive-paper",
+        "rect": {
+          "bottom": 2672.03125,
+          "height": 184.1875,
+          "left": 16,
+          "right": 304,
+          "top": 2487.84375,
+          "width": 288,
+          "x": 16,
+          "y": 2487.84375
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 296.59375,
+      "height": 45.59375,
+      "left": 16,
+      "right": 275.546875,
+      "top": 251,
+      "width": 259.546875,
+      "x": 16,
+      "y": 251
+    }
+  },
+  {
+    "w": 320,
+    "h": 740,
+    "path": "/blogs",
+    "artifacts": [
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-1",
+        "rect": {
+          "bottom": 775.421875,
+          "height": 370.78125,
+          "left": 16,
+          "right": 304,
+          "top": 404.640625,
+          "width": 288,
+          "x": 16,
+          "y": 404.640625
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-2",
+        "rect": {
+          "bottom": 1232.34375,
+          "height": 424.921875,
+          "left": 16,
+          "right": 304,
+          "top": 807.421875,
+          "width": 288,
+          "x": 16,
+          "y": 807.421875
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-3",
+        "rect": {
+          "bottom": 1750.859375,
+          "height": 486.515625,
+          "left": 16,
+          "right": 304,
+          "top": 1264.34375,
+          "width": 288,
+          "x": 16,
+          "y": 1264.34375
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-4",
+        "rect": {
+          "bottom": 2207.78125,
+          "height": 424.921875,
+          "left": 16,
+          "right": 304,
+          "top": 1782.859375,
+          "width": 288,
+          "x": 16,
+          "y": 1782.859375
+        }
+      },
+      {
+        "classes": "archive-artifact writing-artifact writing-artifact-5",
+        "rect": {
+          "bottom": 2705.296875,
+          "height": 465.515625,
+          "left": 16,
+          "right": 304,
+          "top": 2239.78125,
+          "width": 288,
+          "x": 16,
+          "y": 2239.78125
+        }
+      },
+      {
+        "classes": "archive-decoration writing-life",
+        "rect": {
+          "bottom": 3135.90625,
+          "height": 398.609375,
+          "left": 80,
+          "right": 304,
+          "top": 2737.296875,
+          "width": 224,
+          "x": 80,
+          "y": 2737.296875
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 299.640625,
+      "height": 48.640625,
+      "left": 16,
+      "right": 245.84375,
+      "top": 251,
+      "width": 229.84375,
+      "x": 16,
+      "y": 251
+    }
+  },
+  {
+    "w": 320,
+    "h": 740,
+    "path": "/speaker",
+    "artifacts": [
+      {
+        "classes": "company-gathering",
+        "rect": {
+          "bottom": 753.21875,
+          "height": 410.75,
+          "left": 56,
+          "right": 304,
+          "top": 342.46875,
+          "width": 248,
+          "x": 56,
+          "y": 342.46875
+        }
+      },
+      {
+        "classes": "company-mentoring",
+        "rect": {
+          "bottom": 1043.15625,
+          "height": 257.9375,
+          "left": 16,
+          "right": 280,
+          "top": 785.21875,
+          "width": 264,
+          "x": 16,
+          "y": 785.21875
+        }
+      },
+      {
+        "classes": "company-notes",
+        "rect": {
+          "bottom": 1493.15625,
+          "height": 418,
+          "left": 16,
+          "right": 256,
+          "top": 1075.15625,
+          "width": 240,
+          "x": 16,
+          "y": 1075.15625
+        }
+      },
+      {
+        "classes": "company-workshop",
+        "rect": {
+          "bottom": 1963.15625,
+          "height": 438,
+          "left": 64,
+          "right": 304,
+          "top": 1525.15625,
+          "width": 240,
+          "x": 64,
+          "y": 1525.15625
+        }
+      },
+      {
+        "classes": "company-people",
+        "rect": {
+          "bottom": 2432.09375,
+          "height": 436.9375,
+          "left": 16,
+          "right": 264,
+          "top": 1995.15625,
+          "width": 248,
+          "x": 16,
+          "y": 1995.15625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 354.46875,
+      "height": 103.46875,
+      "left": 16,
+      "right": 286.65625,
+      "top": 251,
+      "width": 270.65625,
+      "x": 16,
+      "y": 251
+    }
+  },
+  {
+    "w": 320,
+    "h": 740,
+    "path": "/book",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 722.078125,
+          "height": 405.171875,
+          "left": 56,
+          "right": 304,
+          "top": 316.90625,
+          "width": 248,
+          "x": 56,
+          "y": 316.90625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 1124.140625,
+          "height": 370.0625,
+          "left": 16,
+          "right": 240,
+          "top": 754.078125,
+          "width": 224,
+          "x": 16,
+          "y": 754.078125
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 1545.828125,
+          "height": 389.6875,
+          "left": 80,
+          "right": 304,
+          "top": 1156.140625,
+          "width": 224,
+          "x": 80,
+          "y": 1156.140625
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 1991.828125,
+          "height": 414,
+          "left": 16,
+          "right": 304,
+          "top": 1577.828125,
+          "width": 288,
+          "x": 16,
+          "y": 1577.828125
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 2365.828125,
+          "height": 342,
+          "left": 16,
+          "right": 304,
+          "top": 2023.828125,
+          "width": 288,
+          "x": 16,
+          "y": 2023.828125
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 2637.828125,
+          "height": 240,
+          "left": 16,
+          "right": 304,
+          "top": 2397.828125,
+          "width": 288,
+          "x": 16,
+          "y": 2397.828125
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 320.90625,
+      "height": 69.90625,
+      "left": 16,
+      "right": 286.421875,
+      "top": 251,
+      "width": 270.421875,
+      "x": 16,
+      "y": 251
+    }
+  },
+  {
+    "w": 320,
+    "h": 740,
+    "path": "/manhwa",
+    "artifacts": [
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-1",
+        "rect": {
+          "bottom": 716.09375,
+          "height": 423.5,
+          "left": 56,
+          "right": 304,
+          "top": 292.59375,
+          "width": 248,
+          "x": 56,
+          "y": 292.59375
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-2",
+        "rect": {
+          "bottom": 1149.890625,
+          "height": 401.796875,
+          "left": 16,
+          "right": 240,
+          "top": 748.09375,
+          "width": 224,
+          "x": 16,
+          "y": 748.09375
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-3",
+        "rect": {
+          "bottom": 1567.5,
+          "height": 385.609375,
+          "left": 80,
+          "right": 304,
+          "top": 1181.890625,
+          "width": 224,
+          "x": 80,
+          "y": 1181.890625
+        }
+      },
+      {
+        "classes": "archive-artifact shelf-cover shelf-cover-4",
+        "rect": {
+          "bottom": 1992.046875,
+          "height": 392.546875,
+          "left": 16,
+          "right": 240,
+          "top": 1599.5,
+          "width": 224,
+          "x": 16,
+          "y": 1599.5
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-left",
+        "rect": {
+          "bottom": 2654.046875,
+          "height": 630,
+          "left": 16,
+          "right": 304,
+          "top": 2024.046875,
+          "width": 288,
+          "x": 16,
+          "y": 2024.046875
+        }
+      },
+      {
+        "classes": "shelf-life shelf-life-right",
+        "rect": {
+          "bottom": 3100.046875,
+          "height": 414,
+          "left": 16,
+          "right": 304,
+          "top": 2686.046875,
+          "width": 288,
+          "x": 16,
+          "y": 2686.046875
+        }
+      },
+      {
+        "classes": "shelf-note archive-paper",
+        "rect": {
+          "bottom": 3372.046875,
+          "height": 240,
+          "left": 16,
+          "right": 304,
+          "top": 3132.046875,
+          "width": 288,
+          "x": 16,
+          "y": 3132.046875
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 296.59375,
+      "height": 45.59375,
+      "left": 16,
+      "right": 245.25,
+      "top": 251,
+      "width": 229.25,
+      "x": 16,
+      "y": 251
+    }
+  },
+  {
+    "w": 320,
+    "h": 740,
+    "path": "/photography",
+    "artifacts": [
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 646.234375,
+          "height": 239.234375,
+          "left": 16,
+          "right": 304,
+          "top": 407,
+          "width": 288,
+          "x": 16,
+          "y": 407
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 876.609375,
+          "height": 198.375,
+          "left": 48,
+          "right": 304,
+          "top": 678.234375,
+          "width": 256,
+          "x": 48,
+          "y": 678.234375
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 1291.609375,
+          "height": 383,
+          "left": 16,
+          "right": 240,
+          "top": 908.609375,
+          "width": 224,
+          "x": 16,
+          "y": 908.609375
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 1543.34375,
+          "height": 219.734375,
+          "left": 16,
+          "right": 304,
+          "top": 1323.609375,
+          "width": 288,
+          "x": 16,
+          "y": 1323.609375
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 1793.21875,
+          "height": 217.875,
+          "left": 48,
+          "right": 304,
+          "top": 1575.34375,
+          "width": 256,
+          "x": 48,
+          "y": 1575.34375
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 2044.953125,
+          "height": 219.734375,
+          "left": 16,
+          "right": 304,
+          "top": 1825.21875,
+          "width": 288,
+          "x": 16,
+          "y": 1825.21875
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 2316.1875,
+          "height": 239.234375,
+          "left": 16,
+          "right": 304,
+          "top": 2076.953125,
+          "width": 288,
+          "x": 16,
+          "y": 2076.953125
+        }
+      },
+      {
+        "classes": "photograph",
+        "rect": {
+          "bottom": 2587.421875,
+          "height": 239.234375,
+          "left": 16,
+          "right": 304,
+          "top": 2348.1875,
+          "width": 288,
+          "x": 16,
+          "y": 2348.1875
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 281,
+      "height": 30,
+      "left": 16,
+      "right": 252.703125,
+      "top": 251,
+      "width": 236.703125,
+      "x": 16,
+      "y": 251
+    }
+  },
+  {
+    "w": 320,
+    "h": 740,
+    "path": "/about",
+    "artifacts": [
+      {
+        "classes": "about-portrait",
+        "rect": {
+          "bottom": 729.296875,
+          "height": 430.46875,
+          "left": 48,
+          "right": 304,
+          "top": 298.828125,
+          "width": 256,
+          "x": 48,
+          "y": 298.828125
+        }
+      },
+      {
+        "classes": "about-workspace",
+        "rect": {
+          "bottom": 1425.453125,
+          "height": 375,
+          "left": 16,
+          "right": 256,
+          "top": 1050.453125,
+          "width": 240,
+          "x": 16,
+          "y": 1050.453125
+        }
+      },
+      {
+        "classes": "about-community",
+        "rect": {
+          "bottom": 1706.984375,
+          "height": 249.53125,
+          "left": 16,
+          "right": 304,
+          "top": 1457.453125,
+          "width": 288,
+          "x": 16,
+          "y": 1457.453125
+        }
+      },
+      {
+        "classes": "about-tools",
+        "rect": {
+          "bottom": 2059.640625,
+          "height": 320.65625,
+          "left": 64,
+          "right": 304,
+          "top": 1738.984375,
+          "width": 240,
+          "x": 64,
+          "y": 1738.984375
+        }
+      },
+      {
+        "classes": "about-quiet",
+        "rect": {
+          "bottom": 2526.578125,
+          "height": 434.9375,
+          "left": 64,
+          "right": 304,
+          "top": 2091.640625,
+          "width": 240,
+          "x": 64,
+          "y": 2091.640625
+        }
+      }
+    ],
+    "expanded": false,
+    "title": {
+      "bottom": 314.828125,
+      "height": 63.828125,
+      "left": 16,
+      "right": 260.84375,
+      "top": 251,
+      "width": 244.84375,
+      "x": 16,
+      "y": 251
+    }
+  }
+]
