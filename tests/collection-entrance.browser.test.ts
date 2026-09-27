@@ -11,11 +11,12 @@ function evaluate<T>(script: string): T {
 }
 interface Entrance {
   target: string
-  frames: { opacity: number; transform: string }[]
+  bounds: number[][]
+  frames: { opacity: number; transform?: string }[]
   options: { duration: number; delay: number; easing: string }
 }
 
-test('real collection navigation preserves C and excludes keyboard, history, hashes and reduced motion', async () => {
+test('real collection navigation scales from a fixed top-left anchor and excludes keyboard, history, hashes and reduced motion', async () => {
   browser('set', 'media', 'light')
   browser('set', 'viewport', '1440', '900')
   const url = `${origin}/?entrance-regression`
@@ -52,15 +53,28 @@ test('real collection navigation preserves C and excludes keyboard, history, has
           exit:animations.find(a=>a.animationName==='page-out')?.effect.getKeyframes().map(f=>({opacity:f.opacity,transform:f.transform})),
           exitDuration:animations.find(a=>a.animationName==='page-out')?.effect.getTiming().duration};
       }).catch(()=>{})});const original=Element.prototype.animate;
-      Element.prototype.animate=function(frames,options){window.__entrances.push({target:[...document.querySelectorAll("*")].indexOf(this).toString(),frames,options});return original.call(this,frames,options)};
+      Element.prototype.animate=function(frames,options){
+        const animation=original.call(this,frames,options);
+        animation.pause();
+        const bounds=[0,.25,.5,.75,1].map(progress=>{
+          animation.currentTime=(options.delay||0)+options.duration*progress;
+          const r=this.getBoundingClientRect();return [r.x,r.y,r.width,r.height];
+        });
+        animation.currentTime=0;animation.play();
+        window.__entrances.push({target:[...document.querySelectorAll("*")].indexOf(this).toString(),frames,options,bounds});return animation};
       addEventListener('pageshow',event=>{if(event.persisted)window.__entrances=[]});`,
   }, sessionId)
   const entrances = () => evaluate<Entrance[]>(`new Promise(resolve=>setTimeout(()=>resolve(window.__entrances),1150))`)
-  const assertC = (items: Entrance[]) => {
+  const assertEntrance = (items: Entrance[]) => {
     expect(items.length).toBeGreaterThan(1)
     expect(new Set(items.map(item => item.target)).size).toBe(items.length)
     items.forEach((item, index) => {
-      expect(item.frames).toEqual([{ opacity: 0, transform: 'scale(.96)' }, { opacity: 1, transform: 'none' }])
+      item.bounds.forEach(rect => rect.slice(0, 2).forEach((value, axis) => {
+        expect(Math.abs(value - item.bounds[0][axis])).toBeLessThanOrEqual(0.1)
+      }))
+      expect(item.frames).toEqual([{ opacity: 0, transform: 'scale(.96)', transformOrigin: '0 0' }, { opacity: 1, transform: 'scale(1)', transformOrigin: '0 0' }])
+      expect(item.bounds[0][2] / item.bounds[4][2]).toBeCloseTo(.96, 3)
+      expect(item.bounds[0][3] / item.bounds[4][3]).toBeCloseTo(.96, 3)
       expect(item.options.duration).toBe(380)
       expect(item.options.delay).toBe(index * 55)
       expect(item.options.easing).toBe('cubic-bezier(0.23, 1, 0.32, 1)')
@@ -68,17 +82,17 @@ test('real collection navigation preserves C and excludes keyboard, history, has
   }
   try {
     browser('reload')
-    assertC(entrances())
+    assertEntrance(entrances())
     for (const route of ['/projects', '/about', '/blogs', '/speaker', '/book', '/manhwa', '/photography']) {
       browser('click', `.collection-header nav a[href="${route}"]`)
-      assertC(entrances())
-      const handoff = evaluate<{ prepared: boolean; firstOpacity: string; incomingOpacity: string; outgoing: boolean; exit: { opacity: string; transform: string }[]; exitDuration: number }>('window.__handoff')
+      assertEntrance(entrances())
+      const handoff = evaluate<{ prepared: boolean; firstOpacity: string; incomingOpacity: string; outgoing: boolean; exit: { opacity: string; transform?: string }[]; exitDuration: number }>('window.__handoff')
       expect(handoff.prepared).toBe(true)
       expect(handoff.firstOpacity).toBe('0')
       expect(handoff.incomingOpacity).toBe('0')
       expect(handoff.outgoing).toBe(true)
       expect(handoff.exitDuration).toBe(220)
-      expect(handoff.exit).toEqual([{ opacity: '1', transform: 'scale(1)' }, { opacity: '0', transform: 'scale(0.96)' }])
+      expect(handoff.exit).toEqual([{ opacity: '1' }, { opacity: '0' }])
       expect(evaluate<number>('document.getAnimations().length')).toBe(0)
     }
     browser('back')
@@ -88,11 +102,11 @@ test('real collection navigation preserves C and excludes keyboard, history, has
     expect(entrances()).toEqual([])
     browser('click', '#experiences-heading')
     expect(entrances()).toEqual([])
-    const native = evaluate<{name: string; duration: number; delay: number; frames: {opacity: string; transform: string}[]}[]>('window.__native')
+    const native = evaluate<{name: string; duration: number; delay: number; frames: {opacity: string; transform?: string}[]}[]>('window.__native')
     expect(native.find(animation => animation.name === 'page-out')?.duration).toBe(220)
     expect(native.find(animation => animation.name === 'page-in')).toEqual({
       name: 'page-in', duration: 380, delay: 220,
-      frames: [{opacity: '0', transform: 'scale(0.96)'}, {opacity: '1', transform: 'scale(1)'}],
+      frames: [{opacity: '0'}, {opacity: '1'}],
     })
     browser('set', 'media', 'light', 'reduced-motion')
     browser('click', '.collection-header nav a[href="/projects"]')

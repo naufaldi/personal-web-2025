@@ -43,8 +43,8 @@ export function enter(element: HTMLElement, requested: boolean) {
   if (!canAnimate(requested) || !visible(element)) return
   const active = running.has(element)
   const style = getComputedStyle(element)
-  const from = active ? { opacity: style.opacity, transform: style.transform } : { opacity: 0, transform: 'translateY(6px)' }
-  play(element, [from, { opacity: 1, transform: 'translateY(0)' }], motion.enter, motion.out)
+  const from = active ? { opacity: style.opacity } : { opacity: 0 }
+  play(element, [from, { opacity: 1 }], motion.enter, motion.out)
 }
 export function reflow(elements: HTMLElement[], requested: boolean, mutate: () => void, duration: number = motion.move) {
   const before = new Map(elements.filter(visible).map(element => [element, { rect: element.getBoundingClientRect(), opacity: getComputedStyle(element).opacity }]))
@@ -82,7 +82,7 @@ export function exit(element: HTMLElement, requested: boolean, complete: (animat
   element.inert = true
   element.setAttribute('aria-hidden', 'true')
   pending.set(element, () => finish(false))
-  play(element, [{ opacity: style.opacity, transform: style.transform }, { opacity: 0, transform: 'translateY(6px)' }], motion.exit, motion.out, () => finish(true))
+  play(element, [{ opacity: style.opacity }, { opacity: 0 }], motion.exit, motion.out, () => finish(true))
 }
 
 const disclosures = new WeakMap<HTMLDetailsElement, { content: HTMLElement; desired: boolean }>()

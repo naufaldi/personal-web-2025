@@ -34,7 +34,7 @@ function enterCollection(afterExit?: Promise<void>) {
     return rect.width > 0 && rect.height > 0 && rect.bottom > bounds.top && rect.top < bounds.bottom
   })
   visible.forEach((element, index) => {
-    const animation = element.animate([{ opacity: 0, transform: 'scale(.96)' }, { opacity: 1, transform: 'none' }],
+    const animation = element.animate([{ opacity: 0, transform: 'scale(.96)', transformOrigin: '0 0' }, { opacity: 1, transform: 'scale(1)', transformOrigin: '0 0' }],
       { duration: 380, delay: index * 55, easing: motion.out, fill: 'backwards' })
     if (afterExit) {
       animation.pause()
