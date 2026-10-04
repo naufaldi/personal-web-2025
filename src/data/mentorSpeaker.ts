@@ -10,6 +10,8 @@ export interface MentorSpeakerItem {
   eventName: string
   brief: string
   date: string
+  // ISO date, month, or year: event date, range end, or ongoing start; null when undated.
+  sortDate: string | null
   type: 'mentoring' | 'speaker' | 'voluntary'
   category?: 'Workshops' | 'Talks' | 'Mentoring' | 'Community'
   role?: string
@@ -19,15 +21,42 @@ export interface MentorSpeakerItem {
   links?: MentorSpeakerLinks
 }
 
-export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
+const engagements: MentorSpeakerItem[] = [
+  {
+    id: 'luma-devday-exchange',
+    eventName: 'DevDay Exchange Community Meetup: Jakarta',
+    date: '14 November 2026',
+    sortDate: '2026-11-14',
+    category: 'Community',
+    role: 'Host',
+    venue: 'Garuda Spark, fX Sudirman, Jakarta',
+    brief: 'A community-led meetup scheduled for ChatGPT and Codex users in Jakarta. The programme brings together a DevDay watch session, community tech talks, a talk show, Q&A and networking for people with or without a coding background.',
+    topics: ['DevDay announcements', 'ChatGPT and Codex workflows', 'Community talks and networking'],
+    type: 'voluntary',
+    links: { website: 'https://luma.com/dtu7sxtr' },
+  },
+  {
+    id: 'luma-astraflow',
+    eventName: 'How to Start Building an AI SaaS for Enterprise with AstraFlow',
+    date: '10 October 2026',
+    sortDate: '2026-10-10',
+    category: 'Workshops',
+    role: 'Co-host with UCLOUD Global',
+    venue: 'Online',
+    brief: 'A scheduled two-hour workshop on turning a company problem into a testable AI SaaS feature with AstraFlow. Using a customer-support helper as the main example, the programme covers a first API request, token costs, pricing, server-side key safety, customer data and human review.',
+    topics: ['AI SaaS feature design', 'AstraFlow API integration', 'Cost, pricing and responsible data handling'],
+    type: 'voluntary',
+    links: { website: 'https://luma.com/c0socj8g' },
+  },
   {
     "id": "luma-astra",
-    "eventName": "Astra Commons Jakarta",
+    "eventName": "Astra Commons: Jakarta",
     "date": "12 September 2026",
+    sortDate: '2026-09-12',
     "category": "Community",
     "role": "Host with Aniek S and Pierre",
     "venue": "ReVerse Coffee & Tea",
-    "brief": "A scheduled community gathering over coffee to exchange ideas about building with Astra. The format leaves room for conversations and connections without a formal demo programme.",
+    "brief": "A casual community gathering over coffee to exchange ideas about building with Astra. The format leaves room for conversations and connections without a formal demo programme.",
     "topics": [
       "Community conversations",
       "Builder connections"
@@ -40,13 +69,14 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
   {
     "id": "luma-grok",
     "eventName": "Grok Bot Meetup Jakarta",
-    "date": "3 October 2026",
-    "category": "Community",
-    "role": "Host",
-    "venue": "Jakarta",
-    "brief": "A community meetup scheduled in Jakarta. See the event page for the current programme and registration details.",
-    "topics": [],
-    "type": "voluntary",
+    "date": "4 October 2026",
+    sortDate: '2026-10-04',
+    "category": "Workshops",
+    "role": "Co-host and speaker with Aniek S and Cathlyn Shanice",
+    "venue": "Ganara Art FX Sudirman, Jakarta",
+    "brief": "A phone-first workshop exploring Grok Bot as a personal assistant for everyday tasks. The programme covers guided exercises, planning, research, writing, practical automation and community examples of personal-agent workflows beyond coding.",
+    "topics": ["Phone-first personal assistants", "Everyday workflows and automation", "Community case studies and Q&A"],
+    "type": "speaker",
     "links": {
       "website": "https://luma.com/spacexai-zb6b"
     }
@@ -55,6 +85,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     "id": "luma-enterprise",
     "eventName": "Enterprise LLM Architecture: Multimodal, Code & Production APIs #4",
     "date": "22 August 2026",
+    sortDate: '2026-08-22',
     "category": "Workshops",
     "role": "Co-host with UCLOUD Global",
     "venue": "Online",
@@ -73,6 +104,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     "id": "luma-cursor-aug",
     "eventName": "Cursor Meetup Jakarta: From PRD to Deployment",
     "date": "1 August 2026",
+    sortDate: '2026-08-01',
     "category": "Workshops",
     "role": "Co-host with Aniek S",
     "venue": "Hacktiv8, Jakarta",
@@ -91,6 +123,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     "id": "luma-codex-build",
     "eventName": "OpenAI Build Week Community Hackathon Jakarta",
     "date": "18 July 2026",
+    sortDate: '2026-07-18',
     "category": "Workshops",
     "role": "Co-host with Aniek S and Bagas Wastu",
     "venue": "Hellolive, Jakarta",
@@ -109,6 +142,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     "id": "luma-models",
     "eventName": "Stop Reading, Start Vibeing: Which AI Model Wins for Developers? #1",
     "date": "12 July 2026",
+    sortDate: '2026-07-12',
     "category": "Workshops",
     "role": "Co-host with UCLOUD Global",
     "venue": "Ciputra International Superblock, Tower 3, Level 5",
@@ -127,6 +161,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     "id": "luma-codex-june",
     "eventName": "Codex Community Meetup Jakarta",
     "date": "13 June 2026",
+    sortDate: '2026-06-13',
     "category": "Talks",
     "role": "Host and speaker",
     "venue": "Hellolive, Jakarta",
@@ -145,6 +180,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     "id": "luma-video",
     "eventName": "From Prompt to Product Jakarta #0: Hands-on Video Generation Workshop",
     "date": "9 June 2026",
+    sortDate: '2026-06-09',
     "category": "Workshops",
     "role": "Co-host and speaker with UCLOUD Global and Patrick",
     "venue": "Jakarta",
@@ -163,6 +199,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     "id": "luma-nix",
     "eventName": "MiniMax: Building Agent Environments & Infrastructure with Nix",
     "date": "25 April 2026",
+    sortDate: '2026-04-25',
     "category": "Workshops",
     "role": "Host; session by Rasyidan A. F.",
     "venue": "Zoom",
@@ -181,6 +218,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     "id": "luma-cafe",
     "eventName": "Cafe Cursor Jakarta",
     "date": "5 April 2026",
+    sortDate: '2026-04-05',
     "category": "Community",
     "role": "Co-host with David Winalda",
     "venue": "South Jakarta",
@@ -198,6 +236,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     "id": "luma-cursor-jan",
     "eventName": "Cursor Jakarta Meetup",
     "date": "24 January 2026",
+    sortDate: '2026-01-24',
     "category": "Community",
     "role": "Co-host with Aris Setiawan, Bagas Wastu and Walvenardo",
     "venue": "Hacktiv8, Jakarta",
@@ -215,6 +254,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     "id": "luma-cursor-dec",
     "eventName": "Cursor Meetup Jakarta: Agentic AI Workflows",
     "date": "20 December 2025",
+    sortDate: '2025-12-20',
     "category": "Talks",
     "role": "Co-host and speaker with Aris Setiawan",
     "venue": "Zoom",
@@ -234,6 +274,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Agentic AI for Builders: From Prompt to Autonomous Coding Loop',
     brief: 'Meetup on how autonomous coding agents run through structured cycles: Plan, Act, Verify, and Iterate. Covered decomposing tasks, multi-step execution, evaluating intermediate outputs, and self-correction toward a defined goal—treating AI as a workflow, not a single-shot generator.',
     date: '27 February 2026',
+    sortDate: '2026-02-27',
     role: 'Host and speaker',
     venue: 'Online',
     links: { website: 'https://luma.com/lrq146dp' },
@@ -244,6 +285,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: '101 Vibe Engineering with MiniMax M2.1',
     brief: 'A two-hour workshop using MiniMax M2.1 with OpenCode. The programme covers environment setup, guiding model intent, managing context and a research, plan and execute workflow.',
     date: '11 January 2026',
+    sortDate: '2026-01-11',
     category: 'Workshops',
     role: 'Host and speaker',
     venue: 'Zoom',
@@ -257,6 +299,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Basic Javascript with Weather Apps',
     brief: 'Build simple website using HTML/CSS/JS for swifting career to Frontend.',
     date: 'March 2024',
+    sortDate: '2024-03',
     type: 'speaker',
     links: {
       website: 'https://hacktiv8.com',
@@ -267,6 +310,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Workshop NextJs Frontend Development',
     brief: 'Building from Zero to Hero NextJS App with ecosystem.',
     date: 'February 2024',
+    sortDate: '2024-02',
     type: 'speaker',
     links: {
       website: 'https://iswift.id',
@@ -277,6 +321,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Workshop Deep Dive Into Grid and Flexbox',
     brief: 'The aim of this workshop is for participants to master slicing and converting designs into code for all types of layouts created by designers. For example, if participants receive a layout like this, they can use Flexbox or Grid to implement it.',
     date: 'November 2023',
+    sortDate: '2023-11',
     type: 'speaker',
     links: {
       website: 'https://iswift.id',
@@ -287,6 +332,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Create NextJS Component with Chakra UI',
     brief: 'Technical Guide on How Create Chakra UI Component with NextJS',
     date: 'June 2022',
+    sortDate: '2022-06',
     type: 'speaker',
     links: {
       website: 'https://coding.id',
@@ -297,6 +343,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Twitter Spaces',
     brief: 'Hosting Twitter Spaces to engage with a global audience through real-time dialogue, sharing knowledge and insights about software engineering, career growth, and the tech industry.',
     date: 'Ongoing',
+    sortDate: null,
     type: 'speaker',
     links: {
       x: 'https://x.com/f2aldi',
@@ -307,6 +354,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'ADPList Mentorship',
     brief: 'Engaged as a mentor on ADPList, providing personalized 1:1 mentorship to emerging engineers, focusing on career growth and technical skills enhancement. Recognized for outstanding impact, achieving Top 1% Mentor status consecutively in February, March, and April 2023.',
     date: 'February 2023 - Present',
+    sortDate: '2023-02',
     type: 'mentoring',
     links: {
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
@@ -318,6 +366,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Dibimbing Bootcamp',
     brief: 'Mentored over 50 individuals in the \'Dibimbing\' bootcamp, focusing on web development, React, and practical product-building skills for a new generation of developers.',
     date: 'June 2023 - January 2024',
+    sortDate: '2024-01',
     type: 'mentoring',
     links: {
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
@@ -329,6 +378,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'RevoU Software Engineer Fundamentals',
     brief: 'Facilitated the learning journey for mentees in the RevoU short course on Software Engineer Fundamentals, covering HTML, CSS, and JavaScript. Taught and mentored over 100 mentees, demonstrating a strong commitment to education and the development of future talent in the tech industry.',
     date: 'February 2023 - April 2023',
+    sortDate: '2023-04',
     type: 'mentoring',
     links: {
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
@@ -340,6 +390,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Ekskul Frontend Development',
     brief: 'Taught and mentored over 30 mentees, providing comprehensive guidance in web development. Developed a detailed curriculum focusing on HTML, CSS, and JavaScript, aiming to build strong foundational skills.',
     date: 'December 2021 - January 2022',
+    sortDate: '2022-01',
     type: 'mentoring',
     links: {
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
@@ -351,6 +402,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'LOGOS Festival Website',
     brief: 'Led the frontend team in the development of the Logos Festival Website, ensuring timely delivery and high-quality standards. Implemented analytics solutions like Splitbee to analyze user behavior and optimize funneling strategies. Played a pivotal role in selecting the frontend tech stack and managing project workflows using GitHub.',
     date: 'May 2021 - December 2022',
+    sortDate: '2022-12',
     type: 'voluntary',
     links: {
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
@@ -361,6 +413,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Codex Developer Ambassador',
     brief: 'Developer ambassador work for Codex, focused on helping developers understand coding-agent workflows, verification habits, and practical AI-assisted software delivery.',
     date: 'April 2026 - Present',
+    sortDate: '2026-04',
     type: 'voluntary',
     links: {
       website: 'https://openai.com/codex',
@@ -372,6 +425,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Cursor Developer Ambassador',
     brief: 'Developer ambassador work for Cursor, sharing agentic coding practices, editor workflows, and practical ways engineers can use AI-assisted development in real projects.',
     date: 'January 2026 - Present',
+    sortDate: '2026-01',
     type: 'voluntary',
     links: {
       website: 'https://cursor.com',
@@ -383,6 +437,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'MiniMax Developer Ambassador',
     brief: 'Developer ambassador work for MiniMax, helping builders understand AI development workflows, product capabilities, and practical adoption through community sharing.',
     date: 'December 2025 - Present',
+    sortDate: '2025-12',
     type: 'voluntary',
     links: {
       website: 'https://www.minimax.io',
@@ -394,6 +449,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'IxDA Interaction Association',
     brief: 'Engaged in ongoing learning about UX Research to enhance understanding of user behaviors and needs, contributing to more effective frontend strategies. Collaborated with researchers to leverage frontend technologies in gathering meaningful user data, informing product decisions.',
     date: 'August 2019 - December 2023',
+    sortDate: '2023-12',
     type: 'voluntary',
     links: {
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
@@ -405,6 +461,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Stasion (Startup Singo Edan)',
     brief: 'Contributing to community initiatives through voluntary work with Stasion, supporting startup ecosystem development and community engagement.',
     date: 'Ended 2020',
+    sortDate: '2020',
     type: 'voluntary',
     links: {
       linkedin: 'https://www.linkedin.com/in/naufaldirafif/',
@@ -415,6 +472,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'MOFON (Mentorship Frontend)',
     brief: 'Frontend Developer Mentor: HTML, CSS, and JavaScript fundamentals, personalized feedback, curriculum design, and collaboration with other mentors to improve the learning experience for students at all levels.',
     date: 'December 2020 – November 2024',
+    sortDate: '2024-11',
     type: 'mentoring',
     links: {
       website: 'https://mofon.vercel.app',
@@ -426,6 +484,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Esteh Creative',
     brief: 'Mentor Frontend Developer: fundamentals of web development, recorded tutorials, and hands-on guidance alongside teaching core HTML, CSS, and JavaScript practices.',
     date: 'March 2021 – December 2023',
+    sortDate: '2023-12',
     type: 'mentoring',
     links: {
       website: 'https://www.esteh.id',
@@ -437,6 +496,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Nest Academy',
     brief: 'Software engineering mentor: built and delivered a structured HTML, CSS, and JavaScript curriculum, guided learners through projects with best practices, and provided ongoing technical support.',
     date: 'August 2022 – September 2022',
+    sortDate: '2022-09',
     type: 'mentoring',
     links: {
       website: 'https://nestacademy.id',
@@ -448,6 +508,7 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     eventName: 'Fast Campus — All-in-One Frontend Web Development',
     brief: 'Course instructor for the All-in-One Frontend Web Development package (From Zero To Hero), alongside Jessica Cecilia B., F. Dhani Achmad, and Rizky Ramadhan.',
     date: 'Ongoing',
+    sortDate: null,
     type: 'mentoring',
     links: {
       website: 'https://fastcampus.com/en/products/dev_online_fe',
@@ -455,6 +516,10 @@ export const mentorSpeakerEngagements: MentorSpeakerItem[] = [
     },
   },
 ]
+
+export const mentorSpeakerEngagements: MentorSpeakerItem[] = [...engagements].sort(
+  (a, b) => (b.sortDate ?? '').localeCompare(a.sortDate ?? ''),
+)
 
 const HOME_MENTOR_SPEAKER_FEATURED_IDS = ['13', '14', '5', '6'] as const
 

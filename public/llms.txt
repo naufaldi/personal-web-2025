@@ -51,11 +51,11 @@ Important notes:
 
 ## Speaking and mentoring highlights
 
-- Astra Commons Jakarta (voluntary, 12 September 2026)
-- Grok Bot Meetup Jakarta (voluntary, 3 October 2026)
+- DevDay Exchange Community Meetup: Jakarta (voluntary, 14 November 2026)
+- How to Start Building an AI SaaS for Enterprise with AstraFlow (voluntary, 10 October 2026)
+- Grok Bot Meetup Jakarta (speaker, 4 October 2026)
+- Astra Commons: Jakarta (voluntary, 12 September 2026)
 - Enterprise LLM Architecture: Multimodal, Code & Production APIs #4 (voluntary, 22 August 2026)
-- Cursor Meetup Jakarta: From PRD to Deployment (voluntary, 1 August 2026)
-- OpenAI Build Week Community Hackathon Jakarta (voluntary, 18 July 2026)
 
 ## Preferred citation
 
