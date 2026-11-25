@@ -32,10 +32,21 @@ if (main) {
     if (!location.hash && desktop.matches) main.scrollTop = 0
     else requestAnimationFrame(restore)
   })
+  document.addEventListener('keydown', event => {
+    if (!desktop.matches || event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return
+    if (event.key !== 'PageDown' && event.key !== 'PageUp' && event.key !== ' ') return
+    if (!(event.target === document.body || event.target === document.documentElement || event.target === main)) return
+    if (document.querySelector('dialog[open]')) return
+    const direction = event.key === 'PageUp' || (event.key === ' ' && event.shiftKey) ? -1 : 1
+    const distance = Math.max(120, main.clientHeight - 48)
+    event.preventDefault()
+    main.scrollTop += direction * distance
+  })
   document.addEventListener('click', event => {
     const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href="#"]') : null
     if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
     if (desktop.matches) main.scrollTop = 0
+    main.focus({ preventScroll: true })
   })
   desktop.addEventListener('change', () => {
     main.scrollTop = 0

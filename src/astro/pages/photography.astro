@@ -30,7 +30,7 @@ const photos = await Promise.all(photographs.map(async photo => ({ ...photo, lar
       </div>
       <dialog class="photo-dialog" aria-labelledby="photo-caption">
         <button class="photo-close font-mono text-nav" type="button" autofocus>Close</button>
-        <div class="media-frame"><img alt="" width="2400" height="1600" /><span class="media-unavailable" hidden>Image unavailable</span></div>
+        <div class="media-frame"><img class="photo-preview" alt="" aria-hidden="true" /><img class="photo-full" alt="" width="2400" height="1600" /><span class="media-unavailable" role="status" hidden>Image unavailable</span></div>
         <p id="photo-caption" class="font-mono text-caption"></p>
       </dialog>
     </main>

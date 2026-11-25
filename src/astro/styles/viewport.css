@@ -9,7 +9,7 @@
   html[data-collection-site] .collection-header { margin-bottom: 12px; gap: 8px; }
   html[data-collection-site] .collection-layout > main { min-height: 0; min-width: 0; overflow: auto; scrollbar-gutter: stable; padding-inline: 8px; scroll-padding-block: 16px; }
   html[data-collection-site] main:has(> :is(.collection-canvas, [data-board], .photography-grid)) { display: flex; flex-direction: column; }
-  html[data-collection-site] main > :is(.editorial-controls, .archive-search, .editorial-index, .archive-empty) { flex: none; }
+  html[data-collection-site] main > :is(.editorial-controls, .archive-search, .editorial-index) { flex: none; }
   html[data-collection-site] .archive-layout > main:has(> [data-board]) > .archive-search { order: 1; }
   html[data-collection-site] .archive-layout > main:has(> [data-board]) > [data-board] { order: 2; }
   html[data-collection-site] .archive-layout > main:has(> [data-board]) > [data-empty] { order: 3; }
@@ -104,7 +104,7 @@
   html[data-collection-site] .writing-board:not(.is-filtered) .writing-photo .media-frame { height: 100%; }
   html[data-collection-site] .photography-grid { flex: 1 0 530px; height: auto; min-height: 530px; margin-top: 20px; }
   html[data-collection-site] .reading-main { align-content: start; }
-  html[data-collection-site] .reading-toc { position: static; max-height: none; overflow: visible; }
+  html[data-collection-site] .reading-toc { position: sticky; top: 24px; max-height: calc(100dvh - 48px); overflow: auto; }
   html[data-collection-site] .experience-layout main > h1 { margin-block: 20px; }
   html[data-collection-site] .is-filtered { flex: none; }
   html[data-collection-site] .company-paper .text-caption { font-size: 12px; }

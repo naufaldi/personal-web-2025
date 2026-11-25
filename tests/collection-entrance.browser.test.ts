@@ -15,6 +15,17 @@ interface Entrance {
   options: { duration: number; delay: number; easing: string }
 }
 
+test('a late collection module after the pointer guard does not hide revealed content again', () => {
+  browser('open', `${origin}/projects#late-guard`)
+  const result = evaluate<{animations: number; pending: boolean}>(`(()=>{
+    history.replaceState(null,'','/projects');
+    document.documentElement.dataset.collectionArrival='pointer';
+    document.dispatchEvent(new CustomEvent('collection:enter'));
+    return {animations:document.getAnimations().length,pending:document.documentElement.hasAttribute('data-collection-pending')};
+  })()`)
+  expect(result).toEqual({animations: 0, pending: false})
+})
+
 test('real collection navigation preserves C and excludes keyboard, history, hashes and reduced motion', async () => {
   browser('set', 'media', 'light')
   browser('set', 'viewport', '1440', '900')

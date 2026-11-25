@@ -32,7 +32,7 @@
 .reading-toc a.nested { padding-left: 16px; }
 .reading-toc summary { cursor: pointer; min-height: 44px; padding-block: 12px; border-bottom: 1px solid var(--color-hairline); border-top: 0; font-weight: 600; }
 .reading-toc a { color: var(--color-ink-muted); }
-.reading-toc a[aria-current] { color: var(--color-vermilion); }
+.reading-toc a[aria-current] { color: var(--color-vermilion); font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .reading-prose { grid-column: 3 / 9; grid-row: 2; padding-inline: 16px; }
 .reading-prose > :first-child { margin-top: 0; }
 .reading-end { display: flex; justify-content: space-between; flex-wrap: wrap; grid-column: 1 / -1; border-top: 1px solid var(--color-hairline); padding-top: 24px; margin: 24px 0 0; }
@@ -53,7 +53,8 @@
 .reading-code-block { position: relative; background: var(--color-ink); color: var(--color-paper); }
 .reading-code-block pre { margin: 0; padding-top: 56px; border: 0; background: var(--color-ink) !important; }
 .copy-code { min-height: 44px; font: 400 14px var(--font-mono); position: absolute; top: 4px; right: 12px; margin: 0; padding: 8px 12px; text-decoration: none; color: var(--color-paper); background: var(--color-ink); }
-.reading-layout .copy-code:focus-visible { color: var(--color-paper); outline-color: var(--color-paper); }
+.reading-layout .copy-code:focus-visible { color: var(--color-paper); outline-color: var(--color-paper); box-shadow: 0 0 0 var(--focus-offset) var(--color-ink); }
+.copy-code-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 @media (hover: hover) and (pointer: fine) { .reading-layout .copy-code:hover { color: var(--color-paper); text-decoration: underline; } }
 @media (max-width:63.999rem) {
  .reading-main { grid-template-columns: repeat(6,minmax(0,1fr)); padding-top: 96px; gap: 24px; }

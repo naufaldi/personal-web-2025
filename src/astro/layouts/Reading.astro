@@ -37,6 +37,12 @@ const readingRoute = cover ? { ...route, image: cover.src } : route
       <aside class="reading-aside">
         {headings.length > 0 && <details class="reading-toc" open><summary class="font-mono text-nav">On this page</summary><nav aria-label="Table of contents">{headings.map(heading => <a class:list={['font-mono text-caption', { nested: heading.depth === 3 }]} href={`#${heading.slug}`}>{heading.text}</a>)}</nav></details>}
       </aside>
+      <script is:inline>
+        (() => {
+          const toc = document.querySelector('.reading-toc')
+          if (toc && matchMedia('(max-width: 63.999rem)').matches) toc.open = false
+        })()
+      </script>
       <article id="reading-content" class="reading-prose" tabindex="-1" set:html={html} />
       <nav class="reading-end font-mono text-nav" aria-label="Reading navigation"><a class="editorial-link" href={back}>← All {project ? 'projects' : 'writing'}</a><a class="editorial-link" href="#">Back to top ↑</a></nav>
     </main>

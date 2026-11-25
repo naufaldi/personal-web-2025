@@ -1,4 +1,4 @@
-import { isNativeLinkAction, reflow, setDisclosure, settleMotion, settleExits } from './motion'
+import { isModifierOnlyKey, isNativeLinkAction, reflow, setDisclosure, settleMotion, settleExits } from './motion'
 import { decodeFragment } from './fragments'
 const root = document.querySelector<HTMLElement>('[data-editorial]')
 if (root) {
@@ -194,7 +194,7 @@ if (root) {
   })
   records.forEach(record => record.querySelector('summary')!.addEventListener('click', () => { returnTarget = null }))
   root.addEventListener('keydown', event => {
-    settleMotion()
+    if (!isModifierOnlyKey(event)) settleMotion()
     if (event.key === 'Escape') {
       const open = records.find(record => record.open && record.contains(document.activeElement))
       if (open) {
