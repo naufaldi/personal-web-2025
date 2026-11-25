@@ -19,6 +19,8 @@ const { route, collection = false } = Astro.props
     <link rel="alternate" type="text/markdown" href="/llms.txt" title="Faldi LLM context" />
     <meta name="theme-color" content={collection ? '#F5F3ED' : '#020817'} />
     {collection && <link rel="preload" href="/fonts/archivo-black-latin-400.woff2" as="font" type="font/woff2" crossorigin />}
+    {collection && <link rel="preload" href="/fonts/manrope-latin-variable.woff2" as="font" type="font/woff2" crossorigin />}
+    {collection && <link rel="preload" href="/fonts/source-code-pro-latin-variable.woff2" as="font" type="font/woff2" crossorigin />}
     {!collection && <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&family=Manrope:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />}
     {collection && <PageMotion />}
     <slot name="head" />
