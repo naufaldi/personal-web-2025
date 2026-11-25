@@ -10,6 +10,12 @@
   html[data-collection-site] .collection-layout > main { min-height: 0; min-width: 0; overflow: auto; scrollbar-gutter: stable; padding-inline: 8px; scroll-padding-block: 16px; }
   html[data-collection-site] main:has(> :is(.collection-canvas, [data-board], .photography-grid)) { display: flex; flex-direction: column; }
   html[data-collection-site] main > :is(.editorial-controls, .archive-search, .editorial-index, .archive-empty) { flex: none; }
+  html[data-collection-site] .archive-layout > main:has(> [data-board]) > .archive-search { order: 1; }
+  html[data-collection-site] .archive-layout > main:has(> [data-board]) > [data-board] { order: 2; }
+  html[data-collection-site] .archive-layout > main:has(> [data-board]) > [data-empty] { order: 3; }
+  html[data-collection-site] .archive-layout > main:has(> [data-board]) > .editorial-controls { order: 4; }
+  html[data-collection-site] .archive-layout > main:has(> [data-board]) > [data-directory] { order: 5; }
+  html[data-collection-site] .archive-layout > main:has(> [data-board]) > [data-editorial-status] { order: 6; }
   html[data-collection-site] .editorial-controls { padding-block: 8px; gap: 8px 24px; }
   html[data-collection-site] .archive-search { margin-bottom: 8px; }
   html[data-collection-site] :is(.archive-filters, .community-filters) { gap: 0 20px; }
@@ -24,7 +30,7 @@
   html[data-collection-site] :is(.collection-canvas, .editorial-board, .archive-board):not(.is-filtered) :is(.artifact-face, .media-frame) { flex: 1; min-height: 0; height: auto; aspect-ratio: auto; }
   html[data-collection-site] :is(.collection-canvas, .editorial-board, .archive-board):not(.is-filtered) .artifact-face { display: flex; flex-direction: column; }
   html[data-collection-site] :is(.collection-canvas, .editorial-board, .archive-board):not(.is-filtered) .media-frame img { height: 100%; width: 100%; position: absolute; inset: 0; }
-  html[data-collection-site] :is(.collection-canvas, .editorial-board, .archive-board):not(.is-filtered) :is(.artifact-caption, .archive-caption, figcaption) { position: static; flex: none; width: auto; padding: 8px 0 0; margin: 0; font-size: 12px; line-height: 1.4; align-items: start; }
+  html[data-collection-site] :is(.collection-canvas, .editorial-board, .archive-board):not(.is-filtered) :is(.artifact-caption, .archive-caption, .company-caption, figcaption) { position: static; flex: none; width: auto; padding: 8px 0 0; margin: 0; font-size: 12px; line-height: 1.4; align-items: start; }
   html[data-collection-site] .archive-caption a { min-height: 0; }
   html[data-collection-site] :is(.collection-title, .editorial-title, .archive-title) { grid-area: 1 / 1 / 9 / 10; margin: 0; position: static; }
   html[data-collection-site] :is(.editorial-title, .archive-title) { font-size: clamp(64px, min(11vw, 17vh), 160px); }

@@ -1,20 +1,28 @@
 ---
 import { Image } from 'astro:assets'
 import type { CollectionArtifact } from '@/data/collected'
-interface Props { artifact: CollectionArtifact; number: number }
-const { artifact: { section, variant, visual, title }, number } = Astro.props
+interface Props { artifact: CollectionArtifact; number: number; total: number }
+const { artifact: { section, variant, visual, title }, number, total } = Astro.props
+const imageSizes: Record<Exclude<CollectionArtifact['variant'], 'note'>, string> = {
+  portrait: '(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 90vw',
+  software: '(min-width: 1024px) 23vw, (min-width: 768px) 45vw, 90vw',
+  album: '(min-width: 1024px) 15vw, (min-width: 768px) 29vw, 85vw',
+  community: '(min-width: 1024px) 30vw, (min-width: 768px) 61vw, 90vw',
+  library: '(min-width: 1024px) 11vw, (min-width: 768px) 29vw, 85vw',
+  personal: '(min-width: 1024px) 15vw, (min-width: 768px) 45vw, 85vw',
+}
 ---
 <article class:list={['artifact', `artifact--${variant}`]} data-artifact={section.id}>
   <a class="artifact-link" href={section.href} aria-labelledby={`section-${section.id}`}>
     <div class="artifact-face">
       {visual.kind === 'image' ? <div class="media-frame">
-        <Image src={visual.image} alt={visual.alt} widths={[360, 640, 960]} sizes="(min-width: 1280px) 35vw, 90vw" format="webp" quality={82} loading={variant === 'portrait' || variant === 'software' ? 'eager' : 'lazy'} fetchpriority={variant === 'portrait' ? 'high' : 'auto'} decoding="async" style={{ objectPosition: visual.position }} />
+        <Image src={visual.image} alt={visual.alt} widths={[360, 640, 768, 960]} sizes={imageSizes[variant as Exclude<CollectionArtifact['variant'], 'note'>]} format="webp" quality={82} loading={variant === 'portrait' || variant === 'software' ? 'eager' : 'lazy'} fetchpriority={variant === 'portrait' ? 'high' : 'auto'} decoding="async" style={{ objectPosition: visual.position }} />
         <span class="media-unavailable" hidden>Image unavailable</span>
       </div> : <div class="personal-note"><h2>{visual.title}</h2><p>{visual.excerpt}</p></div>}
     </div>
     <div class="artifact-caption font-mono text-caption">
       <p><strong id={`section-${section.id}`}>{section.title}</strong><br />{title}</p>
-      <span class="artifact-number">{String(number).padStart(2, '0')} / 07</span>
+      <span class="artifact-number">{String(number).padStart(2, '0')} / {String(total).padStart(2, '0')}</span>
     </div>
   </a>
 </article>

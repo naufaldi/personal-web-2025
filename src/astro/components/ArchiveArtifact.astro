@@ -4,10 +4,25 @@ import Photo from './CollectionPhoto.astro'
 interface Props { entry: ArchiveEntry; placement: string; number: number; textOnly?: boolean }
 const { entry, placement, number, textOnly = false } = Astro.props
 const href = entry.href ?? `#${entry.id}`
+const sizes = placement.includes('project-artifact-1')
+  ? '(min-width: 1024px) 30vw, (min-width: 768px) 61vw, 95vw'
+  : placement.includes('project-artifact-2') || placement.includes('project-artifact-3')
+    ? '(min-width: 1024px) 23vw, (min-width: 768px) 61vw, 95vw'
+    : placement.includes('project-artifact-4')
+      ? '(min-width: 1024px) 15vw, (min-width: 768px) 45vw, 90vw'
+      : placement.includes('shelf-cover-1')
+        ? '(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 90vw'
+        : placement.includes('shelf-cover')
+          ? entry.id.startsWith('book-')
+            ? '(min-width: 1024px) 23vw, (min-width: 768px) 29vw, 90vw'
+            : '(min-width: 1024px) 15vw, (min-width: 768px) 29vw, 90vw'
+          : '(min-width: 1024px) 18vw, (min-width: 768px) 45vw, 90vw'
 ---
 <article class:list={['archive-artifact', placement]} data-feature-category={entry.categories.join('|')} data-search={`${entry.title} ${entry.meta} ${entry.description ?? ''}`}>
   <a class="archive-face" href={href} data-reveal={!entry.href ? entry.id : undefined} aria-label={`${entry.href ? 'Read' : 'View'} ${entry.title}`}>
-    {entry.image && !textOnly ? <Photo image={entry.image} alt={`${entry.title} ${entry.id.startsWith('book-') || entry.id.startsWith('manhwa-') ? 'cover' : entry.imageKind === 'illustration' ? 'conceptual watercolor illustration' : 'project screenshot'}`} eager={number < 3} /> : <div class="archive-paper"><p class="font-mono text-caption">{entry.categories.join(' / ')}</p><h2>{entry.title}</h2>{entry.description && <p class="archive-excerpt text-body">{entry.description}</p>}<span class="font-mono text-caption">{entry.meta}</span><span class="font-mono text-nav">{entry.href ? 'Read more' : 'View details'} ↗</span></div>}
+    {entry.image && !textOnly ? <>
+      <Photo image={entry.image} alt={`${entry.title} ${entry.id.startsWith('book-') || entry.id.startsWith('manhwa-') ? 'cover' : entry.imageKind === 'illustration' ? 'conceptual watercolor illustration' : 'project screenshot'}`} eager={number < 3} sizes={sizes} />
+      <div class="archive-caption font-mono text-caption"><span>{entry.title} /<br />{entry.meta}</span><span class="text-vermilion">{String(number).padStart(2, '0')}</span></div>
+    </> : <div class="archive-paper"><p class="font-mono text-caption">{entry.categories.join(' / ')}</p><h2>{entry.title}</h2>{entry.description && <p class="archive-excerpt text-body">{entry.description}</p>}<span class="font-mono text-caption">{entry.meta}</span><span class="font-mono text-nav">{entry.href ? 'Read more' : 'View details'} ↗</span></div>}
   </a>
-  {entry.image && !textOnly && <div class="archive-caption font-mono text-caption"><a href={href} data-reveal={!entry.href ? entry.id : undefined}>{entry.title} /<br />{entry.meta}</a><span class="text-vermilion">{String(number).padStart(2, '0')}</span></div>}
 </article>

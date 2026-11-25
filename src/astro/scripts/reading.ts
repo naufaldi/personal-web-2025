@@ -18,6 +18,20 @@ const sections = tocLinks.flatMap(link => {
   return heading ? [{ link, heading }] : []
 })
 const readingMain = document.querySelector<HTMLElement>('.reading-main')
+function projectsReturnDestination(value: string | null) {
+  if (!value) return null
+  try {
+    const url = new URL(value, location.origin)
+    if (url.origin !== location.origin) return null
+    if (url.pathname !== '/projects' && url.pathname !== '/projects/') return null
+    return `${url.pathname}${url.search}${url.hash}`
+  } catch { return null }
+}
+const projectsReturn = projectsReturnDestination(new URLSearchParams(location.search).get('return'))
+if (projectsReturn) {
+  document.querySelectorAll<HTMLAnchorElement>('.reading-intro a[href="/projects"], .reading-end a[href="/projects"]')
+    .forEach(link => { link.href = projectsReturn })
+}
 function updateCurrentHeading() {
   const threshold = compactReading.matches ? 120 : (readingMain?.getBoundingClientRect().top ?? 0) + 80
   const passed = sections.filter(({ heading }) => heading.getBoundingClientRect().top <= threshold)

@@ -12,8 +12,8 @@ import '../styles/projects-collection.css'
     <h1 class="archive-title font-display">PROJECTS</h1>
     <p class="archive-margin font-mono text-caption">Build<br />Explore<br />Learn<br />Share</p>
     {featuredProjects.map((entry, i) => <Artifact entry={entry} number={i + 1} placement={`project-artifact project-artifact-${i + 1}`} />)}
-    <figure class="archive-decoration project-workspace"><Photo image={workspace} alt="Faldi’s development workspace" /><figcaption class="font-mono text-caption">At the desk /<br />Building useful things</figcaption></figure>
-    <figure class="archive-decoration project-personal"><Photo image={portrait} alt="Faldi outdoors" /><figcaption class="font-mono text-caption">Beyond the screen</figcaption></figure>
+    <figure class="archive-decoration project-workspace"><Photo image={workspace} alt="Faldi’s development workspace" sizes="(min-width: 1024px) 15vw, (min-width: 768px) 29vw, 85vw" /><figcaption class="font-mono text-caption">At the desk /<br />Building useful things</figcaption></figure>
+    <figure class="archive-decoration project-personal"><Photo image={portrait} alt="Faldi outdoors" sizes="(min-width: 1024px) 15vw, (min-width: 768px) 29vw, 85vw" /><figcaption class="font-mono text-caption">Beyond the screen</figcaption></figure>
     <a class="archive-decoration project-note archive-paper" href="#index" data-open-index><p class="font-mono text-caption">The collection /</p><p class="text-heading">Tools, products,<br />and experiments.</p><span class="font-mono text-nav">Browse all {projectEntries.length} projects ↗</span></a>
   </div>
 </Archive>

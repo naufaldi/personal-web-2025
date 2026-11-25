@@ -1,6 +1,8 @@
 .writing-board .archive-title { grid-column: 1 / 10; font-size: clamp(80px,12vw,184px); }
 .writing-board .archive-margin { grid-area: 9 / 1 / 14 / 2; }
 .writing-board .writing-artifact { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; }
+.writing-board .writing-artifact:hover { text-decoration: none; }
+.writing-board .writing-photo { display: block; min-width: 0; }
 .writing-board .writing-copy { min-width: 0; }
 .writing-board .writing-copy h2 { font: 700 28px/1.1 var(--font-body); letter-spacing: -.035em; margin-block: 12px; }
 .writing-board .writing-excerpt { font-size: 16px; line-height: 1.5; }

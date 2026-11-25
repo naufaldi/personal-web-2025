@@ -11,6 +11,11 @@ import '../styles/community.css'
 const { routes } = await buildSeoRoutes()
 const route = routes.find(route => route.path === '/speaker')!
 const categories = ['All', 'Workshops', 'Talks', 'Mentoring', 'Community']
+const communityImageSizes = (placement: string) => placement === 'mentoring'
+  ? '(min-width: 1024px) 30vw, (min-width: 768px) 61vw, 90vw'
+  : placement === 'people'
+    ? '(min-width: 1024px) 15vw, (min-width: 768px) 29vw, 85vw'
+    : '(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 90vw'
 ---
 <Document route={route} collection>
   <a class="skip-link font-mono text-nav" href="#community">Skip to community</a>
@@ -22,7 +27,7 @@ const categories = ['All', 'Workshops', 'Talks', 'Mentoring', 'Community']
         <p class="editorial-margin font-mono text-caption">COMMUNITY<br />BUILDS<br />BETTER<br /><br /><span class="text-vermilion">01</span><br />Workshops<br />Mentoring<br />Learning</p>
         {featuredCommunity.map(({ entry, placement, image, alt, label }, index) => <figure class={`company-${placement}`} data-feature-category={entry.category}>
           <a href={`#engagement-${entry.id}`} data-reveal={`engagement-${entry.id}`} aria-label={`Read ${entry.eventName}`}>
-            {image ? <Photo image={image} alt={alt!} eager={index < 2} /> : <div class:list={['company-paper', { 'company-poster': placement === 'workshop' }]}>
+            {image ? <Photo image={image} alt={alt!} eager={index < 2} sizes={communityImageSizes(placement)} /> : <div class:list={['company-paper', { 'company-poster': placement === 'workshop' }]}>
               <p class="font-mono text-caption">{entry.category} /</p>
               <h2>{placement === 'workshop' ? `Grid.
 Flexbox.
@@ -31,8 +36,8 @@ Ideas.
 Conversations.`}</h2>
               <p class="font-mono text-caption">{entry.eventName}<br />{entry.date}</p>
             </div>}
+            <span class="company-caption">{entry.category} /<br />{label}<br />{image && <span class="archive-caption">{communityPhotos[entry.id] ? entry.date : 'Community photo archive'}</span>}<span class="editorial-link font-mono text-nav">View details ↗</span></span>
           </a>
-          <figcaption>{entry.category} /<br />{label}<br />{image && <span class="archive-caption">{communityPhotos[entry.id] ? entry.date : 'Community photo archive'}</span>}<a href={`#engagement-${entry.id}`} data-reveal={`engagement-${entry.id}`} class="editorial-link">View details ↗</a></figcaption>
         </figure>)}
       </div>
       <EmptyState />
