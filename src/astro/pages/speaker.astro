@@ -49,7 +49,7 @@ Conversations.`}</h2>
         <h2 class="font-display text-reading-title" id="community-index-heading" tabindex="-1">People, ideas, conversations.</h2>
         <p class="text-body reading-copy">Talks, workshops, mentoring, and voluntary work. A record of learning with other people.</p>
         {communityEntries.map(entry => <details id={`engagement-${entry.id}`} data-record data-category={entry.category}>
-          <summary><span class="font-mono text-caption">{entry.category}<br />{entry.date}</span><h3 class="text-heading">{entry.eventName}</h3></summary>
+          <summary><span class="font-mono text-caption">{entry.category}<br />{entry.date}</span><span class="text-heading index-title">{entry.eventName}</span></summary>
           <div>
             {entry.role && <p class="font-mono text-caption">{entry.role}{entry.venue && <> / {entry.venue}</>}</p>}
             <p class="text-body">{entry.brief}</p>

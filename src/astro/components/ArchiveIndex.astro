@@ -8,7 +8,7 @@ const { entries, title } = Astro.props
   <h2 class="font-display text-reading-title" id="archive-index-heading" tabindex="-1">{title} / Index</h2>
   <p class="font-mono text-caption">{entries.length} entries in the collection</p>
   {entries.map(entry => <details id={entry.id} data-record data-category={entry.categories.join('|')} data-search={`${entry.title} ${entry.meta} ${entry.description ?? ''} ${entry.tags?.join(' ') ?? ''}`}>
-    <summary>{title === 'Projects' && entry.image && <span class="index-cover"><Photo image={entry.image} alt={`${entry.title} ${entry.imageKind === 'illustration' ? 'illustrated cover' : 'screenshot'}`} sizes="(min-width: 768px) 160px, 76px" /></span>}<span class="font-mono text-caption">{entry.categories.join(' / ')}</span><h3 class="text-heading">{entry.title}</h3></summary>
+    <summary>{title === 'Projects' && entry.image && <span class="index-cover"><Photo image={entry.image} alt={`${entry.title} ${entry.imageKind === 'illustration' ? 'illustrated cover' : 'screenshot'}`} sizes="(min-width: 768px) 160px, 76px" /></span>}<span class="font-mono text-caption">{entry.categories.join(' / ')}</span><span class="text-heading index-title">{entry.title}</span></summary>
     <div><p class="font-mono text-caption">{entry.meta}</p>{entry.description && <p class="text-body">{entry.description}</p>}{entry.tags && <p class="font-mono text-caption">{entry.tags.join(' · ')}</p>}
     {entry.href && <a class="editorial-link font-mono text-nav" href={entry.href}>Read {title === 'Projects' ? 'project' : 'article'} ↗</a>}</div>
   </details>)}

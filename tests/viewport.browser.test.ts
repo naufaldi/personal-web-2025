@@ -31,26 +31,74 @@ for (const [width, height] of [[1440, 900], [1280, 720], [1024, 768]]) {
     }
   }, 120000)
 }
+test('fresh desktop keyboard scrolling needs no click or automatic focus', () => {
+  browser('set', 'viewport', '1440', '900')
+  browser('open', origin + '/')
+  expect(evaluate<string>(`document.activeElement.tagName`)).toBe('BODY')
+  const home = evaluate<{ start: number; canScroll: boolean }>(`(()=>{const main=document.querySelector('main');return {start:main.scrollTop,canScroll:main.scrollHeight>main.clientHeight}})()`)
+  browser('press', 'PageDown')
+  const homeAfterPage = evaluate<number>(`document.querySelector('main').scrollTop`)
+  if (home.canScroll) expect(homeAfterPage).toBeGreaterThan(home.start)
+  else expect(homeAfterPage).toBe(home.start)
+  evaluate(`document.querySelector('main').scrollTop=0`)
+  browser('press', 'Space')
+  const homeAfterSpace = evaluate<number>(`document.querySelector('main').scrollTop`)
+  if (home.canScroll) expect(homeAfterSpace).toBeGreaterThan(0)
+  else expect(homeAfterSpace).toBe(0)
+  expect(evaluate<number>(`scrollY`)).toBe(0)
+
+  browser('open', origin + '/blogs/state-management-in-reactjs')
+  expect(evaluate<string>(`document.activeElement.tagName`)).toBe('BODY')
+  const start = evaluate<number>(`document.querySelector('main').scrollTop`)
+  browser('press', 'PageDown')
+  const afterPage = evaluate<number>(`document.querySelector('main').scrollTop`)
+  expect(afterPage).toBeGreaterThan(start)
+  browser('press', 'Space')
+  expect(evaluate<number>(`document.querySelector('main').scrollTop`)).toBeGreaterThan(afterPage)
+  expect(evaluate<number>(`scrollY`)).toBe(0)
+})
+
 test('reading scroll, section tracking, history, and hash navigation use the main region', () => {
   browser('set', 'viewport', '1440', '900')
   browser('open', origin + '/blogs/state-management-in-reactjs')
-  const result = evaluate<{ body: number; main: number; active: string | null }>(`(async () => {
+  const result = evaluate<{ body: number; main: number; active: string | null; position: string; weight: string; decoration: string }>(`(async () => {
     const main = document.querySelector('main'); main.focus(); main.scrollTop = 1200;
     await new Promise(resolve => setTimeout(resolve, 250));
-    return {body: scrollY, main: main.scrollTop, active: document.querySelector('.reading-toc [aria-current]')?.getAttribute('href')};
+    const current = document.querySelector('.reading-toc [aria-current]');
+    const style = current ? getComputedStyle(current) : null;
+    return {body: scrollY, main: main.scrollTop, active: current?.getAttribute('href'), position: getComputedStyle(document.querySelector('.reading-toc')).position, weight: style?.fontWeight, decoration: style?.textDecorationLine};
   })()`)
   expect(result.body).toBe(0)
   expect(result.main).toBe(1200)
   expect(result.active).toBeTruthy()
+  expect(result.position).toBe('sticky')
+  expect(Number(result.weight)).toBeGreaterThanOrEqual(600)
+  expect(result.decoration).toContain('underline')
   browser('click', '.collection-header nav a[href="/about"]')
   browser('back')
   expect(evaluate<number>(`document.querySelector('main').scrollTop`)).toBeGreaterThan(1100)
   evaluate(`document.querySelector('.reading-toc a:last-child').click()`)
   expect(evaluate<number>(`document.querySelector('main').scrollTop`)).toBeGreaterThan(1200)
-  evaluate(`document.querySelector('.reading-end a[href="#"]').click()`)
+  browser('focus', '.reading-end a[href="#"]')
+  browser('press', 'Enter')
   expect(evaluate<number>(`document.querySelector('main').scrollTop`)).toBe(0)
+  expect(evaluate<boolean>(`document.activeElement === document.querySelector('main')`)).toBe(true)
+  browser('press', 'Tab')
+  expect(evaluate<boolean>(`document.activeElement.matches('.reading-intro .editorial-link')`)).toBe(true)
   browser('press', 'PageDown')
   expect(evaluate<boolean>(`scrollY === 0`)).toBe(true)
+})
+
+test('compact reading contents starts closed while no-JS navigation remains available', () => {
+  browser('set', 'viewport', '390', '740')
+  browser('open', origin + '/blogs/state-management-in-reactjs')
+  const compact = evaluate<{ open: boolean; links: number }>(`({open:document.querySelector('.reading-toc').open,links:document.querySelectorAll('.reading-toc a').length})`)
+  expect(compact.open).toBe(false)
+  expect(compact.links).toBeGreaterThan(0)
+  browser('open', nojsOrigin + '/blogs/state-management-in-reactjs')
+  const fallback = evaluate<{ open: boolean; links: number }>(`({open:document.querySelector('.reading-toc').open,links:document.querySelectorAll('.reading-toc a').length})`)
+  expect(fallback.open).toBe(true)
+  expect(fallback.links).toBe(compact.links)
 })
 test('experience route and legacy link preserve all career records', () => {
   browser('open', origin + '/about#experiences-heading')

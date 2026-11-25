@@ -20,7 +20,6 @@
 .photograph:nth-of-type(3) img { object-position: center; }
 .photograph figcaption { padding-top: 8px; display: flex; align-items: start; gap: 8px; font-size: 13px; text-wrap: pretty; }
 .photograph figcaption > span { white-space: nowrap; font-variant-numeric: tabular-nums; }
-.photograph a:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 4px; }
 @media (hover: hover) and (pointer: fine) {
   .photograph a:hover img { outline-color: oklch(0 0 0 / 0.25); }
 }
@@ -36,6 +35,10 @@ html.photo-open { overflow: hidden; }
 .photo-close { display: block; min-height: 44px; min-width: 44px; margin-left: auto; text-decoration: underline; text-underline-offset: 5px; }
 .photo-dialog .media-frame { min-height: 120px; }
 .photo-dialog img { display: block; width: 100%; height: auto; max-height: calc(100dvh - 180px); object-fit: contain; }
+.photo-dialog .photo-preview { position: absolute; inset: 0; z-index: 0; height: 100%; }
+.photo-dialog .photo-full { position: relative; z-index: 1; visibility: hidden; }
+.photo-dialog .photo-full.is-ready { visibility: visible; }
+.photo-dialog .media-unavailable { z-index: 2; }
 .photo-dialog > p { padding-top: 12px; }
 @media (max-width: 63.999rem) {
   .photography-grid { height: auto; min-height: 0; grid-template-columns: repeat(6, minmax(0, 1fr)); grid-template-rows: auto; gap: 32px 24px; }

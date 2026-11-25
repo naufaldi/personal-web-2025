@@ -9,6 +9,7 @@ import '../styles/motion.css'
   document.head.append(optIn)
   const key = 'faldi:pointer-navigation'
   const reduced = matchMedia('(prefers-reduced-motion: reduce)')
+  const modifierKeys = new Set(['Alt', 'AltGraph', 'CapsLock', 'Control', 'Fn', 'Meta', 'NumLock', 'ScrollLock', 'Shift', 'Symbol', 'SymbolLock'])
   let target = null
   let activeTransition = null
   const clear = () => { try { sessionStorage.removeItem(key) } catch {} }
@@ -20,7 +21,10 @@ import '../styles/motion.css'
     if (url.origin !== location.origin || (url.pathname === location.pathname && url.search === location.search)) return
     target = url.href
   })
-  document.addEventListener('keydown', () => { document.documentElement.dataset.input = 'keyboard'; delete document.documentElement.dataset.collectionPending; target = null; clear(); activeTransition?.skipTransition() }, { capture: true })
+  document.addEventListener('keydown', event => {
+    if (modifierKeys.has(event.key)) return
+    document.documentElement.dataset.input = 'keyboard'; delete document.documentElement.dataset.collectionPending; target = null; clear(); activeTransition?.skipTransition()
+  }, { capture: true })
   addEventListener('pageswap', event => {
     activeTransition = event.viewTransition
     event.viewTransition?.ready.catch(() => {})

@@ -8,7 +8,6 @@ toc?.addEventListener('keydown', event => {
   }
 })
 const compactReading = matchMedia('(max-width: 63.999rem)')
-if (toc && compactReading.matches) setDisclosure(toc, false)
 compactReading.addEventListener('change', ({ matches }) => {
   if (toc && !matches) setDisclosure(toc, true)
 })
@@ -50,6 +49,8 @@ function scheduleHeadingUpdate() {
 addEventListener('scroll', scheduleHeadingUpdate, { passive: true })
 readingMain?.addEventListener('scroll', scheduleHeadingUpdate, { passive: true })
 addEventListener('resize', scheduleHeadingUpdate)
+addEventListener('load', scheduleHeadingUpdate, { once: true })
+void document.fonts?.ready.then(scheduleHeadingUpdate)
 updateCurrentHeading()
 document.querySelectorAll<HTMLPreElement>('.reading-prose pre').forEach(pre => {
   pre.tabIndex = 0
@@ -58,8 +59,19 @@ document.querySelectorAll<HTMLPreElement>('.reading-prose pre').forEach(pre => {
   button.type = 'button'
   button.className = 'copy-code'
   button.textContent = 'Copy code'
+  const status = document.createElement('span')
+  status.className = 'copy-code-status'
+  status.setAttribute('role', 'status')
+  status.setAttribute('aria-live', 'polite')
+  status.setAttribute('aria-atomic', 'true')
   let attempt = 0
+  let announcement = 0
   let reset: ReturnType<typeof setTimeout> | undefined
+  const announce = (message: string) => {
+    const current = ++announcement
+    status.textContent = ''
+    setTimeout(() => { if (current === announcement) status.textContent = message }, 0)
+  }
   button.addEventListener('click', async () => {
     const current = ++attempt
     clearTimeout(reset)
@@ -67,17 +79,23 @@ document.querySelectorAll<HTMLPreElement>('.reading-prose pre').forEach(pre => {
       await navigator.clipboard.writeText(pre.textContent ?? '')
       if (current !== attempt) return
       button.textContent = 'Copied'
+      announce('Code copied to clipboard')
     } catch {
       if (current !== attempt) return
       button.textContent = 'Select code to copy'
+      announce('Copy unavailable. Select the code to copy.')
       pre.focus()
     }
-    reset = setTimeout(() => { button.textContent = 'Copy code' }, 1800)
+    reset = setTimeout(() => {
+      if (current !== attempt) return
+      button.textContent = 'Copy code'
+      status.textContent = ''
+    }, 1800)
   })
   const block = document.createElement('div')
   block.className = 'reading-code-block'
   pre.before(block)
-  block.append(button, pre)
+  block.append(button, pre, status)
 })
 document.querySelectorAll<HTMLImageElement>('.reading-layout img').forEach(image => {
   const fallback = () => {
@@ -103,4 +121,5 @@ if (diagrams.length) {
       code.closest('.reading-code-block')?.before(figure)
     } catch { /* Keep the original diagram source readable when rendering fails. */ }
   }
+  scheduleHeadingUpdate()
 }

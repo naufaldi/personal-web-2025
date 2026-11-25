@@ -39,8 +39,6 @@
 .archive-filters { display: flex; flex-wrap: wrap; gap: 8px 32px; }
 .archive-search { display: flex; justify-content: flex-end; align-items: center; gap: 16px; margin-bottom: 24px; }
 .archive-search input { min-height: 44px; max-width: 100%; width: 260px; padding: 8px 12px; border: 1px solid var(--color-ink-muted); border-radius: var(--radius-control); background: transparent; }
-.archive-empty { padding: 24px 0; }
-.archive-empty a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 6px; }
 .archive-board.is-filtered { min-height: 0; aspect-ratio: auto; grid-template-rows: auto; gap: 48px 32px; padding-top: 220px; }
 .archive-board.is-filtered .archive-title { grid-area: auto; position: absolute; inset: 0 auto auto 0; font-size: clamp(64px,12vw,160px); margin: 0; }
 .archive-board.is-filtered .archive-margin, .archive-board.is-filtered .shelf-life, .archive-board.is-filtered .shelf-note, .archive-board.is-filtered .archive-decoration { display: none; }

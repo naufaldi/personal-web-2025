@@ -95,14 +95,14 @@
 @font-face { font-family: "Manrope"; src: url(/fonts/manrope-latin-variable.woff2) format(woff2); font-weight: 400 700; font-style: normal; font-display: swap; }
 @font-face { font-family: "Source Code Pro"; src: url(/fonts/source-code-pro-latin-variable.woff2) format(woff2); font-weight: 400 600; font-style: normal; font-display: swap; }
 
-:root { color-scheme: light; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-body); font-synthesis: none; }
+:root { color-scheme: light; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-body); font-synthesis: none; --focus-width: 2px; --focus-offset: 2px; }
 body { margin: 0; }
 [hidden] { display: none !important; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
 button, input, a { touch-action: manipulation; }
-:focus-visible { outline: 2px solid var(--color-vermilion); outline-offset: 4px; }
+:focus-visible { outline: var(--focus-width) solid var(--color-ink); outline-offset: var(--focus-offset); box-shadow: 0 0 0 var(--focus-offset) var(--color-paper); }
 ::selection { background: var(--color-vermilion); color: var(--color-paper); }
 .collection-layout { width: min(100%, var(--layout-collection-max)); margin-inline: auto; padding: 24px var(--layout-gutter) 20px; }
 .collection-header { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
@@ -110,10 +110,9 @@ button, input, a { touch-action: manipulation; }
 .identity { display: flex; flex-direction: column; min-height: 44px; font-size: 16px; font-weight: 500; }
 .identity span + span { font-weight: 400; color: var(--color-ink-muted); }
 .collection-header nav { display: flex; flex-wrap: wrap; gap: 0 28px; }
-.collection-header nav a, .collection-contact, .collection-controls a, .collection-controls button { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+.collection-header nav a, .collection-contact { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
 .collection-header nav a, .collection-contact { text-underline-offset: 5px; }
 .collection-header nav a[aria-current] { text-decoration: underline; text-decoration-color: var(--color-vermilion); text-decoration-thickness: 2px; }
-.collection-header a:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; }
 .collection-canvas { width: 100%; position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: repeat(30, minmax(0, 1fr)); aspect-ratio: 1423 / 900; min-height: 900px; isolation: isolate; }
 .collection-title { grid-column: 1 / 9; grid-row: 1 / 11; display: flex; align-items: flex-start; pointer-events: none; z-index: -1; }
 .collection-title > p { padding-top: 32px; font-size: 18px; line-height: 1.25; flex: 0 0 108px; }
@@ -150,7 +149,6 @@ button, input, a { touch-action: manipulation; }
 .personal-note { padding: 28px 24px; min-height: 330px; background: color-mix(in srgb, var(--color-paper), var(--color-ink) 5%); display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
 .personal-note p { font: 400 clamp(16px, 1.35vw, 20px)/1.55 var(--font-body); letter-spacing: -.015em; }
 .personal-note span { font: 14px/1.5 var(--font-mono); color: var(--color-ink-muted); }
-.empty-state { padding-block: 48px; }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 20; background: var(--color-paper); padding: 16px; transform: translateY(-150%); }
 .skip-link:focus { transform: none; }
 .not-found { padding-block: 15vh; }
@@ -217,7 +215,6 @@ button, input, a { touch-action: manipulation; }
 
 
 .artifact-link { display: block; }
-.artifact-link:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 6px; }
 .artifact-caption strong { color: var(--color-ink); font-weight: 600; }
 .artifact--album .media-frame { aspect-ratio: 3 / 2; }
 .artifact--library .media-frame { aspect-ratio: 2 / 3; }

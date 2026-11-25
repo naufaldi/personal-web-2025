@@ -7,6 +7,17 @@ function browser(...args:string[]) {
   return new TextDecoder().decode(p.stdout)
 }
 function evaluate<T>(script:string):T { return (JSON.parse(browser('eval',script,'--json')) as {data:{result:T}}).data.result }
+function tabTo(selector:string, max=100) {
+  const encoded=JSON.stringify(selector)
+  for(let i=0;i<max;i++) {
+    if(evaluate<boolean>(`document.activeElement?.matches(${encoded})`))return true
+    browser('press','Tab')
+  }
+  return evaluate<boolean>(`document.activeElement?.matches(${encoded})`)
+}
+function focusStyle() {
+  return evaluate<{visible:boolean;outlineColor:string;outlineWidth:string;outlineOffset:string;shadow:string}>(`(()=>{const el=document.activeElement;const s=getComputedStyle(el);return {visible:el.matches(':focus-visible'),outlineColor:s.outlineColor,outlineWidth:s.outlineWidth,outlineOffset:s.outlineOffset,shadow:s.boxShadow}})()`)
+}
 for(const [width,height] of [[1440,1058],[834,1112],[390,844],[320,740]]) {
   test(`page-family interactions ${width}`,()=>{
     browser('set','viewport',String(width),String(height))
@@ -89,6 +100,32 @@ test('native page navigation, history and photography dialog keyboard focus',()=
   browser('wait','--url','**/experience')
   expect(browser('get','url').trim()).toBe(origin+'/experience')
   expect(evaluate<boolean>(`document.querySelectorAll('.career-history article').length===6`)).toBe(true)
+})
+
+test('keyboard focus indicators match the ink and paper design contract',()=>{
+  browser('set','viewport','1440','900')
+  browser('open',origin+'/projects')
+  expect(tabTo('[data-editorial-filter]')).toBe(true)
+  let style=focusStyle()
+  expect(style.visible).toBe(true)
+  expect(style.outlineColor).toBe('rgb(17, 17, 17)')
+  expect(style.outlineWidth).toBe('2px')
+  expect(style.outlineOffset).toBe('2px')
+  expect(style.shadow).toContain('245, 243, 237')
+
+  browser('open',origin+'/blogs/state-management-in-reactjs')
+  expect(tabTo('.reading-toc a')).toBe(true)
+  style=focusStyle()
+  expect(style.visible).toBe(true)
+  expect(style.outlineColor).toBe('rgb(17, 17, 17)')
+  expect(style.shadow).toContain('245, 243, 237')
+
+  browser('open',origin+'/blogs/state-management-in-reactjs')
+  expect(tabTo('.copy-code',160)).toBe(true)
+  style=focusStyle()
+  expect(style.visible).toBe(true)
+  expect(style.outlineColor).toBe('rgb(245, 243, 237)')
+  expect(style.shadow).toContain('17, 17, 17')
 })
 
 test('script-blocked page families retain content and usable links',()=>{

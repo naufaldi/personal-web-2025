@@ -6,6 +6,7 @@ import { renderSeoBlock } from '../scripts/seo-render'
 
 const { routes } = await buildSeoRoutes()
 const home = await readFile('dist/index.html', 'utf8')
+const summaries = (html: string) => [...html.matchAll(/<summary[\s\S]*?<\/summary>/g)].map(match => match[0])
 
 describe('Astro static migration contract', () => {
   test('homepage is native HTML with seven artifacts and no React island', () => {
@@ -51,6 +52,10 @@ describe('Astro static migration contract', () => {
     expect(community).toContain('cursor-aug-speaker')
     expect(community).toContain('codex-build-group')
     expect(community.match(/data-feature-category/g)).toHaveLength(5)
+    for (const summary of summaries(community)) {
+      expect(summary).not.toMatch(/<h[1-6][\s>]/)
+      expect(summary).toContain('index-title')
+    }
     for (const html of [about, community]) {
       expect(html).not.toContain('<astro-island')
       if (html === community) expect(html).toContain('<details')
@@ -79,6 +84,10 @@ describe('Astro static migration contract', () => {
       expect(html.match(/data-record/g)).toHaveLength(details.length)
       for (const route of details) expect(html).toContain(`href="${route.path}"`)
       expect(html).toContain('data-archive-search')
+      for (const summary of summaries(html)) {
+        expect(summary).not.toMatch(/<h[1-6][\s>]/)
+        expect(summary).toContain('index-title')
+      }
       expect(html).not.toContain('href="/blogs/coming-soon"')
     }
   })

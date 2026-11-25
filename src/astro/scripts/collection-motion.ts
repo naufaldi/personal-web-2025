@@ -1,4 +1,4 @@
-import { motion } from '@/astro/scripts/motion'
+import { isModifierOnlyKey, motion } from '@/astro/scripts/motion'
 
 declare global { interface Window { collectionExit?: Promise<void> } }
 
@@ -9,7 +9,7 @@ const settle = () => {
   running.forEach(animation => animation.cancel())
   running.clear()
 }
-document.addEventListener('keydown', settle, { capture: true })
+document.addEventListener('keydown', event => { if (!isModifierOnlyKey(event)) settle() }, { capture: true })
 document.addEventListener('pointerdown', settle, { capture: true })
 document.addEventListener('focusin', settle)
 document.addEventListener('input', settle, { capture: true })
@@ -23,7 +23,8 @@ function enterCollection(afterExit?: Promise<void>) {
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined
   const internalArrival = navigation?.type === 'navigate' && document.referrer.startsWith(`${location.origin}/`)
   const pointerArrival = document.documentElement.dataset.collectionArrival === 'pointer'
-  if (started || !main || typeof main.animate !== 'function' || reduced.matches || location.hash ||
+  const missedPointerGuard = pointerArrival && !document.documentElement.hasAttribute('data-collection-pending')
+  if (started || !main || typeof main.animate !== 'function' || reduced.matches || location.hash || missedPointerGuard ||
     document.documentElement.dataset.input === 'keyboard' || navigation?.type === 'back_forward' || (internalArrival && !pointerArrival)) return
   started = true
   const desktop = matchMedia('(min-width: 64rem)').matches

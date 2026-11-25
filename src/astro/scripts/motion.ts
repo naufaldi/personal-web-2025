@@ -7,6 +7,8 @@ const reduced = matchMedia('(prefers-reduced-motion: reduce)')
 const running = new Map<HTMLElement, Animation>()
 const pending = new Map<HTMLElement, () => void>()
 export const canAnimate = (requested: boolean) => requested && !reduced.matches && document.documentElement.dataset.input === 'pointer'
+const modifierKeys = new Set(['Alt', 'AltGraph', 'CapsLock', 'Control', 'Fn', 'Meta', 'NumLock', 'ScrollLock', 'Shift', 'Symbol', 'SymbolLock'])
+export const isModifierOnlyKey = (event: KeyboardEvent) => modifierKeys.has(event.key)
 const visible = (element: HTMLElement) => {
   const rect = element.getBoundingClientRect()
   const main = element.closest('main')
@@ -47,10 +49,14 @@ export function enter(element: HTMLElement, requested: boolean) {
   play(element, [from, { opacity: 1, transform: 'translateY(0)' }], motion.enter, motion.out)
 }
 export function reflow(elements: HTMLElement[], requested: boolean, mutate: () => void, duration: number = motion.move) {
+  if (!canAnimate(requested)) {
+    elements.forEach(cancel)
+    mutate()
+    return
+  }
   const before = new Map(elements.filter(visible).map(element => [element, { rect: element.getBoundingClientRect(), opacity: getComputedStyle(element).opacity }]))
   elements.forEach(cancel)
   mutate()
-  if (!canAnimate(requested)) return
   elements.filter(visible).forEach(element => {
     const old = before.get(element)
     if (!old) { enter(element, true); return }
@@ -118,7 +124,8 @@ document.querySelectorAll<HTMLDetailsElement>('details').forEach(record => {
     setDisclosure(record, open, event.detail > 0)
   })
 })
-document.addEventListener('keydown', () => {
+document.addEventListener('keydown', event => {
+  if (isModifierOnlyKey(event)) return
   document.documentElement.dataset.input = 'keyboard'
   settleMotion()
 }, { capture: true })
