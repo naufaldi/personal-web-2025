@@ -13,6 +13,10 @@
 .company-people { grid-area: 17 / 11 / 28 / 13; }
 .company-people .media-frame { aspect-ratio: .78; }
 .company-board .editorial-link { margin-top: 0; }
+.company-caption { display: block; font: 400 14px/1.5 var(--font-mono); padding-top: 12px; color: var(--color-ink-muted); }
+.company-caption > span { display: block; }
+.company-caption .editorial-link { display: inline-flex; }
+.company-board figure > a:hover { text-decoration: none; }
 .archive-caption { color: var(--color-ink-muted); }
 .community-filters { display: flex; flex-wrap: wrap; gap: 8px 32px; }
 @media (hover: hover) and (pointer: fine) {

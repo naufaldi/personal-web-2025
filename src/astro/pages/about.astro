@@ -22,16 +22,16 @@ const route = routes.find(route => route.path === '/about')!
       <div class="editorial-board about-board" data-board>
         <h1 class="editorial-title font-display">ABOUT</h1>
         <p class="editorial-margin font-mono text-caption">People<br />Technology<br />Community<br />A more open web</p>
-        <figure class="about-portrait"><Photo image={portrait} alt="Faldi outdoors in a blue shirt" eager /><figcaption>Profile /<br />Naufaldi Rafif Satriya</figcaption></figure>
+        <figure class="about-portrait"><Photo image={portrait} alt="Faldi outdoors in a blue shirt" eager sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 90vw" /><figcaption>Profile /<br />Naufaldi Rafif Satriya</figcaption></figure>
         <div class="about-intro">
           <h2 class="text-heading">{aboutBio.name}</h2>
           <p class="text-body">{aboutBio.bioParagraphs[0]}</p>
           <a class="editorial-link font-mono text-nav" href="/experience">Read experience <span aria-hidden="true">↗</span></a>
         </div>
-        <figure class="about-workspace"><Photo image={workspace} alt="Faldi’s desk with two monitors" eager /><figcaption>Software /<br />Ideas into tools <span class="text-vermilion">01</span></figcaption></figure>
-        <figure class="about-community"><a href="/speaker"><Photo image={community} alt="Friends gathered around a cafe table" /></a><figcaption>Community /<br /><a href="/speaker">Learning together ↗</a> <span class="text-vermilion">02</span></figcaption></figure>
-        <figure class="about-tools"><Photo image={personal} alt="Two game controllers in front of a screen" /><figcaption>Off screen /<br />Making room for life</figcaption></figure>
-        <figure class="about-quiet"><Photo image={friends} alt="A gathering with friends at a cafe" /><figcaption>People /<br />Conversations beyond code</figcaption></figure>
+        <figure class="about-workspace"><Photo image={workspace} alt="Faldi’s desk with two monitors" eager sizes="(min-width: 1024px) 15vw, (min-width: 768px) 29vw, 85vw" /><figcaption>Software /<br />Ideas into tools <span class="text-vermilion">01</span></figcaption></figure>
+        <figure class="about-community"><a href="/speaker"><Photo image={community} alt="Friends gathered around a cafe table" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 61vw, 90vw" /></a><figcaption>Community /<br /><a href="/speaker">Learning together ↗</a> <span class="text-vermilion">02</span></figcaption></figure>
+        <figure class="about-tools"><Photo image={personal} alt="Two game controllers in front of a screen" sizes="(min-width: 1024px) 15vw, (min-width: 768px) 29vw, 85vw" /><figcaption>Off screen /<br />Making room for life</figcaption></figure>
+        <figure class="about-quiet"><Photo image={friends} alt="A gathering with friends at a cafe" sizes="(min-width: 1024px) 15vw, (min-width: 768px) 29vw, 85vw" /><figcaption>People /<br />Conversations beyond code</figcaption></figure>
       </div>
       <div class="editorial-controls font-mono text-nav"><nav aria-label="Profile views"><a href="#profile" data-profile>Profile</a><a id="experiences-heading" href="/experience">Experience</a><a href="/speaker">Mentoring ↗</a></nav><a href="#index" data-view-toggle>Open index ↗</a></div>
       <section class="editorial-index" id="index" aria-labelledby="about-index-heading" data-directory>

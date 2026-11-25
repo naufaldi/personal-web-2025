@@ -19,15 +19,15 @@ const photos = [null, { image: workspace, alt: 'Faldi’s workspace' }, { image:
   <div class="archive-board writing-board" data-board>
     <h1 class="archive-title font-display">WRITING</h1>
     <p class="archive-margin font-mono text-caption">Thoughts<br />Notes<br />Essays<br />In progress</p>
-    {featuredWriting.map((entry, index) => <article class={`archive-artifact writing-artifact writing-artifact-${index + 1}`} data-feature-category={entry.categories.join('|')} data-search={`${entry.title} ${entry.description ?? ''} ${entry.meta}`}>
-      {photos[index] && <a href={entry.href} class="writing-photo" aria-label={`Read ${entry.title}`}><Photo image={photos[index]!.image} alt={photos[index]!.alt} eager={index < 3} /></a>}
+    {featuredWriting.map((entry, index) => <a href={entry.href} class={`archive-artifact writing-artifact writing-artifact-${index + 1}`} data-feature-category={entry.categories.join('|')} data-search={`${entry.title} ${entry.description ?? ''} ${entry.meta}`} aria-label={`Read ${entry.title}`}>
+      {photos[index] && <div class="writing-photo"><Photo image={photos[index]!.image} alt={photos[index]!.alt} eager={index < 3} sizes="(min-width: 1024px) 9vw, (min-width: 768px) 37vw, 90vw" /></div>}
       <div class="writing-copy">
         <p class="font-mono text-caption">{entry.categories.join(' / ')} / {entry.meta}</p>
-        <h2><a href={entry.href}>{entry.title}</a></h2>
+        <h2>{entry.title}</h2>
         {entry.description && <p class="writing-excerpt text-body">{entry.description}</p>}
-        <a class="editorial-link font-mono text-nav" href={entry.href}>Read essay <span class="text-vermilion" aria-hidden="true">↗</span></a>
+        <span class="editorial-link font-mono text-nav">Read essay <span class="text-vermilion" aria-hidden="true">↗</span></span>
       </div>
-    </article>)}
-    <figure class="archive-decoration writing-life"><Photo image={portrait} alt="Faldi outdoors" /><figcaption class="font-mono text-caption">People /<br />Beyond the code</figcaption></figure>
+    </a>)}
+    <figure class="archive-decoration writing-life"><Photo image={portrait} alt="Faldi outdoors" sizes="(min-width: 1024px) 7vw, (min-width: 768px) 29vw, 85vw" /><figcaption class="font-mono text-caption">People /<br />Beyond the code</figcaption></figure>
   </div>
 </Archive>

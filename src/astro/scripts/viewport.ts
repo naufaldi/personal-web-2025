@@ -1,3 +1,4 @@
+import { decodeFragment } from './fragments'
 const main = document.querySelector<HTMLElement>('.collection-layout > main')
 const desktop = matchMedia('(min-width: 64rem)')
 const key = 'collectionScroll'
@@ -15,9 +16,8 @@ if (main) {
   }
   const restore = () => {
     if (location.hash) {
-      let id = ''
-      try { id = decodeURIComponent(location.hash.slice(1)) } catch { return }
-      document.getElementById(id)?.scrollIntoView({ block: 'start', behavior: 'instant' })
+      const id = decodeFragment(location.hash)
+      if (id) document.getElementById(id)?.scrollIntoView({ block: 'start', behavior: 'instant' })
     } else if (desktop.matches && navigation?.type === 'back_forward') main.scrollTop = saved
     restoring = false
   }
