@@ -9,15 +9,13 @@
   html[data-collection-site] .collection-header { margin-bottom: 12px; gap: 8px; }
   html[data-collection-site] .collection-layout > main { min-height: 0; min-width: 0; overflow: auto; scrollbar-gutter: stable; padding-inline: 8px; scroll-padding-block: 16px; }
   html[data-collection-site] main:has(> :is(.collection-canvas, [data-board], .photography-grid)) { display: flex; flex-direction: column; }
-  html[data-collection-site] main > :is(.editorial-controls, .archive-search, .editorial-index) { flex: none; }
-  html[data-collection-site] .archive-layout > main:has(> [data-board]) > .archive-search { order: 1; }
+  html[data-collection-site] main > :is(.editorial-controls, .editorial-index) { flex: none; }
   html[data-collection-site] .archive-layout > main:has(> [data-board]) > [data-board] { order: 2; }
   html[data-collection-site] .archive-layout > main:has(> [data-board]) > [data-empty] { order: 3; }
   html[data-collection-site] .archive-layout > main:has(> [data-board]) > .editorial-controls { order: 4; }
   html[data-collection-site] .archive-layout > main:has(> [data-board]) > [data-directory] { order: 5; }
   html[data-collection-site] .archive-layout > main:has(> [data-board]) > [data-editorial-status] { order: 6; }
   html[data-collection-site] .editorial-controls { padding-block: 8px; gap: 8px 24px; }
-  html[data-collection-site] .archive-search { margin-bottom: 8px; }
   html[data-collection-site] :is(.archive-filters, .community-filters) { gap: 0 20px; }
   html[data-collection-site] :is(.collection-canvas, .editorial-board, .archive-board):not(.is-filtered) {
     flex: 1 0 460px; width: 100%; height: auto; min-height: 460px; aspect-ratio: auto;
