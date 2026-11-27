@@ -37,7 +37,8 @@
 .manhwa-board .shelf-life-right .media-frame { aspect-ratio: .8; }
 .manhwa-board .shelf-note { grid-area: 19 / 1 / 29 / 3; margin: 0 24px 0 0; z-index: 3; padding: 20px; min-height: 250px; }
 .archive-filters { display: flex; flex-wrap: wrap; gap: 8px 32px; }
-.archive-search { display: flex; justify-content: flex-end; align-items: center; gap: 16px; margin-bottom: 24px; }
+.archive-search { display: flex; flex: none; justify-content: flex-end; align-items: center; gap: 16px; min-width: 0; margin: 0; }
+.archive-search label { white-space: nowrap; }
 .archive-search input { min-height: 44px; max-width: 100%; width: 260px; padding: 8px 12px; border: 1px solid var(--color-ink-muted); border-radius: var(--radius-control); background: transparent; }
 .archive-board.is-filtered { min-height: 0; aspect-ratio: auto; grid-template-rows: auto; gap: 48px 32px; padding-top: 220px; }
 .archive-board.is-filtered .archive-title { grid-area: auto; position: absolute; inset: 0 auto auto 0; font-size: clamp(64px,12vw,160px); margin: 0; }
@@ -77,7 +78,7 @@
  .shelf-board .shelf-note { min-height: 240px; }
  .archive-board.is-filtered { padding-top: 120px; }
  .archive-filters { gap: 0 24px; }
- .archive-search { align-items: stretch; flex-direction: column; gap: 8px; }
+ .archive-search { align-items: stretch; flex-basis: 100%; flex-direction: column; gap: 8px; }
  .archive-search input { width: 100%; }
 }
 
